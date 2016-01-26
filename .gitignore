@@ -1,0 +1,22 @@
+# *.mk
+*.d
+*.o
+# *.ld
+# *.snap
+# *.prefs
+# *.sc
+# *.index
+# *.pdom
+*.log
+*.hex
+# *.lst
+# *.map
+# *.srec
+# *.S
+# *.a
+mss_example/SoftConsole/mss_top_sb_MSS_CM3/mss_top_sb_MSS_CM3_app/Debug/*
+mss_example/SoftConsole/mss_top_sb_MSS_CM3/mss_top_sb_MSS_CM3_hw_platform/Debug/*
+Wall-e/SoftConsole/MSS_top_sb_MSS_CM3/MSS_top_sb_MSS_CM3_app/Debug/*
+Wall-e/SoftConsole/mss_top_sb_MSS_CM3/mss_top_sb_MSS_CM3_hw_platform/Debug/*
+*designer*
+!*.ld
