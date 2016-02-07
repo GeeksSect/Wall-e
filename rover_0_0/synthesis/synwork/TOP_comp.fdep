@@ -1,0 +1,127 @@
+#OPTIONS:"|-mixedhdl|-top|work.TOP|-layerid|0|-prodtype|synplify_pro|-primux|-dspmac|-pqdpadd|-fixsmult|-divnmod|-nram|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREUART_LIB|-lib|COREUART_LIB|-lib|COREUART_LIB|-lib|COREUART_LIB|-lib|COREUART_LIB|-lib|COREUART_LIB|-lib|COREUART_LIB|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\bin64\\c_vhdl.exe":1412882230
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\location.map":1413206672
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\std.vhd":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\snps_haps_pkg.vhd":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\std1164.vhd":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\numeric.vhd":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\umr_capim.vhd":1412882096
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\arith.vhd":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vhd\\unsigned.vhd":1412881844
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\FCCC_0\\TOP_FCCC_0_FCCC.vhd":1454846670
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.vhd":1412928306
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\hdl\\sonar_driver.vhd":1454845959
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\Actel\\SgCore\\OSC\\1.0.103\\osc_comps.vhd":1441980997
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\hdl\\pulse_w.vhdl":1454338965
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\hdl\\servo.vhdl":1454338760
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\hdl\\time_send.vhd":1454846615
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\Clock_gen.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\Tx_async.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\Rx_async.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\fifo_256x8_g4.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\coreuart_pkg.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\components.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\OSC_0\\TOP_OSC_0_OSC.vhd":1454846673
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\COREUART_0\\rtl\\vhdl\\core\\CoreUART.vhd":1454846666
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\component\\work\\TOP\\TOP.vhd":1454846674
+#OPTIONS:"|-mixedhdl|-modhint|C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\synthesis\\synwork\\_verilog_hintfile|-top|work.BT_module|-mpparams|C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\synthesis\\synwork\\_mh_params|-layerid|1|-prodtype|synplify_pro|-primux|-dspmac|-pqdpadd|-fixsmult|-divnmod|-nram|-I|C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\synthesis\\|-I|C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\bin64\\c_ver.exe":1412882178
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\synthesis\\synwork\\_verilog_hintfile":1454846727
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\generic\\smartfusion2.v":1412928306
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\umr_capim.v":1412882098
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\scemi_objects.v":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\scemi_pipes.svh":1412881844
+#CUR:"C:\\Microsemi\\Libero_v11.5\\Synopsys\\synplify_I201403MSP1\\lib\\vlog\\hypermods.v":1412881844
+#CUR:"C:\\Users\\vetal\\Desktop\\actel source2\\rover_0_0\\hdl\\BT_resiver.v":1454845993
+0			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\FCCC_0\TOP_FCCC_0_FCCC.vhd" vhdl
+1			"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd" vhdl
+2			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\Actel\SgCore\OSC\1.0.103\osc_comps.vhd" vhdl
+3			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd" vhdl
+4			"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl" vhdl
+5			"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl" vhdl
+6			"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd" vhdl
+7			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Clock_gen.vhd" vhdl
+8			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd" vhdl
+9			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd" vhdl
+10			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\fifo_256x8_g4.vhd" vhdl
+11			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\coreuart_pkg.vhd" vhdl
+12			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd" vhdl
+13			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\components.vhd" vhdl
+14			"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\TOP.vhd" vhdl
+15			"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\BT_resiver.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 2
+4 -1
+5 -1
+6 -1
+7 -1
+8 -1
+9 -1
+10 -1
+11 -1
+12 11 10 9 8 7
+13 -1
+14 15 13 6 5 4 3 1 0 12
+15 -1
+#Dependency Lists(Users Of)
+0 14
+1 14
+2 3
+3 14
+4 14
+5 14
+6 14
+7 12
+8 12
+9 12
+10 12
+11 12
+12 14
+13 14
+14 -1
+15 14
+#Design Unit to File Association
+module work BT_module 15
+module work top 14
+arch work top rtl 14
+module coreuart_lib top_coreuart_0_coreuart 12
+arch coreuart_lib top_coreuart_0_coreuart translated 12
+module coreuart_lib top_coreuart_0_fifo_256x8 10
+arch coreuart_lib top_coreuart_0_fifo_256x8 translated 10
+module coreuart_lib top_coreuart_0_fifo_ctrl_128 10
+arch coreuart_lib top_coreuart_0_fifo_ctrl_128 translated 10
+module coreuart_lib top_coreuart_0_ram128x8_pa4 10
+arch coreuart_lib top_coreuart_0_ram128x8_pa4 translated 10
+module coreuart_lib top_coreuart_0_rx_async 9
+arch coreuart_lib top_coreuart_0_rx_async translated 9
+module coreuart_lib top_coreuart_0_tx_async 8
+arch coreuart_lib top_coreuart_0_tx_async translated 8
+module coreuart_lib top_coreuart_0_clock_gen 7
+arch coreuart_lib top_coreuart_0_clock_gen rtl 7
+module work time_sender 6
+arch work time_sender bh 6
+module work servo_driver 5
+arch work servo_driver bh 5
+module work pulse_meash 4
+arch work pulse_meash bh 4
+module work top_osc_0_osc 3
+arch work top_osc_0_osc def_arch 3
+module work rcosc_1mhz 2
+arch work rcosc_1mhz def_arch 2
+module work rcosc_25_50mhz 2
+arch work rcosc_25_50mhz def_arch 2
+module work xtlosc 2
+arch work xtlosc def_arch 2
+module work rcosc_1mhz_fab 2
+arch work rcosc_1mhz_fab def_arch 2
+module work rcosc_25_50mhz_fab 2
+arch work rcosc_25_50mhz_fab def_arch 2
+module work xtlosc_fab 2
+arch work xtlosc_fab def_arch 2
+module work locator_control 1
+arch work locator_control bh 1
+module work top_fccc_0_fccc 0
+arch work top_fccc_0_fccc def_arch 0

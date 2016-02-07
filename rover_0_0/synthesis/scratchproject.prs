@@ -1,0 +1,78 @@
+#--  Synopsys, Inc.
+#--  Version I-2014.03M-SP1
+#--  Project file C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\scratchproject.prs
+
+#project files
+add_file -verilog "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/BT_resiver.v"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/FCCC_0/TOP_FCCC_0_FCCC.vhd"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/sonar_driver.vhd"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/Actel/SgCore/OSC/1.0.103/osc_comps.vhd"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/OSC_0/TOP_OSC_0_OSC.vhd"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/pulse_w.vhdl"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/servo.vhdl"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/time_send.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/Clock_gen.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/Tx_async.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/Rx_async.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/fifo_256x8_g4.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/coreuart_pkg.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/CoreUART.vhd"
+add_file -vhdl -lib COREUART_LIB "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/COREUART_0/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/TOP.vhd"
+
+
+
+#implementation: "synthesis"
+impl -add "C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis" -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+
+#device options
+set_option -technology SmartFusion2
+set_option -part M2S010
+set_option -package VQ144
+set_option -speed_grade -1
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "work.TOP"
+
+# mapper_options
+set_option -frequency 100.000
+set_option -write_verilog 0
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# actel_options
+set_option -RWCheckOnRam 0
+
+# Microsemi G4
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -disable_io_insertion 0
+set_option -opcond COMWC
+set_option -retiming 0
+set_option -report_path 0
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "C:/Users/vetal/Desktop/actel source2/rover_0_0/synthesis/TOP.edn"
+impl -active "synthesis"

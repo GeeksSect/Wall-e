@@ -1,0 +1,822 @@
+#### START OF AREA REPORT #####[
+
+Part:			M2S010VQ144-1 (Microsemi)
+
+-------------------------------------------------------------------
+########   Utilization report for  Top level view:   TOP   ########
+===================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      380                100 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP:	380 (23.65 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           580                100 %                
+ARI1          553                100 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     62                 100 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP:	1195 (74.36 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     1                  100 %                
+=================================================
+Total DSP in the block TOP:	1 (0.06 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     2                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP:	2 (0.12 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       5                  100 %                
+=================================================
+Total IO PADS in the block TOP:	5 (0.31 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   BT_module   ########
+Instance path:   TOP.BT_module                                 
+===============================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 2.89 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.BT_module:	11 (0.68 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           2                  0.3450 %             
+ARI1          0                  0.0 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     1                  1.61 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.BT_module:	3 (0.19 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.BT_module:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.BT_module:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.BT_module:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.BT_module:	0 (0.00 % Utilization)
+
+----------------------------------------------------------------------------------------
+########   Utilization report for  cell:   TOP_COREUART_0_COREUART_19_0_0_0_0   ########
+Instance path:   TOP.TOP_COREUART_0_COREUART_19_0_0_0_0                                 
+========================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      74                 19.5 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	74 (4.60 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           78                 13.4 %               
+ARI1          14                 2.53 %               
+BUFFER        0                  0.0 %                
+BLACK BOX     17                 27.4 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	109 (6.78 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	0 (0.00 % Utilization)
+
+----------------------------------------------------------------------------------
+########   Utilization report for  cell:   TOP_COREUART_0_Clock_gen_0_0   ########
+Instance path:   TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0  
+==================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      19                 5. %                 
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	19 (1.18 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           12                 2.07 %               
+ARI1          14                 2.53 %               
+BUFFER        0                  0.0 %                
+BLACK BOX     0                  0.0 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	26 (1.62 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------------------------
+########   Utilization report for  cell:   TOP_COREUART_0_Rx_async_0_0   ########
+Instance path:   TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0  
+=================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      33                 8.68 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	33 (2.05 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           46                 7.93 %               
+ARI1          0                  0.0 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     11                 17.7 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	57 (3.55 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------------------------
+########   Utilization report for  cell:   TOP_COREUART_0_Tx_async_0_0   ########
+Instance path:   TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0  
+=================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      16                 4.21 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	16 (1.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           19                 3.28 %               
+ARI1          0                  0.0 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     4                  6.45 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	23 (1.43 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------------
+########   Utilization report for  cell:   TOP_FCCC_0_FCCC   ########
+Instance path:   TOP.TOP_FCCC_0_FCCC                                 
+=====================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      0                  0.0 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.TOP_FCCC_0_FCCC:	0 (0.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           0                  0.0 %                
+ARI1          0                  0.0 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     2                  3.23 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.TOP_FCCC_0_FCCC:	2 (0.12 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.TOP_FCCC_0_FCCC:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.TOP_FCCC_0_FCCC:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     2                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.TOP_FCCC_0_FCCC:	2 (0.12 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.TOP_FCCC_0_FCCC:	0 (0.00 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   TOP_OSC_0_OSC   ########
+Instance path:   TOP.TOP_OSC_0_OSC                                 
+===================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      0                  0.0 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.TOP_OSC_0_OSC:	0 (0.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           0                  0.0 %                
+ARI1          0                  0.0 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     1                  1.61 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.TOP_OSC_0_OSC:	1 (0.06 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.TOP_OSC_0_OSC:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.TOP_OSC_0_OSC:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.TOP_OSC_0_OSC:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.TOP_OSC_0_OSC:	0 (0.00 % Utilization)
+
+------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   locator_control_work_top_rtl_0layer0   ########
+Instance path:   TOP.locator_control_work_top_rtl_0layer0                                 
+==========================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      90                 23.7 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.locator_control_work_top_rtl_0layer0:	90 (5.60 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           76                 13.1 %               
+ARI1          126                22.8 %               
+BUFFER        0                  0.0 %                
+BLACK BOX     1                  1.61 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.locator_control_work_top_rtl_0layer0:	203 (12.63 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.locator_control_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.locator_control_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.locator_control_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.locator_control_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   pulse_meash   ########
+Instance path:   TOP.pulse_meash                                 
+=================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      50                 13.2 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.pulse_meash:	50 (3.11 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           88                 15.2 %               
+ARI1          288                52.1 %               
+BUFFER        0                  0.0 %                
+BLACK BOX     1                  1.61 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.pulse_meash:	377 (23.46 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.pulse_meash:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.pulse_meash:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.pulse_meash:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.pulse_meash:	0 (0.00 % Utilization)
+
+---------------------------------------------------------------------------------------
+########   Utilization report for  cell:   servo_driver_work_top_rtl_0layer0   ########
+Instance path:   TOP.servo_driver_work_top_rtl_0layer0                                 
+=======================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      50                 13.2 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.servo_driver_work_top_rtl_0layer0:	50 (3.11 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           44                 7.59 %               
+ARI1          73                 13.2 %               
+BUFFER        0                  0.0 %                
+BLACK BOX     1                  1.61 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.servo_driver_work_top_rtl_0layer0:	118 (7.34 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     1                  100 %                
+=================================================
+Total DSP in the block TOP.servo_driver_work_top_rtl_0layer0:	1 (0.06 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.servo_driver_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.servo_driver_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.servo_driver_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+--------------------------------------------------------------------------------------
+########   Utilization report for  cell:   time_sender_work_top_rtl_0layer0   ########
+Instance path:   TOP.time_sender_work_top_rtl_0layer0                                 
+======================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      105                27.6 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.time_sender_work_top_rtl_0layer0:	105 (6.53 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           292                50.3 %               
+ARI1          52                 9.4 %                
+BUFFER        0                  0.0 %                
+BLACK BOX     38                 61.3 %               
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.time_sender_work_top_rtl_0layer0:	382 (23.77 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.time_sender_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.time_sender_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.time_sender_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.time_sender_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

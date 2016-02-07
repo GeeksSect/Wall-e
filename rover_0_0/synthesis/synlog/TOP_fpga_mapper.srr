@@ -1,0 +1,1658 @@
+Synopsys Generic Technology Mapper, Version mapact, Build 1350R, Built Oct 16 2014 10:02:37
+Copyright (C) 1994-2014, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version I-2014.03M-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+@W: MO228 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":350:21:350:24|Optimizing internal tristate to a wire based on don't care (X) analysis
+@W: MO228 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":350:21:350:24|Optimizing internal tristate to a wire based on don't care (X) analysis
+@W: MO228 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":350:21:350:24|Optimizing internal tristate to a wire based on don't care (X) analysis
+@W: MO228 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":350:21:350:24|Optimizing internal tristate to a wire based on don't care (X) analysis
+@W: MO228 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":350:21:350:24|Optimizing internal tristate to a wire based on don't care (X) analysis
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MF236 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":47:57:47:63|Generating a type div divider 
+@N: MF236 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":52:30:52:37|Generating a type div divider 
+@N: BN115 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":52:30:52:37|Removing instance valu_3.if_generate_plus\.mult1_un1_sum_1 of view:DECOMP.PM_TOP_ADD__4_5__m2s010vq144(DECOMP) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":375:6:375:7|Removing sequential instance rx_parity_calc of view:PrimLib.dffre(prim) in hierarchy view:coreuart_lib.TOP_COREUART_0_Rx_async_0_0(translated) because there are no references to its outputs 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:23s; Memory used current: 133MB peak: 134MB)
+
+@N:"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\clock_gen.vhd":214:11:214:12|Found counter in view:coreuart_lib.TOP_COREUART_0_Clock_gen_0_0(rtl) inst baud_cntr[12:0]
+Encoding state machine xmit_state[0:5] (view:coreuart_lib.TOP_COREUART_0_Tx_async_0_0(translated))
+original code -> new code
+   00000000000000000000000000000000 -> 000000
+   00000000000000000000000000000001 -> 000011
+   00000000000000000000000000000010 -> 000101
+   00000000000000000000000000000011 -> 001001
+   00000000000000000000000000000100 -> 010001
+   00000000000000000000000000000101 -> 100001
+@W: MO160 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\tx_async.vhd":134:4:134:5|Register bit xmit_state[1] is always 0, optimizing ...
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\tx_async.vhd":299:4:299:5|Removing sequential instance tx_parity in hierarchy view:coreuart_lib.TOP_COREUART_0_Tx_async_0_0(translated) because there are no references to its outputs 
+Encoding state machine rx_state[0:3] (view:coreuart_lib.TOP_COREUART_0_Rx_async_0_0(translated))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":264:6:264:7|No possible illegal states for state machine rx_state[0:3],safe FSM implementation is disabled
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":241:7:241:8|Removing instance COREUART_0.make_RX.last_bit[2],  because it is equivalent to instance COREUART_0.make_RX.last_bit[1]
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":241:7:241:8|Removing sequential instance last_bit[1] in hierarchy view:coreuart_lib.TOP_COREUART_0_Rx_async_0_0(translated) because there are no references to its outputs 
+Encoding state machine state[0:11] (view:work.locator_control_work_top_rtl_0layer0(bh))
+original code -> new code
+   0000000000000000000000000000000 -> 000000000000
+   0000000000000000000000000000001 -> 000000000011
+   0000000000000000000000000000010 -> 000000000101
+   0000000000000000000000000000011 -> 000000001001
+   0000000000000000000000000000100 -> 000000010001
+   0000000000000000000000000000101 -> 000000100001
+   0000000000000000000000000000110 -> 000001000001
+   0000000000000000000000000000111 -> 000010000001
+   0000000000000000000000000001000 -> 000100000001
+   0000000000000000000000000001001 -> 001000000001
+   0000000000000000000000000001010 -> 010000000001
+   0000000000000000000000000001011 -> 100000000001
+@N:"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|Found updn counter in view:work.locator_control_work_top_rtl_0layer0(bh) inst cr_angle[30:0] 
+@N:"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|Found counter in view:work.locator_control_work_top_rtl_0layer0(bh) inst i[30:0]
+Encoding state machine state[0:3] (view:work.pulse_meash(bh))
+original code -> new code
+   0000000000000000000000000000000 -> 00
+   0000000000000000000000000000001 -> 01
+   0000000000000000000000000000010 -> 10
+   0000000000000000000000000000011 -> 11
+@N: MO225 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|No possible illegal states for state machine state[0:3],safe FSM implementation is disabled
+Encoding state machine state[0:2] (view:work.servo_driver_work_top_rtl_0layer0(bh))
+original code -> new code
+   0000000000000000000000000000000 -> 00
+   0000000000000000000000000000001 -> 01
+   0000000000000000000000000000010 -> 10
+@N:"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Found counter in view:work.servo_driver_work_top_rtl_0layer0(bh) inst i[30:0]
+Encoding state machine state[0:6] (view:work.time_sender_work_top_rtl_0layer0(bh))
+original code -> new code
+   0000000000000000000000000000000 -> 0000000
+   0000000000000000000000000000001 -> 0000011
+   0000000000000000000000000000010 -> 0000101
+   0000000000000000000000000000011 -> 0001001
+   0000000000000000000000000000100 -> 0010001
+   0000000000000000000000000000101 -> 0100001
+   0000000000000000000000000001010 -> 1000001
+@N:"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Found counter in view:work.time_sender_work_top_rtl_0layer0(bh) inst i[25:0]
+@N: MF237 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":48:27:48:37|Generating a type rem remainder 
+Encoding state machine TX_RX_repiter[2:0] (view:work.BT_module(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   11 -> 10
+
+Finished factoring (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:34s; Memory used current: 143MB peak: 143MB)
+
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.k[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.k[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[30] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\tx_async.vhd":134:4:134:5|Removing sequential instance COREUART_0.make_TX.tx_byte[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\tx_async.vhd":134:4:134:5|Removing sequential instance COREUART_0.make_TX.tx_byte[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\coreuart.vhd":245:6:245:7|Removing sequential instance COREUART_0.tx_hold_reg[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\coreuart.vhd":245:6:245:7|Removing sequential instance COREUART_0.tx_hold_reg[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_0[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_0[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_8[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_8[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_7[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_7[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_6[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_6[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_5[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_5[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_4[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_4[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_3[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_3[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_2[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_2[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_1[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.buff_1[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.data_out[6] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.data_out[7] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[16] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[17] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[18] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[19] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[20] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[21] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[22] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[23] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[24] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[25] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[26] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[27] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[28] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing sequential instance time_sender_0.valu[29] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:34s; Memory used current: 141MB peak: 143MB)
+
+@N: BN362 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\rx_async.vhd":333:6:333:7|Removing sequential instance COREUART_0.make_RX.rx_shift[8] in hierarchy view:work.TOP(rtl) because there are no references to its outputs 
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:35s; Memory used current: 142MB peak: 143MB)
+
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.k[5],  because it is equivalent to instance time_sender_0.k[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_6[5],  because it is equivalent to instance time_sender_0.buff_6[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_7[5],  because it is equivalent to instance time_sender_0.buff_7[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_8[5],  because it is equivalent to instance time_sender_0.buff_8[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_0[5],  because it is equivalent to instance time_sender_0.buff_0[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_2[5],  because it is equivalent to instance time_sender_0.buff_2[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_1[5],  because it is equivalent to instance time_sender_0.buff_1[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_3[5],  because it is equivalent to instance time_sender_0.buff_3[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_4[5],  because it is equivalent to instance time_sender_0.buff_4[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.buff_5[5],  because it is equivalent to instance time_sender_0.buff_5[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Removing instance time_sender_0.data_out[5],  because it is equivalent to instance time_sender_0.data_out[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\coreuart.vhd":245:6:245:7|Removing instance COREUART_0.tx_hold_reg[5],  because it is equivalent to instance COREUART_0.tx_hold_reg[4]
+@W: BN132 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\tx_async.vhd":134:4:134:5|Removing instance COREUART_0.make_TX.tx_byte[5],  because it is equivalent to instance COREUART_0.make_TX.tx_byte[4]
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:39s; CPU Time elapsed 0h:00m:35s; Memory used current: 143MB peak: 144MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:01m:09s; CPU Time elapsed 0h:01m:04s; Memory used current: 156MB peak: 190MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:01m:09s; CPU Time elapsed 0h:01m:04s; Memory used current: 156MB peak: 190MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:01m:11s; CPU Time elapsed 0h:01m:06s; Memory used current: 156MB peak: 190MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:01m:21s; CPU Time elapsed 0h:01m:15s; Memory used current: 204MB peak: 206MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:01m:16s		  -255.82ns		1135 /       380
+   2		0h:01m:16s		  -254.94ns		1134 /       380
+------------------------------------------------------------
+
+
+
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:01m:17s		  -252.96ns		1132 /       380
+------------------------------------------------------------
+
+
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:01m:17s		  -252.96ns		1132 /       380
+------------------------------------------------------------
+
+@N: FP130 |Promoting Net FCCC_0_LOCK on CLKINT  I_161 
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:23s; CPU Time elapsed 0h:01m:17s; Memory used current: 169MB peak: 206MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:01m:23s; CPU Time elapsed 0h:01m:17s; Memory used current: 169MB peak: 206MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 382 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+================================== Non-Gated/Non-Generated Clocks ==================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance             
+----------------------------------------------------------------------------------------------------
+@K:CKID0001       FCCC_0.GL0_INST     CLKINT                 382        BT_module_0.TX_RX_repiter[1]
+====================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+Writing Analyst data base C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\TOP.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:01m:26s; CPU Time elapsed 0h:01m:20s; Memory used current: 164MB peak: 206MB)
+
+Writing Analyst data base C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\synwork\TOP_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:01m:28s; CPU Time elapsed 0h:01m:21s; Memory used current: 164MB peak: 206MB)
+
+Writing EDIF Netlist and constraint files
+@N: BW103 |Synopsys Constraint File time units using default value of 1ns 
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+I-2014.03M-SP1
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:01m:30s; CPU Time elapsed 0h:01m:23s; Memory used current: 165MB peak: 206MB)
+
+@W: MT246 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\fccc_0\top_fccc_0_fccc.vhd":106:4:106:11|Blackbox CCC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock TOP_FCCC_0_FCCC|GL0_net_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:FCCC_0.GL0_net"
+
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Sun Feb 07 15:07:05 2016
+#
+
+
+Top view:               TOP
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: -27.241
+
+                                           Requested     Estimated      Requested     Estimated                 Clock        Clock              
+Starting Clock                             Frequency     Frequency      Period        Period        Slack       Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------------------
+TOP_FCCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     26.9 MHz       10.000        37.241        -27.241     inferred     Inferred_clkgroup_0
+System                                     100.0 MHz     1029.4 MHz     10.000        0.971         9.029       system       system_clkgroup    
+================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                          |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                Ending                                  |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                  System                                  |  10.000      9.029    |  No paths    -      |  No paths    -      |  No paths    -    
+System                                  TOP_FCCC_0_FCCC|GL0_net_inferred_clock  |  10.000      3.772    |  No paths    -      |  No paths    -      |  No paths    -    
+TOP_FCCC_0_FCCC|GL0_net_inferred_clock  TOP_FCCC_0_FCCC|GL0_net_inferred_clock  |  10.000      -27.241  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: TOP_FCCC_0_FCCC|GL0_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                        Starting                                                              Arrival            
+Instance                Reference                                  Type     Pin     Net       Time        Slack  
+                        Clock                                                                                    
+-----------------------------------------------------------------------------------------------------------------
+pulse_meash_0.i[29]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[29]     0.094       -27.241
+pulse_meash_0.i[28]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[28]     0.094       -27.062
+pulse_meash_0.i[27]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[27]     0.094       -27.050
+pulse_meash_0.i[26]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[26]     0.094       -26.922
+pulse_meash_0.i[30]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[30]     0.094       -26.855
+pulse_meash_0.i[25]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[25]     0.094       -25.742
+pulse_meash_0.i[24]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[24]     0.094       -23.451
+pulse_meash_0.i[23]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[23]     0.094       -22.143
+pulse_meash_0.i[22]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[22]     0.094       -20.835
+pulse_meash_0.i[21]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       i[21]     0.094       -19.526
+=================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                          Starting                                                                                Required            
+Instance                  Reference                                  Type     Pin     Net                         Time         Slack  
+                          Clock                                                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------
+pulse_meash_0.time[0]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un229_sum_i_0[10]     9.778        -27.241
+pulse_meash_0.time[1]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un222_sum_i_0[10]     9.778        -25.667
+pulse_meash_0.time[2]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un215_sum_i_0[10]     9.778        -24.358
+pulse_meash_0.time[3]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un208_sum_i_0[10]     9.778        -23.049
+pulse_meash_0.time[4]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un201_sum_i_0[10]     9.778        -21.740
+pulse_meash_0.time[5]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un194_sum_i_0[10]     9.778        -20.431
+pulse_meash_0.time[6]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un187_sum_i_0[10]     9.778        -19.122
+pulse_meash_0.time[7]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un180_sum_i_0[10]     9.778        -17.812
+pulse_meash_0.time[8]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un173_sum_i_0[10]     9.778        -16.503
+pulse_meash_0.time[9]     TOP_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       mult1_un166_sum_i_0[10]     9.778        -14.913
+======================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      37.019
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -27.241
+
+    Number of logic level(s):                56
+    Starting point:                          pulse_meash_0.i[29] / Q
+    Ending point:                            pulse_meash_0.time[0] / D
+    The start point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                Pin      Pin               Arrival     No. of    
+Name                                                                 Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------
+pulse_meash_0.i[29]                                                  SLE      Q        Out     0.094     0.094       -         
+i[29]                                                                Net      -        -       0.676     -           4         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     D        In      -         0.770       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     S        Out     0.545     1.316       -         
+mult1_un54_sum_cry_3_S                                               Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     B        In      -         2.287       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     FCO      Out     0.174     2.462       -         
+mult1_un61_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCI      In      -         2.462       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCO      Out     0.014     2.476       -         
+mult1_un61_sum_cry_5                                                 Net      -        -       0.891     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     B        In      -         3.367       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     FCO      Out     0.174     3.541       -         
+mult1_un61_sum_s_6_105_FCO                                           Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCI      In      -         3.541       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCO      Out     0.014     3.555       -         
+mult1_un61_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCI      In      -         3.555       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCO      Out     0.014     3.570       -         
+mult1_un61_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     FCI      In      -         3.570       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     S        Out     0.063     3.633       -         
+mult1_un61_sum_s_8_S                                                 Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     B        In      -         4.604       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     S        Out     0.268     4.872       -         
+mult1_un68_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     C        In      -         5.860       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     S        Out     0.321     6.181       -         
+mult1_un75_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     C        In      -         7.168       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     S        Out     0.321     7.489       -         
+mult1_un82_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     C        In      -         8.476       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     S        Out     0.321     8.797       -         
+mult1_un89_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     C        In      -         9.785       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     S        Out     0.321     10.105      -         
+mult1_un96_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     C        In      -         11.093      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     S        Out     0.321     11.414      -         
+mult1_un103_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     C        In      -         12.401      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     S        Out     0.321     12.722      -         
+mult1_un110_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     C        In      -         13.710      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     S        Out     0.321     14.030      -         
+mult1_un117_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     D        In      -         15.018      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     FCO      Out     0.439     15.457      -         
+mult1_un124_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCI      In      -         15.457      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCO      Out     0.014     15.472      -         
+mult1_un124_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCI      In      -         15.472      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCO      Out     0.014     15.486      -         
+mult1_un124_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCI      In      -         15.486      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCO      Out     0.014     15.500      -         
+mult1_un124_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCI      In      -         15.500      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCO      Out     0.014     15.514      -         
+mult1_un124_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCI      In      -         15.514      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCO      Out     0.014     15.528      -         
+mult1_un124_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCI      In      -         15.528      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCO      Out     0.014     15.543      -         
+mult1_un124_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCI      In      -         15.543      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCO      Out     0.014     15.557      -         
+mult1_un124_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     FCI      In      -         15.557      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     S        Out     0.063     15.620      -         
+mult1_un124_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     C        In      -         16.609      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     S        Out     0.321     16.929      -         
+mult1_un131_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     C        In      -         17.918      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     S        Out     0.321     18.238      -         
+mult1_un138_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     C        In      -         19.227      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     S        Out     0.321     19.547      -         
+mult1_un145_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     C        In      -         20.536      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     S        Out     0.321     20.857      -         
+mult1_un152_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     C        In      -         21.845      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     S        Out     0.321     22.166      -         
+mult1_un159_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     C        In      -         23.154      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     S        Out     0.321     23.475      -         
+mult1_un166_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     D        In      -         24.463      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     FCO      Out     0.439     24.903      -         
+mult1_un173_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCI      In      -         24.903      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCO      Out     0.014     24.917      -         
+mult1_un173_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCI      In      -         24.917      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCO      Out     0.014     24.931      -         
+mult1_un173_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCI      In      -         24.931      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCO      Out     0.014     24.945      -         
+mult1_un173_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCI      In      -         24.945      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCO      Out     0.014     24.959      -         
+mult1_un173_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCI      In      -         24.959      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCO      Out     0.014     24.974      -         
+mult1_un173_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCI      In      -         24.974      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCO      Out     0.014     24.988      -         
+mult1_un173_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCI      In      -         24.988      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCO      Out     0.014     25.002      -         
+mult1_un173_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     FCI      In      -         25.002      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     S        Out     0.063     25.065      -         
+mult1_un173_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     C        In      -         26.054      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     S        Out     0.321     26.375      -         
+mult1_un180_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     C        In      -         27.363      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     S        Out     0.321     27.684      -         
+mult1_un187_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     C        In      -         28.672      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     S        Out     0.321     28.993      -         
+mult1_un194_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     C        In      -         29.981      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     S        Out     0.321     30.302      -         
+mult1_un201_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     C        In      -         31.290      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     S        Out     0.321     31.611      -         
+mult1_un208_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     C        In      -         32.599      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     S        Out     0.321     32.920      -         
+mult1_un215_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     C        In      -         33.908      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     S        Out     0.321     34.229      -         
+mult1_un222_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     D        In      -         35.218      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     FCO      Out     0.439     35.657      -         
+mult1_un229_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCI      In      -         35.657      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCO      Out     0.014     35.671      -         
+mult1_un229_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCI      In      -         35.671      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCO      Out     0.014     35.685      -         
+mult1_un229_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCI      In      -         35.685      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCO      Out     0.014     35.700      -         
+mult1_un229_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCI      In      -         35.700      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCO      Out     0.014     35.714      -         
+mult1_un229_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCI      In      -         35.714      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCO      Out     0.014     35.728      -         
+mult1_un229_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCI      In      -         35.728      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCO      Out     0.014     35.742      -         
+mult1_un229_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCI      In      -         35.742      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCO      Out     0.014     35.756      -         
+mult1_un229_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     FCI      In      -         35.756      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     S        Out     0.063     35.820      -         
+mult1_un229_sum_s_9_S                                                Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     A        In      -         36.791      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     Y        Out     0.090     36.881      -         
+mult1_un229_sum_i_0[10]                                              Net      -        -       0.138     -           1         
+pulse_meash_0.time[0]                                                SLE      D        In      -         37.019      -         
+===============================================================================================================================
+Total path delay (propagation time + setup) of 37.241 is 9.895(26.6%) logic and 27.346(73.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      37.015
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -27.237
+
+    Number of logic level(s):                64
+    Starting point:                          pulse_meash_0.i[29] / Q
+    Ending point:                            pulse_meash_0.time[0] / D
+    The start point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                Pin      Pin               Arrival     No. of    
+Name                                                                 Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------
+pulse_meash_0.i[29]                                                  SLE      Q        Out     0.094     0.094       -         
+i[29]                                                                Net      -        -       0.676     -           4         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     D        In      -         0.770       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     S        Out     0.545     1.316       -         
+mult1_un54_sum_cry_3_S                                               Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     B        In      -         2.287       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     FCO      Out     0.174     2.462       -         
+mult1_un61_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCI      In      -         2.462       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCO      Out     0.014     2.476       -         
+mult1_un61_sum_cry_5                                                 Net      -        -       0.891     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     B        In      -         3.367       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     FCO      Out     0.174     3.541       -         
+mult1_un61_sum_s_6_105_FCO                                           Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCI      In      -         3.541       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCO      Out     0.014     3.555       -         
+mult1_un61_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCI      In      -         3.555       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCO      Out     0.014     3.570       -         
+mult1_un61_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     FCI      In      -         3.570       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     S        Out     0.063     3.633       -         
+mult1_un61_sum_s_8_S                                                 Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     B        In      -         4.604       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     S        Out     0.268     4.872       -         
+mult1_un68_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_1        ARI1     B        In      -         5.860       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_1        ARI1     FCO      Out     0.155     6.015       -         
+mult1_un75_sum_cry_1                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_2        ARI1     FCI      In      -         6.015       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_2        ARI1     FCO      Out     0.014     6.029       -         
+mult1_un75_sum_cry_2                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_3        ARI1     FCI      In      -         6.029       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_3        ARI1     FCO      Out     0.014     6.043       -         
+mult1_un75_sum_cry_3                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_4        ARI1     FCI      In      -         6.043       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_4        ARI1     FCO      Out     0.014     6.057       -         
+mult1_un75_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_5        ARI1     FCI      In      -         6.057       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_5        ARI1     FCO      Out     0.014     6.071       -         
+mult1_un75_sum_cry_5                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_6        ARI1     FCI      In      -         6.071       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_6        ARI1     FCO      Out     0.014     6.086       -         
+mult1_un75_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_7        ARI1     FCI      In      -         6.086       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_7        ARI1     FCO      Out     0.014     6.100       -         
+mult1_un75_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_8        ARI1     FCI      In      -         6.100       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_cry_8        ARI1     FCO      Out     0.014     6.114       -         
+mult1_un75_sum_cry_8                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     FCI      In      -         6.114       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     S        Out     0.063     6.177       -         
+mult1_un75_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     C        In      -         7.165       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     S        Out     0.321     7.486       -         
+mult1_un82_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     C        In      -         8.473       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     S        Out     0.321     8.794       -         
+mult1_un89_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     C        In      -         9.782       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     S        Out     0.321     10.102      -         
+mult1_un96_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     C        In      -         11.090      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     S        Out     0.321     11.411      -         
+mult1_un103_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     C        In      -         12.398      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     S        Out     0.321     12.719      -         
+mult1_un110_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     C        In      -         13.707      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     S        Out     0.321     14.027      -         
+mult1_un117_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     D        In      -         15.015      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     FCO      Out     0.439     15.454      -         
+mult1_un124_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCI      In      -         15.454      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCO      Out     0.014     15.468      -         
+mult1_un124_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCI      In      -         15.468      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCO      Out     0.014     15.483      -         
+mult1_un124_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCI      In      -         15.483      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCO      Out     0.014     15.497      -         
+mult1_un124_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCI      In      -         15.497      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCO      Out     0.014     15.511      -         
+mult1_un124_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCI      In      -         15.511      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCO      Out     0.014     15.525      -         
+mult1_un124_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCI      In      -         15.525      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCO      Out     0.014     15.539      -         
+mult1_un124_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCI      In      -         15.539      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCO      Out     0.014     15.554      -         
+mult1_un124_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     FCI      In      -         15.554      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     S        Out     0.063     15.617      -         
+mult1_un124_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     C        In      -         16.605      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     S        Out     0.321     16.926      -         
+mult1_un131_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     C        In      -         17.915      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     S        Out     0.321     18.235      -         
+mult1_un138_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     C        In      -         19.224      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     S        Out     0.321     19.544      -         
+mult1_un145_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     C        In      -         20.533      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     S        Out     0.321     20.853      -         
+mult1_un152_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     C        In      -         21.842      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     S        Out     0.321     22.163      -         
+mult1_un159_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     C        In      -         23.151      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     S        Out     0.321     23.472      -         
+mult1_un166_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     D        In      -         24.460      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     FCO      Out     0.439     24.899      -         
+mult1_un173_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCI      In      -         24.899      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCO      Out     0.014     24.914      -         
+mult1_un173_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCI      In      -         24.914      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCO      Out     0.014     24.928      -         
+mult1_un173_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCI      In      -         24.928      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCO      Out     0.014     24.942      -         
+mult1_un173_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCI      In      -         24.942      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCO      Out     0.014     24.956      -         
+mult1_un173_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCI      In      -         24.956      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCO      Out     0.014     24.970      -         
+mult1_un173_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCI      In      -         24.970      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCO      Out     0.014     24.985      -         
+mult1_un173_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCI      In      -         24.985      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCO      Out     0.014     24.999      -         
+mult1_un173_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     FCI      In      -         24.999      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     S        Out     0.063     25.062      -         
+mult1_un173_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     C        In      -         26.051      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     S        Out     0.321     26.371      -         
+mult1_un180_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     C        In      -         27.360      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     S        Out     0.321     27.680      -         
+mult1_un187_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     C        In      -         28.669      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     S        Out     0.321     28.990      -         
+mult1_un194_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     C        In      -         29.978      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     S        Out     0.321     30.299      -         
+mult1_un201_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     C        In      -         31.287      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     S        Out     0.321     31.608      -         
+mult1_un208_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     C        In      -         32.596      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     S        Out     0.321     32.917      -         
+mult1_un215_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     C        In      -         33.905      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     S        Out     0.321     34.226      -         
+mult1_un222_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     D        In      -         35.214      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     FCO      Out     0.439     35.654      -         
+mult1_un229_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCI      In      -         35.654      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCO      Out     0.014     35.668      -         
+mult1_un229_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCI      In      -         35.668      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCO      Out     0.014     35.682      -         
+mult1_un229_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCI      In      -         35.682      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCO      Out     0.014     35.696      -         
+mult1_un229_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCI      In      -         35.696      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCO      Out     0.014     35.711      -         
+mult1_un229_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCI      In      -         35.711      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCO      Out     0.014     35.725      -         
+mult1_un229_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCI      In      -         35.725      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCO      Out     0.014     35.739      -         
+mult1_un229_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCI      In      -         35.739      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCO      Out     0.014     35.753      -         
+mult1_un229_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     FCI      In      -         35.753      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     S        Out     0.063     35.816      -         
+mult1_un229_sum_s_9_S                                                Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     A        In      -         36.788      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     Y        Out     0.090     36.877      -         
+mult1_un229_sum_i_0[10]                                              Net      -        -       0.138     -           1         
+pulse_meash_0.time[0]                                                SLE      D        In      -         37.015      -         
+===============================================================================================================================
+Total path delay (propagation time + setup) of 37.237 is 9.892(26.6%) logic and 27.346(73.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      37.015
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -27.237
+
+    Number of logic level(s):                64
+    Starting point:                          pulse_meash_0.i[29] / Q
+    Ending point:                            pulse_meash_0.time[0] / D
+    The start point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                Pin      Pin               Arrival     No. of    
+Name                                                                 Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------
+pulse_meash_0.i[29]                                                  SLE      Q        Out     0.094     0.094       -         
+i[29]                                                                Net      -        -       0.676     -           4         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     D        In      -         0.770       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     S        Out     0.545     1.316       -         
+mult1_un54_sum_cry_3_S                                               Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     B        In      -         2.287       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     FCO      Out     0.174     2.462       -         
+mult1_un61_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCI      In      -         2.462       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCO      Out     0.014     2.476       -         
+mult1_un61_sum_cry_5                                                 Net      -        -       0.891     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     B        In      -         3.367       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     FCO      Out     0.174     3.541       -         
+mult1_un61_sum_s_6_105_FCO                                           Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCI      In      -         3.541       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCO      Out     0.014     3.555       -         
+mult1_un61_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCI      In      -         3.555       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCO      Out     0.014     3.570       -         
+mult1_un61_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     FCI      In      -         3.570       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     S        Out     0.063     3.633       -         
+mult1_un61_sum_s_8_S                                                 Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     B        In      -         4.604       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     S        Out     0.268     4.872       -         
+mult1_un68_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     C        In      -         5.860       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     S        Out     0.321     6.181       -         
+mult1_un75_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_1        ARI1     B        In      -         7.168       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_1        ARI1     FCO      Out     0.155     7.323       -         
+mult1_un82_sum_cry_1                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_2        ARI1     FCI      In      -         7.323       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_2        ARI1     FCO      Out     0.014     7.337       -         
+mult1_un82_sum_cry_2                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_3        ARI1     FCI      In      -         7.337       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_3        ARI1     FCO      Out     0.014     7.351       -         
+mult1_un82_sum_cry_3                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_4        ARI1     FCI      In      -         7.351       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_4        ARI1     FCO      Out     0.014     7.365       -         
+mult1_un82_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_5        ARI1     FCI      In      -         7.365       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_5        ARI1     FCO      Out     0.014     7.380       -         
+mult1_un82_sum_cry_5                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_6        ARI1     FCI      In      -         7.380       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_6        ARI1     FCO      Out     0.014     7.394       -         
+mult1_un82_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_7        ARI1     FCI      In      -         7.394       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_7        ARI1     FCO      Out     0.014     7.408       -         
+mult1_un82_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_8        ARI1     FCI      In      -         7.408       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_cry_8        ARI1     FCO      Out     0.014     7.422       -         
+mult1_un82_sum_cry_8                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     FCI      In      -         7.422       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     S        Out     0.063     7.486       -         
+mult1_un82_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     C        In      -         8.473       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     S        Out     0.321     8.794       -         
+mult1_un89_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     C        In      -         9.782       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     S        Out     0.321     10.102      -         
+mult1_un96_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     C        In      -         11.090      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     S        Out     0.321     11.411      -         
+mult1_un103_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     C        In      -         12.398      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     S        Out     0.321     12.719      -         
+mult1_un110_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     C        In      -         13.707      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     S        Out     0.321     14.027      -         
+mult1_un117_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     D        In      -         15.015      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     FCO      Out     0.439     15.454      -         
+mult1_un124_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCI      In      -         15.454      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCO      Out     0.014     15.468      -         
+mult1_un124_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCI      In      -         15.468      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCO      Out     0.014     15.483      -         
+mult1_un124_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCI      In      -         15.483      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCO      Out     0.014     15.497      -         
+mult1_un124_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCI      In      -         15.497      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCO      Out     0.014     15.511      -         
+mult1_un124_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCI      In      -         15.511      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCO      Out     0.014     15.525      -         
+mult1_un124_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCI      In      -         15.525      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCO      Out     0.014     15.539      -         
+mult1_un124_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCI      In      -         15.539      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCO      Out     0.014     15.554      -         
+mult1_un124_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     FCI      In      -         15.554      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     S        Out     0.063     15.617      -         
+mult1_un124_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     C        In      -         16.605      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     S        Out     0.321     16.926      -         
+mult1_un131_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     C        In      -         17.915      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     S        Out     0.321     18.235      -         
+mult1_un138_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     C        In      -         19.224      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     S        Out     0.321     19.544      -         
+mult1_un145_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     C        In      -         20.533      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     S        Out     0.321     20.853      -         
+mult1_un152_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     C        In      -         21.842      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     S        Out     0.321     22.163      -         
+mult1_un159_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     C        In      -         23.151      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     S        Out     0.321     23.472      -         
+mult1_un166_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     D        In      -         24.460      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     FCO      Out     0.439     24.899      -         
+mult1_un173_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCI      In      -         24.899      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCO      Out     0.014     24.914      -         
+mult1_un173_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCI      In      -         24.914      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCO      Out     0.014     24.928      -         
+mult1_un173_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCI      In      -         24.928      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCO      Out     0.014     24.942      -         
+mult1_un173_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCI      In      -         24.942      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCO      Out     0.014     24.956      -         
+mult1_un173_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCI      In      -         24.956      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCO      Out     0.014     24.970      -         
+mult1_un173_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCI      In      -         24.970      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCO      Out     0.014     24.985      -         
+mult1_un173_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCI      In      -         24.985      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCO      Out     0.014     24.999      -         
+mult1_un173_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     FCI      In      -         24.999      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     S        Out     0.063     25.062      -         
+mult1_un173_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     C        In      -         26.051      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     S        Out     0.321     26.371      -         
+mult1_un180_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     C        In      -         27.360      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     S        Out     0.321     27.680      -         
+mult1_un187_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     C        In      -         28.669      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     S        Out     0.321     28.990      -         
+mult1_un194_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     C        In      -         29.978      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     S        Out     0.321     30.299      -         
+mult1_un201_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     C        In      -         31.287      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     S        Out     0.321     31.608      -         
+mult1_un208_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     C        In      -         32.596      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     S        Out     0.321     32.917      -         
+mult1_un215_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     C        In      -         33.905      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     S        Out     0.321     34.226      -         
+mult1_un222_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     D        In      -         35.214      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     FCO      Out     0.439     35.654      -         
+mult1_un229_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCI      In      -         35.654      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCO      Out     0.014     35.668      -         
+mult1_un229_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCI      In      -         35.668      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCO      Out     0.014     35.682      -         
+mult1_un229_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCI      In      -         35.682      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCO      Out     0.014     35.696      -         
+mult1_un229_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCI      In      -         35.696      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCO      Out     0.014     35.711      -         
+mult1_un229_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCI      In      -         35.711      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCO      Out     0.014     35.725      -         
+mult1_un229_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCI      In      -         35.725      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCO      Out     0.014     35.739      -         
+mult1_un229_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCI      In      -         35.739      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCO      Out     0.014     35.753      -         
+mult1_un229_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     FCI      In      -         35.753      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     S        Out     0.063     35.816      -         
+mult1_un229_sum_s_9_S                                                Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     A        In      -         36.788      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     Y        Out     0.090     36.877      -         
+mult1_un229_sum_i_0[10]                                              Net      -        -       0.138     -           1         
+pulse_meash_0.time[0]                                                SLE      D        In      -         37.015      -         
+===============================================================================================================================
+Total path delay (propagation time + setup) of 37.237 is 9.892(26.6%) logic and 27.346(73.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      37.015
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -27.237
+
+    Number of logic level(s):                64
+    Starting point:                          pulse_meash_0.i[29] / Q
+    Ending point:                            pulse_meash_0.time[0] / D
+    The start point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                Pin      Pin               Arrival     No. of    
+Name                                                                 Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------
+pulse_meash_0.i[29]                                                  SLE      Q        Out     0.094     0.094       -         
+i[29]                                                                Net      -        -       0.676     -           4         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     D        In      -         0.770       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     S        Out     0.545     1.316       -         
+mult1_un54_sum_cry_3_S                                               Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     B        In      -         2.287       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     FCO      Out     0.174     2.462       -         
+mult1_un61_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCI      In      -         2.462       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCO      Out     0.014     2.476       -         
+mult1_un61_sum_cry_5                                                 Net      -        -       0.891     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     B        In      -         3.367       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     FCO      Out     0.174     3.541       -         
+mult1_un61_sum_s_6_105_FCO                                           Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCI      In      -         3.541       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCO      Out     0.014     3.555       -         
+mult1_un61_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCI      In      -         3.555       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCO      Out     0.014     3.570       -         
+mult1_un61_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     FCI      In      -         3.570       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     S        Out     0.063     3.633       -         
+mult1_un61_sum_s_8_S                                                 Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     B        In      -         4.604       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     S        Out     0.268     4.872       -         
+mult1_un68_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     C        In      -         5.860       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     S        Out     0.321     6.181       -         
+mult1_un75_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     C        In      -         7.168       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     S        Out     0.321     7.489       -         
+mult1_un82_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_1        ARI1     B        In      -         8.476       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_1        ARI1     FCO      Out     0.155     8.631       -         
+mult1_un89_sum_cry_1                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_2        ARI1     FCI      In      -         8.631       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_2        ARI1     FCO      Out     0.014     8.645       -         
+mult1_un89_sum_cry_2                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_3        ARI1     FCI      In      -         8.645       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_3        ARI1     FCO      Out     0.014     8.660       -         
+mult1_un89_sum_cry_3                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_4        ARI1     FCI      In      -         8.660       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_4        ARI1     FCO      Out     0.014     8.674       -         
+mult1_un89_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_5        ARI1     FCI      In      -         8.674       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_5        ARI1     FCO      Out     0.014     8.688       -         
+mult1_un89_sum_cry_5                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_6        ARI1     FCI      In      -         8.688       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_6        ARI1     FCO      Out     0.014     8.702       -         
+mult1_un89_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_7        ARI1     FCI      In      -         8.702       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_7        ARI1     FCO      Out     0.014     8.716       -         
+mult1_un89_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_8        ARI1     FCI      In      -         8.716       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_cry_8        ARI1     FCO      Out     0.014     8.731       -         
+mult1_un89_sum_cry_8                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     FCI      In      -         8.731       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     S        Out     0.063     8.794       -         
+mult1_un89_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     C        In      -         9.782       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     S        Out     0.321     10.102      -         
+mult1_un96_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     C        In      -         11.090      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     S        Out     0.321     11.411      -         
+mult1_un103_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     C        In      -         12.398      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     S        Out     0.321     12.719      -         
+mult1_un110_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     C        In      -         13.707      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     S        Out     0.321     14.027      -         
+mult1_un117_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     D        In      -         15.015      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     FCO      Out     0.439     15.454      -         
+mult1_un124_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCI      In      -         15.454      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCO      Out     0.014     15.468      -         
+mult1_un124_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCI      In      -         15.468      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCO      Out     0.014     15.483      -         
+mult1_un124_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCI      In      -         15.483      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCO      Out     0.014     15.497      -         
+mult1_un124_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCI      In      -         15.497      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCO      Out     0.014     15.511      -         
+mult1_un124_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCI      In      -         15.511      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCO      Out     0.014     15.525      -         
+mult1_un124_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCI      In      -         15.525      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCO      Out     0.014     15.539      -         
+mult1_un124_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCI      In      -         15.539      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCO      Out     0.014     15.554      -         
+mult1_un124_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     FCI      In      -         15.554      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     S        Out     0.063     15.617      -         
+mult1_un124_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     C        In      -         16.605      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     S        Out     0.321     16.926      -         
+mult1_un131_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     C        In      -         17.915      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     S        Out     0.321     18.235      -         
+mult1_un138_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     C        In      -         19.224      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     S        Out     0.321     19.544      -         
+mult1_un145_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     C        In      -         20.533      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     S        Out     0.321     20.853      -         
+mult1_un152_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     C        In      -         21.842      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     S        Out     0.321     22.163      -         
+mult1_un159_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     C        In      -         23.151      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     S        Out     0.321     23.472      -         
+mult1_un166_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     D        In      -         24.460      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     FCO      Out     0.439     24.899      -         
+mult1_un173_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCI      In      -         24.899      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCO      Out     0.014     24.914      -         
+mult1_un173_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCI      In      -         24.914      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCO      Out     0.014     24.928      -         
+mult1_un173_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCI      In      -         24.928      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCO      Out     0.014     24.942      -         
+mult1_un173_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCI      In      -         24.942      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCO      Out     0.014     24.956      -         
+mult1_un173_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCI      In      -         24.956      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCO      Out     0.014     24.970      -         
+mult1_un173_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCI      In      -         24.970      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCO      Out     0.014     24.985      -         
+mult1_un173_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCI      In      -         24.985      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCO      Out     0.014     24.999      -         
+mult1_un173_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     FCI      In      -         24.999      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     S        Out     0.063     25.062      -         
+mult1_un173_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     C        In      -         26.051      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     S        Out     0.321     26.371      -         
+mult1_un180_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     C        In      -         27.360      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     S        Out     0.321     27.680      -         
+mult1_un187_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     C        In      -         28.669      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     S        Out     0.321     28.990      -         
+mult1_un194_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     C        In      -         29.978      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     S        Out     0.321     30.299      -         
+mult1_un201_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     C        In      -         31.287      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     S        Out     0.321     31.608      -         
+mult1_un208_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     C        In      -         32.596      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     S        Out     0.321     32.917      -         
+mult1_un215_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     C        In      -         33.905      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     S        Out     0.321     34.226      -         
+mult1_un222_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     D        In      -         35.214      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     FCO      Out     0.439     35.654      -         
+mult1_un229_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCI      In      -         35.654      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCO      Out     0.014     35.668      -         
+mult1_un229_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCI      In      -         35.668      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCO      Out     0.014     35.682      -         
+mult1_un229_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCI      In      -         35.682      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCO      Out     0.014     35.696      -         
+mult1_un229_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCI      In      -         35.696      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCO      Out     0.014     35.711      -         
+mult1_un229_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCI      In      -         35.711      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCO      Out     0.014     35.725      -         
+mult1_un229_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCI      In      -         35.725      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCO      Out     0.014     35.739      -         
+mult1_un229_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCI      In      -         35.739      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCO      Out     0.014     35.753      -         
+mult1_un229_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     FCI      In      -         35.753      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     S        Out     0.063     35.816      -         
+mult1_un229_sum_s_9_S                                                Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     A        In      -         36.788      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     Y        Out     0.090     36.877      -         
+mult1_un229_sum_i_0[10]                                              Net      -        -       0.138     -           1         
+pulse_meash_0.time[0]                                                SLE      D        In      -         37.015      -         
+===============================================================================================================================
+Total path delay (propagation time + setup) of 37.237 is 9.892(26.6%) logic and 27.346(73.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      37.015
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -27.237
+
+    Number of logic level(s):                64
+    Starting point:                          pulse_meash_0.i[29] / Q
+    Ending point:                            pulse_meash_0.time[0] / D
+    The start point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                                Pin      Pin               Arrival     No. of    
+Name                                                                 Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------
+pulse_meash_0.i[29]                                                  SLE      Q        Out     0.094     0.094       -         
+i[29]                                                                Net      -        -       0.676     -           4         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     D        In      -         0.770       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un54_sum_cry_3        ARI1     S        Out     0.545     1.316       -         
+mult1_un54_sum_cry_3_S                                               Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     B        In      -         2.287       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_4        ARI1     FCO      Out     0.174     2.462       -         
+mult1_un61_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCI      In      -         2.462       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_5        ARI1     FCO      Out     0.014     2.476       -         
+mult1_un61_sum_cry_5                                                 Net      -        -       0.891     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     B        In      -         3.367       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_6_105      ARI1     FCO      Out     0.174     3.541       -         
+mult1_un61_sum_s_6_105_FCO                                           Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCI      In      -         3.541       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_6        ARI1     FCO      Out     0.014     3.555       -         
+mult1_un61_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCI      In      -         3.555       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_cry_7        ARI1     FCO      Out     0.014     3.570       -         
+mult1_un61_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     FCI      In      -         3.570       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un61_sum_s_8          ARI1     S        Out     0.063     3.633       -         
+mult1_un61_sum_s_8_S                                                 Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     B        In      -         4.604       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un68_sum_s_9          ARI1     S        Out     0.268     4.872       -         
+mult1_un68_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     C        In      -         5.860       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un75_sum_s_9          ARI1     S        Out     0.321     6.181       -         
+mult1_un75_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     C        In      -         7.168       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un82_sum_s_9          ARI1     S        Out     0.321     7.489       -         
+mult1_un82_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     C        In      -         8.476       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un89_sum_s_9          ARI1     S        Out     0.321     8.797       -         
+mult1_un89_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_1        ARI1     B        In      -         9.785       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_1        ARI1     FCO      Out     0.155     9.940       -         
+mult1_un96_sum_cry_1                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_2        ARI1     FCI      In      -         9.940       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_2        ARI1     FCO      Out     0.014     9.954       -         
+mult1_un96_sum_cry_2                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_3        ARI1     FCI      In      -         9.954       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_3        ARI1     FCO      Out     0.014     9.968       -         
+mult1_un96_sum_cry_3                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_4        ARI1     FCI      In      -         9.968       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_4        ARI1     FCO      Out     0.014     9.982       -         
+mult1_un96_sum_cry_4                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_5        ARI1     FCI      In      -         9.982       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_5        ARI1     FCO      Out     0.014     9.996       -         
+mult1_un96_sum_cry_5                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_6        ARI1     FCI      In      -         9.996       -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_6        ARI1     FCO      Out     0.014     10.011      -         
+mult1_un96_sum_cry_6                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_7        ARI1     FCI      In      -         10.011      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_7        ARI1     FCO      Out     0.014     10.025      -         
+mult1_un96_sum_cry_7                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_8        ARI1     FCI      In      -         10.025      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_cry_8        ARI1     FCO      Out     0.014     10.039      -         
+mult1_un96_sum_cry_8                                                 Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     FCI      In      -         10.039      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un96_sum_s_9          ARI1     S        Out     0.063     10.102      -         
+mult1_un96_sum_s_9_S                                                 Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     C        In      -         11.090      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un103_sum_s_9         ARI1     S        Out     0.321     11.411      -         
+mult1_un103_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     C        In      -         12.398      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un110_sum_s_9         ARI1     S        Out     0.321     12.719      -         
+mult1_un110_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     C        In      -         13.707      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un117_sum_s_9         ARI1     S        Out     0.321     14.027      -         
+mult1_un117_sum_s_9_S                                                Net      -        -       0.988     -           9         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     D        In      -         15.015      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_1       ARI1     FCO      Out     0.439     15.454      -         
+mult1_un124_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCI      In      -         15.454      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_2       ARI1     FCO      Out     0.014     15.468      -         
+mult1_un124_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCI      In      -         15.468      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_3       ARI1     FCO      Out     0.014     15.483      -         
+mult1_un124_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCI      In      -         15.483      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_4       ARI1     FCO      Out     0.014     15.497      -         
+mult1_un124_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCI      In      -         15.497      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_5       ARI1     FCO      Out     0.014     15.511      -         
+mult1_un124_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCI      In      -         15.511      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_6       ARI1     FCO      Out     0.014     15.525      -         
+mult1_un124_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCI      In      -         15.525      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_7       ARI1     FCO      Out     0.014     15.539      -         
+mult1_un124_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCI      In      -         15.539      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_cry_8       ARI1     FCO      Out     0.014     15.554      -         
+mult1_un124_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     FCI      In      -         15.554      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un124_sum_s_9         ARI1     S        Out     0.063     15.617      -         
+mult1_un124_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     C        In      -         16.605      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un131_sum_s_9         ARI1     S        Out     0.321     16.926      -         
+mult1_un131_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     C        In      -         17.915      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un138_sum_s_9         ARI1     S        Out     0.321     18.235      -         
+mult1_un138_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     C        In      -         19.224      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un145_sum_s_9         ARI1     S        Out     0.321     19.544      -         
+mult1_un145_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     C        In      -         20.533      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un152_sum_s_9         ARI1     S        Out     0.321     20.853      -         
+mult1_un152_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     C        In      -         21.842      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un159_sum_s_9         ARI1     S        Out     0.321     22.163      -         
+mult1_un159_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     C        In      -         23.151      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un166_sum_s_9         ARI1     S        Out     0.321     23.472      -         
+mult1_un166_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     D        In      -         24.460      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_1       ARI1     FCO      Out     0.439     24.899      -         
+mult1_un173_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCI      In      -         24.899      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_2       ARI1     FCO      Out     0.014     24.914      -         
+mult1_un173_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCI      In      -         24.914      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_3       ARI1     FCO      Out     0.014     24.928      -         
+mult1_un173_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCI      In      -         24.928      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_4       ARI1     FCO      Out     0.014     24.942      -         
+mult1_un173_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCI      In      -         24.942      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_5       ARI1     FCO      Out     0.014     24.956      -         
+mult1_un173_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCI      In      -         24.956      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_6       ARI1     FCO      Out     0.014     24.970      -         
+mult1_un173_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCI      In      -         24.970      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_7       ARI1     FCO      Out     0.014     24.985      -         
+mult1_un173_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCI      In      -         24.985      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_cry_8       ARI1     FCO      Out     0.014     24.999      -         
+mult1_un173_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     FCI      In      -         24.999      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un173_sum_s_9         ARI1     S        Out     0.063     25.062      -         
+mult1_un173_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     C        In      -         26.051      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un180_sum_s_9         ARI1     S        Out     0.321     26.371      -         
+mult1_un180_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     C        In      -         27.360      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un187_sum_s_9         ARI1     S        Out     0.321     27.680      -         
+mult1_un187_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     C        In      -         28.669      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un194_sum_s_9         ARI1     S        Out     0.321     28.990      -         
+mult1_un194_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     C        In      -         29.978      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un201_sum_s_9         ARI1     S        Out     0.321     30.299      -         
+mult1_un201_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     C        In      -         31.287      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un208_sum_s_9         ARI1     S        Out     0.321     31.608      -         
+mult1_un208_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     C        In      -         32.596      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un215_sum_s_9         ARI1     S        Out     0.321     32.917      -         
+mult1_un215_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     C        In      -         33.905      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un222_sum_s_9         ARI1     S        Out     0.321     34.226      -         
+mult1_un222_sum_s_9_S                                                Net      -        -       0.988     -           10        
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     D        In      -         35.214      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_1       ARI1     FCO      Out     0.439     35.654      -         
+mult1_un229_sum_cry_1                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCI      In      -         35.654      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_2       ARI1     FCO      Out     0.014     35.668      -         
+mult1_un229_sum_cry_2                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCI      In      -         35.668      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_3       ARI1     FCO      Out     0.014     35.682      -         
+mult1_un229_sum_cry_3                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCI      In      -         35.682      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_4       ARI1     FCO      Out     0.014     35.696      -         
+mult1_un229_sum_cry_4                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCI      In      -         35.696      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_5       ARI1     FCO      Out     0.014     35.711      -         
+mult1_un229_sum_cry_5                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCI      In      -         35.711      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_6       ARI1     FCO      Out     0.014     35.725      -         
+mult1_un229_sum_cry_6                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCI      In      -         35.725      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_7       ARI1     FCO      Out     0.014     35.739      -         
+mult1_un229_sum_cry_7                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCI      In      -         35.739      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_cry_8       ARI1     FCO      Out     0.014     35.753      -         
+mult1_un229_sum_cry_8                                                Net      -        -       0.000     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     FCI      In      -         35.753      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_s_9         ARI1     S        Out     0.063     35.816      -         
+mult1_un229_sum_s_9_S                                                Net      -        -       0.971     -           1         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     A        In      -         36.788      -         
+pulse_meash_0.un5_time.if_generate_plus\.mult1_un229_sum_i_0[10]     CFG1     Y        Out     0.090     36.877      -         
+mult1_un229_sum_i_0[10]                                              Net      -        -       0.138     -           1         
+pulse_meash_0.time[0]                                                SLE      D        In      -         37.015      -         
+===============================================================================================================================
+Total path delay (propagation time + setup) of 37.237 is 9.892(26.6%) logic and 27.346(73.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                       Starting                                                                            Arrival          
+Instance               Reference     Type           Pin        Net                                         Time        Slack
+                       Clock                                                                                                
+----------------------------------------------------------------------------------------------------------------------------
+FCCC_0.CCC_INST        System        CCC            LOCK       LOCK                                        0.000       3.772
+OSC_0.I_RCOSC_1MHZ     System        RCOSC_1MHZ     CLKOUT     OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     0.000       9.029
+============================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                          Required          
+Instance                           Reference     Type     Pin     Net                Time         Slack
+                                   Clock                                                               
+-------------------------------------------------------------------------------------------------------
+locator_control_0.cr_angle[30]     System        SLE      D       cr_angle_s[30]     9.778        3.772
+locator_control_0.cr_angle[29]     System        SLE      D       cr_angle_s[29]     9.778        3.787
+locator_control_0.cr_angle[28]     System        SLE      D       cr_angle_s[28]     9.778        3.801
+locator_control_0.cr_angle[27]     System        SLE      D       cr_angle_s[27]     9.778        3.815
+locator_control_0.cr_angle[26]     System        SLE      D       cr_angle_s[26]     9.778        3.829
+locator_control_0.cr_angle[25]     System        SLE      D       cr_angle_s[25]     9.778        3.843
+locator_control_0.cr_angle[24]     System        SLE      D       cr_angle_s[24]     9.778        3.858
+locator_control_0.cr_angle[23]     System        SLE      D       cr_angle_s[23]     9.778        3.872
+locator_control_0.cr_angle[22]     System        SLE      D       cr_angle_s[22]     9.778        3.886
+locator_control_0.cr_angle[21]     System        SLE      D       cr_angle_s[21]     9.778        3.900
+=======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.222
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.778
+
+    - Propagation time:                      6.006
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 3.772
+
+    Number of logic level(s):                32
+    Starting point:                          FCCC_0.CCC_INST / LOCK
+    Ending point:                            locator_control_0.cr_angle[30] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            TOP_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                        Pin      Pin               Arrival     No. of    
+Name                                                       Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------
+FCCC_0.CCC_INST                                            CCC        LOCK     Out     0.000     0.000       -         
+LOCK                                                       Net        -        -       0.971     -           1         
+FCCC_0.CCC_INST_RNIIJ03                                    CLKINT     A        In      -         0.971       -         
+FCCC_0.CCC_INST_RNIIJ03                                    CLKINT     Y        Out     0.548     1.520       -         
+FCCC_0_LOCK                                                Net        -        -       0.999     -           317       
+locator_control_0.state_RNIT3TC[10]                        CFG2       B        In      -         2.519       -         
+locator_control_0.state_RNIT3TC[10]                        CFG2       Y        Out     0.133     2.652       -         
+N_164_i_0                                                  Net        -        -       0.590     -           3         
+locator_control_0.cr_angle_0_sqmuxa_0_a2_0_a2_RNI7VP23     ARI1       C        In      -         3.242       -         
+locator_control_0.cr_angle_0_sqmuxa_0_a2_0_a2_RNI7VP23     ARI1       Y        Out     0.200     3.442       -         
+cr_angle_0_sqmuxa_0_a2_0_a2_RNI7VP23_Y                     Net        -        -       0.971     -           1         
+locator_control_0.st_angle_RNI0VAR8[2]                     ARI1       B        In      -         4.413       -         
+locator_control_0.st_angle_RNI0VAR8[2]                     ARI1       FCO      Out     0.174     4.587       -         
+cr_angle_cry[2]                                            Net        -        -       0.000     -           1         
+locator_control_0.st_angle_RNIUVV5A[3]                     ARI1       FCI      In      -         4.587       -         
+locator_control_0.st_angle_RNIUVV5A[3]                     ARI1       FCO      Out     0.014     4.602       -         
+cr_angle_cry[3]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIKS8FB[4]                     ARI1       FCI      In      -         4.602       -         
+locator_control_0.cr_angle_RNIKS8FB[4]                     ARI1       FCO      Out     0.014     4.616       -         
+cr_angle_cry[4]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIBQHOC[5]                     ARI1       FCI      In      -         4.616       -         
+locator_control_0.cr_angle_RNIBQHOC[5]                     ARI1       FCO      Out     0.014     4.630       -         
+cr_angle_cry[5]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI3PQ1E[6]                     ARI1       FCI      In      -         4.630       -         
+locator_control_0.cr_angle_RNI3PQ1E[6]                     ARI1       FCO      Out     0.014     4.644       -         
+cr_angle_cry[6]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNISO3BF[7]                     ARI1       FCI      In      -         4.644       -         
+locator_control_0.cr_angle_RNISO3BF[7]                     ARI1       FCO      Out     0.014     4.658       -         
+cr_angle_cry[7]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIMPCKG[8]                     ARI1       FCI      In      -         4.658       -         
+locator_control_0.cr_angle_RNIMPCKG[8]                     ARI1       FCO      Out     0.014     4.673       -         
+cr_angle_cry[8]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIHRLTH[9]                     ARI1       FCI      In      -         4.673       -         
+locator_control_0.cr_angle_RNIHRLTH[9]                     ARI1       FCO      Out     0.014     4.687       -         
+cr_angle_cry[9]                                            Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIKUDLJ[10]                    ARI1       FCI      In      -         4.687       -         
+locator_control_0.cr_angle_RNIKUDLJ[10]                    ARI1       FCO      Out     0.014     4.701       -         
+cr_angle_cry[10]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIO26DL[11]                    ARI1       FCI      In      -         4.701       -         
+locator_control_0.cr_angle_RNIO26DL[11]                    ARI1       FCO      Out     0.014     4.715       -         
+cr_angle_cry[11]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIT7U4N[12]                    ARI1       FCI      In      -         4.715       -         
+locator_control_0.cr_angle_RNIT7U4N[12]                    ARI1       FCO      Out     0.014     4.729       -         
+cr_angle_cry[12]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI3EMSO[13]                    ARI1       FCI      In      -         4.729       -         
+locator_control_0.cr_angle_RNI3EMSO[13]                    ARI1       FCO      Out     0.014     4.744       -         
+cr_angle_cry[13]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIALEKQ[14]                    ARI1       FCI      In      -         4.744       -         
+locator_control_0.cr_angle_RNIALEKQ[14]                    ARI1       FCO      Out     0.014     4.758       -         
+cr_angle_cry[14]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIIT6CS[15]                    ARI1       FCI      In      -         4.758       -         
+locator_control_0.cr_angle_RNIIT6CS[15]                    ARI1       FCO      Out     0.014     4.772       -         
+cr_angle_cry[15]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIR6V3U[16]                    ARI1       FCI      In      -         4.772       -         
+locator_control_0.cr_angle_RNIR6V3U[16]                    ARI1       FCO      Out     0.014     4.786       -         
+cr_angle_cry[16]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI5HNRV[17]                    ARI1       FCI      In      -         4.786       -         
+locator_control_0.cr_angle_RNI5HNRV[17]                    ARI1       FCO      Out     0.014     4.800       -         
+cr_angle_cry[17]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIGSFJ11[18]                   ARI1       FCI      In      -         4.800       -         
+locator_control_0.cr_angle_RNIGSFJ11[18]                   ARI1       FCO      Out     0.014     4.815       -         
+cr_angle_cry[18]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIS88B31[19]                   ARI1       FCI      In      -         4.815       -         
+locator_control_0.cr_angle_RNIS88B31[19]                   ARI1       FCO      Out     0.014     4.829       -         
+cr_angle_cry[19]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI0E1351[20]                   ARI1       FCI      In      -         4.829       -         
+locator_control_0.cr_angle_RNI0E1351[20]                   ARI1       FCO      Out     0.014     4.843       -         
+cr_angle_cry[20]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI5KQQ61[21]                   ARI1       FCI      In      -         4.843       -         
+locator_control_0.cr_angle_RNI5KQQ61[21]                   ARI1       FCO      Out     0.014     4.857       -         
+cr_angle_cry[21]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIBRJI81[22]                   ARI1       FCI      In      -         4.857       -         
+locator_control_0.cr_angle_RNIBRJI81[22]                   ARI1       FCO      Out     0.014     4.871       -         
+cr_angle_cry[22]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNII3DAA1[23]                   ARI1       FCI      In      -         4.871       -         
+locator_control_0.cr_angle_RNII3DAA1[23]                   ARI1       FCO      Out     0.014     4.886       -         
+cr_angle_cry[23]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIQC62C1[24]                   ARI1       FCI      In      -         4.886       -         
+locator_control_0.cr_angle_RNIQC62C1[24]                   ARI1       FCO      Out     0.014     4.900       -         
+cr_angle_cry[24]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI3NVPD1[25]                   ARI1       FCI      In      -         4.900       -         
+locator_control_0.cr_angle_RNI3NVPD1[25]                   ARI1       FCO      Out     0.014     4.914       -         
+cr_angle_cry[25]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNID2PHF1[26]                   ARI1       FCI      In      -         4.914       -         
+locator_control_0.cr_angle_RNID2PHF1[26]                   ARI1       FCO      Out     0.014     4.928       -         
+cr_angle_cry[26]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIOEI9H1[27]                   ARI1       FCI      In      -         4.928       -         
+locator_control_0.cr_angle_RNIOEI9H1[27]                   ARI1       FCO      Out     0.014     4.942       -         
+cr_angle_cry[27]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNI4SB1J1[28]                   ARI1       FCI      In      -         4.942       -         
+locator_control_0.cr_angle_RNI4SB1J1[28]                   ARI1       FCO      Out     0.014     4.957       -         
+cr_angle_cry[28]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNIHA5PK1[29]                   ARI1       FCI      In      -         4.957       -         
+locator_control_0.cr_angle_RNIHA5PK1[29]                   ARI1       FCO      Out     0.014     4.971       -         
+cr_angle_cry[29]                                           Net        -        -       0.000     -           1         
+locator_control_0.cr_angle_RNO[30]                         ARI1       FCI      In      -         4.971       -         
+locator_control_0.cr_angle_RNO[30]                         ARI1       S        Out     0.063     5.034       -         
+cr_angle_s[30]                                             Net        -        -       0.971     -           1         
+locator_control_0.cr_angle[30]                             SLE        D        In      -         6.006       -         
+=======================================================================================================================
+Total path delay (propagation time + setup) of 6.228 is 1.725(27.7%) logic and 4.503(72.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report for TOP 
+
+Mapping to part: m2s010vq144-1
+Cell usage:
+CCC             1 use
+CLKINT          2 uses
+RCOSC_1MHZ      1 use
+CFG1           39 uses
+CFG2           129 uses
+CFG3           128 uses
+CFG4           284 uses
+
+Carry primitives used for arithmetic functions:
+ARI1           553 uses
+
+
+Sequential Cells: 
+SLE            380 uses
+
+DSP Blocks:    1
+ MACC:         1 Mult
+
+I/O ports: 5
+I/O primitives: 5
+INBUF          2 uses
+OUTBUF         3 uses
+
+
+Global Clock Buffers: 2
+
+
+Total LUTs:    1133
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K18  Interface Logic : SLEs = 0; LUTs = 0;
+MACC     Interface Logic : SLEs = 36; LUTs = 36;
+
+Total number of SLEs after P&R:  380 + 0 + 0 + 36 = 416;
+Total number of LUTs after P&R:  1133 + 0 + 0 + 36 = 1169;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:01m:32s; CPU Time elapsed 0h:01m:25s; Memory used current: 57MB peak: 206MB)
+
+Process took 0h:01m:32s realtime, 0h:01m:25s cputime
+# Sun Feb 07 15:07:06 2016
+
+###########################################################]

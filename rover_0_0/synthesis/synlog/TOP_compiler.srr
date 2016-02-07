@@ -1,0 +1,297 @@
+Synopsys HDL Compiler, version comp201403sp1p1, Build 095R, built Oct  9 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp201403sp1p1, Build 095R, built Oct  9 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: CD720 :"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\TOP.vhd":20:7:20:9|Top entity is set to TOP.
+VHDL syntax check successful!
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+
+# Sun Feb 07 15:05:27 2016
+
+###########################################################]
+Synopsys Verilog Compiler, version comp201403sp1p1, Build 095R, built Oct  9 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\umr_capim.v"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\scemi_objects.v"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\scemi_pipes.svh"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\hypermods.v"
+@I::"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\BT_resiver.v"
+Verilog syntax check successful!
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+# Sun Feb 07 15:05:27 2016
+
+###########################################################]
+@N: CD720 :"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\TOP.vhd":20:7:20:9|Top entity is set to TOP.
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\TOP.vhd":20:7:20:9|Synthesizing work.top.rtl 
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":6:7:6:17|Synthesizing work.time_sender.bh 
+@W: CD749 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":51:22:51:28|Index value of type natural (or large positive integer) could be out of prefix range 0 to 8 
+@W: CD749 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":64:38:64:44|Index value of type natural (or large positive integer) could be out of prefix range 0 to 8 
+Post processing for work.time_sender.bh
+@W: CL271 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning bits 30 to 8 of k(30 downto 0) -- not in use ... 
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal k[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_1[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal data_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal valu[30:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_8[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_7[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_6[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_5[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_4[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_3[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_2[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":6:7:6:18|Synthesizing work.servo_driver.bh 
+Post processing for work.servo_driver.bh
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":6:7:6:17|Synthesizing work.pulse_meash.bh 
+Post processing for work.pulse_meash.bh
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":8:7:8:19|Synthesizing work.top_osc_0_osc.def_arch 
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\Actel\SgCore\OSC\1.0.103\osc_comps.vhd":4:7:4:16|Synthesizing work.rcosc_1mhz.def_arch 
+Post processing for work.rcosc_1mhz.def_arch
+Post processing for work.top_osc_0_osc.def_arch
+@W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":16:10:16:19|XTLOSC_O2F is not assigned a value (floating) -- simulation mismatch possible. 
+@W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":15:10:15:19|XTLOSC_CCC is not assigned a value (floating) -- simulation mismatch possible. 
+@W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":14:10:14:23|RCOSC_1MHZ_O2F is not assigned a value (floating) -- simulation mismatch possible. 
+@W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":12:10:12:27|RCOSC_25_50MHZ_O2F is not assigned a value (floating) -- simulation mismatch possible. 
+@W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":11:10:11:27|RCOSC_25_50MHZ_CCC is not assigned a value (floating) -- simulation mismatch possible. 
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":6:7:6:21|Synthesizing work.locator_control.bh 
+Post processing for work.locator_control.bh
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|Feedback mux created for signal cr_angle[30:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(4) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(5) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(6) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(7) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(8) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(9) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(10) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(11) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(12) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(13) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(14) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(15) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(16) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(17) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(18) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(19) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(20) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(21) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(22) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(23) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(24) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(25) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(26) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(27) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(28) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(29) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(30) assign '0'; register removed by optimization
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|Feedback mux created for signal st_angle[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(4) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(5) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(6) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(7) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(8) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(9) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(10) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(11) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(12) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(13) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(14) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(15) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(16) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(17) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(18) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(19) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(20) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(21) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(22) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(23) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(24) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(25) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(26) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(27) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(28) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(29) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(30) assign '0'; register removed by optimization
+@A: CL282 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|Feedback mux created for signal fn_angle[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\FCCC_0\TOP_FCCC_0_FCCC.vhd":8:7:8:21|Synthesizing work.top_fccc_0_fccc.def_arch 
+Post processing for work.top_fccc_0_fccc.def_arch
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":34:7:34:29|Synthesizing coreuart_lib.top_coreuart_0_coreuart.translated 
+@W: CD434 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":265:21:265:31|Signal rx_dout_reg in the sensitivity list is not used in the process
+@W: CD434 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":265:34:265:49|Signal parity_err_xhdl1 in the sensitivity list is not used in the process
+@W: CD604 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":392:9:392:22|OTHERS clause is not synthesized 
+@N: CD364 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":450:13:450:24|Removed redundant assignment
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":33:7:33:29|Synthesizing coreuart_lib.top_coreuart_0_rx_async.translated 
+@N: CD233 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":233:15:233:29|Removed redundant assignment
+@W: CD604 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":253:21:253:34|OTHERS clause is not synthesized 
+@N: CD364 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":256:19:256:26|Removed redundant assignment
+@W: CD604 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":318:19:318:33|OTHERS clause is not synthesized 
+@W: CD604 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":423:18:423:32|OTHERS clause is not synthesized 
+Post processing for coreuart_lib.top_coreuart_0_rx_async.translated
+@N: CL177 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":443:6:443:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":33:7:33:29|Synthesizing coreuart_lib.top_coreuart_0_tx_async.translated 
+@N: CD364 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":311:12:311:20|Removed redundant assignment
+Post processing for coreuart_lib.top_coreuart_0_tx_async.translated
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":134:4:134:5|Optimizing register bit fifo_read_en0 to a constant 1
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":134:4:134:5|Pruning register fifo_read_en0  
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Clock_gen.vhd":35:7:35:30|Synthesizing coreuart_lib.top_coreuart_0_clock_gen.rtl 
+@W: CD638 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Clock_gen.vhd":54:7:54:19|Signal baud_cntr_one is undriven 
+Post processing for coreuart_lib.top_coreuart_0_clock_gen.rtl
+Post processing for coreuart_lib.top_coreuart_0_coreuart.translated
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":439:7:439:8|Pruning register overflow_reg_3  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":414:7:414:8|Pruning register rx_dout_reg_empty_5  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":399:6:399:7|Pruning register rx_dout_reg_5(7 downto 0)  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":367:6:367:7|Pruning register rx_state_4(1 downto 0)  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":350:6:350:7|Pruning register clear_framing_error_reg0_3  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":350:6:350:7|Pruning register clear_framing_error_reg_3  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":333:6:333:7|Pruning register clear_parity_reg0_3  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":333:6:333:7|Pruning register clear_parity_reg_3  
+@W: CL169 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":245:6:245:7|Pruning register fifo_write_tx_4  
+Post processing for work.top.rtl
+@W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Clock_gen.vhd":41:20:41:36|Input BAUD_VAL_FRACTION is unused
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":134:4:134:5|Trying to extract state machine for register xmit_state
+Extracted state machine for register xmit_state
+State machine has 6 reachable states with original encodings of:
+   00000000000000000000000000000000
+   00000000000000000000000000000001
+   00000000000000000000000000000010
+   00000000000000000000000000000011
+   00000000000000000000000000000100
+   00000000000000000000000000000101
+@W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":45:9:45:19|Input tx_dout_reg is unused
+@W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":46:9:46:18|Input fifo_empty is unused
+@W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":47:9:47:17|Input fifo_full is unused
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":264:6:264:7|Trying to extract state machine for register rx_state
+Extracted state machine for register rx_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":30:8:30:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 12 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+   0000000000000000000000000000011
+   0000000000000000000000000000100
+   0000000000000000000000000000101
+   0000000000000000000000000000110
+   0000000000000000000000000000111
+   0000000000000000000000000001000
+   0000000000000000000000000001001
+   0000000000000000000000000001010
+   0000000000000000000000000001011
+@W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":10:10:10:12|Input XTL is unused
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 4 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+   0000000000000000000000000000011
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(0) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(1) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(18) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(19) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(20) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(21) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(22) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(23) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(24) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(25) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(26) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(27) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(28) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(29) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(30) to a constant 0
+@W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Pruning register bits 30 to 18 of pulse_length(30 downto 0)  
+@W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Pruning register bits 1 to 0 of pulse_length(30 downto 0)  
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(30) to a constant 0
+@W: CL260 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning register bit 30 of i(30 downto 0)  
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(29) to a constant 0
+@W: CL260 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning register bit 29 of i(29 downto 0)  
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(28) to a constant 0
+@W: CL260 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning register bit 28 of i(28 downto 0)  
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+   0000000000000000000000000000011
+   0000000000000000000000000000100
+   0000000000000000000000000000101
+   0000000000000000000000000001010
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(27) to a constant 0
+@W: CL260 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning register bit 27 of i(27 downto 0)  
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(26) to a constant 0
+@W: CL260 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning register bit 26 of i(26 downto 0)  
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 79MB peak: 92MB)
+
+# Sun Feb 07 15:05:29 2016
+
+###########################################################]
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\generic\smartfusion2.v"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\umr_capim.v"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\scemi_objects.v"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\scemi_pipes.svh"
+@I::"C:\Microsemi\Libero_v11.5\Synopsys\synplify_I201403MSP1\lib\vlog\hypermods.v"
+@I::"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\BT_resiver.v"
+Verilog syntax check successful!
+@N: CG364 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\BT_resiver.v":1:7:1:15|Synthesizing module BT_module
+
+@N: CL201 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\BT_resiver.v":14:0:14:5|Trying to extract state machine for register TX_RX_repiter
+Extracted state machine for register TX_RX_repiter
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   11
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+# Sun Feb 07 15:05:29 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403sp1p1, Build 095R, built Oct  9 2014
+@N|Running in 64-bit mode
+
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\synwork\TOP_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Feb 07 15:05:30 2016
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+# Sun Feb 07 15:05:30 2016
+
+###########################################################]
