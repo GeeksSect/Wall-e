@@ -1,6 +1,6 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1KX18, RAM64X18, GLOBAL, IO
-. TOP, 380, 580, 553, 0, 1, 0, 0, 2, 5
+. TOP, 380, 551, 505, 0, 1, 0, 0, 2, 8
 .	. BT_module, 11, 2, 0, 0, 0, 0, 0, 0, 0
 .	. TOP_COREUART_0_COREUART_19_0_0_0_0, 74, 78, 14, 0, 0, 0, 0, 0, 0
 .	.	. TOP_COREUART_0_Clock_gen_0_0, 19, 12, 14, 0, 0, 0, 0, 0, 0
@@ -8,7 +8,8 @@
 .	.	. TOP_COREUART_0_Tx_async_0_0, 16, 19, 0, 0, 0, 0, 0, 0, 0
 .	. TOP_FCCC_0_FCCC, 0, 0, 0, 0, 0, 0, 0, 2, 0
 .	. TOP_OSC_0_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0
-.	. locator_control_work_top_rtl_0layer0, 90, 76, 126, 0, 0, 0, 0, 0, 0
-.	. pulse_meash, 50, 88, 288, 0, 0, 0, 0, 0, 0
-.	. servo_driver_work_top_rtl_0layer0, 50, 44, 73, 0, 1, 0, 0, 0, 0
-.	. time_sender_work_top_rtl_0layer0, 105, 292, 52, 0, 0, 0, 0, 0, 0
+.	. delayer_work_top_rtl_0layer0, 24, 12, 24, 0, 0, 0, 0, 0, 0
+.	. locator_control_work_top_rtl_0layer0, 90, 92, 126, 0, 0, 0, 0, 0, 0
+.	. pulse_meash, 44, 37, 217, 0, 0, 0, 0, 0, 0
+.	. servo_driver_work_top_rtl_0layer0, 49, 44, 72, 0, 1, 0, 0, 0, 0
+.	. time_sender_work_top_rtl_0layer0, 88, 286, 52, 0, 0, 0, 0, 0, 0

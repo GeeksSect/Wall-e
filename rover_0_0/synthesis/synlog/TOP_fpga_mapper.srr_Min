@@ -1,7 +1,7 @@
 
 
 @S |##### START OF TIMING REPORT #####[
-# Timing Report written on Sun Feb 07 15:07:06 2016
+# Timing Report written on Mon Feb 08 23:35:16 2016
 #
 
 
@@ -25,7 +25,7 @@ Worst slack in design: 0.315
                                            Requested     Estimated      Requested     Estimated                 Clock        Clock              
 Starting Clock                             Frequency     Frequency      Period        Period        Slack       Type         Group              
 ------------------------------------------------------------------------------------------------------------------------------------------------
-TOP_FCCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     26.9 MHz       10.000        37.241        -27.241     inferred     Inferred_clkgroup_0
+TOP_FCCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     40.8 MHz       10.000        24.506        -14.506     inferred     Inferred_clkgroup_0
 System                                     100.0 MHz     1029.4 MHz     10.000        0.971         9.029       system       system_clkgroup    
 ================================================================================================================================================
 
@@ -39,7 +39,7 @@ Clocks                                                                          
 Starting                                Ending                                  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 System                                  System                                  |  0.000       0.680  |  No paths    -      |  No paths    -      |  No paths    -    
-System                                  TOP_FCCC_0_FCCC|GL0_net_inferred_clock  |  0.000       2.197  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                  TOP_FCCC_0_FCCC|GL0_net_inferred_clock  |  0.000       1.725  |  No paths    -      |  No paths    -      |  No paths    -    
 TOP_FCCC_0_FCCC|GL0_net_inferred_clock  TOP_FCCC_0_FCCC|GL0_net_inferred_clock  |  0.000       0.315  |  No paths    -      |  No paths    -      |  No paths    -    
 ======================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
@@ -144,28 +144,28 @@ Instance               Reference     Type           Pin        Net              
                        Clock                                                                                                
 ----------------------------------------------------------------------------------------------------------------------------
 OSC_0.I_RCOSC_1MHZ     System        RCOSC_1MHZ     CLKOUT     OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     0.000       0.680
-FCCC_0.CCC_INST        System        CCC            LOCK       LOCK                                        0.000       2.197
+FCCC_0.CCC_INST        System        CCC            LOCK       LOCK                                        0.000       1.724
 ============================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                            Starting                                                                          Required          
-Instance                    Reference     Type     Pin            Net                                         Time         Slack
-                            Clock                                                                                               
---------------------------------------------------------------------------------------------------------------------------------
-FCCC_0.CCC_INST             System        CCC      RCOSC_1MHZ     OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     0.000        0.680
-time_sender_0.buff_1[0]     System        SLE      EN             un1_rst_n_inv_2_0_i                         0.205        2.197
-time_sender_0.buff_1[1]     System        SLE      EN             un1_rst_n_inv_2_0_i                         0.205        2.197
-time_sender_0.buff_1[2]     System        SLE      EN             un1_rst_n_inv_2_0_i                         0.205        2.197
-time_sender_0.buff_1[3]     System        SLE      EN             un1_rst_n_inv_2_0_i                         0.205        2.197
-time_sender_0.buff_1[4]     System        SLE      EN             un1_rst_n_inv_2_0_i                         0.205        2.197
-time_sender_0.k[0]          System        SLE      EN             k_1_sqmuxa_i_i_a2                           0.205        2.197
-time_sender_0.k[1]          System        SLE      EN             k_1_sqmuxa_i_i_a2                           0.205        2.197
-time_sender_0.k[2]          System        SLE      EN             k_1_sqmuxa_i_i_a2                           0.205        2.197
-time_sender_0.k[3]          System        SLE      EN             k_1_sqmuxa_i_i_a2                           0.205        2.197
-================================================================================================================================
+                    Starting                                                                          Required          
+Instance            Reference     Type     Pin            Net                                         Time         Slack
+                    Clock                                                                                               
+------------------------------------------------------------------------------------------------------------------------
+FCCC_0.CCC_INST     System        CCC      RCOSC_1MHZ     OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     0.000        0.680
+delayer_0.i[0]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[1]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[2]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[3]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[4]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[5]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[6]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[7]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+delayer_0.i[8]      System        SLE      EN             FCCC_0_LOCK                                 0.205        1.724
+========================================================================================================================
 
 
 

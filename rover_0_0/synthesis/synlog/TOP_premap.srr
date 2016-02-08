@@ -40,15 +40,15 @@ System                                     1.0 MHz       1000.000      system   
 TOP_FCCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0
 =======================================================================================================
 
-@W: MT530 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\clock_gen.vhd":214:11:214:12|Found inferred clock TOP_FCCC_0_FCCC|GL0_net_inferred_clock which controls 450 sequential elements including COREUART_0.make_TOP_COREUART_0_Clock_gen.baud_cntr[12:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\vetal\desktop\actel source2\rover_0_0\component\work\top\coreuart_0\rtl\vhdl\core\clock_gen.vhd":214:11:214:12|Found inferred clock TOP_FCCC_0_FCCC|GL0_net_inferred_clock which controls 441 sequential elements including COREUART_0.make_TOP_COREUART_0_Clock_gen.baud_cntr[12:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\TOP.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 133MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 133MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun Feb 07 15:05:34 2016
+# Mon Feb 08 23:34:34 2016
 
 ###########################################################]

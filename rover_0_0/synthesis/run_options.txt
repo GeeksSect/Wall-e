@@ -1,11 +1,12 @@
 #--  Synopsys, Inc.
 #--  Version I-2014.03M-SP1
 #--  Project file C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\run_options.txt
-#--  Written on Sun Feb 07 15:05:26 2016
+#--  Written on Mon Feb 08 23:34:29 2016
 
 
 #project files
 add_file -verilog "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/BT_resiver.v"
+add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/delayer.vhd"
 add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/work/TOP/FCCC_0/TOP_FCCC_0_FCCC.vhd"
 add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/hdl/sonar_driver.vhd"
 add_file -vhdl -lib work "C:/Users/vetal/Desktop/actel source2/rover_0_0/component/Actel/SgCore/OSC/1.0.103/osc_comps.vhd"

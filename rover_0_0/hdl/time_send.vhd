@@ -24,7 +24,7 @@ port (
 
 end time_sender;
 architecture BH of time_sender is
-signal buff : mem (0 to 8);
+signal buff : mem (0 to 5);
 begin
     process (clk, rst_n)
     variable state, valu, angl, i, k : natural;
@@ -41,7 +41,7 @@ begin
                      if(new_ready = '1') then   
                         valu := to_integer(unsigned(time1));
                         buff(1) <= std_logic_vector(to_unsigned(to_integer(unsigned(angle))+48, 8));
-                        i:=3;
+                        i:=2;
                         state := 1;
                      end if;                  
                   when 1 =>
@@ -49,15 +49,14 @@ begin
                      state := 2;
                   when 2 =>
                       buff(i) <= std_logic_vector(to_unsigned(k, 8));
-                      valu := valu /10;
+                      valu := valu / 10;
                       i:= i+1;
-                      if(i <= 8) then
+                      if(i <= 5) then
                         state := 1;
                       else
-                        i := 8;
+                        i := 5;
                         state := 3;
                       end if;
-
                   when 3 =>
                       if(txrdy = '1') then
                           state := 4;
@@ -69,12 +68,12 @@ begin
                         i := i-1;
                         state := 5;
                      else
-                        state :=10;
+                        state :=6;
                      end if;
                   when 5 =>
                     wen <= '1';
                     state :=3;
-                  when 10 =>
+                  when 6 =>
                     wen <= '1';
                     state := 0;
                   when others =>

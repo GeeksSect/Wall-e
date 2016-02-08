@@ -30,23 +30,23 @@ begin
                     state := 1;
                   end if;
                 when 1 =>
-                    new_ready <= '0';
                     if(signal0 = '1') then
                         state := 2;
                         i := 0;
                     end if;
                 when 2 =>
-                    if(signal0 = '1') then
+                    if(signal0 = '1' and i < 2_500_000) then
                         i := i + 1;
-                    end if;
-                    if (signal0 = '0' or i > 3_000_000) then
-                      state := 3;
+                    else
+                        state := 3;
                     end if;
                 when 3 =>
                     new_ready <= '1';
-                    time <= std_logic_vector(to_unsigned(i/(5*58), 16));
+                    time <= std_logic_vector(to_unsigned(i/(50*58), 16));
+                    state := 4;
+                when 4 =>
+                    new_ready <= '0';
                     state := 0;
-                    report ("state : 3");
                 when others =>
                     NULL;
             end case;

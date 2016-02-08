@@ -13,7 +13,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      380                100 %                
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP:	380 (23.65 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP:	380 (24.79 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -21,12 +21,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           580                100 %                
-ARI1          553                100 %                
+CFG           551                100 %                
+ARI1          505                100 %                
 BUFFER        0                  0.0 %                
-BLACK BOX     62                 100 %                
+BLACK BOX     60                 100 %                
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP:	1195 (74.36 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP:	1116 (72.80 % Utilization)
 
 
 DSP
@@ -36,7 +36,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 MACC     1                  100 %                
 =================================================
-Total DSP in the block TOP:	1 (0.06 % Utilization)
+Total DSP in the block TOP:	1 (0.07 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -57,7 +57,7 @@ Name       Total elements     Utilization     Notes
 ---------------------------------------------------
 GLOBAL     2                  100 %                
 ===================================================
-Total GLOBAL BUFFERS in the block TOP:	2 (0.12 % Utilization)
+Total GLOBAL BUFFERS in the block TOP:	2 (0.13 % Utilization)
 
 
 IO PADS
@@ -65,9 +65,9 @@ IO PADS
 
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-IO       5                  100 %                
+IO       8                  100 %                
 =================================================
-Total IO PADS in the block TOP:	5 (0.31 % Utilization)
+Total IO PADS in the block TOP:	8 (0.52 % Utilization)
 
 ---------------------------------------------------------------
 ########   Utilization report for  cell:   BT_module   ########
@@ -81,7 +81,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      11                 2.89 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.BT_module:	11 (0.68 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.BT_module:	11 (0.72 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -89,12 +89,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           2                  0.3450 %             
+CFG           2                  0.3630 %             
 ARI1          0                  0.0 %                
 BUFFER        0                  0.0 %                
-BLACK BOX     1                  1.61 %               
+BLACK BOX     1                  1.67 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.BT_module:	3 (0.19 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.BT_module:	3 (0.20 % Utilization)
 
 
 DSP
@@ -149,7 +149,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      74                 19.5 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	74 (4.60 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	74 (4.83 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -157,12 +157,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           78                 13.4 %               
-ARI1          14                 2.53 %               
+CFG           78                 14.2 %               
+ARI1          14                 2.77 %               
 BUFFER        0                  0.0 %                
-BLACK BOX     17                 27.4 %               
+BLACK BOX     17                 28.3 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	109 (6.78 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.TOP_COREUART_0_COREUART_19_0_0_0_0:	109 (7.11 % Utilization)
 
 
 DSP
@@ -217,7 +217,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      19                 5. %                 
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	19 (1.18 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	19 (1.24 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -225,12 +225,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           12                 2.07 %               
-ARI1          14                 2.53 %               
+CFG           12                 2.18 %               
+ARI1          14                 2.77 %               
 BUFFER        0                  0.0 %                
 BLACK BOX     0                  0.0 %                
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	26 (1.62 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Clock_gen_0_0:	26 (1.70 % Utilization)
 
 
 DSP
@@ -285,7 +285,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      33                 8.68 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	33 (2.05 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	33 (2.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -293,12 +293,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           46                 7.93 %               
+CFG           46                 8.35 %               
 ARI1          0                  0.0 %                
 BUFFER        0                  0.0 %                
-BLACK BOX     11                 17.7 %               
+BLACK BOX     11                 18.3 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	57 (3.55 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Rx_async_0_0:	57 (3.72 % Utilization)
 
 
 DSP
@@ -353,7 +353,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      16                 4.21 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	16 (1.00 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	16 (1.04 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -361,12 +361,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           19                 3.28 %               
+CFG           19                 3.45 %               
 ARI1          0                  0.0 %                
 BUFFER        0                  0.0 %                
-BLACK BOX     4                  6.45 %               
+BLACK BOX     4                  6.67 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	23 (1.43 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP_COREUART_0_COREUART_19_0_0_0_0.TOP_COREUART_0_Tx_async_0_0:	23 (1.50 % Utilization)
 
 
 DSP
@@ -432,9 +432,9 @@ Name          Total elements     Utilization     Notes
 CFG           0                  0.0 %                
 ARI1          0                  0.0 %                
 BUFFER        0                  0.0 %                
-BLACK BOX     2                  3.23 %               
+BLACK BOX     2                  3.33 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.TOP_FCCC_0_FCCC:	2 (0.12 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.TOP_FCCC_0_FCCC:	2 (0.13 % Utilization)
 
 
 DSP
@@ -465,7 +465,7 @@ Name       Total elements     Utilization     Notes
 ---------------------------------------------------
 GLOBAL     2                  100 %                
 ===================================================
-Total GLOBAL BUFFERS in the block TOP.TOP_FCCC_0_FCCC:	2 (0.12 % Utilization)
+Total GLOBAL BUFFERS in the block TOP.TOP_FCCC_0_FCCC:	2 (0.13 % Utilization)
 
 
 IO PADS
@@ -500,9 +500,9 @@ Name          Total elements     Utilization     Notes
 CFG           0                  0.0 %                
 ARI1          0                  0.0 %                
 BUFFER        0                  0.0 %                
-BLACK BOX     1                  1.61 %               
+BLACK BOX     1                  1.67 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.TOP_OSC_0_OSC:	1 (0.06 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.TOP_OSC_0_OSC:	1 (0.07 % Utilization)
 
 
 DSP
@@ -545,6 +545,74 @@ IO       0                  0.0 %
 =================================================
 Total IO PADS in the block TOP.TOP_OSC_0_OSC:	0 (0.00 % Utilization)
 
+----------------------------------------------------------------------------------
+########   Utilization report for  cell:   delayer_work_top_rtl_0layer0   ########
+Instance path:   TOP.delayer_work_top_rtl_0layer0                                 
+==================================================================================
+
+SEQUENTIAL ELEMENTS
+*******************
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      24                 6.32 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block TOP.delayer_work_top_rtl_0layer0:	24 (1.57 % Utilization)
+
+
+COMBINATIONAL LOGIC
+*******************
+
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           12                 2.18 %               
+ARI1          24                 4.75 %               
+BUFFER        0                  0.0 %                
+BLACK BOX     0                  0.0 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block TOP.delayer_work_top_rtl_0layer0:	36 (2.35 % Utilization)
+
+
+DSP
+***
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACC     0                  0.0 %                
+=================================================
+Total DSP in the block TOP.delayer_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+MEMORY ELEMENTS
+***************
+
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1KX18     0                  0.0 %                
+RAM64X18     0                  0.0 %                
+=====================================================
+Total MEMORY ELEMENTS in the block TOP.delayer_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+GLOBAL BUFFERS
+**************
+
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     0                  0.0 %                
+===================================================
+Total GLOBAL BUFFERS in the block TOP.delayer_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
+
+IO PADS
+*******
+
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       0                  0.0 %                
+=================================================
+Total IO PADS in the block TOP.delayer_work_top_rtl_0layer0:	0 (0.00 % Utilization)
+
 ------------------------------------------------------------------------------------------
 ########   Utilization report for  cell:   locator_control_work_top_rtl_0layer0   ########
 Instance path:   TOP.locator_control_work_top_rtl_0layer0                                 
@@ -557,7 +625,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 SLE      90                 23.7 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.locator_control_work_top_rtl_0layer0:	90 (5.60 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.locator_control_work_top_rtl_0layer0:	90 (5.87 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -565,12 +633,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           76                 13.1 %               
-ARI1          126                22.8 %               
+CFG           92                 16.7 %               
+ARI1          126                25. %                
 BUFFER        0                  0.0 %                
-BLACK BOX     1                  1.61 %               
+BLACK BOX     1                  1.67 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.locator_control_work_top_rtl_0layer0:	203 (12.63 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.locator_control_work_top_rtl_0layer0:	219 (14.29 % Utilization)
 
 
 DSP
@@ -623,9 +691,9 @@ SEQUENTIAL ELEMENTS
 
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      50                 13.2 %               
+SLE      44                 11.6 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.pulse_meash:	50 (3.11 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.pulse_meash:	44 (2.87 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -633,12 +701,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           88                 15.2 %               
-ARI1          288                52.1 %               
+CFG           37                 6.72 %               
+ARI1          217                43. %                
 BUFFER        0                  0.0 %                
-BLACK BOX     1                  1.61 %               
+BLACK BOX     3                  5. %                 
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.pulse_meash:	377 (23.46 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.pulse_meash:	257 (16.76 % Utilization)
 
 
 DSP
@@ -691,9 +759,9 @@ SEQUENTIAL ELEMENTS
 
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      50                 13.2 %               
+SLE      49                 12.9 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.servo_driver_work_top_rtl_0layer0:	50 (3.11 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.servo_driver_work_top_rtl_0layer0:	49 (3.20 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -701,12 +769,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           44                 7.59 %               
-ARI1          73                 13.2 %               
+CFG           44                 7.99 %               
+ARI1          72                 14.3 %               
 BUFFER        0                  0.0 %                
-BLACK BOX     1                  1.61 %               
+BLACK BOX     1                  1.67 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.servo_driver_work_top_rtl_0layer0:	118 (7.34 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.servo_driver_work_top_rtl_0layer0:	117 (7.63 % Utilization)
 
 
 DSP
@@ -716,7 +784,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 MACC     1                  100 %                
 =================================================
-Total DSP in the block TOP.servo_driver_work_top_rtl_0layer0:	1 (0.06 % Utilization)
+Total DSP in the block TOP.servo_driver_work_top_rtl_0layer0:	1 (0.07 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -759,9 +827,9 @@ SEQUENTIAL ELEMENTS
 
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      105                27.6 %               
+SLE      88                 23.2 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block TOP.time_sender_work_top_rtl_0layer0:	105 (6.53 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block TOP.time_sender_work_top_rtl_0layer0:	88 (5.74 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -769,12 +837,12 @@ COMBINATIONAL LOGIC
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-CFG           292                50.3 %               
-ARI1          52                 9.4 %                
+CFG           286                51.9 %               
+ARI1          52                 10.3 %               
 BUFFER        0                  0.0 %                
-BLACK BOX     38                 61.3 %               
+BLACK BOX     34                 56.7 %               
 ======================================================
-Total COMBINATIONAL LOGIC in the block TOP.time_sender_work_top_rtl_0layer0:	382 (23.77 % Utilization)
+Total COMBINATIONAL LOGIC in the block TOP.time_sender_work_top_rtl_0layer0:	372 (24.27 % Utilization)
 
 
 DSP

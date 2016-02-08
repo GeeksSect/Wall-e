@@ -1,5 +1,5 @@
-@W: CD749 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":51:22:51:28|Index value of type natural (or large positive integer) could be out of prefix range 0 to 8 
-@W: CD749 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":64:38:64:44|Index value of type natural (or large positive integer) could be out of prefix range 0 to 8 
+@W: CD749 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":51:22:51:28|Index value of type natural (or large positive integer) could be out of prefix range 0 to 5 
+@W: CD749 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":63:38:63:44|Index value of type natural (or large positive integer) could be out of prefix range 0 to 5 
 @W: CL271 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning bits 30 to 8 of k(30 downto 0) -- not in use ... 
 @W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":16:10:16:19|XTLOSC_O2F is not assigned a value (floating) -- simulation mismatch possible. 
 @W: CL240 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":15:10:15:19|XTLOSC_CCC is not assigned a value (floating) -- simulation mismatch possible. 
@@ -82,9 +82,29 @@
 @W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":45:9:45:19|Input tx_dout_reg is unused
 @W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":46:9:46:18|Input fifo_empty is unused
 @W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Tx_async.vhd":47:9:47:17|Input fifo_full is unused
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(23) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(24) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(25) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(26) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(27) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(28) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(29) is always 0, optimizing ...
+@W: CL189 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Register bit i(30) is always 0, optimizing ...
+@W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":21:8:21:9|Pruning register bits 30 to 23 of i(30 downto 0)  
 @W: CL159 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\OSC_0\TOP_OSC_0_OSC.vhd":10:10:10:12|Input XTL is unused
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(22) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(23) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(24) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(25) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(26) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(27) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(28) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(29) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(30) to a constant 0
+@W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\pulse_w.vhdl":21:8:21:9|Pruning register bits 30 to 22 of i(30 downto 0)  
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(0) to a constant 0
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(1) to a constant 0
+@W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(2) to a constant 0
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(18) to a constant 0
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(19) to a constant 0
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(20) to a constant 0
@@ -99,7 +119,7 @@
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(29) to a constant 0
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(30) to a constant 0
 @W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Pruning register bits 30 to 18 of pulse_length(30 downto 0)  
-@W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Pruning register bits 1 to 0 of pulse_length(30 downto 0)  
+@W: CL279 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\servo.vhdl":22:8:22:9|Pruning register bits 2 to 0 of pulse_length(30 downto 0)  
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(30) to a constant 0
 @W: CL260 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Pruning register bit 30 of i(30 downto 0)  
 @W: CL190 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(29) to a constant 0

@@ -47,7 +47,8 @@ begin
                         state := 2;
                     when 2 => --send to servodriver new pos
                         angle <= std_logic_vector(to_unsigned(cr_angle, 4));
-                        state := 3;
+                        state := 11;
+                        i:=0;  
                     when 3 => --turn on sonar
                         en_sonar <= '1';
                         state := 4;
@@ -71,7 +72,7 @@ begin
                         state := 8;
                     when 8 => -- waiting end of meashering
                         i:= i+1;
-                        if new_ready = '1' then
+                        if new_ready = '1' or i > 3_000_000 then
                             state := 9;
                         end if;
                     when 9 => -- change pos
@@ -93,12 +94,13 @@ begin
                         if over = '1' then
                             state := 0;
                             over := '0';
+                            dir := '0';
                         else
                             angle <= std_logic_vector(to_unsigned(cr_angle, 4));
                             state := 11;
                         end if;
                     when 11 => --wait noise
-                        if i > 3_000_000 then
+                        if i > 2_500_000 then
                             state := 3;
                             i := 0;
                         else
@@ -114,6 +116,7 @@ begin
  
     
 end BH;
+
 
 
 

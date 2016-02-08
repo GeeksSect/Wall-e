@@ -13,6 +13,7 @@
 @N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\Actel\SgCore\OSC\1.0.103\osc_comps.vhd":4:7:4:16|Synthesizing work.rcosc_1mhz.def_arch 
 @N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\sonar_driver.vhd":6:7:6:21|Synthesizing work.locator_control.bh 
 @N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\FCCC_0\TOP_FCCC_0_FCCC.vhd":8:7:8:21|Synthesizing work.top_fccc_0_fccc.def_arch 
+@N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\hdl\delayer.vhd":6:7:6:13|Synthesizing work.delayer.bh 
 @N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":34:7:34:29|Synthesizing coreuart_lib.top_coreuart_0_coreuart.translated 
 @N: CD364 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\CoreUART.vhd":450:13:450:24|Removed redundant assignment
 @N: CD630 :"C:\Users\vetal\Desktop\actel source2\rover_0_0\component\work\TOP\COREUART_0\rtl\vhdl\core\Rx_async.vhd":33:7:33:29|Synthesizing coreuart_lib.top_coreuart_0_rx_async.translated 

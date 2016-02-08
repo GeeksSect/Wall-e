@@ -29,7 +29,7 @@ begin
               case state is
                   when 0 =>
                     i := 0;
-                    pulse_length := to_integer(unsigned(angle))*(frq*13/100_000)+(frq*10/10_000);
+                    pulse_length := to_integer(unsigned(angle))*(frq*14/100_000)+(frq*6/10_000);
                     state := 1;
                   when 1 =>
                     servo_pwm <= '1';

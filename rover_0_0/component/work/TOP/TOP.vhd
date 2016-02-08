@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- Created by SmartDesign Sun Feb 07 15:04:34 2016
+-- Created by SmartDesign Mon Feb 08 23:32:52 2016
 -- Version: v11.5 SP3 11.5.3.10
 ----------------------------------------------------------------------
 
@@ -24,6 +24,9 @@ entity TOP is
         echo      : in  std_logic;
         rx        : in  std_logic;
         -- Outputs
+        led2      : out std_logic;
+        led3      : out std_logic;
+        led4      : out std_logic;
         servo_pwm : out std_logic;
         trig      : out std_logic;
         tx        : out std_logic
@@ -82,6 +85,18 @@ component TOP_COREUART_0_COREUART
         RXRDY             : out std_logic;
         TX                : out std_logic;
         TXRDY             : out std_logic
+        );
+end component;
+-- delayer
+component delayer
+    -- Port list
+    port(
+        -- Inputs
+        clk   : in  std_logic;
+        input : in  std_logic;
+        rst_n : in  std_logic;
+        -- Outputs
+        led   : out std_logic
         );
 end component;
 -- TOP_FCCC_0_FCCC   -   Actel:SgCore:FCCC:2.0.200
@@ -178,6 +193,8 @@ signal COREUART_0_RXRDY                        : std_logic;
 signal COREUART_0_TXRDY                        : std_logic;
 signal FCCC_0_GL0                              : std_logic;
 signal FCCC_0_LOCK                             : std_logic;
+signal led3_0                                  : std_logic;
+signal led4_net_0                              : std_logic;
 signal locator_control_0_angle                 : std_logic_vector(3 downto 0);
 signal locator_control_0_angle1                : std_logic_vector(3 downto 0);
 signal locator_control_0_en_timer              : std_logic;
@@ -186,12 +203,14 @@ signal pulse_meash_0_new_ready                 : std_logic;
 signal pulse_meash_0_time                      : std_logic_vector(15 downto 0);
 signal servo_pwm_net_0                         : std_logic;
 signal time_sender_0_data_out                  : std_logic_vector(7 downto 0);
-signal time_sender_0_wen                       : std_logic;
 signal trig_net_0                              : std_logic;
 signal tx_net_0                                : std_logic;
 signal tx_net_1                                : std_logic;
 signal servo_pwm_net_1                         : std_logic;
 signal trig_net_1                              : std_logic;
+signal echo_net_0                              : std_logic;
+signal led3_0_net_0                            : std_logic;
+signal led4_net_1                              : std_logic;
 ----------------------------------------------------------------------
 -- TiedOff Signals
 ----------------------------------------------------------------------
@@ -221,6 +240,12 @@ begin
  servo_pwm       <= servo_pwm_net_1;
  trig_net_1      <= trig_net_0;
  trig            <= trig_net_1;
+ echo_net_0      <= echo;
+ led2            <= echo_net_0;
+ led3_0_net_0    <= led3_0;
+ led3            <= led3_0_net_0;
+ led4_net_1      <= led4_net_0;
+ led4            <= led4_net_1;
 ----------------------------------------------------------------------
 -- Component instances
 ----------------------------------------------------------------------
@@ -233,8 +258,8 @@ BT_module_0 : BT_module
         rxrdy    => COREUART_0_RXRDY,
         data_rx  => COREUART_0_DATA_OUT,
         -- Outputs
-        data_buf => BT_module_0_data_buf,
-        oen      => BT_module_0_oen 
+        oen      => BT_module_0_oen,
+        data_buf => BT_module_0_data_buf 
         );
 -- COREUART_0   -   Actel:DirectCore:COREUART:5.5.101
 COREUART_0 : TOP_COREUART_0_COREUART
@@ -255,7 +280,7 @@ COREUART_0 : TOP_COREUART_0_COREUART
         PARITY_EN         => GND_net,
         RESET_N           => FCCC_0_LOCK,
         RX                => rx,
-        WEN               => time_sender_0_wen,
+        WEN               => led4_net_0,
         BAUD_VAL          => BAUD_VAL_const_net_0,
         DATA_IN           => time_sender_0_data_out,
         BAUD_VAL_FRACTION => BAUD_VAL_FRACTION_const_net_0, -- tied to X"0" from definition
@@ -267,6 +292,16 @@ COREUART_0 : TOP_COREUART_0_COREUART
         TXRDY             => COREUART_0_TXRDY,
         FRAMING_ERR       => OPEN,
         DATA_OUT          => COREUART_0_DATA_OUT 
+        );
+-- delayer_0
+delayer_0 : delayer
+    port map( 
+        -- Inputs
+        clk   => FCCC_0_GL0,
+        rst_n => FCCC_0_LOCK,
+        input => pulse_meash_0_new_ready,
+        -- Outputs
+        led   => led3_0 
         );
 -- FCCC_0   -   Actel:SgCore:FCCC:2.0.200
 FCCC_0 : TOP_FCCC_0_FCCC
@@ -333,11 +368,11 @@ time_sender_0 : time_sender
         clk       => FCCC_0_GL0,
         rst_n     => FCCC_0_LOCK,
         new_ready => pulse_meash_0_new_ready,
+        txrdy     => COREUART_0_TXRDY,
         time1     => pulse_meash_0_time,
         angle     => locator_control_0_angle1,
-        txrdy     => COREUART_0_TXRDY,
         -- Outputs
-        wen       => time_sender_0_wen,
+        wen       => led4_net_0,
         data_out  => time_sender_0_data_out 
         );
 

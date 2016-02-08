@@ -13,13 +13,13 @@ The file contains the job information from mapper to be displayed as part of the
 </job_status>
 <job_info>
 <info name="Notes">
-<data>60</data>
+<data>59</data>
 <report_link name="more">
 <data>C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\synlog\report\TOP_fpga_mapper_notes.txt</data>
 </report_link>
 </info>
 <info name="Warnings">
-<data>22</data>
+<data>19</data>
 <report_link name="more">
 <data>C:\Users\vetal\Desktop\actel source2\rover_0_0\synthesis\synlog\report\TOP_fpga_mapper_warnings.txt</data>
 </report_link>
@@ -31,16 +31,16 @@ The file contains the job information from mapper to be displayed as part of the
 </report_link>
 </info>
 <info name="CPU Time">
-<data>0h:01m:25s</data>
+<data>0h:00m:40s</data>
 </info>
 <info name="Real Time">
-<data>0h:01m:32s</data>
+<data>0h:00m:41s</data>
 </info>
 <info name="Peak Memory">
-<data>206MB</data>
+<data>217MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1454846826</data>
+<data type="timestamp">1454963716</data>
 </info>
 </job_info>
 </job_run_status>

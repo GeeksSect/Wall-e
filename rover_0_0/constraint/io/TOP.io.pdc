@@ -93,7 +93,20 @@ set_io trig            \
     -fixed yes         \
     -DIRECTION OUTPUT
 
+set_io led2            \
+    -pinname 13         \
+    -fixed yes         \
+    -DIRECTION OUTPUT
 
+set_io led3            \
+    -pinname 14         \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+set_io led4            \
+    -pinname 15         \
+    -fixed yes         \
+    -DIRECTION OUTPUT
 set_io tx              \
     -pinname 53        \
     -fixed yes         \
