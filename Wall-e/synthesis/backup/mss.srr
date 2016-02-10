@@ -1,0 +1,91 @@
+#Build: Synplify Pro J-2015.03M-3, Build 048R, May 14 2015
+#install: C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3
+#OS: Windows 8 6.2
+#Hostname: HELL-PC
+
+#Implementation: synthesis
+
+Synopsys HDL Compiler, version comp201503p1, Build 094R, built May 14 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp201503p1, Build 094R, built May 14 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: CD720 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":6:7:6:17|Top entity is set to time_sender.
+VHDL syntax check successful!
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+# Thu Feb 11 00:06:26 2016
+
+###########################################################]
+Synopsys Verilog Compiler, version comp201503p1, Build 094R, built May 14 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v"
+@I::"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vlog\hypermods.v"
+@I::"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vlog\umr_capim.v"
+@I::"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vlog\scemi_objects.v"
+@I::"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vlog\scemi_pipes.svh"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\BT_resiver.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Clock_gen.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Tx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\FCCC_0\Echo_control_FCCC_0_FCCC.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\SgCore\OSC\1.0.105\osc_comps.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v"
+@E: CG729 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":150:9:150:13|Expecting port name, got keyword input
+@E: CS187 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":228:0:228:8|Expecting endmodule
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vlog\core\coreresetp_pcie_hotreset.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vlog\core\coreresetp.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\pwm_gen.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\tach_if.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\timebase.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CCC_0\mss_sb_CCC_0_FCCC.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Clock_gen.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Rx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Tx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\fifo_256x8_smartfusion2.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUART.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUARTapb.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Clock_gen.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Rx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Tx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\fifo_256x8_smartfusion2.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUART.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Clock_gen.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb_MSS\mss_sb_MSS_syn.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb_MSS\mss_sb_MSS.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\mss_sb.v"
+@I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v"
+2 syntax errors
+# Thu Feb 11 00:06:29 2016
+
+###########################################################]
+@E::Verilog compiler failed
+@END
+Process took 0h:00m:04s realtime, 0h:00m:01s cputime
+# Thu Feb 11 00:06:29 2016
+
+###########################################################]

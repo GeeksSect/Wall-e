@@ -1,0 +1,4 @@
+@E: CG729 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":200:9:200:12|Expecting port name, got keyword time
+@E: CS187 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":228:0:228:8|Expecting endmodule
+@E::Verilog compiler failed
+

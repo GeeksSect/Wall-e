@@ -1,0 +1,79 @@
+Synopsys Generic Technology Pre-mapping, Version map201503actrcp1, Build 002R, Built Jul  1 2015 06:58:23
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03M-3
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@L: C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\mss_scck.rpt 
+Printing clock  summary report in "C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\mss_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 115MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 115MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
+
+@W: BN132 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance mss_sb_0.CORERESETP_0.MDDR_DDR_AXI_S_CORE_RESET_N_int,  because it is equivalent to instance mss_sb_0.CORERESETP_0.FDDR_CORE_RESET_N_int
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance DDR_READY_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance SDIF_READY_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance SDIF_RELEASED_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance FDDR_CORE_RESET_N_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1170:4:1170:9|Removing sequential instance SDIF0_PHY_RESET_N_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1170:4:1170:9|Removing sequential instance SDIF0_CORE_RESET_N_0 of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1235:4:1235:9|Removing sequential instance SDIF1_PHY_RESET_N_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1235:4:1235:9|Removing sequential instance SDIF1_CORE_RESET_N_0 of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1300:4:1300:9|Removing sequential instance SDIF2_PHY_RESET_N_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1300:4:1300:9|Removing sequential instance SDIF2_CORE_RESET_N_0 of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1365:4:1365:9|Removing sequential instance SDIF3_PHY_RESET_N_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1365:4:1365:9|Removing sequential instance SDIF3_CORE_RESET_N_0 of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1170:4:1170:9|Removing sequential instance sdif0_state[3:0] of view:PrimLib.statemachine(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1235:4:1235:9|Removing sequential instance sdif1_state[3:0] of view:PrimLib.statemachine(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1300:4:1300:9|Removing sequential instance sdif2_state[3:0] of view:PrimLib.statemachine(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1365:4:1365:9|Removing sequential instance sdif3_state[3:0] of view:PrimLib.statemachine(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":797:4:797:9|Removing sequential instance sdif0_areset_n_clk_base of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":811:4:811:9|Removing sequential instance sdif1_areset_n_clk_base of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":825:4:825:9|Removing sequential instance sdif2_areset_n_clk_base of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":839:4:839:9|Removing sequential instance sdif3_areset_n_clk_base of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":797:4:797:9|Removing sequential instance sdif0_areset_n_q1 of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":811:4:811:9|Removing sequential instance sdif1_areset_n_q1 of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":825:4:825:9|Removing sequential instance sdif2_areset_n_q1 of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":839:4:839:9|Removing sequential instance sdif3_areset_n_q1 of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
+syn_allowed_resources : blockrams=21,dsps=22  set on top level netlist mss
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+
+
+
+@S |Clock Summary
+*****************
+
+Start                                                     Requested     Requested     Clock        Clock              
+Clock                                                     Frequency     Period        Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock           100.0 MHz     10.000        inferred     Inferred_clkgroup_2
+System                                                    100.0 MHz     10.000        system       system_clkgroup    
+mss_sb_CCC_0_FCCC|GL0_net_inferred_clock                  100.0 MHz     10.000        inferred     Inferred_clkgroup_0
+mss_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_1
+======================================================================================================================
+
+@W: MT530 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\corei2c\7.0.102\rtl\vlog\core\corei2creal.v":2659:3:2659:8|Found inferred clock mss_sb_CCC_0_FCCC|GL0_net_inferred_clock which controls 927 sequential elements including mss_sb_0.COREI2C_0_0.I2C_NUM_GENERATION\[0\]\.ui2c.fsmsta[4:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":912:4:912:9|Found inferred clock mss_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock which controls 15 sequential elements including mss_sb_0.CORERESETP_0.sdif3_areset_n_rcosc_q1. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\hdl\bt_resiver.v":14:0:14:5|Found inferred clock Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock which controls 526 sequential elements including Echo_control_0.BT_module_0.data_buf[7:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\mss.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 77MB peak: 143MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 11 00:40:53 2016
+
+###########################################################]

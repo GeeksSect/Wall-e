@@ -1,0 +1,25 @@
+data DESIGN mss
+data HPATH 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/designer/mss'
+data CPATH 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/constraint/io'
+data IOCPATH 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/constraint/io'
+data FPCPATH 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/constraint/fp'
+data FAM SmartFusion2
+data DIE PA4M1000_S
+data PACKAGE tq144
+data IO_DEFT_STD LVCMOS33
+data RESTRICTPROBEPINS 0
+data HYDRA_EXPORT_DATA 1
+data HYDRA_PRESERVE_DATA_FILES 1
+data ENABLE_AUTO_VERCHK 2
+data ALICUTIL_BD 42
+data RECORD_QUALIFIED_PATHS 0
+data VCCI_1.2_VOLTR COM
+data VCCI_1.5_VOLTR COM
+data VCCI_1.8_VOLTR COM
+data VCCI_2.5_VOLTR COM
+data VCCI_3.3_VOLTR COM
+data AFL 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/designer/mss/mss.afl'
+data ADL 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/designer/mss/mss.adl'
+data LOC 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/designer/mss/mss.loc'
+data SEG 'C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/designer/mss/mss.seg'
+

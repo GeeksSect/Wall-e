@@ -1,0 +1,165 @@
+@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":6:7:6:17|Synthesizing work.time_sender.bh 
+@W: CD749 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":51:22:51:28|Index value of type natural (or large positive integer) could be out of prefix range 0 to 5 
+@W: CD749 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":63:38:63:44|Index value of type natural (or large positive integer) could be out of prefix range 0 to 5 
+Post processing for work.time_sender.bh
+@W: CL271 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning bits 30 to 8 of k(30 downto 0) -- not in use ... 
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal k[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_1[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal valu[30:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal data_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_5[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_4[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_3[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Feedback mux created for signal buff_2[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":6:7:6:18|Synthesizing work.servo_driver.bh 
+Post processing for work.servo_driver.bh
+@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":6:7:6:17|Synthesizing work.pulse_meash.bh 
+Post processing for work.pulse_meash.bh
+@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":6:7:6:21|Synthesizing work.locator_control.bh 
+Post processing for work.locator_control.bh
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|Feedback mux created for signal cr_angle[30:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(4) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(5) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(6) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(7) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(8) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(9) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(10) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(11) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(12) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(13) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(14) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(15) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(16) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(17) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(18) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(19) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(20) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(21) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(22) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(23) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(24) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(25) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(26) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(27) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(28) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(29) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(30) assign '0'; register removed by optimization
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|Feedback mux created for signal st_angle[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(4) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(5) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(6) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(7) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(8) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(9) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(10) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(11) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(12) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(13) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(14) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(15) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(16) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(17) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(18) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(19) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(20) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(21) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(22) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(23) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(24) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(25) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(26) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(27) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(28) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(29) assign '0'; register removed by optimization
+@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(30) assign '0'; register removed by optimization
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|Feedback mux created for signal fn_angle[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":6:7:6:13|Synthesizing work.delayer.bh 
+Post processing for work.delayer.bh
+@A: CL282 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Feedback mux created for signal i[30:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(23) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(24) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(25) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(26) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(27) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(28) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(29) is always 0, optimizing ...
+@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(30) is always 0, optimizing ...
+@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Pruning register bits 30 to 23 of i(30 downto 0)  
+@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 12 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+   0000000000000000000000000000011
+   0000000000000000000000000000100
+   0000000000000000000000000000101
+   0000000000000000000000000000110
+   0000000000000000000000000000111
+   0000000000000000000000000001000
+   0000000000000000000000000001001
+   0000000000000000000000000001010
+   0000000000000000000000000001011
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(22) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(23) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(24) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(25) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(26) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(27) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(28) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(29) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(30) to a constant 0
+@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Pruning register bits 30 to 22 of i(30 downto 0)  
+@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 5 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+   0000000000000000000000000000011
+   0000000000000000000000000000100
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(0) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(1) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(2) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(18) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(19) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(20) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(21) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(22) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(23) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(24) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(25) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(26) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(27) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(28) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(29) to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(30) to a constant 0
+@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Pruning register bits 30 to 18 of pulse_length(30 downto 0)  
+@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Pruning register bits 2 to 0 of pulse_length(30 downto 0)  
+@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(30) to a constant 0
+@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 30 of i(30 downto 0)  
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(29) to a constant 0
+@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 29 of i(29 downto 0)  
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(28) to a constant 0
+@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 28 of i(28 downto 0)  
+@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   0000000000000000000000000000000
+   0000000000000000000000000000001
+   0000000000000000000000000000010
+   0000000000000000000000000000011
+   0000000000000000000000000000100
+   0000000000000000000000000000101
+   0000000000000000000000000000110
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(27) to a constant 0
+@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 27 of i(27 downto 0)  
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(26) to a constant 0
+@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 26 of i(26 downto 0)  

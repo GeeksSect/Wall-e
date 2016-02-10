@@ -1,0 +1,14 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.6 SP1 (Version 11.6.1.6)
+
+Date      :  Thu Feb 11 00:40:08 2016
+Project   :  C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e
+Component :  mss
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/component/work/mss/mss.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/kruci_000/Desktop/SoC/git/Wall-e/Wall-e/Wall-e/component/work/mss/subsystem.bfm
+
