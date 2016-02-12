@@ -3,38 +3,10 @@
 <drcreport>
   <header>mss</header>
   <drc>
-    <status>C:\Microsemi_11.06\Libero_v11.6\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin mss_sb_0:RX_0</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/mss/pins/mss_sb_0:RX_0</crossprobe>
-  </drc>
-  <drc>
     <status>C:\Microsemi_11.06\Libero_v11.6\Designer/data/drcreport\warn.png</status>
     <StatusMessage>Warning</StatusMessage>
     <message>Floating Driver</message>
-    <detail>Floating output pin mss_sb_0:TX_0</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/mss/pins/mss_sb_0:TX_0</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi_11.06\Libero_v11.6\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin mss_sb_0:RX_1</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/mss/pins/mss_sb_0:RX_1</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi_11.06\Libero_v11.6\Designer/data/drcreport\warn.png</status>
-    <StatusMessage>Warning</StatusMessage>
-    <message>Floating Driver</message>
-    <detail>Floating output pin mss_sb_0:TX_1</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/mss/pins/mss_sb_0:TX_1</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi_11.06\Libero_v11.6\Designer/data/drcreport\warn.png</status>
-    <StatusMessage>Warning</StatusMessage>
-    <message>Floating Driver</message>
-    <detail>Floating output bus pin mss_sb_0:PWM[8:1]</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/mss/pins/mss_sb_0:PWM</crossprobe>
+    <detail>Floating output pin mss:TEST</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/mss/pins/mss:TEST</crossprobe>
   </drc>
 </drcreport>

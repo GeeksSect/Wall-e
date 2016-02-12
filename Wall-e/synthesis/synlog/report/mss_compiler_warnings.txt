@@ -123,6 +123,7 @@
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":135:8:135:17|No assignment to data_ready
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":335:0:335:5|Pruning register rx_dout_reg_empty_q 
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v":157:20:157:30|No assignment to controlReg3
+@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":37:13:37:16|Input TEST is unused
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.

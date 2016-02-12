@@ -2,15 +2,6 @@
 // Version: v11.6 SP1 11.6.1.6
 
 
-module RCOSC_1MHZ(
-       CLKOUT
-    );
-output CLKOUT;
-
-    
-endmodule
-
-
 module MSS_010(
        CAN_RXBUS_MGPIO3A_H2F_A,
        CAN_RXBUS_MGPIO3A_H2F_B,
@@ -1012,7086 +1003,11 @@ output CLKOUT;
 endmodule
 
 
-module pulse_meash(
-       pulse_meash_0_tim,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       pulse_meash_0_new_ready,
-       locator_control_0_en_timer,
-       ECHO
+module RCOSC_1MHZ(
+       CLKOUT
     );
-output [13:0] pulse_meash_0_tim;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-output pulse_meash_0_new_ready;
-input  locator_control_0_en_timer;
-input  ECHO;
+output CLKOUT;
 
-    wire \i[9]_net_1 , \i_i[9] , \i[8]_net_1 , \i_i[8] , \i[7]_net_1 , 
-        \i_i[7] , \i[6]_net_1 , \i_i[6] , \i[5]_net_1 , \i_i[5] , 
-        \i[4]_net_1 , \i_i[4] , \i[15]_net_1 , \i_i[15] , 
-        \i[14]_net_1 , \i_i[14] , \i[13]_net_1 , \i_i[13] , 
-        \i[12]_net_1 , \i_i[12] , \i[11]_net_1 , \i_i[11] , 
-        mult1_un152_sum_s_11_S, \mult1_un152_sum_i_0[13] , 
-        mult1_un103_sum_s_11_S, \mult1_un103_sum_i_0[13] , 
-        mult1_un110_sum_s_11_S, \mult1_un110_sum_i_0[13] , 
-        mult1_un117_sum_s_11_S, \mult1_un117_sum_i_0[13] , 
-        mult1_un124_sum_s_11_S, \mult1_un124_sum_i_0[13] , 
-        mult1_un131_sum_s_11_S, \mult1_un131_sum_i_0[13] , 
-        mult1_un138_sum_s_11_S, \mult1_un138_sum_i_0[13] , 
-        mult1_un145_sum_s_11_S, \mult1_un145_sum_i_0[13] , 
-        mult1_un68_sum_s_11_S, \mult1_un68_sum_i_0[13] , 
-        mult1_un75_sum_s_11_S, \mult1_un75_sum_i_0[13] , 
-        mult1_un82_sum_s_11_S, \mult1_un82_sum_i_0[13] , 
-        mult1_un89_sum_s_11_S, \mult1_un89_sum_i_0[13] , 
-        mult1_un96_sum_s_11_S, \mult1_un96_sum_i_0[13] , 
-        mult1_un159_sum_s_11_S, \mult1_un159_sum_i_0[13] , VCC_net_1, 
-        \state[1]_net_1 , GND_net_1, N_201_i_0, \state[0]_net_1 , 
-        \state[4]_net_1 , N_183_i_0, \state[3]_net_1 , \state_ns[1] , 
-        \state[2]_net_1 , N_5_i_0, N_187_i_0, \i[0]_net_1 , \i_s[0] , 
-        \i[1]_net_1 , \i_s[1] , \i[2]_net_1 , \i_s[2] , \i[3]_net_1 , 
-        \i_s[3] , \i_s[4] , \i_s[5] , \i_s[6] , \i_s[7] , \i_s[8] , 
-        \i_s[9] , \i[10]_net_1 , \i_s[10] , \i_s[11] , \i_s[12] , 
-        \i_s[13] , \i_s[14] , \i_s[15] , \i[16]_net_1 , \i_s[16] , 
-        \i[17]_net_1 , \i_s[17] , \i[18]_net_1 , \i_s[18] , 
-        \i[19]_net_1 , \i_s[19] , \i[20]_net_1 , \i_s[20] , CO2, 
-        \i_s[21]_net_1 , \i_fast[19]_net_1 , \i_fast[20]_net_1 , 
-        \i_fast[21]_net_1 , i_cry_cy, \i_cry[0]_net_1 , 
-        \i_cry[1]_net_1 , \i_cry[2]_net_1 , \i_cry[3]_net_1 , 
-        \i_cry[4]_net_1 , \i_cry[5]_net_1 , \i_cry[6]_net_1 , 
-        \i_cry[7]_net_1 , \i_cry[8]_net_1 , \i_cry[9]_net_1 , 
-        \i_cry[10]_net_1 , \i_cry[11]_net_1 , \i_cry[12]_net_1 , 
-        \i_cry[13]_net_1 , \i_cry[14]_net_1 , \i_cry[15]_net_1 , 
-        \i_cry[16]_net_1 , \i_cry[17]_net_1 , \i_cry[18]_net_1 , 
-        \i_cry[19]_net_1 , \i_cry[20]_net_1 , mult1_un159_sum_cry_0, 
-        mult1_un159_sum_cry_1, mult1_un152_sum_cry_0_Y, 
-        mult1_un159_sum_cry_2, mult1_un152_sum_cry_1_S, 
-        mult1_un159_sum_cry_3, mult1_un152_sum_cry_2_S, 
-        mult1_un159_sum_cry_4, mult1_un152_sum_cry_3_S, 
-        mult1_un159_sum_cry_5, mult1_un152_sum_cry_4_S, 
-        mult1_un159_sum_cry_6, mult1_un152_sum_cry_5_S, 
-        mult1_un159_sum_cry_7, mult1_un152_sum_cry_6_S, 
-        mult1_un159_sum_cry_8, mult1_un152_sum_cry_7_S, 
-        mult1_un159_sum_cry_9, mult1_un152_sum_cry_8_S, 
-        mult1_un152_sum_cry_10_S, mult1_un159_sum_cry_10, 
-        mult1_un152_sum_cry_9_S, mult1_un110_sum_cry_0, 
-        mult1_un110_sum_cry_1, mult1_un110_sum_cry_1_S, 
-        mult1_un103_sum_cry_0_Y, mult1_un110_sum_cry_2, 
-        mult1_un110_sum_cry_2_S, mult1_un103_sum_cry_1_S, 
-        mult1_un110_sum_cry_3, mult1_un110_sum_cry_3_S, 
-        mult1_un103_sum_cry_2_S, mult1_un110_sum_cry_4, 
-        mult1_un110_sum_cry_4_S, mult1_un103_sum_cry_3_S, 
-        mult1_un110_sum_cry_5, mult1_un110_sum_cry_5_S, 
-        mult1_un103_sum_cry_4_S, mult1_un110_sum_cry_6, 
-        mult1_un110_sum_cry_6_S, mult1_un103_sum_cry_5_S, 
-        mult1_un110_sum_cry_7, mult1_un110_sum_cry_7_S, 
-        mult1_un103_sum_cry_6_S, mult1_un110_sum_cry_8, 
-        mult1_un110_sum_cry_8_S, mult1_un103_sum_cry_7_S, 
-        mult1_un110_sum_cry_9, mult1_un110_sum_cry_9_S, 
-        mult1_un103_sum_cry_8_S, mult1_un103_sum_cry_10_S, 
-        mult1_un110_sum_cry_10, mult1_un110_sum_cry_10_S, 
-        mult1_un103_sum_cry_9_S, mult1_un117_sum_cry_0, 
-        mult1_un117_sum_cry_1, mult1_un117_sum_cry_1_S, 
-        mult1_un117_sum_cry_2, mult1_un117_sum_cry_2_S, 
-        mult1_un117_sum_cry_3, mult1_un117_sum_cry_3_S, 
-        mult1_un117_sum_cry_4, mult1_un117_sum_cry_4_S, 
-        mult1_un117_sum_cry_5, mult1_un117_sum_cry_5_S, 
-        mult1_un117_sum_cry_6, mult1_un117_sum_cry_6_S, 
-        mult1_un117_sum_cry_7, mult1_un117_sum_cry_7_S, 
-        mult1_un117_sum_cry_8, mult1_un117_sum_cry_8_S, 
-        mult1_un117_sum_cry_9, mult1_un117_sum_cry_9_S, 
-        mult1_un117_sum_cry_10, mult1_un117_sum_cry_10_S, 
-        mult1_un124_sum_cry_0, mult1_un124_sum_cry_1, 
-        mult1_un124_sum_cry_1_S, mult1_un124_sum_cry_2, 
-        mult1_un124_sum_cry_2_S, mult1_un124_sum_cry_3, 
-        mult1_un124_sum_cry_3_S, mult1_un124_sum_cry_4, 
-        mult1_un124_sum_cry_4_S, mult1_un124_sum_cry_5, 
-        mult1_un124_sum_cry_5_S, mult1_un124_sum_cry_6, 
-        mult1_un124_sum_cry_6_S, mult1_un124_sum_cry_7, 
-        mult1_un124_sum_cry_7_S, mult1_un124_sum_cry_8, 
-        mult1_un124_sum_cry_8_S, mult1_un124_sum_cry_9, 
-        mult1_un124_sum_cry_9_S, mult1_un124_sum_cry_10, 
-        mult1_un124_sum_cry_10_S, mult1_un131_sum_cry_0, 
-        mult1_un131_sum_cry_1, mult1_un131_sum_cry_1_S, 
-        mult1_un131_sum_cry_2, mult1_un131_sum_cry_2_S, 
-        mult1_un131_sum_cry_3, mult1_un131_sum_cry_3_S, 
-        mult1_un131_sum_cry_4, mult1_un131_sum_cry_4_S, 
-        mult1_un131_sum_cry_5, mult1_un131_sum_cry_5_S, 
-        mult1_un131_sum_cry_6, mult1_un131_sum_cry_6_S, 
-        mult1_un131_sum_cry_7, mult1_un131_sum_cry_7_S, 
-        mult1_un131_sum_cry_8, mult1_un131_sum_cry_8_S, 
-        mult1_un131_sum_cry_9, mult1_un131_sum_cry_9_S, 
-        mult1_un131_sum_cry_10, mult1_un131_sum_cry_10_S, 
-        mult1_un138_sum_cry_0, mult1_un138_sum_cry_1, 
-        mult1_un138_sum_cry_1_S, mult1_un138_sum_cry_2, 
-        mult1_un138_sum_cry_2_S, mult1_un138_sum_cry_3, 
-        mult1_un138_sum_cry_3_S, mult1_un138_sum_cry_4, 
-        mult1_un138_sum_cry_4_S, mult1_un138_sum_cry_5, 
-        mult1_un138_sum_cry_5_S, mult1_un138_sum_cry_6, 
-        mult1_un138_sum_cry_6_S, mult1_un138_sum_cry_7, 
-        mult1_un138_sum_cry_7_S, mult1_un138_sum_cry_8, 
-        mult1_un138_sum_cry_8_S, mult1_un138_sum_cry_9, 
-        mult1_un138_sum_cry_9_S, mult1_un138_sum_cry_10, 
-        mult1_un138_sum_cry_10_S, mult1_un145_sum_cry_0, 
-        mult1_un145_sum_cry_1, mult1_un145_sum_cry_1_S, 
-        mult1_un145_sum_cry_2, mult1_un145_sum_cry_2_S, 
-        mult1_un145_sum_cry_3, mult1_un145_sum_cry_3_S, 
-        mult1_un145_sum_cry_4, mult1_un145_sum_cry_4_S, 
-        mult1_un145_sum_cry_5, mult1_un145_sum_cry_5_S, 
-        mult1_un145_sum_cry_6, mult1_un145_sum_cry_6_S, 
-        mult1_un145_sum_cry_7, mult1_un145_sum_cry_7_S, 
-        mult1_un145_sum_cry_8, mult1_un145_sum_cry_8_S, 
-        mult1_un145_sum_cry_9, mult1_un145_sum_cry_9_S, 
-        mult1_un145_sum_cry_10, mult1_un145_sum_cry_10_S, 
-        mult1_un152_sum_cry_0, mult1_un152_sum_cry_1, 
-        mult1_un152_sum_cry_2, mult1_un152_sum_cry_3, 
-        mult1_un152_sum_cry_4, mult1_un152_sum_cry_5, 
-        mult1_un152_sum_cry_6, mult1_un152_sum_cry_7, 
-        mult1_un152_sum_cry_8, mult1_un152_sum_cry_9, 
-        mult1_un152_sum_cry_10, mult1_un54_sum_cry_0, 
-        mult1_un54_sum_cry_1, mult1_un54_sum_cry_1_S, 
-        mult1_un47_sum_cry_0_Y, mult1_un54_sum_cry_2, 
-        mult1_un61_sum_axb_3, mult1_un47_sum_cry_1_S, 
-        mult1_un54_sum_cry_3, mult1_un54_sum_cry_3_S, 
-        mult1_un54_sum_axb_3, mult1_un54_sum_cry_4, 
-        mult1_un61_sum_axb_5, mult1_un47_sum_cry_3_S, 
-        mult1_un54_sum_cry_5, mult1_un54_sum_cry_5_S, 
-        mult1_un54_sum_axb_5, mult1_un54_sum_cry_6, 
-        mult1_un54_sum_cry_6_S, mult1_un47_sum_s_5_sf, 
-        mult1_un47_sum_cry_4, mult1_un54_sum_s_8_S, 
-        mult1_un54_sum_cry_7, mult1_un61_sum_axb_8, 
-        mult1_un61_sum_cry_0, mult1_un61_sum_cry_1, 
-        mult1_un61_sum_cry_1_S, mult1_un61_sum_cry_2, 
-        mult1_un68_sum_axb_3, mult1_un61_sum_cry_3, 
-        mult1_un61_sum_cry_3_S, mult1_un61_sum_cry_4, 
-        mult1_un68_sum_axb_5, mult1_un61_sum_cry_5, 
-        mult1_un61_sum_cry_5_S, mult1_un61_sum_cry_6, 
-        mult1_un61_sum_cry_6_S, mult1_un61_sum_cry_7, 
-        mult1_un68_sum_axb_8, mult1_un61_sum_cry_8, 
-        mult1_un61_sum_cry_8_S, mult1_un68_sum_axb_11, 
-        mult1_un61_sum_cry_9, mult1_un68_sum_axb_10, 
-        mult1_un68_sum_cry_0, mult1_un68_sum_cry_1, 
-        mult1_un68_sum_cry_1_S, mult1_un68_sum_cry_2, 
-        mult1_un68_sum_cry_2_S, mult1_un68_sum_cry_3, 
-        mult1_un68_sum_cry_3_S, mult1_un68_sum_cry_4, 
-        mult1_un68_sum_cry_4_S, mult1_un68_sum_cry_5, 
-        mult1_un68_sum_cry_5_S, mult1_un68_sum_cry_6, 
-        mult1_un68_sum_cry_6_S, mult1_un68_sum_cry_7, 
-        mult1_un68_sum_cry_7_S, mult1_un68_sum_cry_8, 
-        mult1_un68_sum_cry_8_S, mult1_un68_sum_cry_9, 
-        mult1_un68_sum_cry_9_S, mult1_un68_sum_cry_10, 
-        mult1_un68_sum_cry_10_S, mult1_un75_sum_cry_0, 
-        mult1_un75_sum_cry_1, mult1_un75_sum_cry_1_S, 
-        mult1_un75_sum_cry_2, mult1_un75_sum_cry_2_S, 
-        mult1_un75_sum_cry_3, mult1_un75_sum_cry_3_S, 
-        mult1_un75_sum_cry_4, mult1_un75_sum_cry_4_S, 
-        mult1_un75_sum_cry_5, mult1_un75_sum_cry_5_S, 
-        mult1_un75_sum_cry_6, mult1_un75_sum_cry_6_S, 
-        mult1_un75_sum_cry_7, mult1_un75_sum_cry_7_S, 
-        mult1_un75_sum_cry_8, mult1_un75_sum_cry_8_S, 
-        mult1_un75_sum_cry_9, mult1_un75_sum_cry_9_S, 
-        mult1_un75_sum_cry_10, mult1_un75_sum_cry_10_S, 
-        mult1_un82_sum_cry_0, mult1_un82_sum_cry_1, 
-        mult1_un82_sum_cry_1_S, mult1_un82_sum_cry_2, 
-        mult1_un82_sum_cry_2_S, mult1_un82_sum_cry_3, 
-        mult1_un82_sum_cry_3_S, mult1_un82_sum_cry_4, 
-        mult1_un82_sum_cry_4_S, mult1_un82_sum_cry_5, 
-        mult1_un82_sum_cry_5_S, mult1_un82_sum_cry_6, 
-        mult1_un82_sum_cry_6_S, mult1_un82_sum_cry_7, 
-        mult1_un82_sum_cry_7_S, mult1_un82_sum_cry_8, 
-        mult1_un82_sum_cry_8_S, mult1_un82_sum_cry_9, 
-        mult1_un82_sum_cry_9_S, mult1_un82_sum_cry_10, 
-        mult1_un82_sum_cry_10_S, mult1_un89_sum_cry_0, 
-        mult1_un89_sum_cry_1, mult1_un89_sum_cry_1_S, 
-        mult1_un89_sum_cry_2, mult1_un89_sum_cry_2_S, 
-        mult1_un89_sum_cry_3, mult1_un89_sum_cry_3_S, 
-        mult1_un89_sum_cry_4, mult1_un89_sum_cry_4_S, 
-        mult1_un89_sum_cry_5, mult1_un89_sum_cry_5_S, 
-        mult1_un89_sum_cry_6, mult1_un89_sum_cry_6_S, 
-        mult1_un89_sum_cry_7, mult1_un89_sum_cry_7_S, 
-        mult1_un89_sum_cry_8, mult1_un89_sum_cry_8_S, 
-        mult1_un89_sum_cry_9, mult1_un89_sum_cry_9_S, 
-        mult1_un89_sum_cry_10, mult1_un89_sum_cry_10_S, 
-        mult1_un96_sum_cry_0, mult1_un96_sum_cry_1, 
-        mult1_un96_sum_cry_1_S, mult1_un96_sum_cry_2, 
-        mult1_un96_sum_cry_2_S, mult1_un96_sum_cry_3, 
-        mult1_un96_sum_cry_3_S, mult1_un96_sum_cry_4, 
-        mult1_un96_sum_cry_4_S, mult1_un96_sum_cry_5, 
-        mult1_un96_sum_cry_5_S, mult1_un96_sum_cry_6, 
-        mult1_un96_sum_cry_6_S, mult1_un96_sum_cry_7, 
-        mult1_un96_sum_cry_7_S, mult1_un96_sum_cry_8, 
-        mult1_un96_sum_cry_8_S, mult1_un96_sum_cry_9, 
-        mult1_un96_sum_cry_9_S, mult1_un96_sum_cry_10, 
-        mult1_un96_sum_cry_10_S, mult1_un103_sum_cry_0, 
-        mult1_un103_sum_cry_1, mult1_un103_sum_cry_2, 
-        mult1_un103_sum_cry_3, mult1_un103_sum_cry_4, 
-        mult1_un103_sum_cry_5, mult1_un103_sum_cry_6, 
-        mult1_un103_sum_cry_7, mult1_un103_sum_cry_8, 
-        mult1_un103_sum_cry_9, mult1_un103_sum_cry_10, 
-        mult1_un47_sum_cry_0, mult1_un47_sum_cry_1, 
-        mult1_un47_sum_cry_2, mult1_un47_sum_cry_3, 
-        \state_ns_i_0_0[0]_net_1 , un20_clklto16_1_net_1, un20_clklt9, 
-        un20_clklt12, un20_clklt16, un20_clklt20, 
-        \state_ns_o2[2]_net_1 ;
-    
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_1  (.A(\i_i[14] ), 
-        .B(mult1_un75_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un82_sum_cry_0), .S(mult1_un82_sum_cry_1_S), .Y(), .FCO(
-        mult1_un82_sum_cry_1));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_9  (.A(
-        mult1_un89_sum_cry_8_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_8), .S(
-        mult1_un96_sum_cry_9_S), .Y(), .FCO(mult1_un96_sum_cry_9));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_5  (.A(
-        mult1_un124_sum_cry_4_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_4), .S(
-        mult1_un131_sum_cry_5_S), .Y(), .FCO(mult1_un131_sum_cry_5));
-    SLE \state[0]  (.D(\state[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  \i_RNI4BK2[4]  (.A(\i[4]_net_1 ), .Y(
-        \i_i[4] ));
-    ARI1 #( .INIT(20'h45500) )  
-        \un5_tim.if_generate_plus.mult1_un47_sum_cry_1  (.A(VCC_net_1), 
-        .B(\i_fast[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un47_sum_cry_0), .S(mult1_un47_sum_cry_1_S), .Y(), .FCO(
-        mult1_un47_sum_cry_1));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_1  (.A(\i_i[8] ), 
-        .B(mult1_un117_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un124_sum_cry_0), .S(mult1_un124_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un124_sum_cry_1));
-    SLE \i[7]  (.D(\i_s[7] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_i_0[13]  (.A(
-        mult1_un89_sum_s_11_S), .Y(\mult1_un89_sum_i_0[13] ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_i_0[13]  (.A(
-        mult1_un110_sum_s_11_S), .Y(\mult1_un110_sum_i_0[13] ));
-    SLE \i[16]  (.D(\i_s[16] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[16]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_3  (.A(
-        mult1_un145_sum_cry_2_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_2), .S(
-        mult1_un152_sum_cry_3_S), .Y(), .FCO(mult1_un152_sum_cry_3));
-    ARI1 #( .INIT(20'h42200) )  \i_s[21]  (.A(VCC_net_1), .B(CO2), .C(
-        \state[3]_net_1 ), .D(GND_net_1), .FCI(\i_cry[20]_net_1 ), .S(
-        \i_s[21]_net_1 ), .Y(), .FCO());
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_5  (.A(
-        mult1_un68_sum_cry_4_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_4), .S(
-        mult1_un75_sum_cry_5_S), .Y(), .FCO(mult1_un75_sum_cry_5));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un159_sum_cry_0));
-    SLE \tim[4]  (.D(\mult1_un131_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[4]));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_i_0[13]  (.A(
-        mult1_un124_sum_s_11_S), .Y(\mult1_un124_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[14]  (.A(VCC_net_1), .B(
-        \i[14]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[13]_net_1 ), .S(\i_s[14] ), .Y(), .FCO(
-        \i_cry[14]_net_1 ));
-    ARI1 #( .INIT(20'h6E000) )  
-        \un5_tim.if_generate_plus.mult1_un47_sum_cry_4  (.A(VCC_net_1), 
-        .B(\i_fast[19]_net_1 ), .C(\i_fast[20]_net_1 ), .D(
-        \i_fast[21]_net_1 ), .FCI(mult1_un47_sum_cry_3), .S(
-        mult1_un54_sum_axb_5), .Y(), .FCO(mult1_un47_sum_cry_4));
-    SLE \i[21]  (.D(\i_s[21]_net_1 ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(CO2));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[20]  (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[19]_net_1 ), .S(\i_s[20] ), .Y(), .FCO(
-        \i_cry[20]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_3  (.A(
-        mult1_un82_sum_cry_2_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_2), .S(
-        mult1_un89_sum_cry_3_S), .Y(), .FCO(mult1_un89_sum_cry_3));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un89_sum_cry_0));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_8  (.A(
-        mult1_un131_sum_cry_7_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_7), .S(
-        mult1_un138_sum_cry_8_S), .Y(), .FCO(mult1_un138_sum_cry_8));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_8  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_axb_8), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_7), .S(mult1_un61_sum_cry_8_S), .Y(), .FCO(
-        mult1_un61_sum_cry_8));
-    SLE \i[0]  (.D(\i_s[0] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_7  (.A(
-        mult1_un89_sum_cry_6_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_6), .S(
-        mult1_un96_sum_cry_7_S), .Y(), .FCO(mult1_un96_sum_cry_7));
-    SLE \i[11]  (.D(\i_s[11] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[11]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(mult1_un152_sum_cry_0_Y), .FCO(
-        mult1_un152_sum_cry_0));
-    CFG2 #( .INIT(4'hE) )  \state_ns_i_0_0[0]  (.A(\state[3]_net_1 ), 
-        .B(\state[2]_net_1 ), .Y(\state_ns_i_0_0[0]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_3  (.A(
-        mult1_un89_sum_cry_2_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_2), .S(
-        mult1_un96_sum_cry_3_S), .Y(), .FCO(mult1_un96_sum_cry_3));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_2  (.A(
-        mult1_un82_sum_cry_1_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_1), .S(
-        mult1_un89_sum_cry_2_S), .Y(), .FCO(mult1_un89_sum_cry_2));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_4  (.A(
-        mult1_un138_sum_cry_3_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_3), .S(
-        mult1_un145_sum_cry_4_S), .Y(), .FCO(mult1_un145_sum_cry_4));
-    ARI1 #( .INIT(20'h55555) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_1  (.A(VCC_net_1), 
-        .B(\i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_0), .S(mult1_un61_sum_cry_1_S), .Y(), .FCO(
-        mult1_un61_sum_cry_1));
-    CFG3 #( .INIT(8'h4F) )  \state_ns_o2_3[2]  (.A(\i[9]_net_1 ), .B(
-        un20_clklt9), .C(\i[10]_net_1 ), .Y(un20_clklt12));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_10  (.A(VCC_net_1)
-        , .B(mult1_un68_sum_axb_10), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(mult1_un68_sum_cry_9), .S(mult1_un68_sum_cry_10_S), .Y(), 
-        .FCO(mult1_un68_sum_cry_10));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_10  (.A(
-        mult1_un138_sum_cry_9_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_9), .S(
-        mult1_un145_sum_cry_10_S), .Y(), .FCO(mult1_un145_sum_cry_10));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_4  (.A(
-        mult1_un124_sum_cry_3_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_3), .S(
-        mult1_un131_sum_cry_4_S), .Y(), .FCO(mult1_un131_sum_cry_4));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_2  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_cry_1_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_1), .S(mult1_un68_sum_cry_2_S), .Y(), .FCO(
-        mult1_un68_sum_cry_2));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_4  (.A(
-        mult1_un96_sum_cry_3_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_3), .S(
-        mult1_un103_sum_cry_4_S), .Y(), .FCO(mult1_un103_sum_cry_4));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_9  (.A(
-        mult1_un117_sum_cry_8_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_8), .S(
-        mult1_un124_sum_cry_9_S), .Y(), .FCO(mult1_un124_sum_cry_9));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_4  (.A(
-        mult1_un89_sum_cry_3_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_3), .S(
-        mult1_un96_sum_cry_4_S), .Y(), .FCO(mult1_un96_sum_cry_4));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_1  (.A(\i_i[9] ), 
-        .B(mult1_un110_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un117_sum_cry_0), .S(mult1_un117_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un117_sum_cry_1));
-    ARI1 #( .INIT(20'h66600) )  
-        \un5_tim.if_generate_plus.mult1_un47_sum_cry_2  (.A(VCC_net_1), 
-        .B(\i_fast[19]_net_1 ), .C(\i_fast[20]_net_1 ), .D(GND_net_1), 
-        .FCI(mult1_un47_sum_cry_1), .S(mult1_un54_sum_axb_3), .Y(), 
-        .FCO(mult1_un47_sum_cry_2));
-    SLE \tim[3]  (.D(\mult1_un138_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[3]));
-    SLE \tim[2]  (.D(\mult1_un145_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[2]));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_9  (.A(
-        mult1_un68_sum_cry_8_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_8), .S(
-        mult1_un75_sum_cry_9_S), .Y(), .FCO(mult1_un75_sum_cry_9));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un54_sum_cry_0));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_1  (.A(\i_i[11] )
-        , .B(mult1_un96_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(mult1_un103_sum_cry_0), .S(mult1_un103_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un103_sum_cry_1));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un145_sum_cry_10_S), .C(mult1_un145_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un152_sum_cry_10), .S(
-        mult1_un152_sum_s_11_S), .Y(), .FCO());
-    SLE \state[4]  (.D(N_183_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[4]_net_1 ));
-    ARI1 #( .INIT(20'h67700) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_7  (.A(VCC_net_1), 
-        .B(mult1_un47_sum_cry_4), .C(mult1_un47_sum_s_5_sf), .D(
-        GND_net_1), .FCI(mult1_un54_sum_cry_6), .S(
-        mult1_un61_sum_axb_8), .Y(), .FCO(mult1_un54_sum_cry_7));
-    GND GND (.Y(GND_net_1));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_3  (.A(VCC_net_1), 
-        .B(mult1_un68_sum_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_2), .S(mult1_un68_sum_cry_3_S), .Y(), .FCO(
-        mult1_un68_sum_cry_3));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_9  (.A(
-        mult1_un152_sum_cry_8_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_8), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_9));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_8  (.A(
-        mult1_un103_sum_cry_7_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_7), .S(
-        mult1_un110_sum_cry_8_S), .Y(), .FCO(mult1_un110_sum_cry_8));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un75_sum_cry_10_S), .C(mult1_un75_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un82_sum_cry_10), .S(
-        mult1_un82_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_5  (.A(
-        mult1_un117_sum_cry_4_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_4), .S(
-        mult1_un124_sum_cry_5_S), .Y(), .FCO(mult1_un124_sum_cry_5));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_3  (.A(
-        mult1_un110_sum_cry_2_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_2), .S(
-        mult1_un117_sum_cry_3_S), .Y(), .FCO(mult1_un117_sum_cry_3));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un96_sum_cry_10_S), .C(mult1_un96_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un103_sum_cry_10), .S(
-        mult1_un103_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un110_sum_cry_10_S), .C(mult1_un110_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un117_sum_cry_10), .S(
-        mult1_un117_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_7  (.A(
-        mult1_un117_sum_cry_6_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_6), .S(
-        mult1_un124_sum_cry_7_S), .Y(), .FCO(mult1_un124_sum_cry_7));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_i_0[13]  (.A(
-        mult1_un145_sum_s_11_S), .Y(\mult1_un145_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_10  (.A(
-        mult1_un103_sum_cry_9_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_9), .S(
-        mult1_un110_sum_cry_10_S), .Y(), .FCO(mult1_un110_sum_cry_10));
-    CFG1 #( .INIT(2'h1) )  \i_RNIJVQ6[12]  (.A(\i[12]_net_1 ), .Y(
-        \i_i[12] ));
-    SLE \i[13]  (.D(\i_s[13] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[13]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_1  (.A(\i_i[5] ), 
-        .B(mult1_un138_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un145_sum_cry_0), .S(mult1_un145_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un145_sum_cry_1));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[15]  (.A(VCC_net_1), .B(
-        \i[15]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[14]_net_1 ), .S(\i_s[15] ), .Y(), .FCO(
-        \i_cry[15]_net_1 ));
-    CFG3 #( .INIT(8'hE0) )  
-        \un5_tim.if_generate_plus.mult1_un47_sum_s_5_sf  (.A(
-        \i[20]_net_1 ), .B(\i[19]_net_1 ), .C(CO2), .Y(
-        mult1_un47_sum_s_5_sf));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_7  (.A(
-        mult1_un131_sum_cry_6_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_6), .S(
-        mult1_un138_sum_cry_7_S), .Y(), .FCO(mult1_un138_sum_cry_7));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_6  (.A(
-        mult1_un152_sum_cry_5_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_5), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_6));
-    SLE \tim[1]  (.D(\mult1_un152_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[1]));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_3  (.A(
-        mult1_un103_sum_cry_2_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_2), .S(
-        mult1_un110_sum_cry_3_S), .Y(), .FCO(mult1_un110_sum_cry_3));
-    SLE \tim[5]  (.D(\mult1_un124_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[5]));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_5  (.A(
-        mult1_un82_sum_cry_4_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_4), .S(
-        mult1_un89_sum_cry_5_S), .Y(), .FCO(mult1_un89_sum_cry_5));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_4  (.A(
-        mult1_un152_sum_cry_3_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_3), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_4));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_7  (.A(
-        mult1_un68_sum_cry_6_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_6), .S(
-        mult1_un75_sum_cry_7_S), .Y(), .FCO(mult1_un75_sum_cry_7));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_7  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_cry_6_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_6), .S(mult1_un68_sum_axb_8), .Y(), .FCO(
-        mult1_un61_sum_cry_7));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un138_sum_cry_0));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_8  (.A(
-        mult1_un96_sum_cry_7_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_7), .S(
-        mult1_un103_sum_cry_8_S), .Y(), .FCO(mult1_un103_sum_cry_8));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_10  (.A(
-        mult1_un96_sum_cry_9_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_9), .S(
-        mult1_un103_sum_cry_10_S), .Y(), .FCO(mult1_un103_sum_cry_10));
-    SLE \i[17]  (.D(\i_s[17] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[17]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un68_sum_axb_11), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_10), .S(mult1_un68_sum_s_11_S), .Y(), .FCO()
-        );
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_2  (.A(
-        mult1_un152_sum_cry_1_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_1), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_2));
-    SLE \tim[11]  (.D(\mult1_un82_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[11]));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_6  (.A(
-        mult1_un145_sum_cry_5_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_5), .S(
-        mult1_un152_sum_cry_6_S), .Y(), .FCO(mult1_un152_sum_cry_6));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[17]  (.A(VCC_net_1), .B(
-        \i[17]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[16]_net_1 ), .S(\i_s[17] ), .Y(), .FCO(
-        \i_cry[17]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_6  (.A(
-        mult1_un110_sum_cry_5_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_5), .S(
-        mult1_un117_sum_cry_6_S), .Y(), .FCO(mult1_un117_sum_cry_6));
-    CFG3 #( .INIT(8'h70) )  \state_RNO[1]  (.A(\state_ns_o2[2]_net_1 ), 
-        .B(ECHO), .C(\state[2]_net_1 ), .Y(N_187_i_0));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_8  (.A(
-        mult1_un117_sum_cry_7_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_7), .S(
-        mult1_un124_sum_cry_8_S), .Y(), .FCO(mult1_un124_sum_cry_8));
-    SLE \i[9]  (.D(\i_s[9] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_8  (.A(
-        mult1_un89_sum_cry_7_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_7), .S(
-        mult1_un96_sum_cry_8_S), .Y(), .FCO(mult1_un96_sum_cry_8));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_3  (.A(
-        mult1_un68_sum_cry_2_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_2), .S(
-        mult1_un75_sum_cry_3_S), .Y(), .FCO(mult1_un75_sum_cry_3));
-    CFG1 #( .INIT(2'h1) )  \i_RNI9GK2[9]  (.A(\i[9]_net_1 ), .Y(
-        \i_i[9] ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_6  (.A(
-        mult1_un68_sum_cry_5_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_5), .S(
-        mult1_un75_sum_cry_6_S), .Y(), .FCO(mult1_un75_sum_cry_6));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_5  (.A(
-        mult1_un131_sum_cry_4_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_4), .S(
-        mult1_un138_sum_cry_5_S), .Y(), .FCO(mult1_un138_sum_cry_5));
-    CFG1 #( .INIT(2'h1) )  \i_RNIL1R6[14]  (.A(\i[14]_net_1 ), .Y(
-        \i_i[14] ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_10  (.A(
-        mult1_un82_sum_cry_9_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_9), .S(
-        mult1_un89_sum_cry_10_S), .Y(), .FCO(mult1_un89_sum_cry_10));
-    VCC VCC (.Y(VCC_net_1));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_1  (.A(\i_i[7] ), 
-        .B(mult1_un124_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un131_sum_cry_0), .S(mult1_un131_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un131_sum_cry_1));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_10  (.A(
-        mult1_un124_sum_cry_9_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_9), .S(
-        mult1_un131_sum_cry_10_S), .Y(), .FCO(mult1_un131_sum_cry_10));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_8  (.A(
-        mult1_un145_sum_cry_7_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_7), .S(
-        mult1_un152_sum_cry_8_S), .Y(), .FCO(mult1_un152_sum_cry_8));
-    CFG1 #( .INIT(2'h1) )  \i_RNI7EK2[7]  (.A(\i[7]_net_1 ), .Y(
-        \i_i[7] ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_i_0[13]  (.A(
-        mult1_un152_sum_s_11_S), .Y(\mult1_un152_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_10  (.A(
-        mult1_un152_sum_cry_9_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_9), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_10));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un131_sum_cry_0));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_6  (.A(
-        mult1_un124_sum_cry_5_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_5), .S(
-        mult1_un131_sum_cry_6_S), .Y(), .FCO(mult1_un131_sum_cry_6));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_9  (.A(
-        mult1_un110_sum_cry_8_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_8), .S(
-        mult1_un117_sum_cry_9_S), .Y(), .FCO(mult1_un117_sum_cry_9));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_7  (.A(
-        mult1_un82_sum_cry_6_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_6), .S(
-        mult1_un89_sum_cry_7_S), .Y(), .FCO(mult1_un89_sum_cry_7));
-    CFG4 #( .INIT(16'h000D) )  \state_RNO[4]  (.A(
-        locator_control_0_en_timer), .B(\state[0]_net_1 ), .C(
-        \state_ns_i_0_0[0]_net_1 ), .D(\state[1]_net_1 ), .Y(N_183_i_0)
-        );
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un138_sum_cry_10_S), .C(mult1_un138_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un145_sum_cry_10), .S(
-        mult1_un145_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h40000) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_s_10  (.A(VCC_net_1), 
-        .B(GND_net_1), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_9), .S(mult1_un68_sum_axb_11), .Y(), .FCO());
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_9  (.A(
-        mult1_un131_sum_cry_8_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_8), .S(
-        mult1_un138_sum_cry_9_S), .Y(), .FCO(mult1_un138_sum_cry_9));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_5  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_4), .S(mult1_un61_sum_cry_5_S), .Y(), .FCO(
-        mult1_un61_sum_cry_5));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_5  (.A(
-        mult1_un89_sum_cry_4_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_4), .S(
-        mult1_un96_sum_cry_5_S), .Y(), .FCO(mult1_un96_sum_cry_5));
-    SLE \i_fast[19]  (.D(\i_s[19] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i_fast[19]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[11]  (.A(VCC_net_1), .B(
-        \i[11]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[10]_net_1 ), .S(\i_s[11] ), .Y(), .FCO(
-        \i_cry[11]_net_1 ));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un117_sum_cry_10_S), .C(mult1_un117_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un124_sum_cry_10), .S(
-        mult1_un124_sum_s_11_S), .Y(), .FCO());
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_i_0[13]  (.A(
-        mult1_un159_sum_s_11_S), .Y(\mult1_un159_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_6  (.A(
-        mult1_un96_sum_cry_5_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_5), .S(
-        mult1_un103_sum_cry_6_S), .Y(), .FCO(mult1_un103_sum_cry_6));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_6  (.A(
-        mult1_un89_sum_cry_5_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_5), .S(
-        mult1_un96_sum_cry_6_S), .Y(), .FCO(mult1_un96_sum_cry_6));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_6  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_cry_5_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_5), .S(mult1_un61_sum_cry_6_S), .Y(), .FCO(
-        mult1_un61_sum_cry_6));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_9  (.A(
-        mult1_un75_sum_cry_8_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_8), .S(
-        mult1_un82_sum_cry_9_S), .Y(), .FCO(mult1_un82_sum_cry_9));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_10  (.A(
-        mult1_un75_sum_cry_9_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_9), .S(
-        mult1_un82_sum_cry_10_S), .Y(), .FCO(mult1_un82_sum_cry_10));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_10  (.A(
-        mult1_un68_sum_cry_9_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_9), .S(
-        mult1_un75_sum_cry_10_S), .Y(), .FCO(mult1_un75_sum_cry_10));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_6  (.A(
-        mult1_un131_sum_cry_5_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_5), .S(
-        mult1_un138_sum_cry_6_S), .Y(), .FCO(mult1_un138_sum_cry_6));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_10  (.A(
-        mult1_un145_sum_cry_9_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_9), .S(
-        mult1_un152_sum_cry_10_S), .Y(), .FCO(mult1_un152_sum_cry_10));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_5  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un54_sum_cry_4), .S(mult1_un54_sum_cry_5_S), .Y(), .FCO(
-        mult1_un54_sum_cry_5));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_2  (.A(
-        mult1_un117_sum_cry_1_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_1), .S(
-        mult1_un124_sum_cry_2_S), .Y(), .FCO(mult1_un124_sum_cry_2));
-    SLE \i[15]  (.D(\i_s[15] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[15]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_2  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_cry_1_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_1), .S(mult1_un68_sum_axb_3), .Y(), .FCO(
-        mult1_un61_sum_cry_2));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_3  (.A(
-        mult1_un138_sum_cry_2_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_2), .S(
-        mult1_un145_sum_cry_3_S), .Y(), .FCO(mult1_un145_sum_cry_3));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_9  (.A(
-        mult1_un103_sum_cry_8_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_8), .S(
-        mult1_un110_sum_cry_9_S), .Y(), .FCO(mult1_un110_sum_cry_9));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un61_sum_cry_0));
-    CFG1 #( .INIT(2'h1) )  \i_RNI8FK2[8]  (.A(\i[8]_net_1 ), .Y(
-        \i_i[8] ));
-    SLE \tim[0]  (.D(\mult1_un159_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[0]));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_2  (.A(
-        mult1_un131_sum_cry_1_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_1), .S(
-        mult1_un138_sum_cry_2_S), .Y(), .FCO(mult1_un138_sum_cry_2));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_i_0[13]  (.A(
-        mult1_un68_sum_s_11_S), .Y(\mult1_un68_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_2  (.A(
-        mult1_un89_sum_cry_1_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_1), .S(
-        mult1_un96_sum_cry_2_S), .Y(), .FCO(mult1_un96_sum_cry_2));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[7]  (.A(VCC_net_1), .B(
-        \i[7]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[6]_net_1 ), .S(\i_s[7] ), .Y(), .FCO(\i_cry[7]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_3  (.A(
-        mult1_un96_sum_cry_2_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_2), .S(
-        mult1_un103_sum_cry_3_S), .Y(), .FCO(mult1_un103_sum_cry_3));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[12]  (.A(VCC_net_1), .B(
-        \i[12]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[11]_net_1 ), .S(\i_s[12] ), .Y(), .FCO(
-        \i_cry[12]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_6  (.A(
-        mult1_un117_sum_cry_5_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_5), .S(
-        mult1_un124_sum_cry_6_S), .Y(), .FCO(mult1_un124_sum_cry_6));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_8  (.A(
-        mult1_un138_sum_cry_7_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_7), .S(
-        mult1_un145_sum_cry_8_S), .Y(), .FCO(mult1_un145_sum_cry_8));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_i_0[13]  (.A(
-        mult1_un117_sum_s_11_S), .Y(\mult1_un117_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[18]  (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[17]_net_1 ), .S(\i_s[18] ), .Y(), .FCO(
-        \i_cry[18]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_i_0[13]  (.A(
-        mult1_un82_sum_s_11_S), .Y(\mult1_un82_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_9  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_s_8_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_8), .S(mult1_un68_sum_axb_10), .Y(), .FCO(
-        mult1_un61_sum_cry_9));
-    ARI1 #( .INIT(20'h55555) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_1  (.A(VCC_net_1), 
-        .B(\i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_0), .S(mult1_un68_sum_cry_1_S), .Y(), .FCO(
-        mult1_un68_sum_cry_1));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_3  (.A(
-        mult1_un152_sum_cry_2_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_2), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_3));
-    SLE \i[2]  (.D(\i_s[2] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
-    SLE \i[12]  (.D(\i_s[12] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[12]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_4  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_cry_3_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_3), .S(mult1_un68_sum_cry_4_S), .Y(), .FCO(
-        mult1_un68_sum_cry_4));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_7  (.A(
-        mult1_un75_sum_cry_6_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_6), .S(
-        mult1_un82_sum_cry_7_S), .Y(), .FCO(mult1_un82_sum_cry_7));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_5  (.A(
-        mult1_un110_sum_cry_4_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_4), .S(
-        mult1_un117_sum_cry_5_S), .Y(), .FCO(mult1_un117_sum_cry_5));
-    SLE \tim[13]  (.D(\mult1_un68_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[13]));
-    ARI1 #( .INIT(20'h45500) )  \i_cry_cy[0]  (.A(VCC_net_1), .B(
-        \state[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        VCC_net_1), .S(), .Y(), .FCO(i_cry_cy));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_6  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_cry_5_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_5), .S(mult1_un68_sum_cry_6_S), .Y(), .FCO(
-        mult1_un68_sum_cry_6));
-    SLE \i[20]  (.D(\i_s[20] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[20]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_4  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_cry_3_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_3), .S(mult1_un68_sum_axb_5), .Y(), .FCO(
-        mult1_un61_sum_cry_4));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_4  (.A(
-        mult1_un145_sum_cry_3_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_3), .S(
-        mult1_un152_sum_cry_4_S), .Y(), .FCO(mult1_un152_sum_cry_4));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_2  (.A(
-        mult1_un110_sum_cry_1_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_1), .S(
-        mult1_un117_sum_cry_2_S), .Y(), .FCO(mult1_un117_sum_cry_2));
-    CFG1 #( .INIT(2'h1) )  \i_RNIK0R6[13]  (.A(\i[13]_net_1 ), .Y(
-        \i_i[13] ));
-    SLE \state[3]  (.D(\state_ns[1] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
-        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[3]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  \i_RNIM2R6[15]  (.A(\i[15]_net_1 ), .Y(
-        \i_i[15] ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_3  (.A(
-        mult1_un75_sum_cry_2_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_2), .S(
-        mult1_un82_sum_cry_3_S), .Y(), .FCO(mult1_un82_sum_cry_3));
-    SLE \i[10]  (.D(\i_s[10] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[10]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_9  (.A(
-        mult1_un82_sum_cry_8_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_8), .S(
-        mult1_un89_sum_cry_9_S), .Y(), .FCO(mult1_un89_sum_cry_9));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_8  (.A(
-        mult1_un124_sum_cry_7_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_7), .S(
-        mult1_un131_sum_cry_8_S), .Y(), .FCO(mult1_un131_sum_cry_8));
-    CFG1 #( .INIT(2'h1) )  \i_RNI6DK2[6]  (.A(\i[6]_net_1 ), .Y(
-        \i_i[6] ));
-    CFG1 #( .INIT(2'h1) )  \i_RNI5CK2[5]  (.A(\i[5]_net_1 ), .Y(
-        \i_i[5] ));
-    SLE \i[6]  (.D(\i_s[6] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[1]  (.A(VCC_net_1), .B(
-        \i[1]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[0]_net_1 ), .S(\i_s[1] ), .Y(), .FCO(\i_cry[1]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[2]  (.A(VCC_net_1), .B(
-        \i[2]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[1]_net_1 ), .S(\i_s[2] ), .Y(), .FCO(\i_cry[2]_net_1 ));
-    SLE \i[4]  (.D(\i_s[4] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_10  (.A(
-        mult1_un117_sum_cry_9_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_9), .S(
-        mult1_un124_sum_cry_10_S), .Y(), .FCO(mult1_un124_sum_cry_10));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[10]  (.A(VCC_net_1), .B(
-        \i[10]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[9]_net_1 ), .S(\i_s[10] ), .Y(), .FCO(\i_cry[10]_net_1 )
-        );
-    SLE \tim[12]  (.D(\mult1_un75_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[12]));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[6]  (.A(VCC_net_1), .B(
-        \i[6]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[5]_net_1 ), .S(\i_s[6] ), .Y(), .FCO(\i_cry[6]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_8  (.A(
-        mult1_un152_sum_cry_7_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_7), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_8));
-    CFG4 #( .INIT(16'hF777) )  \state_ns_o2_0[2]  (.A(\i[18]_net_1 ), 
-        .B(\i[17]_net_1 ), .C(un20_clklto16_1_net_1), .D(un20_clklt16), 
-        .Y(un20_clklt20));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_8  (.A(
-        mult1_un68_sum_cry_7_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_7), .S(
-        mult1_un75_sum_cry_8_S), .Y(), .FCO(mult1_un75_sum_cry_8));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_3  (.A(
-        mult1_un124_sum_cry_2_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_2), .S(
-        mult1_un131_sum_cry_3_S), .Y(), .FCO(mult1_un131_sum_cry_3));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_5  (.A(
-        mult1_un145_sum_cry_4_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_4), .S(
-        mult1_un152_sum_cry_5_S), .Y(), .FCO(mult1_un152_sum_cry_5));
-    SLE \i[19]  (.D(\i_s[19] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[19]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_i_0[13]  (.A(
-        mult1_un103_sum_s_11_S), .Y(\mult1_un103_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un110_sum_cry_0));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_2  (.A(
-        mult1_un145_sum_cry_1_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_1), .S(
-        mult1_un152_sum_cry_2_S), .Y(), .FCO(mult1_un152_sum_cry_2));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_8  (.A(
-        mult1_un82_sum_cry_7_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_7), .S(
-        mult1_un89_sum_cry_8_S), .Y(), .FCO(mult1_un89_sum_cry_8));
-    ARI1 #( .INIT(20'h53CAA) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_1  (.A(VCC_net_1)
-        , .B(mult1_un103_sum_cry_0_Y), .C(\i[10]_net_1 ), .D(
-        mult1_un103_sum_s_11_S), .FCI(mult1_un110_sum_cry_0), .S(
-        mult1_un110_sum_cry_1_S), .Y(), .FCO(mult1_un110_sum_cry_1));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_1  (.A(\i_i[15] ), 
-        .B(mult1_un68_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un75_sum_cry_0), .S(mult1_un75_sum_cry_1_S), .Y(), .FCO(
-        mult1_un75_sum_cry_1));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un152_sum_cry_10_S), .C(mult1_un152_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un159_sum_cry_10), .S(
-        mult1_un159_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_6  (.A(
-        mult1_un138_sum_cry_5_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_5), .S(
-        mult1_un145_sum_cry_6_S), .Y(), .FCO(mult1_un145_sum_cry_6));
-    SLE \tim[8]  (.D(\mult1_un103_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[8]));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_5  (.A(
-        mult1_un75_sum_cry_4_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_4), .S(
-        mult1_un82_sum_cry_5_S), .Y(), .FCO(mult1_un82_sum_cry_5));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_4  (.A(
-        mult1_un131_sum_cry_3_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_3), .S(
-        mult1_un138_sum_cry_4_S), .Y(), .FCO(mult1_un138_sum_cry_4));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un68_sum_cry_10_S), .C(mult1_un68_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un75_sum_cry_10), .S(
-        mult1_un75_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_3  (.A(
-        mult1_un117_sum_cry_2_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_2), .S(
-        mult1_un124_sum_cry_3_S), .Y(), .FCO(mult1_un124_sum_cry_3));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un103_sum_cry_10_S), .C(mult1_un103_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un110_sum_cry_10), .S(
-        mult1_un110_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_1  (.A(\i_i[6] ), 
-        .B(mult1_un131_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un138_sum_cry_0), .S(mult1_un138_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un138_sum_cry_1));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_2  (.A(
-        mult1_un75_sum_cry_1_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_1), .S(
-        mult1_un82_sum_cry_2_S), .Y(), .FCO(mult1_un82_sum_cry_2));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un61_sum_cry_3  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un61_sum_cry_2), .S(mult1_un61_sum_cry_3_S), .Y(), .FCO(
-        mult1_un61_sum_cry_3));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_7  (.A(
-        mult1_un124_sum_cry_6_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_6), .S(
-        mult1_un131_sum_cry_7_S), .Y(), .FCO(mult1_un131_sum_cry_7));
-    CFG4 #( .INIT(16'hAE0C) )  \state_ns_0[1]  (.A(
-        locator_control_0_en_timer), .B(\state[3]_net_1 ), .C(ECHO), 
-        .D(\state[4]_net_1 ), .Y(\state_ns[1] ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_10  (.A(
-        mult1_un110_sum_cry_9_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_9), .S(
-        mult1_un117_sum_cry_10_S), .Y(), .FCO(mult1_un117_sum_cry_10));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un82_sum_cry_0));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_10  (.A(
-        mult1_un131_sum_cry_9_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_9), .S(
-        mult1_un138_sum_cry_10_S), .Y(), .FCO(mult1_un138_sum_cry_10));
-    ARI1 #( .INIT(20'h40000) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_s_8  (.A(VCC_net_1), 
-        .B(GND_net_1), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un54_sum_cry_7), .S(mult1_un54_sum_s_8_S), .Y(), .FCO());
-    CFG4 #( .INIT(16'h777F) )  \state_ns_o2_4[2]  (.A(\i[8]_net_1 ), 
-        .B(\i[7]_net_1 ), .C(\i[6]_net_1 ), .D(\i[5]_net_1 ), .Y(
-        un20_clklt9));
-    CFG4 #( .INIT(16'h0F4F) )  \state_ns_o2_2[2]  (.A(\i[11]_net_1 ), 
-        .B(un20_clklt12), .C(\i[13]_net_1 ), .D(\i[12]_net_1 ), .Y(
-        un20_clklt16));
-    SLE new_ready (.D(\state[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_201_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(pulse_meash_0_new_ready));
-    CFG3 #( .INIT(8'h01) )  un20_clklto16_1 (.A(\i[16]_net_1 ), .B(
-        \i[15]_net_1 ), .C(\i[14]_net_1 ), .Y(un20_clklto16_1_net_1));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_7  (.A(
-        mult1_un145_sum_cry_6_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_6), .S(
-        mult1_un152_sum_cry_7_S), .Y(), .FCO(mult1_un152_sum_cry_7));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_7  (.A(
-        mult1_un138_sum_cry_6_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_6), .S(
-        mult1_un145_sum_cry_7_S), .Y(), .FCO(mult1_un145_sum_cry_7));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un89_sum_cry_10_S), .C(mult1_un89_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un96_sum_cry_10), .S(
-        mult1_un96_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(mult1_un103_sum_cry_0_Y), .FCO(
-        mult1_un103_sum_cry_0));
-    SLE \i[14]  (.D(\i_s[14] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[14]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_4  (.A(
-        mult1_un103_sum_cry_3_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_3), .S(
-        mult1_un110_sum_cry_4_S), .Y(), .FCO(mult1_un110_sum_cry_4));
-    CFG4 #( .INIT(16'h555D) )  \state_ns_o2[2]  (.A(CO2), .B(
-        un20_clklt20), .C(\i[20]_net_1 ), .D(\i[19]_net_1 ), .Y(
-        \state_ns_o2[2]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[3]  (.A(VCC_net_1), .B(
-        \i[3]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[2]_net_1 ), .S(\i_s[3] ), .Y(), .FCO(\i_cry[3]_net_1 ));
-    ARI1 #( .INIT(20'h69900) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_6  (.A(VCC_net_1), 
-        .B(mult1_un47_sum_s_5_sf), .C(mult1_un47_sum_cry_4), .D(
-        GND_net_1), .FCI(mult1_un54_sum_cry_5), .S(
-        mult1_un54_sum_cry_6_S), .Y(), .FCO(mult1_un54_sum_cry_6));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_5  (.A(
-        mult1_un138_sum_cry_4_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_4), .S(
-        mult1_un145_sum_cry_5_S), .Y(), .FCO(mult1_un145_sum_cry_5));
-    SLE \state[2]  (.D(N_5_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[2]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_10  (.A(
-        mult1_un89_sum_cry_9_S), .B(mult1_un89_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_9), .S(
-        mult1_un96_sum_cry_10_S), .Y(), .FCO(mult1_un96_sum_cry_10));
-    SLE \state[1]  (.D(N_187_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_6  (.A(
-        mult1_un75_sum_cry_5_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_5), .S(
-        mult1_un82_sum_cry_6_S), .Y(), .FCO(mult1_un82_sum_cry_6));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un68_sum_cry_0));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[4]  (.A(VCC_net_1), .B(
-        \i[4]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[3]_net_1 ), .S(\i_s[4] ), .Y(), .FCO(\i_cry[4]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_2  (.A(
-        mult1_un138_sum_cry_1_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_1), .S(
-        mult1_un145_sum_cry_2_S), .Y(), .FCO(mult1_un145_sum_cry_2));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_cry_3  (.A(
-        mult1_un131_sum_cry_2_S), .B(mult1_un131_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_2), .S(
-        mult1_un138_sum_cry_3_S), .Y(), .FCO(mult1_un138_sum_cry_3));
-    SLE \i[5]  (.D(\i_s[5] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_6  (.A(
-        mult1_un103_sum_cry_5_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_5), .S(
-        mult1_un110_sum_cry_6_S), .Y(), .FCO(mult1_un110_sum_cry_6));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_7  (.A(
-        mult1_un110_sum_cry_6_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_6), .S(
-        mult1_un117_sum_cry_7_S), .Y(), .FCO(mult1_un117_sum_cry_7));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_2  (.A(
-        mult1_un103_sum_cry_1_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_1), .S(
-        mult1_un110_sum_cry_2_S), .Y(), .FCO(mult1_un110_sum_cry_2));
-    SLE \i[8]  (.D(\i_s[8] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_i_0[13]  (.A(
-        mult1_un96_sum_s_11_S), .Y(\mult1_un96_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_7  (.A(
-        mult1_un96_sum_cry_6_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_6), .S(
-        mult1_un103_sum_cry_7_S), .Y(), .FCO(mult1_un103_sum_cry_7));
-    SLE \tim[6]  (.D(\mult1_un117_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[6]));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[13]  (.A(VCC_net_1), .B(
-        \i[13]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[12]_net_1 ), .S(\i_s[13] ), .Y(), .FCO(
-        \i_cry[13]_net_1 ));
-    ARI1 #( .INIT(20'h41E00) )  
-        \un5_tim.if_generate_plus.mult1_un47_sum_cry_3  (.A(VCC_net_1), 
-        .B(\i_fast[19]_net_1 ), .C(\i_fast[20]_net_1 ), .D(
-        \i_fast[21]_net_1 ), .FCI(mult1_un47_sum_cry_2), .S(
-        mult1_un47_sum_cry_3_S), .Y(), .FCO(mult1_un47_sum_cry_3));
-    SLE \tim[9]  (.D(\mult1_un96_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[9]));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_9  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_cry_8_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_8), .S(mult1_un68_sum_cry_9_S), .Y(), .FCO(
-        mult1_un68_sum_cry_9));
-    ARI1 #( .INIT(20'h53CAA) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_1  (.A(VCC_net_1)
-        , .B(mult1_un152_sum_cry_0_Y), .C(\i[3]_net_1 ), .D(
-        mult1_un152_sum_s_11_S), .FCI(mult1_un159_sum_cry_0), .S(), .Y(
-        ), .FCO(mult1_un159_sum_cry_1));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[5]  (.A(VCC_net_1), .B(
-        \i[5]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[4]_net_1 ), .S(\i_s[5] ), .Y(), .FCO(\i_cry[5]_net_1 ));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_5  (.A(VCC_net_1), 
-        .B(mult1_un68_sum_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_4), .S(mult1_un68_sum_cry_5_S), .Y(), .FCO(
-        mult1_un68_sum_cry_5));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_3  (.A(VCC_net_1), 
-        .B(mult1_un54_sum_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un54_sum_cry_2), .S(mult1_un54_sum_cry_3_S), .Y(), .FCO(
-        mult1_un54_sum_cry_3));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_5  (.A(
-        mult1_un103_sum_cry_4_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_4), .S(
-        mult1_un110_sum_cry_5_S), .Y(), .FCO(mult1_un110_sum_cry_5));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_9  (.A(
-        mult1_un145_sum_cry_8_S), .B(mult1_un145_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_8), .S(
-        mult1_un152_sum_cry_9_S), .Y(), .FCO(mult1_un152_sum_cry_9));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_9  (.A(
-        mult1_un96_sum_cry_8_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_8), .S(
-        mult1_un103_sum_cry_9_S), .Y(), .FCO(mult1_un103_sum_cry_9));
-    SLE \tim[10]  (.D(\mult1_un89_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[10]));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_8  (.A(
-        mult1_un110_sum_cry_7_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_7), .S(
-        mult1_un117_sum_cry_8_S), .Y(), .FCO(mult1_un117_sum_cry_8));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_4  (.A(
-        mult1_un68_sum_cry_3_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_3), .S(
-        mult1_un75_sum_cry_4_S), .Y(), .FCO(mult1_un75_sum_cry_4));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un47_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(mult1_un47_sum_cry_0_Y), .FCO(
-        mult1_un47_sum_cry_0));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un145_sum_cry_0));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un117_sum_cry_0));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_i_0[13]  (.A(
-        mult1_un138_sum_s_11_S), .Y(\mult1_un138_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_5  (.A(
-        mult1_un152_sum_cry_4_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_4), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_5));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[9]  (.A(VCC_net_1), .B(
-        \i[9]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[8]_net_1 ), .S(\i_s[9] ), .Y(), .FCO(\i_cry[9]_net_1 ));
-    CFG4 #( .INIT(16'hCC80) )  \state_ns_o2_RNIES9F1[2]  (.A(
-        \state[2]_net_1 ), .B(ECHO), .C(\state_ns_o2[2]_net_1 ), .D(
-        \state[3]_net_1 ), .Y(N_5_i_0));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un75_sum_cry_0));
-    SLE \i[3]  (.D(\i_s[3] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_4  (.A(
-        mult1_un117_sum_cry_3_S), .B(mult1_un117_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_3), .S(
-        mult1_un124_sum_cry_4_S), .Y(), .FCO(mult1_un124_sum_cry_4));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un138_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un131_sum_cry_10_S), .C(mult1_un131_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un138_sum_cry_10), .S(
-        mult1_un138_sum_s_11_S), .Y(), .FCO());
-    SLE \i_fast[20]  (.D(\i_s[20] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i_fast[20]_net_1 ));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un124_sum_cry_10_S), .C(mult1_un124_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un131_sum_cry_10), .S(
-        mult1_un131_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h42200) )  \i_cry[16]  (.A(VCC_net_1), .B(
-        \i[16]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[15]_net_1 ), .S(\i_s[16] ), .Y(), .FCO(
-        \i_cry[16]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_1  (.A(\i_i[13] ), 
-        .B(mult1_un82_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un89_sum_cry_0), .S(mult1_un89_sum_cry_1_S), .Y(), .FCO(
-        mult1_un89_sum_cry_1));
-    SLE \i_fast[21]  (.D(\i_s[21]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_5_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(\i_fast[21]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[8]  (.A(VCC_net_1), .B(
-        \i[8]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[7]_net_1 ), .S(\i_s[8] ), .Y(), .FCO(\i_cry[8]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_i_0[13]  (.A(
-        mult1_un75_sum_s_11_S), .Y(\mult1_un75_sum_i_0[13] ));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_2  (.A(VCC_net_1), 
-        .B(mult1_un47_sum_cry_1_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un54_sum_cry_1), .S(mult1_un61_sum_axb_3), .Y(), .FCO(
-        mult1_un54_sum_cry_2));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_4  (.A(
-        mult1_un75_sum_cry_3_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_3), .S(
-        mult1_un82_sum_cry_4_S), .Y(), .FCO(mult1_un82_sum_cry_4));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un152_sum_cry_1  (.A(\i_i[4] ), 
-        .B(mult1_un145_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un152_sum_cry_0), .S(mult1_un152_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un152_sum_cry_1));
-    ARI1 #( .INIT(20'h42200) )  \i_cry[0]  (.A(VCC_net_1), .B(
-        \i[0]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        i_cry_cy), .S(\i_s[0] ), .Y(), .FCO(\i_cry[0]_net_1 ));
-    SLE \i[1]  (.D(\i_s[1] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
-    ARI1 #( .INIT(20'h533AA) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_1  (.A(VCC_net_1), 
-        .B(mult1_un47_sum_cry_0_Y), .C(\i[18]_net_1 ), .D(GND_net_1), 
-        .FCI(mult1_un54_sum_cry_0), .S(mult1_un54_sum_cry_1_S), .Y(), 
-        .FCO(mult1_un54_sum_cry_1));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un117_sum_cry_4  (.A(
-        mult1_un110_sum_cry_3_S), .B(mult1_un110_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_3), .S(
-        mult1_un117_sum_cry_4_S), .Y(), .FCO(mult1_un117_sum_cry_4));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un110_sum_cry_7  (.A(
-        mult1_un103_sum_cry_6_S), .B(mult1_un103_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_6), .S(
-        mult1_un110_sum_cry_7_S), .Y(), .FCO(mult1_un110_sum_cry_7));
-    CFG1 #( .INIT(2'h1) )  \i_RNIIUQ6[11]  (.A(\i[11]_net_1 ), .Y(
-        \i_i[11] ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un145_sum_cry_9  (.A(
-        mult1_un138_sum_cry_8_S), .B(mult1_un138_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_8), .S(
-        mult1_un145_sum_cry_9_S), .Y(), .FCO(mult1_un145_sum_cry_9));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_2  (.A(
-        mult1_un96_sum_cry_1_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_1), .S(
-        mult1_un103_sum_cry_2_S), .Y(), .FCO(mult1_un103_sum_cry_2));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_6  (.A(
-        mult1_un82_sum_cry_5_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_5), .S(
-        mult1_un89_sum_cry_6_S), .Y(), .FCO(mult1_un89_sum_cry_6));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un159_sum_cry_7  (.A(
-        mult1_un152_sum_cry_6_S), .B(mult1_un152_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_6), .S(), 
-        .Y(), .FCO(mult1_un159_sum_cry_7));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_0  (.A(VCC_net_1), 
-        .B(\i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un96_sum_cry_0));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un75_sum_cry_2  (.A(
-        mult1_un68_sum_cry_1_S), .B(mult1_un68_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_1), .S(
-        mult1_un75_sum_cry_2_S), .Y(), .FCO(mult1_un75_sum_cry_2));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_9  (.A(
-        mult1_un124_sum_cry_8_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_8), .S(
-        mult1_un131_sum_cry_9_S), .Y(), .FCO(mult1_un131_sum_cry_9));
-    ARI1 #( .INIT(20'h49900) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_s_11  (.A(VCC_net_1), 
-        .B(mult1_un82_sum_cry_10_S), .C(mult1_un82_sum_s_11_S), .D(
-        GND_net_1), .FCI(mult1_un89_sum_cry_10), .S(
-        mult1_un89_sum_s_11_S), .Y(), .FCO());
-    ARI1 #( .INIT(20'h42200) )  \i_cry[19]  (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
-        \i_cry[18]_net_1 ), .S(\i_s[19] ), .Y(), .FCO(
-        \i_cry[19]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un82_sum_cry_8  (.A(
-        mult1_un75_sum_cry_7_S), .B(mult1_un75_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_7), .S(
-        mult1_un82_sum_cry_8_S), .Y(), .FCO(mult1_un82_sum_cry_8));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un103_sum_cry_5  (.A(
-        mult1_un96_sum_cry_4_S), .B(mult1_un96_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_4), .S(
-        mult1_un103_sum_cry_5_S), .Y(), .FCO(mult1_un103_sum_cry_5));
-    SLE \i[18]  (.D(\i_s[18] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[18]_net_1 ));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_cry_2  (.A(
-        mult1_un124_sum_cry_1_S), .B(mult1_un124_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_1), .S(
-        mult1_un131_sum_cry_2_S), .Y(), .FCO(mult1_un131_sum_cry_2));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un124_sum_cry_0  (.A(VCC_net_1)
-        , .B(\i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(mult1_un124_sum_cry_0));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un54_sum_cry_4  (.A(VCC_net_1), 
-        .B(mult1_un47_sum_cry_3_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un54_sum_cry_3), .S(mult1_un61_sum_axb_5), .Y(), .FCO(
-        mult1_un54_sum_cry_4));
-    ARI1 #( .INIT(20'h5AA55) )  
-        \un5_tim.if_generate_plus.mult1_un96_sum_cry_1  (.A(\i_i[12] ), 
-        .B(mult1_un89_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un96_sum_cry_0), .S(mult1_un96_sum_cry_1_S), .Y(), .FCO(
-        mult1_un96_sum_cry_1));
-    ARI1 #( .INIT(20'h5AAAA) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_8  (.A(VCC_net_1), 
-        .B(mult1_un68_sum_axb_8), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_7), .S(mult1_un68_sum_cry_8_S), .Y(), .FCO(
-        mult1_un68_sum_cry_8));
-    ARI1 #( .INIT(20'h65500) )  
-        \un5_tim.if_generate_plus.mult1_un68_sum_cry_7  (.A(VCC_net_1), 
-        .B(mult1_un61_sum_cry_6_S), .C(GND_net_1), .D(GND_net_1), .FCI(
-        mult1_un68_sum_cry_6), .S(mult1_un68_sum_cry_7_S), .Y(), .FCO(
-        mult1_un68_sum_cry_7));
-    CFG1 #( .INIT(2'h1) )  
-        \un5_tim.if_generate_plus.mult1_un131_sum_i_0[13]  (.A(
-        mult1_un131_sum_s_11_S), .Y(\mult1_un131_sum_i_0[13] ));
-    CFG2 #( .INIT(4'hE) )  new_ready_RNO (.A(\state[1]_net_1 ), .B(
-        \state[0]_net_1 ), .Y(N_201_i_0));
-    ARI1 #( .INIT(20'h555AA) )  
-        \un5_tim.if_generate_plus.mult1_un89_sum_cry_4  (.A(
-        mult1_un82_sum_cry_3_S), .B(mult1_un82_sum_s_11_S), .C(
-        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_3), .S(
-        mult1_un89_sum_cry_4_S), .Y(), .FCO(mult1_un89_sum_cry_4));
-    SLE \tim[7]  (.D(\mult1_un110_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
-        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        pulse_meash_0_tim[7]));
-    
-endmodule
-
-
-module locator_control(
-       BT_module_0_data_buf,
-       locator_control_0_angle1,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       un46_clk_0,
-       un46_clk_1,
-       un46_clk_2,
-       un46_clk_3,
-       TRIG,
-       locator_control_0_en_timer,
-       pulse_meash_0_new_ready,
-       N_234_0
-    );
-input  [7:0] BT_module_0_data_buf;
-output [3:0] locator_control_0_angle1;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-output un46_clk_0;
-output un46_clk_1;
-output un46_clk_2;
-output un46_clk_3;
-output TRIG;
-output locator_control_0_en_timer;
-input  pulse_meash_0_new_ready;
-output N_234_0;
-
-    wire \i[26]_net_1 , VCC_net_1, \i_4_i_i_a3[26]_net_1 , N_243_i_0, 
-        GND_net_1, \i[27]_net_1 , \i_4_i_i_a3[27]_net_1 , 
-        \i[28]_net_1 , \i_4_i_i_a3[28]_net_1 , \i[29]_net_1 , 
-        \i_4_i_i_a3[29]_net_1 , \i[30]_net_1 , \i_4_i_i_a3[30]_net_1 , 
-        \st_angle[0]_net_1 , fn_angle_0_sqmuxa_net_1, 
-        \st_angle[1]_net_1 , \st_angle[2]_net_1 , \st_angle[3]_net_1 , 
-        un38_clk_0, un38_clk_1, un38_clk_2, un38_clk_3, \i[11]_net_1 , 
-        N_458, \i[12]_net_1 , N_459, \i[13]_net_1 , N_460, 
-        \i[14]_net_1 , N_461, \i[15]_net_1 , N_462, \i[16]_net_1 , 
-        N_463, \i[17]_net_1 , N_464, \i[18]_net_1 , N_465, 
-        \i[19]_net_1 , N_466, \i[20]_net_1 , N_467, \i[21]_net_1 , 
-        \i_4_i_i_a3[21]_net_1 , \i[22]_net_1 , \i_4_i_i_a3[22]_net_1 , 
-        \i[23]_net_1 , \i_4_i_i_a3[23]_net_1 , \i[24]_net_1 , 
-        \i_4_i_i_a3[24]_net_1 , \i[25]_net_1 , \i_4_i_i_a3[25]_net_1 , 
-        \i[0]_net_1 , N_230, \i[1]_net_1 , N_231, \i[2]_net_1 , N_232, 
-        \i[3]_net_1 , N_233, \i[4]_net_1 , N_234, \i[5]_net_1 , N_235, 
-        \i[6]_net_1 , N_455, \i[7]_net_1 , N_456, \i[8]_net_1 , N_457, 
-        \i[9]_net_1 , N_241, \i[10]_net_1 , N_242, \state[4]_net_1 , 
-        over_net_1, over_1_sqmuxa, un1_angle_0_sqmuxa_0_0_net_1, 
-        \state[8]_net_1 , un1_state_8_i_0, dir_net_1, 
-        cr_angle_1_sqmuxa, un1_cr_angle_1_sqmuxa_0_0_net_1, 
-        \state[6]_net_1 , N_244_i_0, \state[5]_net_1 , 
-        \state[3]_net_1 , \state_ns[8]_net_1 , \state[2]_net_1 , 
-        N_211_i_0, \state[1]_net_1 , \state[0]_net_1 , \state_ns[11] , 
-        \state[11]_net_1 , N_195_i_0, \state[10]_net_1 , 
-        \state[9]_net_1 , N_201_i_0, \state[7]_net_1 , \state_ns[4] , 
-        N_204_i_0, \cr_angle_s[0] , \cr_angle_s[1] , \cr_angle_s[2] , 
-        \cr_angle_s[3] , un46_clk_4, \cr_angle_s[4] , un46_clk_5, 
-        \cr_angle_s[5] , un46_clk_6, \cr_angle_s[6] , un46_clk_7, 
-        \cr_angle_s[7] , un46_clk_8, \cr_angle_s[8] , un46_clk_9, 
-        \cr_angle_s[9] , un46_clk_10, \cr_angle_s[10] , un46_clk_11, 
-        \cr_angle_s[11] , un46_clk_12, \cr_angle_s[12] , un46_clk_13, 
-        \cr_angle_s[13] , un46_clk_14, \cr_angle_s[14] , un46_clk_15, 
-        \cr_angle_s[15] , un46_clk_16, \cr_angle_s[16] , un46_clk_17, 
-        \cr_angle_s[17] , un46_clk_18, \cr_angle_s[18] , un46_clk_19, 
-        \cr_angle_s[19] , un46_clk_20, \cr_angle_s[20] , un46_clk_21, 
-        \cr_angle_s[21] , un46_clk_22, \cr_angle_s[22] , un46_clk_23, 
-        \cr_angle_s[23] , un46_clk_24, \cr_angle_s[24] , un46_clk_25, 
-        \cr_angle_s[25] , un46_clk_26, \cr_angle_s[26] , un46_clk_27, 
-        \cr_angle_s[27] , un46_clk_28, \cr_angle_s[28] , un46_clk_29, 
-        \cr_angle_s[29] , un46_clk_30, \cr_angle_s[30] , 
-        cr_angle_lcry_cy, un38_clk_cry_30_net_1, N_229, N_291, 
-        cr_angle, un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y, N_191_i_0_0, 
-        N_451_i_0, \cr_angle_cry[0] , \cr_angle_lxu;_0[0] , 
-        \cr_angle_qxu[0]_net_1 , \cr_angle_cry[1] , N_191_i_0, 
-        \cr_angle_cry[2] , \cr_angle_cry[3] , \cr_angle_cry[4] , 
-        \cr_angle_cry[5] , \cr_angle_cry[6] , \cr_angle_cry[7] , 
-        \cr_angle_cry[8] , \cr_angle_cry[9] , \cr_angle_cry[10] , 
-        \cr_angle_cry[11] , \cr_angle_cry[12] , \cr_angle_cry[13] , 
-        \cr_angle_cry[14] , \cr_angle_cry[15] , \cr_angle_cry[16] , 
-        \cr_angle_cry[17] , \cr_angle_cry[18] , \cr_angle_cry[19] , 
-        \cr_angle_cry[20] , \cr_angle_cry[21] , \cr_angle_cry[22] , 
-        \cr_angle_cry[23] , \cr_angle_cry[24] , \cr_angle_cry[25] , 
-        \cr_angle_cry[26] , \cr_angle_cry[27] , \cr_angle_cry[28] , 
-        \cr_angle_cry[29] , un46_clk_cry_0_net_1, un46_clk_cry_1_net_1, 
-        un46_clk_cry_2_net_1, un46_clk_cry_3_net_1, 
-        un46_clk_cry_4_net_1, un46_clk_cry_5_net_1, 
-        un46_clk_cry_6_net_1, un46_clk_cry_7_net_1, 
-        un46_clk_cry_8_net_1, un46_clk_cry_9_net_1, 
-        un46_clk_cry_10_net_1, un46_clk_cry_11_net_1, 
-        un46_clk_cry_12_net_1, un46_clk_cry_13_net_1, 
-        un46_clk_cry_14_net_1, un46_clk_cry_15_net_1, 
-        un46_clk_cry_16_net_1, un46_clk_cry_17_net_1, 
-        un46_clk_cry_18_net_1, un46_clk_cry_19_net_1, 
-        un46_clk_cry_20_net_1, un46_clk_cry_21_net_1, 
-        un46_clk_cry_22_net_1, un46_clk_cry_23_net_1, 
-        un46_clk_cry_24_net_1, un46_clk_cry_25_net_1, 
-        un46_clk_cry_26_net_1, un46_clk_cry_27_net_1, 
-        un46_clk_cry_28_net_1, un46_clk_cry_29_net_1, 
-        un46_clk_cry_30_net_1, un38_clk_cry_0_net_1, 
-        un38_clk_cry_1_net_1, un38_clk_cry_2_net_1, 
-        un38_clk_cry_3_net_1, un38_clk_cry_4_net_1, 
-        un38_clk_cry_5_net_1, un38_clk_cry_6_net_1, 
-        un38_clk_cry_7_net_1, un38_clk_cry_8_net_1, 
-        un38_clk_cry_9_net_1, un38_clk_cry_10_net_1, 
-        un38_clk_cry_11_net_1, un38_clk_cry_12_net_1, 
-        un38_clk_cry_13_net_1, un38_clk_cry_14_net_1, 
-        un38_clk_cry_15_net_1, un38_clk_cry_16_net_1, 
-        un38_clk_cry_17_net_1, un38_clk_cry_18_net_1, 
-        un38_clk_cry_19_net_1, un38_clk_cry_20_net_1, 
-        un38_clk_cry_21_net_1, un38_clk_cry_22_net_1, 
-        un38_clk_cry_23_net_1, un38_clk_cry_24_net_1, 
-        un38_clk_cry_25_net_1, un38_clk_cry_26_net_1, 
-        un38_clk_cry_27_net_1, un38_clk_cry_28_net_1, 
-        un38_clk_cry_29_net_1, un1_i_s_1_322_FCO, un1_i_cry_1_net_1, 
-        un1_i_cry_1_S, un1_i_cry_2_net_1, un1_i_cry_2_S, 
-        un1_i_cry_3_net_1, un1_i_cry_3_S, un1_i_cry_4_net_1, 
-        un1_i_cry_4_S, un1_i_cry_5_net_1, un1_i_cry_5_S, 
-        un1_i_cry_6_net_1, un1_i_cry_6_S, un1_i_cry_7_net_1, 
-        un1_i_cry_7_S, un1_i_cry_8_net_1, un31_clklto8, 
-        un1_i_cry_9_net_1, un1_i_cry_9_S, un1_i_cry_10_net_1, 
-        un1_i_cry_10_S, un1_i_cry_11_net_1, un1_i_cry_11_S, 
-        un1_i_cry_12_net_1, un1_i_cry_12_S, un1_i_cry_13_net_1, 
-        un1_i_cry_13_S, un1_i_cry_14_net_1, un1_i_cry_14_S, 
-        un1_i_cry_15_net_1, un1_i_cry_15_S, un1_i_cry_16_net_1, 
-        un1_i_cry_16_S, un1_i_cry_17_net_1, un31_clklto17, 
-        un1_i_cry_18_net_1, un1_i_cry_18_S, un1_i_cry_19_net_1, 
-        un1_i_cry_19_S, un1_i_cry_20_net_1, un31_clklto20, 
-        un1_i_cry_21_net_1, un31_clklto21, un1_i_cry_22_net_1, 
-        un1_i_cry_22_S, un1_i_cry_23_net_1, un1_i_cry_23_S, 
-        un1_i_cry_24_net_1, un1_i_cry_24_S, un1_i_cry_25_net_1, 
-        un1_i_cry_25_S, un1_i_cry_26_net_1, un1_i_cry_26_S, 
-        un1_i_cry_27_net_1, un1_i_cry_27_S, un1_i_cry_28_net_1, 
-        un1_i_cry_28_S, un1_i_s_30_S, un1_i_cry_29_net_1, 
-        un1_i_cry_29_S, \cr_angle_lxu;[0] , N_503, N_449_5, 
-        \state_ns_a2_0_0_a3_0_6[8]_net_1 , 
-        \state_ns_a2_0_0_a3_0_5[8]_net_1 , 
-        un1_state_8_0_0_a3_10_3_net_1, un1_state_8_0_0_a3_10_2_net_1, 
-        \state_ns_a2_0_0_a2_0_6[8]_net_1 , 
-        \state_ns_a2_0_0_a2_0_5[8]_net_1 , un1_state_8_0_0_o2_2_net_1, 
-        \state_ns_a2_0_a2_5[4]_net_1 , \state_ns_a2_0_a2_4[4]_net_1 , 
-        \state_ns_i_0_0_a2_4_1[3]_net_1 , N_316, N_59, N_482, 
-        \state_ns_a2_0_0_a3_0_7[8]_net_1 , un1_state_8_0_0_o2_net_1, 
-        N_311, N_258, N_484, N_109, N_192, N_112, N_449_9, N_446, 
-        N_116, N_114, N_117, N_452_1, N_118, N_120, N_491, N_481;
-    
-    CFG2 #( .INIT(4'h8) )  un1_angle_0_sqmuxa_0_0_a3 (.A(over_net_1), 
-        .B(\state[1]_net_1 ), .Y(N_195_i_0));
-    SLE \cr_angle[21]  (.D(\cr_angle_s[21] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_21));
-    SLE \state[0]  (.D(\state_ns[11] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
-    SLE \cr_angle[8]  (.D(\cr_angle_s[8] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_8));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_9 (.A(VCC_net_1), .B(
-        un46_clk_9), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_8_net_1), .S(), .Y(), .FCO(un46_clk_cry_9_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIDIPI21[15]  (.A(N_191_i_0)
-        , .B(un46_clk_15), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[14] ), .S(\cr_angle_s[15] ), .Y(), .FCO(
-        \cr_angle_cry[15] ));
-    ARI1 #( .INIT(20'h5CCAA) )  \cr_angle_qxu_RNIL3NT3[0]  (.A(
-        VCC_net_1), .B(\cr_angle_lxu;_0[0] ), .C(
-        \cr_angle_qxu[0]_net_1 ), .D(GND_net_1), .FCI(cr_angle), .S(
-        \cr_angle_s[0] ), .Y(), .FCO(\cr_angle_cry[0] ));
-    SLE \i[7]  (.D(N_456), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_29 (.A(VCC_net_1), .B(
-        un46_clk_29), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_28_net_1), .S(), .Y(), .FCO(un46_clk_cry_29_net_1)
-        );
-    SLE \angle1[2]  (.D(un46_clk_2), .CLK(FCCC_0_GL0), .EN(
-        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        locator_control_0_angle1[2]));
-    SLE \i[16]  (.D(N_463), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[16]_net_1 ));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIG836B1[21]  (.A(N_191_i_0)
-        , .B(un46_clk_21), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[20] ), .S(\cr_angle_s[21] ), .Y(), .FCO(
-        \cr_angle_cry[21] ));
-    CFG3 #( .INIT(8'hAE) )  \state_ns_o2_0_0_o3[11]  (.A(
-        \state[9]_net_1 ), .B(\state[1]_net_1 ), .C(over_net_1), .Y(
-        N_234_0));
-    SLE \fn_angle[1]  (.D(BT_module_0_data_buf[5]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        un38_clk_1));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_18 (.A(VCC_net_1), .B(
-        un46_clk_18), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_17_net_1), .S(), .Y(), .FCO(un38_clk_cry_18_net_1)
-        );
-    SLE \cr_angle[23]  (.D(\cr_angle_s[23] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_23));
-    SLE \i[21]  (.D(\i_4_i_i_a3[21]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[21]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[26]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_26_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[26]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[18]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_18_S), .C(N_446), .D(N_481), .Y(N_465));
-    CFG2 #( .INIT(4'h4) )  cr_angle_1_sqmuxa_0_a3_0_a3 (.A(
-        un38_clk_cry_30_net_1), .B(N_291), .Y(cr_angle_1_sqmuxa));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_26 (.A(VCC_net_1), .B(
-        un46_clk_26), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_25_net_1), .S(), .Y(), .FCO(un46_clk_cry_26_net_1)
-        );
-    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_0 (.A(un38_clk_0), .B(
-        un46_clk_0), .C(GND_net_1), .D(GND_net_1), .FCI(GND_net_1), .S(
-        ), .Y(), .FCO(un38_clk_cry_0_net_1));
-    SLE \state[10]  (.D(\state[11]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[10]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[2]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_2_S), .C(N_446), .D(N_481), .Y(N_232));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI79EDR[10]  (.A(N_191_i_0), 
-        .B(un46_clk_10), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[9] ), .S(\cr_angle_s[10] ), .Y(), .FCO(
-        \cr_angle_cry[10] ));
-    SLE \i[0]  (.D(N_230), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_0_a3_0_6[8]  (.A(
-        un1_i_cry_5_S), .B(un31_clklto8), .C(un1_i_cry_1_S), .D(
-        un1_i_cry_4_S), .Y(\state_ns_a2_0_0_a3_0_6[8]_net_1 ));
-    SLE \i[11]  (.D(N_458), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[11]_net_1 ));
-    ARI1 #( .INIT(20'h46A00) )  \cr_angle_RNO[30]  (.A(VCC_net_1), .B(
-        N_191_i_0), .C(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .D(
-        un46_clk_30), .FCI(\cr_angle_cry[29] ), .S(\cr_angle_s[30] ), 
-        .Y(), .FCO());
-    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_3 (.A(un46_clk_3), .B(
-        \st_angle[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_2_net_1), .S(), .Y(), .FCO(un46_clk_cry_3_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_s_30 (.A(VCC_net_1), .B(
-        \i[30]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_29_net_1), .S(un1_i_s_30_S), .Y(), .FCO());
-    SLE \state[6]  (.D(N_204_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[6]_net_1 ));
-    CFG4 #( .INIT(16'hDFFF) )  \state_ns_a2_0_0_o2_2[8]  (.A(
-        un1_i_cry_16_S), .B(N_484), .C(un1_i_cry_14_S), .D(
-        un1_i_cry_15_S), .Y(N_112));
-    SLE dir (.D(cr_angle_1_sqmuxa), .CLK(FCCC_0_GL0), .EN(
-        un1_cr_angle_1_sqmuxa_0_0_net_1), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(dir_net_1));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_11 (.A(VCC_net_1), .B(
-        un46_clk_11), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_10_net_1), .S(), .Y(), .FCO(un46_clk_cry_11_net_1)
-        );
-    SLE \st_angle[2]  (.D(BT_module_0_data_buf[2]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \st_angle[2]_net_1 ));
-    SLE \angle1[1]  (.D(un46_clk_1), .CLK(FCCC_0_GL0), .EN(
-        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        locator_control_0_angle1[1]));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIE0NTG1[25]  (.A(N_191_i_0)
-        , .B(un46_clk_25), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[24] ), .S(\cr_angle_s[25] ), .Y(), .FCO(
-        \cr_angle_cry[25] ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_21 (.A(VCC_net_1), .B(
-        un46_clk_21), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_20_net_1), .S(), .Y(), .FCO(un38_clk_cry_21_net_1)
-        );
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_19 (.A(VCC_net_1), .B(
-        un46_clk_19), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_18_net_1), .S(), .Y(), .FCO(un38_clk_cry_19_net_1)
-        );
-    CFG2 #( .INIT(4'h7) )  \state_RNILFEF[10]  (.A(\state[10]_net_1 ), 
-        .B(FCCC_0_LOCK), .Y(N_451_i_0));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[23]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_23_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[23]_net_1 ));
-    CFG4 #( .INIT(16'hB8F0) )  \cr_angle_lxu[0]  (.A(
-        \st_angle[0]_net_1 ), .B(FCCC_0_LOCK), .C(un46_clk_0), .D(
-        \state[10]_net_1 ), .Y(\cr_angle_lxu;[0] ));
-    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_0 (.A(un46_clk_0), .B(
-        \st_angle[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(), .FCO(un46_clk_cry_0_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_23 (.A(VCC_net_1), .B(
-        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_22_net_1), .S(un1_i_cry_23_S), .Y(), .FCO(
-        un1_i_cry_23_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIU40KC1[22]  (.A(N_191_i_0)
-        , .B(un46_clk_22), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[21] ), .S(\cr_angle_s[22] ), .Y(), .FCO(
-        \cr_angle_cry[22] ));
-    CFG4 #( .INIT(16'h0F4F) )  \state_ns_i_0_0_o2_5[3]  (.A(
-        \i[2]_net_1 ), .B(\state_ns_i_0_0_a2_4_1[3]_net_1 ), .C(
-        \i[5]_net_1 ), .D(\i[3]_net_1 ), .Y(N_109));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[5]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_5_S), .C(N_446), .D(N_481), .Y(N_235));
-    SLE \cr_angle[2]  (.D(\cr_angle_s[2] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_2));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI75E7L1[28]  (.A(N_191_i_0)
-        , .B(un46_clk_28), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[27] ), .S(\cr_angle_s[28] ), .Y(), .FCO(
-        \cr_angle_cry[28] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_21 (.A(VCC_net_1), .B(
-        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_20_net_1), .S(un31_clklto21), .Y(), .FCO(
-        un1_i_cry_21_net_1));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[15]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_15_S), .C(N_446), .D(N_481), .Y(N_462));
-    SLE \cr_angle[14]  (.D(\cr_angle_s[14] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_14));
-    CFG2 #( .INIT(4'h2) )  un1_cr_angle_1_sqmuxa_0_0_a2 (.A(
-        \state[2]_net_1 ), .B(dir_net_1), .Y(N_291));
-    CFG3 #( .INIT(8'h75) )  \state_ns_i_0_0_o2_3[3]  (.A(\i[10]_net_1 )
-        , .B(\i[9]_net_1 ), .C(N_116), .Y(N_117));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_20 (.A(VCC_net_1), .B(
-        un46_clk_20), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_19_net_1), .S(), .Y(), .FCO(un38_clk_cry_20_net_1)
-        );
-    SLE \cr_angle[6]  (.D(\cr_angle_s[6] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_6));
-    SLE \state[4]  (.D(\state[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[4]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[24]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_24_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[24]_net_1 ));
-    CFG2 #( .INIT(4'h1) )  en_sonar_RNO (.A(N_446), .B(N_503), .Y(
-        un1_state_8_i_0));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[8]  (.A(\state[3]_net_1 ), 
-        .B(un31_clklto8), .C(N_446), .D(N_481), .Y(N_457));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[29]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_29_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[29]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_30 (.A(VCC_net_1), .B(
-        un46_clk_30), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_29_net_1), .S(), .Y(), .FCO(un38_clk_cry_30_net_1)
-        );
-    CFG4 #( .INIT(16'hF777) )  \state_ns_i_0_0_o2_0[3]  (.A(
-        \i[17]_net_1 ), .B(\i[18]_net_1 ), .C(N_118), .D(N_59), .Y(
-        N_120));
-    GND GND (.Y(GND_net_1));
-    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_0_a3_0_5[8]  (.A(
-        un1_i_cry_3_S), .B(un31_clklto20), .C(un1_i_cry_2_S), .Y(
-        \state_ns_a2_0_0_a3_0_5[8]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_23 (.A(VCC_net_1), .B(
-        un46_clk_23), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_22_net_1), .S(), .Y(), .FCO(un46_clk_cry_23_net_1)
-        );
-    SLE \state[7]  (.D(\state_ns[4] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
-        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[7]_net_1 ));
-    SLE \i[23]  (.D(\i_4_i_i_a3[23]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[23]_net_1 ));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIEO1NV[13]  (.A(N_191_i_0), 
-        .B(un46_clk_13), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[12] ), .S(\cr_angle_s[13] ), .Y(), .FCO(
-        \cr_angle_cry[13] ));
-    SLE \cr_angle[18]  (.D(\cr_angle_s[18] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_18));
-    SLE \cr_angle[27]  (.D(\cr_angle_s[27] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_27));
-    SLE \state[5]  (.D(\state[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[5]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_0_a2_0_6[8]  (.A(
-        un1_i_cry_25_S), .B(un1_i_cry_26_S), .C(un1_i_cry_27_S), .D(
-        un1_i_cry_28_S), .Y(\state_ns_a2_0_0_a2_0_6[8]_net_1 ));
-    SLE \cr_angle[22]  (.D(\cr_angle_s[22] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_22));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_29 (.A(VCC_net_1), .B(
-        \i[29]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_28_net_1), .S(un1_i_cry_29_S), .Y(), .FCO(
-        un1_i_cry_29_net_1));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[30]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_s_30_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[30]_net_1 ));
-    SLE \cr_angle[29]  (.D(\cr_angle_s[29] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_29));
-    SLE \i[13]  (.D(N_460), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[13]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_4 (.A(VCC_net_1), .B(
-        un46_clk_4), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_3_net_1), .S(), .Y(), .FCO(un38_clk_cry_4_net_1));
-    SLE \i[27]  (.D(\i_4_i_i_a3[27]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[27]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_1 (.A(un46_clk_1), .B(
-        \st_angle[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_0_net_1), .S(), .Y(), .FCO(un46_clk_cry_1_net_1));
-    CFG4 #( .INIT(16'h8000) )  un1_state_8_0_0_a3 (.A(N_449_5), .B(
-        \state[7]_net_1 ), .C(N_449_9), .D(un1_state_8_0_0_o2_net_1), 
-        .Y(N_446));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_12 (.A(VCC_net_1), .B(
-        un46_clk_12), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_11_net_1), .S(), .Y(), .FCO(un46_clk_cry_12_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[28]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_28_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[28]_net_1 ));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNISGIVP[9]  (.A(N_191_i_0), 
-        .B(un46_clk_9), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[8] ), .S(\cr_angle_s[9] ), .Y(), .FCO(
-        \cr_angle_cry[9] ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_17 (.A(VCC_net_1), .B(
-        un46_clk_17), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_16_net_1), .S(), .Y(), .FCO(un38_clk_cry_17_net_1)
-        );
-    ARI1 #( .INIT(20'h51BE4) )  \st_angle_RNIPT91H[3]  (.A(N_191_i_0), 
-        .B(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .C(
-        \st_angle[3]_net_1 ), .D(un46_clk_3), .FCI(\cr_angle_cry[2] ), 
-        .S(\cr_angle_s[3] ), .Y(), .FCO(\cr_angle_cry[3] ));
-    SLE \i[17]  (.D(N_464), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[17]_net_1 ));
-    CFG3 #( .INIT(8'h01) )  \state_ns_i_0_0_a2_4_1[3]  (.A(
-        \i[4]_net_1 ), .B(\i[0]_net_1 ), .C(\i[1]_net_1 ), .Y(
-        \state_ns_i_0_0_a2_4_1[3]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_6 (.A(VCC_net_1), .B(
-        un46_clk_6), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_5_net_1), .S(), .Y(), .FCO(un46_clk_cry_6_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_7 (.A(VCC_net_1), .B(
-        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_6_net_1), .S(un1_i_cry_7_S), .Y(), .FCO(
-        un1_i_cry_7_net_1));
-    ARI1 #( .INIT(20'h51BE4) )  \st_angle_RNIVKI98[1]  (.A(N_191_i_0), 
-        .B(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .C(
-        \st_angle[1]_net_1 ), .D(un46_clk_1), .FCI(\cr_angle_cry[0] ), 
-        .S(\cr_angle_s[1] ), .Y(), .FCO(\cr_angle_cry[1] ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_8 (.A(VCC_net_1), .B(
-        un46_clk_8), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_7_net_1), .S(), .Y(), .FCO(un46_clk_cry_8_net_1));
-    CFG4 #( .INIT(16'hBFFF) )  un38_clk_cry_30_RNILS9U (.A(dir_net_1), 
-        .B(FCCC_0_LOCK), .C(un38_clk_cry_30_net_1), .D(
-        \state[2]_net_1 ), .Y(N_191_i_0));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_4 (.A(VCC_net_1), .B(
-        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_3_net_1), .S(un1_i_cry_4_S), .Y(), .FCO(
-        un1_i_cry_4_net_1));
-    CFG2 #( .INIT(4'h8) )  fn_angle_0_sqmuxa (.A(FCCC_0_LOCK), .B(
-        \state[11]_net_1 ), .Y(fn_angle_0_sqmuxa_net_1));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_12 (.A(VCC_net_1), .B(
-        un46_clk_12), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_11_net_1), .S(), .Y(), .FCO(un38_clk_cry_12_net_1)
-        );
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNITKT411[14]  (.A(N_191_i_0)
-        , .B(un46_clk_14), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[13] ), .S(\cr_angle_s[14] ), .Y(), .FCO(
-        \cr_angle_cry[14] ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_21 (.A(VCC_net_1), .B(
-        un46_clk_21), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_20_net_1), .S(), .Y(), .FCO(un46_clk_cry_21_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[1]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_1_S), .C(N_446), .D(N_481), .Y(N_231));
-    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_2 (.A(un38_clk_2), .B(
-        un46_clk_2), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_1_net_1), .S(), .Y(), .FCO(un38_clk_cry_2_net_1));
-    SLE \i[9]  (.D(N_241), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
-    CFG4 #( .INIT(16'h8000) )  un1_state_8_0_0_a3_10 (.A(
-        un1_state_8_0_0_a3_10_2_net_1), .B(N_258), .C(N_59), .D(
-        un1_state_8_0_0_a3_10_3_net_1), .Y(N_449_9));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_8 (.A(VCC_net_1), .B(
-        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_7_net_1), .S(un31_clklto8), .Y(), .FCO(
-        un1_i_cry_8_net_1));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_30 (.A(VCC_net_1), .B(
-        un46_clk_30), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_29_net_1), .S(), .Y(), .FCO(un46_clk_cry_30_net_1)
-        );
-    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_3 (.A(un38_clk_3), .B(
-        un46_clk_3), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_2_net_1), .S(), .Y(), .FCO(un38_clk_cry_3_net_1));
-    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_a2_4[4]  (.A(\i[30]_net_1 ), 
-        .B(\i[27]_net_1 ), .C(\i[23]_net_1 ), .Y(
-        \state_ns_a2_0_a2_4[4]_net_1 ));
-    VCC VCC (.Y(VCC_net_1));
-    CFG4 #( .INIT(16'h070F) )  un46_clk_cry_30_RNIDVNA1 (.A(dir_net_1), 
-        .B(\state[2]_net_1 ), .C(\state[10]_net_1 ), .D(
-        un46_clk_cry_30_net_1), .Y(N_229));
-    SLE \cr_angle[10]  (.D(\cr_angle_s[10] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_10));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_12 (.A(VCC_net_1), .B(
-        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_11_net_1), .S(un1_i_cry_12_S), .Y(), .FCO(
-        un1_i_cry_12_net_1));
-    CFG4 #( .INIT(16'hF070) )  \state_ns_a2_0_0_a2_10[8]  (.A(
-        un1_i_cry_10_S), .B(un1_i_cry_9_S), .C(N_316), .D(N_482), .Y(
-        N_484));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[25]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_25_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[25]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_a2_5[4]  (.A(
-        \i[29]_net_1 ), .B(\i[28]_net_1 ), .C(\i[25]_net_1 ), .D(
-        \i[22]_net_1 ), .Y(\state_ns_a2_0_a2_5[4]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_15 (.A(VCC_net_1), .B(
-        un46_clk_15), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_14_net_1), .S(), .Y(), .FCO(un38_clk_cry_15_net_1)
-        );
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_24 (.A(VCC_net_1), .B(
-        un46_clk_24), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_23_net_1), .S(), .Y(), .FCO(un38_clk_cry_24_net_1)
-        );
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_17 (.A(VCC_net_1), .B(
-        un46_clk_17), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_16_net_1), .S(), .Y(), .FCO(un46_clk_cry_17_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_5 (.A(VCC_net_1), .B(
-        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_4_net_1), .S(un1_i_cry_5_S), .Y(), .FCO(
-        un1_i_cry_5_net_1));
-    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_0_a2_1[8]  (.A(
-        un1_i_cry_11_S), .B(un1_i_cry_12_S), .C(un1_i_cry_13_S), .Y(
-        N_316));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_0_a2_0_5[8]  (.A(
-        pulse_meash_0_new_ready), .B(un1_i_cry_22_S), .C(
-        un1_i_cry_23_S), .D(un1_i_cry_24_S), .Y(
-        \state_ns_a2_0_0_a2_0_5[8]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_10 (.A(VCC_net_1), .B(
-        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_9_net_1), .S(un1_i_cry_10_S), .Y(), .FCO(
-        un1_i_cry_10_net_1));
-    CFG4 #( .INIT(16'hBFFF) )  un38_clk_cry_30_RNILS9U_0 (.A(dir_net_1)
-        , .B(FCCC_0_LOCK), .C(un38_clk_cry_30_net_1), .D(
-        \state[2]_net_1 ), .Y(N_191_i_0_0));
-    SLE \state[9]  (.D(\state[10]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[9]_net_1 ));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIMAN0K[5]  (.A(N_191_i_0), 
-        .B(un46_clk_5), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[4] ), .S(\cr_angle_s[5] ), .Y(), .FCO(
-        \cr_angle_cry[5] ));
-    SLE en_timer (.D(\state[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_244_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        locator_control_0_en_timer));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_7 (.A(VCC_net_1), .B(
-        un46_clk_7), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_6_net_1), .S(), .Y(), .FCO(un38_clk_cry_7_net_1));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_23 (.A(VCC_net_1), .B(
-        un46_clk_23), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_22_net_1), .S(), .Y(), .FCO(un38_clk_cry_23_net_1)
-        );
-    CFG3 #( .INIT(8'h04) )  \state_RNO[2]  (.A(N_452_1), .B(
-        \state[3]_net_1 ), .C(N_192), .Y(N_211_i_0));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_6 (.A(VCC_net_1), .B(
-        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_5_net_1), .S(un1_i_cry_6_S), .Y(), .FCO(
-        un1_i_cry_6_net_1));
-    SLE \cr_angle[11]  (.D(\cr_angle_s[11] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_11));
-    SLE \i[25]  (.D(\i_4_i_i_a3[25]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[25]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_1 (.A(VCC_net_1), .B(
-        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_s_1_322_FCO), .S(un1_i_cry_1_S), .Y(), .FCO(
-        un1_i_cry_1_net_1));
-    CFG4 #( .INIT(16'hFFEC) )  \state_ns[8]  (.A(\state[3]_net_1 ), .B(
-        \state[4]_net_1 ), .C(N_452_1), .D(N_192), .Y(
-        \state_ns[8]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[10]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_10_S), .C(N_446), .D(N_481), .Y(N_242));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI3D6O91[20]  (.A(N_191_i_0)
-        , .B(un46_clk_20), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[19] ), .S(\cr_angle_s[20] ), .Y(), .FCO(
-        \cr_angle_cry[20] ));
-    CFG4 #( .INIT(16'hFEFF) )  un1_state_8_0_0_a2_RNIMPV61 (.A(
-        \state[9]_net_1 ), .B(\state[0]_net_1 ), .C(\state[3]_net_1 ), 
-        .D(N_503), .Y(N_243_i_0));
-    CFG4 #( .INIT(16'h4CCC) )  \state_RNO[6]  (.A(N_449_5), .B(
-        \state[7]_net_1 ), .C(N_449_9), .D(un1_state_8_0_0_o2_net_1), 
-        .Y(N_204_i_0));
-    SLE \i[15]  (.D(N_462), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[15]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_26 (.A(VCC_net_1), .B(
-        un46_clk_26), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_25_net_1), .S(), .Y(), .FCO(un38_clk_cry_26_net_1)
-        );
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIS8BLM1[29]  (.A(N_191_i_0)
-        , .B(un46_clk_29), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[28] ), .S(\cr_angle_s[29] ), .Y(), .FCO(
-        \cr_angle_cry[29] ));
-    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_2 (.A(un46_clk_2), .B(
-        \st_angle[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_1_net_1), .S(), .Y(), .FCO(un46_clk_cry_2_net_1));
-    SLE \cr_angle[13]  (.D(\cr_angle_s[13] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_13));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_22 (.A(VCC_net_1), .B(
-        un46_clk_22), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_21_net_1), .S(), .Y(), .FCO(un46_clk_cry_22_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[7]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_7_S), .C(N_446), .D(N_481), .Y(N_456));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_7 (.A(VCC_net_1), .B(
-        un46_clk_7), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_6_net_1), .S(), .Y(), .FCO(un46_clk_cry_7_net_1));
-    CFG3 #( .INIT(8'hF8) )  un1_cr_angle_1_sqmuxa_0_0 (.A(over_net_1), 
-        .B(\state[1]_net_1 ), .C(N_291), .Y(
-        un1_cr_angle_1_sqmuxa_0_0_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNINJ0HI[4]  (.A(N_191_i_0), 
-        .B(un46_clk_4), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[3] ), .S(\cr_angle_s[4] ), .Y(), .FCO(
-        \cr_angle_cry[4] ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_5 (.A(VCC_net_1), .B(
-        un46_clk_5), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_4_net_1), .S(), .Y(), .FCO(un38_clk_cry_5_net_1));
-    ARI1 #( .INIT(20'h5CCAA) )  un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83 
-        (.A(VCC_net_1), .B(N_191_i_0_0), .C(N_451_i_0), .D(GND_net_1), 
-        .FCI(cr_angle_lcry_cy), .S(), .Y(
-        un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .FCO(cr_angle));
-    CFG4 #( .INIT(16'h5554) )  \i_4_i_i_a3[0]  (.A(\i[0]_net_1 ), .B(
-        \state[3]_net_1 ), .C(N_446), .D(N_481), .Y(N_230));
-    SLE \i[22]  (.D(\i_4_i_i_a3[22]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[22]_net_1 ));
-    SLE \cr_angle[26]  (.D(\cr_angle_s[26] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_26));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_10 (.A(VCC_net_1), .B(
-        un46_clk_10), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_9_net_1), .S(), .Y(), .FCO(un46_clk_cry_10_net_1));
-    CFG4 #( .INIT(16'hC400) )  \state_ns_0_a3[11]  (.A(\i[21]_net_1 ), 
-        .B(\state[0]_net_1 ), .C(N_491), .D(N_258), .Y(N_481));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI0T59U[12]  (.A(N_191_i_0), 
-        .B(un46_clk_12), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[11] ), .S(\cr_angle_s[12] ), .Y(), .FCO(
-        \cr_angle_cry[12] ));
-    SLE \cr_angle[30]  (.D(\cr_angle_s[30] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_30));
-    SLE \cr_angle[25]  (.D(\cr_angle_s[25] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_25));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_4 (.A(VCC_net_1), .B(
-        un46_clk_4), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_3_net_1), .S(), .Y(), .FCO(un46_clk_cry_4_net_1));
-    CFG4 #( .INIT(16'h7F77) )  \state_ns_i_0_0_o2_4[3]  (.A(
-        \i[8]_net_1 ), .B(\i[7]_net_1 ), .C(\i[6]_net_1 ), .D(N_109), 
-        .Y(N_116));
-    CFG3 #( .INIT(8'h10) )  \state_ns_i_0_0_a2[3]  (.A(\i[20]_net_1 ), 
-        .B(\i[19]_net_1 ), .C(N_120), .Y(N_491));
-    CFG4 #( .INIT(16'hDFFF) )  un1_state_8_0_0_o2 (.A(\i[4]_net_1 ), 
-        .B(un1_state_8_0_0_o2_2_net_1), .C(\i[6]_net_1 ), .D(
-        \i[5]_net_1 ), .Y(un1_state_8_0_0_o2_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI01KBI1[26]  (.A(N_191_i_0)
-        , .B(un46_clk_26), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[25] ), .S(\cr_angle_s[26] ), .Y(), .FCO(
-        \cr_angle_cry[26] ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_28 (.A(VCC_net_1), .B(
-        un46_clk_28), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_27_net_1), .S(), .Y(), .FCO(un38_clk_cry_28_net_1)
-        );
-    SLE \i[2]  (.D(N_232), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
-    SLE \i[12]  (.D(N_459), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[12]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_15 (.A(VCC_net_1), .B(
-        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_14_net_1), .S(un1_i_cry_15_S), .Y(), .FCO(
-        un1_i_cry_15_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNINI9A81[19]  (.A(N_191_i_0)
-        , .B(un46_clk_19), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[18] ), .S(\cr_angle_s[19] ), .Y(), .FCO(
-        \cr_angle_cry[19] ));
-    SLE \state[8]  (.D(N_201_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[8]_net_1 ));
-    CFG2 #( .INIT(4'h1) )  un1_state_8_0_0_a2 (.A(\state[8]_net_1 ), 
-        .B(\state[7]_net_1 ), .Y(N_503));
-    CFG2 #( .INIT(4'hE) )  en_timer_RNO (.A(\state[4]_net_1 ), .B(
-        \state[6]_net_1 ), .Y(N_244_i_0));
-    SLE \cr_angle[9]  (.D(\cr_angle_s[9] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_9));
-    SLE \i[20]  (.D(N_467), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[20]_net_1 ));
-    SLE \i[30]  (.D(\i_4_i_i_a3[30]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[30]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_14 (.A(VCC_net_1), .B(
-        un46_clk_14), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_13_net_1), .S(), .Y(), .FCO(un46_clk_cry_14_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_9 (.A(VCC_net_1), .B(
-        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_8_net_1), .S(un1_i_cry_9_S), .Y(), .FCO(
-        un1_i_cry_9_net_1));
-    SLE \state[3]  (.D(\state_ns[8]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[3]_net_1 ));
-    SLE \fn_angle[2]  (.D(BT_module_0_data_buf[6]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        un38_clk_2));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_18 (.A(VCC_net_1), .B(
-        un46_clk_18), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_17_net_1), .S(), .Y(), .FCO(un46_clk_cry_18_net_1)
-        );
-    SLE over (.D(over_1_sqmuxa), .CLK(FCCC_0_GL0), .EN(
-        un1_angle_0_sqmuxa_0_0_net_1), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(over_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_18 (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_17_net_1), .S(un1_i_cry_18_S), .Y(), .FCO(
-        un1_i_cry_18_net_1));
-    SLE \i[10]  (.D(N_242), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[10]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  un1_state_8_0_0_a3_10_3 (.A(
-        \i[20]_net_1 ), .B(\i[19]_net_1 ), .C(\i[12]_net_1 ), .D(
-        \i[11]_net_1 ), .Y(un1_state_8_0_0_a3_10_3_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_14 (.A(VCC_net_1), .B(
-        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_13_net_1), .S(un1_i_cry_14_S), .Y(), .FCO(
-        un1_i_cry_14_net_1));
-    SLE \i[6]  (.D(N_455), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_29 (.A(VCC_net_1), .B(
-        un46_clk_29), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_28_net_1), .S(), .Y(), .FCO(un38_clk_cry_29_net_1)
-        );
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_11 (.A(VCC_net_1), .B(
-        un46_clk_11), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_10_net_1), .S(), .Y(), .FCO(un38_clk_cry_11_net_1)
-        );
-    SLE \i[29]  (.D(\i_4_i_i_a3[29]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[29]_net_1 ));
-    CFG2 #( .INIT(4'hE) )  \state_ns_0[4]  (.A(N_446), .B(
-        \state[8]_net_1 ), .Y(\state_ns[4] ));
-    SLE \fn_angle[3]  (.D(BT_module_0_data_buf[7]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        un38_clk_3));
-    SLE \st_angle[1]  (.D(BT_module_0_data_buf[1]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \st_angle[1]_net_1 ));
-    SLE \i[4]  (.D(N_234), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_27 (.A(VCC_net_1), .B(
-        un46_clk_27), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_26_net_1), .S(), .Y(), .FCO(un46_clk_cry_27_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_17 (.A(VCC_net_1), .B(
-        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_16_net_1), .S(un31_clklto17), .Y(), .FCO(
-        un1_i_cry_17_net_1));
-    ARI1 #( .INIT(20'h4FDDD) )  un1_cr_angle_1_sqmuxa_0_0_a2_RNIN8VQ1 
-        (.A(un38_clk_cry_30_net_1), .B(FCCC_0_LOCK), .C(N_229), .D(
-        N_291), .FCI(VCC_net_1), .S(), .Y(), .FCO(cr_angle_lcry_cy));
-    SLE \cr_angle[3]  (.D(\cr_angle_s[3] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_3));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_16 (.A(VCC_net_1), .B(
-        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_15_net_1), .S(un1_i_cry_16_S), .Y(), .FCO(
-        un1_i_cry_16_net_1));
-    CFG4 #( .INIT(16'h5755) )  \state_ns_i_0_0_o2_2[3]  (.A(
-        \i[13]_net_1 ), .B(\i[12]_net_1 ), .C(\i[11]_net_1 ), .D(N_117)
-        , .Y(N_118));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIPLRFO[8]  (.A(N_191_i_0), 
-        .B(un46_clk_8), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[7] ), .S(\cr_angle_s[8] ), .Y(), .FCO(
-        \cr_angle_cry[8] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_22 (.A(VCC_net_1), .B(
-        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_21_net_1), .S(un1_i_cry_22_S), .Y(), .FCO(
-        un1_i_cry_22_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIUGL041[16]  (.A(N_191_i_0)
-        , .B(un46_clk_16), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[15] ), .S(\cr_angle_s[16] ), .Y(), .FCO(
-        \cr_angle_cry[16] ));
-    SLE \i[19]  (.D(N_466), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[19]_net_1 ));
-    SLE \cr_angle[17]  (.D(\cr_angle_s[17] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_17));
-    SLE \st_angle[0]  (.D(BT_module_0_data_buf[0]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \st_angle[0]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[20]  (.A(\state[3]_net_1 ), 
-        .B(un31_clklto20), .C(N_446), .D(N_481), .Y(N_467));
-    SLE \cr_angle[12]  (.D(\cr_angle_s[12] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_12));
-    SLE \cr_angle[19]  (.D(\cr_angle_s[19] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_19));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_10 (.A(VCC_net_1), .B(
-        un46_clk_10), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_9_net_1), .S(), .Y(), .FCO(un38_clk_cry_10_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_20 (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_19_net_1), .S(un31_clklto20), .Y(), .FCO(
-        un1_i_cry_20_net_1));
-    CFG4 #( .INIT(16'h0080) )  \state_ns_a2_0_0_a3_0_7[8]  (.A(
-        \state[3]_net_1 ), .B(\i[0]_net_1 ), .C(
-        \state_ns_a2_0_0_a3_0_5[8]_net_1 ), .D(un31_clklto17), .Y(
-        \state_ns_a2_0_0_a3_0_7[8]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_s_1_322 (.A(VCC_net_1), .B(
-        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(VCC_net_1), 
-        .S(), .Y(), .FCO(un1_i_s_1_322_FCO));
-    SLE \angle1[0]  (.D(un46_clk_0), .CLK(FCCC_0_GL0), .EN(
-        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        locator_control_0_angle1[0]));
-    CFG2 #( .INIT(4'hE) )  \state_ns_0[11]  (.A(N_481), .B(N_234_0), 
-        .Y(\state_ns[11] ));
-    SLE \i[24]  (.D(\i_4_i_i_a3[24]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[24]_net_1 ));
-    SLE \cr_angle[5]  (.D(\cr_angle_s[5] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_5));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_2 (.A(VCC_net_1), .B(
-        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_1_net_1), .S(un1_i_cry_2_S), .Y(), .FCO(
-        un1_i_cry_2_net_1));
-    CFG4 #( .INIT(16'h0001) )  un1_state_8_0_0_a3_10_2 (.A(
-        \i[18]_net_1 ), .B(\i[13]_net_1 ), .C(\i[10]_net_1 ), .D(
-        \i[9]_net_1 ), .Y(un1_state_8_0_0_a3_10_2_net_1));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_15 (.A(VCC_net_1), .B(
-        un46_clk_15), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_14_net_1), .S(), .Y(), .FCO(un46_clk_cry_15_net_1)
-        );
-    SLE \cr_angle[24]  (.D(\cr_angle_s[24] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_24));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIM2EGL[6]  (.A(N_191_i_0), 
-        .B(un46_clk_6), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[5] ), .S(\cr_angle_s[6] ), .Y(), .FCO(
-        \cr_angle_cry[6] ));
-    CFG3 #( .INIT(8'hF8) )  un1_angle_0_sqmuxa_0_0 (.A(over_net_1), .B(
-        \state[1]_net_1 ), .C(over_1_sqmuxa), .Y(
-        un1_angle_0_sqmuxa_0_0_net_1));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_20 (.A(VCC_net_1), .B(
-        un46_clk_20), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_19_net_1), .S(), .Y(), .FCO(un46_clk_cry_20_net_1)
-        );
-    CFG4 #( .INIT(16'h1000) )  \state_ns_a2_0_a2[4]  (.A(\i[24]_net_1 )
-        , .B(\i[26]_net_1 ), .C(\state_ns_a2_0_a2_5[4]_net_1 ), .D(
-        \state_ns_a2_0_a2_4[4]_net_1 ), .Y(N_258));
-    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_a2_2[4]  (.A(\i[16]_net_1 ), 
-        .B(\i[15]_net_1 ), .C(\i[14]_net_1 ), .Y(N_59));
-    SLE \i[14]  (.D(N_461), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[14]_net_1 ));
-    SLE \angle1[3]  (.D(un46_clk_3), .CLK(FCCC_0_GL0), .EN(
-        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        locator_control_0_angle1[3]));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_9 (.A(VCC_net_1), .B(
-        un46_clk_9), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_8_net_1), .S(), .Y(), .FCO(un38_clk_cry_9_net_1));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[12]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_12_S), .C(N_446), .D(N_481), .Y(N_459));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[17]  (.A(\state[3]_net_1 ), 
-        .B(un31_clklto17), .C(N_446), .D(N_481), .Y(N_464));
-    SLE \fn_angle[0]  (.D(BT_module_0_data_buf[4]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        un38_clk_0));
-    SLE \state[2]  (.D(N_211_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[2]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[11]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_11_S), .C(N_446), .D(N_481), .Y(N_458));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_3 (.A(VCC_net_1), .B(
-        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_2_net_1), .S(un1_i_cry_3_S), .Y(), .FCO(
-        un1_i_cry_3_net_1));
-    SLE en_sonar (.D(\state[8]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_state_8_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(TRIG));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_27 (.A(VCC_net_1), .B(
-        un46_clk_27), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_26_net_1), .S(), .Y(), .FCO(un38_clk_cry_27_net_1)
-        );
-    SLE \state[1]  (.D(\state[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
-    SLE \cr_angle[28]  (.D(\cr_angle_s[28] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_28));
-    CFG2 #( .INIT(4'h1) )  un1_state_8_0_0_a3_5 (.A(\i[21]_net_1 ), .B(
-        \i[17]_net_1 ), .Y(N_449_5));
-    SLE \i[5]  (.D(N_235), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
-    SLE \i[8]  (.D(N_457), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_24 (.A(VCC_net_1), .B(
-        un46_clk_24), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_23_net_1), .S(), .Y(), .FCO(un46_clk_cry_24_net_1)
-        );
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_19 (.A(VCC_net_1), .B(
-        un46_clk_19), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_18_net_1), .S(), .Y(), .FCO(un46_clk_cry_19_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[6]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_6_S), .C(N_446), .D(N_481), .Y(N_455));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIGGHE51[17]  (.A(N_191_i_0)
-        , .B(un46_clk_17), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[16] ), .S(\cr_angle_s[17] ), .Y(), .FCO(
-        \cr_angle_cry[17] ));
-    CFG4 #( .INIT(16'h08CC) )  \state_RNO[8]  (.A(\i[21]_net_1 ), .B(
-        \state[0]_net_1 ), .C(N_491), .D(N_258), .Y(N_201_i_0));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_22 (.A(VCC_net_1), .B(
-        un46_clk_22), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_21_net_1), .S(), .Y(), .FCO(un38_clk_cry_22_net_1)
-        );
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_28 (.A(VCC_net_1), .B(
-        un46_clk_28), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_27_net_1), .S(), .Y(), .FCO(un46_clk_cry_28_net_1)
-        );
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_8 (.A(VCC_net_1), .B(
-        un46_clk_8), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_7_net_1), .S(), .Y(), .FCO(un38_clk_cry_8_net_1));
-    SLE \cr_angle[7]  (.D(\cr_angle_s[7] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_7));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_25 (.A(VCC_net_1), .B(
-        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_24_net_1), .S(un1_i_cry_25_S), .Y(), .FCO(
-        un1_i_cry_25_net_1));
-    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_1 (.A(un38_clk_1), .B(
-        un46_clk_1), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_0_net_1), .S(), .Y(), .FCO(un38_clk_cry_1_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNID2T1E1[23]  (.A(N_191_i_0)
-        , .B(un46_clk_23), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[22] ), .S(\cr_angle_s[23] ), .Y(), .FCO(
-        \cr_angle_cry[23] ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_16 (.A(VCC_net_1), .B(
-        un46_clk_16), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_15_net_1), .S(), .Y(), .FCO(un46_clk_cry_16_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[16]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_16_S), .C(N_446), .D(N_481), .Y(N_463));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[9]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_9_S), .C(N_446), .D(N_481), .Y(N_241));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIJ2HPJ1[27]  (.A(N_191_i_0)
-        , .B(un46_clk_27), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[26] ), .S(\cr_angle_s[27] ), .Y(), .FCO(
-        \cr_angle_cry[27] ));
-    SLE \st_angle[3]  (.D(BT_module_0_data_buf[3]), .CLK(FCCC_0_GL0), 
-        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \st_angle[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_13 (.A(VCC_net_1), .B(
-        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_12_net_1), .S(un1_i_cry_13_S), .Y(), .FCO(
-        un1_i_cry_13_net_1));
-    SLE \state[11]  (.D(N_195_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[11]_net_1 ));
-    CFG4 #( .INIT(16'h777F) )  un1_state_8_0_0_o2_2 (.A(\i[8]_net_1 ), 
-        .B(\i[7]_net_1 ), .C(\i[3]_net_1 ), .D(\i[2]_net_1 ), .Y(
-        un1_state_8_0_0_o2_2_net_1));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_6 (.A(VCC_net_1), .B(
-        un46_clk_6), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_5_net_1), .S(), .Y(), .FCO(un38_clk_cry_6_net_1));
-    SLE \i[3]  (.D(N_233), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_28 (.A(VCC_net_1), .B(
-        \i[28]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_27_net_1), .S(un1_i_cry_28_S), .Y(), .FCO(
-        un1_i_cry_28_net_1));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIJ2ARS[11]  (.A(N_191_i_0), 
-        .B(un46_clk_11), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[10] ), .S(\cr_angle_s[11] ), .Y(), .FCO(
-        \cr_angle_cry[11] ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_5 (.A(VCC_net_1), .B(
-        un46_clk_5), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_4_net_1), .S(), .Y(), .FCO(un46_clk_cry_5_net_1));
-    CFG4 #( .INIT(16'h7500) )  \state_ns_i_0_0_a3[9]  (.A(
-        un31_clklto21), .B(un31_clklto20), .C(N_114), .D(N_311), .Y(
-        N_452_1));
-    CFG4 #( .INIT(16'h8000) )  \state_ns_a2_0_0_a3_0[8]  (.A(
-        \state_ns_a2_0_0_a3_0_7[8]_net_1 ), .B(N_311), .C(N_316), .D(
-        \state_ns_a2_0_0_a3_0_6[8]_net_1 ), .Y(N_192));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNINR40N[7]  (.A(N_191_i_0), 
-        .B(un46_clk_7), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
-        \cr_angle_cry[6] ), .S(\cr_angle_s[7] ), .Y(), .FCO(
-        \cr_angle_cry[7] ));
-    SLE \cr_angle[4]  (.D(\cr_angle_s[4] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_4));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_24 (.A(VCC_net_1), .B(
-        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_23_net_1), .S(un1_i_cry_24_S), .Y(), .FCO(
-        un1_i_cry_24_net_1));
-    ARI1 #( .INIT(20'h51BE4) )  \st_angle_RNIB8ELC[2]  (.A(N_191_i_0), 
-        .B(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .C(
-        \st_angle[2]_net_1 ), .D(un46_clk_2), .FCI(\cr_angle_cry[1] ), 
-        .S(\cr_angle_s[2] ), .Y(), .FCO(\cr_angle_cry[2] ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_25 (.A(VCC_net_1), .B(
-        un46_clk_25), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_24_net_1), .S(), .Y(), .FCO(un38_clk_cry_25_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_11 (.A(VCC_net_1), .B(
-        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_10_net_1), .S(un1_i_cry_11_S), .Y(), .FCO(
-        un1_i_cry_11_net_1));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_14 (.A(VCC_net_1), .B(
-        un46_clk_14), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_13_net_1), .S(), .Y(), .FCO(un38_clk_cry_14_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_27 (.A(VCC_net_1), .B(
-        \i[27]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_26_net_1), .S(un1_i_cry_27_S), .Y(), .FCO(
-        un1_i_cry_27_net_1));
-    CFG4 #( .INIT(16'hB8F0) )  \st_angle_RNI7D8K[0]  (.A(
-        \st_angle[0]_net_1 ), .B(FCCC_0_LOCK), .C(un46_clk_0), .D(
-        \state[10]_net_1 ), .Y(\cr_angle_lxu;_0[0] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_26 (.A(VCC_net_1), .B(
-        \i[26]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_25_net_1), .S(un1_i_cry_26_S), .Y(), .FCO(
-        un1_i_cry_26_net_1));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[13]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_13_S), .C(N_446), .D(N_481), .Y(N_460));
-    SLE \i[1]  (.D(N_231), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[3]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_3_S), .C(N_446), .D(N_481), .Y(N_233));
-    SLE \cr_angle[0]  (.D(\cr_angle_s[0] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_0));
-    SLE \cr_angle[20]  (.D(\cr_angle_s[20] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_20));
-    SLE \i[28]  (.D(\i_4_i_i_a3[28]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[28]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_13 (.A(VCC_net_1), .B(
-        un46_clk_13), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_12_net_1), .S(), .Y(), .FCO(un38_clk_cry_13_net_1)
-        );
-    CFG4 #( .INIT(16'h5DFF) )  \state_ns_a2_0_0_o2_0[8]  (.A(
-        un1_i_cry_19_S), .B(N_112), .C(un31_clklto17), .D(
-        un1_i_cry_18_S), .Y(N_114));
-    CFG2 #( .INIT(4'h6) )  \cr_angle_qxu[0]  (.A(N_191_i_0), .B(
-        \cr_angle_lxu;[0] ), .Y(\cr_angle_qxu[0]_net_1 ));
-    CFG4 #( .INIT(16'h1000) )  \state_ns_a2_0_0_a2_0[8]  (.A(
-        un1_i_cry_29_S), .B(un1_i_s_30_S), .C(
-        \state_ns_a2_0_0_a2_0_5[8]_net_1 ), .D(
-        \state_ns_a2_0_0_a2_0_6[8]_net_1 ), .Y(N_311));
-    SLE \cr_angle[16]  (.D(\cr_angle_s[16] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_16));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_25 (.A(VCC_net_1), .B(
-        un46_clk_25), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_24_net_1), .S(), .Y(), .FCO(un46_clk_cry_25_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[4]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_4_S), .C(N_446), .D(N_481), .Y(N_234));
-    SLE \cr_angle[15]  (.D(\cr_angle_s[15] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_15));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_19 (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_18_net_1), .S(un1_i_cry_19_S), .Y(), .FCO(
-        un1_i_cry_19_net_1));
-    CFG3 #( .INIT(8'h13) )  \state_ns_a2_0_0_a2_13[8]  (.A(
-        un1_i_cry_7_S), .B(un31_clklto8), .C(un1_i_cry_6_S), .Y(N_482));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[22]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_22_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[22]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[27]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_27_S), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[27]_net_1 ));
-    SLE \i[18]  (.D(N_465), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[18]_net_1 ));
-    SLE \cr_angle[1]  (.D(\cr_angle_s[1] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_1));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[21]  (.A(\state[3]_net_1 ), 
-        .B(un31_clklto21), .C(N_446), .D(N_481), .Y(
-        \i_4_i_i_a3[21]_net_1 ));
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[14]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_14_S), .C(N_446), .D(N_481), .Y(N_461));
-    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_16 (.A(VCC_net_1), .B(
-        un46_clk_16), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un38_clk_cry_15_net_1), .S(), .Y(), .FCO(un38_clk_cry_16_net_1)
-        );
-    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[19]  (.A(\state[3]_net_1 ), 
-        .B(un1_i_cry_19_S), .C(N_446), .D(N_481), .Y(N_466));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI3HDS61[18]  (.A(N_191_i_0)
-        , .B(un46_clk_18), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[17] ), .S(\cr_angle_s[18] ), .Y(), .FCO(
-        \cr_angle_cry[18] ));
-    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_13 (.A(VCC_net_1), .B(
-        un46_clk_13), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un46_clk_cry_12_net_1), .S(), .Y(), .FCO(un46_clk_cry_13_net_1)
-        );
-    CFG3 #( .INIT(8'h08) )  un1_angle_0_sqmuxa_0_0_a3_0 (.A(dir_net_1), 
-        .B(\state[2]_net_1 ), .C(un46_clk_cry_30_net_1), .Y(
-        over_1_sqmuxa));
-    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIT0QFF1[24]  (.A(N_191_i_0)
-        , .B(un46_clk_24), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
-        .FCI(\cr_angle_cry[23] ), .S(\cr_angle_s[24] ), .Y(), .FCO(
-        \cr_angle_cry[24] ));
-    SLE \i[26]  (.D(\i_4_i_i_a3[26]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[26]_net_1 ));
-    
-endmodule
-
-
-module time_sender(
-       locator_control_0_angle1,
-       pulse_meash_0_tim,
-       time_sender_0_data_out_0,
-       time_sender_0_data_out_1,
-       time_sender_0_data_out_2,
-       time_sender_0_data_out_3,
-       time_sender_0_data_out_5,
-       LED_3,
-       LED_3_i_0,
-       FCCC_0_GL0,
-       FCCC_0_LOCK,
-       pulse_meash_0_new_ready,
-       COREUART_0_TXRDY
-    );
-input  [3:0] locator_control_0_angle1;
-input  [13:0] pulse_meash_0_tim;
-output time_sender_0_data_out_0;
-output time_sender_0_data_out_1;
-output time_sender_0_data_out_2;
-output time_sender_0_data_out_3;
-output time_sender_0_data_out_5;
-output LED_3;
-output LED_3_i_0;
-input  FCCC_0_GL0;
-input  FCCC_0_LOCK;
-input  pulse_meash_0_new_ready;
-input  COREUART_0_TXRDY;
-
-    wire \valu[6]_net_1 , VCC_net_1, \un1_time1[6]_net_1 , 
-        un1_rst_n_inv_i_a3_net_1, GND_net_1, \valu[7]_net_1 , 
-        \un1_time1[7]_net_1 , \valu[8]_net_1 , \un1_time1[8]_net_1 , 
-        \valu[9]_net_1 , \un1_time1[9]_net_1 , \valu[10]_net_1 , 
-        \un1_time1[10]_net_1 , \valu[11]_net_1 , \valu_RNO[11]_net_1 , 
-        \valu[12]_net_1 , \valu_RNO[12]_net_1 , \valu[13]_net_1 , 
-        \un1_time1[13]_net_1 , \data_out_1[0] , data_out_0_sqmuxa, 
-        \data_out_1[1] , \data_out_1[2] , \data_out_1[3] , 
-        \data_out_1[5] , \valu[0]_net_1 , \un1_time1[0]_net_1 , 
-        \valu[1]_net_1 , \un1_time1[1]_net_1 , \valu[2]_net_1 , 
-        \un1_time1[2]_net_1 , \valu[3]_net_1 , \un1_time1[3]_net_1 , 
-        \valu[4]_net_1 , \un1_time1[4]_net_1 , \valu[5]_net_1 , 
-        \un1_time1[5]_net_1 , \k[0]_net_1 , N_87_i_0, \k[1]_net_1 , 
-        \un24_k_v[0]_net_1 , \k[2]_net_1 , \un24_k_v[1]_net_1 , 
-        \k[3]_net_1 , \SUM[3] , \k[5] , \buff_1[0]_net_1 , 
-        \un1_angle[0]_net_1 , un1_rst_n_inv_2_i_0_net_1, 
-        \buff_1[1]_net_1 , \un1_angle[1]_net_1 , \buff_1[2]_net_1 , 
-        \un1_angle[2]_net_1 , \buff_1[3]_net_1 , \un1_angle[3]_net_1 , 
-        \buff_1[5] , \un1_angle[4]_net_1 , \buff_3[1]_net_1 , 
-        buff_3_1_sqmuxa_net_1, \buff_3[2]_net_1 , \buff_3[3]_net_1 , 
-        \buff_3[5] , \buff_2[0]_net_1 , buff_2_1_sqmuxa_1_net_1, 
-        \buff_2[1]_net_1 , \buff_2[2]_net_1 , \buff_2[3]_net_1 , 
-        \buff_2[5] , \buff_5[2]_net_1 , buff_5_1_sqmuxa_net_1, 
-        \buff_5[3]_net_1 , \buff_5[5] , \buff_4[0]_net_1 , 
-        buff_4_1_sqmuxa_net_1, \buff_4[1]_net_1 , \buff_4[2]_net_1 , 
-        \buff_4[3]_net_1 , \buff_4[5] , \buff_3[0]_net_1 , 
-        \buff_5[0]_net_1 , \buff_5[1]_net_1 , \buff_0[5] , 
-        buff_0_1_sqmuxa, N_139_i_0, N_445_i_0, \buff_0[0]_net_1 , 
-        \buff_0[1]_net_1 , \buff_0[2]_net_1 , \buff_0[3]_net_1 , 
-        \state[6]_net_1 , \state_ns[0] , \state[5]_net_1 , N_85_i_0, 
-        \state[4]_net_1 , \state[3]_net_1 , N_10_i_0, \state[2]_net_1 , 
-        N_431_i_0, \state[1]_net_1 , N_84_tz_i, \state[0]_net_1 , 
-        \state_ns[6] , \i[0]_net_1 , \i_lm[0] , N_84_i_0, \i[1]_net_1 , 
-        \i_lm[1] , \i[2]_net_1 , \i_lm[2] , \i[3]_net_1 , \i_lm[3] , 
-        \i[4]_net_1 , \i_lm[4] , \i[5]_net_1 , \i_lm[5] , \i[6]_net_1 , 
-        \i_lm[6] , \i[7]_net_1 , \i_lm[7] , \i[8]_net_1 , \i_lm[8] , 
-        \i[9]_net_1 , \i_lm[9] , \i[10]_net_1 , \i_lm[10] , 
-        \i[11]_net_1 , \i_lm[11] , \i[12]_net_1 , \i_lm[12] , 
-        \i[13]_net_1 , \i_lm[13] , \i[14]_net_1 , \i_lm[14] , 
-        \i[15]_net_1 , \i_lm[15] , \i[16]_net_1 , \i_lm[16] , 
-        \i[17]_net_1 , \i_lm[17] , \i[18]_net_1 , \i_lm[18] , 
-        \i[19]_net_1 , \i_lm[19] , \i[20]_net_1 , \i_lm[20] , 
-        \i[21]_net_1 , \i_lm[21] , \i[22]_net_1 , \i_lm[22] , 
-        \i[23]_net_1 , \i_lm[23] , \i[24]_net_1 , \i_lm[24] , 
-        \i[25]_net_1 , \i_lm[25] , \i_cry[0]_net_1 , \i_cry_Y_0[0] , 
-        \i_cry[1]_net_1 , \i_s[1] , \i_cry[2]_net_1 , \i_s[2] , 
-        \i_cry[3]_net_1 , \i_s[3] , \i_cry[4]_net_1 , \i_s[4] , 
-        \i_cry[5]_net_1 , \i_s[5] , \i_cry[6]_net_1 , \i_s[6] , 
-        \i_cry[7]_net_1 , \i_s[7] , \i_cry[8]_net_1 , \i_s[8] , 
-        \i_cry[9]_net_1 , \i_s[9] , \i_cry[10]_net_1 , \i_s[10] , 
-        \i_cry[11]_net_1 , \i_s[11] , \i_cry[12]_net_1 , \i_s[12] , 
-        \i_cry[13]_net_1 , \i_s[13] , \i_cry[14]_net_1 , \i_s[14] , 
-        \i_cry[15]_net_1 , \i_s[15] , \i_cry[16]_net_1 , \i_s[16] , 
-        \i_cry[17]_net_1 , \i_s[17] , \i_cry[18]_net_1 , \i_s[18] , 
-        \i_cry[19]_net_1 , \i_s[19] , \i_cry[20]_net_1 , \i_s[20] , 
-        \i_cry[21]_net_1 , \i_s[21] , \i_cry[22]_net_1 , \i_s[22] , 
-        \i_cry[23]_net_1 , \i_s[23] , \i_s[25]_net_1 , 
-        \i_cry[24]_net_1 , \i_s[24] , un1_i_s_1_323_FCO, 
-        un1_i_cry_1_net_1, un15_clklto1, un1_i_cry_2_net_1, 
-        un15_clklto2, un1_i_cry_3_net_1, un1_i_cry_3_S_0, 
-        un1_i_cry_4_net_1, un1_i_cry_4_S_0, un1_i_cry_5_net_1, 
-        un1_i_cry_5_S_0, un1_i_cry_6_net_1, un1_i_cry_6_S_0, 
-        un1_i_cry_7_net_1, un1_i_cry_7_S_0, un1_i_cry_8_net_1, 
-        un1_i_cry_8_S, un1_i_cry_9_net_1, un1_i_cry_9_S_0, 
-        un1_i_cry_10_net_1, un1_i_cry_10_S_0, un1_i_cry_11_net_1, 
-        un1_i_cry_11_S_0, un1_i_cry_12_net_1, un1_i_cry_12_S_0, 
-        un1_i_cry_13_net_1, un1_i_cry_13_S_0, un1_i_cry_14_net_1, 
-        un1_i_cry_14_S_0, un1_i_cry_15_net_1, un1_i_cry_15_S_0, 
-        un1_i_cry_16_net_1, un1_i_cry_16_S_0, un1_i_cry_17_net_1, 
-        un1_i_cry_17_S, un1_i_cry_18_net_1, un1_i_cry_18_S_0, 
-        un1_i_cry_19_net_1, un1_i_cry_19_S_0, un1_i_cry_20_net_1, 
-        un1_i_cry_20_S, un1_i_cry_21_net_1, un1_i_cry_21_S, 
-        un1_i_cry_22_net_1, un1_i_cry_22_S_0, un1_i_cry_23_net_1, 
-        un1_i_cry_23_S_0, un1_i_cry_24_net_1, un1_i_cry_24_S_0, 
-        un1_i_cry_25_net_1, un1_i_cry_25_S_0, 
-        \mult1_un215_sum_1_SUM[4] , mult1_un222_sum_1_CO1, 
-        \mult1_un215_sum_1_SUM[1] , \mult1_un215_sum_1_SUM[2] , 
-        mult1_un222_sum_1_CO3, \un1_clk_inv_i_0_o3[0]_net_1 , 
-        un1_N_3_mux, \valu_RNICB5V[13]_net_1 , N_91, 
-        \state_ns_i_a2[3]_net_1 , N_96, \mult1_un166_sum_1_SUM[2] , 
-        mult1_un166_sum_1_CO3, un1_N_13_mux, un1_i4_mux, N_3560_i, 
-        \mult1_un194_sum_1_SUM[2] , un1_m7_i_0_1, un1_N_8, un1_m7_i_0, 
-        mult1_un201_sum_1_CO2_0_tz, mult1_un201_sum_1_ANC2, 
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42, un1_m9_1, 
-        mult1_un187_sum_1_CO3_1_RNIDREF, \mult1_un194_sum_1_SUM_1[4] , 
-        mult1_un194_sum_1_CO3_0_tz, \mult1_un187_sum_1_SUM[2] , 
-        d_m2_3_0, \mult1_un187_sum_1_SUM[1] , 
-        mult1_un194_sum_1_ANC3_0_1_1, \mult1_un187_sum_1_SUM[4] , 
-        mult1_un194_sum_1_ANC3_0_1, mult1_un194_sum_1_CO3_0_tz_0_1, 
-        mult1_un194_sum_1_CO3_0_tz_0_RNO, \mult1_un180_sum_1_SUM[1] , 
-        mult1_un194_sum_1_CO3_0_tz_0_1_RNO, \mult1_un180_sum_1_SUM[4] , 
-        \mult1_un180_sum_1_SUM[2] , un1_m8_1_1, 
-        \mult1_un159_sum_1_SUM[4] , \mult1_un159_sum_1_SUM[1] , 
-        \mult1_un159_sum_1_SUM[2] , un1_m8_1, 
-        \data_out_1_5_am_1_1[4]_net_1 , \data_out_1_5_am[4]_net_1 , 
-        \data_out_1_5_am_1_1[3]_net_1 , \data_out_1_5_am[3]_net_1 , 
-        \data_out_1_5_am_1_1[2]_net_1 , \data_out_1_5_am[2]_net_1 , 
-        \data_out_1_5_am_1_1[1]_net_1 , \data_out_1_5_am[1]_net_1 , 
-        \data_out_1_5_am_1_1[0]_net_1 , \data_out_1_5_am[0]_net_1 , 
-        \valu_RNINMIF[13]_net_1 , \valu_RNI32OE1[13]_net_1 , 
-        \mult1_un159_sum_1_SUM_2_1[4] , \data_out_1_5_bm[4]_net_1 , 
-        \data_out_1_5_bm[3]_net_1 , \data_out_1_5_bm[2]_net_1 , 
-        \data_out_1_5_bm[1]_net_1 , \data_out_1_5_bm[0]_net_1 , 
-        \valu_RNILKIF_0[11]_net_1 , \mult1_un201_sum_1_SUM_1[1] , 
-        un1_N_5_i_2, mult1_un194_sum_1_CO2, 
-        \mult1_un201_sum_1_SUM_2[4] , \mult1_un173_sum_1_SUM[2] , 
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] , mult1_un180_sum_1_CO3_1, 
-        d_m12_0_a3_0, d_N_4_1, N_89, N_90, buff_2_1_sqmuxa_net_1, 
-        \state_ns_i_a2_17[3]_net_1 , \state_ns_i_a2_16[3]_net_1 , 
-        \state_ns_i_a2_15[3]_net_1 , \state_ns_i_a2_14[3]_net_1 , 
-        \state_ns_i_a2_13[3]_net_1 , \state_ns_i_a2_12[3]_net_1 , 
-        \state_ns_i_0_a2_16[5]_net_1 , \state_ns_i_0_a2_15[5]_net_1 , 
-        \state_ns_i_0_a2_14[5]_net_1 , \state_ns_i_0_a2_13[5]_net_1 , 
-        \state_ns_i_0_a2_12[5]_net_1 , \state_ns_0_a3_3[0]_net_1 , 
-        \state_ns_i_0_a2_17[5]_net_1 , N_104, 
-        \state_ns_i_a2_21[3]_net_1 , \state_ns_i_0_a2_21[5]_net_1 , 
-        \state_ns_i_0_a2_20[5]_net_1 , N_93, N_144, N_95, un1_m5_i_0, 
-        mult1_un159_sum_1_CO3, mult1_un159_sum_1_CO3_1_RNI1HJB3, 
-        un1_N_5_i_1, \mult1_un166_sum_1_SUM[1] , un1_N_5_1, 
-        \mult1_un159_sum_1_SUM_RNIM44K4[4] , mult1_un173_sum_1_CO1_0, 
-        \mult1_un166_sum_1_SUM[4] , \mult1_un173_sum_1_SUM[1] , 
-        mult1_un180_sum_1_CO3_2_0, un1_m2_5_0, un1_i3_mux_0_0_i, 
-        mult1_un180_sum_1_CO3_a4, \mult1_un180_sum_1_SUM_0[3] , 
-        mult1_un180_sum_1_CO3_0_0, mult1_un173_sum_1_CO2, 
-        \mult1_un180_sum_1_SUM_2[4] , un1_i1_mux, 
-        mult1_un180_sum_1_CO2, mult1_un187_sum_1_CO3_1_RNO, 
-        \mult1_un187_sum_1_SUM_0[4] , mult1_un187_sum_1_CO2, 
-        un1_m4_1_1, mult1_un187_sum_1_CO3_0, d_N_12_0, d_m1_2_0, 
-        d_i5_mux, d_N_2_0, un1_N_7_0, un1_m8_i_0, 
-        \mult1_un194_sum_1_SUM[1] , d_N_10, d_N_19, d_N_11_mux_0, 
-        un1_N_7_mux_0, d_N_11_mux, d_N_13_mux, 
-        mult1_un201_sum_1_CO3_0_tz_s_0_RNO, 
-        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK, d_N_20, un1_i6_mux, 
-        mult1_un201_sum_1_CO2_0_d_0_RNO_0, 
-        mult1_un201_sum_1_ANC3_0_RNO_0, un1_N_10_mux, d_i6_mux_1, 
-        mult1_un215_sum_1_CO3_0_RNO_3, mult1_un201_sum_1_CO2_0_d, 
-        mult1_un201_sum_1_ANC3, mult1_un201_sum_1_CO3_0_tz_s_0, 
-        mult1_un201_sum_1_CO1, mult1_un201_sum_1_CO3_0_d, 
-        \mult1_un201_sum_1_SUM[2] , mult1_un201_sum_1_CO3_0_c, 
-        mult1_un201_sum_1_CO3_0_0_1, un1_i3_mux_0, 
-        mult1_un201_sum_1_CO3, \mult1_un201_sum_1_SUM[4] , 
-        mult1_un201_sum_1_CO3_0_c_RNI45FP3, un1_N_5_mux, 
-        \mult1_un215_sum_1_SUM_0_0[4] , un1_m6_1_0, un1_m7_3_0, 
-        \mult1_un208_sum_1_SUM[1] , un1_N_7_i, mult1_un208_sum_1_CO2, 
-        un1_i5_mux_0, un1_i2_mux, mult1_un215_sum_1_ANC3_0_RNO_0, 
-        mult1_un215_sum_1_CO3_0_RNO, \mult1_un215_sum_1_SUM_0[3] , 
-        \mult1_un194_sum_1_SUM_RNIMGHHA[2] , mult1_un215_sum_1_ANC3, 
-        \mult1_un215_sum_1_SUM_1[3] , \mult1_un215_sum_1_SUM_0[4] , 
-        mult1_un215_sum_1_CO3_0, mult1_un215_sum_1_CO3, 
-        mult1_un215_sum_1_CO1, \un24_k_v_1[1]_net_1 , \SUM_1[3] , 
-        mult1_un215_sum_1_CO2, \mult1_un215_sum_1_SUM[3] , 
-        \mult1_un222_sum_1_SUM_0[4] , ANC2_m3, CO2;
-    
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_13[5]  (.A(
-        \i[18]_net_1 ), .B(\i[9]_net_1 ), .C(\i[8]_net_1 ), .D(
-        \i[5]_net_1 ), .Y(\state_ns_i_0_a2_13[5]_net_1 ));
-    CFG2 #( .INIT(4'h9) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO  (
-        .A(mult1_un194_sum_1_CO3_0_tz), .B(
-        \mult1_un194_sum_1_SUM_1[4] ), .Y(
-        mult1_un201_sum_1_CO3_0_tz_s_0_RNO));
-    SLE \state[0]  (.D(\state_ns[6] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
-        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
-    CFG4 #( .INIT(16'h0026) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_3  
-        (.A(\valu[6]_net_1 ), .B(\mult1_un187_sum_1_SUM[1] ), .C(
-        \mult1_un187_sum_1_SUM[2] ), .D(\mult1_un187_sum_1_SUM[4] ), 
-        .Y(un1_i6_mux));
-    SLE \valu[10]  (.D(\un1_time1[10]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[10]_net_1 ));
-    CFG4 #( .INIT(16'hC6CC) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM[4]  (.A(
-        mult1_un180_sum_1_CO3_1), .B(\mult1_un180_sum_1_SUM_2[4] ), .C(
-        mult1_un180_sum_1_CO3_a4), .D(mult1_un180_sum_1_CO3_0_0), .Y(
-        \mult1_un180_sum_1_SUM[4] ));
-    CFG2 #( .INIT(4'h9) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM[1]  (.A(
-        \mult1_un187_sum_1_SUM[4] ), .B(d_N_4_1), .Y(
-        \mult1_un194_sum_1_SUM[1] ));
-    SLE \i[7]  (.D(\i_lm[7] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
-    CFG3 #( .INIT(8'h31) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_ANC3_0_1_1  (.A(
-        \valu[5]_net_1 ), .B(\mult1_un187_sum_1_SUM[1] ), .C(
-        \valu[6]_net_1 ), .Y(mult1_un194_sum_1_ANC3_0_1_1));
-    SLE \i[16]  (.D(\i_lm[16] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[16]_net_1 ));
-    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[0]  (.A(
-        \buff_5[0]_net_1 ), .B(\buff_4[0]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\data_out_1_5_am_1_1[0]_net_1 ), .Y(
-        \data_out_1_5_am[0]_net_1 ));
-    CFG2 #( .INIT(4'hE) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3  (.A(
-        mult1_un215_sum_1_CO3_0), .B(mult1_un215_sum_1_ANC3), .Y(
-        mult1_un215_sum_1_CO3));
-    CFG4 #( .INIT(16'h2000) )  buff_5_1_sqmuxa (.A(\i[2]_net_1 ), .B(
-        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
-        buff_5_1_sqmuxa_net_1));
-    CFG4 #( .INIT(16'h9669) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[1]  (.A(
-        \valu[3]_net_1 ), .B(\valu[2]_net_1 ), .C(un1_i2_mux), .D(
-        un1_m6_1_0), .Y(\mult1_un215_sum_1_SUM[1] ));
-    CFG4 #( .INIT(16'hF0E4) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0  (.A(
-        un1_N_7_i), .B(\valu[2]_net_1 ), .C(
-        mult1_un215_sum_1_ANC3_0_RNO_0), .D(un1_m7_i_0), .Y(
-        mult1_un215_sum_1_ANC3));
-    CFG4 #( .INIT(16'h0004) )  \state_ns_i_0_a2_20[5]  (.A(
-        \i[0]_net_1 ), .B(\state_ns_i_0_a2_17[5]_net_1 ), .C(
-        \i[1]_net_1 ), .D(\i[2]_net_1 ), .Y(
-        \state_ns_i_0_a2_20[5]_net_1 ));
-    CFG4 #( .INIT(16'h1000) )  un1_rst_n_inv_2_i_a3_0 (.A(\i[2]_net_1 )
-        , .B(\i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 )
-        , .Y(N_104));
-    SLE \buff_0[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_0[3]_net_1 ));
-    CFG3 #( .INIT(8'h2E) )  \un1_time1[5]  (.A(pulse_meash_0_tim[5]), 
-        .B(\state[4]_net_1 ), .C(\mult1_un187_sum_1_SUM[4] ), .Y(
-        \un1_time1[5]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[14]  (.A(VCC_net_1), .B(
-        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[13]_net_1 ), .S(\i_s[14] ), .Y(), .FCO(
-        \i_cry[14]_net_1 ));
-    CFG4 #( .INIT(16'h0004) )  \state_ns_i_0_a2_17[5]  (.A(
-        \i[21]_net_1 ), .B(\state_ns_i_0_a2_12[5]_net_1 ), .C(
-        \i[25]_net_1 ), .D(\i[24]_net_1 ), .Y(
-        \state_ns_i_0_a2_17[5]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[24]  (.A(\i_s[24] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[24] ));
-    SLE \i[21]  (.D(\i_lm[21] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[21]_net_1 ));
-    CFG4 #( .INIT(16'h6996) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM_1[1]  (.A(
-        \mult1_un194_sum_1_SUM_1[4] ), .B(\mult1_un187_sum_1_SUM[4] ), 
-        .C(\valu[4]_net_1 ), .D(\valu[5]_net_1 ), .Y(
-        \mult1_un201_sum_1_SUM_1[1] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[20]  (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[19]_net_1 ), .S(\i_s[20] ), .Y(), .FCO(
-        \i_cry[20]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_14[3]  (.A(
-        un1_i_cry_11_S_0), .B(un1_i_cry_12_S_0), .C(un1_i_cry_13_S_0), 
-        .D(un1_i_cry_14_S_0), .Y(\state_ns_i_a2_14[3]_net_1 ));
-    CFG3 #( .INIT(8'hCA) )  \un1_angle[2]  (.A(
-        locator_control_0_angle1[2]), .B(\k[2]_net_1 ), .C(
-        \state[4]_net_1 ), .Y(\un1_angle[2]_net_1 ));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM[2]  (.A(
-        mult1_un201_sum_1_CO1), .B(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .C(
-        \mult1_un194_sum_1_SUM[1] ), .Y(\mult1_un201_sum_1_SUM[2] ));
-    CFG4 #( .INIT(16'hF702) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_3  (.A(
-        \mult1_un187_sum_1_SUM[2] ), .B(d_N_2_0), .C(d_N_12_0), .D(
-        \mult1_un194_sum_1_SUM_1[4] ), .Y(d_N_13_mux));
-    SLE \buff_4[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_4[1]_net_1 ));
-    SLE \k[1]  (.D(\un24_k_v[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_87_i_0), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(\k[1]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[0]  (.A(
-        \data_out_1_5_am[0]_net_1 ), .B(\i[1]_net_1 ), .C(
-        \data_out_1_5_bm[0]_net_1 ), .Y(\data_out_1[0] ));
-    SLE \i[0]  (.D(\i_lm[0] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
-    CFG4 #( .INIT(16'h8000) )  \state_ns_i_0_a2_21[5]  (.A(
-        \state_ns_i_0_a2_16[5]_net_1 ), .B(
-        \state_ns_i_0_a2_15[5]_net_1 ), .C(
-        \state_ns_i_0_a2_14[5]_net_1 ), .D(
-        \state_ns_i_0_a2_13[5]_net_1 ), .Y(
-        \state_ns_i_0_a2_21[5]_net_1 ));
-    SLE \i[11]  (.D(\i_lm[11] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[11]_net_1 ));
-    CFG4 #( .INIT(16'h4644) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM_RNITTTU[2]  (.A(
-        \mult1_un166_sum_1_SUM[2] ), .B(mult1_un166_sum_1_CO3), .C(
-        \valu[9]_net_1 ), .D(\valu[8]_net_1 ), .Y(un1_i4_mux));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_0_a3_3[0]  (.A(
-        \state[1]_net_1 ), .B(\state[5]_net_1 ), .C(\state[3]_net_1 ), 
-        .D(\state[2]_net_1 ), .Y(\state_ns_0_a3_3[0]_net_1 ));
-    SLE \state[6]  (.D(\state_ns[0] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
-        , .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[6]_net_1 ));
-    CFG4 #( .INIT(16'hAE00) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1  (.A(
-        \mult1_un180_sum_1_SUM[2] ), .B(\mult1_un180_sum_1_SUM[1] ), 
-        .C(un1_i1_mux), .D(mult1_un187_sum_1_CO3_1_RNO), .Y(
-        mult1_un187_sum_1_CO3_0));
-    SLE \buff_0[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_0[0]_net_1 ));
-    CFG3 #( .INIT(8'h2E) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM[4]  (.A(
-        \mult1_un159_sum_1_SUM[4] ), .B(
-        \mult1_un159_sum_1_SUM_RNIM44K4[4] ), .C(
-        \mult1_un159_sum_1_SUM[2] ), .Y(\mult1_un166_sum_1_SUM[4] ));
-    CFG4 #( .INIT(16'h3A30) )  \i_lm_0[2]  (.A(\i_s[2] ), .B(N_144), 
-        .C(\state[4]_net_1 ), .D(N_91), .Y(\i_lm[2] ));
-    CFG2 #( .INIT(4'h9) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_0[1]  (.A(
-        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .Y(d_N_4_1));
-    CFG4 #( .INIT(16'h3933) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1_RNO  (.A(
-        mult1_un180_sum_1_CO3_1), .B(\mult1_un180_sum_1_SUM_2[4] ), .C(
-        mult1_un180_sum_1_CO3_a4), .D(mult1_un180_sum_1_CO3_0_0), .Y(
-        mult1_un187_sum_1_CO3_1_RNO));
-    CFG4 #( .INIT(16'h2AEA) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_2  (.A(
-        \mult1_un194_sum_1_SUM_1[4] ), .B(\mult1_un187_sum_1_SUM[1] ), 
-        .C(\mult1_un187_sum_1_SUM[2] ), .D(d_N_2_0), .Y(d_N_11_mux));
-    CFG2 #( .INIT(4'hD) )  \un1_angle[4]  (.A(\state[4]_net_1 ), .B(
-        \k[5] ), .Y(\un1_angle[4]_net_1 ));
-    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[4]  (.A(\buff_5[5] ), 
-        .B(\buff_4[5] ), .C(\i[2]_net_1 ), .D(
-        \data_out_1_5_am_1_1[4]_net_1 ), .Y(\data_out_1_5_am[4]_net_1 )
-        );
-    CFG3 #( .INIT(8'hD8) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_CO2_1  (.A(
-        un1_i1_mux), .B(\mult1_un180_sum_1_SUM[4] ), .C(
-        \mult1_un180_sum_1_SUM[1] ), .Y(mult1_un187_sum_1_CO2));
-    CFG4 #( .INIT(16'h24DB) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM[2]  (.A(
-        \valu[10]_net_1 ), .B(\valu[11]_net_1 ), .C(
-        \valu_RNI32OE1[13]_net_1 ), .D(\valu_RNILKIF_0[11]_net_1 ), .Y(
-        \mult1_un159_sum_1_SUM[2] ));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM[4]  (.A(
-        \valu_RNI32OE1[13]_net_1 ), .B(mult1_un159_sum_1_CO3), .C(
-        \mult1_un159_sum_1_SUM_2_1[4] ), .Y(\mult1_un159_sum_1_SUM[4] )
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_23 (.A(VCC_net_1), .B(
-        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_22_net_1), .S(un1_i_cry_23_S_0), .Y(), .FCO(
-        un1_i_cry_23_net_1));
-    CFG4 #( .INIT(16'hAE2A) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_CO2_1  (.A(
-        \mult1_un173_sum_1_SUM[1] ), .B(un1_i3_mux_0_0_i), .C(
-        \valu[8]_net_1 ), .D(\valu[7]_net_1 ), .Y(
-        mult1_un180_sum_1_CO2));
-    SLE \data_out[1]  (.D(\data_out_1[1] ), .CLK(FCCC_0_GL0), .EN(
-        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        time_sender_0_data_out_1));
-    SLE \buff_0[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_0[2]_net_1 ));
-    CFG4 #( .INIT(16'hFD10) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1  (.A(
-        \valu_RNI32OE1[13]_net_1 ), .B(un1_m5_i_0), .C(
-        \valu_RNILKIF_0[11]_net_1 ), .D(\valu_RNICB5V[13]_net_1 ), .Y(
-        mult1_un159_sum_1_CO3));
-    SLE \buff_4[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
-        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\buff_4[5] ));
-    SLE \valu[7]  (.D(\un1_time1[7]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[7]_net_1 ));
-    CFG4 #( .INIT(16'h0040) )  buff_2_1_sqmuxa_1 (.A(\i[2]_net_1 ), .B(
-        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
-        buff_2_1_sqmuxa_1_net_1));
-    CFG3 #( .INIT(8'h80) )  \state_ns_a2_0_a3[6]  (.A(
-        \state_ns_i_0_a2_20[5]_net_1 ), .B(\state[2]_net_1 ), .C(
-        \state_ns_i_0_a2_21[5]_net_1 ), .Y(\state_ns[6] ));
-    SLE \buff_2[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_2[0]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[3]  (.A(\buff_2[3]_net_1 )
-        , .B(\i[0]_net_1 ), .C(\buff_3[3]_net_1 ), .Y(
-        \data_out_1_5_bm[3]_net_1 ));
-    CFG4 #( .INIT(16'h5695) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM[2]  (.A(
-        \mult1_un173_sum_1_SUM[1] ), .B(
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .C(\valu[8]_net_1 ), .D(
-        \valu[7]_net_1 ), .Y(\mult1_un180_sum_1_SUM[2] ));
-    SLE \buff_0[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(buff_0_1_sqmuxa)
-        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\buff_0[5] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_21 (.A(VCC_net_1), .B(
-        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_20_net_1), .S(un1_i_cry_21_S), .Y(), .FCO(
-        un1_i_cry_21_net_1));
-    CFG2 #( .INIT(4'h7) )  \state_ns_i_o2_0[1]  (.A(
-        pulse_meash_0_new_ready), .B(\state[6]_net_1 ), .Y(N_91));
-    SLE \valu[13]  (.D(\un1_time1[13]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[13]_net_1 ));
-    CFG4 #( .INIT(16'hCEEE) )  \state_ns_i_0_a2_20_RNILRIH1[5]  (.A(
-        \state[2]_net_1 ), .B(\un1_clk_inv_i_0_o3[0]_net_1 ), .C(
-        \state_ns_i_0_a2_21[5]_net_1 ), .D(
-        \state_ns_i_0_a2_20[5]_net_1 ), .Y(N_84_i_0));
-    SLE \buff_5[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_5[1]_net_1 ));
-    SLE \state[4]  (.D(\state[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[4]_net_1 ));
-    CFG4 #( .INIT(16'hA2BA) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO2  (.A(
-        \mult1_un208_sum_1_SUM[1] ), .B(
-        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .C(\valu[2]_net_1 ), .D(
-        \valu[3]_net_1 ), .Y(mult1_un215_sum_1_CO2));
-    CFG4 #( .INIT(16'h2262) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM_RNITTTU_0[2]  (
-        .A(\mult1_un166_sum_1_SUM[2] ), .B(mult1_un166_sum_1_CO3), .C(
-        \valu[9]_net_1 ), .D(\valu[8]_net_1 ), .Y(un1_N_13_mux));
-    CFG2 #( .INIT(4'hD) )  \state_ns_i_o2_0[3]  (.A(\state[3]_net_1 ), 
-        .B(COREUART_0_TXRDY), .Y(N_90));
-    CFG4 #( .INIT(16'h0020) )  buff_4_1_sqmuxa (.A(\i[2]_net_1 ), .B(
-        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
-        buff_4_1_sqmuxa_net_1));
-    CFG4 #( .INIT(16'h3237) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1  (.A(
-        un1_m8_i_0), .B(d_i6_mux_1), .C(un1_N_7_0), .D(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK), .Y(
-        mult1_un201_sum_1_CO1));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[25]  (.A(\i_s[25]_net_1 ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[25] ));
-    SLE \valu[3]  (.D(\un1_time1[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[3]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_2  
-        (.A(un1_i6_mux), .B(d_m12_0_a3_0), .Y(un1_N_10_mux));
-    CFG3 #( .INIT(8'h96) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM[1]  (.A(
-        \valu[6]_net_1 ), .B(\mult1_un180_sum_1_SUM[4] ), .C(
-        \valu[7]_net_1 ), .Y(\mult1_un187_sum_1_SUM[1] ));
-    GND GND (.Y(GND_net_1));
-    CFG4 #( .INIT(16'hAACF) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0  (.A(
-        mult1_un201_sum_1_CO3_0_tz_s_0_RNO), .B(d_N_20), .C(d_N_19), 
-        .D(un1_N_10_mux), .Y(mult1_un201_sum_1_CO3_0_tz_s_0));
-    CFG2 #( .INIT(4'hB) )  \valu_RNILKIF[11]  (.A(\valu[12]_net_1 ), 
-        .B(\valu[11]_net_1 ), .Y(un1_N_3_mux));
-    SLE \buff_5[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_5[3]_net_1 ));
-    CFG4 #( .INIT(16'h4000) )  buff_3_1_sqmuxa (.A(\i[2]_net_1 ), .B(
-        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
-        buff_3_1_sqmuxa_net_1));
-    SLE \buff_0[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_0[1]_net_1 ));
-    CFG3 #( .INIT(8'hCA) )  \un1_angle[1]  (.A(
-        locator_control_0_angle1[1]), .B(\k[1]_net_1 ), .C(
-        \state[4]_net_1 ), .Y(\un1_angle[1]_net_1 ));
-    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[4]  (.A(
-        \buff_1[5] ), .B(\buff_0[5] ), .C(\i[2]_net_1 ), .D(
-        \i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[4]_net_1 ));
-    CFG3 #( .INIT(8'h2E) )  \un1_time1[9]  (.A(pulse_meash_0_tim[9]), 
-        .B(\state[4]_net_1 ), .C(\mult1_un159_sum_1_SUM[4] ), .Y(
-        \un1_time1[9]_net_1 ));
-    SLE \i[23]  (.D(\i_lm[23] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[23]_net_1 ));
-    CFG4 #( .INIT(16'hD44D) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_RNI6RET  (.A(
-        \valu[2]_net_1 ), .B(\valu[1]_net_1 ), .C(
-        mult1_un215_sum_1_CO3), .D(\mult1_un215_sum_1_SUM_0[4] ), .Y(
-        mult1_un222_sum_1_CO1));
-    CFG4 #( .INIT(16'hC3BE) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_CO3_2_0  (.A(
-        \valu[7]_net_1 ), .B(\mult1_un166_sum_1_SUM[4] ), .C(
-        \valu[9]_net_1 ), .D(\valu[8]_net_1 ), .Y(
-        mult1_un180_sum_1_CO3_2_0));
-    SLE \state[5]  (.D(N_85_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[5]_net_1 ));
-    CFG4 #( .INIT(16'h5D75) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNIM44K4[4]  (.A(
-        un1_N_5_i_1), .B(\mult1_un159_sum_1_SUM[4] ), .C(
-        \valu[10]_net_1 ), .D(\valu[9]_net_1 ), .Y(
-        \mult1_un159_sum_1_SUM_RNIM44K4[4] ));
-    SLE \buff_3[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_3[0]_net_1 ));
-    CFG4 #( .INIT(16'h0004) )  buff_0_1_sqmuxa_0_a2_0_a3 (.A(
-        \i[0]_net_1 ), .B(\state[4]_net_1 ), .C(\i[1]_net_1 ), .D(
-        \i[2]_net_1 ), .Y(buff_0_1_sqmuxa));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[23]  (.A(VCC_net_1), .B(
-        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[22]_net_1 ), .S(\i_s[23] ), .Y(), .FCO(
-        \i_cry[23]_net_1 ));
-    SLE \i[13]  (.D(\i_lm[13] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[13]_net_1 ));
-    CFG4 #( .INIT(16'hBEEB) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_3  (.A(
-        \valu[4]_net_1 ), .B(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), 
-        .C(\mult1_un194_sum_1_SUM[1] ), .D(mult1_un201_sum_1_CO1), .Y(
-        un1_N_8));
-    CFG4 #( .INIT(16'hB000) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_1  (.A(
-        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
-        \mult1_un187_sum_1_SUM[2] ), .D(\mult1_un187_sum_1_SUM[1] ), 
-        .Y(un1_N_7_0));
-    SLE \buff_1[1]  (.D(\un1_angle[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_1[1]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[15]  (.A(VCC_net_1), .B(
-        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[14]_net_1 ), .S(\i_s[15] ), .Y(), .FCO(
-        \i_cry[15]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  buff_2_1_sqmuxa (.A(\state[4]_net_1 ), .B(
-        FCCC_0_LOCK), .Y(buff_2_1_sqmuxa_net_1));
-    CFG4 #( .INIT(16'hC693) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM_RNIQ5884[1]  (.A(
-        \mult1_un166_sum_1_SUM[1] ), .B(un1_m8_1), .C(un1_N_13_mux), 
-        .D(un1_i4_mux), .Y(\mult1_un166_sum_1_SUM_RNIQ5884[1] ));
-    CFG2 #( .INIT(4'h7) )  \state_ns_i_o2[3]  (.A(un15_clklto2), .B(
-        un15_clklto1), .Y(N_89));
-    CFG3 #( .INIT(8'h28) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_4  (.A(
-        \valu[6]_net_1 ), .B(\mult1_un180_sum_1_SUM[4] ), .C(
-        \valu[7]_net_1 ), .Y(d_N_12_0));
-    CFG2 #( .INIT(4'h6) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_RNIMGHHA[2]  (.A(
-        un1_i2_mux), .B(un1_m6_1_0), .Y(
-        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_16[5]  (.A(
-        \i[15]_net_1 ), .B(\i[14]_net_1 ), .C(\i[11]_net_1 ), .D(
-        \i[10]_net_1 ), .Y(\state_ns_i_0_a2_16[5]_net_1 ));
-    CFG4 #( .INIT(16'h0800) )  \i_8_iv_i_a2[2]  (.A(
-        \state_ns_i_a2_17[3]_net_1 ), .B(\state_ns_i_a2_21[3]_net_1 ), 
-        .C(un15_clklto2), .D(\state_ns_i_a2_16[3]_net_1 ), .Y(N_144));
-    CFG3 #( .INIT(8'hF2) )  un1_rst_n_inv_2_i_0 (.A(FCCC_0_LOCK), .B(
-        N_91), .C(N_104), .Y(un1_rst_n_inv_2_i_0_net_1));
-    CFG4 #( .INIT(16'h1F10) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO_0  (.A(
-        d_N_10), .B(\mult1_un187_sum_1_SUM[1] ), .C(
-        \mult1_un187_sum_1_SUM[4] ), .D(d_i5_mux), .Y(
-        mult1_un201_sum_1_ANC3_0_RNO_0));
-    SLE \k[4]  (.D(VCC_net_1), .CLK(FCCC_0_GL0), .EN(N_87_i_0), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\k[5] ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[10]  (.A(\i_s[10] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[10] ));
-    CFG4 #( .INIT(16'h9669) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO2_RNILDOT2  (.A(
-        \mult1_un187_sum_1_SUM[2] ), .B(\mult1_un187_sum_1_SUM[4] ), 
-        .C(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .D(
-        mult1_un194_sum_1_CO2), .Y(\mult1_un201_sum_1_SUM_2[4] ));
-    CFG3 #( .INIT(8'h57) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM_RNI6LH01[2]  (.A(
-        \mult1_un187_sum_1_SUM[2] ), .B(d_m2_3_0), .C(
-        \mult1_un187_sum_1_SUM[1] ), .Y(un1_m9_1));
-    SLE \data_out[2]  (.D(\data_out_1[2] ), .CLK(FCCC_0_GL0), .EN(
-        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        time_sender_0_data_out_2));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_s_1_323 (.A(VCC_net_1), .B(
-        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(VCC_net_1), 
-        .S(), .Y(), .FCO(un1_i_s_1_323_FCO));
-    SLE \i[17]  (.D(\i_lm[17] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[17]_net_1 ));
-    CFG4 #( .INIT(16'h1ED2) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42  
-        (.A(un1_m9_1), .B(mult1_un187_sum_1_CO3_1_RNIDREF), .C(
-        \mult1_un194_sum_1_SUM_1[4] ), .D(mult1_un194_sum_1_CO3_0_tz), 
-        .Y(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42));
-    CFG4 #( .INIT(16'h7340) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_ANC3_0_1  (.A(
-        mult1_un194_sum_1_ANC3_0_1_1), .B(\mult1_un187_sum_1_SUM[4] ), 
-        .C(\mult1_un187_sum_1_SUM[2] ), .D(mult1_un194_sum_1_CO3_0_tz), 
-        .Y(mult1_un194_sum_1_ANC3_0_1));
-    CFG4 #( .INIT(16'hECFE) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_tz  (.A(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
-        \mult1_un194_sum_1_SUM[1] ), .C(\valu[4]_net_1 ), .D(
-        \valu[5]_net_1 ), .Y(mult1_un201_sum_1_CO2_0_tz));
-    SLE \buff_5[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_5[0]_net_1 ));
-    CFG3 #( .INIT(8'hFE) )  wen_RNO_0 (.A(\state[1]_net_1 ), .B(
-        \state[0]_net_1 ), .C(\state[2]_net_1 ), .Y(N_445_i_0));
-    CFG4 #( .INIT(16'hBA32) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_0  (.A(
-        \valu[5]_net_1 ), .B(\valu[4]_net_1 ), .C(d_N_11_mux), .D(
-        d_N_13_mux), .Y(d_i6_mux_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_7 (.A(VCC_net_1), .B(
-        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_6_net_1), .S(un1_i_cry_7_S_0), .Y(), .FCO(
-        un1_i_cry_7_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_4 (.A(VCC_net_1), .B(
-        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_3_net_1), .S(un1_i_cry_4_S_0), .Y(), .FCO(
-        un1_i_cry_4_net_1));
-    SLE \k[2]  (.D(\un24_k_v[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_87_i_0), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(\k[2]_net_1 ));
-    CFG3 #( .INIT(8'h42) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNIEMCS[1]  (.A(
-        \valu[9]_net_1 ), .B(\mult1_un159_sum_1_SUM[1] ), .C(
-        \valu[10]_net_1 ), .Y(un1_m8_1_1));
-    SLE \valu[9]  (.D(\un1_time1[9]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[9]_net_1 ));
-    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[3]  (.A(
-        \buff_5[3]_net_1 ), .B(\buff_4[3]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\data_out_1_5_am_1_1[3]_net_1 ), .Y(
-        \data_out_1_5_am[3]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \valu_RNIRVUG[5]  (.A(\valu[5]_net_1 ), .B(
-        \valu[6]_net_1 ), .Y(d_m2_3_0));
-    CFG4 #( .INIT(16'hFD40) )  
-        \un1_k_if_generate_plus.mult1_un222_sum_1_CO3_1  (.A(
-        \mult1_un215_sum_1_SUM[4] ), .B(mult1_un222_sum_1_CO1), .C(
-        \mult1_un215_sum_1_SUM[1] ), .D(\mult1_un215_sum_1_SUM[2] ), 
-        .Y(mult1_un222_sum_1_CO3));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_12[3]  (.A(
-        un1_i_cry_3_S_0), .B(un1_i_cry_4_S_0), .C(un1_i_cry_5_S_0), .D(
-        un1_i_cry_6_S_0), .Y(\state_ns_i_a2_12[3]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[17]  (.A(VCC_net_1), .B(
-        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[16]_net_1 ), .S(\i_s[17] ), .Y(), .FCO(
-        \i_cry[17]_net_1 ));
-    CFG3 #( .INIT(8'h4C) )  \state_RNO[1]  (.A(
-        \state_ns_i_0_a2_20[5]_net_1 ), .B(\state[2]_net_1 ), .C(
-        \state_ns_i_0_a2_21[5]_net_1 ), .Y(N_84_tz_i));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[18]  (.A(\i_s[18] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[18] ));
-    SLE \valu[4]  (.D(\un1_time1[4]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[4]_net_1 ));
-    SLE \i[9]  (.D(\i_lm[9] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
-    CFG4 #( .INIT(16'h6996) )  
-        \un1_k_if_generate_plus.mult1_un208_sum_1_SUM[1]  (.A(
-        \valu[4]_net_1 ), .B(\valu[3]_net_1 ), .C(
-        mult1_un201_sum_1_CO3), .D(\mult1_un201_sum_1_SUM_2[4] ), .Y(
-        \mult1_un208_sum_1_SUM[1] ));
-    CFG4 #( .INIT(16'h4666) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0_RNO  (.A(
-        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
-        \mult1_un187_sum_1_SUM[2] ), .D(\mult1_un187_sum_1_SUM[1] ), 
-        .Y(un1_N_7_mux_0));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_8 (.A(VCC_net_1), .B(
-        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_7_net_1), .S(un1_i_cry_8_S), .Y(), .FCO(
-        un1_i_cry_8_net_1));
-    SLE \valu[5]  (.D(\un1_time1[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[5]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_12[5]  (.A(
-        \i[23]_net_1 ), .B(\i[22]_net_1 ), .C(\i[20]_net_1 ), .D(
-        \i[19]_net_1 ), .Y(\state_ns_i_0_a2_12[5]_net_1 ));
-    CFG4 #( .INIT(16'h7800) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_0  (.A(
-        \mult1_un201_sum_1_SUM[2] ), .B(\mult1_un201_sum_1_SUM[4] ), 
-        .C(un1_N_5_mux), .D(un1_m7_3_0), .Y(un1_i5_mux_0));
-    CFG2 #( .INIT(4'hE) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_0  (.A(
-        mult1_un201_sum_1_CO3_0_0_1), .B(mult1_un201_sum_1_CO3_0_d), 
-        .Y(mult1_un201_sum_1_CO3));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_16[3]  (.A(
-        un1_i_cry_18_S_0), .B(un1_i_cry_19_S_0), .C(un1_i_cry_20_S), 
-        .D(un1_i_cry_21_S), .Y(\state_ns_i_a2_16[3]_net_1 ));
-    VCC VCC (.Y(VCC_net_1));
-    SLE \buff_2[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_2[2]_net_1 ));
-    CFG2 #( .INIT(4'h6) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM[1]  (.A(
-        mult1_un194_sum_1_ANC3_0_1), .B(\mult1_un201_sum_1_SUM_1[1] ), 
-        .Y(N_3560_i));
-    CFG3 #( .INIT(8'h40) )  \i_8_iv_i_a3[1]  (.A(un15_clklto2), .B(
-        \state_ns_i_a2[3]_net_1 ), .C(un15_clklto1), .Y(N_95));
-    SLE \valu[0]  (.D(\un1_time1[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[0]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_12 (.A(VCC_net_1), .B(
-        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_11_net_1), .S(un1_i_cry_12_S_0), .Y(), .FCO(
-        un1_i_cry_12_net_1));
-    CFG4 #( .INIT(16'h444B) )  \valu_RNI32OE1_0[13]  (.A(
-        \valu_RNINMIF[13]_net_1 ), .B(un1_N_3_mux), .C(
-        \valu[13]_net_1 ), .D(\valu[12]_net_1 ), .Y(
-        \mult1_un159_sum_1_SUM_2_1[4] ));
-    CFG4 #( .INIT(16'h0012) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO  (.A(
-        \valu[4]_net_1 ), .B(\valu[6]_net_1 ), .C(\valu[5]_net_1 ), .D(
-        \mult1_un187_sum_1_SUM[1] ), .Y(un1_m4_1_1));
-    CFG4 #( .INIT(16'h3CE1) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_2  (.A(
-        mult1_un201_sum_1_CO2_0_tz), .B(mult1_un201_sum_1_ANC2), .C(
-        \valu[3]_net_1 ), .D(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), 
-        .Y(un1_m7_i_0_1));
-    CFG4 #( .INIT(16'h5A33) )  
-        \un1_k_if_generate_plus.mult1_un208_sum_1_CO2_1  (.A(
-        \mult1_un201_sum_1_SUM_2[4] ), .B(N_3560_i), .C(
-        mult1_un201_sum_1_CO3), .D(un1_i3_mux_0), .Y(
-        mult1_un208_sum_1_CO2));
-    CFG4 #( .INIT(16'hFE01) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_c_RNI45FP3  (
-        .A(mult1_un201_sum_1_CO3_0_c), .B(mult1_un201_sum_1_CO3_0_d), 
-        .C(mult1_un201_sum_1_ANC3), .D(\mult1_un201_sum_1_SUM_2[4] ), 
-        .Y(mult1_un201_sum_1_CO3_0_c_RNI45FP3));
-    CFG4 #( .INIT(16'h6996) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM_0_RNIIHPG[4]  (
-        .A(\mult1_un180_sum_1_SUM[2] ), .B(\mult1_un180_sum_1_SUM[4] ), 
-        .C(mult1_un187_sum_1_CO2), .D(\mult1_un187_sum_1_SUM_0[4] ), 
-        .Y(d_m1_2_0));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_15[3]  (.A(
-        un1_i_cry_25_net_1), .B(un1_i_cry_15_S_0), .C(un1_i_cry_16_S_0)
-        , .D(un1_i_cry_17_S), .Y(\state_ns_i_a2_15[3]_net_1 ));
-    CFG4 #( .INIT(16'h6996) )  \un24_k_v_1[1]  (.A(\valu[2]_net_1 ), 
-        .B(\valu[1]_net_1 ), .C(mult1_un215_sum_1_CO3), .D(
-        \mult1_un215_sum_1_SUM_0[4] ), .Y(\un24_k_v_1[1]_net_1 ));
-    CFG4 #( .INIT(16'h7080) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_0  
-        (.A(\mult1_un187_sum_1_SUM[2] ), .B(\mult1_un187_sum_1_SUM[4] )
-        , .C(d_m12_0_a3_0), .D(\mult1_un194_sum_1_SUM_1[4] ), .Y(
-        d_N_20));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[1]  (.A(
-        \data_out_1_5_am[1]_net_1 ), .B(\i[1]_net_1 ), .C(
-        \data_out_1_5_bm[1]_net_1 ), .Y(\data_out_1[1] ));
-    CFG4 #( .INIT(16'h572A) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO_1  (.A(
-        \valu[6]_net_1 ), .B(\valu[4]_net_1 ), .C(
-        \mult1_un194_sum_1_SUM_1[4] ), .D(\valu[5]_net_1 ), .Y(d_N_10));
-    CFG4 #( .INIT(16'hD2B4) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_0_0[3]  (.A(
-        \valu[3]_net_1 ), .B(\valu[4]_net_1 ), .C(N_3560_i), .D(
-        \mult1_un201_sum_1_SUM[4] ), .Y(\mult1_un215_sum_1_SUM_0[3] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_5 (.A(VCC_net_1), .B(
-        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_4_net_1), .S(un1_i_cry_5_S_0), .Y(), .FCO(
-        un1_i_cry_5_net_1));
-    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[0]  (.A(
-        \buff_1[0]_net_1 ), .B(\buff_0[0]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[0]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_10 (.A(VCC_net_1), .B(
-        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_9_net_1), .S(un1_i_cry_10_S_0), .Y(), .FCO(
-        un1_i_cry_10_net_1));
-    CFG4 #( .INIT(16'h99BD) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM_RNISQFG7[2]  (.A(
-        \mult1_un201_sum_1_SUM[2] ), .B(
-        mult1_un201_sum_1_CO3_0_c_RNI45FP3), .C(N_3560_i), .D(
-        un1_i3_mux_0), .Y(un1_i2_mux));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un222_sum_1_SUM_0[4]  (.A(
-        mult1_un215_sum_1_CO2), .B(\mult1_un215_sum_1_SUM[4] ), .C(
-        \mult1_un215_sum_1_SUM_1[3] ), .Y(\mult1_un222_sum_1_SUM_0[4] )
-        );
-    CFG3 #( .INIT(8'hF8) )  \un1_clk_inv_i_0_o3[0]  (.A(
-        \state[6]_net_1 ), .B(pulse_meash_0_new_ready), .C(
-        \state[4]_net_1 ), .Y(\un1_clk_inv_i_0_o3[0]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  wen_RNIIK85 (.A(LED_3), .Y(LED_3_i_0));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM[1]  (.A(
-        \valu[8]_net_1 ), .B(\valu[7]_net_1 ), .C(
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .Y(
-        \mult1_un180_sum_1_SUM[1] ));
-    CFG4 #( .INIT(16'h4DD4) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO1  (.A(
-        \valu[3]_net_1 ), .B(\valu[2]_net_1 ), .C(un1_i2_mux), .D(
-        un1_m6_1_0), .Y(mult1_un215_sum_1_CO1));
-    CFG3 #( .INIT(8'h2E) )  \un1_time1[10]  (.A(pulse_meash_0_tim[10]), 
-        .B(\state[4]_net_1 ), .C(\valu_RNI32OE1[13]_net_1 ), .Y(
-        \un1_time1[10]_net_1 ));
-    CFG4 #( .INIT(16'hFE88) )  
-        \un1_k_if_generate_plus.mult1_un173_sum_1_CO2  (.A(
-        mult1_un173_sum_1_CO1_0), .B(\mult1_un166_sum_1_SUM[4] ), .C(
-        \valu[8]_net_1 ), .D(\mult1_un166_sum_1_SUM[1] ), .Y(
-        mult1_un173_sum_1_CO2));
-    CFG2 #( .INIT(4'h8) )  \state_RNO[2]  (.A(\state[3]_net_1 ), .B(
-        COREUART_0_TXRDY), .Y(N_431_i_0));
-    ARI1 #( .INIT(20'h45500) )  \i_s[25]  (.A(VCC_net_1), .B(
-        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[24]_net_1 ), .S(\i_s[25]_net_1 ), .Y(), .FCO());
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_6 (.A(VCC_net_1), .B(
-        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_5_net_1), .S(un1_i_cry_6_S_0), .Y(), .FCO(
-        un1_i_cry_6_net_1));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[11]  (.A(VCC_net_1), .B(
-        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[10]_net_1 ), .S(\i_s[11] ), .Y(), .FCO(
-        \i_cry[11]_net_1 ));
-    SLE \buff_4[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_4[2]_net_1 ));
-    CFG4 #( .INIT(16'hEEAE) )  
-        \un1_k_if_generate_plus.mult1_un173_sum_1_SUM_RNIQIB05[2]  (.A(
-        \mult1_un173_sum_1_SUM[2] ), .B(
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .C(\valu[8]_net_1 ), .D(
-        \valu[7]_net_1 ), .Y(mult1_un180_sum_1_CO3_1));
-    CFG2 #( .INIT(4'h1) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_CO3_a4  (.A(
-        \mult1_un173_sum_1_SUM[1] ), .B(\mult1_un173_sum_1_SUM[2] ), 
-        .Y(mult1_un180_sum_1_CO3_a4));
-    SLE \i[25]  (.D(\i_lm[25] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[25]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_1 (.A(VCC_net_1), .B(
-        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_s_1_323_FCO), .S(un15_clklto1), .Y(), .FCO(
-        un1_i_cry_1_net_1));
-    SLE \k[3]  (.D(\SUM[3] ), .CLK(FCCC_0_GL0), .EN(N_87_i_0), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\k[3]_net_1 ));
-    SLE \k[0]  (.D(\valu[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(N_87_i_0), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\k[0]_net_1 ));
-    SLE \buff_3[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_3[3]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[24]  (.A(VCC_net_1), .B(
-        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[23]_net_1 ), .S(\i_s[24] ), .Y(), .FCO(
-        \i_cry[24]_net_1 ));
-    CFG4 #( .INIT(16'h2409) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO  (.A(
-        \valu[3]_net_1 ), .B(\valu[4]_net_1 ), .C(N_3560_i), .D(
-        \mult1_un201_sum_1_SUM[4] ), .Y(mult1_un215_sum_1_CO3_0_RNO));
-    CFG2 #( .INIT(4'hE) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_CO3_2  (.A(
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .B(
-        mult1_un180_sum_1_CO3_2_0), .Y(mult1_un180_sum_1_CO3_0_0));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[19]  (.A(\i_s[19] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[19] ));
-    SLE \i[15]  (.D(\i_lm[15] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[15]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[3]  (.A(\i_s[3] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[3] ));
-    CFG4 #( .INIT(16'h1E5A) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM[4]  (.A(
-        mult1_un187_sum_1_CO3_0), .B(\mult1_un180_sum_1_SUM[2] ), .C(
-        \mult1_un187_sum_1_SUM_0[4] ), .D(mult1_un187_sum_1_CO2), .Y(
-        \mult1_un187_sum_1_SUM[4] ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[16]  (.A(\i_s[16] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[16] ));
-    SLE wen (.D(N_139_i_0), .CLK(FCCC_0_GL0), .EN(N_445_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(LED_3));
-    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[2]  (.A(
-        \buff_1[2]_net_1 ), .B(\buff_0[2]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[2]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[20]  (.A(\i_s[20] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[20] ));
-    CFG4 #( .INIT(16'h6996) )  
-        \un1_k_if_generate_plus.mult1_un1_sum_1.SUM_1[3]  (.A(
-        \mult1_un215_sum_1_SUM_0[4] ), .B(\mult1_un215_sum_1_SUM[1] ), 
-        .C(mult1_un222_sum_1_CO1), .D(mult1_un215_sum_1_CO3), .Y(
-        \SUM_1[3] ));
-    CFG2 #( .INIT(4'hE) )  wen_RNO (.A(\state[1]_net_1 ), .B(
-        \state[0]_net_1 ), .Y(N_139_i_0));
-    CFG2 #( .INIT(4'h6) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_CO2_1_RNO_0  (.A(
-        un1_m8_1), .B(\valu[7]_net_1 ), .Y(un1_m2_5_0));
-    CFG4 #( .INIT(16'h6996) )  
-        \un1_k_if_generate_plus.mult1_un1_sum_1.SUM[3]  (.A(\SUM_1[3] )
-        , .B(mult1_un222_sum_1_CO3), .C(CO2), .D(
-        \mult1_un222_sum_1_SUM_0[4] ), .Y(\SUM[3] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[7]  (.A(VCC_net_1), .B(
-        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[6]_net_1 ), .S(\i_s[7] ), .Y(), .FCO(\i_cry[7]_net_1 ));
-    CFG2 #( .INIT(4'h9) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_3  (.A(
-        \mult1_un194_sum_1_SUM[2] ), .B(\valu[3]_net_1 ), .Y(
-        mult1_un215_sum_1_CO3_0_RNO_3));
-    CFG4 #( .INIT(16'hB888) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0_RNO_0  (.A(
-        d_N_11_mux_0), .B(\mult1_un187_sum_1_SUM[4] ), .C(d_m2_3_0), 
-        .D(\mult1_un194_sum_1_SUM_1[4] ), .Y(
-        mult1_un201_sum_1_CO2_0_d_0_RNO_0));
-    SLE \i[22]  (.D(\i_lm[22] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[22]_net_1 ));
-    CFG4 #( .INIT(16'hC99C) )  \un24_k_v[1]  (.A(\valu[1]_net_1 ), .B(
-        \un24_k_v_1[1]_net_1 ), .C(\mult1_un222_sum_1_SUM_0[4] ), .D(
-        mult1_un222_sum_1_CO3), .Y(\un24_k_v[1]_net_1 ));
-    CFG3 #( .INIT(8'h18) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1_RNO  (.A(
-        \valu[10]_net_1 ), .B(\valu_RNICB5V[13]_net_1 ), .C(
-        \valu[11]_net_1 ), .Y(un1_m5_i_0));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[12]  (.A(VCC_net_1), .B(
-        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[11]_net_1 ), .S(\i_s[12] ), .Y(), .FCO(
-        \i_cry[12]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \un1_time1[4]  (.A(pulse_meash_0_tim[4]), 
-        .B(\state[4]_net_1 ), .C(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42)
-        , .Y(\un1_time1[4]_net_1 ));
-    CFG4 #( .INIT(16'h1E4B) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_1[4]  (.A(
-        un1_i1_mux), .B(\mult1_un180_sum_1_SUM[4] ), .C(
-        \mult1_un180_sum_1_SUM[2] ), .D(\mult1_un180_sum_1_SUM[1] ), 
-        .Y(\mult1_un194_sum_1_SUM_1[4] ));
-    CFG4 #( .INIT(16'h24DB) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM[2]  (.A(
-        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
-        \mult1_un187_sum_1_SUM[4] ), .D(\mult1_un187_sum_1_SUM[1] ), 
-        .Y(\mult1_un194_sum_1_SUM[2] ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[6]  (.A(\i_s[6] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[6] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[18]  (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[17]_net_1 ), .S(\i_s[18] ), .Y(), .FCO(
-        \i_cry[18]_net_1 ));
-    CFG3 #( .INIT(8'h96) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_1[3]  (.A(
-        \mult1_un215_sum_1_SUM_0[3] ), .B(un1_m6_1_0), .C(un1_i2_mux), 
-        .Y(\mult1_un215_sum_1_SUM_1[3] ));
-    CFG4 #( .INIT(16'h66C9) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_1  (.A(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
-        mult1_un215_sum_1_CO3_0_RNO_3), .C(mult1_un201_sum_1_CO2_0_tz), 
-        .D(mult1_un201_sum_1_ANC2), .Y(un1_N_5_mux));
-    SLE \i[2]  (.D(\i_lm[2] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
-    CFG2 #( .INIT(4'h9) )  \valu_RNINMIF[13]  (.A(\valu[12]_net_1 ), 
-        .B(\valu[13]_net_1 ), .Y(\valu_RNINMIF[13]_net_1 ));
-    CFG3 #( .INIT(8'h56) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM[4]  (.A(
-        \mult1_un201_sum_1_SUM_2[4] ), .B(mult1_un201_sum_1_CO3_0_d), 
-        .C(mult1_un201_sum_1_CO3_0_0_1), .Y(\mult1_un201_sum_1_SUM[4] )
-        );
-    CFG4 #( .INIT(16'h9669) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM_2[4]  (.A(
-        \mult1_un166_sum_1_SUM[4] ), .B(\mult1_un166_sum_1_SUM[2] ), 
-        .C(\mult1_un166_sum_1_SUM_RNIQ5884[1] ), .D(
-        mult1_un173_sum_1_CO2), .Y(\mult1_un180_sum_1_SUM_2[4] ));
-    SLE \i[12]  (.D(\i_lm[12] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[12]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_15 (.A(VCC_net_1), .B(
-        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_14_net_1), .S(un1_i_cry_15_S_0), .Y(), .FCO(
-        un1_i_cry_15_net_1));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[3]  (.A(
-        \data_out_1_5_am[3]_net_1 ), .B(\i[1]_net_1 ), .C(
-        \data_out_1_5_bm[3]_net_1 ), .Y(\data_out_1[3] ));
-    SLE \valu[8]  (.D(\un1_time1[8]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[8]_net_1 ));
-    CFG4 #( .INIT(16'hC963) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_CO2_1_RNO  (.A(
-        \mult1_un166_sum_1_SUM[1] ), .B(un1_m2_5_0), .C(un1_i4_mux), 
-        .D(un1_N_13_mux), .Y(un1_i3_mux_0_0_i));
-    CFG3 #( .INIT(8'h80) )  \state_ns_i_a2[3]  (.A(
-        \state_ns_i_a2_16[3]_net_1 ), .B(\state_ns_i_a2_17[3]_net_1 ), 
-        .C(\state_ns_i_a2_21[3]_net_1 ), .Y(\state_ns_i_a2[3]_net_1 ));
-    CFG4 #( .INIT(16'hE1A5) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1_RNIDREF  (.A(
-        mult1_un187_sum_1_CO3_0), .B(\mult1_un180_sum_1_SUM[2] ), .C(
-        \mult1_un187_sum_1_SUM_0[4] ), .D(mult1_un187_sum_1_CO2), .Y(
-        mult1_un187_sum_1_CO3_1_RNIDREF));
-    CFG4 #( .INIT(16'hFB20) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO2  (.A(
-        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
-        \mult1_un187_sum_1_SUM[4] ), .D(\mult1_un187_sum_1_SUM[1] ), 
-        .Y(mult1_un194_sum_1_CO2));
-    CFG4 #( .INIT(16'hCACF) )  \i_lm_0[1]  (.A(\i_s[1] ), .B(N_95), .C(
-        \state[4]_net_1 ), .D(N_91), .Y(\i_lm[1] ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[1]  (.A(\buff_2[1]_net_1 )
-        , .B(\i[0]_net_1 ), .C(\buff_3[1]_net_1 ), .Y(
-        \data_out_1_5_bm[1]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \un1_time1[13]  (.A(\state[4]_net_1 ), .B(
-        pulse_meash_0_tim[13]), .Y(\un1_time1[13]_net_1 ));
-    SLE \buff_4[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_4[0]_net_1 ));
-    CFG4 #( .INIT(16'hE44E) )  \un1_time1[0]  (.A(\state[4]_net_1 ), 
-        .B(pulse_meash_0_tim[0]), .C(mult1_un222_sum_1_CO3), .D(
-        \mult1_un222_sum_1_SUM_0[4] ), .Y(\un1_time1[0]_net_1 ));
-    CFG4 #( .INIT(16'h9996) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO  (.A(
-        \valu[4]_net_1 ), .B(\mult1_un201_sum_1_SUM_2[4] ), .C(
-        mult1_un201_sum_1_CO3_0_d), .D(mult1_un201_sum_1_CO3_0_0_1), 
-        .Y(un1_N_7_i));
-    CFG4 #( .INIT(16'h8976) )  
-        \un1_k_if_generate_plus.mult1_un173_sum_1_SUM[2]  (.A(
-        mult1_un173_sum_1_CO1_0), .B(\mult1_un166_sum_1_SUM[4] ), .C(
-        \valu[8]_net_1 ), .D(\mult1_un166_sum_1_SUM[1] ), .Y(
-        \mult1_un173_sum_1_SUM[2] ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[12]  (.A(\i_s[12] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[12] ));
-    SLE \buff_1[4]  (.D(\un1_angle[4]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_1[5] ));
-    CFG4 #( .INIT(16'h5177) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNI3FKB4[2]  (.A(
-        \mult1_un159_sum_1_SUM[2] ), .B(
-        mult1_un159_sum_1_CO3_1_RNI1HJB3), .C(\valu[10]_net_1 ), .D(
-        \mult1_un159_sum_1_SUM[1] ), .Y(un1_N_5_1));
-    SLE \i[20]  (.D(\i_lm[20] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[20]_net_1 ));
-    SLE \data_out[3]  (.D(\data_out_1[3] ), .CLK(FCCC_0_GL0), .EN(
-        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        time_sender_0_data_out_3));
-    CFG4 #( .INIT(16'h0C20) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO_2  (.A(
-        \valu[4]_net_1 ), .B(\valu[6]_net_1 ), .C(\valu[5]_net_1 ), .D(
-        \mult1_un187_sum_1_SUM[1] ), .Y(d_i5_mux));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_9 (.A(VCC_net_1), .B(
-        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_8_net_1), .S(un1_i_cry_9_S_0), .Y(), .FCO(
-        un1_i_cry_9_net_1));
-    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[3]  (.A(
-        \buff_1[3]_net_1 ), .B(\buff_0[3]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[3]_net_1 ));
-    CFG4 #( .INIT(16'hC13E) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_RNIQL113[2]  (.A(
-        mult1_un201_sum_1_CO2_0_tz), .B(mult1_un201_sum_1_ANC2), .C(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .D(
-        \mult1_un194_sum_1_SUM[2] ), .Y(un1_m6_1_0));
-    SLE \state[3]  (.D(N_10_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[3]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[11]  (.A(\i_s[11] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[11] ));
-    CFG4 #( .INIT(16'h781E) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[3]  (.A(
-        mult1_un215_sum_1_CO1), .B(\mult1_un208_sum_1_SUM[1] ), .C(
-        \mult1_un215_sum_1_SUM_1[3] ), .D(
-        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .Y(
-        \mult1_un215_sum_1_SUM[3] ));
-    CFG3 #( .INIT(8'h80) )  data_out_0_sqmuxa_0_a3 (.A(FCCC_0_LOCK), 
-        .B(COREUART_0_TXRDY), .C(\state[3]_net_1 ), .Y(
-        data_out_0_sqmuxa));
-    CFG2 #( .INIT(4'h4) )  \valu_RNO[11]  (.A(\state[4]_net_1 ), .B(
-        pulse_meash_0_tim[11]), .Y(\valu_RNO[11]_net_1 ));
-    SLE \valu[11]  (.D(\valu_RNO[11]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[11]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_18 (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_17_net_1), .S(un1_i_cry_18_S_0), .Y(), .FCO(
-        un1_i_cry_18_net_1));
-    SLE \i[10]  (.D(\i_lm[10] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[10]_net_1 ));
-    CFG2 #( .INIT(4'h6) )  
-        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM_0[3]  (.A(
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .B(
-        \mult1_un173_sum_1_SUM[2] ), .Y(\mult1_un180_sum_1_SUM_0[3] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_14 (.A(VCC_net_1), .B(
-        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_13_net_1), .S(un1_i_cry_14_S_0), .Y(), .FCO(
-        un1_i_cry_14_net_1));
-    CFG4 #( .INIT(16'h0208) )  
-        \un1_k_if_generate_plus.mult1_un1_sum_1.ANC2_0  (.A(ANC2_m3), 
-        .B(\mult1_un215_sum_1_SUM[4] ), .C(\valu[1]_net_1 ), .D(
-        \valu[2]_net_1 ), .Y(CO2));
-    SLE \i[6]  (.D(\i_lm[6] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[2]  (.A(\buff_2[2]_net_1 )
-        , .B(\i[0]_net_1 ), .C(\buff_3[2]_net_1 ), .Y(
-        \data_out_1_5_bm[2]_net_1 ));
-    CFG4 #( .INIT(16'h7080) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0_RNO_1  (.A(
-        \mult1_un187_sum_1_SUM[1] ), .B(\mult1_un187_sum_1_SUM[2] ), 
-        .C(d_N_4_1), .D(\mult1_un194_sum_1_SUM_1[4] ), .Y(d_N_11_mux_0)
-        );
-    ARI1 #( .INIT(20'h65500) )  \i_cry[1]  (.A(VCC_net_1), .B(
-        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[0]_net_1 ), .S(\i_s[1] ), .Y(), .FCO(\i_cry[1]_net_1 ));
-    CFG3 #( .INIT(8'hCA) )  \un1_angle[0]  (.A(
-        locator_control_0_angle1[0]), .B(\k[0]_net_1 ), .C(
-        \state[4]_net_1 ), .Y(\un1_angle[0]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[2]  (.A(VCC_net_1), .B(
-        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[1]_net_1 ), .S(\i_s[2] ), .Y(), .FCO(\i_cry[2]_net_1 ));
-    SLE \i[4]  (.D(\i_lm[4] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[10]  (.A(VCC_net_1), .B(
-        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[9]_net_1 ), .S(\i_s[10] ), .Y(), .FCO(\i_cry[10]_net_1 )
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_17 (.A(VCC_net_1), .B(
-        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_16_net_1), .S(un1_i_cry_17_S), .Y(), .FCO(
-        un1_i_cry_17_net_1));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[6]  (.A(VCC_net_1), .B(
-        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[5]_net_1 ), .S(\i_s[6] ), .Y(), .FCO(\i_cry[6]_net_1 ));
-    SLE \buff_3[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
-        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\buff_3[5] ));
-    CFG3 #( .INIT(8'hE2) )  \un1_time1[8]  (.A(pulse_meash_0_tim[8]), 
-        .B(\state[4]_net_1 ), .C(mult1_un166_sum_1_CO3), .Y(
-        \un1_time1[8]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_16 (.A(VCC_net_1), .B(
-        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_15_net_1), .S(un1_i_cry_16_S_0), .Y(), .FCO(
-        un1_i_cry_16_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_22 (.A(VCC_net_1), .B(
-        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_21_net_1), .S(un1_i_cry_22_S_0), .Y(), .FCO(
-        un1_i_cry_22_net_1));
-    CFG4 #( .INIT(16'hF0F4) )  \state_ns_0[0]  (.A(
-        pulse_meash_0_new_ready), .B(\state_ns_0_a3_3[0]_net_1 ), .C(
-        \state[0]_net_1 ), .D(\state[4]_net_1 ), .Y(\state_ns[0] ));
-    CFG4 #( .INIT(16'h7233) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0  (.A(
-        mult1_un194_sum_1_CO3_0_tz_0_1), .B(
-        mult1_un194_sum_1_CO3_0_tz_0_RNO), .C(\valu[5]_net_1 ), .D(
-        \mult1_un180_sum_1_SUM[1] ), .Y(mult1_un194_sum_1_CO3_0_tz));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[8]  (.A(\i_s[8] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[8] ));
-    SLE \i[19]  (.D(\i_lm[19] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[19]_net_1 ));
-    CFG4 #( .INIT(16'h24DB) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM[2]  (.A(
-        \valu[6]_net_1 ), .B(\valu[7]_net_1 ), .C(
-        \mult1_un180_sum_1_SUM[4] ), .D(\mult1_un180_sum_1_SUM[1] ), 
-        .Y(\mult1_un187_sum_1_SUM[2] ));
-    CFG4 #( .INIT(16'h336C) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1_RNI8N0S  (.A(
-        mult1_un187_sum_1_CO2), .B(d_m1_2_0), .C(
-        \mult1_un180_sum_1_SUM[2] ), .D(mult1_un187_sum_1_CO3_0), .Y(
-        d_N_2_0));
-    SLE \data_out[4]  (.D(\data_out_1[5] ), .CLK(FCCC_0_GL0), .EN(
-        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        time_sender_0_data_out_5));
-    SLE \buff_1[3]  (.D(\un1_angle[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_1[3]_net_1 ));
-    CFG4 #( .INIT(16'h4EE4) )  \un1_time1[2]  (.A(\state[4]_net_1 ), 
-        .B(pulse_meash_0_tim[2]), .C(un1_i2_mux), .D(un1_m6_1_0), .Y(
-        \un1_time1[2]_net_1 ));
-    CFG3 #( .INIT(8'h2E) )  \un1_time1[6]  (.A(pulse_meash_0_tim[6]), 
-        .B(\state[4]_net_1 ), .C(\mult1_un180_sum_1_SUM[4] ), .Y(
-        \un1_time1[6]_net_1 ));
-    SLE \buff_2[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_2[1]_net_1 ));
-    CFG3 #( .INIT(8'h96) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM[1]  (.A(
-        \valu[9]_net_1 ), .B(\mult1_un159_sum_1_SUM[4] ), .C(
-        \valu[10]_net_1 ), .Y(\mult1_un166_sum_1_SUM[1] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_20 (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_19_net_1), .S(un1_i_cry_20_S), .Y(), .FCO(
-        un1_i_cry_20_net_1));
-    CFG4 #( .INIT(16'h5965) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[2]  (.A(
-        \mult1_un208_sum_1_SUM[1] ), .B(
-        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .C(\valu[2]_net_1 ), .D(
-        \valu[3]_net_1 ), .Y(\mult1_un215_sum_1_SUM[2] ));
-    CFG4 #( .INIT(16'h6669) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_0_0[4]  (.A(
-        \mult1_un201_sum_1_SUM[2] ), .B(\mult1_un201_sum_1_SUM_2[4] ), 
-        .C(mult1_un201_sum_1_CO3_0_0_1), .D(mult1_un201_sum_1_CO3_0_d), 
-        .Y(\mult1_un215_sum_1_SUM_0_0[4] ));
-    SLE \buff_2[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_2[3]_net_1 ));
-    CFG4 #( .INIT(16'h1441) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_2  (.A(
-        N_3560_i), .B(\valu[4]_net_1 ), .C(mult1_un201_sum_1_CO3), .D(
-        \mult1_un201_sum_1_SUM_2[4] ), .Y(un1_m7_3_0));
-    CFG4 #( .INIT(16'hF4B0) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0  (.A(
-        \mult1_un187_sum_1_SUM[4] ), .B(un1_m4_1_1), .C(
-        mult1_un201_sum_1_ANC3_0_RNO_0), .D(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK), .Y(
-        mult1_un201_sum_1_ANC3));
-    CFG4 #( .INIT(16'hB54A) )  
-        \un1_k_if_generate_plus.mult1_un1_sum_1.ANC2_m3  (.A(
-        \valu[2]_net_1 ), .B(\mult1_un215_sum_1_SUM[1] ), .C(
-        \mult1_un215_sum_1_SUM[2] ), .D(\mult1_un215_sum_1_SUM[3] ), 
-        .Y(ANC2_m3));
-    CFG4 #( .INIT(16'hD555) )  \state_RNO[5]  (.A(N_91), .B(
-        \state[4]_net_1 ), .C(\state_ns_i_a2[3]_net_1 ), .D(N_89), .Y(
-        N_85_i_0));
-    SLE \buff_3[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_3[2]_net_1 ));
-    CFG2 #( .INIT(4'h9) )  \valu_RNILKIF_0[11]  (.A(\valu[12]_net_1 ), 
-        .B(\valu[11]_net_1 ), .Y(\valu_RNILKIF_0[11]_net_1 ));
-    CFG4 #( .INIT(16'h4920) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_RNO  (.A(
-        \valu[6]_net_1 ), .B(\valu[7]_net_1 ), .C(
-        \mult1_un180_sum_1_SUM[4] ), .D(\mult1_un180_sum_1_SUM[1] ), 
-        .Y(mult1_un194_sum_1_CO3_0_tz_0_RNO));
-    SLE \i[24]  (.D(\i_lm[24] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[24]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_2 (.A(VCC_net_1), .B(
-        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_1_net_1), .S(un15_clklto2), .Y(), .FCO(
-        un1_i_cry_2_net_1));
-    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[1]  (.A(
-        \buff_5[1]_net_1 ), .B(\buff_4[1]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\data_out_1_5_am_1_1[1]_net_1 ), .Y(
-        \data_out_1_5_am[1]_net_1 ));
-    CFG4 #( .INIT(16'hE44E) )  \un1_time1[1]  (.A(\state[4]_net_1 ), 
-        .B(pulse_meash_0_tim[1]), .C(mult1_un215_sum_1_CO3), .D(
-        \mult1_un215_sum_1_SUM_0[4] ), .Y(\un1_time1[1]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[7]  (.A(\i_s[7] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[7] ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[13]  (.A(\i_s[13] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[13] ));
-    CFG3 #( .INIT(8'hD1) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_CO3_1  (.A(
-        \mult1_un159_sum_1_SUM[4] ), .B(
-        \mult1_un159_sum_1_SUM_RNIM44K4[4] ), .C(
-        \mult1_un159_sum_1_SUM[2] ), .Y(mult1_un166_sum_1_CO3));
-    CFG4 #( .INIT(16'h40C0) )  \i_8_iv_i_a3[0]  (.A(un15_clklto2), .B(
-        \state_ns_i_a2[3]_net_1 ), .C(\i[0]_net_1 ), .D(un15_clklto1), 
-        .Y(N_96));
-    CFG4 #( .INIT(16'h9669) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1_RNI5BNN3  (.A(
-        \valu_RNI32OE1[13]_net_1 ), .B(\mult1_un159_sum_1_SUM_2_1[4] ), 
-        .C(mult1_un159_sum_1_CO3), .D(\mult1_un159_sum_1_SUM[1] ), .Y(
-        un1_N_5_i_1));
-    SLE \i[14]  (.D(\i_lm[14] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[14]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[3]  (.A(VCC_net_1), .B(
-        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[2]_net_1 ), .S(\i_s[3] ), .Y(), .FCO(\i_cry[3]_net_1 ));
-    SLE \state[2]  (.D(N_431_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[2]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  un1_rst_n_inv_i_a3 (.A(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .B(FCCC_0_LOCK), .Y(
-        un1_rst_n_inv_i_a3_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_3 (.A(VCC_net_1), .B(
-        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_2_net_1), .S(un1_i_cry_3_S_0), .Y(), .FCO(
-        un1_i_cry_3_net_1));
-    CFG4 #( .INIT(16'h444F) )  \valu_RNI32OE1[13]  (.A(
-        \valu_RNINMIF[13]_net_1 ), .B(un1_N_3_mux), .C(
-        \valu[13]_net_1 ), .D(\valu[12]_net_1 ), .Y(
-        \valu_RNI32OE1[13]_net_1 ));
-    CFG4 #( .INIT(16'hF4B0) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0  (.A(
-        \mult1_un187_sum_1_SUM[4] ), .B(un1_N_7_mux_0), .C(
-        mult1_un201_sum_1_CO2_0_d_0_RNO_0), .D(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK), .Y(
-        mult1_un201_sum_1_CO2_0_d));
-    CFG4 #( .INIT(16'h8000) )  \state_ns_i_a2_21[3]  (.A(
-        \state_ns_i_a2_12[3]_net_1 ), .B(\state_ns_i_a2_13[3]_net_1 ), 
-        .C(\state_ns_i_a2_14[3]_net_1 ), .D(
-        \state_ns_i_a2_15[3]_net_1 ), .Y(\state_ns_i_a2_21[3]_net_1 ));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_1_RNO  (
-        .A(\mult1_un180_sum_1_SUM_0[3] ), .B(\valu[6]_net_1 ), .C(
-        mult1_un180_sum_1_CO2), .Y(mult1_un194_sum_1_CO3_0_tz_0_1_RNO));
-    CFG3 #( .INIT(8'h96) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1_RNI1HJB3  (.A(
-        \valu_RNI32OE1[13]_net_1 ), .B(mult1_un159_sum_1_CO3), .C(
-        \mult1_un159_sum_1_SUM_2_1[4] ), .Y(
-        mult1_un159_sum_1_CO3_1_RNI1HJB3));
-    SLE \state[1]  (.D(N_84_tz_i), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
-    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[2]  (.A(
-        \buff_5[2]_net_1 ), .B(\buff_4[2]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\data_out_1_5_am_1_1[2]_net_1 ), .Y(
-        \data_out_1_5_am[2]_net_1 ));
-    CFG2 #( .INIT(4'h9) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK  
-        (.A(mult1_un194_sum_1_CO3_0_tz), .B(
-        \mult1_un194_sum_1_SUM_1[4] ), .Y(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[4]  (.A(VCC_net_1), .B(
-        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[3]_net_1 ), .S(\i_s[4] ), .Y(), .FCO(\i_cry[4]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[22]  (.A(\i_s[22] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[22] ));
-    SLE \i[5]  (.D(\i_lm[5] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
-    CFG3 #( .INIT(8'hA8) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_c  (.A(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
-        mult1_un201_sum_1_CO2_0_d), .C(mult1_un201_sum_1_CO3_0_tz_s_0), 
-        .Y(mult1_un201_sum_1_CO3_0_c));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[9]  (.A(\i_s[9] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[9] ));
-    SLE \i[8]  (.D(\i_lm[8] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
-    SLE \buff_1[2]  (.D(\un1_angle[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_1[2]_net_1 ));
-    SLE \buff_4[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_4[3]_net_1 ));
-    CFG3 #( .INIT(8'hCA) )  \un1_angle[3]  (.A(
-        locator_control_0_angle1[3]), .B(\k[3]_net_1 ), .C(
-        \state[4]_net_1 ), .Y(\un1_angle[3]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[21]  (.A(\i_s[21] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[21] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[13]  (.A(VCC_net_1), .B(
-        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[12]_net_1 ), .S(\i_s[13] ), .Y(), .FCO(
-        \i_cry[13]_net_1 ));
-    SLE \valu[6]  (.D(\un1_time1[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[6]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[5]  (.A(\i_s[5] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[5] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_25 (.A(VCC_net_1), .B(
-        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_24_net_1), .S(un1_i_cry_25_S_0), .Y(), .FCO(
-        un1_i_cry_25_net_1));
-    CFG4 #( .INIT(16'h00EF) )  \state_RNO[3]  (.A(\state[1]_net_1 ), 
-        .B(\state[4]_net_1 ), .C(N_90), .D(N_93), .Y(N_10_i_0));
-    CFG2 #( .INIT(4'h8) )  \state_RNI45AA[5]  (.A(FCCC_0_LOCK), .B(
-        \state[5]_net_1 ), .Y(N_87_i_0));
-    CFG4 #( .INIT(16'h14EB) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNIU8O02[2]  (.A(
-        un1_m8_1_1), .B(\mult1_un159_sum_1_SUM[4] ), .C(
-        \mult1_un159_sum_1_SUM[1] ), .D(\mult1_un159_sum_1_SUM[2] ), 
-        .Y(un1_m8_1));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[14]  (.A(\i_s[14] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[14] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[5]  (.A(VCC_net_1), .B(
-        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[4]_net_1 ), .S(\i_s[5] ), .Y(), .FCO(\i_cry[5]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \un1_time1[7]  (.A(pulse_meash_0_tim[7]), 
-        .B(\state[4]_net_1 ), .C(\mult1_un166_sum_1_SUM_RNIQ5884[1] ), 
-        .Y(\un1_time1[7]_net_1 ));
-    CFG3 #( .INIT(8'h80) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_d  (.A(
-        mult1_un201_sum_1_CO1), .B(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .C(
-        \mult1_un194_sum_1_SUM[1] ), .Y(mult1_un201_sum_1_CO3_0_d));
-    CFG3 #( .INIT(8'h69) )  \un24_k_v[0]  (.A(\valu[1]_net_1 ), .B(
-        \mult1_un222_sum_1_SUM_0[4] ), .C(mult1_un222_sum_1_CO3), .Y(
-        \un24_k_v[0]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_17[3]  (.A(
-        un1_i_cry_22_S_0), .B(un1_i_cry_23_S_0), .C(un1_i_cry_24_S_0), 
-        .D(un1_i_cry_25_S_0), .Y(\state_ns_i_a2_17[3]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \valu_RNO[12]  (.A(\state[4]_net_1 ), .B(
-        pulse_meash_0_tim[12]), .Y(\valu_RNO[12]_net_1 ));
-    SLE \valu[12]  (.D(\valu_RNO[12]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[12]_net_1 ));
-    CFG3 #( .INIT(8'h06) )  \valu_RNI7VU53[5]  (.A(\valu[5]_net_1 ), 
-        .B(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .C(un1_N_5_i_2), .Y(
-        un1_i3_mux_0));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_13 (.A(VCC_net_1), .B(
-        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_12_net_1), .S(un1_i_cry_13_S_0), .Y(), .FCO(
-        un1_i_cry_13_net_1));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[9]  (.A(VCC_net_1), .B(
-        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[8]_net_1 ), .S(\i_s[9] ), .Y(), .FCO(\i_cry[9]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[21]  (.A(VCC_net_1), .B(
-        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[20]_net_1 ), .S(\i_s[21] ), .Y(), .FCO(
-        \i_cry[21]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[0]  (.A(\buff_2[0]_net_1 )
-        , .B(\i[0]_net_1 ), .C(\buff_3[0]_net_1 ), .Y(
-        \data_out_1_5_bm[0]_net_1 ));
-    CFG4 #( .INIT(16'h3A30) )  \i_lm_0[0]  (.A(\i_cry_Y_0[0] ), .B(
-        N_96), .C(\state[4]_net_1 ), .D(N_91), .Y(\i_lm[0] ));
-    SLE \buff_3[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_3[1]_net_1 ));
-    SLE \i[3]  (.D(\i_lm[3] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
-    CFG3 #( .INIT(8'h69) )  \valu_RNICB5V[13]  (.A(\valu[12]_net_1 ), 
-        .B(un1_N_3_mux), .C(\valu[13]_net_1 ), .Y(
-        \valu_RNICB5V[13]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[4]  (.A(\i_s[4] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[4] ));
-    CFG3 #( .INIT(8'h45) )  \valu_RNI4LJS4[9]  (.A(\valu[9]_net_1 ), 
-        .B(\valu[8]_net_1 ), .C(un1_N_5_1), .Y(mult1_un173_sum_1_CO1_0)
-        );
-    SLE \valu[2]  (.D(\un1_time1[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[2]_net_1 ));
-    CFG4 #( .INIT(16'h7EBE) )  
-        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_1  (.A(
-        mult1_un194_sum_1_CO3_0_tz_0_1_RNO), .B(
-        \mult1_un180_sum_1_SUM[4] ), .C(\valu[7]_net_1 ), .D(
-        \mult1_un180_sum_1_SUM[2] ), .Y(mult1_un194_sum_1_CO3_0_tz_0_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_24 (.A(VCC_net_1), .B(
-        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_23_net_1), .S(un1_i_cry_24_S_0), .Y(), .FCO(
-        un1_i_cry_24_net_1));
-    CFG2 #( .INIT(4'h8) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC2  (.A(
-        mult1_un201_sum_1_CO1), .B(\mult1_un194_sum_1_SUM[1] ), .Y(
-        mult1_un201_sum_1_ANC2));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_11 (.A(VCC_net_1), .B(
-        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_10_net_1), .S(un1_i_cry_11_S_0), .Y(), .FCO(
-        un1_i_cry_11_net_1));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[16]  (.A(VCC_net_1), .B(
-        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[15]_net_1 ), .S(\i_s[16] ), .Y(), .FCO(
-        \i_cry[16]_net_1 ));
-    SLE \buff_5[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
-        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\buff_5[5] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[8]  (.A(VCC_net_1), .B(
-        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[7]_net_1 ), .S(\i_s[8] ), .Y(), .FCO(\i_cry[8]_net_1 ));
-    CFG4 #( .INIT(16'h9024) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_0  (.A(
-        \valu[3]_net_1 ), .B(\valu[4]_net_1 ), .C(N_3560_i), .D(
-        \mult1_un201_sum_1_SUM[4] ), .Y(mult1_un215_sum_1_ANC3_0_RNO_0)
-        );
-    ARI1 #( .INIT(20'h65500) )  \i_cry[0]  (.A(VCC_net_1), .B(
-        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(GND_net_1), 
-        .S(), .Y(\i_cry_Y_0[0] ), .FCO(\i_cry[0]_net_1 ));
-    SLE \valu[1]  (.D(\un1_time1[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \valu[1]_net_1 ));
-    SLE \buff_2[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
-        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_2[5] ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_14[5]  (.A(
-        \i[7]_net_1 ), .B(\i[6]_net_1 ), .C(\i[4]_net_1 ), .D(
-        \i[3]_net_1 ), .Y(\state_ns_i_0_a2_14[5]_net_1 ));
-    CFG4 #( .INIT(16'hE44E) )  \un1_time1[3]  (.A(\state[4]_net_1 ), 
-        .B(pulse_meash_0_tim[3]), .C(mult1_un201_sum_1_CO3), .D(
-        \mult1_un201_sum_1_SUM_2[4] ), .Y(\un1_time1[3]_net_1 ));
-    SLE \i[1]  (.D(\i_lm[1] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un173_sum_1_SUM[1]  (.A(
-        \valu[9]_net_1 ), .B(\valu[8]_net_1 ), .C(
-        mult1_un166_sum_1_CO3), .Y(\mult1_un173_sum_1_SUM[1] ));
-    CFG4 #( .INIT(16'hDB24) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_1  
-        (.A(\valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
-        \mult1_un187_sum_1_SUM[4] ), .D(\mult1_un187_sum_1_SUM[1] ), 
-        .Y(d_N_19));
-    CFG4 #( .INIT(16'h24DB) )  
-        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM[2]  (.A(
-        \valu[9]_net_1 ), .B(\valu[10]_net_1 ), .C(
-        \mult1_un159_sum_1_SUM[4] ), .D(\mult1_un159_sum_1_SUM[1] ), 
-        .Y(\mult1_un166_sum_1_SUM[2] ));
-    CFG2 #( .INIT(4'h4) )  \valu_RNIPTUG[4]  (.A(\valu[5]_net_1 ), .B(
-        \valu[4]_net_1 ), .Y(d_m12_0_a3_0));
-    CFG4 #( .INIT(16'h2000) )  \state_ns_i_a3_0[3]  (.A(N_90), .B(
-        \state[1]_net_1 ), .C(\state_ns_i_a2[3]_net_1 ), .D(N_89), .Y(
-        N_93));
-    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[1]  (.A(
-        \buff_1[1]_net_1 ), .B(\buff_0[1]_net_1 ), .C(\i[2]_net_1 ), 
-        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[1]_net_1 ));
-    CFG4 #( .INIT(16'hFAF8) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_0_1  (.A(
-        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
-        mult1_un201_sum_1_CO2_0_d), .C(mult1_un201_sum_1_ANC3), .D(
-        mult1_un201_sum_1_CO3_0_tz_s_0), .Y(
-        mult1_un201_sum_1_CO3_0_0_1));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_15[5]  (.A(
-        \i[17]_net_1 ), .B(\i[16]_net_1 ), .C(\i[13]_net_1 ), .D(
-        \i[12]_net_1 ), .Y(\state_ns_i_0_a2_15[5]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_13[3]  (.A(
-        un1_i_cry_7_S_0), .B(un1_i_cry_8_S), .C(un1_i_cry_9_S_0), .D(
-        un1_i_cry_10_S_0), .Y(\state_ns_i_a2_13[3]_net_1 ));
-    SLE \buff_1[0]  (.D(\un1_angle[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_1[0]_net_1 ));
-    CFG4 #( .INIT(16'h6996) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_0[4]  (.A(
-        \mult1_un215_sum_1_SUM_0_0[4] ), .B(un1_m6_1_0), .C(
-        mult1_un208_sum_1_CO2), .D(un1_i2_mux), .Y(
-        \mult1_un215_sum_1_SUM_0[4] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[22]  (.A(VCC_net_1), .B(
-        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[21]_net_1 ), .S(\i_s[22] ), .Y(), .FCO(
-        \i_cry[22]_net_1 ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[17]  (.A(\i_s[17] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[17] ));
-    CFG3 #( .INIT(8'h1E) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[4]  (.A(
-        mult1_un215_sum_1_CO3_0), .B(mult1_un215_sum_1_ANC3), .C(
-        \mult1_un215_sum_1_SUM_0[4] ), .Y(\mult1_un215_sum_1_SUM[4] ));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[23]  (.A(\i_s[23] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[23] ));
-    CFG3 #( .INIT(8'h69) )  
-        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM_0[4]  (.A(
-        mult1_un180_sum_1_CO2), .B(\mult1_un180_sum_1_SUM_0[3] ), .C(
-        \mult1_un180_sum_1_SUM[4] ), .Y(\mult1_un187_sum_1_SUM_0[4] ));
-    ARI1 #( .INIT(20'h65500) )  \i_cry[19]  (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[18]_net_1 ), .S(\i_s[19] ), .Y(), .FCO(
-        \i_cry[19]_net_1 ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[2]  (.A(
-        \data_out_1_5_am[2]_net_1 ), .B(\i[1]_net_1 ), .C(
-        \data_out_1_5_bm[2]_net_1 ), .Y(\data_out_1[2] ));
-    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_19 (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un1_i_cry_18_net_1), .S(un1_i_cry_19_S_0), .Y(), .FCO(
-        un1_i_cry_19_net_1));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[4]  (.A(\buff_2[5] ), .B(
-        \i[0]_net_1 ), .C(\buff_3[5] ), .Y(\data_out_1_5_bm[4]_net_1 ));
-    SLE \data_out[0]  (.D(\data_out_1[0] ), .CLK(FCCC_0_GL0), .EN(
-        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        time_sender_0_data_out_0));
-    SLE \i[18]  (.D(\i_lm[18] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[18]_net_1 ));
-    CFG4 #( .INIT(16'h1428) )  \valu_RNI7QM15[7]  (.A(\valu[8]_net_1 ), 
-        .B(\valu[7]_net_1 ), .C(\valu[6]_net_1 ), .D(
-        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .Y(un1_i1_mux));
-    CFG4 #( .INIT(16'hA030) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0  (.A(
-        \valu[2]_net_1 ), .B(mult1_un215_sum_1_CO3_0_RNO), .C(
-        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .D(un1_i5_mux_0), .Y(
-        mult1_un215_sum_1_CO3_0));
-    CFG2 #( .INIT(4'h2) )  \i_lm_0[15]  (.A(\i_s[15] ), .B(
-        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[15] ));
-    CFG3 #( .INIT(8'h96) )  
-        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM[1]  (.A(
-        \valu[10]_net_1 ), .B(\valu_RNI32OE1[13]_net_1 ), .C(
-        \valu[11]_net_1 ), .Y(\mult1_un159_sum_1_SUM[1] ));
-    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[4]  (.A(
-        \data_out_1_5_am[4]_net_1 ), .B(\i[1]_net_1 ), .C(
-        \data_out_1_5_bm[4]_net_1 ), .Y(\data_out_1[5] ));
-    CFG3 #( .INIT(8'hF6) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO  (.A(
-        \valu[4]_net_1 ), .B(\valu[5]_net_1 ), .C(
-        \mult1_un187_sum_1_SUM[4] ), .Y(un1_m8_i_0));
-    SLE \buff_5[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \buff_5[2]_net_1 ));
-    CFG4 #( .INIT(16'h7DD7) )  
-        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_1  (.A(
-        N_3560_i), .B(\mult1_un194_sum_1_SUM[2] ), .C(un1_m7_i_0_1), 
-        .D(un1_N_8), .Y(un1_m7_i_0));
-    CFG3 #( .INIT(8'h96) )  
-        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM_1_RNIS7JO[1]  (
-        .A(\valu[3]_net_1 ), .B(\mult1_un201_sum_1_SUM_1[1] ), .C(
-        mult1_un194_sum_1_ANC3_0_1), .Y(un1_N_5_i_2));
-    
-endmodule
-
-
-module BT_module(
-       BT_module_0_data_buf,
-       rx_dout_reg,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       BT_module_0_oen,
-       COREUART_0_RXRDY
-    );
-output [7:0] BT_module_0_data_buf;
-input  [7:0] rx_dout_reg;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-output BT_module_0_oen;
-input  COREUART_0_RXRDY;
-
-    wire GND_net_1, \TX_RX_repiter[0]_net_1 , VCC_net_1, 
-        \TX_RX_repiter_ns[0] , \TX_RX_repiter[1]_net_1 , N_19_i_0;
-    
-    SLE \data_buf[4]  (.D(rx_dout_reg[4]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[4]));
-    SLE \TX_RX_repiter[1]  (.D(\TX_RX_repiter[0]_net_1 ), .CLK(
-        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \TX_RX_repiter[1]_net_1 ));
-    GND GND (.Y(GND_net_1));
-    SLE \data_buf[1]  (.D(rx_dout_reg[1]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[1]));
-    SLE \data_buf[3]  (.D(rx_dout_reg[3]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[3]));
-    CFG3 #( .INIT(8'h02) )  \TX_RX_repiter_ns_0_a2[0]  (.A(
-        COREUART_0_RXRDY), .B(\TX_RX_repiter[1]_net_1 ), .C(
-        \TX_RX_repiter[0]_net_1 ), .Y(\TX_RX_repiter_ns[0] ));
-    SLE \data_buf[0]  (.D(rx_dout_reg[0]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[0]));
-    VCC VCC (.Y(VCC_net_1));
-    SLE \TX_RX_repiter[0]  (.D(\TX_RX_repiter_ns[0] ), .CLK(FCCC_0_GL0)
-        , .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \TX_RX_repiter[0]_net_1 ));
-    SLE \data_buf[6]  (.D(rx_dout_reg[6]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[6]));
-    SLE \data_buf[5]  (.D(rx_dout_reg[5]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[5]));
-    SLE oen (.D(\TX_RX_repiter[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        N_19_i_0), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(BT_module_0_oen));
-    CFG2 #( .INIT(4'hE) )  oen_RNO (.A(\TX_RX_repiter[0]_net_1 ), .B(
-        \TX_RX_repiter[1]_net_1 ), .Y(N_19_i_0));
-    SLE \data_buf[7]  (.D(rx_dout_reg[7]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[7]));
-    SLE \data_buf[2]  (.D(rx_dout_reg[2]), .CLK(FCCC_0_GL0), .EN(
-        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        BT_module_0_data_buf[2]));
-    
-endmodule
-
-
-module servo_driver(
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       SERVO_PWM,
-       un46_clk_0,
-       un46_clk_1,
-       un46_clk_2,
-       un46_clk_3,
-       N_234_0
-    );
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-output SERVO_PWM;
-input  un46_clk_0;
-input  un46_clk_1;
-input  un46_clk_2;
-input  un46_clk_3;
-input  N_234_0;
-
-    wire un11_clk_13, VCC_net_1, un5_pulse_length_cry_12_S, 
-        \state_d[2] , GND_net_1, un11_clk_14, 
-        un5_pulse_length_cry_12_net_1, un11_clk_0, \P[0] , un11_clk_1, 
-        un5_pulse_length_cry_0_Y, un11_clk_2, un5_pulse_length_cry_1_S, 
-        un11_clk_3, un5_pulse_length_cry_2_S, un11_clk_4, 
-        un5_pulse_length_cry_3_S, un11_clk_5, un5_pulse_length_cry_4_S, 
-        un11_clk_6, un5_pulse_length_cry_5_S, un11_clk_7, 
-        un5_pulse_length_cry_6_S, un11_clk_8, un5_pulse_length_cry_7_S, 
-        un11_clk_9, un5_pulse_length_cry_8_S, un11_clk_10, 
-        un5_pulse_length_cry_9_S, un11_clk_11, 
-        un5_pulse_length_cry_10_S, un11_clk_12, 
-        un5_pulse_length_cry_11_S, \state[0]_net_1 , N_67_i_0, 
-        \state[1]_net_1 , \state_ns[1] , \state_d_i_0[2] , 
-        \i[0]_net_1 , \i_lm[0] , \i[1]_net_1 , \i_lm[1] , \i[2]_net_1 , 
-        \i_lm[2] , \i[3]_net_1 , \i_lm[3] , \i[4]_net_1 , \i_lm[4] , 
-        \i[5]_net_1 , \i_lm[5] , \i[6]_net_1 , \i_lm[6] , \i[7]_net_1 , 
-        \i_lm[7] , \i[8]_net_1 , \i_lm[8] , \i[9]_net_1 , \i_lm[9] , 
-        \i[10]_net_1 , \i_lm[10] , \i[11]_net_1 , \i_lm[11] , 
-        \i[12]_net_1 , \i_lm[12] , \i[13]_net_1 , \i_lm[13] , 
-        \i[14]_net_1 , \i_lm[14] , \i[15]_net_1 , \i_lm[15] , 
-        \i[16]_net_1 , \i_lm[16] , \i[17]_net_1 , \i_lm[17] , 
-        \i[18]_net_1 , \i_lm[18] , \i[19]_net_1 , \i_lm[19] , 
-        \i[20]_net_1 , \i_lm[20] , \i[21]_net_1 , \i_lm[21] , 
-        \i[22]_net_1 , \i_lm[22] , \i[23]_net_1 , \i_lm[23] , 
-        \i[24]_net_1 , \i_lm[24] , \i[25]_net_1 , \i_lm[25] , 
-        \i[26]_net_1 , \i_lm[26] , \i[27]_net_1 , \i_lm[27] , 
-        \i[28]_net_1 , \i_lm[28] , \i[29]_net_1 , \i_lm[29] , 
-        \i[30]_net_1 , \i_lm[30] , un5_pulse_length_cry_0_net_1, 
-        un5_pulse_length, un5_pulse_length_cry_1_net_1, \P[2] , 
-        un5_pulse_length_cry_2_net_1, un5_pulse_length_axb_2, 
-        un5_pulse_length_cry_3_net_1, un5_pulse_length_axb_3, 
-        un5_pulse_length_cry_4_net_1, \P[5] , 
-        un5_pulse_length_cry_5_net_1, un5_pulse_length_axb_5, 
-        un5_pulse_length_cry_6_net_1, \P[7] , 
-        un5_pulse_length_cry_7_net_1, un5_pulse_length_axb_7, 
-        un5_pulse_length_cry_8_net_1, \P[9] , 
-        un5_pulse_length_cry_9_net_1, \P[10] , 
-        un5_pulse_length_cry_10_net_1, \P[11] , 
-        un5_pulse_length_cry_11_net_1, un5_pulse_length_axb_11, 
-        un5_pulse_length_axb_12, un11_clk_cry_3_net_1, 
-        un11_clk_cry_4_net_1, un11_clk_cry_5_net_1, 
-        un11_clk_cry_6_net_1, un11_clk_cry_7_net_1, 
-        un11_clk_cry_8_net_1, un11_clk_cry_9_net_1, 
-        un11_clk_cry_10_net_1, un11_clk_cry_11_net_1, 
-        un11_clk_cry_12_net_1, un11_clk_cry_13_net_1, 
-        un11_clk_cry_14_net_1, un11_clk_cry_15_net_1, 
-        un11_clk_cry_16_net_1, un11_clk_cry_17_net_1, 
-        un11_clk_cry_18_net_1, un11_clk_cry_19_net_1, 
-        un11_clk_cry_20_net_1, un11_clk_cry_21_net_1, 
-        un11_clk_cry_22_net_1, un11_clk_cry_23_net_1, 
-        un11_clk_cry_24_net_1, un11_clk_cry_25_net_1, 
-        un11_clk_cry_26_net_1, un11_clk_cry_27_net_1, 
-        un11_clk_cry_28_net_1, un11_clk_cry_29_net_1, 
-        un11_clk_cry_30_net_1, i_s_321_FCO, \i_cry[1]_net_1 , \i_s[1] , 
-        \i_cry[2]_net_1 , \i_s[2] , \i_cry[3]_net_1 , \i_s[3] , 
-        \i_cry[4]_net_1 , \i_s[4] , \i_cry[5]_net_1 , \i_s[5] , 
-        \i_cry[6]_net_1 , \i_s[6] , \i_cry[7]_net_1 , \i_s[7] , 
-        \i_cry[8]_net_1 , \i_s[8] , \i_cry[9]_net_1 , \i_s[9] , 
-        \i_cry[10]_net_1 , \i_s[10] , \i_cry[11]_net_1 , \i_s[11] , 
-        \i_cry[12]_net_1 , \i_s[12] , \i_cry[13]_net_1 , \i_s[13] , 
-        \i_cry[14]_net_1 , \i_s[14] , \i_cry[15]_net_1 , \i_s[15] , 
-        \i_cry[16]_net_1 , \i_s[16] , \i_cry[17]_net_1 , \i_s[17] , 
-        \i_cry[18]_net_1 , \i_s[18] , \i_cry[19]_net_1 , \i_s[19] , 
-        \i_cry[20]_net_1 , \i_s[20] , \i_cry[21]_net_1 , \i_s[21] , 
-        \i_cry[22]_net_1 , \i_s[22] , \i_cry[23]_net_1 , \i_s[23] , 
-        \i_cry[24]_net_1 , \i_s[24] , \i_cry[25]_net_1 , \i_s[25] , 
-        \i_cry[26]_net_1 , \i_s[26] , \i_cry[27]_net_1 , \i_s[27] , 
-        \i_cry[28]_net_1 , \i_s[28] , \i_s[30]_net_1 , 
-        \i_cry[29]_net_1 , \i_s[29] , un1_state_0_sqmuxa_0_net_1, 
-        un17_clklto30_7_net_1, un17_clklto30_6_net_1, 
-        un17_clklto19_2_net_1, un17_clklto13_2_net_1, 
-        un17_clklto30_8_net_1, un17_clklt13, un17_clklt19, 
-        un17_clklto30_net_1;
-    
-    SLE \state[0]  (.D(N_67_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_4 (.A(VCC_net_1), 
-        .B(\P[5] ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_3_net_1), .S(un5_pulse_length_cry_4_S), 
-        .Y(), .FCO(un5_pulse_length_cry_4_net_1));
-    SLE \pulse_length[16]  (.D(un5_pulse_length_cry_12_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_13));
-    SLE \i[7]  (.D(\i_lm[7] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
-    SLE \i[16]  (.D(\i_lm[16] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[16]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[14]  (.A(VCC_net_1), .B(
-        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[13]_net_1 ), .S(\i_s[14] ), .Y(), .FCO(
-        \i_cry[14]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_27 (.A(VCC_net_1), .B(
-        \i[27]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_26_net_1), .S(), .Y(), .FCO(un11_clk_cry_27_net_1)
-        );
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[24]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[24] ), .Y(\i_lm[24] ));
-    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_11 (.A(VCC_net_1), 
-        .B(un5_pulse_length_axb_11), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(un5_pulse_length_cry_10_net_1), .S(
-        un5_pulse_length_cry_11_S), .Y(), .FCO(
-        un5_pulse_length_cry_11_net_1));
-    SLE \pulse_length[5]  (.D(un5_pulse_length_cry_1_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_2));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_20 (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_19_net_1), .S(), .Y(), .FCO(un11_clk_cry_20_net_1)
-        );
-    SLE \i[21]  (.D(\i_lm[21] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[21]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[20]  (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[19]_net_1 ), .S(\i_s[20] ), .Y(), .FCO(
-        \i_cry[20]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_16 (.A(un11_clk_13), .B(
-        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_15_net_1), .S(), .Y(), .FCO(un11_clk_cry_16_net_1)
-        );
-    SLE \i[0]  (.D(\i_lm[0] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
-    SLE \i[11]  (.D(\i_lm[11] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[11]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_13 (.A(un11_clk_10), .B(
-        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_12_net_1), .S(), .Y(), .FCO(un11_clk_cry_13_net_1)
-        );
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[2]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[2] ), .Y(\i_lm[2] ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_24 (.A(VCC_net_1), .B(
-        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_23_net_1), .S(), .Y(), .FCO(un11_clk_cry_24_net_1)
-        );
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_3 (.A(un11_clk_0), .B(
-        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(GND_net_1), 
-        .S(), .Y(), .FCO(un11_clk_cry_3_net_1));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_18 (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_17_net_1), .S(), .Y(), .FCO(un11_clk_cry_18_net_1)
-        );
-    CFG4 #( .INIT(16'h5557) )  un17_clklto9 (.A(\i[9]_net_1 ), .B(
-        \i[8]_net_1 ), .C(\i[7]_net_1 ), .D(\i[6]_net_1 ), .Y(
-        un17_clklt13));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[27]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[27] ), .Y(\i_lm[27] ));
-    CFG4 #( .INIT(16'h0001) )  un17_clklto30_7 (.A(\i[26]_net_1 ), .B(
-        \i[25]_net_1 ), .C(\i[24]_net_1 ), .D(\i[23]_net_1 ), .Y(
-        un17_clklto30_7_net_1));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[25]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[25] ), .Y(\i_lm[25] ));
-    GND GND (.Y(GND_net_1));
-    SLE \i[23]  (.D(\i_lm[23] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[23]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_12 (.A(VCC_net_1), 
-        .B(un5_pulse_length_axb_12), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(un5_pulse_length_cry_11_net_1), .S(
-        un5_pulse_length_cry_12_S), .Y(), .FCO(
-        un5_pulse_length_cry_12_net_1));
-    CFG2 #( .INIT(4'h2) )  \i_RNO[0]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i[0]_net_1 ), .Y(\i_lm[0] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[23]  (.A(VCC_net_1), .B(
-        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[22]_net_1 ), .S(\i_s[23] ), .Y(), .FCO(
-        \i_cry[23]_net_1 ));
-    SLE \i[13]  (.D(\i_lm[13] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[13]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_7 (.A(un11_clk_4), .B(
-        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_6_net_1), .S(), .Y(), .FCO(un11_clk_cry_7_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[15]  (.A(VCC_net_1), .B(
-        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[14]_net_1 ), .S(\i_s[15] ), .Y(), .FCO(
-        \i_cry[15]_net_1 ));
-    SLE \pulse_length[10]  (.D(un5_pulse_length_cry_6_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_7));
-    SLE \i[27]  (.D(\i_lm[27] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[27]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_22 (.A(VCC_net_1), .B(
-        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_21_net_1), .S(), .Y(), .FCO(un11_clk_cry_22_net_1)
-        );
-    SLE \pulse_length[14]  (.D(un5_pulse_length_cry_10_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_11));
-    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_2 (.A(VCC_net_1), 
-        .B(un5_pulse_length_axb_2), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_1_net_1), .S(un5_pulse_length_cry_2_S), 
-        .Y(), .FCO(un5_pulse_length_cry_2_net_1));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[10]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[10] ), .Y(\i_lm[10] ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_9 (.A(un11_clk_6), .B(
-        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_8_net_1), .S(), .Y(), .FCO(un11_clk_cry_9_net_1));
-    SLE \i[17]  (.D(\i_lm[17] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[17]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  un17_clklto13_2 (.A(\i[13]_net_1 ), .B(
-        \i[12]_net_1 ), .C(\i[11]_net_1 ), .D(\i[10]_net_1 ), .Y(
-        un17_clklto13_2_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[26]  (.A(VCC_net_1), .B(
-        \i[26]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[25]_net_1 ), .S(\i_s[26] ), .Y(), .FCO(
-        \i_cry[26]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[17]  (.A(VCC_net_1), .B(
-        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[16]_net_1 ), .S(\i_s[17] ), .Y(), .FCO(
-        \i_cry[17]_net_1 ));
-    CFG4 #( .INIT(16'hA080) )  un17_clklto30 (.A(un17_clklto30_8_net_1)
-        , .B(un17_clklt19), .C(un17_clklto30_7_net_1), .D(
-        un17_clklto19_2_net_1), .Y(un17_clklto30_net_1));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[18]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[18] ), .Y(\i_lm[18] ));
-    SLE \i[9]  (.D(\i_lm[9] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_0 (.A(VCC_net_1), 
-        .B(un5_pulse_length), .C(GND_net_1), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(un5_pulse_length_cry_0_Y), .FCO(
-        un5_pulse_length_cry_0_net_1));
-    VCC VCC (.Y(VCC_net_1));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_1 (.A(VCC_net_1), 
-        .B(\P[2] ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_0_net_1), .S(un5_pulse_length_cry_1_S), 
-        .Y(), .FCO(un5_pulse_length_cry_1_net_1));
-    SLE \pulse_length[8]  (.D(un5_pulse_length_cry_4_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_5));
-    SLE \pulse_length[7]  (.D(un5_pulse_length_cry_3_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_4));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[29]  (.A(VCC_net_1), .B(
-        \i[29]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[28]_net_1 ), .S(\i_s[29] ), .Y(), .FCO(
-        \i_cry[29]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_26 (.A(VCC_net_1), .B(
-        \i[26]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_25_net_1), .S(), .Y(), .FCO(un11_clk_cry_26_net_1)
-        );
-    SLE \pulse_length[13]  (.D(un5_pulse_length_cry_9_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_10));
-    SLE \pulse_length[15]  (.D(un5_pulse_length_cry_11_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_12));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_19 (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_18_net_1), .S(), .Y(), .FCO(un11_clk_cry_19_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_5 (.A(VCC_net_1), 
-        .B(un5_pulse_length_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_4_net_1), .S(un5_pulse_length_cry_5_S), 
-        .Y(), .FCO(un5_pulse_length_cry_5_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[11]  (.A(VCC_net_1), .B(
-        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[10]_net_1 ), .S(\i_s[11] ), .Y(), .FCO(
-        \i_cry[11]_net_1 ));
-    SLE \i[25]  (.D(\i_lm[25] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[25]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_23 (.A(VCC_net_1), .B(
-        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_22_net_1), .S(), .Y(), .FCO(un11_clk_cry_23_net_1)
-        );
-    CFG4 #( .INIT(16'h0001) )  un17_clklto30_6 (.A(\i[30]_net_1 ), .B(
-        \i[29]_net_1 ), .C(\i[28]_net_1 ), .D(\i[27]_net_1 ), .Y(
-        un17_clklto30_6_net_1));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_8 (.A(VCC_net_1), 
-        .B(\P[9] ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_7_net_1), .S(un5_pulse_length_cry_8_S), 
-        .Y(), .FCO(un5_pulse_length_cry_8_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[24]  (.A(VCC_net_1), .B(
-        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[23]_net_1 ), .S(\i_s[24] ), .Y(), .FCO(
-        \i_cry[24]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[19]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[19] ), .Y(\i_lm[19] ));
-    SLE \i[15]  (.D(\i_lm[15] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[15]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[3]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[3] ), .Y(\i_lm[3] ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[16]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[16] ), .Y(\i_lm[16] ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[20]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[20] ), .Y(\i_lm[20] ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_28 (.A(VCC_net_1), .B(
-        \i[28]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_27_net_1), .S(), .Y(), .FCO(un11_clk_cry_28_net_1)
-        );
-    SLE \pulse_length[12]  (.D(un5_pulse_length_cry_8_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_9));
-    MACC \un4_mulonly_0[31:18]  (.CLK({FCCC_0_GL0, FCCC_0_GL0}), .A({
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, VCC_net_1, VCC_net_1, 
-        GND_net_1, VCC_net_1, VCC_net_1, GND_net_1, VCC_net_1, 
-        GND_net_1, VCC_net_1, VCC_net_1}), .A_EN({VCC_net_1, VCC_net_1})
-        , .A_ARST_N({VCC_net_1, VCC_net_1}), .A_SRST_N({VCC_net_1, 
-        VCC_net_1}), .B({GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        un46_clk_3, un46_clk_2, un46_clk_1, un46_clk_0}), .B_EN({
-        N_234_0, N_234_0}), .B_ARST_N({FCCC_0_LOCK, FCCC_0_LOCK}), 
-        .B_SRST_N({VCC_net_1, VCC_net_1}), .C({GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1}), .C_EN({VCC_net_1, VCC_net_1}), 
-        .C_ARST_N({VCC_net_1, VCC_net_1}), .C_SRST_N({VCC_net_1, 
-        VCC_net_1}), .P_EN({VCC_net_1, VCC_net_1}), .P_ARST_N({
-        VCC_net_1, VCC_net_1}), .P_SRST_N({VCC_net_1, VCC_net_1}), 
-        .FDBKSEL(GND_net_1), .FDBKSEL_EN(VCC_net_1), .FDBKSEL_AL_N(
-        VCC_net_1), .FDBKSEL_SL_N(VCC_net_1), .CDSEL(GND_net_1), 
-        .CDSEL_EN(VCC_net_1), .CDSEL_AL_N(VCC_net_1), .CDSEL_SL_N(
-        VCC_net_1), .ARSHFT17(GND_net_1), .ARSHFT17_EN(VCC_net_1), 
-        .ARSHFT17_AL_N(VCC_net_1), .ARSHFT17_SL_N(VCC_net_1), .SUB(
-        GND_net_1), .SUB_EN(VCC_net_1), .SUB_AL_N(VCC_net_1), 
-        .SUB_SL_N(VCC_net_1), .CARRYIN(GND_net_1), .SIMD(GND_net_1), 
-        .DOTP(GND_net_1), .OVFL_CARRYOUT_SEL(GND_net_1), .A_BYPASS({
-        VCC_net_1, VCC_net_1}), .B_BYPASS({GND_net_1, GND_net_1}), 
-        .C_BYPASS({VCC_net_1, VCC_net_1}), .P_BYPASS({VCC_net_1, 
-        VCC_net_1}), .FDBKSEL_BYPASS(VCC_net_1), .FDBKSEL_AD(GND_net_1)
-        , .FDBKSEL_SD_N(GND_net_1), .CDSEL_BYPASS(VCC_net_1), 
-        .CDSEL_AD(GND_net_1), .CDSEL_SD_N(GND_net_1), .ARSHFT17_BYPASS(
-        VCC_net_1), .ARSHFT17_AD(GND_net_1), .ARSHFT17_SD_N(GND_net_1), 
-        .SUB_BYPASS(VCC_net_1), .SUB_AD(GND_net_1), .SUB_SD_N(
-        GND_net_1), .CDIN({GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1}), 
-        .CDOUT({nc0, nc1, nc2, nc3, nc4, nc5, nc6, nc7, nc8, nc9, nc10, 
-        nc11, nc12, nc13, nc14, nc15, nc16, nc17, nc18, nc19, nc20, 
-        nc21, nc22, nc23, nc24, nc25, nc26, nc27, nc28, nc29, nc30, 
-        nc31, nc32, nc33, nc34, nc35, nc36, nc37, nc38, nc39, nc40, 
-        nc41, nc42, nc43}), .P({nc44, nc45, nc46, nc47, nc48, nc49, 
-        nc50, nc51, nc52, nc53, nc54, nc55, nc56, nc57, nc58, nc59, 
-        nc60, nc61, nc62, nc63, nc64, nc65, nc66, nc67, nc68, nc69, 
-        nc70, nc71, nc72, nc73, un5_pulse_length_axb_12, 
-        un5_pulse_length_axb_11, \P[11] , \P[10] , \P[9] , 
-        un5_pulse_length_axb_7, \P[7] , un5_pulse_length_axb_5, \P[5] , 
-        un5_pulse_length_axb_3, un5_pulse_length_axb_2, \P[2] , 
-        un5_pulse_length, \P[0] }), .OVFL_CARRYOUT());
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_15 (.A(un11_clk_12), .B(
-        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_14_net_1), .S(), .Y(), .FCO(un11_clk_cry_15_net_1)
-        );
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[7]  (.A(VCC_net_1), .B(
-        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[6]_net_1 ), .S(\i_s[7] ), .Y(), .FCO(\i_cry[7]_net_1 ));
-    SLE \i[22]  (.D(\i_lm[22] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[22]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_s[30]  (.A(VCC_net_1), .B(
-        \i[30]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[29]_net_1 ), .S(\i_s[30]_net_1 ), .Y(), .FCO());
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[12]  (.A(VCC_net_1), .B(
-        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[11]_net_1 ), .S(\i_s[12] ), .Y(), .FCO(
-        \i_cry[12]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[6]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[6] ), .Y(\i_lm[6] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[18]  (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[17]_net_1 ), .S(\i_s[18] ), .Y(), .FCO(
-        \i_cry[18]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  i_s_321 (.A(VCC_net_1), .B(
-        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(VCC_net_1), 
-        .S(), .Y(), .FCO(i_s_321_FCO));
-    SLE \i[2]  (.D(\i_lm[2] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
-    SLE \i[12]  (.D(\i_lm[12] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[12]_net_1 ));
-    CFG4 #( .INIT(16'h0004) )  un17_clklto30_8 (.A(\i[20]_net_1 ), .B(
-        un17_clklto30_6_net_1), .C(\i[22]_net_1 ), .D(\i[21]_net_1 ), 
-        .Y(un17_clklto30_8_net_1));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[28]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[28] ), .Y(\i_lm[28] ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_11 (.A(un11_clk_8), .B(
-        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_10_net_1), .S(), .Y(), .FCO(un11_clk_cry_11_net_1)
-        );
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[1]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[1] ), .Y(\i_lm[1] ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[12]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[12] ), .Y(\i_lm[12] ));
-    SLE \i[20]  (.D(\i_lm[20] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[20]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_9 (.A(VCC_net_1), 
-        .B(\P[10] ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_8_net_1), .S(un5_pulse_length_cry_9_S), 
-        .Y(), .FCO(un5_pulse_length_cry_9_net_1));
-    SLE \i[30]  (.D(\i_lm[30] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[30]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_6 (.A(VCC_net_1), 
-        .B(\P[7] ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_5_net_1), .S(un5_pulse_length_cry_6_S), 
-        .Y(), .FCO(un5_pulse_length_cry_6_net_1));
-    SLE \pulse_length[9]  (.D(un5_pulse_length_cry_5_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_6));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[11]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[11] ), .Y(\i_lm[11] ));
-    SLE \i[10]  (.D(\i_lm[10] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[10]_net_1 ));
-    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_10 (.A(VCC_net_1), 
-        .B(\P[11] ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_9_net_1), .S(un5_pulse_length_cry_10_S), 
-        .Y(), .FCO(un5_pulse_length_cry_10_net_1));
-    SLE \i[6]  (.D(\i_lm[6] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[1]  (.A(VCC_net_1), .B(
-        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(i_s_321_FCO), 
-        .S(\i_s[1] ), .Y(), .FCO(\i_cry[1]_net_1 ));
-    SLE \i[29]  (.D(\i_lm[29] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[29]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[2]  (.A(VCC_net_1), .B(
-        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[1]_net_1 ), .S(\i_s[2] ), .Y(), .FCO(\i_cry[2]_net_1 ));
-    SLE \i[4]  (.D(\i_lm[4] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[10]  (.A(VCC_net_1), .B(
-        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[9]_net_1 ), .S(\i_s[10] ), .Y(), .FCO(\i_cry[10]_net_1 )
-        );
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[6]  (.A(VCC_net_1), .B(
-        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[5]_net_1 ), .S(\i_s[6] ), .Y(), .FCO(\i_cry[6]_net_1 ));
-    SLE \pulse_length[6]  (.D(un5_pulse_length_cry_2_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_3));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[8]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[8] ), .Y(\i_lm[8] ));
-    SLE \i[19]  (.D(\i_lm[19] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[19]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_3 (.A(VCC_net_1), 
-        .B(un5_pulse_length_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_2_net_1), .S(un5_pulse_length_cry_3_S), 
-        .Y(), .FCO(un5_pulse_length_cry_3_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[25]  (.A(VCC_net_1), .B(
-        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[24]_net_1 ), .S(\i_s[25] ), .Y(), .FCO(
-        \i_cry[25]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[29]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[29] ), .Y(\i_lm[29] ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_17 (.A(un11_clk_14), .B(
-        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_16_net_1), .S(), .Y(), .FCO(un11_clk_cry_17_net_1)
-        );
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[26]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[26] ), .Y(\i_lm[26] ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_10 (.A(un11_clk_7), .B(
-        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_9_net_1), .S(), .Y(), .FCO(un11_clk_cry_10_net_1));
-    SLE \i[24]  (.D(\i_lm[24] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[24]_net_1 ));
-    CFG4 #( .INIT(16'h40EA) )  \state_ns_0[1]  (.A(\state[0]_net_1 ), 
-        .B(\state[1]_net_1 ), .C(un17_clklto30_net_1), .D(
-        un11_clk_cry_30_net_1), .Y(\state_ns[1] ));
-    CFG4 #( .INIT(16'h5111) )  un17_clklto15 (.A(\i[15]_net_1 ), .B(
-        \i[14]_net_1 ), .C(un17_clklto13_2_net_1), .D(un17_clklt13), 
-        .Y(un17_clklt19));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[7]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[7] ), .Y(\i_lm[7] ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[13]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[13] ), .Y(\i_lm[13] ));
-    SLE \i[14]  (.D(\i_lm[14] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[14]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[3]  (.A(VCC_net_1), .B(
-        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[2]_net_1 ), .S(\i_s[3] ), .Y(), .FCO(\i_cry[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[27]  (.A(VCC_net_1), .B(
-        \i[27]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[26]_net_1 ), .S(\i_s[27] ), .Y(), .FCO(
-        \i_cry[27]_net_1 ));
-    SLE \pulse_length[4]  (.D(un5_pulse_length_cry_0_Y), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_1));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_29 (.A(VCC_net_1), .B(
-        \i[29]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_28_net_1), .S(), .Y(), .FCO(un11_clk_cry_29_net_1)
-        );
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_14 (.A(un11_clk_11), .B(
-        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_13_net_1), .S(), .Y(), .FCO(un11_clk_cry_14_net_1)
-        );
-    SLE \state[1]  (.D(\state_ns[1] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
-        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[30]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[30]_net_1 ), .Y(\i_lm[30] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[4]  (.A(VCC_net_1), .B(
-        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[3]_net_1 ), .S(\i_s[4] ), .Y(), .FCO(\i_cry[4]_net_1 ));
-    SLE \pulse_length[11]  (.D(un5_pulse_length_cry_7_S), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_8));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[22]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[22] ), .Y(\i_lm[22] ));
-    SLE \i[5]  (.D(\i_lm[5] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_8 (.A(un11_clk_5), .B(
-        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_7_net_1), .S(), .Y(), .FCO(un11_clk_cry_8_net_1));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[9]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[9] ), .Y(\i_lm[9] ));
-    SLE \i[8]  (.D(\i_lm[8] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
-    SLE \pulse_length[17]  (.D(un5_pulse_length_cry_12_net_1), .CLK(
-        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(un11_clk_14));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[21]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[21] ), .Y(\i_lm[21] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[13]  (.A(VCC_net_1), .B(
-        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[12]_net_1 ), .S(\i_s[13] ), .Y(), .FCO(
-        \i_cry[13]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[5]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[5] ), .Y(\i_lm[5] ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_5 (.A(un11_clk_2), .B(
-        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_4_net_1), .S(), .Y(), .FCO(un11_clk_cry_5_net_1));
-    CFG3 #( .INIT(8'h0D) )  \state_RNO[0]  (.A(\state[0]_net_1 ), .B(
-        un11_clk_cry_30_net_1), .C(\state[1]_net_1 ), .Y(N_67_i_0));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[14]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[14] ), .Y(\i_lm[14] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[5]  (.A(VCC_net_1), .B(
-        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[4]_net_1 ), .S(\i_s[5] ), .Y(), .FCO(\i_cry[5]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_6 (.A(un11_clk_3), .B(
-        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_5_net_1), .S(), .Y(), .FCO(un11_clk_cry_6_net_1));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_30 (.A(VCC_net_1), .B(
-        \i[30]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_29_net_1), .S(), .Y(), .FCO(un11_clk_cry_30_net_1)
-        );
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_25 (.A(VCC_net_1), .B(
-        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_24_net_1), .S(), .Y(), .FCO(un11_clk_cry_25_net_1)
-        );
-    CFG4 #( .INIT(16'h7FFF) )  un17_clklto19_2 (.A(\i[19]_net_1 ), .B(
-        \i[18]_net_1 ), .C(\i[17]_net_1 ), .D(\i[16]_net_1 ), .Y(
-        un17_clklto19_2_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[9]  (.A(VCC_net_1), .B(
-        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[8]_net_1 ), .S(\i_s[9] ), .Y(), .FCO(\i_cry[9]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[21]  (.A(VCC_net_1), .B(
-        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[20]_net_1 ), .S(\i_s[21] ), .Y(), .FCO(
-        \i_cry[21]_net_1 ));
-    CFG2 #( .INIT(4'hE) )  state_s0_0_a3_i (.A(\state[0]_net_1 ), .B(
-        \state[1]_net_1 ), .Y(\state_d_i_0[2] ));
-    SLE \i[3]  (.D(\i_lm[3] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[4]  (.A(un1_state_0_sqmuxa_0_net_1), 
-        .B(\i_s[4] ), .Y(\i_lm[4] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[16]  (.A(VCC_net_1), .B(
-        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[15]_net_1 ), .S(\i_s[16] ), .Y(), .FCO(
-        \i_cry[16]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[8]  (.A(VCC_net_1), .B(
-        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[7]_net_1 ), .S(\i_s[8] ), .Y(), .FCO(\i_cry[8]_net_1 ));
-    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_21 (.A(VCC_net_1), .B(
-        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_20_net_1), .S(), .Y(), .FCO(un11_clk_cry_21_net_1)
-        );
-    SLE \pulse_length[3]  (.D(\P[0] ), .CLK(FCCC_0_GL0), .EN(
-        \state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(un11_clk_0));
-    SLE servo_pwm (.D(\state[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        \state_d_i_0[2] ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(SERVO_PWM));
-    SLE \i[1]  (.D(\i_lm[1] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
-        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
-    CFG4 #( .INIT(16'hEAC0) )  un1_state_0_sqmuxa_0 (.A(
-        \state[0]_net_1 ), .B(\state[1]_net_1 ), .C(
-        un17_clklto30_net_1), .D(un11_clk_cry_30_net_1), .Y(
-        un1_state_0_sqmuxa_0_net_1));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_12 (.A(un11_clk_9), .B(
-        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_11_net_1), .S(), .Y(), .FCO(un11_clk_cry_12_net_1)
-        );
-    SLE \i[28]  (.D(\i_lm[28] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[28]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_7 (.A(VCC_net_1), 
-        .B(un5_pulse_length_axb_7), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un5_pulse_length_cry_6_net_1), .S(un5_pulse_length_cry_7_S), 
-        .Y(), .FCO(un5_pulse_length_cry_7_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[22]  (.A(VCC_net_1), .B(
-        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[21]_net_1 ), .S(\i_s[22] ), .Y(), .FCO(
-        \i_cry[22]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[17]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[17] ), .Y(\i_lm[17] ));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[23]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[23] ), .Y(\i_lm[23] ));
-    CFG2 #( .INIT(4'h1) )  state_s0_0_a3 (.A(\state[0]_net_1 ), .B(
-        \state[1]_net_1 ), .Y(\state_d[2] ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[19]  (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[18]_net_1 ), .S(\i_s[19] ), .Y(), .FCO(
-        \i_cry[19]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \i_cry[28]  (.A(VCC_net_1), .B(
-        \i[28]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \i_cry[27]_net_1 ), .S(\i_s[28] ), .Y(), .FCO(
-        \i_cry[28]_net_1 ));
-    SLE \i[18]  (.D(\i_lm[18] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[18]_net_1 ));
-    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_4 (.A(un11_clk_1), .B(
-        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        un11_clk_cry_3_net_1), .S(), .Y(), .FCO(un11_clk_cry_4_net_1));
-    CFG2 #( .INIT(4'h8) )  \i_lm_0[15]  (.A(un1_state_0_sqmuxa_0_net_1)
-        , .B(\i_s[15] ), .Y(\i_lm[15] ));
-    SLE \i[26]  (.D(\i_lm[26] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[26]_net_1 ));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_Rx_async_0s_1s_0s_1s_2s_3s(
-       rx_byte,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       baud_clock,
-       mss_sb_0_TX,
-       stop_strobe,
-       fifo_write,
-       rx_idle
-    );
-output [7:0] rx_byte;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  baud_clock;
-input  mss_sb_0_TX;
-output stop_strobe;
-output fifo_write;
-output rx_idle;
-
-    wire VCC_net_1, \rx_shift[3]_net_1 , rx_byte_1_sqmuxa, GND_net_1, 
-        \rx_shift[4]_net_1 , \rx_shift[5]_net_1 , \rx_shift[6]_net_1 , 
-        \rx_shift[7]_net_1 , \rx_bit_cnt[0]_net_1 , \rx_bit_cnt_4[0] , 
-        \rx_bit_cnt[1]_net_1 , \rx_bit_cnt_4[1] , 
-        \rx_bit_cnt[2]_net_1 , \rx_bit_cnt_4[2] , 
-        \rx_bit_cnt[3]_net_1 , \rx_bit_cnt_4[3] , \rx_shift[1]_net_1 , 
-        \rx_shift_11[1] , un1_samples7_1_0_net_1, \rx_shift[2]_net_1 , 
-        \rx_shift_11[2] , \rx_shift_11[3] , \rx_shift_11[4] , 
-        \rx_shift_11[5] , \rx_shift_11[6] , \rx_shift_11[7] , 
-        \receive_count[0]_net_1 , N_182_i_0, \receive_count[1]_net_1 , 
-        N_184_i_0, \receive_count[2]_net_1 , N_186_i_0, 
-        \receive_count[3]_net_1 , N_188_i_0, \rx_shift[0]_net_1 , 
-        \samples[0]_net_1 , \samples[1]_net_1 , \samples[2]_net_1 , 
-        \rx_shift_11[0] , \rx_state[1]_net_1 , i9_mux_0, 
-        \rx_statece[1]_net_1 , \rx_state[0]_net_1 , \rx_state_ns[0] , 
-        framing_error_int_2_sqmuxa, \last_bit[0]_net_1 , 
-        rx_state_0_sqmuxa, clear_parity_en_9_i_0, N_191, N_221, 
-        rx_bit_cnt_0_sqmuxa, N_193, m16_am, m16_bm, rx_state19_NE_0, 
-        clear_parity_en_9_3, \receive_count_3_i_a2_0_1[0] , N_24_mux, 
-        N_22_mux, rx_state19_NE, rx_bit_cnt_1_sqmuxa, N_208, i5_mux, 
-        CO1;
-    
-    CFG3 #( .INIT(8'h40) )  rx_bit_cnt_1_sqmuxa_0_a2 (.A(N_193), .B(
-        \receive_count[3]_net_1 ), .C(baud_clock), .Y(
-        rx_bit_cnt_1_sqmuxa));
-    SLE \samples[0]  (.D(\samples[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \samples[0]_net_1 ));
-    SLE \rx_shift[2]  (.D(\rx_shift_11[2] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[2]_net_1 ));
-    CFG4 #( .INIT(16'hFF80) )  \rcv_cnt.receive_count_3_i_o2[0]  (.A(
-        \receive_count[2]_net_1 ), .B(\receive_count[1]_net_1 ), .C(
-        \receive_count_3_i_a2_0_1[0] ), .D(N_208), .Y(N_191));
-    CFG3 #( .INIT(8'h08) )  \rcv_cnt.receive_count_3_i_a2_0_1_0[0]  (
-        .A(\rx_state[1]_net_1 ), .B(\rx_state[0]_net_1 ), .C(
-        \receive_count[3]_net_1 ), .Y(\receive_count_3_i_a2_0_1[0] ));
-    CFG4 #( .INIT(16'h0200) )  rx_byte_1_sqmuxa_0_a2 (.A(
-        \rx_state[0]_net_1 ), .B(\rx_state[1]_net_1 ), .C(
-        rx_state19_NE), .D(baud_clock), .Y(rx_byte_1_sqmuxa));
-    CFG4 #( .INIT(16'hF0F8) )  un1_samples7_1_0 (.A(baud_clock), .B(
-        \receive_count[3]_net_1 ), .C(rx_bit_cnt_0_sqmuxa), .D(N_193), 
-        .Y(un1_samples7_1_0_net_1));
-    SLE \rx_byte[0]  (.D(\rx_shift[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[0]));
-    CFG4 #( .INIT(16'h0004) )  \rcv_cnt.receive_count_3_i_a2_0[3]  (.A(
-        \receive_count[0]_net_1 ), .B(rx_idle), .C(
-        \receive_count[2]_net_1 ), .D(\receive_count[1]_net_1 ), .Y(
-        N_221));
-    SLE \receive_count[1]  (.D(N_184_i_0), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \receive_count[1]_net_1 ));
-    CFG3 #( .INIT(8'hE4) )  \rx_state_ns_1_0_.m16_ns  (.A(
-        \rx_state[1]_net_1 ), .B(m16_am), .C(m16_bm), .Y(
-        \rx_state_ns[0] ));
-    SLE \rx_shift[7]  (.D(\rx_shift_11[7] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[7]_net_1 ));
-    CFG4 #( .INIT(16'hBFFF) )  fifo_write_RNO (.A(
-        \rx_bit_cnt[2]_net_1 ), .B(\rx_bit_cnt[3]_net_1 ), .C(
-        clear_parity_en_9_3), .D(baud_clock), .Y(clear_parity_en_9_i_0)
-        );
-    SLE \rx_shift[0]  (.D(\rx_shift_11[0] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[0]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[0]  (.A(rx_idle), 
-        .B(\rx_shift[1]_net_1 ), .Y(\rx_shift_11[0] ));
-    SLE \receive_count[3]  (.D(N_188_i_0), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \receive_count[3]_net_1 ));
-    VCC VCC (.Y(VCC_net_1));
-    SLE fifo_write_inst_1 (.D(clear_parity_en_9_i_0), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(fifo_write));
-    SLE \rx_byte[4]  (.D(\rx_shift[4]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[4]));
-    CFG3 #( .INIT(8'hCA) )  \rx_state_ns_1_0_.m16_am  (.A(N_22_mux), 
-        .B(rx_state19_NE), .C(\rx_state[0]_net_1 ), .Y(m16_am));
-    SLE \rx_bit_cnt[2]  (.D(\rx_bit_cnt_4[2] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[2]_net_1 ));
-    CFG4 #( .INIT(16'h006C) )  \receive_shift.rx_bit_cnt_4[3]  (.A(
-        \rx_bit_cnt[2]_net_1 ), .B(\rx_bit_cnt[3]_net_1 ), .C(CO1), .D(
-        rx_bit_cnt_0_sqmuxa), .Y(\rx_bit_cnt_4[3] ));
-    CFG2 #( .INIT(4'h8) )  rx_state_0_sqmuxa_0_a2 (.A(N_221), .B(
-        \receive_count[3]_net_1 ), .Y(rx_state_0_sqmuxa));
-    CFG3 #( .INIT(8'h04) )  rx_bit_cnt_0_sqmuxa_0_a2 (.A(
-        \rx_state[0]_net_1 ), .B(baud_clock), .C(\rx_state[1]_net_1 ), 
-        .Y(rx_bit_cnt_0_sqmuxa));
-    SLE \rx_bit_cnt[1]  (.D(\rx_bit_cnt_4[1] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[1]_net_1 ));
-    CFG2 #( .INIT(4'h1) )  rx_state_s0_0_a2 (.A(\rx_state[0]_net_1 ), 
-        .B(\rx_state[1]_net_1 ), .Y(rx_idle));
-    CFG4 #( .INIT(16'h0100) )  
-        \receive_full_indicator.clear_parity_en_9_3  (.A(
-        \rx_bit_cnt[1]_net_1 ), .B(\rx_bit_cnt[0]_net_1 ), .C(
-        \rx_state[1]_net_1 ), .D(\rx_state[0]_net_1 ), .Y(
-        clear_parity_en_9_3));
-    CFG3 #( .INIT(8'h7F) )  \rcv_cnt.receive_count_3_i_o2[2]  (.A(
-        \receive_count[2]_net_1 ), .B(\receive_count[1]_net_1 ), .C(
-        \receive_count[0]_net_1 ), .Y(N_193));
-    CFG4 #( .INIT(16'h00E8) )  \receive_shift.rx_shift_11[7]  (.A(
-        \samples[0]_net_1 ), .B(\samples[2]_net_1 ), .C(
-        \samples[1]_net_1 ), .D(rx_idle), .Y(\rx_shift_11[7] ));
-    CFG4 #( .INIT(16'h006A) )  \receive_count_RNO[2]  (.A(
-        \receive_count[2]_net_1 ), .B(\receive_count[1]_net_1 ), .C(
-        \receive_count[0]_net_1 ), .D(N_191), .Y(N_186_i_0));
-    SLE stop_strobe_inst_1 (.D(framing_error_int_2_sqmuxa), .CLK(
-        FCCC_0_GL0), .EN(baud_clock), .ALn(FCCC_0_LOCK), .ADn(
-        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(stop_strobe));
-    SLE \samples[1]  (.D(\samples[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \samples[1]_net_1 ));
-    CFG3 #( .INIT(8'hC5) )  \rx_state_ns_1_0_.m18  (.A(rx_state19_NE), 
-        .B(i5_mux), .C(\rx_state[1]_net_1 ), .Y(i9_mux_0));
-    SLE \rx_byte[1]  (.D(\rx_shift[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[1]));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[2]  (.A(rx_idle), 
-        .B(\rx_shift[3]_net_1 ), .Y(\rx_shift_11[2] ));
-    SLE \receive_count[2]  (.D(N_186_i_0), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \receive_count[2]_net_1 ));
-    CFG3 #( .INIT(8'h80) )  \un1_rx_bit_cnt_1.CO1  (.A(
-        \rx_bit_cnt[0]_net_1 ), .B(rx_bit_cnt_1_sqmuxa), .C(
-        \rx_bit_cnt[1]_net_1 ), .Y(CO1));
-    SLE \rx_state[1]  (.D(i9_mux_0), .CLK(FCCC_0_GL0), .EN(
-        \rx_statece[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_state[1]_net_1 ));
-    SLE \rx_byte[6]  (.D(\rx_shift[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[6]));
-    CFG3 #( .INIT(8'h06) )  \receive_count_RNO[1]  (.A(
-        \receive_count[1]_net_1 ), .B(\receive_count[0]_net_1 ), .C(
-        N_191), .Y(N_184_i_0));
-    GND GND (.Y(GND_net_1));
-    CFG2 #( .INIT(4'h8) )  \rx_statece[1]  (.A(baud_clock), .B(
-        \rx_state[0]_net_1 ), .Y(\rx_statece[1]_net_1 ));
-    SLE \rx_shift[4]  (.D(\rx_shift_11[4] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[4]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[3]  (.A(rx_idle), 
-        .B(\rx_shift[4]_net_1 ), .Y(\rx_shift_11[3] ));
-    SLE \rx_byte[7]  (.D(\rx_shift[7]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[7]));
-    CFG4 #( .INIT(16'hFFDE) )  \rcv_sm.rx_state19_NE  (.A(
-        \rx_bit_cnt[0]_net_1 ), .B(rx_state19_NE_0), .C(
-        \last_bit[0]_net_1 ), .D(\rx_bit_cnt[1]_net_1 ), .Y(
-        rx_state19_NE));
-    CFG3 #( .INIT(8'h12) )  \receive_shift.rx_bit_cnt_4[2]  (.A(
-        \rx_bit_cnt[2]_net_1 ), .B(rx_bit_cnt_0_sqmuxa), .C(CO1), .Y(
-        \rx_bit_cnt_4[2] ));
-    SLE \rx_byte[3]  (.D(\rx_shift[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[3]));
-    CFG4 #( .INIT(16'h1000) )  \rx_state_ns_1_0_.m10  (.A(
-        \receive_count[0]_net_1 ), .B(\receive_count[3]_net_1 ), .C(
-        \receive_count[2]_net_1 ), .D(\receive_count[1]_net_1 ), .Y(
-        N_24_mux));
-    CFG4 #( .INIT(16'h1001) )  \receive_count_RNO[3]  (.A(N_221), .B(
-        N_208), .C(\receive_count[3]_net_1 ), .D(N_193), .Y(N_188_i_0));
-    SLE \rx_byte[2]  (.D(\rx_shift[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[2]));
-    CFG4 #( .INIT(16'h0103) )  \receive_count_RNO[0]  (.A(
-        \receive_count[3]_net_1 ), .B(\receive_count[0]_net_1 ), .C(
-        N_191), .D(N_221), .Y(N_182_i_0));
-    SLE \rx_shift[6]  (.D(\rx_shift_11[6] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[6]_net_1 ));
-    SLE \rx_shift[1]  (.D(\rx_shift_11[1] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[1]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[4]  (.A(rx_idle), 
-        .B(\rx_shift[5]_net_1 ), .Y(\rx_shift_11[4] ));
-    SLE \rx_shift[3]  (.D(\rx_shift_11[3] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[3]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[6]  (.A(rx_idle), 
-        .B(\rx_shift[7]_net_1 ), .Y(\rx_shift_11[6] ));
-    SLE \rx_state[0]  (.D(\rx_state_ns[0] ), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_state[0]_net_1 ));
-    SLE \samples[2]  (.D(mss_sb_0_TX), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \samples[2]_net_1 ));
-    CFG4 #( .INIT(16'h0020) )  framing_error_int_2_sqmuxa_0_a2 (.A(
-        \rx_state[1]_net_1 ), .B(\rx_state[0]_net_1 ), .C(
-        \receive_count[3]_net_1 ), .D(N_193), .Y(
-        framing_error_int_2_sqmuxa));
-    SLE \receive_count[0]  (.D(N_182_i_0), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \receive_count[0]_net_1 ));
-    SLE \rx_byte[5]  (.D(\rx_shift[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
-        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[5]));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[5]  (.A(rx_idle), 
-        .B(\rx_shift[6]_net_1 ), .Y(\rx_shift_11[5] ));
-    CFG4 #( .INIT(16'h0107) )  \rx_state_ns_1_0_.m14  (.A(
-        \samples[2]_net_1 ), .B(\samples[0]_net_1 ), .C(N_24_mux), .D(
-        \samples[1]_net_1 ), .Y(i5_mux));
-    CFG3 #( .INIT(8'h12) )  \receive_shift.rx_bit_cnt_4[0]  (.A(
-        \rx_bit_cnt[0]_net_1 ), .B(rx_bit_cnt_0_sqmuxa), .C(
-        rx_bit_cnt_1_sqmuxa), .Y(\rx_bit_cnt_4[0] ));
-    SLE \rx_shift[5]  (.D(\rx_shift_11[5] ), .CLK(FCCC_0_GL0), .EN(
-        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rx_shift[5]_net_1 ));
-    CFG4 #( .INIT(16'hE800) )  \rcv_cnt.receive_count_3_i_a2[3]  (.A(
-        \samples[0]_net_1 ), .B(\samples[2]_net_1 ), .C(
-        \samples[1]_net_1 ), .D(rx_idle), .Y(N_208));
-    SLE \rx_bit_cnt[0]  (.D(\rx_bit_cnt_4[0] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[0]_net_1 ));
-    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[1]  (.A(rx_idle), 
-        .B(\rx_shift[2]_net_1 ), .Y(\rx_shift_11[1] ));
-    CFG4 #( .INIT(16'h0004) )  \rx_state_ns_1_0_.m3  (.A(
-        \receive_count[0]_net_1 ), .B(\receive_count[3]_net_1 ), .C(
-        \receive_count[2]_net_1 ), .D(\receive_count[1]_net_1 ), .Y(
-        N_22_mux));
-    CFG4 #( .INIT(16'hC5C0) )  \rx_state_ns_1_0_.m16_bm  (.A(N_193), 
-        .B(i5_mux), .C(\rx_state[0]_net_1 ), .D(
-        \receive_count[3]_net_1 ), .Y(m16_bm));
-    SLE \last_bit[0]  (.D(GND_net_1), .CLK(FCCC_0_GL0), .EN(
-        rx_state_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \last_bit[0]_net_1 ));
-    CFG2 #( .INIT(4'hB) )  \rcv_sm.rx_state19_NE_0  (.A(
-        \rx_bit_cnt[2]_net_1 ), .B(\rx_bit_cnt[3]_net_1 ), .Y(
-        rx_state19_NE_0));
-    SLE \rx_bit_cnt[3]  (.D(\rx_bit_cnt_4[3] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[3]_net_1 ));
-    CFG4 #( .INIT(16'h006C) )  \receive_shift.rx_bit_cnt_4[1]  (.A(
-        \rx_bit_cnt[0]_net_1 ), .B(\rx_bit_cnt[1]_net_1 ), .C(
-        rx_bit_cnt_1_sqmuxa), .D(rx_bit_cnt_0_sqmuxa), .Y(
-        \rx_bit_cnt_4[1] ));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_ram128x8_pa4(
-       data_out_0,
-       rd_pointer,
-       wr_pointer,
-       tx_hold_reg_0,
-       tx_hold_reg_1,
-       tx_hold_reg_2,
-       tx_hold_reg_3,
-       tx_hold_reg_5,
-       FCCC_0_GL0,
-       fifo_write_tx
-    );
-output [7:0] data_out_0;
-input  [6:0] rd_pointer;
-input  [6:0] wr_pointer;
-input  tx_hold_reg_0;
-input  tx_hold_reg_1;
-input  tx_hold_reg_2;
-input  tx_hold_reg_3;
-input  tx_hold_reg_5;
-input  FCCC_0_GL0;
-input  fifo_write_tx;
-
-    wire VCC_net_1, GND_net_1, INV_0_Y;
-    
-    RAM64x18 RAM_128x8 (.A_DOUT({nc0, nc1, nc2, nc3, nc4, nc5, nc6, 
-        nc7, nc8, nc9, data_out_0[7], data_out_0[6], data_out_0[5], 
-        data_out_0[4], data_out_0[3], data_out_0[2], data_out_0[1], 
-        data_out_0[0]}), .B_DOUT({nc10, nc11, nc12, nc13, nc14, nc15, 
-        nc16, nc17, nc18, nc19, nc20, nc21, nc22, nc23, nc24, nc25, 
-        nc26, nc27}), .BUSY(), .A_ADDR_CLK(FCCC_0_GL0), .A_DOUT_CLK(
-        VCC_net_1), .A_ADDR_SRST_N(VCC_net_1), .A_DOUT_SRST_N(
-        VCC_net_1), .A_ADDR_ARST_N(VCC_net_1), .A_DOUT_ARST_N(
-        VCC_net_1), .A_ADDR_EN(VCC_net_1), .A_DOUT_EN(VCC_net_1), 
-        .A_BLK({VCC_net_1, VCC_net_1}), .A_ADDR({rd_pointer[6], 
-        rd_pointer[5], rd_pointer[4], rd_pointer[3], rd_pointer[2], 
-        rd_pointer[1], rd_pointer[0], GND_net_1, GND_net_1, GND_net_1})
-        , .B_ADDR_CLK(VCC_net_1), .B_DOUT_CLK(VCC_net_1), 
-        .B_ADDR_SRST_N(VCC_net_1), .B_DOUT_SRST_N(VCC_net_1), 
-        .B_ADDR_ARST_N(VCC_net_1), .B_DOUT_ARST_N(VCC_net_1), 
-        .B_ADDR_EN(VCC_net_1), .B_DOUT_EN(VCC_net_1), .B_BLK({
-        GND_net_1, GND_net_1}), .B_ADDR({GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1}), .C_CLK(FCCC_0_GL0), .C_ADDR({
-        wr_pointer[6], wr_pointer[5], wr_pointer[4], wr_pointer[3], 
-        wr_pointer[2], wr_pointer[1], wr_pointer[0], GND_net_1, 
-        GND_net_1, GND_net_1}), .C_DIN({GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        tx_hold_reg_5, tx_hold_reg_5, tx_hold_reg_3, tx_hold_reg_2, 
-        tx_hold_reg_1, tx_hold_reg_0}), .C_WEN(INV_0_Y), .C_BLK({
-        VCC_net_1, VCC_net_1}), .A_EN(VCC_net_1), .A_ADDR_LAT(
-        GND_net_1), .A_DOUT_LAT(VCC_net_1), .A_WIDTH({GND_net_1, 
-        VCC_net_1, VCC_net_1}), .B_EN(GND_net_1), .B_ADDR_LAT(
-        GND_net_1), .B_DOUT_LAT(VCC_net_1), .B_WIDTH({GND_net_1, 
-        VCC_net_1, VCC_net_1}), .C_EN(VCC_net_1), .C_WIDTH({GND_net_1, 
-        VCC_net_1, VCC_net_1}), .SII_LOCK(GND_net_1));
-    VCC VCC (.Y(VCC_net_1));
-    INV INV_0 (.A(fifo_write_tx), .Y(INV_0_Y));
-    GND GND (.Y(GND_net_1));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s(
-       counter,
-       tx_dout_reg,
-       tx_hold_reg_0,
-       tx_hold_reg_1,
-       tx_hold_reg_2,
-       tx_hold_reg_3,
-       tx_hold_reg_5,
-       fifo_write_tx,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       fifo_read_tx,
-       fifo_read_tx_i_0,
-       fifo_full_tx_i_0
-    );
-output [6:0] counter;
-output [7:0] tx_dout_reg;
-input  tx_hold_reg_0;
-input  tx_hold_reg_1;
-input  tx_hold_reg_2;
-input  tx_hold_reg_3;
-input  tx_hold_reg_5;
-input  fifo_write_tx;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  fifo_read_tx;
-input  fifo_read_tx_i_0;
-output fifo_full_tx_i_0;
-
-    wire \rd_pointer[0]_net_1 , \rd_pointer_s[0] , 
-        \wr_pointer[0]_net_1 , \wr_pointer_s[0] , N_3820_i_0_net_1, 
-        read_n_hold_net_1, read_n_hold_i_0, VCC_net_1, 
-        un1_counter_cry_0_Y, GND_net_1, un1_counter_cry_1_0_S, 
-        un1_counter_cry_2_0_S, un1_counter_cry_3_0_S, 
-        un1_counter_cry_4_0_S, un1_counter_cry_5_0_S, 
-        un1_counter_s_6_S, \data_out_0[4] , \data_out_0[5] , 
-        \data_out_0[6] , \data_out_0[7] , \data_out_0[0] , 
-        \data_out_0[1] , \data_out_0[2] , \data_out_0[3] , 
-        \wr_pointer[1]_net_1 , \wr_pointer_s[1] , 
-        \wr_pointer[2]_net_1 , \wr_pointer_s[2] , 
-        \wr_pointer[3]_net_1 , \wr_pointer_s[3] , 
-        \wr_pointer[4]_net_1 , \wr_pointer_s[4] , 
-        \wr_pointer[5]_net_1 , \wr_pointer_s[5] , 
-        \wr_pointer[6]_net_1 , \wr_pointer_s[6]_net_1 , 
-        \rd_pointer[1]_net_1 , \rd_pointer_s[1] , 
-        \rd_pointer[2]_net_1 , \rd_pointer_s[2] , 
-        \rd_pointer[3]_net_1 , \rd_pointer_s[3] , 
-        \rd_pointer[4]_net_1 , \rd_pointer_s[4] , 
-        \rd_pointer[5]_net_1 , \rd_pointer_s[5] , 
-        \rd_pointer[6]_net_1 , \rd_pointer_s[6]_net_1 , 
-        un1_counter_cry_0_net_1, un1_counter_cry_1, un1_counter_cry_2, 
-        un1_counter_cry_3, un1_counter_cry_4, un1_counter_cry_5, 
-        rd_pointer_s_317_FCO, \rd_pointer_cry[1]_net_1 , 
-        \rd_pointer_cry[2]_net_1 , \rd_pointer_cry[3]_net_1 , 
-        \rd_pointer_cry[4]_net_1 , \rd_pointer_cry[5]_net_1 , 
-        wr_pointer_s_318_FCO, \wr_pointer_cry[1]_net_1 , 
-        \wr_pointer_cry[2]_net_1 , \wr_pointer_cry[3]_net_1 , 
-        \wr_pointer_cry[4]_net_1 , \wr_pointer_cry[5]_net_1 , 
-        full_0_a2_4_net_1;
-    
-    SLE \wr_pointer[5]  (.D(\wr_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
-        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[5]_net_1 ));
-    CFG4 #( .INIT(16'h7FFF) )  full_0_a2_4_RNI02HF (.A(counter[0]), .B(
-        full_0_a2_4_net_1), .C(counter[3]), .D(counter[2]), .Y(
-        fifo_full_tx_i_0));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[1]  (.A(VCC_net_1), .B(
-        \wr_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        wr_pointer_s_318_FCO), .S(\wr_pointer_s[1] ), .Y(), .FCO(
-        \wr_pointer_cry[1]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[3]  (.A(VCC_net_1), .B(
-        \wr_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[2]_net_1 ), .S(\wr_pointer_s[3] ), .Y(), .FCO(
-        \wr_pointer_cry[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[2]  (.A(VCC_net_1), .B(
-        \wr_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[1]_net_1 ), .S(\wr_pointer_s[2] ), .Y(), .FCO(
-        \wr_pointer_cry[2]_net_1 ));
-    SLE \rd_pointer[2]  (.D(\rd_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[2]_net_1 ));
-    SLE \counter[2]  (.D(un1_counter_cry_2_0_S), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[2]));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[5]  (.A(VCC_net_1), .B(
-        \wr_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[4]_net_1 ), .S(\wr_pointer_s[5] ), .Y(), .FCO(
-        \wr_pointer_cry[5]_net_1 ));
-    SLE \rd_pointer[5]  (.D(\rd_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[5]_net_1 ));
-    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_2_0 (.A(counter[2]), 
-        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
-        un1_counter_cry_1), .S(un1_counter_cry_2_0_S), .Y(), .FCO(
-        un1_counter_cry_2));
-    SLE \data_out[3]  (.D(\data_out_0[3] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[3])
-        );
-    SLE \counter[6]  (.D(un1_counter_s_6_S), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[6]));
-    SLE read_n_hold (.D(fifo_read_tx), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
-        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(read_n_hold_net_1));
-    SLE \wr_pointer[1]  (.D(\wr_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
-        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[1]_net_1 ));
-    VCC VCC (.Y(VCC_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_s[6]  (.A(VCC_net_1), .B(
-        \rd_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[5]_net_1 ), .S(\rd_pointer_s[6]_net_1 ), .Y(), 
-        .FCO());
-    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_4_0 (.A(counter[4]), 
-        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
-        un1_counter_cry_3), .S(un1_counter_cry_4_0_S), .Y(), .FCO(
-        un1_counter_cry_4));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[1]  (.A(VCC_net_1), .B(
-        \rd_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        rd_pointer_s_317_FCO), .S(\rd_pointer_s[1] ), .Y(), .FCO(
-        \rd_pointer_cry[1]_net_1 ));
-    SLE \data_out[7]  (.D(\data_out_0[7] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[7])
-        );
-    SLE \data_out[4]  (.D(\data_out_0[4] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[4])
-        );
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_s[6]  (.A(VCC_net_1), .B(
-        \wr_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[5]_net_1 ), .S(\wr_pointer_s[6]_net_1 ), .Y(), 
-        .FCO());
-    SLE \wr_pointer[3]  (.D(\wr_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
-        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[3]_net_1 ));
-    GND GND (.Y(GND_net_1));
-    SLE \counter[4]  (.D(un1_counter_cry_4_0_S), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[4]));
-    SLE \counter[5]  (.D(un1_counter_cry_5_0_S), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[5]));
-    SLE \rd_pointer[0]  (.D(\rd_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[0]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  wr_pointer_s_318 (.A(VCC_net_1), .B(
-        \wr_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        VCC_net_1), .S(), .Y(), .FCO(wr_pointer_s_318_FCO));
-    SLE \data_out[5]  (.D(\data_out_0[5] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[5])
-        );
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[3]  (.A(VCC_net_1), .B(
-        \rd_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[2]_net_1 ), .S(\rd_pointer_s[3] ), .Y(), .FCO(
-        \rd_pointer_cry[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[4]  (.A(VCC_net_1), .B(
-        \wr_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[3]_net_1 ), .S(\wr_pointer_s[4] ), .Y(), .FCO(
-        \wr_pointer_cry[4]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  \wr_pointer_RNO[0]  (.A(
-        \wr_pointer[0]_net_1 ), .Y(\wr_pointer_s[0] ));
-    SLE \wr_pointer[6]  (.D(\wr_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
-        .EN(N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[6]_net_1 ));
-    CFG4 #( .INIT(16'h8000) )  full_0_a2_4 (.A(counter[4]), .B(
-        counter[5]), .C(counter[1]), .D(counter[6]), .Y(
-        full_0_a2_4_net_1));
-    SLE \data_out[0]  (.D(\data_out_0[0] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[0])
-        );
-    SLE \counter[1]  (.D(un1_counter_cry_1_0_S), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[1]));
-    SLE \wr_pointer[4]  (.D(\wr_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
-        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[4]_net_1 ));
-    SLE \data_out[2]  (.D(\data_out_0[2] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[2])
-        );
-    SLE \counter[3]  (.D(un1_counter_cry_3_0_S), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[3]));
-    SLE \wr_pointer[0]  (.D(\wr_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
-        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[0]_net_1 ));
-    SLE \data_out[6]  (.D(\data_out_0[6] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[6])
-        );
-    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_3_0 (.A(counter[3]), 
-        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
-        un1_counter_cry_2), .S(un1_counter_cry_3_0_S), .Y(), .FCO(
-        un1_counter_cry_3));
-    ARI1 #( .INIT(20'h59966) )  un1_counter_cry_0 (.A(counter[0]), .B(
-        fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
-        GND_net_1), .S(), .Y(un1_counter_cry_0_Y), .FCO(
-        un1_counter_cry_0_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[5]  (.A(VCC_net_1), .B(
-        \rd_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[4]_net_1 ), .S(\rd_pointer_s[5] ), .Y(), .FCO(
-        \rd_pointer_cry[5]_net_1 ));
-    SLE \wr_pointer[2]  (.D(\wr_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
-        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[2]_net_1 ));
-    SLE \rd_pointer[6]  (.D(\rd_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
-        .EN(fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[6]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  N_3820_i_0 (.A(fifo_write_tx), .Y(
-        N_3820_i_0_net_1));
-    SLE \rd_pointer[1]  (.D(\rd_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[1]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  read_n_hold_RNI6VUE (.A(read_n_hold_net_1), 
-        .Y(read_n_hold_i_0));
-    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_1_0 (.A(counter[1]), 
-        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
-        un1_counter_cry_0_net_1), .S(un1_counter_cry_1_0_S), .Y(), 
-        .FCO(un1_counter_cry_1));
-    CFG1 #( .INIT(2'h1) )  \rd_pointer_RNO[0]  (.A(
-        \rd_pointer[0]_net_1 ), .Y(\rd_pointer_s[0] ));
-    SLE \rd_pointer[3]  (.D(\rd_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[3]_net_1 ));
-    SLE \data_out[1]  (.D(\data_out_0[1] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[1])
-        );
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[2]  (.A(VCC_net_1), .B(
-        \rd_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[1]_net_1 ), .S(\rd_pointer_s[2] ), .Y(), .FCO(
-        \rd_pointer_cry[2]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  rd_pointer_s_317 (.A(VCC_net_1), .B(
-        \rd_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        VCC_net_1), .S(), .Y(), .FCO(rd_pointer_s_317_FCO));
-    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_5_0 (.A(counter[5]), 
-        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
-        un1_counter_cry_4), .S(un1_counter_cry_5_0_S), .Y(), .FCO(
-        un1_counter_cry_5));
-    SLE \rd_pointer[4]  (.D(\rd_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[4]_net_1 ));
-    Echo_control_COREUART_0_ram128x8_pa4 ram128_8_pa4 (.data_out_0({
-        \data_out_0[7] , \data_out_0[6] , \data_out_0[5] , 
-        \data_out_0[4] , \data_out_0[3] , \data_out_0[2] , 
-        \data_out_0[1] , \data_out_0[0] }), .rd_pointer({
-        \rd_pointer[6]_net_1 , \rd_pointer[5]_net_1 , 
-        \rd_pointer[4]_net_1 , \rd_pointer[3]_net_1 , 
-        \rd_pointer[2]_net_1 , \rd_pointer[1]_net_1 , 
-        \rd_pointer[0]_net_1 }), .wr_pointer({\wr_pointer[6]_net_1 , 
-        \wr_pointer[5]_net_1 , \wr_pointer[4]_net_1 , 
-        \wr_pointer[3]_net_1 , \wr_pointer[2]_net_1 , 
-        \wr_pointer[1]_net_1 , \wr_pointer[0]_net_1 }), .tx_hold_reg_0(
-        tx_hold_reg_0), .tx_hold_reg_1(tx_hold_reg_1), .tx_hold_reg_2(
-        tx_hold_reg_2), .tx_hold_reg_3(tx_hold_reg_3), .tx_hold_reg_5(
-        tx_hold_reg_5), .FCCC_0_GL0(FCCC_0_GL0), .fifo_write_tx(
-        fifo_write_tx));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[4]  (.A(VCC_net_1), .B(
-        \rd_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[3]_net_1 ), .S(\rd_pointer_s[4] ), .Y(), .FCO(
-        \rd_pointer_cry[4]_net_1 ));
-    ARI1 #( .INIT(20'h47800) )  un1_counter_s_6 (.A(VCC_net_1), .B(
-        fifo_read_tx_i_0), .C(fifo_write_tx), .D(counter[6]), .FCI(
-        un1_counter_cry_5), .S(un1_counter_s_6_S), .Y(), .FCO());
-    SLE \counter[0]  (.D(un1_counter_cry_0_Y), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[0]));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_fifo_256x8_0s_4294967232s(
-       counter,
-       tx_dout_reg,
-       tx_hold_reg_0,
-       tx_hold_reg_1,
-       tx_hold_reg_2,
-       tx_hold_reg_3,
-       tx_hold_reg_5,
-       fifo_write_tx,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       fifo_read_tx,
-       fifo_read_tx_i_0,
-       fifo_full_tx_i_0
-    );
-output [6:0] counter;
-output [7:0] tx_dout_reg;
-input  tx_hold_reg_0;
-input  tx_hold_reg_1;
-input  tx_hold_reg_2;
-input  tx_hold_reg_3;
-input  tx_hold_reg_5;
-input  fifo_write_tx;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  fifo_read_tx;
-input  fifo_read_tx_i_0;
-output fifo_full_tx_i_0;
-
-    wire GND_net_1, VCC_net_1;
-    
-    VCC VCC (.Y(VCC_net_1));
-    GND GND (.Y(GND_net_1));
-    Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s 
-        CoreUART_top_COREUART_0_fifo_128x8_pa4 (.counter({counter[6], 
-        counter[5], counter[4], counter[3], counter[2], counter[1], 
-        counter[0]}), .tx_dout_reg({tx_dout_reg[7], tx_dout_reg[6], 
-        tx_dout_reg[5], tx_dout_reg[4], tx_dout_reg[3], tx_dout_reg[2], 
-        tx_dout_reg[1], tx_dout_reg[0]}), .tx_hold_reg_0(tx_hold_reg_0)
-        , .tx_hold_reg_1(tx_hold_reg_1), .tx_hold_reg_2(tx_hold_reg_2), 
-        .tx_hold_reg_3(tx_hold_reg_3), .tx_hold_reg_5(tx_hold_reg_5), 
-        .fifo_write_tx(fifo_write_tx), .FCCC_0_LOCK(FCCC_0_LOCK), 
-        .FCCC_0_GL0(FCCC_0_GL0), .fifo_read_tx(fifo_read_tx), 
-        .fifo_read_tx_i_0(fifo_read_tx_i_0), .fifo_full_tx_i_0(
-        fifo_full_tx_i_0));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_Tx_async_0s_1s_0s_1s_2s_3s_4s_5s_6s(
-       tx_dout_reg,
-       counter,
-       fifo_read_tx,
-       fifo_read_tx_i_0,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       xmit_pulse,
-       Echo_control_0_TX,
-       COREUART_0_TXRDY,
-       fifo_full_tx_i_0,
-       baud_clock,
-       xmit_clock
-    );
-input  [7:0] tx_dout_reg;
-input  [6:0] counter;
-output fifo_read_tx;
-output fifo_read_tx_i_0;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  xmit_pulse;
-output Echo_control_0_TX;
-output COREUART_0_TXRDY;
-input  fifo_full_tx_i_0;
-input  baud_clock;
-input  xmit_clock;
-
-    wire \tx_byte[2]_net_1 , VCC_net_1, N_119_i_0, GND_net_1, 
-        \tx_byte[3]_net_1 , \tx_byte[4]_net_1 , \tx_byte[5]_net_1 , 
-        \tx_byte[6]_net_1 , \tx_byte[7]_net_1 , 
-        \xmit_bit_sel[0]_net_1 , \xmit_bit_sel_3[0] , 
-        \xmit_bit_sel[1]_net_1 , N_111_i_0, \xmit_bit_sel[2]_net_1 , 
-        N_113_i_0, \xmit_bit_sel[3]_net_1 , N_115_i_0, 
-        \tx_byte[0]_net_1 , \tx_byte[1]_net_1 , tx_4_iv_i_a2, 
-        N_129_i_0, fifo_read_en0_1_i_a3_i_net_1, \xmit_state[0]_net_1 , 
-        \xmit_state_ns[0] , \xmit_state[1]_net_1 , 
-        \xmit_state[6]_net_1 , \xmit_state[2]_net_1 , 
-        \xmit_state_ns[2] , \xmit_state[3]_net_1 , N_101_i_0, 
-        \xmit_state[5]_net_1 , \xmit_state_ns[5] , N_302_i_0, 
-        \xmit_state_ns_0_a2_0_1[0]_net_1 , tx_2_u_i_m2_am_1_1, 
-        tx_2_u_i_m2_am_1, tx_2_u_i_m2_bm_1_1, tx_2_u_i_m2_bm_1, 
-        tx_2_u_i_m2_ns, N_328_3, N_326_5, \xmit_bit_sel_3_i_0_o2[3] , 
-        \xmit_state_ns_0_a2[5]_net_1 ;
-    
-    CFG4 #( .INIT(16'hAC0F) )  \xmit_sel.tx_2_u_i_m2_bm  (.A(
-        \tx_byte[6]_net_1 ), .B(\tx_byte[7]_net_1 ), .C(
-        tx_2_u_i_m2_bm_1_1), .D(\xmit_bit_sel[1]_net_1 ), .Y(
-        tx_2_u_i_m2_bm_1));
-    SLE txrdy_int (.D(fifo_full_tx_i_0), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(COREUART_0_TXRDY));
-    CFG3 #( .INIT(8'h7F) )  \xmit_cnt.xmit_bit_sel_3_i_0_o2[3]  (.A(
-        \xmit_bit_sel[1]_net_1 ), .B(\xmit_bit_sel[2]_net_1 ), .C(
-        \xmit_bit_sel[0]_net_1 ), .Y(\xmit_bit_sel_3_i_0_o2[3] ));
-    CFG3 #( .INIT(8'hE2) )  \xmit_sel.tx_2_u_i_m2_ns  (.A(
-        tx_2_u_i_m2_am_1), .B(\xmit_bit_sel[2]_net_1 ), .C(
-        tx_2_u_i_m2_bm_1), .Y(tx_2_u_i_m2_ns));
-    SLE \xmit_state[3]  (.D(N_101_i_0), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[3]_net_1 ));
-    SLE \tx_byte[0]  (.D(tx_dout_reg[0]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[0]_net_1 ));
-    SLE \xmit_state[0]  (.D(\xmit_state_ns[0] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[0]_net_1 ));
-    SLE \tx_byte[4]  (.D(tx_dout_reg[4]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[4]_net_1 ));
-    CFG3 #( .INIT(8'hF2) )  \xmit_state_ns_0[5]  (.A(
-        \xmit_state[5]_net_1 ), .B(xmit_pulse), .C(
-        \xmit_state_ns_0_a2[5]_net_1 ), .Y(\xmit_state_ns[5] ));
-    CFG3 #( .INIT(8'hAE) )  \xmit_state_ns_0[2]  (.A(
-        \xmit_state[1]_net_1 ), .B(\xmit_state[2]_net_1 ), .C(
-        xmit_pulse), .Y(\xmit_state_ns[2] ));
-    CFG2 #( .INIT(4'h2) )  \xmit_cnt.xmit_bit_sel_3_a3_0_a2[0]  (.A(
-        \xmit_state[3]_net_1 ), .B(\xmit_bit_sel[0]_net_1 ), .Y(
-        \xmit_bit_sel_3[0] ));
-    CFG3 #( .INIT(8'h60) )  \xmit_bit_sel_RNO[1]  (.A(
-        \xmit_bit_sel[1]_net_1 ), .B(\xmit_bit_sel[0]_net_1 ), .C(
-        \xmit_state[3]_net_1 ), .Y(N_111_i_0));
-    VCC VCC (.Y(VCC_net_1));
-    SLE \tx_byte[5]  (.D(tx_dout_reg[5]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[5]_net_1 ));
-    CFG4 #( .INIT(16'h03F5) )  \xmit_sel.tx_2_u_i_m2_bm_1_1  (.A(
-        \tx_byte[4]_net_1 ), .B(\tx_byte[5]_net_1 ), .C(
-        \xmit_bit_sel[1]_net_1 ), .D(\xmit_bit_sel[0]_net_1 ), .Y(
-        tx_2_u_i_m2_bm_1_1));
-    SLE \xmit_state[5]  (.D(\xmit_state_ns[5] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[5]_net_1 ));
-    CFG3 #( .INIT(8'h51) )  \xmit_sel.tx_4_iv_i_a2  (.A(
-        \xmit_state[2]_net_1 ), .B(\xmit_state[3]_net_1 ), .C(
-        tx_2_u_i_m2_ns), .Y(tx_4_iv_i_a2));
-    CFG4 #( .INIT(16'h0020) )  \xmit_state_ns_0_a2[5]  (.A(
-        \xmit_state[3]_net_1 ), .B(\xmit_bit_sel[3]_net_1 ), .C(
-        xmit_pulse), .D(\xmit_bit_sel_3_i_0_o2[3] ), .Y(
-        \xmit_state_ns_0_a2[5]_net_1 ));
-    CFG4 #( .INIT(16'h8AAA) )  fifo_read_en0_1_i_a3_i_i (.A(
-        \xmit_state[0]_net_1 ), .B(counter[5]), .C(N_328_3), .D(
-        N_326_5), .Y(N_302_i_0));
-    SLE \xmit_state[2]  (.D(\xmit_state_ns[2] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[2]_net_1 ));
-    SLE \xmit_bit_sel[3]  (.D(N_115_i_0), .CLK(FCCC_0_GL0), .EN(
-        xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \xmit_bit_sel[3]_net_1 ));
-    CFG3 #( .INIT(8'h80) )  \xmit_state_RNIDBOR[2]  (.A(
-        \xmit_state[2]_net_1 ), .B(baud_clock), .C(xmit_clock), .Y(
-        N_119_i_0));
-    CFG4 #( .INIT(16'hEAC0) )  \xmit_state_ns_0[0]  (.A(
-        \xmit_state_ns_0_a2_0_1[0]_net_1 ), .B(\xmit_state[5]_net_1 ), 
-        .C(xmit_pulse), .D(N_326_5), .Y(\xmit_state_ns[0] ));
-    SLE \xmit_bit_sel[2]  (.D(N_113_i_0), .CLK(FCCC_0_GL0), .EN(
-        xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \xmit_bit_sel[2]_net_1 ));
-    GND GND (.Y(GND_net_1));
-    SLE tx (.D(tx_4_iv_i_a2), .CLK(FCCC_0_GL0), .EN(N_129_i_0), .ALn(
-        FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(Echo_control_0_TX));
-    SLE \tx_byte[3]  (.D(tx_dout_reg[3]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[3]_net_1 ));
-    CFG4 #( .INIT(16'h0100) )  \xmit_state_ns_0_a2_0_1[0]  (.A(
-        counter[6]), .B(counter[4]), .C(counter[5]), .D(
-        \xmit_state[0]_net_1 ), .Y(\xmit_state_ns_0_a2_0_1[0]_net_1 ));
-    SLE \tx_byte[7]  (.D(tx_dout_reg[7]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[7]_net_1 ));
-    CFG4 #( .INIT(16'h00EC) )  \xmit_state_RNO[3]  (.A(
-        \xmit_state[2]_net_1 ), .B(\xmit_state[3]_net_1 ), .C(
-        xmit_pulse), .D(\xmit_state_ns_0_a2[5]_net_1 ), .Y(N_101_i_0));
-    CFG2 #( .INIT(4'h1) )  \xmit_state_ns_0_a2_0_3[0]  (.A(counter[4]), 
-        .B(counter[6]), .Y(N_328_3));
-    CFG4 #( .INIT(16'h60A0) )  \xmit_bit_sel_RNO[2]  (.A(
-        \xmit_bit_sel[2]_net_1 ), .B(\xmit_bit_sel[0]_net_1 ), .C(
-        \xmit_state[3]_net_1 ), .D(\xmit_bit_sel[1]_net_1 ), .Y(
-        N_113_i_0));
-    CFG1 #( .INIT(2'h1) )  fifo_read_en0_RNIMOU (.A(fifo_read_tx), .Y(
-        fifo_read_tx_i_0));
-    SLE \tx_byte[6]  (.D(tx_dout_reg[6]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[6]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  fifo_read_en0_1_i_a3_i_a2_4 (.A(
-        counter[3]), .B(counter[2]), .C(counter[1]), .D(counter[0]), 
-        .Y(N_326_5));
-    SLE \xmit_bit_sel[1]  (.D(N_111_i_0), .CLK(FCCC_0_GL0), .EN(
-        xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \xmit_bit_sel[1]_net_1 ));
-    SLE \xmit_state[1]  (.D(\xmit_state[6]_net_1 ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \xmit_state[1]_net_1 ));
-    SLE \xmit_bit_sel[0]  (.D(\xmit_bit_sel_3[0] ), .CLK(FCCC_0_GL0), 
-        .EN(xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \xmit_bit_sel[0]_net_1 ));
-    SLE \tx_byte[2]  (.D(tx_dout_reg[2]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[2]_net_1 ));
-    SLE fifo_read_en0 (.D(fifo_read_en0_1_i_a3_i_net_1), .CLK(
-        FCCC_0_GL0), .EN(N_129_i_0), .ALn(FCCC_0_LOCK), .ADn(GND_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        fifo_read_tx));
-    SLE \tx_byte[1]  (.D(tx_dout_reg[1]), .CLK(FCCC_0_GL0), .EN(
-        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[1]_net_1 ));
-    CFG3 #( .INIT(8'h84) )  \xmit_bit_sel_RNO[3]  (.A(
-        \xmit_bit_sel[3]_net_1 ), .B(\xmit_state[3]_net_1 ), .C(
-        \xmit_bit_sel_3_i_0_o2[3] ), .Y(N_115_i_0));
-    CFG4 #( .INIT(16'h03F5) )  \xmit_sel.tx_2_u_i_m2_am_1_1  (.A(
-        \tx_byte[0]_net_1 ), .B(\tx_byte[1]_net_1 ), .C(
-        \xmit_bit_sel[1]_net_1 ), .D(\xmit_bit_sel[0]_net_1 ), .Y(
-        tx_2_u_i_m2_am_1_1));
-    SLE \xmit_state[6]  (.D(N_302_i_0), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[6]_net_1 ));
-    CFG4 #( .INIT(16'h7555) )  fifo_read_en0_1_i_a3_i (.A(
-        \xmit_state[0]_net_1 ), .B(counter[5]), .C(N_328_3), .D(
-        N_326_5), .Y(fifo_read_en0_1_i_a3_i_net_1));
-    CFG4 #( .INIT(16'hFFFE) )  \xmit_state_RNIS58N1[1]  (.A(
-        \xmit_state[0]_net_1 ), .B(\xmit_state[1]_net_1 ), .C(
-        xmit_pulse), .D(\xmit_state[6]_net_1 ), .Y(N_129_i_0));
-    CFG4 #( .INIT(16'hAC0F) )  \xmit_sel.tx_2_u_i_m2_am  (.A(
-        \tx_byte[2]_net_1 ), .B(\tx_byte[3]_net_1 ), .C(
-        tx_2_u_i_m2_am_1_1), .D(\xmit_bit_sel[1]_net_1 ), .Y(
-        tx_2_u_i_m2_am_1));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_Clock_gen_0s_0s(
-       xmit_clock,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       baud_clock,
-       xmit_pulse
-    );
-output xmit_clock;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-output baud_clock;
-output xmit_pulse;
-
-    wire VCC_net_1, xmit_clock5, GND_net_1, \xmit_cntr[0]_net_1 , 
-        \xmit_cntr_3[0] , \xmit_cntr[1]_net_1 , \xmit_cntr_3[1] , 
-        \xmit_cntr[2]_net_1 , \xmit_cntr_3[2] , \xmit_cntr[3]_net_1 , 
-        \xmit_cntr_3[3] , baud_cntr8_1_RNIEQ8C1_Y, \baud_cntr[0] , 
-        \baud_cntr_s[0] , \baud_cntr[1] , \baud_cntr_s[1] , 
-        \baud_cntr[2] , \baud_cntr_s[2] , \baud_cntr[3] , 
-        \baud_cntr_s[3] , \baud_cntr[4] , \baud_cntr_s[4] , 
-        \baud_cntr[5] , \baud_cntr_s[5] , \baud_cntr[6] , 
-        \baud_cntr_s[6] , \baud_cntr[7] , \baud_cntr_s[7] , 
-        \baud_cntr[8] , \baud_cntr_s[8] , \baud_cntr[9] , 
-        \baud_cntr_s[9] , \baud_cntr[10] , \baud_cntr_s[10] , 
-        \baud_cntr[11] , \baud_cntr_s[11] , \baud_cntr[12] , 
-        \baud_cntr_s[12] , baud_cntr_cry_cy, baud_cntr8_8, 
-        baud_cntr8_1, baud_cntr8_7, \baud_cntr_cry[0] , 
-        \baud_cntr_cry[1] , \baud_cntr_cry[2] , \baud_cntr_cry[3] , 
-        \baud_cntr_cry[4] , \baud_cntr_cry[5] , \baud_cntr_cry[6] , 
-        \baud_cntr_cry[7] , \baud_cntr_cry[8] , \baud_cntr_cry[9] , 
-        \baud_cntr_cry[10] , \baud_cntr_cry[11] , CO0;
-    
-    SLE \genblk1.baud_cntr[4]  (.D(\baud_cntr_s[4] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[4] )
-        );
-    SLE \genblk1.baud_cntr[1]  (.D(\baud_cntr_s[1] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[1] )
-        );
-    SLE \genblk1.baud_cntr[3]  (.D(\baud_cntr_s[3] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[3] )
-        );
-    SLE \xmit_cntr[3]  (.D(\xmit_cntr_3[3] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[3]_net_1 ));
-    SLE \genblk1.baud_cntr[9]  (.D(\baud_cntr_s[9] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[9] )
-        );
-    SLE \genblk1.baud_clock_int  (.D(baud_cntr8_1_RNIEQ8C1_Y), .CLK(
-        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        baud_clock));
-    CFG4 #( .INIT(16'h0001) )  \genblk1.make_baud_cntr.baud_cntr8_8  (
-        .A(\baud_cntr[12] ), .B(\baud_cntr[7] ), .C(\baud_cntr[6] ), 
-        .D(\baud_cntr[5] ), .Y(baud_cntr8_8));
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI45C68[7]  (.A(
-        VCC_net_1), .B(\baud_cntr[7] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[6] ), .S(\baud_cntr_s[7] ), .Y(), .FCO(
-        \baud_cntr_cry[7] ));
-    VCC VCC (.Y(VCC_net_1));
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI3O1H7[5]  (.A(
-        VCC_net_1), .B(\baud_cntr[5] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[4] ), .S(\baud_cntr_s[5] ), .Y(), .FCO(
-        \baud_cntr_cry[5] ));
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNIK6BB9[10]  (.A(
-        VCC_net_1), .B(\baud_cntr[10] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[9] ), .S(\baud_cntr_s[10] ), .Y(), .FCO(
-        \baud_cntr_cry[10] ));
-    ARI1 #( .INIT(20'h44000) )  
-        \genblk1.make_baud_cntr.baud_cntr8_1_RNIEQ8C1  (.A(
-        baud_cntr8_8), .B(\baud_cntr[2] ), .C(baud_cntr8_1), .D(
-        baud_cntr8_7), .FCI(VCC_net_1), .S(), .Y(
-        baud_cntr8_1_RNIEQ8C1_Y), .FCO(baud_cntr_cry_cy));
-    SLE \genblk1.baud_cntr[7]  (.D(\baud_cntr_s[7] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[7] )
-        );
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI8QTM1[0]  (.A(
-        VCC_net_1), .B(\baud_cntr[0] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(baud_cntr_cry_cy), .S(\baud_cntr_s[0] ), .Y(), .FCO(
-        \baud_cntr_cry[0] ));
-    SLE \genblk1.baud_cntr[5]  (.D(\baud_cntr_s[5] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[5] )
-        );
-    CFG4 #( .INIT(16'h8000) )  \make_xmit_clock.xmit_clock5  (.A(
-        \xmit_cntr[2]_net_1 ), .B(\xmit_cntr[3]_net_1 ), .C(
-        \xmit_cntr[1]_net_1 ), .D(\xmit_cntr[0]_net_1 ), .Y(
-        xmit_clock5));
-    GND GND (.Y(GND_net_1));
-    CFG4 #( .INIT(16'h6AAA) )  \make_xmit_clock.xmit_cntr_3_1.SUM[3]  
-        (.A(\xmit_cntr[3]_net_1 ), .B(\xmit_cntr[2]_net_1 ), .C(
-        \xmit_cntr[1]_net_1 ), .D(CO0), .Y(\xmit_cntr_3[3] ));
-    CFG4 #( .INIT(16'h0001) )  \genblk1.make_baud_cntr.baud_cntr8_1  (
-        .A(\baud_cntr[4] ), .B(\baud_cntr[3] ), .C(\baud_cntr[1] ), .D(
-        \baud_cntr[0] ), .Y(baud_cntr8_1));
-    ARI1 #( .INIT(20'h61100) )  \genblk1.baud_cntr_RNI4JC67[4]  (.A(
-        VCC_net_1), .B(baud_cntr8_1_RNIEQ8C1_Y), .C(\baud_cntr[4] ), 
-        .D(GND_net_1), .FCI(\baud_cntr_cry[3] ), .S(\baud_cntr_s[4] ), 
-        .Y(), .FCO(\baud_cntr_cry[4] ));
-    SLE \genblk1.baud_cntr[8]  (.D(\baud_cntr_s[8] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[8] )
-        );
-    ARI1 #( .INIT(20'h61100) )  \genblk1.baud_cntr_RNIOKEF5[3]  (.A(
-        VCC_net_1), .B(baud_cntr8_1_RNIEQ8C1_Y), .C(\baud_cntr[3] ), 
-        .D(GND_net_1), .FCI(\baud_cntr_cry[2] ), .S(\baud_cntr_s[3] ), 
-        .Y(), .FCO(\baud_cntr_cry[3] ));
-    SLE \genblk1.baud_cntr[0]  (.D(\baud_cntr_s[0] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[0] )
-        );
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI3UMR7[6]  (.A(
-        VCC_net_1), .B(\baud_cntr[6] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[5] ), .S(\baud_cntr_s[6] ), .Y(), .FCO(
-        \baud_cntr_cry[6] ));
-    CFG4 #( .INIT(16'h0001) )  \genblk1.make_baud_cntr.baud_cntr8_7  (
-        .A(\baud_cntr[11] ), .B(\baud_cntr[10] ), .C(\baud_cntr[9] ), 
-        .D(\baud_cntr[8] ), .Y(baud_cntr8_7));
-    ARI1 #( .INIT(20'h61100) )  \genblk1.baud_cntr_RNIHLRD3[1]  (.A(
-        VCC_net_1), .B(baud_cntr8_1_RNIEQ8C1_Y), .C(\baud_cntr[1] ), 
-        .D(GND_net_1), .FCI(\baud_cntr_cry[0] ), .S(\baud_cntr_s[1] ), 
-        .Y(), .FCO(\baud_cntr_cry[1] ));
-    SLE \xmit_cntr[2]  (.D(\xmit_cntr_3[2] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[2]_net_1 ));
-    CFG2 #( .INIT(4'h6) )  \make_xmit_clock.xmit_cntr_3_1.SUM[1]  (.A(
-        CO0), .B(\xmit_cntr[1]_net_1 ), .Y(\xmit_cntr_3[1] ));
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI0OVQ9[11]  (.A(
-        VCC_net_1), .B(\baud_cntr[11] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[10] ), .S(\baud_cntr_s[11] ), .Y(), .FCO(
-        \baud_cntr_cry[11] ));
-    SLE \genblk1.baud_cntr[10]  (.D(\baud_cntr_s[10] ), .CLK(
-        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \baud_cntr[10] ));
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNIDNGO3[2]  (.A(
-        VCC_net_1), .B(\baud_cntr[2] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[1] ), .S(\baud_cntr_s[2] ), .Y(), .FCO(
-        \baud_cntr_cry[2] ));
-    SLE \genblk1.baud_cntr[6]  (.D(\baud_cntr_s[6] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[6] )
-        );
-    SLE xmit_clock_inst_1 (.D(xmit_clock5), .CLK(FCCC_0_GL0), .EN(
-        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(xmit_clock));
-    CFG2 #( .INIT(4'h8) )  \make_xmit_clock.xmit_cntr_3_1.CO0  (.A(
-        baud_clock), .B(\xmit_cntr[0]_net_1 ), .Y(CO0));
-    ARI1 #( .INIT(20'h45500) )  \genblk1.baud_cntr_RNO[12]  (.A(
-        VCC_net_1), .B(\baud_cntr[12] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[11] ), .S(\baud_cntr_s[12] ), .Y(), .FCO());
-    SLE \genblk1.baud_cntr[12]  (.D(\baud_cntr_s[12] ), .CLK(
-        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \baud_cntr[12] ));
-    SLE \xmit_cntr[1]  (.D(\xmit_cntr_3[1] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[1]_net_1 ));
-    SLE \genblk1.baud_cntr[2]  (.D(\baud_cntr_s[2] ), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[2] )
-        );
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI9MMR8[9]  (.A(
-        VCC_net_1), .B(\baud_cntr[9] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[8] ), .S(\baud_cntr_s[9] ), .Y(), .FCO(
-        \baud_cntr_cry[9] ));
-    CFG2 #( .INIT(4'h8) )  xmit_pulse_inst_1 (.A(baud_clock), .B(
-        xmit_clock), .Y(xmit_pulse));
-    SLE \xmit_cntr[0]  (.D(\xmit_cntr_3[0] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[0]_net_1 ));
-    CFG2 #( .INIT(4'h6) )  \make_xmit_clock.xmit_cntr_3_1.SUM[0]  (.A(
-        baud_clock), .B(\xmit_cntr[0]_net_1 ), .Y(\xmit_cntr_3[0] ));
-    SLE \genblk1.baud_cntr[11]  (.D(\baud_cntr_s[11] ), .CLK(
-        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \baud_cntr[11] ));
-    CFG3 #( .INIT(8'h6A) )  \make_xmit_clock.xmit_cntr_3_1.SUM[2]  (.A(
-        \xmit_cntr[2]_net_1 ), .B(\xmit_cntr[1]_net_1 ), .C(CO0), .Y(
-        \xmit_cntr_3[2] ));
-    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI6D1H8[8]  (.A(
-        VCC_net_1), .B(\baud_cntr[8] ), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(\baud_cntr_cry[7] ), .S(\baud_cntr_s[8] ), .Y(), .FCO(
-        \baud_cntr_cry[8] ));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_ram128x8_pa4_0(
-       data_out_0,
-       rd_pointer,
-       wr_pointer,
-       rx_byte,
-       FCCC_0_GL0,
-       fifo_write_rx_1
-    );
-output [7:0] data_out_0;
-input  [6:0] rd_pointer;
-input  [6:0] wr_pointer;
-input  [7:0] rx_byte;
-input  FCCC_0_GL0;
-input  fifo_write_rx_1;
-
-    wire VCC_net_1, GND_net_1, INV_0_Y;
-    
-    RAM64x18 RAM_128x8 (.A_DOUT({nc0, nc1, nc2, nc3, nc4, nc5, nc6, 
-        nc7, nc8, nc9, data_out_0[7], data_out_0[6], data_out_0[5], 
-        data_out_0[4], data_out_0[3], data_out_0[2], data_out_0[1], 
-        data_out_0[0]}), .B_DOUT({nc10, nc11, nc12, nc13, nc14, nc15, 
-        nc16, nc17, nc18, nc19, nc20, nc21, nc22, nc23, nc24, nc25, 
-        nc26, nc27}), .BUSY(), .A_ADDR_CLK(FCCC_0_GL0), .A_DOUT_CLK(
-        VCC_net_1), .A_ADDR_SRST_N(VCC_net_1), .A_DOUT_SRST_N(
-        VCC_net_1), .A_ADDR_ARST_N(VCC_net_1), .A_DOUT_ARST_N(
-        VCC_net_1), .A_ADDR_EN(VCC_net_1), .A_DOUT_EN(VCC_net_1), 
-        .A_BLK({VCC_net_1, VCC_net_1}), .A_ADDR({rd_pointer[6], 
-        rd_pointer[5], rd_pointer[4], rd_pointer[3], rd_pointer[2], 
-        rd_pointer[1], rd_pointer[0], GND_net_1, GND_net_1, GND_net_1})
-        , .B_ADDR_CLK(VCC_net_1), .B_DOUT_CLK(VCC_net_1), 
-        .B_ADDR_SRST_N(VCC_net_1), .B_DOUT_SRST_N(VCC_net_1), 
-        .B_ADDR_ARST_N(VCC_net_1), .B_DOUT_ARST_N(VCC_net_1), 
-        .B_ADDR_EN(VCC_net_1), .B_DOUT_EN(VCC_net_1), .B_BLK({
-        GND_net_1, GND_net_1}), .B_ADDR({GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1}), .C_CLK(FCCC_0_GL0), .C_ADDR({
-        wr_pointer[6], wr_pointer[5], wr_pointer[4], wr_pointer[3], 
-        wr_pointer[2], wr_pointer[1], wr_pointer[0], GND_net_1, 
-        GND_net_1, GND_net_1}), .C_DIN({GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
-        GND_net_1, GND_net_1, GND_net_1, rx_byte[7], rx_byte[6], 
-        rx_byte[5], rx_byte[4], rx_byte[3], rx_byte[2], rx_byte[1], 
-        rx_byte[0]}), .C_WEN(INV_0_Y), .C_BLK({VCC_net_1, VCC_net_1}), 
-        .A_EN(VCC_net_1), .A_ADDR_LAT(GND_net_1), .A_DOUT_LAT(
-        VCC_net_1), .A_WIDTH({GND_net_1, VCC_net_1, VCC_net_1}), .B_EN(
-        GND_net_1), .B_ADDR_LAT(GND_net_1), .B_DOUT_LAT(VCC_net_1), 
-        .B_WIDTH({GND_net_1, VCC_net_1, VCC_net_1}), .C_EN(VCC_net_1), 
-        .C_WIDTH({GND_net_1, VCC_net_1, VCC_net_1}), .SII_LOCK(
-        GND_net_1));
-    VCC VCC (.Y(VCC_net_1));
-    INV INV_0 (.A(fifo_write_rx_1), .Y(INV_0_Y));
-    GND GND (.Y(GND_net_1));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s_0(
-       rx_dout,
-       rx_byte,
-       counter_0,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       N_3802_i_0,
-       N_3803_i_0,
-       fifo_read_rx_0_sqmuxa,
-       fifo_write_rx_1,
-       full_0,
-       full_4,
-       fifo_empty_rx
-    );
-output [7:0] rx_dout;
-input  [7:0] rx_byte;
-output counter_0;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  N_3802_i_0;
-input  N_3803_i_0;
-input  fifo_read_rx_0_sqmuxa;
-input  fifo_write_rx_1;
-output full_0;
-output full_4;
-output fifo_empty_rx;
-
-    wire \rd_pointer[0]_net_1 , \rd_pointer_s[0] , 
-        \wr_pointer[0]_net_1 , \wr_pointer_s[0] , read_n_hold_net_1, 
-        read_n_hold_i_0, \counter[3]_net_1 , VCC_net_1, 
-        un1_counter_cry_3_0_S_0, GND_net_1, \counter[4]_net_1 , 
-        un1_counter_cry_4_0_S_0, \counter[5]_net_1 , 
-        un1_counter_cry_5_0_S_0, \counter[6]_net_1 , 
-        un1_counter_s_6_S_0, un1_counter_cry_0_Y_0, \counter[1]_net_1 , 
-        un1_counter_cry_1_0_S_0, \counter[2]_net_1 , 
-        un1_counter_cry_2_0_S_0, \data_out_0[0] , \data_out_0[1] , 
-        \data_out_0[2] , \data_out_0[3] , \data_out_0[4] , 
-        \data_out_0[5] , \data_out_0[6] , \data_out_0[7] , 
-        \wr_pointer[1]_net_1 , \wr_pointer_s[1] , 
-        \wr_pointer[2]_net_1 , \wr_pointer_s[2] , 
-        \wr_pointer[3]_net_1 , \wr_pointer_s[3] , 
-        \wr_pointer[4]_net_1 , \wr_pointer_s[4] , 
-        \wr_pointer[5]_net_1 , \wr_pointer_s[5] , 
-        \wr_pointer[6]_net_1 , \wr_pointer_s[6]_net_1 , 
-        \rd_pointer[1]_net_1 , \rd_pointer_s[1] , 
-        \rd_pointer[2]_net_1 , \rd_pointer_s[2] , 
-        \rd_pointer[3]_net_1 , \rd_pointer_s[3] , 
-        \rd_pointer[4]_net_1 , \rd_pointer_s[4] , 
-        \rd_pointer[5]_net_1 , \rd_pointer_s[5] , 
-        \rd_pointer[6]_net_1 , \rd_pointer_s[6]_net_1 , 
-        un1_counter_cry_0_net_1, un1_counter_cry_1, un1_counter_cry_2, 
-        un1_counter_cry_3, un1_counter_cry_4, un1_counter_cry_5, 
-        rd_pointer_s_319_FCO, \rd_pointer_cry[1]_net_1 , 
-        \rd_pointer_cry[2]_net_1 , \rd_pointer_cry[3]_net_1 , 
-        \rd_pointer_cry[4]_net_1 , \rd_pointer_cry[5]_net_1 , 
-        wr_pointer_s_320_FCO, \wr_pointer_cry[1]_net_1 , 
-        \wr_pointer_cry[2]_net_1 , \wr_pointer_cry[3]_net_1 , 
-        \wr_pointer_cry[4]_net_1 , \wr_pointer_cry[5]_net_1 , 
-        empty_4_net_1;
-    
-    SLE \wr_pointer[5]  (.D(\wr_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
-        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[5]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  full_0_inst_1 (.A(\counter[1]_net_1 ), .B(
-        \counter[2]_net_1 ), .Y(full_0));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[1]  (.A(VCC_net_1), .B(
-        \wr_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        wr_pointer_s_320_FCO), .S(\wr_pointer_s[1] ), .Y(), .FCO(
-        \wr_pointer_cry[1]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[3]  (.A(VCC_net_1), .B(
-        \wr_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[2]_net_1 ), .S(\wr_pointer_s[3] ), .Y(), .FCO(
-        \wr_pointer_cry[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[2]  (.A(VCC_net_1), .B(
-        \wr_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[1]_net_1 ), .S(\wr_pointer_s[2] ), .Y(), .FCO(
-        \wr_pointer_cry[2]_net_1 ));
-    SLE \rd_pointer[2]  (.D(\rd_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[2]_net_1 ));
-    SLE \counter[2]  (.D(un1_counter_cry_2_0_S_0), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \counter[2]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[5]  (.A(VCC_net_1), .B(
-        \wr_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[4]_net_1 ), .S(\wr_pointer_s[5] ), .Y(), .FCO(
-        \wr_pointer_cry[5]_net_1 ));
-    SLE \rd_pointer[5]  (.D(\rd_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[5]_net_1 ));
-    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_2_0 (.A(
-        \counter[2]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
-        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_1), .S(
-        un1_counter_cry_2_0_S_0), .Y(), .FCO(un1_counter_cry_2));
-    SLE \data_out[3]  (.D(\data_out_0[3] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[3]));
-    SLE \counter[6]  (.D(un1_counter_s_6_S_0), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\counter[6]_net_1 ));
-    SLE read_n_hold (.D(N_3802_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(read_n_hold_net_1));
-    SLE \wr_pointer[1]  (.D(\wr_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
-        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[1]_net_1 ));
-    VCC VCC (.Y(VCC_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_s[6]  (.A(VCC_net_1), .B(
-        \rd_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[5]_net_1 ), .S(\rd_pointer_s[6]_net_1 ), .Y(), 
-        .FCO());
-    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_4_0 (.A(
-        \counter[4]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
-        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_3), .S(
-        un1_counter_cry_4_0_S_0), .Y(), .FCO(un1_counter_cry_4));
-    ARI1 #( .INIT(20'h4AA00) )  rd_pointer_s_319 (.A(VCC_net_1), .B(
-        \rd_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        VCC_net_1), .S(), .Y(), .FCO(rd_pointer_s_319_FCO));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[1]  (.A(VCC_net_1), .B(
-        \rd_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        rd_pointer_s_319_FCO), .S(\rd_pointer_s[1] ), .Y(), .FCO(
-        \rd_pointer_cry[1]_net_1 ));
-    SLE \data_out[7]  (.D(\data_out_0[7] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[7]));
-    SLE \data_out[4]  (.D(\data_out_0[4] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[4]));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_s[6]  (.A(VCC_net_1), .B(
-        \wr_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[5]_net_1 ), .S(\wr_pointer_s[6]_net_1 ), .Y(), 
-        .FCO());
-    SLE \wr_pointer[3]  (.D(\wr_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
-        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[3]_net_1 ));
-    GND GND (.Y(GND_net_1));
-    SLE \counter[4]  (.D(un1_counter_cry_4_0_S_0), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \counter[4]_net_1 ));
-    SLE \counter[5]  (.D(un1_counter_cry_5_0_S_0), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \counter[5]_net_1 ));
-    SLE \rd_pointer[0]  (.D(\rd_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[0]_net_1 ));
-    SLE \data_out[5]  (.D(\data_out_0[5] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[5]));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[3]  (.A(VCC_net_1), .B(
-        \rd_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[2]_net_1 ), .S(\rd_pointer_s[3] ), .Y(), .FCO(
-        \rd_pointer_cry[3]_net_1 ));
-    ARI1 #( .INIT(20'h4AA00) )  wr_pointer_s_320 (.A(VCC_net_1), .B(
-        \wr_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        VCC_net_1), .S(), .Y(), .FCO(wr_pointer_s_320_FCO));
-    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[4]  (.A(VCC_net_1), .B(
-        \wr_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \wr_pointer_cry[3]_net_1 ), .S(\wr_pointer_s[4] ), .Y(), .FCO(
-        \wr_pointer_cry[4]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  \wr_pointer_RNO[0]  (.A(
-        \wr_pointer[0]_net_1 ), .Y(\wr_pointer_s[0] ));
-    SLE \wr_pointer[6]  (.D(\wr_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
-        .EN(N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[6]_net_1 ));
-    SLE \data_out[0]  (.D(\data_out_0[0] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[0]));
-    SLE \counter[1]  (.D(un1_counter_cry_1_0_S_0), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \counter[1]_net_1 ));
-    SLE \wr_pointer[4]  (.D(\wr_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
-        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[4]_net_1 ));
-    CFG1 #( .INIT(2'h1) )  read_n_hold_RNI58K5 (.A(read_n_hold_net_1), 
-        .Y(read_n_hold_i_0));
-    SLE \data_out[2]  (.D(\data_out_0[2] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[2]));
-    SLE \counter[3]  (.D(un1_counter_cry_3_0_S_0), .CLK(FCCC_0_GL0), 
-        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \counter[3]_net_1 ));
-    SLE \wr_pointer[0]  (.D(\wr_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
-        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[0]_net_1 ));
-    SLE \data_out[6]  (.D(\data_out_0[6] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[6]));
-    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_3_0 (.A(
-        \counter[3]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
-        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_2), .S(
-        un1_counter_cry_3_0_S_0), .Y(), .FCO(un1_counter_cry_3));
-    ARI1 #( .INIT(20'h56699) )  un1_counter_cry_0 (.A(counter_0), .B(
-        fifo_read_rx_0_sqmuxa), .C(fifo_write_rx_1), .D(GND_net_1), 
-        .FCI(GND_net_1), .S(), .Y(un1_counter_cry_0_Y_0), .FCO(
-        un1_counter_cry_0_net_1));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[5]  (.A(VCC_net_1), .B(
-        \rd_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[4]_net_1 ), .S(\rd_pointer_s[5] ), .Y(), .FCO(
-        \rd_pointer_cry[5]_net_1 ));
-    CFG4 #( .INIT(16'h0004) )  empty (.A(counter_0), .B(empty_4_net_1), 
-        .C(\counter[2]_net_1 ), .D(\counter[1]_net_1 ), .Y(
-        fifo_empty_rx));
-    SLE \wr_pointer[2]  (.D(\wr_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
-        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \wr_pointer[2]_net_1 ));
-    SLE \rd_pointer[6]  (.D(\rd_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
-        .EN(fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[6]_net_1 ));
-    SLE \rd_pointer[1]  (.D(\rd_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[1]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  empty_4 (.A(\counter[6]_net_1 ), .B(
-        \counter[5]_net_1 ), .C(\counter[4]_net_1 ), .D(
-        \counter[3]_net_1 ), .Y(empty_4_net_1));
-    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_1_0 (.A(
-        \counter[1]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
-        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_0_net_1), 
-        .S(un1_counter_cry_1_0_S_0), .Y(), .FCO(un1_counter_cry_1));
-    CFG1 #( .INIT(2'h1) )  \rd_pointer_RNO[0]  (.A(
-        \rd_pointer[0]_net_1 ), .Y(\rd_pointer_s[0] ));
-    SLE \rd_pointer[3]  (.D(\rd_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[3]_net_1 ));
-    SLE \data_out[1]  (.D(\data_out_0[1] ), .CLK(FCCC_0_GL0), .EN(
-        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[1]));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[2]  (.A(VCC_net_1), .B(
-        \rd_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[1]_net_1 ), .S(\rd_pointer_s[2] ), .Y(), .FCO(
-        \rd_pointer_cry[2]_net_1 ));
-    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_5_0 (.A(
-        \counter[5]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
-        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_4), .S(
-        un1_counter_cry_5_0_S_0), .Y(), .FCO(un1_counter_cry_5));
-    SLE \rd_pointer[4]  (.D(\rd_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
-        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
-        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \rd_pointer[4]_net_1 ));
-    Echo_control_COREUART_0_ram128x8_pa4_0 ram128_8_pa4 (.data_out_0({
-        \data_out_0[7] , \data_out_0[6] , \data_out_0[5] , 
-        \data_out_0[4] , \data_out_0[3] , \data_out_0[2] , 
-        \data_out_0[1] , \data_out_0[0] }), .rd_pointer({
-        \rd_pointer[6]_net_1 , \rd_pointer[5]_net_1 , 
-        \rd_pointer[4]_net_1 , \rd_pointer[3]_net_1 , 
-        \rd_pointer[2]_net_1 , \rd_pointer[1]_net_1 , 
-        \rd_pointer[0]_net_1 }), .wr_pointer({\wr_pointer[6]_net_1 , 
-        \wr_pointer[5]_net_1 , \wr_pointer[4]_net_1 , 
-        \wr_pointer[3]_net_1 , \wr_pointer[2]_net_1 , 
-        \wr_pointer[1]_net_1 , \wr_pointer[0]_net_1 }), .rx_byte({
-        rx_byte[7], rx_byte[6], rx_byte[5], rx_byte[4], rx_byte[3], 
-        rx_byte[2], rx_byte[1], rx_byte[0]}), .FCCC_0_GL0(FCCC_0_GL0), 
-        .fifo_write_rx_1(fifo_write_rx_1));
-    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[4]  (.A(VCC_net_1), .B(
-        \rd_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
-        \rd_pointer_cry[3]_net_1 ), .S(\rd_pointer_s[4] ), .Y(), .FCO(
-        \rd_pointer_cry[4]_net_1 ));
-    ARI1 #( .INIT(20'h47800) )  un1_counter_s_6 (.A(VCC_net_1), .B(
-        fifo_read_rx_0_sqmuxa), .C(fifo_write_rx_1), .D(
-        \counter[6]_net_1 ), .FCI(un1_counter_cry_5), .S(
-        un1_counter_s_6_S_0), .Y(), .FCO());
-    SLE \counter[0]  (.D(un1_counter_cry_0_Y_0), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter_0));
-    CFG4 #( .INIT(16'h8000) )  full_4_inst_1 (.A(\counter[6]_net_1 ), 
-        .B(\counter[5]_net_1 ), .C(\counter[4]_net_1 ), .D(
-        \counter[3]_net_1 ), .Y(full_4));
-    
-endmodule
-
-
-module Echo_control_COREUART_0_fifo_256x8_0s_4294967232s_0(
-       counter,
-       rx_dout,
-       rx_byte,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       N_3802_i_0,
-       N_3803_i_0,
-       fifo_read_rx_0_sqmuxa,
-       fifo_write_rx_1,
-       full_0,
-       full_4,
-       fifo_empty_rx
-    );
-output [0:0] counter;
-output [7:0] rx_dout;
-input  [7:0] rx_byte;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  N_3802_i_0;
-input  N_3803_i_0;
-input  fifo_read_rx_0_sqmuxa;
-input  fifo_write_rx_1;
-output full_0;
-output full_4;
-output fifo_empty_rx;
-
-    wire GND_net_1, VCC_net_1;
-    
-    VCC VCC (.Y(VCC_net_1));
-    GND GND (.Y(GND_net_1));
-    Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s_0 
-        CoreUART_top_COREUART_0_fifo_128x8_pa4 (.rx_dout({rx_dout[7], 
-        rx_dout[6], rx_dout[5], rx_dout[4], rx_dout[3], rx_dout[2], 
-        rx_dout[1], rx_dout[0]}), .rx_byte({rx_byte[7], rx_byte[6], 
-        rx_byte[5], rx_byte[4], rx_byte[3], rx_byte[2], rx_byte[1], 
-        rx_byte[0]}), .counter_0(counter[0]), .FCCC_0_LOCK(FCCC_0_LOCK)
-        , .FCCC_0_GL0(FCCC_0_GL0), .N_3802_i_0(N_3802_i_0), 
-        .N_3803_i_0(N_3803_i_0), .fifo_read_rx_0_sqmuxa(
-        fifo_read_rx_0_sqmuxa), .fifo_write_rx_1(fifo_write_rx_1), 
-        .full_0(full_0), .full_4(full_4), .fifo_empty_rx(fifo_empty_rx)
-        );
-    
-endmodule
-
-
-module Echo_control_COREUART_0_COREUART_1s_1s_0s_19s_0s_0s(
-       rx_dout_reg,
-       time_sender_0_data_out_0,
-       time_sender_0_data_out_1,
-       time_sender_0_data_out_2,
-       time_sender_0_data_out_3,
-       time_sender_0_data_out_5,
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       LED_3_i_0,
-       COREUART_0_RXRDY,
-       LED_3,
-       BT_module_0_oen,
-       Echo_control_0_TX,
-       COREUART_0_TXRDY,
-       mss_sb_0_TX
-    );
-output [7:0] rx_dout_reg;
-input  time_sender_0_data_out_0;
-input  time_sender_0_data_out_1;
-input  time_sender_0_data_out_2;
-input  time_sender_0_data_out_3;
-input  time_sender_0_data_out_5;
-input  FCCC_0_LOCK;
-input  FCCC_0_GL0;
-input  LED_3_i_0;
-output COREUART_0_RXRDY;
-input  LED_3;
-input  BT_module_0_oen;
-output Echo_control_0_TX;
-output COREUART_0_TXRDY;
-input  mss_sb_0_TX;
-
-    wire rx_dout_reg_empty_net_1, rx_dout_reg_empty_i_0, VCC_net_1, 
-        \rx_dout[5] , rx_dout_reg4_i_0, GND_net_1, \rx_dout[6] , 
-        \rx_dout[7] , \tx_hold_reg[0]_net_1 , \tx_hold_reg[1]_net_1 , 
-        \tx_hold_reg[2]_net_1 , \tx_hold_reg[3]_net_1 , 
-        \tx_hold_reg[5] , \rx_dout[0] , \rx_dout[1] , \rx_dout[2] , 
-        \rx_dout[3] , \rx_dout[4] , \rx_state[1]_net_1 , N_176_i, 
-        rx_dout_reg4, rx_dout_reg_empty_1_sqmuxa_i_0, RXRDY5, 
-        fifo_write_tx_net_1, \rx_state[0]_net_1 , \rx_state_ns[0] , 
-        fifo_empty_rx, N_3802_i_0, fifo_write, \counter[0] , full_0, 
-        full_4, N_3803_i_0, rx_idle, stop_strobe, 
-        fifo_write_rx_1_net_1, fifo_read_rx_0_sqmuxa, xmit_clock, 
-        baud_clock, xmit_pulse, \tx_dout_reg[0] , \tx_dout_reg[1] , 
-        \tx_dout_reg[2] , \tx_dout_reg[3] , \tx_dout_reg[4] , 
-        \tx_dout_reg[5] , \tx_dout_reg[6] , \tx_dout_reg[7] , 
-        \counter_0[0] , \counter[1] , \counter[2] , \counter[3] , 
-        \counter[4] , \counter[5] , \counter[6] , fifo_read_tx, 
-        fifo_read_tx_i_0, fifo_full_tx_i_0, \rx_byte[0] , \rx_byte[1] , 
-        \rx_byte[2] , \rx_byte[3] , \rx_byte[4] , \rx_byte[5] , 
-        \rx_byte[6] , \rx_byte[7] ;
-    
-    CFG4 #( .INIT(16'h1555) )  fifo_write_rx_1_i (.A(fifo_write), .B(
-        \counter[0] ), .C(full_0), .D(full_4), .Y(N_3803_i_0));
-    SLE \rx_dout_reg[0]  (.D(\rx_dout[0] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[0])
-        );
-    CFG4 #( .INIT(16'hFFFB) )  fifo_read_rx_0_sqmuxa_0_a2_i (.A(
-        \rx_state[1]_net_1 ), .B(rx_dout_reg_empty_net_1), .C(
-        fifo_empty_rx), .D(\rx_state[0]_net_1 ), .Y(N_3802_i_0));
-    CFG2 #( .INIT(4'h6) )  \rx_state_ns_0_x3[1]  (.A(
-        \rx_state[0]_net_1 ), .B(\rx_state[1]_net_1 ), .Y(N_176_i));
-    CFG4 #( .INIT(16'hEAAA) )  fifo_write_rx_1 (.A(fifo_write), .B(
-        \counter[0] ), .C(full_0), .D(full_4), .Y(
-        fifo_write_rx_1_net_1));
-    Echo_control_COREUART_0_Rx_async_0s_1s_0s_1s_2s_3s make_RX (
-        .rx_byte({\rx_byte[7] , \rx_byte[6] , \rx_byte[5] , 
-        \rx_byte[4] , \rx_byte[3] , \rx_byte[2] , \rx_byte[1] , 
-        \rx_byte[0] }), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
-        FCCC_0_GL0), .baud_clock(baud_clock), .mss_sb_0_TX(mss_sb_0_TX)
-        , .stop_strobe(stop_strobe), .fifo_write(fifo_write), .rx_idle(
-        rx_idle));
-    SLE \tx_hold_reg[0]  (.D(time_sender_0_data_out_0), .CLK(
-        FCCC_0_GL0), .EN(LED_3_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \tx_hold_reg[0]_net_1 ));
-    CFG4 #( .INIT(16'h00AE) )  \rx_state_ns_0_a2[0]  (.A(
-        \rx_state[1]_net_1 ), .B(rx_dout_reg_empty_net_1), .C(
-        fifo_empty_rx), .D(\rx_state[0]_net_1 ), .Y(\rx_state_ns[0] ));
-    SLE \rx_dout_reg[3]  (.D(\rx_dout[3] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[3])
-        );
-    Echo_control_COREUART_0_fifo_256x8_0s_4294967232s 
-        \genblk2.tx_fifo  (.counter({\counter[6] , \counter[5] , 
-        \counter[4] , \counter[3] , \counter[2] , \counter[1] , 
-        \counter_0[0] }), .tx_dout_reg({\tx_dout_reg[7] , 
-        \tx_dout_reg[6] , \tx_dout_reg[5] , \tx_dout_reg[4] , 
-        \tx_dout_reg[3] , \tx_dout_reg[2] , \tx_dout_reg[1] , 
-        \tx_dout_reg[0] }), .tx_hold_reg_0(\tx_hold_reg[0]_net_1 ), 
-        .tx_hold_reg_1(\tx_hold_reg[1]_net_1 ), .tx_hold_reg_2(
-        \tx_hold_reg[2]_net_1 ), .tx_hold_reg_3(\tx_hold_reg[3]_net_1 )
-        , .tx_hold_reg_5(\tx_hold_reg[5] ), .fifo_write_tx(
-        fifo_write_tx_net_1), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
-        FCCC_0_GL0), .fifo_read_tx(fifo_read_tx), .fifo_read_tx_i_0(
-        fifo_read_tx_i_0), .fifo_full_tx_i_0(fifo_full_tx_i_0));
-    CFG2 #( .INIT(4'h7) )  rx_dout_reg4_0 (.A(\rx_state[0]_net_1 ), .B(
-        \rx_state[1]_net_1 ), .Y(rx_dout_reg4));
-    SLE \tx_hold_reg[2]  (.D(time_sender_0_data_out_2), .CLK(
-        FCCC_0_GL0), .EN(LED_3_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \tx_hold_reg[2]_net_1 ));
-    CFG2 #( .INIT(4'h8) )  rx_dout_reg4_0_i (.A(\rx_state[0]_net_1 ), 
-        .B(\rx_state[1]_net_1 ), .Y(rx_dout_reg4_i_0));
-    SLE rx_dout_reg_empty (.D(rx_dout_reg4), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg_empty_1_sqmuxa_i_0), .ALn(FCCC_0_LOCK), .ADn(
-        GND_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
-        .Q(rx_dout_reg_empty_net_1));
-    VCC VCC (.Y(VCC_net_1));
-    CFG3 #( .INIT(8'hFE) )  \genblk1.RXRDY5  (.A(rx_idle), .B(
-        stop_strobe), .C(rx_dout_reg_empty_net_1), .Y(RXRDY5));
-    CFG4 #( .INIT(16'h0004) )  fifo_read_rx_0_sqmuxa_0_a2 (.A(
-        \rx_state[1]_net_1 ), .B(rx_dout_reg_empty_net_1), .C(
-        fifo_empty_rx), .D(\rx_state[0]_net_1 ), .Y(
-        fifo_read_rx_0_sqmuxa));
-    Echo_control_COREUART_0_Tx_async_0s_1s_0s_1s_2s_3s_4s_5s_6s 
-        make_TX (.tx_dout_reg({\tx_dout_reg[7] , \tx_dout_reg[6] , 
-        \tx_dout_reg[5] , \tx_dout_reg[4] , \tx_dout_reg[3] , 
-        \tx_dout_reg[2] , \tx_dout_reg[1] , \tx_dout_reg[0] }), 
-        .counter({\counter[6] , \counter[5] , \counter[4] , 
-        \counter[3] , \counter[2] , \counter[1] , \counter_0[0] }), 
-        .fifo_read_tx(fifo_read_tx), .fifo_read_tx_i_0(
-        fifo_read_tx_i_0), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
-        FCCC_0_GL0), .xmit_pulse(xmit_pulse), .Echo_control_0_TX(
-        Echo_control_0_TX), .COREUART_0_TXRDY(COREUART_0_TXRDY), 
-        .fifo_full_tx_i_0(fifo_full_tx_i_0), .baud_clock(baud_clock), 
-        .xmit_clock(xmit_clock));
-    SLE \rx_dout_reg[4]  (.D(\rx_dout[4] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[4])
-        );
-    Echo_control_COREUART_0_Clock_gen_0s_0s make_CLOCK_GEN (
-        .xmit_clock(xmit_clock), .FCCC_0_LOCK(FCCC_0_LOCK), 
-        .FCCC_0_GL0(FCCC_0_GL0), .baud_clock(baud_clock), .xmit_pulse(
-        xmit_pulse));
-    SLE \rx_state[1]  (.D(N_176_i), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\rx_state[1]_net_1 ));
-    SLE \rx_dout_reg[7]  (.D(\rx_dout[7] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[7])
-        );
-    GND GND (.Y(GND_net_1));
-    SLE \rx_dout_reg[1]  (.D(\rx_dout[1] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[1])
-        );
-    SLE \rx_dout_reg[5]  (.D(\rx_dout[5] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[5])
-        );
-    CFG1 #( .INIT(2'h1) )  \genblk1.RXRDY_RNO  (.A(
-        rx_dout_reg_empty_net_1), .Y(rx_dout_reg_empty_i_0));
-    SLE \rx_dout_reg[6]  (.D(\rx_dout[6] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[6])
-        );
-    SLE \rx_state[0]  (.D(\rx_state_ns[0] ), .CLK(FCCC_0_GL0), .EN(
-        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_state[0]_net_1 ));
-    SLE \genblk1.RXRDY  (.D(rx_dout_reg_empty_i_0), .CLK(FCCC_0_GL0), 
-        .EN(RXRDY5), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        COREUART_0_RXRDY));
-    Echo_control_COREUART_0_fifo_256x8_0s_4294967232s_0 
-        \genblk3.rx_fifo  (.counter({\counter[0] }), .rx_dout({
-        \rx_dout[7] , \rx_dout[6] , \rx_dout[5] , \rx_dout[4] , 
-        \rx_dout[3] , \rx_dout[2] , \rx_dout[1] , \rx_dout[0] }), 
-        .rx_byte({\rx_byte[7] , \rx_byte[6] , \rx_byte[5] , 
-        \rx_byte[4] , \rx_byte[3] , \rx_byte[2] , \rx_byte[1] , 
-        \rx_byte[0] }), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
-        FCCC_0_GL0), .N_3802_i_0(N_3802_i_0), .N_3803_i_0(N_3803_i_0), 
-        .fifo_read_rx_0_sqmuxa(fifo_read_rx_0_sqmuxa), 
-        .fifo_write_rx_1(fifo_write_rx_1_net_1), .full_0(full_0), 
-        .full_4(full_4), .fifo_empty_rx(fifo_empty_rx));
-    SLE \tx_hold_reg[3]  (.D(time_sender_0_data_out_3), .CLK(
-        FCCC_0_GL0), .EN(LED_3_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \tx_hold_reg[3]_net_1 ));
-    SLE fifo_write_tx (.D(LED_3), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
-        .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(fifo_write_tx_net_1));
-    SLE \tx_hold_reg[1]  (.D(time_sender_0_data_out_1), .CLK(
-        FCCC_0_GL0), .EN(LED_3_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \tx_hold_reg[1]_net_1 ));
-    CFG2 #( .INIT(4'h7) )  rx_dout_reg_empty_1_sqmuxa_i (.A(
-        rx_dout_reg4), .B(BT_module_0_oen), .Y(
-        rx_dout_reg_empty_1_sqmuxa_i_0));
-    SLE \rx_dout_reg[2]  (.D(\rx_dout[2] ), .CLK(FCCC_0_GL0), .EN(
-        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[2])
-        );
-    SLE \tx_hold_reg[4]  (.D(time_sender_0_data_out_5), .CLK(
-        FCCC_0_GL0), .EN(LED_3_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
-        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
-        \tx_hold_reg[5] ));
-    
-endmodule
-
-
-module Echo_control_FCCC_0_FCCC(
-       FCCC_0_LOCK,
-       FCCC_0_GL0,
-       OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC
-    );
-output FCCC_0_LOCK;
-output FCCC_0_GL0;
-input  OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC;
-
-    wire LOCK, GL0_net, VCC_net_1, GND_net_1;
-    
-    VCC VCC (.Y(VCC_net_1));
-    GND GND (.Y(GND_net_1));
-    CLKINT GL0_INST (.A(GL0_net), .Y(FCCC_0_GL0));
-    CCC #( .INIT(210'h0000007F88000045164000318C6318C1F18C61E80404040403100)
-        , .VCOFREQUENCY(800.0) )  CCC_INST (.Y0(), .Y1(), .Y2(), .Y3(), 
-        .PRDATA({nc0, nc1, nc2, nc3, nc4, nc5, nc6, nc7}), .LOCK(LOCK), 
-        .BUSY(), .CLK0(VCC_net_1), .CLK1(VCC_net_1), .CLK2(VCC_net_1), 
-        .CLK3(VCC_net_1), .NGMUX0_SEL(GND_net_1), .NGMUX1_SEL(
-        GND_net_1), .NGMUX2_SEL(GND_net_1), .NGMUX3_SEL(GND_net_1), 
-        .NGMUX0_HOLD_N(VCC_net_1), .NGMUX1_HOLD_N(VCC_net_1), 
-        .NGMUX2_HOLD_N(VCC_net_1), .NGMUX3_HOLD_N(VCC_net_1), 
-        .NGMUX0_ARST_N(VCC_net_1), .NGMUX1_ARST_N(VCC_net_1), 
-        .NGMUX2_ARST_N(VCC_net_1), .NGMUX3_ARST_N(VCC_net_1), 
-        .PLL_BYPASS_N(VCC_net_1), .PLL_ARST_N(VCC_net_1), 
-        .PLL_POWERDOWN_N(VCC_net_1), .GPD0_ARST_N(VCC_net_1), 
-        .GPD1_ARST_N(VCC_net_1), .GPD2_ARST_N(VCC_net_1), .GPD3_ARST_N(
-        VCC_net_1), .PRESET_N(GND_net_1), .PCLK(VCC_net_1), .PSEL(
-        VCC_net_1), .PENABLE(VCC_net_1), .PWRITE(VCC_net_1), .PADDR({
-        VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1, 
-        VCC_net_1}), .PWDATA({VCC_net_1, VCC_net_1, VCC_net_1, 
-        VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1}), 
-        .CLK0_PAD(GND_net_1), .CLK1_PAD(GND_net_1), .CLK2_PAD(
-        GND_net_1), .CLK3_PAD(GND_net_1), .GL0(GL0_net), .GL1(), .GL2()
-        , .GL3(), .RCOSC_25_50MHZ(GND_net_1), .RCOSC_1MHZ(
-        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC), .XTLOSC(GND_net_1));
-    CLKINT CCC_INST_RNIE1Q1 (.A(LOCK), .Y(FCCC_0_LOCK));
-    
-endmodule
-
-
-module Echo_control_OSC_0_OSC(
-       OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC
-    );
-output OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC;
-
-    wire GND_net_1, VCC_net_1;
-    
-    VCC VCC (.Y(VCC_net_1));
-    GND GND (.Y(GND_net_1));
-    RCOSC_1MHZ I_RCOSC_1MHZ (.CLKOUT(
-        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC));
-    
-endmodule
-
-
-module delayer(
-       FCCC_0_GL0,
-       FCCC_0_LOCK,
-       LED_2,
-       pulse_meash_0_new_ready
-    );
-input  FCCC_0_GL0;
-input  FCCC_0_LOCK;
-output LED_2;
-input  pulse_meash_0_new_ready;
-
-    wire \i[16]_net_1 , VCC_net_1, \i_4[16] , GND_net_1, \i[17]_net_1 , 
-        \i_4[17] , \i[18]_net_1 , \i_4[18] , \i[19]_net_1 , \i_4[19] , 
-        \i[20]_net_1 , \i_4[20] , \i[21]_net_1 , \i_4[21] , 
-        \i[22]_net_1 , \i_4[22] , \i[1]_net_1 , \i_4[1] , \i[2]_net_1 , 
-        \i_4[2] , \i[3]_net_1 , \i_4[3] , \i[4]_net_1 , \i_4[4] , 
-        \i[5]_net_1 , \i_4[5] , \i[6]_net_1 , \i_4[6] , \i[7]_net_1 , 
-        \i_4[7] , \i[8]_net_1 , \i_4[8] , \i[9]_net_1 , \i_4[9] , 
-        \i[10]_net_1 , \i_4[10] , \i[11]_net_1 , \i_4[11] , 
-        \i[12]_net_1 , \i_4[12] , \i[13]_net_1 , \i_4[13] , 
-        \i[14]_net_1 , \i_4[14] , \i[15]_net_1 , \i_4[15] , 
-        \i[0]_net_1 , \i_4[0] , un9_clklto22_i_0_a3_RNI2GHT_Y, 
-        i_4_cry_0_cy, un9_clklto22_i_0_a3_net_1, 
-        un9_clklto22_i_0_a3_0_net_1, i_4_cry_0, i_4_cry_1, i_4_cry_2, 
-        i_4_cry_3, i_4_cry_4, i_4_cry_5, i_4_cry_6, i_4_cry_7, 
-        i_4_cry_8, i_4_cry_9, i_4_cry_10, i_4_cry_11, i_4_cry_12, 
-        i_4_cry_13, i_4_cry_14, i_4_cry_15, i_4_cry_16, i_4_cry_17, 
-        i_4_cry_18, i_4_cry_19, i_4_cry_20, i_4_cry_21, 
-        un9_clklto22_i_0_a3_1_net_1, un9_clklto22_i_0_a2_2_3_net_1, 
-        N_122, N_123, N_124, un9_clklto22_i_0_o2_net_1;
-    
-    ARI1 #( .INIT(20'h42200) )  \i_RNI64HF3[7]  (.A(VCC_net_1), .B(
-        \i[7]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_6), .S(\i_4[7] ), .Y(), .FCO(i_4_cry_7));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIVAP71[0]  (.A(VCC_net_1), .B(
-        \i[0]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_0_cy), .S(\i_4[0] ), .Y(), .FCO(i_4_cry_0));
-    SLE \i[17]  (.D(\i_4[17] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[17]_net_1 ));
-    CFG3 #( .INIT(8'h75) )  un9_clklto22_i_0_o2_0 (.A(\i[11]_net_1 ), 
-        .B(\i[10]_net_1 ), .C(N_123), .Y(N_124));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIEFJ64[11]  (.A(VCC_net_1), .B(
-        \i[11]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_10), .S(\i_4[11] ), .Y(), .FCO(i_4_cry_11));
-    ARI1 #( .INIT(20'h4FFEF) )  un9_clklto22_i_0_a3_RNI2GHT (.A(
-        pulse_meash_0_new_ready), .B(un9_clklto22_i_0_a3_net_1), .C(
-        un9_clklto22_i_0_a3_0_net_1), .D(\i[22]_net_1 ), .FCI(
-        VCC_net_1), .S(), .Y(un9_clklto22_i_0_a3_RNI2GHT_Y), .FCO(
-        i_4_cry_0_cy));
-    CFG3 #( .INIT(8'h01) )  un9_clklto22_i_0_a3_1 (.A(\i[17]_net_1 ), 
-        .B(\i[16]_net_1 ), .C(\i[15]_net_1 ), .Y(
-        un9_clklto22_i_0_a3_1_net_1));
-    ARI1 #( .INIT(20'h42200) )  \i_RNI22953[6]  (.A(VCC_net_1), .B(
-        \i[6]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_5), .S(\i_4[6] ), .Y(), .FCO(i_4_cry_6));
-    SLE \i[21]  (.D(\i_4[21] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[21]_net_1 ));
-    SLE \i[9]  (.D(\i_4[9] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
-    SLE \i[2]  (.D(\i_4[2] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNO[22]  (.A(VCC_net_1), .B(
-        \i[22]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_21), .S(\i_4[22] ), .Y(), .FCO());
-    SLE \i[10]  (.D(\i_4[10] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[10]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIFN594[13]  (.A(VCC_net_1), .B(
-        \i[13]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_12), .S(\i_4[13] ), .Y(), .FCO(i_4_cry_13));
-    SLE \i[3]  (.D(\i_4[3] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNITJAE4[17]  (.A(VCC_net_1), .B(
-        \i[17]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_16), .S(\i_4[17] ), .Y(), .FCO(i_4_cry_17));
-    SLE \i[8]  (.D(\i_4[8] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIT61I1[1]  (.A(VCC_net_1), .B(
-        \i[1]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_0), .S(\i_4[1] ), .Y(), .FCO(i_4_cry_1));
-    VCC VCC (.Y(VCC_net_1));
-    ARI1 #( .INIT(20'h42200) )  \i_RNI8B1D4[16]  (.A(VCC_net_1), .B(
-        \i[16]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_15), .S(\i_4[16] ), .Y(), .FCO(i_4_cry_16));
-    SLE \i[20]  (.D(\i_4[20] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[20]_net_1 ));
-    SLE led (.D(un9_clklto22_i_0_a3_RNI2GHT_Y), .CLK(FCCC_0_GL0), .EN(
-        FCCC_0_LOCK), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1)
-        , .SD(GND_net_1), .LAT(GND_net_1), .Q(LED_2));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIS39S1[2]  (.A(VCC_net_1), .B(
-        \i[2]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_1), .S(\i_4[2] ), .Y(), .FCO(i_4_cry_2));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIUIS74[12]  (.A(VCC_net_1), .B(
-        \i[12]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_11), .S(\i_4[12] ), .Y(), .FCO(i_4_cry_12));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIHB144[9]  (.A(VCC_net_1), .B(
-        \i[9]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_8), .S(\i_4[9] ), .Y(), .FCO(i_4_cry_9));
-    SLE \i[18]  (.D(\i_4[18] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[18]_net_1 ));
-    GND GND (.Y(GND_net_1));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIPB7I4[20]  (.A(VCC_net_1), .B(
-        \i[20]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_19), .S(\i_4[20] ), .Y(), .FCO(i_4_cry_20));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIB7PP3[8]  (.A(VCC_net_1), .B(
-        \i[8]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_7), .S(\i_4[8] ), .Y(), .FCO(i_4_cry_8));
-    SLE \i[14]  (.D(\i_4[14] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[14]_net_1 ));
-    SLE \i[0]  (.D(\i_4[0] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIA8TG4[19]  (.A(VCC_net_1), .B(
-        \i[19]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_18), .S(\i_4[19] ), .Y(), .FCO(i_4_cry_19));
-    SLE \i[13]  (.D(\i_4[13] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[13]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIK3OB4[15]  (.A(VCC_net_1), .B(
-        \i[15]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_14), .S(\i_4[15] ), .Y(), .FCO(i_4_cry_15));
-    CFG4 #( .INIT(16'h0008) )  un9_clklto22_i_0_a3 (.A(
-        un9_clklto22_i_0_a3_1_net_1), .B(un9_clklto22_i_0_o2_net_1), 
-        .C(\i[21]_net_1 ), .D(\i[20]_net_1 ), .Y(
-        un9_clklto22_i_0_a3_net_1));
-    SLE \i[5]  (.D(\i_4[5] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIS1H62[3]  (.A(VCC_net_1), .B(
-        \i[3]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_2), .S(\i_4[3] ), .Y(), .FCO(i_4_cry_3));
-    ARI1 #( .INIT(20'h42200) )  \i_RNI9GHJ4[21]  (.A(VCC_net_1), .B(
-        \i[21]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_20), .S(\i_4[21] ), .Y(), .FCO(i_4_cry_21));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIT0PG2[4]  (.A(VCC_net_1), .B(
-        \i[4]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_3), .S(\i_4[4] ), .Y(), .FCO(i_4_cry_4));
-    SLE \i[16]  (.D(\i_4[16] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[16]_net_1 ));
-    CFG4 #( .INIT(16'h7F77) )  un9_clklto22_i_0_o2_1 (.A(\i[9]_net_1 ), 
-        .B(\i[8]_net_1 ), .C(\i[7]_net_1 ), .D(N_122), .Y(N_123));
-    CFG4 #( .INIT(16'h5755) )  un9_clklto22_i_0_o2 (.A(\i[14]_net_1 ), 
-        .B(\i[13]_net_1 ), .C(\i[12]_net_1 ), .D(N_124), .Y(
-        un9_clklto22_i_0_o2_net_1));
-    SLE \i[6]  (.D(\i_4[6] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
-    SLE \i[19]  (.D(\i_4[19] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[19]_net_1 ));
-    SLE \i[12]  (.D(\i_4[12] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[12]_net_1 ));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIJTJF4[18]  (.A(VCC_net_1), .B(
-        \i[18]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_17), .S(\i_4[18] ), .Y(), .FCO(i_4_cry_18));
-    CFG4 #( .INIT(16'h0007) )  un9_clklto22_i_0_a3_0 (.A(\i[19]_net_1 )
-        , .B(\i[18]_net_1 ), .C(\i[21]_net_1 ), .D(\i[20]_net_1 ), .Y(
-        un9_clklto22_i_0_a3_0_net_1));
-    SLE \i[15]  (.D(\i_4[15] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[15]_net_1 ));
-    ARI1 #( .INIT(20'h55500) )  \i_RNIVCA54[10]  (.A(\i[10]_net_1 ), 
-        .B(pulse_meash_0_new_ready), .C(GND_net_1), .D(GND_net_1), 
-        .FCI(i_4_cry_9), .S(\i_4[10] ), .Y(), .FCO(i_4_cry_10));
-    CFG4 #( .INIT(16'h0F4F) )  un9_clklto22_i_0_o2_2 (.A(\i[0]_net_1 ), 
-        .B(un9_clklto22_i_0_a2_2_3_net_1), .C(\i[6]_net_1 ), .D(
-        \i[1]_net_1 ), .Y(N_122));
-    ARI1 #( .INIT(20'h42200) )  \i_RNIV01R2[5]  (.A(VCC_net_1), .B(
-        \i[5]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_4), .S(\i_4[5] ), .Y(), .FCO(i_4_cry_5));
-    ARI1 #( .INIT(20'h42200) )  \i_RNI1TEA4[14]  (.A(VCC_net_1), .B(
-        \i[14]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
-        .FCI(i_4_cry_13), .S(\i_4[14] ), .Y(), .FCO(i_4_cry_14));
-    SLE \i[7]  (.D(\i_4[7] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
-    SLE \i[22]  (.D(\i_4[22] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[22]_net_1 ));
-    SLE \i[4]  (.D(\i_4[4] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
-    CFG4 #( .INIT(16'h0001) )  un9_clklto22_i_0_a2_2_3 (.A(
-        \i[5]_net_1 ), .B(\i[4]_net_1 ), .C(\i[3]_net_1 ), .D(
-        \i[2]_net_1 ), .Y(un9_clklto22_i_0_a2_2_3_net_1));
-    SLE \i[1]  (.D(\i_4[1] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
-        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
-        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
-    SLE \i[11]  (.D(\i_4[11] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
-        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
-        GND_net_1), .LAT(GND_net_1), .Q(\i[11]_net_1 ));
-    
-endmodule
-
-
-module Echo_control(
-       LED_3,
-       Echo_control_0_TX,
-       mss_sb_0_TX,
-       SERVO_PWM,
-       ECHO,
-       TRIG,
-       LED_2
-    );
-output LED_3;
-output Echo_control_0_TX;
-input  mss_sb_0_TX;
-output SERVO_PWM;
-input  ECHO;
-output TRIG;
-output LED_2;
-
-    wire \BT_module_0_data_buf[0] , \BT_module_0_data_buf[1] , 
-        \BT_module_0_data_buf[2] , \BT_module_0_data_buf[3] , 
-        \BT_module_0_data_buf[4] , \BT_module_0_data_buf[5] , 
-        \BT_module_0_data_buf[6] , \BT_module_0_data_buf[7] , 
-        \rx_dout_reg[0] , \rx_dout_reg[1] , \rx_dout_reg[2] , 
-        \rx_dout_reg[3] , \rx_dout_reg[4] , \rx_dout_reg[5] , 
-        \rx_dout_reg[6] , \rx_dout_reg[7] , FCCC_0_LOCK, FCCC_0_GL0, 
-        BT_module_0_oen, COREUART_0_RXRDY, \time_sender_0_data_out[0] , 
-        \time_sender_0_data_out[1] , \time_sender_0_data_out[2] , 
-        \time_sender_0_data_out[3] , \time_sender_0_data_out[5] , 
-        LED_3_i_0, COREUART_0_TXRDY, 
-        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC, 
-        \locator_control_0_angle1[0] , \locator_control_0_angle1[1] , 
-        \locator_control_0_angle1[2] , \locator_control_0_angle1[3] , 
-        \pulse_meash_0_tim[0] , \pulse_meash_0_tim[1] , 
-        \pulse_meash_0_tim[2] , \pulse_meash_0_tim[3] , 
-        \pulse_meash_0_tim[4] , \pulse_meash_0_tim[5] , 
-        \pulse_meash_0_tim[6] , \pulse_meash_0_tim[7] , 
-        \pulse_meash_0_tim[8] , \pulse_meash_0_tim[9] , 
-        \pulse_meash_0_tim[10] , \pulse_meash_0_tim[11] , 
-        \pulse_meash_0_tim[12] , \pulse_meash_0_tim[13] , 
-        pulse_meash_0_new_ready, un46_clk_0, un46_clk_1, un46_clk_2, 
-        un46_clk_3, N_234_0, locator_control_0_en_timer, GND_net_1, 
-        VCC_net_1;
-    
-    pulse_meash pulse_meash_0 (.pulse_meash_0_tim({
-        \pulse_meash_0_tim[13] , \pulse_meash_0_tim[12] , 
-        \pulse_meash_0_tim[11] , \pulse_meash_0_tim[10] , 
-        \pulse_meash_0_tim[9] , \pulse_meash_0_tim[8] , 
-        \pulse_meash_0_tim[7] , \pulse_meash_0_tim[6] , 
-        \pulse_meash_0_tim[5] , \pulse_meash_0_tim[4] , 
-        \pulse_meash_0_tim[3] , \pulse_meash_0_tim[2] , 
-        \pulse_meash_0_tim[1] , \pulse_meash_0_tim[0] }), .FCCC_0_LOCK(
-        FCCC_0_LOCK), .FCCC_0_GL0(FCCC_0_GL0), 
-        .pulse_meash_0_new_ready(pulse_meash_0_new_ready), 
-        .locator_control_0_en_timer(locator_control_0_en_timer), .ECHO(
-        ECHO));
-    locator_control locator_control_0 (.BT_module_0_data_buf({
-        \BT_module_0_data_buf[7] , \BT_module_0_data_buf[6] , 
-        \BT_module_0_data_buf[5] , \BT_module_0_data_buf[4] , 
-        \BT_module_0_data_buf[3] , \BT_module_0_data_buf[2] , 
-        \BT_module_0_data_buf[1] , \BT_module_0_data_buf[0] }), 
-        .locator_control_0_angle1({\locator_control_0_angle1[3] , 
-        \locator_control_0_angle1[2] , \locator_control_0_angle1[1] , 
-        \locator_control_0_angle1[0] }), .FCCC_0_LOCK(FCCC_0_LOCK), 
-        .FCCC_0_GL0(FCCC_0_GL0), .un46_clk_0(un46_clk_0), .un46_clk_1(
-        un46_clk_1), .un46_clk_2(un46_clk_2), .un46_clk_3(un46_clk_3), 
-        .TRIG(TRIG), .locator_control_0_en_timer(
-        locator_control_0_en_timer), .pulse_meash_0_new_ready(
-        pulse_meash_0_new_ready), .N_234_0(N_234_0));
-    time_sender time_sender_0 (.locator_control_0_angle1({
-        \locator_control_0_angle1[3] , \locator_control_0_angle1[2] , 
-        \locator_control_0_angle1[1] , \locator_control_0_angle1[0] }), 
-        .pulse_meash_0_tim({\pulse_meash_0_tim[13] , 
-        \pulse_meash_0_tim[12] , \pulse_meash_0_tim[11] , 
-        \pulse_meash_0_tim[10] , \pulse_meash_0_tim[9] , 
-        \pulse_meash_0_tim[8] , \pulse_meash_0_tim[7] , 
-        \pulse_meash_0_tim[6] , \pulse_meash_0_tim[5] , 
-        \pulse_meash_0_tim[4] , \pulse_meash_0_tim[3] , 
-        \pulse_meash_0_tim[2] , \pulse_meash_0_tim[1] , 
-        \pulse_meash_0_tim[0] }), .time_sender_0_data_out_0(
-        \time_sender_0_data_out[0] ), .time_sender_0_data_out_1(
-        \time_sender_0_data_out[1] ), .time_sender_0_data_out_2(
-        \time_sender_0_data_out[2] ), .time_sender_0_data_out_3(
-        \time_sender_0_data_out[3] ), .time_sender_0_data_out_5(
-        \time_sender_0_data_out[5] ), .LED_3(LED_3), .LED_3_i_0(
-        LED_3_i_0), .FCCC_0_GL0(FCCC_0_GL0), .FCCC_0_LOCK(FCCC_0_LOCK), 
-        .pulse_meash_0_new_ready(pulse_meash_0_new_ready), 
-        .COREUART_0_TXRDY(COREUART_0_TXRDY));
-    GND GND (.Y(GND_net_1));
-    BT_module BT_module_0 (.BT_module_0_data_buf({
-        \BT_module_0_data_buf[7] , \BT_module_0_data_buf[6] , 
-        \BT_module_0_data_buf[5] , \BT_module_0_data_buf[4] , 
-        \BT_module_0_data_buf[3] , \BT_module_0_data_buf[2] , 
-        \BT_module_0_data_buf[1] , \BT_module_0_data_buf[0] }), 
-        .rx_dout_reg({\rx_dout_reg[7] , \rx_dout_reg[6] , 
-        \rx_dout_reg[5] , \rx_dout_reg[4] , \rx_dout_reg[3] , 
-        \rx_dout_reg[2] , \rx_dout_reg[1] , \rx_dout_reg[0] }), 
-        .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(FCCC_0_GL0), 
-        .BT_module_0_oen(BT_module_0_oen), .COREUART_0_RXRDY(
-        COREUART_0_RXRDY));
-    servo_driver servo_driver_0 (.FCCC_0_LOCK(FCCC_0_LOCK), 
-        .FCCC_0_GL0(FCCC_0_GL0), .SERVO_PWM(SERVO_PWM), .un46_clk_0(
-        un46_clk_0), .un46_clk_1(un46_clk_1), .un46_clk_2(un46_clk_2), 
-        .un46_clk_3(un46_clk_3), .N_234_0(N_234_0));
-    VCC VCC (.Y(VCC_net_1));
-    Echo_control_COREUART_0_COREUART_1s_1s_0s_19s_0s_0s COREUART_0 (
-        .rx_dout_reg({\rx_dout_reg[7] , \rx_dout_reg[6] , 
-        \rx_dout_reg[5] , \rx_dout_reg[4] , \rx_dout_reg[3] , 
-        \rx_dout_reg[2] , \rx_dout_reg[1] , \rx_dout_reg[0] }), 
-        .time_sender_0_data_out_0(\time_sender_0_data_out[0] ), 
-        .time_sender_0_data_out_1(\time_sender_0_data_out[1] ), 
-        .time_sender_0_data_out_2(\time_sender_0_data_out[2] ), 
-        .time_sender_0_data_out_3(\time_sender_0_data_out[3] ), 
-        .time_sender_0_data_out_5(\time_sender_0_data_out[5] ), 
-        .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(FCCC_0_GL0), .LED_3_i_0(
-        LED_3_i_0), .COREUART_0_RXRDY(COREUART_0_RXRDY), .LED_3(LED_3), 
-        .BT_module_0_oen(BT_module_0_oen), .Echo_control_0_TX(
-        Echo_control_0_TX), .COREUART_0_TXRDY(COREUART_0_TXRDY), 
-        .mss_sb_0_TX(mss_sb_0_TX));
-    Echo_control_FCCC_0_FCCC FCCC_0 (.FCCC_0_LOCK(FCCC_0_LOCK), 
-        .FCCC_0_GL0(FCCC_0_GL0), 
-        .OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC(
-        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC));
-    Echo_control_OSC_0_OSC OSC_0 (
-        .OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC(
-        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC));
-    delayer delayer_0 (.FCCC_0_GL0(FCCC_0_GL0), .FCCC_0_LOCK(
-        FCCC_0_LOCK), .LED_2(LED_2), .pulse_meash_0_new_ready(
-        pulse_meash_0_new_ready));
     
 endmodule
 
@@ -12766,7 +5682,7 @@ module mss_sb_CoreUARTapb_2_1_Rx_async_1s_0s_1s_2s(
        MSS_HPMS_READY_int_RNI5CTC,
        GL0_INST,
        baud_clock,
-       GPS_TX,
+       GPS_TX_c,
        CoreUARTapb_2_1_PARITY_ERR,
        stop_strobe,
        CoreUARTapb_2_1_FRAMING_ERR,
@@ -12780,7 +5696,7 @@ input  clear_parity_reg;
 input  MSS_HPMS_READY_int_RNI5CTC;
 input  GL0_INST;
 input  baud_clock;
-input  GPS_TX;
+input  GPS_TX_c;
 output CoreUARTapb_2_1_PARITY_ERR;
 output stop_strobe;
 output CoreUARTapb_2_1_FRAMING_ERR;
@@ -13038,7 +5954,7 @@ output fifo_write;
     CFG4 #( .INIT(16'h1101) )  \rcv_cnt.receive_count8  (.A(
         rx_state[0]), .B(rx_state[1]), .C(framing_error_int5), .D(
         rx_state10), .Y(receive_count8));
-    SLE \samples[2]  (.D(GPS_TX), .CLK(GL0_INST), .EN(baud_clock), 
+    SLE \samples[2]  (.D(GPS_TX_c), .CLK(GL0_INST), .EN(baud_clock), 
         .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(
         VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
         \samples[2]_net_1 ));
@@ -13526,7 +6442,7 @@ module mss_sb_CoreUARTapb_2_1_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s(
        MSS_HPMS_READY_int_RNI5CTC,
        GL0_INST,
        xmit_pulse,
-       GPS_RX,
+       GPS_RX_c,
        CoreUARTapb_2_1_TXRDY,
        fifo_full_tx_i_0,
        xmit_clock,
@@ -13540,7 +6456,7 @@ output fifo_read_tx_i_0;
 input  MSS_HPMS_READY_int_RNI5CTC;
 input  GL0_INST;
 input  xmit_pulse;
-output GPS_RX;
+output GPS_RX_c;
 output CoreUARTapb_2_1_TXRDY;
 input  fifo_full_tx_i_0;
 input  xmit_clock;
@@ -13649,7 +6565,7 @@ input  fifo_empty_tx;
         tx_2));
     SLE tx (.D(tx_4_iv_i_0), .CLK(GL0_INST), .EN(N_144_i_0), .ALn(
         MSS_HPMS_READY_int_RNI5CTC), .ADn(GND_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(GPS_RX));
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(GPS_RX_c));
     SLE \tx_byte[3]  (.D(tx_dout_reg[3]), .CLK(GL0_INST), .EN(
         N_133_i_0), .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), 
         .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
@@ -14361,9 +7277,9 @@ module mss_sb_CoreUARTapb_2_1_COREUART_1s_1s_0s_15s_0s(
        CoreUARTapb_2_1_PARITY_ERR,
        N_367,
        clear_overflow_0_a2_0_0,
-       GPS_RX,
+       GPS_RX_c,
        CoreUARTapb_2_1_TXRDY,
-       GPS_TX,
+       GPS_TX_c,
        CoreUARTapb_2_1_FRAMING_ERR
     );
 input  [7:0] CoreAPB3_0_APBmslave0_PWDATA;
@@ -14385,9 +7301,9 @@ input  CoreAPB3_0_APBmslave3_PSELx;
 output CoreUARTapb_2_1_PARITY_ERR;
 input  N_367;
 input  clear_overflow_0_a2_0_0;
-output GPS_RX;
+output GPS_RX_c;
 output CoreUARTapb_2_1_TXRDY;
-input  GPS_TX;
+input  GPS_TX_c;
 output CoreUARTapb_2_1_FRAMING_ERR;
 
     wire rx_dout_reg_empty_net_1, rx_dout_reg_empty_i_0, 
@@ -14446,11 +7362,11 @@ output CoreUARTapb_2_1_FRAMING_ERR;
         controlReg2[2], controlReg2[1], controlReg2[0]}), 
         .clear_parity_reg(clear_parity_reg_net_1), 
         .MSS_HPMS_READY_int_RNI5CTC(MSS_HPMS_READY_int_RNI5CTC), 
-        .GL0_INST(GL0_INST), .baud_clock(baud_clock), .GPS_TX(GPS_TX), 
-        .CoreUARTapb_2_1_PARITY_ERR(CoreUARTapb_2_1_PARITY_ERR), 
-        .stop_strobe(stop_strobe), .CoreUARTapb_2_1_FRAMING_ERR(
-        CoreUARTapb_2_1_FRAMING_ERR), .clear_parity_en(clear_parity_en)
-        , .fifo_write(fifo_write));
+        .GL0_INST(GL0_INST), .baud_clock(baud_clock), .GPS_TX_c(
+        GPS_TX_c), .CoreUARTapb_2_1_PARITY_ERR(
+        CoreUARTapb_2_1_PARITY_ERR), .stop_strobe(stop_strobe), 
+        .CoreUARTapb_2_1_FRAMING_ERR(CoreUARTapb_2_1_FRAMING_ERR), 
+        .clear_parity_en(clear_parity_en), .fifo_write(fifo_write));
     CFG2 #( .INIT(4'h4) )  \rx_byte_in[1]  (.A(
         CoreUARTapb_2_1_PARITY_ERR), .B(\rx_byte[1] ), .Y(
         \rx_byte_in[1]_net_1 ));
@@ -14522,7 +7438,7 @@ output CoreUARTapb_2_1_FRAMING_ERR;
         .fifo_read_tx(fifo_read_tx), .fifo_read_tx_i_0(
         fifo_read_tx_i_0), .MSS_HPMS_READY_int_RNI5CTC(
         MSS_HPMS_READY_int_RNI5CTC), .GL0_INST(GL0_INST), .xmit_pulse(
-        xmit_pulse), .GPS_RX(GPS_RX), .CoreUARTapb_2_1_TXRDY(
+        xmit_pulse), .GPS_RX_c(GPS_RX_c), .CoreUARTapb_2_1_TXRDY(
         CoreUARTapb_2_1_TXRDY), .fifo_full_tx_i_0(fifo_full_tx_i_0), 
         .xmit_clock(xmit_clock), .baud_clock(baud_clock), 
         .fifo_empty_tx(fifo_empty_tx));
@@ -14678,8 +7594,8 @@ module
        CoreUARTapb_2_1_TXRDY,
        N_669,
        clear_overflow_0_a2_0_0,
-       GPS_RX,
-       GPS_TX
+       GPS_RX_c,
+       GPS_TX_c
     );
 input  [7:0] CoreAPB3_0_APBmslave0_PWDATA;
 output [7:0] CoreAPB3_0_APBmslave3_PRDATA;
@@ -14701,8 +7617,8 @@ output CoreUARTapb_2_1_RXRDY;
 output CoreUARTapb_2_1_TXRDY;
 input  N_669;
 input  clear_overflow_0_a2_0_0;
-output GPS_RX;
-input  GPS_TX;
+output GPS_RX_c;
+input  GPS_TX_c;
 
     wire \controlReg1[4]_net_1 , VCC_net_1, controlReg14, GND_net_1, 
         \controlReg1[5]_net_1 , \controlReg1[6]_net_1 , 
@@ -14894,9 +7810,10 @@ input  GPS_TX;
         .CoreAPB3_0_APBmslave3_PSELx(CoreAPB3_0_APBmslave3_PSELx), 
         .CoreUARTapb_2_1_PARITY_ERR(CoreUARTapb_2_1_PARITY_ERR), 
         .N_367(N_367), .clear_overflow_0_a2_0_0(
-        clear_overflow_0_a2_0_0), .GPS_RX(GPS_RX), 
-        .CoreUARTapb_2_1_TXRDY(CoreUARTapb_2_1_TXRDY), .GPS_TX(GPS_TX), 
-        .CoreUARTapb_2_1_FRAMING_ERR(CoreUARTapb_2_1_FRAMING_ERR));
+        clear_overflow_0_a2_0_0), .GPS_RX_c(GPS_RX_c), 
+        .CoreUARTapb_2_1_TXRDY(CoreUARTapb_2_1_TXRDY), .GPS_TX_c(
+        GPS_TX_c), .CoreUARTapb_2_1_FRAMING_ERR(
+        CoreUARTapb_2_1_FRAMING_ERR));
     CFG3 #( .INIT(8'hD8) )  \NxtPrdata_5_ns[7]  (.A(
         CoreAPB3_0_APBmslave0_PADDR[3]), .B(\NxtPrdata_5_bm_0[7] ), .C(
         \NxtPrdata_5_am_0[7] ), .Y(\NxtPrdata[7] ));
@@ -14950,14 +7867,14 @@ endmodule
 
 
 module pwm_gen_8s_16s_0(
-       PWM,
+       PWM_c,
        period_cnt,
        pwm_negedge_reg,
        pwm_enable_reg,
        MSS_HPMS_READY_int_RNI5CTC,
        GL0_INST
     );
-output [8:1] PWM;
+output [8:1] PWM_c;
 input  [15:0] period_cnt;
 input  [128:1] pwm_negedge_reg;
 input  [8:1] pwm_enable_reg;
@@ -15072,7 +7989,7 @@ input  GL0_INST;
     SLE \PWM_output_generation[1].genblk1.PWM_int[1]  (.D(N_28_i_0), 
         .CLK(GL0_INST), .EN(\un1_pwm_enable_reg_7_0_a4_i[0]_net_1 ), 
         .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(
-        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM[1]));
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM_c[1]));
     ARI1 #( .INIT(20'h48421) )  
         \PWM_output_generation[8].genblk1.un1_period_cnt_1_0_I_21  (.A(
         pwm_negedge_reg[120]), .B(period_cnt[6]), .C(period_cnt[7]), 
@@ -15166,7 +8083,7 @@ input  GL0_INST;
     SLE \PWM_output_generation[3].genblk1.PWM_int[3]  (.D(N_508_i_0), 
         .CLK(GL0_INST), .EN(\un1_pwm_enable_reg_5_i_0[0]_net_1 ), .ALn(
         MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM[3]));
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM_c[3]));
     CFG2 #( .INIT(4'hE) )  
         \PWM_output_generation[4].genblk1.PWM_int_52_f1_2[4]  (.A(
         pwm_negedge_reg[63]), .B(pwm_negedge_reg[64]), .Y(
@@ -15177,7 +8094,7 @@ input  GL0_INST;
         \PWM_int_38_f0_i_a2_14[3] ), .D(N_218), .Y(N_508_i_0));
     CFG3 #( .INIT(8'h10) )  
         \PWM_output_generation[7].genblk1.PWM_int_94_f0_i_a2_8[7]  (.A(
-        pwm_negedge_reg[110]), .B(pwm_negedge_reg[102]), .C(PWM[7]), 
+        pwm_negedge_reg[110]), .B(pwm_negedge_reg[102]), .C(PWM_c[7]), 
         .Y(\PWM_int_94_f0_i_a2_8[7] ));
     CFG4 #( .INIT(16'hFFFE) )  
         \PWM_output_generation[4].genblk1.PWM_int_52_f1_13[4]  (.A(
@@ -15186,7 +8103,7 @@ input  GL0_INST;
         \PWM_int_52_f1_13[4] ));
     CFG3 #( .INIT(8'hEF) )  
         \PWM_output_generation[8].genblk1.PWM_int_108_f1_8[8]  (.A(
-        pwm_negedge_reg[128]), .B(pwm_negedge_reg[113]), .C(PWM[8]), 
+        pwm_negedge_reg[128]), .B(pwm_negedge_reg[113]), .C(PWM_c[8]), 
         .Y(\PWM_int_108_f1_8[8] ));
     GND GND (.Y(GND_net_1));
     CFG4 #( .INIT(16'hFFFE) )  
@@ -15265,7 +8182,7 @@ input  GL0_INST;
     SLE \PWM_output_generation[2].genblk1.PWM_int[2]  (.D(N_31_i_0), 
         .CLK(GL0_INST), .EN(N_13), .ALn(MSS_HPMS_READY_int_RNI5CTC), 
         .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(
-        GND_net_1), .Q(PWM[2]));
+        GND_net_1), .Q(PWM_c[2]));
     CFG4 #( .INIT(16'h0001) )  
         \PWM_output_generation[7].genblk1.PWM_int_94_f0_i_a2_11[7]  (
         .A(pwm_negedge_reg[109]), .B(pwm_negedge_reg[106]), .C(
@@ -15323,8 +8240,8 @@ input  GL0_INST;
         .S(), .Y(), .FCO(\un1_period_cnt_1_0_data_tmp_1[4] ));
     CFG3 #( .INIT(8'h10) )  
         \PWM_output_generation[3].genblk1.PWM_int_38_f0_i_a2_8[3]  (.A(
-        pwm_negedge_reg[41]), .B(pwm_negedge_reg[40]), .C(PWM[3]), .Y(
-        \PWM_int_38_f0_i_a2_8[3] ));
+        pwm_negedge_reg[41]), .B(pwm_negedge_reg[40]), .C(PWM_c[3]), 
+        .Y(\PWM_int_38_f0_i_a2_8[3] ));
     ARI1 #( .INIT(20'h48421) )  
         \PWM_output_generation[1].genblk1.un1_period_cnt_1_1_I_21  (.A(
         pwm_negedge_reg[8]), .B(period_cnt[6]), .C(period_cnt[7]), .D(
@@ -15338,12 +8255,12 @@ input  GL0_INST;
     SLE \PWM_output_generation[7].genblk1.PWM_int[7]  (.D(N_509_i_0), 
         .CLK(GL0_INST), .EN(\un1_pwm_enable_reg_1_i_0[0]_net_1 ), .ALn(
         MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM[7]));
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM_c[7]));
     SLE \PWM_output_generation[6].genblk1.PWM_int[6]  (.D(
         \PWM_int_80[6] ), .CLK(GL0_INST), .EN(
         \un1_pwm_enable_reg_2_i_0[0] ), .ALn(
         MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM[6]));
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM_c[6]));
     CFG2 #( .INIT(4'hE) )  
         \PWM_output_generation[8].genblk1.PWM_int_108_f1_2[8]  (.A(
         pwm_negedge_reg[124]), .B(pwm_negedge_reg[125]), .Y(
@@ -15400,8 +8317,8 @@ input  GL0_INST;
         \PWM_int_80_f1_13[6] ));
     CFG3 #( .INIT(8'hEF) )  
         \PWM_output_generation[4].genblk1.PWM_int_52_f1_8[4]  (.A(
-        pwm_negedge_reg[54]), .B(pwm_negedge_reg[53]), .C(PWM[4]), .Y(
-        \PWM_int_52_f1_8[4] ));
+        pwm_negedge_reg[54]), .B(pwm_negedge_reg[53]), .C(PWM_c[4]), 
+        .Y(\PWM_int_52_f1_8[4] ));
     ARI1 #( .INIT(20'h48421) )  
         \PWM_output_generation[8].genblk1.un1_period_cnt_1_0_I_33  (.A(
         pwm_negedge_reg[118]), .B(period_cnt[4]), .C(period_cnt[5]), 
@@ -15494,12 +8411,12 @@ input  GL0_INST;
         \un1_period_cnt_1_0_data_tmp_2[5] ));
     CFG3 #( .INIT(8'hEF) )  
         \PWM_output_generation[6].genblk1.PWM_int_80_f1_8[6]  (.A(
-        pwm_negedge_reg[90]), .B(pwm_negedge_reg[89]), .C(PWM[6]), .Y(
-        \PWM_int_80_f1_8[6] ));
+        pwm_negedge_reg[90]), .B(pwm_negedge_reg[89]), .C(PWM_c[6]), 
+        .Y(\PWM_int_80_f1_8[6] ));
     SLE \PWM_output_generation[5].genblk1.PWM_int[5]  (.D(N_26_i_0), 
         .CLK(GL0_INST), .EN(N_62), .ALn(MSS_HPMS_READY_int_RNI5CTC), 
         .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(
-        GND_net_1), .Q(PWM[5]));
+        GND_net_1), .Q(PWM_c[5]));
     ARI1 #( .INIT(20'h48421) )  
         \PWM_output_generation[3].genblk1.un1_period_cnt_1_0_I_33  (.A(
         pwm_negedge_reg[38]), .B(period_cnt[4]), .C(period_cnt[5]), .D(
@@ -15529,8 +8446,8 @@ input  GL0_INST;
         \un1_period_cnt_1_0_data_tmp[0] ));
     CFG3 #( .INIT(8'h10) )  
         \PWM_output_generation[1].genblk1.PWM_int_10_f0_i_0_a2_8[1]  (
-        .A(pwm_negedge_reg[7]), .B(pwm_negedge_reg[6]), .C(PWM[1]), .Y(
-        \PWM_int_10_f0_i_0_a2_8[1] ));
+        .A(pwm_negedge_reg[7]), .B(pwm_negedge_reg[6]), .C(PWM_c[1]), 
+        .Y(\PWM_int_10_f0_i_0_a2_8[1] ));
     CFG2 #( .INIT(4'h1) )  
         \PWM_output_generation[1].genblk1.PWM_int_10_f0_i_0_a2_2[1]  (
         .A(pwm_negedge_reg[3]), .B(pwm_negedge_reg[8]), .Y(
@@ -15648,7 +8565,7 @@ input  GL0_INST;
         \PWM_int_52[4] ), .CLK(GL0_INST), .EN(
         \un1_pwm_enable_reg_4_i_0[0] ), .ALn(
         MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM[4]));
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(PWM_c[4]));
     CFG4 #( .INIT(16'h0001) )  
         \PWM_output_generation[5].genblk1.PWM_int_66_f0_i_0_a2_10[5]  
         (.A(pwm_negedge_reg[78]), .B(pwm_negedge_reg[75]), .C(
@@ -15721,7 +8638,7 @@ input  GL0_INST;
         \PWM_int_108[8] ), .CLK(GL0_INST), .EN(
         \un1_pwm_enable_reg_i_0[0] ), .ALn(MSS_HPMS_READY_int_RNI5CTC), 
         .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(
-        GND_net_1), .Q(PWM[8]));
+        GND_net_1), .Q(PWM_c[8]));
     CFG2 #( .INIT(4'h1) )  
         \PWM_output_generation[3].genblk1.PWM_int_38_f0_i_a2_2[3]  (.A(
         pwm_negedge_reg[43]), .B(pwm_negedge_reg[46]), .Y(
@@ -15732,7 +8649,7 @@ input  GL0_INST;
         \un1_pwm_enable_reg_2_i_0[0] ));
     CFG3 #( .INIT(8'h10) )  
         \PWM_output_generation[2].genblk1.PWM_int_24_f0_i_0_a2_8[2]  (
-        .A(pwm_negedge_reg[24]), .B(pwm_negedge_reg[23]), .C(PWM[2]), 
+        .A(pwm_negedge_reg[24]), .B(pwm_negedge_reg[23]), .C(PWM_c[2]), 
         .Y(\PWM_int_24_f0_i_0_a2_8[2] ));
     ARI1 #( .INIT(20'h48421) )  
         \PWM_output_generation[8].genblk1.un1_period_cnt_1_0_I_27  (.A(
@@ -15742,7 +8659,7 @@ input  GL0_INST;
         \un1_period_cnt_1_0_data_tmp[4] ));
     CFG3 #( .INIT(8'h10) )  
         \PWM_output_generation[5].genblk1.PWM_int_66_f0_i_0_a2_8[5]  (
-        .A(pwm_negedge_reg[76]), .B(pwm_negedge_reg[72]), .C(PWM[5]), 
+        .A(pwm_negedge_reg[76]), .B(pwm_negedge_reg[72]), .C(PWM_c[5]), 
         .Y(\PWM_int_66_f0_i_0_a2_8[5] ));
     
 endmodule
@@ -17597,7 +10514,7 @@ module corepwm_Z4_layer0(
        PRDATA_regif_12_0,
        PRDATA_regif_9_i_1,
        PRDATA_regif_9_i_0,
-       PWM,
+       PWM_c,
        pwm_enable_reg_5,
        period_reg_5,
        MSS_HPMS_READY_int_RNI5CTC,
@@ -17651,7 +10568,7 @@ input  [7:2] CoreAPB3_0_APBmslave0_PADDR;
 output [1:1] PRDATA_regif_12_0;
 output [4:4] PRDATA_regif_9_i_1;
 output [4:4] PRDATA_regif_9_i_0;
-output [8:1] PWM;
+output [8:1] PWM_c;
 output pwm_enable_reg_5;
 output period_reg_5;
 input  MSS_HPMS_READY_int_RNI5CTC;
@@ -17777,82 +10694,83 @@ output N_698;
         \period_cnt[11] , \period_cnt[12] , \period_cnt[13] , 
         \period_cnt[14] , \period_cnt[15] , GND_net_1, VCC_net_1;
     
-    pwm_gen_8s_16s_0 \genblk5.pwm_gen  (.PWM({PWM[8], PWM[7], PWM[6], 
-        PWM[5], PWM[4], PWM[3], PWM[2], PWM[1]}), .period_cnt({
-        \period_cnt[15] , \period_cnt[14] , \period_cnt[13] , 
-        \period_cnt[12] , \period_cnt[11] , \period_cnt[10] , 
-        \period_cnt[9] , \period_cnt[8] , \period_cnt[7] , 
-        \period_cnt[6] , \period_cnt[5] , \period_cnt[4] , 
-        \period_cnt[3] , \period_cnt[2] , \period_cnt[1] , 
-        \period_cnt[0] }), .pwm_negedge_reg({\pwm_negedge_reg[128] , 
-        \pwm_negedge_reg[127] , \pwm_negedge_reg[126] , 
-        \pwm_negedge_reg[125] , \pwm_negedge_reg[124] , 
-        \pwm_negedge_reg[123] , \pwm_negedge_reg[122] , 
-        \pwm_negedge_reg[121] , \pwm_negedge_reg[120] , 
-        \pwm_negedge_reg[119] , \pwm_negedge_reg[118] , 
-        \pwm_negedge_reg[117] , \pwm_negedge_reg[116] , 
-        \pwm_negedge_reg[115] , \pwm_negedge_reg[114] , 
-        \pwm_negedge_reg[113] , \pwm_negedge_reg[112] , 
-        \pwm_negedge_reg[111] , \pwm_negedge_reg[110] , 
-        \pwm_negedge_reg[109] , \pwm_negedge_reg[108] , 
-        \pwm_negedge_reg[107] , \pwm_negedge_reg[106] , 
-        \pwm_negedge_reg[105] , \pwm_negedge_reg[104] , 
-        \pwm_negedge_reg[103] , \pwm_negedge_reg[102] , 
-        \pwm_negedge_reg[101] , \pwm_negedge_reg[100] , 
-        \pwm_negedge_reg[99] , \pwm_negedge_reg[98] , 
-        \pwm_negedge_reg[97] , \pwm_negedge_reg[96] , 
-        \pwm_negedge_reg[95] , \pwm_negedge_reg[94] , 
-        \pwm_negedge_reg[93] , \pwm_negedge_reg[92] , 
-        \pwm_negedge_reg[91] , \pwm_negedge_reg[90] , 
-        \pwm_negedge_reg[89] , \pwm_negedge_reg[88] , 
-        \pwm_negedge_reg[87] , \pwm_negedge_reg[86] , 
-        \pwm_negedge_reg[85] , \pwm_negedge_reg[84] , 
-        \pwm_negedge_reg[83] , \pwm_negedge_reg[82] , 
-        \pwm_negedge_reg[81] , \pwm_negedge_reg[80] , 
-        \pwm_negedge_reg[79] , \pwm_negedge_reg[78] , 
-        \pwm_negedge_reg[77] , \pwm_negedge_reg[76] , 
-        \pwm_negedge_reg[75] , \pwm_negedge_reg[74] , 
-        \pwm_negedge_reg[73] , \pwm_negedge_reg[72] , 
-        \pwm_negedge_reg[71] , \pwm_negedge_reg[70] , 
-        \pwm_negedge_reg[69] , \pwm_negedge_reg[68] , 
-        \pwm_negedge_reg[67] , \pwm_negedge_reg[66] , 
-        \pwm_negedge_reg[65] , \pwm_negedge_reg[64] , 
-        \pwm_negedge_reg[63] , \pwm_negedge_reg[62] , 
-        \pwm_negedge_reg[61] , \pwm_negedge_reg[60] , 
-        \pwm_negedge_reg[59] , \pwm_negedge_reg[58] , 
-        \pwm_negedge_reg[57] , \pwm_negedge_reg[56] , 
-        \pwm_negedge_reg[55] , \pwm_negedge_reg[54] , 
-        \pwm_negedge_reg[53] , \pwm_negedge_reg[52] , 
-        \pwm_negedge_reg[51] , \pwm_negedge_reg[50] , 
-        \pwm_negedge_reg[49] , \pwm_negedge_reg[48] , 
-        \pwm_negedge_reg[47] , \pwm_negedge_reg[46] , 
-        \pwm_negedge_reg[45] , \pwm_negedge_reg[44] , 
-        \pwm_negedge_reg[43] , \pwm_negedge_reg[42] , 
-        \pwm_negedge_reg[41] , \pwm_negedge_reg[40] , 
-        \pwm_negedge_reg[39] , \pwm_negedge_reg[38] , 
-        \pwm_negedge_reg[37] , \pwm_negedge_reg[36] , 
-        \pwm_negedge_reg[35] , \pwm_negedge_reg[34] , 
-        \pwm_negedge_reg[33] , \pwm_negedge_reg[32] , 
-        \pwm_negedge_reg[31] , \pwm_negedge_reg[30] , 
-        \pwm_negedge_reg[29] , \pwm_negedge_reg[28] , 
-        \pwm_negedge_reg[27] , \pwm_negedge_reg[26] , 
-        \pwm_negedge_reg[25] , \pwm_negedge_reg[24] , 
-        \pwm_negedge_reg[23] , \pwm_negedge_reg[22] , 
-        \pwm_negedge_reg[21] , \pwm_negedge_reg[20] , 
-        \pwm_negedge_reg[19] , \pwm_negedge_reg[18] , 
-        \pwm_negedge_reg[17] , \pwm_negedge_reg[16] , 
-        \pwm_negedge_reg[15] , \pwm_negedge_reg[14] , 
-        \pwm_negedge_reg[13] , \pwm_negedge_reg[12] , 
-        \pwm_negedge_reg[11] , \pwm_negedge_reg[10] , 
-        \pwm_negedge_reg[9] , \pwm_negedge_reg[8] , 
-        \pwm_negedge_reg[7] , \pwm_negedge_reg[6] , 
-        \pwm_negedge_reg[5] , \pwm_negedge_reg[4] , 
-        \pwm_negedge_reg[3] , \pwm_negedge_reg[2] , 
-        \pwm_negedge_reg[1] }), .pwm_enable_reg({\pwm_enable_reg[8] , 
-        \pwm_enable_reg[7] , pwm_enable_reg_5, \pwm_enable_reg[5] , 
-        \pwm_enable_reg[4] , \pwm_enable_reg[3] , \pwm_enable_reg[2] , 
-        \pwm_enable_reg[1] }), .MSS_HPMS_READY_int_RNI5CTC(
-        MSS_HPMS_READY_int_RNI5CTC), .GL0_INST(GL0_INST));
+    pwm_gen_8s_16s_0 \genblk5.pwm_gen  (.PWM_c({PWM_c[8], PWM_c[7], 
+        PWM_c[6], PWM_c[5], PWM_c[4], PWM_c[3], PWM_c[2], PWM_c[1]}), 
+        .period_cnt({\period_cnt[15] , \period_cnt[14] , 
+        \period_cnt[13] , \period_cnt[12] , \period_cnt[11] , 
+        \period_cnt[10] , \period_cnt[9] , \period_cnt[8] , 
+        \period_cnt[7] , \period_cnt[6] , \period_cnt[5] , 
+        \period_cnt[4] , \period_cnt[3] , \period_cnt[2] , 
+        \period_cnt[1] , \period_cnt[0] }), .pwm_negedge_reg({
+        \pwm_negedge_reg[128] , \pwm_negedge_reg[127] , 
+        \pwm_negedge_reg[126] , \pwm_negedge_reg[125] , 
+        \pwm_negedge_reg[124] , \pwm_negedge_reg[123] , 
+        \pwm_negedge_reg[122] , \pwm_negedge_reg[121] , 
+        \pwm_negedge_reg[120] , \pwm_negedge_reg[119] , 
+        \pwm_negedge_reg[118] , \pwm_negedge_reg[117] , 
+        \pwm_negedge_reg[116] , \pwm_negedge_reg[115] , 
+        \pwm_negedge_reg[114] , \pwm_negedge_reg[113] , 
+        \pwm_negedge_reg[112] , \pwm_negedge_reg[111] , 
+        \pwm_negedge_reg[110] , \pwm_negedge_reg[109] , 
+        \pwm_negedge_reg[108] , \pwm_negedge_reg[107] , 
+        \pwm_negedge_reg[106] , \pwm_negedge_reg[105] , 
+        \pwm_negedge_reg[104] , \pwm_negedge_reg[103] , 
+        \pwm_negedge_reg[102] , \pwm_negedge_reg[101] , 
+        \pwm_negedge_reg[100] , \pwm_negedge_reg[99] , 
+        \pwm_negedge_reg[98] , \pwm_negedge_reg[97] , 
+        \pwm_negedge_reg[96] , \pwm_negedge_reg[95] , 
+        \pwm_negedge_reg[94] , \pwm_negedge_reg[93] , 
+        \pwm_negedge_reg[92] , \pwm_negedge_reg[91] , 
+        \pwm_negedge_reg[90] , \pwm_negedge_reg[89] , 
+        \pwm_negedge_reg[88] , \pwm_negedge_reg[87] , 
+        \pwm_negedge_reg[86] , \pwm_negedge_reg[85] , 
+        \pwm_negedge_reg[84] , \pwm_negedge_reg[83] , 
+        \pwm_negedge_reg[82] , \pwm_negedge_reg[81] , 
+        \pwm_negedge_reg[80] , \pwm_negedge_reg[79] , 
+        \pwm_negedge_reg[78] , \pwm_negedge_reg[77] , 
+        \pwm_negedge_reg[76] , \pwm_negedge_reg[75] , 
+        \pwm_negedge_reg[74] , \pwm_negedge_reg[73] , 
+        \pwm_negedge_reg[72] , \pwm_negedge_reg[71] , 
+        \pwm_negedge_reg[70] , \pwm_negedge_reg[69] , 
+        \pwm_negedge_reg[68] , \pwm_negedge_reg[67] , 
+        \pwm_negedge_reg[66] , \pwm_negedge_reg[65] , 
+        \pwm_negedge_reg[64] , \pwm_negedge_reg[63] , 
+        \pwm_negedge_reg[62] , \pwm_negedge_reg[61] , 
+        \pwm_negedge_reg[60] , \pwm_negedge_reg[59] , 
+        \pwm_negedge_reg[58] , \pwm_negedge_reg[57] , 
+        \pwm_negedge_reg[56] , \pwm_negedge_reg[55] , 
+        \pwm_negedge_reg[54] , \pwm_negedge_reg[53] , 
+        \pwm_negedge_reg[52] , \pwm_negedge_reg[51] , 
+        \pwm_negedge_reg[50] , \pwm_negedge_reg[49] , 
+        \pwm_negedge_reg[48] , \pwm_negedge_reg[47] , 
+        \pwm_negedge_reg[46] , \pwm_negedge_reg[45] , 
+        \pwm_negedge_reg[44] , \pwm_negedge_reg[43] , 
+        \pwm_negedge_reg[42] , \pwm_negedge_reg[41] , 
+        \pwm_negedge_reg[40] , \pwm_negedge_reg[39] , 
+        \pwm_negedge_reg[38] , \pwm_negedge_reg[37] , 
+        \pwm_negedge_reg[36] , \pwm_negedge_reg[35] , 
+        \pwm_negedge_reg[34] , \pwm_negedge_reg[33] , 
+        \pwm_negedge_reg[32] , \pwm_negedge_reg[31] , 
+        \pwm_negedge_reg[30] , \pwm_negedge_reg[29] , 
+        \pwm_negedge_reg[28] , \pwm_negedge_reg[27] , 
+        \pwm_negedge_reg[26] , \pwm_negedge_reg[25] , 
+        \pwm_negedge_reg[24] , \pwm_negedge_reg[23] , 
+        \pwm_negedge_reg[22] , \pwm_negedge_reg[21] , 
+        \pwm_negedge_reg[20] , \pwm_negedge_reg[19] , 
+        \pwm_negedge_reg[18] , \pwm_negedge_reg[17] , 
+        \pwm_negedge_reg[16] , \pwm_negedge_reg[15] , 
+        \pwm_negedge_reg[14] , \pwm_negedge_reg[13] , 
+        \pwm_negedge_reg[12] , \pwm_negedge_reg[11] , 
+        \pwm_negedge_reg[10] , \pwm_negedge_reg[9] , 
+        \pwm_negedge_reg[8] , \pwm_negedge_reg[7] , 
+        \pwm_negedge_reg[6] , \pwm_negedge_reg[5] , 
+        \pwm_negedge_reg[4] , \pwm_negedge_reg[3] , 
+        \pwm_negedge_reg[2] , \pwm_negedge_reg[1] }), .pwm_enable_reg({
+        \pwm_enable_reg[8] , \pwm_enable_reg[7] , pwm_enable_reg_5, 
+        \pwm_enable_reg[5] , \pwm_enable_reg[4] , \pwm_enable_reg[3] , 
+        \pwm_enable_reg[2] , \pwm_enable_reg[1] }), 
+        .MSS_HPMS_READY_int_RNI5CTC(MSS_HPMS_READY_int_RNI5CTC), 
+        .GL0_INST(GL0_INST));
     VCC VCC (.Y(VCC_net_1));
     GND GND (.Y(GND_net_1));
     timebase_16s \genblk4.genblk1.timebase  (.period_cnt({
@@ -18469,7 +11387,7 @@ module mss_sb_CoreUARTapb_2_2_Rx_async_1s_0s_1s_2s(
        MSS_HPMS_READY_int_RNI5CTC,
        GL0_INST,
        baud_clock,
-       BT_TX,
+       BT_TX_c,
        CoreUARTapb_2_2_PARITY_ERR,
        stop_strobe,
        CoreUARTapb_2_2_FRAMING_ERR,
@@ -18483,7 +11401,7 @@ input  clear_parity_reg;
 input  MSS_HPMS_READY_int_RNI5CTC;
 input  GL0_INST;
 input  baud_clock;
-input  BT_TX;
+input  BT_TX_c;
 output CoreUARTapb_2_2_PARITY_ERR;
 output stop_strobe;
 output CoreUARTapb_2_2_FRAMING_ERR;
@@ -18750,9 +11668,10 @@ output rx_idle;
         baud_clock), .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), 
         .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
         \rx_state[0]_net_1 ));
-    SLE \samples[2]  (.D(BT_TX), .CLK(GL0_INST), .EN(baud_clock), .ALn(
-        MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(\samples[2]_net_1 ));
+    SLE \samples[2]  (.D(BT_TX_c), .CLK(GL0_INST), .EN(baud_clock), 
+        .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \samples[2]_net_1 ));
     SLE \receive_count[0]  (.D(N_373_i_0), .CLK(GL0_INST), .EN(
         baud_clock), .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), 
         .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
@@ -19230,7 +12149,7 @@ module mss_sb_CoreUARTapb_2_2_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s(
        MSS_HPMS_READY_int_RNI5CTC,
        GL0_INST,
        xmit_pulse_i_0,
-       BT_RX,
+       BT_RX_c,
        CoreUARTapb_2_2_TXRDY,
        fifo_full_tx_i_0,
        xmit_clock,
@@ -19244,7 +12163,7 @@ output fifo_read_tx_i_0;
 input  MSS_HPMS_READY_int_RNI5CTC;
 input  GL0_INST;
 input  xmit_pulse_i_0;
-output BT_RX;
+output BT_RX_c;
 output CoreUARTapb_2_2_TXRDY;
 input  fifo_full_tx_i_0;
 input  xmit_clock;
@@ -19359,7 +12278,7 @@ input  fifo_empty_tx;
     GND GND (.Y(GND_net_1));
     SLE tx (.D(tx_4_iv_i_0), .CLK(GL0_INST), .EN(N_144_i_0), .ALn(
         MSS_HPMS_READY_int_RNI5CTC), .ADn(GND_net_1), .SLn(VCC_net_1), 
-        .SD(GND_net_1), .LAT(GND_net_1), .Q(BT_RX));
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(BT_RX_c));
     SLE \tx_byte[3]  (.D(tx_dout_reg[3]), .CLK(GL0_INST), .EN(
         N_133_i_0), .ALn(MSS_HPMS_READY_int_RNI5CTC), .ADn(VCC_net_1), 
         .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
@@ -20076,9 +12995,9 @@ module mss_sb_CoreUARTapb_2_2_COREUART_1s_1s_0s_15s_0s(
        CoreUARTapb_2_2_PARITY_ERR,
        N_367,
        clear_overflow_0_a2_0_0,
-       BT_RX,
+       BT_RX_c,
        CoreUARTapb_2_2_TXRDY,
-       BT_TX,
+       BT_TX_c,
        CoreUARTapb_2_2_FRAMING_ERR
     );
 input  [7:0] CoreAPB3_0_APBmslave0_PWDATA;
@@ -20100,9 +13019,9 @@ input  CoreAPB3_0_APBmslave4_PSELx;
 output CoreUARTapb_2_2_PARITY_ERR;
 input  N_367;
 input  clear_overflow_0_a2_0_0;
-output BT_RX;
+output BT_RX_c;
 output CoreUARTapb_2_2_TXRDY;
-input  BT_TX;
+input  BT_TX_c;
 output CoreUARTapb_2_2_FRAMING_ERR;
 
     wire rx_dout_reg_empty_net_1, rx_dout_reg_empty_i_0, 
@@ -20160,8 +13079,8 @@ output CoreUARTapb_2_2_FRAMING_ERR;
         controlReg2[2], controlReg2[1], controlReg2[0]}), 
         .clear_parity_reg(clear_parity_reg_net_1), 
         .MSS_HPMS_READY_int_RNI5CTC(MSS_HPMS_READY_int_RNI5CTC), 
-        .GL0_INST(GL0_INST), .baud_clock(baud_clock), .BT_TX(BT_TX), 
-        .CoreUARTapb_2_2_PARITY_ERR(CoreUARTapb_2_2_PARITY_ERR), 
+        .GL0_INST(GL0_INST), .baud_clock(baud_clock), .BT_TX_c(BT_TX_c)
+        , .CoreUARTapb_2_2_PARITY_ERR(CoreUARTapb_2_2_PARITY_ERR), 
         .stop_strobe(stop_strobe), .CoreUARTapb_2_2_FRAMING_ERR(
         CoreUARTapb_2_2_FRAMING_ERR), .clear_parity_en(clear_parity_en)
         , .fifo_write(fifo_write), .rx_idle(rx_idle));
@@ -20235,7 +13154,7 @@ output CoreUARTapb_2_2_FRAMING_ERR;
         .fifo_read_tx(fifo_read_tx), .fifo_read_tx_i_0(
         fifo_read_tx_i_0), .MSS_HPMS_READY_int_RNI5CTC(
         MSS_HPMS_READY_int_RNI5CTC), .GL0_INST(GL0_INST), 
-        .xmit_pulse_i_0(xmit_pulse_i_0), .BT_RX(BT_RX), 
+        .xmit_pulse_i_0(xmit_pulse_i_0), .BT_RX_c(BT_RX_c), 
         .CoreUARTapb_2_2_TXRDY(CoreUARTapb_2_2_TXRDY), 
         .fifo_full_tx_i_0(fifo_full_tx_i_0), .xmit_clock(xmit_clock), 
         .baud_clock(baud_clock), .fifo_empty_tx(fifo_empty_tx));
@@ -20390,8 +13309,8 @@ module
        N_669,
        N_367,
        clear_overflow_0_a2_0_0,
-       BT_RX,
-       BT_TX
+       BT_RX_c,
+       BT_TX_c
     );
 input  [7:0] CoreAPB3_0_APBmslave0_PWDATA;
 output [7:0] CoreAPB3_0_APBmslave4_PRDATA;
@@ -20412,8 +13331,8 @@ output CoreUARTapb_2_2_RXRDY;
 input  N_669;
 input  N_367;
 input  clear_overflow_0_a2_0_0;
-output BT_RX;
-input  BT_TX;
+output BT_RX_c;
+input  BT_TX_c;
 
     wire \controlReg1[4]_net_1 , VCC_net_1, controlReg14, GND_net_1, 
         \controlReg1[5]_net_1 , \controlReg1[6]_net_1 , 
@@ -20615,9 +13534,10 @@ input  BT_TX;
         .CoreAPB3_0_APBmslave4_PSELx(CoreAPB3_0_APBmslave4_PSELx), 
         .CoreUARTapb_2_2_PARITY_ERR(CoreUARTapb_2_2_PARITY_ERR), 
         .N_367(N_367), .clear_overflow_0_a2_0_0(
-        clear_overflow_0_a2_0_0), .BT_RX(BT_RX), 
-        .CoreUARTapb_2_2_TXRDY(CoreUARTapb_2_2_TXRDY), .BT_TX(BT_TX), 
-        .CoreUARTapb_2_2_FRAMING_ERR(CoreUARTapb_2_2_FRAMING_ERR));
+        clear_overflow_0_a2_0_0), .BT_RX_c(BT_RX_c), 
+        .CoreUARTapb_2_2_TXRDY(CoreUARTapb_2_2_TXRDY), .BT_TX_c(
+        BT_TX_c), .CoreUARTapb_2_2_FRAMING_ERR(
+        CoreUARTapb_2_2_FRAMING_ERR));
     CFG3 #( .INIT(8'hD8) )  \NxtPrdata_5_ns[7]  (.A(
         CoreAPB3_0_APBmslave0_PADDR[3]), .B(\NxtPrdata_5_bm[7]_net_1 ), 
         .C(\NxtPrdata_5_am[7]_net_1 ), .Y(\NxtPrdata[7] ));
@@ -20721,27 +13641,27 @@ endmodule
 
 
 module mss_sb(
-       PWM,
+       PWM_c,
        COREI2C_0_0_SDA_IO,
        COREI2C_0_0_SCL_IO,
        DEVRST_N,
        mss_sb_0_TX,
        Echo_control_0_TX,
-       GPS_RX,
-       GPS_TX,
-       BT_RX,
-       BT_TX
+       GPS_RX_c,
+       GPS_TX_c,
+       BT_RX_c,
+       BT_TX_c
     );
-output [8:1] PWM;
+output [8:1] PWM_c;
 inout  COREI2C_0_0_SDA_IO;
 inout  COREI2C_0_0_SCL_IO;
 input  DEVRST_N;
 output mss_sb_0_TX;
 input  Echo_control_0_TX;
-output GPS_RX;
-input  GPS_TX;
-output BT_RX;
-input  BT_TX;
+output GPS_RX_c;
+input  GPS_TX_c;
+output BT_RX_c;
+input  BT_TX_c;
 
     wire BIBUF_COREI2C_0_0_SDA_IO_Y, GND_net_1, 
         \COREI2C_0_0_SDAO_i[0] , BIBUF_COREI2C_0_0_SCL_IO_Y, 
@@ -21071,8 +13991,8 @@ input  BT_TX;
         CoreUARTapb_2_1_FRAMING_ERR), .CoreUARTapb_2_1_RXRDY(
         CoreUARTapb_2_1_RXRDY), .CoreUARTapb_2_1_TXRDY(
         CoreUARTapb_2_1_TXRDY), .N_669(N_669), 
-        .clear_overflow_0_a2_0_0(clear_overflow_0_a2_0_0), .GPS_RX(
-        GPS_RX), .GPS_TX(GPS_TX));
+        .clear_overflow_0_a2_0_0(clear_overflow_0_a2_0_0), .GPS_RX_c(
+        GPS_RX_c), .GPS_TX_c(GPS_TX_c));
     OR3 CoreUARTapb_2_1_intr_or_2 (.A(CoreUARTapb_2_1_intr_or_1_Y), .B(
         CoreUARTapb_2_1_intr_or_0_Y), .C(GND_net_1), .Y(
         CoreUARTapb_2_1_intr_or_2_Y));
@@ -21102,26 +14022,27 @@ input  BT_TX;
         \CoreAPB3_0_APBmslave0_PADDR[2] }), .PRDATA_regif_12_0({
         \PRDATA_regif_12_0[1] }), .PRDATA_regif_9_i_1({
         \PRDATA_regif_9_i_1[4] }), .PRDATA_regif_9_i_0({
-        \PRDATA_regif_9_i_0[4] }), .PWM({PWM[8], PWM[7], PWM[6], 
-        PWM[5], PWM[4], PWM[3], PWM[2], PWM[1]}), .pwm_enable_reg_5(
-        \pwm_enable_reg[6] ), .period_reg_5(\period_reg[5] ), 
-        .MSS_HPMS_READY_int_RNI5CTC(MSS_HPMS_READY_int_RNI5CTC), 
-        .GL0_INST(GL0_INST), .N_428(N_428), .N_629(N_629), .N_678(
-        N_678), .N_689(N_689), .N_686(N_686), .N_679(N_679), .N_687(
-        N_687), .N_688(N_688), .N_690(N_690), .N_680(N_680), .N_685(
-        N_685), .N_681(N_681), .N_684(N_684), .N_691(N_691), 
-        .psh_enable_reg1_1_sqmuxa_0(psh_enable_reg1_1_sqmuxa_0), 
-        .N_528(N_528), .psh_negedge_reg_1_sqmuxa_6_2(
-        psh_negedge_reg_1_sqmuxa_6_2), .N_529(N_529), .N_425(N_425), 
-        .N_423(N_423), .N_513(N_513), .N_411(N_411), .N_660(N_660), 
-        .N_705(N_705), .N_706(N_706), .N_708(N_708), .N_709(N_709), 
-        .N_711(N_711), .N_710(N_710), .N_707(N_707), .N_704(N_704), 
-        .CoreAPB3_0_APBmslave0_PSELx(CoreAPB3_0_APBmslave0_PSELx), 
-        .CoreAPB3_0_APBmslave0_PWRITE(CoreAPB3_0_APBmslave0_PWRITE), 
-        .CoreAPB3_0_APBmslave0_PENABLE(CoreAPB3_0_APBmslave0_PENABLE), 
-        .PRDATA_regif_sn_N_20_i_1(PRDATA_regif_sn_N_20_i_1), .N_506(
-        N_506), .N_140(N_140), .N_700(N_700), .N_702(N_702), .N_703(
-        N_703), .N_699(N_699), .N_698(N_698));
+        \PRDATA_regif_9_i_0[4] }), .PWM_c({PWM_c[8], PWM_c[7], 
+        PWM_c[6], PWM_c[5], PWM_c[4], PWM_c[3], PWM_c[2], PWM_c[1]}), 
+        .pwm_enable_reg_5(\pwm_enable_reg[6] ), .period_reg_5(
+        \period_reg[5] ), .MSS_HPMS_READY_int_RNI5CTC(
+        MSS_HPMS_READY_int_RNI5CTC), .GL0_INST(GL0_INST), .N_428(N_428)
+        , .N_629(N_629), .N_678(N_678), .N_689(N_689), .N_686(N_686), 
+        .N_679(N_679), .N_687(N_687), .N_688(N_688), .N_690(N_690), 
+        .N_680(N_680), .N_685(N_685), .N_681(N_681), .N_684(N_684), 
+        .N_691(N_691), .psh_enable_reg1_1_sqmuxa_0(
+        psh_enable_reg1_1_sqmuxa_0), .N_528(N_528), 
+        .psh_negedge_reg_1_sqmuxa_6_2(psh_negedge_reg_1_sqmuxa_6_2), 
+        .N_529(N_529), .N_425(N_425), .N_423(N_423), .N_513(N_513), 
+        .N_411(N_411), .N_660(N_660), .N_705(N_705), .N_706(N_706), 
+        .N_708(N_708), .N_709(N_709), .N_711(N_711), .N_710(N_710), 
+        .N_707(N_707), .N_704(N_704), .CoreAPB3_0_APBmslave0_PSELx(
+        CoreAPB3_0_APBmslave0_PSELx), .CoreAPB3_0_APBmslave0_PWRITE(
+        CoreAPB3_0_APBmslave0_PWRITE), .CoreAPB3_0_APBmslave0_PENABLE(
+        CoreAPB3_0_APBmslave0_PENABLE), .PRDATA_regif_sn_N_20_i_1(
+        PRDATA_regif_sn_N_20_i_1), .N_506(N_506), .N_140(N_140), 
+        .N_700(N_700), .N_702(N_702), .N_703(N_703), .N_699(N_699), 
+        .N_698(N_698));
     mss_sb_MSS mss_sb_MSS_0 (.CoreAPB3_0_APBmslave0_PADDR({
         \CoreAPB3_0_APBmslave0_PADDR[8] , 
         \CoreAPB3_0_APBmslave0_PADDR[7] , 
@@ -21221,8 +14142,8 @@ input  BT_TX;
         CoreUARTapb_2_2_FRAMING_ERR), .CoreUARTapb_2_2_OVERFLOW(
         CoreUARTapb_2_2_OVERFLOW), .CoreUARTapb_2_2_RXRDY(
         CoreUARTapb_2_2_RXRDY), .N_669(N_669), .N_367(N_367), 
-        .clear_overflow_0_a2_0_0(clear_overflow_0_a2_0_0), .BT_RX(
-        BT_RX), .BT_TX(BT_TX));
+        .clear_overflow_0_a2_0_0(clear_overflow_0_a2_0_0), .BT_RX_c(
+        BT_RX_c), .BT_TX_c(BT_TX_c));
     VCC VCC (.Y(VCC_net_1));
     OR3 CoreUARTapb_2_2_intr_or_0 (.A(CoreUARTapb_2_2_FRAMING_ERR), .B(
         CoreUARTapb_2_2_OVERFLOW), .C(CoreUARTapb_2_2_PARITY_ERR), .Y(
@@ -21246,12 +14167,7097 @@ input  BT_TX;
 endmodule
 
 
+module pulse_meash(
+       pulse_meash_0_tim,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       pulse_meash_0_new_ready,
+       locator_control_0_en_timer,
+       ECHO_c
+    );
+output [13:0] pulse_meash_0_tim;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+output pulse_meash_0_new_ready;
+input  locator_control_0_en_timer;
+input  ECHO_c;
+
+    wire \i[9]_net_1 , \i_i[9] , \i[8]_net_1 , \i_i[8] , \i[7]_net_1 , 
+        \i_i[7] , \i[6]_net_1 , \i_i[6] , \i[5]_net_1 , \i_i[5] , 
+        \i[4]_net_1 , \i_i[4] , \i[15]_net_1 , \i_i[15] , 
+        \i[14]_net_1 , \i_i[14] , \i[13]_net_1 , \i_i[13] , 
+        \i[12]_net_1 , \i_i[12] , \i[11]_net_1 , \i_i[11] , 
+        mult1_un152_sum_s_11_S, \mult1_un152_sum_i_0[13] , 
+        mult1_un103_sum_s_11_S, \mult1_un103_sum_i_0[13] , 
+        mult1_un110_sum_s_11_S, \mult1_un110_sum_i_0[13] , 
+        mult1_un117_sum_s_11_S, \mult1_un117_sum_i_0[13] , 
+        mult1_un124_sum_s_11_S, \mult1_un124_sum_i_0[13] , 
+        mult1_un131_sum_s_11_S, \mult1_un131_sum_i_0[13] , 
+        mult1_un138_sum_s_11_S, \mult1_un138_sum_i_0[13] , 
+        mult1_un145_sum_s_11_S, \mult1_un145_sum_i_0[13] , 
+        mult1_un68_sum_s_11_S, \mult1_un68_sum_i_0[13] , 
+        mult1_un75_sum_s_11_S, \mult1_un75_sum_i_0[13] , 
+        mult1_un82_sum_s_11_S, \mult1_un82_sum_i_0[13] , 
+        mult1_un89_sum_s_11_S, \mult1_un89_sum_i_0[13] , 
+        mult1_un96_sum_s_11_S, \mult1_un96_sum_i_0[13] , 
+        mult1_un159_sum_s_11_S, \mult1_un159_sum_i_0[13] , VCC_net_1, 
+        \state[1]_net_1 , GND_net_1, N_201_i_0, \state[0]_net_1 , 
+        \state[4]_net_1 , N_183_i_0, \state[3]_net_1 , \state_ns[1] , 
+        \state[2]_net_1 , N_5_i_0, N_187_i_0, \i[0]_net_1 , \i_s[0] , 
+        \i[1]_net_1 , \i_s[1] , \i[2]_net_1 , \i_s[2] , \i[3]_net_1 , 
+        \i_s[3] , \i_s[4] , \i_s[5] , \i_s[6] , \i_s[7] , \i_s[8] , 
+        \i_s[9] , \i[10]_net_1 , \i_s[10] , \i_s[11] , \i_s[12] , 
+        \i_s[13] , \i_s[14] , \i_s[15] , \i[16]_net_1 , \i_s[16] , 
+        \i[17]_net_1 , \i_s[17] , \i[18]_net_1 , \i_s[18] , 
+        \i[19]_net_1 , \i_s[19] , \i[20]_net_1 , \i_s[20] , CO2, 
+        \i_s[21]_net_1 , \i_fast[19]_net_1 , \i_fast[20]_net_1 , 
+        \i_fast[21]_net_1 , i_cry_cy, \i_cry[0]_net_1 , 
+        \i_cry[1]_net_1 , \i_cry[2]_net_1 , \i_cry[3]_net_1 , 
+        \i_cry[4]_net_1 , \i_cry[5]_net_1 , \i_cry[6]_net_1 , 
+        \i_cry[7]_net_1 , \i_cry[8]_net_1 , \i_cry[9]_net_1 , 
+        \i_cry[10]_net_1 , \i_cry[11]_net_1 , \i_cry[12]_net_1 , 
+        \i_cry[13]_net_1 , \i_cry[14]_net_1 , \i_cry[15]_net_1 , 
+        \i_cry[16]_net_1 , \i_cry[17]_net_1 , \i_cry[18]_net_1 , 
+        \i_cry[19]_net_1 , \i_cry[20]_net_1 , mult1_un159_sum_cry_0, 
+        mult1_un159_sum_cry_1, mult1_un152_sum_cry_0_Y, 
+        mult1_un159_sum_cry_2, mult1_un152_sum_cry_1_S, 
+        mult1_un159_sum_cry_3, mult1_un152_sum_cry_2_S, 
+        mult1_un159_sum_cry_4, mult1_un152_sum_cry_3_S, 
+        mult1_un159_sum_cry_5, mult1_un152_sum_cry_4_S, 
+        mult1_un159_sum_cry_6, mult1_un152_sum_cry_5_S, 
+        mult1_un159_sum_cry_7, mult1_un152_sum_cry_6_S, 
+        mult1_un159_sum_cry_8, mult1_un152_sum_cry_7_S, 
+        mult1_un159_sum_cry_9, mult1_un152_sum_cry_8_S, 
+        mult1_un152_sum_cry_10_S, mult1_un159_sum_cry_10, 
+        mult1_un152_sum_cry_9_S, mult1_un110_sum_cry_0, 
+        mult1_un110_sum_cry_1, mult1_un110_sum_cry_1_S, 
+        mult1_un103_sum_cry_0_Y, mult1_un110_sum_cry_2, 
+        mult1_un110_sum_cry_2_S, mult1_un103_sum_cry_1_S, 
+        mult1_un110_sum_cry_3, mult1_un110_sum_cry_3_S, 
+        mult1_un103_sum_cry_2_S, mult1_un110_sum_cry_4, 
+        mult1_un110_sum_cry_4_S, mult1_un103_sum_cry_3_S, 
+        mult1_un110_sum_cry_5, mult1_un110_sum_cry_5_S, 
+        mult1_un103_sum_cry_4_S, mult1_un110_sum_cry_6, 
+        mult1_un110_sum_cry_6_S, mult1_un103_sum_cry_5_S, 
+        mult1_un110_sum_cry_7, mult1_un110_sum_cry_7_S, 
+        mult1_un103_sum_cry_6_S, mult1_un110_sum_cry_8, 
+        mult1_un110_sum_cry_8_S, mult1_un103_sum_cry_7_S, 
+        mult1_un110_sum_cry_9, mult1_un110_sum_cry_9_S, 
+        mult1_un103_sum_cry_8_S, mult1_un103_sum_cry_10_S, 
+        mult1_un110_sum_cry_10, mult1_un110_sum_cry_10_S, 
+        mult1_un103_sum_cry_9_S, mult1_un117_sum_cry_0, 
+        mult1_un117_sum_cry_1, mult1_un117_sum_cry_1_S, 
+        mult1_un117_sum_cry_2, mult1_un117_sum_cry_2_S, 
+        mult1_un117_sum_cry_3, mult1_un117_sum_cry_3_S, 
+        mult1_un117_sum_cry_4, mult1_un117_sum_cry_4_S, 
+        mult1_un117_sum_cry_5, mult1_un117_sum_cry_5_S, 
+        mult1_un117_sum_cry_6, mult1_un117_sum_cry_6_S, 
+        mult1_un117_sum_cry_7, mult1_un117_sum_cry_7_S, 
+        mult1_un117_sum_cry_8, mult1_un117_sum_cry_8_S, 
+        mult1_un117_sum_cry_9, mult1_un117_sum_cry_9_S, 
+        mult1_un117_sum_cry_10, mult1_un117_sum_cry_10_S, 
+        mult1_un124_sum_cry_0, mult1_un124_sum_cry_1, 
+        mult1_un124_sum_cry_1_S, mult1_un124_sum_cry_2, 
+        mult1_un124_sum_cry_2_S, mult1_un124_sum_cry_3, 
+        mult1_un124_sum_cry_3_S, mult1_un124_sum_cry_4, 
+        mult1_un124_sum_cry_4_S, mult1_un124_sum_cry_5, 
+        mult1_un124_sum_cry_5_S, mult1_un124_sum_cry_6, 
+        mult1_un124_sum_cry_6_S, mult1_un124_sum_cry_7, 
+        mult1_un124_sum_cry_7_S, mult1_un124_sum_cry_8, 
+        mult1_un124_sum_cry_8_S, mult1_un124_sum_cry_9, 
+        mult1_un124_sum_cry_9_S, mult1_un124_sum_cry_10, 
+        mult1_un124_sum_cry_10_S, mult1_un131_sum_cry_0, 
+        mult1_un131_sum_cry_1, mult1_un131_sum_cry_1_S, 
+        mult1_un131_sum_cry_2, mult1_un131_sum_cry_2_S, 
+        mult1_un131_sum_cry_3, mult1_un131_sum_cry_3_S, 
+        mult1_un131_sum_cry_4, mult1_un131_sum_cry_4_S, 
+        mult1_un131_sum_cry_5, mult1_un131_sum_cry_5_S, 
+        mult1_un131_sum_cry_6, mult1_un131_sum_cry_6_S, 
+        mult1_un131_sum_cry_7, mult1_un131_sum_cry_7_S, 
+        mult1_un131_sum_cry_8, mult1_un131_sum_cry_8_S, 
+        mult1_un131_sum_cry_9, mult1_un131_sum_cry_9_S, 
+        mult1_un131_sum_cry_10, mult1_un131_sum_cry_10_S, 
+        mult1_un138_sum_cry_0, mult1_un138_sum_cry_1, 
+        mult1_un138_sum_cry_1_S, mult1_un138_sum_cry_2, 
+        mult1_un138_sum_cry_2_S, mult1_un138_sum_cry_3, 
+        mult1_un138_sum_cry_3_S, mult1_un138_sum_cry_4, 
+        mult1_un138_sum_cry_4_S, mult1_un138_sum_cry_5, 
+        mult1_un138_sum_cry_5_S, mult1_un138_sum_cry_6, 
+        mult1_un138_sum_cry_6_S, mult1_un138_sum_cry_7, 
+        mult1_un138_sum_cry_7_S, mult1_un138_sum_cry_8, 
+        mult1_un138_sum_cry_8_S, mult1_un138_sum_cry_9, 
+        mult1_un138_sum_cry_9_S, mult1_un138_sum_cry_10, 
+        mult1_un138_sum_cry_10_S, mult1_un145_sum_cry_0, 
+        mult1_un145_sum_cry_1, mult1_un145_sum_cry_1_S, 
+        mult1_un145_sum_cry_2, mult1_un145_sum_cry_2_S, 
+        mult1_un145_sum_cry_3, mult1_un145_sum_cry_3_S, 
+        mult1_un145_sum_cry_4, mult1_un145_sum_cry_4_S, 
+        mult1_un145_sum_cry_5, mult1_un145_sum_cry_5_S, 
+        mult1_un145_sum_cry_6, mult1_un145_sum_cry_6_S, 
+        mult1_un145_sum_cry_7, mult1_un145_sum_cry_7_S, 
+        mult1_un145_sum_cry_8, mult1_un145_sum_cry_8_S, 
+        mult1_un145_sum_cry_9, mult1_un145_sum_cry_9_S, 
+        mult1_un145_sum_cry_10, mult1_un145_sum_cry_10_S, 
+        mult1_un152_sum_cry_0, mult1_un152_sum_cry_1, 
+        mult1_un152_sum_cry_2, mult1_un152_sum_cry_3, 
+        mult1_un152_sum_cry_4, mult1_un152_sum_cry_5, 
+        mult1_un152_sum_cry_6, mult1_un152_sum_cry_7, 
+        mult1_un152_sum_cry_8, mult1_un152_sum_cry_9, 
+        mult1_un152_sum_cry_10, mult1_un54_sum_cry_0, 
+        mult1_un54_sum_cry_1, mult1_un54_sum_cry_1_S, 
+        mult1_un47_sum_cry_0_Y, mult1_un54_sum_cry_2, 
+        mult1_un61_sum_axb_3, mult1_un47_sum_cry_1_S, 
+        mult1_un54_sum_cry_3, mult1_un54_sum_cry_3_S, 
+        mult1_un54_sum_axb_3, mult1_un54_sum_cry_4, 
+        mult1_un61_sum_axb_5, mult1_un47_sum_cry_3_S, 
+        mult1_un54_sum_cry_5, mult1_un54_sum_cry_5_S, 
+        mult1_un54_sum_axb_5, mult1_un54_sum_cry_6, 
+        mult1_un54_sum_cry_6_S, mult1_un47_sum_s_5_sf, 
+        mult1_un47_sum_cry_4, mult1_un54_sum_s_8_S, 
+        mult1_un54_sum_cry_7, mult1_un61_sum_axb_8, 
+        mult1_un61_sum_cry_0, mult1_un61_sum_cry_1, 
+        mult1_un61_sum_cry_1_S, mult1_un61_sum_cry_2, 
+        mult1_un68_sum_axb_3, mult1_un61_sum_cry_3, 
+        mult1_un61_sum_cry_3_S, mult1_un61_sum_cry_4, 
+        mult1_un68_sum_axb_5, mult1_un61_sum_cry_5, 
+        mult1_un61_sum_cry_5_S, mult1_un61_sum_cry_6, 
+        mult1_un61_sum_cry_6_S, mult1_un61_sum_cry_7, 
+        mult1_un68_sum_axb_8, mult1_un61_sum_cry_8, 
+        mult1_un61_sum_cry_8_S, mult1_un68_sum_axb_11, 
+        mult1_un61_sum_cry_9, mult1_un68_sum_axb_10, 
+        mult1_un68_sum_cry_0, mult1_un68_sum_cry_1, 
+        mult1_un68_sum_cry_1_S, mult1_un68_sum_cry_2, 
+        mult1_un68_sum_cry_2_S, mult1_un68_sum_cry_3, 
+        mult1_un68_sum_cry_3_S, mult1_un68_sum_cry_4, 
+        mult1_un68_sum_cry_4_S, mult1_un68_sum_cry_5, 
+        mult1_un68_sum_cry_5_S, mult1_un68_sum_cry_6, 
+        mult1_un68_sum_cry_6_S, mult1_un68_sum_cry_7, 
+        mult1_un68_sum_cry_7_S, mult1_un68_sum_cry_8, 
+        mult1_un68_sum_cry_8_S, mult1_un68_sum_cry_9, 
+        mult1_un68_sum_cry_9_S, mult1_un68_sum_cry_10, 
+        mult1_un68_sum_cry_10_S, mult1_un75_sum_cry_0, 
+        mult1_un75_sum_cry_1, mult1_un75_sum_cry_1_S, 
+        mult1_un75_sum_cry_2, mult1_un75_sum_cry_2_S, 
+        mult1_un75_sum_cry_3, mult1_un75_sum_cry_3_S, 
+        mult1_un75_sum_cry_4, mult1_un75_sum_cry_4_S, 
+        mult1_un75_sum_cry_5, mult1_un75_sum_cry_5_S, 
+        mult1_un75_sum_cry_6, mult1_un75_sum_cry_6_S, 
+        mult1_un75_sum_cry_7, mult1_un75_sum_cry_7_S, 
+        mult1_un75_sum_cry_8, mult1_un75_sum_cry_8_S, 
+        mult1_un75_sum_cry_9, mult1_un75_sum_cry_9_S, 
+        mult1_un75_sum_cry_10, mult1_un75_sum_cry_10_S, 
+        mult1_un82_sum_cry_0, mult1_un82_sum_cry_1, 
+        mult1_un82_sum_cry_1_S, mult1_un82_sum_cry_2, 
+        mult1_un82_sum_cry_2_S, mult1_un82_sum_cry_3, 
+        mult1_un82_sum_cry_3_S, mult1_un82_sum_cry_4, 
+        mult1_un82_sum_cry_4_S, mult1_un82_sum_cry_5, 
+        mult1_un82_sum_cry_5_S, mult1_un82_sum_cry_6, 
+        mult1_un82_sum_cry_6_S, mult1_un82_sum_cry_7, 
+        mult1_un82_sum_cry_7_S, mult1_un82_sum_cry_8, 
+        mult1_un82_sum_cry_8_S, mult1_un82_sum_cry_9, 
+        mult1_un82_sum_cry_9_S, mult1_un82_sum_cry_10, 
+        mult1_un82_sum_cry_10_S, mult1_un89_sum_cry_0, 
+        mult1_un89_sum_cry_1, mult1_un89_sum_cry_1_S, 
+        mult1_un89_sum_cry_2, mult1_un89_sum_cry_2_S, 
+        mult1_un89_sum_cry_3, mult1_un89_sum_cry_3_S, 
+        mult1_un89_sum_cry_4, mult1_un89_sum_cry_4_S, 
+        mult1_un89_sum_cry_5, mult1_un89_sum_cry_5_S, 
+        mult1_un89_sum_cry_6, mult1_un89_sum_cry_6_S, 
+        mult1_un89_sum_cry_7, mult1_un89_sum_cry_7_S, 
+        mult1_un89_sum_cry_8, mult1_un89_sum_cry_8_S, 
+        mult1_un89_sum_cry_9, mult1_un89_sum_cry_9_S, 
+        mult1_un89_sum_cry_10, mult1_un89_sum_cry_10_S, 
+        mult1_un96_sum_cry_0, mult1_un96_sum_cry_1, 
+        mult1_un96_sum_cry_1_S, mult1_un96_sum_cry_2, 
+        mult1_un96_sum_cry_2_S, mult1_un96_sum_cry_3, 
+        mult1_un96_sum_cry_3_S, mult1_un96_sum_cry_4, 
+        mult1_un96_sum_cry_4_S, mult1_un96_sum_cry_5, 
+        mult1_un96_sum_cry_5_S, mult1_un96_sum_cry_6, 
+        mult1_un96_sum_cry_6_S, mult1_un96_sum_cry_7, 
+        mult1_un96_sum_cry_7_S, mult1_un96_sum_cry_8, 
+        mult1_un96_sum_cry_8_S, mult1_un96_sum_cry_9, 
+        mult1_un96_sum_cry_9_S, mult1_un96_sum_cry_10, 
+        mult1_un96_sum_cry_10_S, mult1_un103_sum_cry_0, 
+        mult1_un103_sum_cry_1, mult1_un103_sum_cry_2, 
+        mult1_un103_sum_cry_3, mult1_un103_sum_cry_4, 
+        mult1_un103_sum_cry_5, mult1_un103_sum_cry_6, 
+        mult1_un103_sum_cry_7, mult1_un103_sum_cry_8, 
+        mult1_un103_sum_cry_9, mult1_un103_sum_cry_10, 
+        mult1_un47_sum_cry_0, mult1_un47_sum_cry_1, 
+        mult1_un47_sum_cry_2, mult1_un47_sum_cry_3, 
+        \state_ns_i_0_0[0]_net_1 , un20_clklto16_1_net_1, un20_clklt9, 
+        un20_clklt12, un20_clklt16, un20_clklt20, 
+        \state_ns_o2[2]_net_1 ;
+    
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_1  (.A(\i_i[14] ), 
+        .B(mult1_un75_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un82_sum_cry_0), .S(mult1_un82_sum_cry_1_S), .Y(), .FCO(
+        mult1_un82_sum_cry_1));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_9  (.A(
+        mult1_un89_sum_cry_8_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_8), .S(
+        mult1_un96_sum_cry_9_S), .Y(), .FCO(mult1_un96_sum_cry_9));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_5  (.A(
+        mult1_un124_sum_cry_4_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_4), .S(
+        mult1_un131_sum_cry_5_S), .Y(), .FCO(mult1_un131_sum_cry_5));
+    SLE \state[0]  (.D(\state[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  \i_RNI4BK2[4]  (.A(\i[4]_net_1 ), .Y(
+        \i_i[4] ));
+    ARI1 #( .INIT(20'h45500) )  
+        \un5_tim.if_generate_plus.mult1_un47_sum_cry_1  (.A(VCC_net_1), 
+        .B(\i_fast[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un47_sum_cry_0), .S(mult1_un47_sum_cry_1_S), .Y(), .FCO(
+        mult1_un47_sum_cry_1));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_1  (.A(\i_i[8] ), 
+        .B(mult1_un117_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un124_sum_cry_0), .S(mult1_un124_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un124_sum_cry_1));
+    SLE \i[7]  (.D(\i_s[7] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_i_0[13]  (.A(
+        mult1_un89_sum_s_11_S), .Y(\mult1_un89_sum_i_0[13] ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_i_0[13]  (.A(
+        mult1_un110_sum_s_11_S), .Y(\mult1_un110_sum_i_0[13] ));
+    SLE \i[16]  (.D(\i_s[16] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[16]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_3  (.A(
+        mult1_un145_sum_cry_2_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_2), .S(
+        mult1_un152_sum_cry_3_S), .Y(), .FCO(mult1_un152_sum_cry_3));
+    ARI1 #( .INIT(20'h42200) )  \i_s[21]  (.A(VCC_net_1), .B(CO2), .C(
+        \state[3]_net_1 ), .D(GND_net_1), .FCI(\i_cry[20]_net_1 ), .S(
+        \i_s[21]_net_1 ), .Y(), .FCO());
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_5  (.A(
+        mult1_un68_sum_cry_4_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_4), .S(
+        mult1_un75_sum_cry_5_S), .Y(), .FCO(mult1_un75_sum_cry_5));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un159_sum_cry_0));
+    SLE \tim[4]  (.D(\mult1_un131_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[4]));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_i_0[13]  (.A(
+        mult1_un124_sum_s_11_S), .Y(\mult1_un124_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[14]  (.A(VCC_net_1), .B(
+        \i[14]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[13]_net_1 ), .S(\i_s[14] ), .Y(), .FCO(
+        \i_cry[14]_net_1 ));
+    ARI1 #( .INIT(20'h6E000) )  
+        \un5_tim.if_generate_plus.mult1_un47_sum_cry_4  (.A(VCC_net_1), 
+        .B(\i_fast[19]_net_1 ), .C(\i_fast[20]_net_1 ), .D(
+        \i_fast[21]_net_1 ), .FCI(mult1_un47_sum_cry_3), .S(
+        mult1_un54_sum_axb_5), .Y(), .FCO(mult1_un47_sum_cry_4));
+    SLE \i[21]  (.D(\i_s[21]_net_1 ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(CO2));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[20]  (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[19]_net_1 ), .S(\i_s[20] ), .Y(), .FCO(
+        \i_cry[20]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_3  (.A(
+        mult1_un82_sum_cry_2_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_2), .S(
+        mult1_un89_sum_cry_3_S), .Y(), .FCO(mult1_un89_sum_cry_3));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un89_sum_cry_0));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_8  (.A(
+        mult1_un131_sum_cry_7_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_7), .S(
+        mult1_un138_sum_cry_8_S), .Y(), .FCO(mult1_un138_sum_cry_8));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_8  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_axb_8), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_7), .S(mult1_un61_sum_cry_8_S), .Y(), .FCO(
+        mult1_un61_sum_cry_8));
+    SLE \i[0]  (.D(\i_s[0] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_7  (.A(
+        mult1_un89_sum_cry_6_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_6), .S(
+        mult1_un96_sum_cry_7_S), .Y(), .FCO(mult1_un96_sum_cry_7));
+    SLE \i[11]  (.D(\i_s[11] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[11]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(mult1_un152_sum_cry_0_Y), .FCO(
+        mult1_un152_sum_cry_0));
+    CFG2 #( .INIT(4'hE) )  \state_ns_i_0_0[0]  (.A(\state[3]_net_1 ), 
+        .B(\state[2]_net_1 ), .Y(\state_ns_i_0_0[0]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_3  (.A(
+        mult1_un89_sum_cry_2_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_2), .S(
+        mult1_un96_sum_cry_3_S), .Y(), .FCO(mult1_un96_sum_cry_3));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_2  (.A(
+        mult1_un82_sum_cry_1_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_1), .S(
+        mult1_un89_sum_cry_2_S), .Y(), .FCO(mult1_un89_sum_cry_2));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_4  (.A(
+        mult1_un138_sum_cry_3_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_3), .S(
+        mult1_un145_sum_cry_4_S), .Y(), .FCO(mult1_un145_sum_cry_4));
+    ARI1 #( .INIT(20'h55555) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_1  (.A(VCC_net_1), 
+        .B(\i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_0), .S(mult1_un61_sum_cry_1_S), .Y(), .FCO(
+        mult1_un61_sum_cry_1));
+    CFG3 #( .INIT(8'h4F) )  \state_ns_o2_3[2]  (.A(\i[9]_net_1 ), .B(
+        un20_clklt9), .C(\i[10]_net_1 ), .Y(un20_clklt12));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_10  (.A(VCC_net_1)
+        , .B(mult1_un68_sum_axb_10), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(mult1_un68_sum_cry_9), .S(mult1_un68_sum_cry_10_S), .Y(), 
+        .FCO(mult1_un68_sum_cry_10));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_10  (.A(
+        mult1_un138_sum_cry_9_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_9), .S(
+        mult1_un145_sum_cry_10_S), .Y(), .FCO(mult1_un145_sum_cry_10));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_4  (.A(
+        mult1_un124_sum_cry_3_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_3), .S(
+        mult1_un131_sum_cry_4_S), .Y(), .FCO(mult1_un131_sum_cry_4));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_2  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_cry_1_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_1), .S(mult1_un68_sum_cry_2_S), .Y(), .FCO(
+        mult1_un68_sum_cry_2));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_4  (.A(
+        mult1_un96_sum_cry_3_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_3), .S(
+        mult1_un103_sum_cry_4_S), .Y(), .FCO(mult1_un103_sum_cry_4));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_9  (.A(
+        mult1_un117_sum_cry_8_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_8), .S(
+        mult1_un124_sum_cry_9_S), .Y(), .FCO(mult1_un124_sum_cry_9));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_4  (.A(
+        mult1_un89_sum_cry_3_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_3), .S(
+        mult1_un96_sum_cry_4_S), .Y(), .FCO(mult1_un96_sum_cry_4));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_1  (.A(\i_i[9] ), 
+        .B(mult1_un110_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un117_sum_cry_0), .S(mult1_un117_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un117_sum_cry_1));
+    ARI1 #( .INIT(20'h66600) )  
+        \un5_tim.if_generate_plus.mult1_un47_sum_cry_2  (.A(VCC_net_1), 
+        .B(\i_fast[19]_net_1 ), .C(\i_fast[20]_net_1 ), .D(GND_net_1), 
+        .FCI(mult1_un47_sum_cry_1), .S(mult1_un54_sum_axb_3), .Y(), 
+        .FCO(mult1_un47_sum_cry_2));
+    SLE \tim[3]  (.D(\mult1_un138_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[3]));
+    SLE \tim[2]  (.D(\mult1_un145_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[2]));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_9  (.A(
+        mult1_un68_sum_cry_8_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_8), .S(
+        mult1_un75_sum_cry_9_S), .Y(), .FCO(mult1_un75_sum_cry_9));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un54_sum_cry_0));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_1  (.A(\i_i[11] )
+        , .B(mult1_un96_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(mult1_un103_sum_cry_0), .S(mult1_un103_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un103_sum_cry_1));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un145_sum_cry_10_S), .C(mult1_un145_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un152_sum_cry_10), .S(
+        mult1_un152_sum_s_11_S), .Y(), .FCO());
+    SLE \state[4]  (.D(N_183_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[4]_net_1 ));
+    ARI1 #( .INIT(20'h67700) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_7  (.A(VCC_net_1), 
+        .B(mult1_un47_sum_cry_4), .C(mult1_un47_sum_s_5_sf), .D(
+        GND_net_1), .FCI(mult1_un54_sum_cry_6), .S(
+        mult1_un61_sum_axb_8), .Y(), .FCO(mult1_un54_sum_cry_7));
+    GND GND (.Y(GND_net_1));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_3  (.A(VCC_net_1), 
+        .B(mult1_un68_sum_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_2), .S(mult1_un68_sum_cry_3_S), .Y(), .FCO(
+        mult1_un68_sum_cry_3));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_9  (.A(
+        mult1_un152_sum_cry_8_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_8), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_9));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_8  (.A(
+        mult1_un103_sum_cry_7_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_7), .S(
+        mult1_un110_sum_cry_8_S), .Y(), .FCO(mult1_un110_sum_cry_8));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un75_sum_cry_10_S), .C(mult1_un75_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un82_sum_cry_10), .S(
+        mult1_un82_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_5  (.A(
+        mult1_un117_sum_cry_4_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_4), .S(
+        mult1_un124_sum_cry_5_S), .Y(), .FCO(mult1_un124_sum_cry_5));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_3  (.A(
+        mult1_un110_sum_cry_2_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_2), .S(
+        mult1_un117_sum_cry_3_S), .Y(), .FCO(mult1_un117_sum_cry_3));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un96_sum_cry_10_S), .C(mult1_un96_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un103_sum_cry_10), .S(
+        mult1_un103_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un110_sum_cry_10_S), .C(mult1_un110_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un117_sum_cry_10), .S(
+        mult1_un117_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_7  (.A(
+        mult1_un117_sum_cry_6_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_6), .S(
+        mult1_un124_sum_cry_7_S), .Y(), .FCO(mult1_un124_sum_cry_7));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_i_0[13]  (.A(
+        mult1_un145_sum_s_11_S), .Y(\mult1_un145_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_10  (.A(
+        mult1_un103_sum_cry_9_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_9), .S(
+        mult1_un110_sum_cry_10_S), .Y(), .FCO(mult1_un110_sum_cry_10));
+    CFG1 #( .INIT(2'h1) )  \i_RNIJVQ6[12]  (.A(\i[12]_net_1 ), .Y(
+        \i_i[12] ));
+    SLE \i[13]  (.D(\i_s[13] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[13]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_1  (.A(\i_i[5] ), 
+        .B(mult1_un138_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un145_sum_cry_0), .S(mult1_un145_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un145_sum_cry_1));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[15]  (.A(VCC_net_1), .B(
+        \i[15]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[14]_net_1 ), .S(\i_s[15] ), .Y(), .FCO(
+        \i_cry[15]_net_1 ));
+    CFG3 #( .INIT(8'hE0) )  
+        \un5_tim.if_generate_plus.mult1_un47_sum_s_5_sf  (.A(
+        \i[20]_net_1 ), .B(\i[19]_net_1 ), .C(CO2), .Y(
+        mult1_un47_sum_s_5_sf));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_7  (.A(
+        mult1_un131_sum_cry_6_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_6), .S(
+        mult1_un138_sum_cry_7_S), .Y(), .FCO(mult1_un138_sum_cry_7));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_6  (.A(
+        mult1_un152_sum_cry_5_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_5), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_6));
+    SLE \tim[1]  (.D(\mult1_un152_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[1]));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_3  (.A(
+        mult1_un103_sum_cry_2_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_2), .S(
+        mult1_un110_sum_cry_3_S), .Y(), .FCO(mult1_un110_sum_cry_3));
+    SLE \tim[5]  (.D(\mult1_un124_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[5]));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_5  (.A(
+        mult1_un82_sum_cry_4_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_4), .S(
+        mult1_un89_sum_cry_5_S), .Y(), .FCO(mult1_un89_sum_cry_5));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_4  (.A(
+        mult1_un152_sum_cry_3_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_3), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_4));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_7  (.A(
+        mult1_un68_sum_cry_6_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_6), .S(
+        mult1_un75_sum_cry_7_S), .Y(), .FCO(mult1_un75_sum_cry_7));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_7  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_cry_6_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_6), .S(mult1_un68_sum_axb_8), .Y(), .FCO(
+        mult1_un61_sum_cry_7));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un138_sum_cry_0));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_8  (.A(
+        mult1_un96_sum_cry_7_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_7), .S(
+        mult1_un103_sum_cry_8_S), .Y(), .FCO(mult1_un103_sum_cry_8));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_10  (.A(
+        mult1_un96_sum_cry_9_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_9), .S(
+        mult1_un103_sum_cry_10_S), .Y(), .FCO(mult1_un103_sum_cry_10));
+    SLE \i[17]  (.D(\i_s[17] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[17]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un68_sum_axb_11), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_10), .S(mult1_un68_sum_s_11_S), .Y(), .FCO()
+        );
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_2  (.A(
+        mult1_un152_sum_cry_1_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_1), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_2));
+    SLE \tim[11]  (.D(\mult1_un82_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[11]));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_6  (.A(
+        mult1_un145_sum_cry_5_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_5), .S(
+        mult1_un152_sum_cry_6_S), .Y(), .FCO(mult1_un152_sum_cry_6));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[17]  (.A(VCC_net_1), .B(
+        \i[17]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[16]_net_1 ), .S(\i_s[17] ), .Y(), .FCO(
+        \i_cry[17]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_6  (.A(
+        mult1_un110_sum_cry_5_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_5), .S(
+        mult1_un117_sum_cry_6_S), .Y(), .FCO(mult1_un117_sum_cry_6));
+    CFG3 #( .INIT(8'h70) )  \state_RNO[1]  (.A(\state_ns_o2[2]_net_1 ), 
+        .B(ECHO_c), .C(\state[2]_net_1 ), .Y(N_187_i_0));
+    CFG4 #( .INIT(16'hCC80) )  \state_ns_o2_RNIJNK11[2]  (.A(
+        \state[2]_net_1 ), .B(ECHO_c), .C(\state_ns_o2[2]_net_1 ), .D(
+        \state[3]_net_1 ), .Y(N_5_i_0));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_8  (.A(
+        mult1_un117_sum_cry_7_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_7), .S(
+        mult1_un124_sum_cry_8_S), .Y(), .FCO(mult1_un124_sum_cry_8));
+    SLE \i[9]  (.D(\i_s[9] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_8  (.A(
+        mult1_un89_sum_cry_7_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_7), .S(
+        mult1_un96_sum_cry_8_S), .Y(), .FCO(mult1_un96_sum_cry_8));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_3  (.A(
+        mult1_un68_sum_cry_2_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_2), .S(
+        mult1_un75_sum_cry_3_S), .Y(), .FCO(mult1_un75_sum_cry_3));
+    CFG1 #( .INIT(2'h1) )  \i_RNI9GK2[9]  (.A(\i[9]_net_1 ), .Y(
+        \i_i[9] ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_6  (.A(
+        mult1_un68_sum_cry_5_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_5), .S(
+        mult1_un75_sum_cry_6_S), .Y(), .FCO(mult1_un75_sum_cry_6));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_5  (.A(
+        mult1_un131_sum_cry_4_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_4), .S(
+        mult1_un138_sum_cry_5_S), .Y(), .FCO(mult1_un138_sum_cry_5));
+    CFG1 #( .INIT(2'h1) )  \i_RNIL1R6[14]  (.A(\i[14]_net_1 ), .Y(
+        \i_i[14] ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_10  (.A(
+        mult1_un82_sum_cry_9_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_9), .S(
+        mult1_un89_sum_cry_10_S), .Y(), .FCO(mult1_un89_sum_cry_10));
+    VCC VCC (.Y(VCC_net_1));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_1  (.A(\i_i[7] ), 
+        .B(mult1_un124_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un131_sum_cry_0), .S(mult1_un131_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un131_sum_cry_1));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_10  (.A(
+        mult1_un124_sum_cry_9_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_9), .S(
+        mult1_un131_sum_cry_10_S), .Y(), .FCO(mult1_un131_sum_cry_10));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_8  (.A(
+        mult1_un145_sum_cry_7_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_7), .S(
+        mult1_un152_sum_cry_8_S), .Y(), .FCO(mult1_un152_sum_cry_8));
+    CFG1 #( .INIT(2'h1) )  \i_RNI7EK2[7]  (.A(\i[7]_net_1 ), .Y(
+        \i_i[7] ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_i_0[13]  (.A(
+        mult1_un152_sum_s_11_S), .Y(\mult1_un152_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_10  (.A(
+        mult1_un152_sum_cry_9_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_9), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_10));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un131_sum_cry_0));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_6  (.A(
+        mult1_un124_sum_cry_5_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_5), .S(
+        mult1_un131_sum_cry_6_S), .Y(), .FCO(mult1_un131_sum_cry_6));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_9  (.A(
+        mult1_un110_sum_cry_8_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_8), .S(
+        mult1_un117_sum_cry_9_S), .Y(), .FCO(mult1_un117_sum_cry_9));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_7  (.A(
+        mult1_un82_sum_cry_6_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_6), .S(
+        mult1_un89_sum_cry_7_S), .Y(), .FCO(mult1_un89_sum_cry_7));
+    CFG4 #( .INIT(16'h000D) )  \state_RNO[4]  (.A(
+        locator_control_0_en_timer), .B(\state[0]_net_1 ), .C(
+        \state_ns_i_0_0[0]_net_1 ), .D(\state[1]_net_1 ), .Y(N_183_i_0)
+        );
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un138_sum_cry_10_S), .C(mult1_un138_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un145_sum_cry_10), .S(
+        mult1_un145_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h40000) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_s_10  (.A(VCC_net_1), 
+        .B(GND_net_1), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_9), .S(mult1_un68_sum_axb_11), .Y(), .FCO());
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_9  (.A(
+        mult1_un131_sum_cry_8_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_8), .S(
+        mult1_un138_sum_cry_9_S), .Y(), .FCO(mult1_un138_sum_cry_9));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_5  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_4), .S(mult1_un61_sum_cry_5_S), .Y(), .FCO(
+        mult1_un61_sum_cry_5));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_5  (.A(
+        mult1_un89_sum_cry_4_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_4), .S(
+        mult1_un96_sum_cry_5_S), .Y(), .FCO(mult1_un96_sum_cry_5));
+    SLE \i_fast[19]  (.D(\i_s[19] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i_fast[19]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[11]  (.A(VCC_net_1), .B(
+        \i[11]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[10]_net_1 ), .S(\i_s[11] ), .Y(), .FCO(
+        \i_cry[11]_net_1 ));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un117_sum_cry_10_S), .C(mult1_un117_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un124_sum_cry_10), .S(
+        mult1_un124_sum_s_11_S), .Y(), .FCO());
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_i_0[13]  (.A(
+        mult1_un159_sum_s_11_S), .Y(\mult1_un159_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_6  (.A(
+        mult1_un96_sum_cry_5_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_5), .S(
+        mult1_un103_sum_cry_6_S), .Y(), .FCO(mult1_un103_sum_cry_6));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_6  (.A(
+        mult1_un89_sum_cry_5_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_5), .S(
+        mult1_un96_sum_cry_6_S), .Y(), .FCO(mult1_un96_sum_cry_6));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_6  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_cry_5_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_5), .S(mult1_un61_sum_cry_6_S), .Y(), .FCO(
+        mult1_un61_sum_cry_6));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_9  (.A(
+        mult1_un75_sum_cry_8_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_8), .S(
+        mult1_un82_sum_cry_9_S), .Y(), .FCO(mult1_un82_sum_cry_9));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_10  (.A(
+        mult1_un75_sum_cry_9_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_9), .S(
+        mult1_un82_sum_cry_10_S), .Y(), .FCO(mult1_un82_sum_cry_10));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_10  (.A(
+        mult1_un68_sum_cry_9_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_9), .S(
+        mult1_un75_sum_cry_10_S), .Y(), .FCO(mult1_un75_sum_cry_10));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_6  (.A(
+        mult1_un131_sum_cry_5_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_5), .S(
+        mult1_un138_sum_cry_6_S), .Y(), .FCO(mult1_un138_sum_cry_6));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_10  (.A(
+        mult1_un145_sum_cry_9_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_9), .S(
+        mult1_un152_sum_cry_10_S), .Y(), .FCO(mult1_un152_sum_cry_10));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_5  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un54_sum_cry_4), .S(mult1_un54_sum_cry_5_S), .Y(), .FCO(
+        mult1_un54_sum_cry_5));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_2  (.A(
+        mult1_un117_sum_cry_1_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_1), .S(
+        mult1_un124_sum_cry_2_S), .Y(), .FCO(mult1_un124_sum_cry_2));
+    SLE \i[15]  (.D(\i_s[15] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[15]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_2  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_cry_1_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_1), .S(mult1_un68_sum_axb_3), .Y(), .FCO(
+        mult1_un61_sum_cry_2));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_3  (.A(
+        mult1_un138_sum_cry_2_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_2), .S(
+        mult1_un145_sum_cry_3_S), .Y(), .FCO(mult1_un145_sum_cry_3));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_9  (.A(
+        mult1_un103_sum_cry_8_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_8), .S(
+        mult1_un110_sum_cry_9_S), .Y(), .FCO(mult1_un110_sum_cry_9));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un61_sum_cry_0));
+    CFG1 #( .INIT(2'h1) )  \i_RNI8FK2[8]  (.A(\i[8]_net_1 ), .Y(
+        \i_i[8] ));
+    SLE \tim[0]  (.D(\mult1_un159_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[0]));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_2  (.A(
+        mult1_un131_sum_cry_1_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_1), .S(
+        mult1_un138_sum_cry_2_S), .Y(), .FCO(mult1_un138_sum_cry_2));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_i_0[13]  (.A(
+        mult1_un68_sum_s_11_S), .Y(\mult1_un68_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_2  (.A(
+        mult1_un89_sum_cry_1_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_1), .S(
+        mult1_un96_sum_cry_2_S), .Y(), .FCO(mult1_un96_sum_cry_2));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[7]  (.A(VCC_net_1), .B(
+        \i[7]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[6]_net_1 ), .S(\i_s[7] ), .Y(), .FCO(\i_cry[7]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_3  (.A(
+        mult1_un96_sum_cry_2_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_2), .S(
+        mult1_un103_sum_cry_3_S), .Y(), .FCO(mult1_un103_sum_cry_3));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[12]  (.A(VCC_net_1), .B(
+        \i[12]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[11]_net_1 ), .S(\i_s[12] ), .Y(), .FCO(
+        \i_cry[12]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_6  (.A(
+        mult1_un117_sum_cry_5_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_5), .S(
+        mult1_un124_sum_cry_6_S), .Y(), .FCO(mult1_un124_sum_cry_6));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_8  (.A(
+        mult1_un138_sum_cry_7_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_7), .S(
+        mult1_un145_sum_cry_8_S), .Y(), .FCO(mult1_un145_sum_cry_8));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_i_0[13]  (.A(
+        mult1_un117_sum_s_11_S), .Y(\mult1_un117_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[18]  (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[17]_net_1 ), .S(\i_s[18] ), .Y(), .FCO(
+        \i_cry[18]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_i_0[13]  (.A(
+        mult1_un82_sum_s_11_S), .Y(\mult1_un82_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_9  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_s_8_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_8), .S(mult1_un68_sum_axb_10), .Y(), .FCO(
+        mult1_un61_sum_cry_9));
+    ARI1 #( .INIT(20'h55555) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_1  (.A(VCC_net_1), 
+        .B(\i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_0), .S(mult1_un68_sum_cry_1_S), .Y(), .FCO(
+        mult1_un68_sum_cry_1));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_3  (.A(
+        mult1_un152_sum_cry_2_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_2), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_3));
+    SLE \i[2]  (.D(\i_s[2] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
+    SLE \i[12]  (.D(\i_s[12] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[12]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_4  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_cry_3_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_3), .S(mult1_un68_sum_cry_4_S), .Y(), .FCO(
+        mult1_un68_sum_cry_4));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_7  (.A(
+        mult1_un75_sum_cry_6_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_6), .S(
+        mult1_un82_sum_cry_7_S), .Y(), .FCO(mult1_un82_sum_cry_7));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_5  (.A(
+        mult1_un110_sum_cry_4_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_4), .S(
+        mult1_un117_sum_cry_5_S), .Y(), .FCO(mult1_un117_sum_cry_5));
+    SLE \tim[13]  (.D(\mult1_un68_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[13]));
+    ARI1 #( .INIT(20'h45500) )  \i_cry_cy[0]  (.A(VCC_net_1), .B(
+        \state[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        VCC_net_1), .S(), .Y(), .FCO(i_cry_cy));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_6  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_cry_5_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_5), .S(mult1_un68_sum_cry_6_S), .Y(), .FCO(
+        mult1_un68_sum_cry_6));
+    SLE \i[20]  (.D(\i_s[20] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[20]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_4  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_cry_3_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_3), .S(mult1_un68_sum_axb_5), .Y(), .FCO(
+        mult1_un61_sum_cry_4));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_4  (.A(
+        mult1_un145_sum_cry_3_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_3), .S(
+        mult1_un152_sum_cry_4_S), .Y(), .FCO(mult1_un152_sum_cry_4));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_2  (.A(
+        mult1_un110_sum_cry_1_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_1), .S(
+        mult1_un117_sum_cry_2_S), .Y(), .FCO(mult1_un117_sum_cry_2));
+    CFG1 #( .INIT(2'h1) )  \i_RNIK0R6[13]  (.A(\i[13]_net_1 ), .Y(
+        \i_i[13] ));
+    SLE \state[3]  (.D(\state_ns[1] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
+        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[3]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  \i_RNIM2R6[15]  (.A(\i[15]_net_1 ), .Y(
+        \i_i[15] ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_3  (.A(
+        mult1_un75_sum_cry_2_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_2), .S(
+        mult1_un82_sum_cry_3_S), .Y(), .FCO(mult1_un82_sum_cry_3));
+    SLE \i[10]  (.D(\i_s[10] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[10]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_9  (.A(
+        mult1_un82_sum_cry_8_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_8), .S(
+        mult1_un89_sum_cry_9_S), .Y(), .FCO(mult1_un89_sum_cry_9));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_8  (.A(
+        mult1_un124_sum_cry_7_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_7), .S(
+        mult1_un131_sum_cry_8_S), .Y(), .FCO(mult1_un131_sum_cry_8));
+    CFG1 #( .INIT(2'h1) )  \i_RNI6DK2[6]  (.A(\i[6]_net_1 ), .Y(
+        \i_i[6] ));
+    CFG1 #( .INIT(2'h1) )  \i_RNI5CK2[5]  (.A(\i[5]_net_1 ), .Y(
+        \i_i[5] ));
+    SLE \i[6]  (.D(\i_s[6] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[1]  (.A(VCC_net_1), .B(
+        \i[1]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[0]_net_1 ), .S(\i_s[1] ), .Y(), .FCO(\i_cry[1]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[2]  (.A(VCC_net_1), .B(
+        \i[2]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[1]_net_1 ), .S(\i_s[2] ), .Y(), .FCO(\i_cry[2]_net_1 ));
+    SLE \i[4]  (.D(\i_s[4] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_10  (.A(
+        mult1_un117_sum_cry_9_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_9), .S(
+        mult1_un124_sum_cry_10_S), .Y(), .FCO(mult1_un124_sum_cry_10));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[10]  (.A(VCC_net_1), .B(
+        \i[10]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[9]_net_1 ), .S(\i_s[10] ), .Y(), .FCO(\i_cry[10]_net_1 )
+        );
+    SLE \tim[12]  (.D(\mult1_un75_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[12]));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[6]  (.A(VCC_net_1), .B(
+        \i[6]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[5]_net_1 ), .S(\i_s[6] ), .Y(), .FCO(\i_cry[6]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_8  (.A(
+        mult1_un152_sum_cry_7_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_7), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_8));
+    CFG4 #( .INIT(16'hF777) )  \state_ns_o2_0[2]  (.A(\i[18]_net_1 ), 
+        .B(\i[17]_net_1 ), .C(un20_clklto16_1_net_1), .D(un20_clklt16), 
+        .Y(un20_clklt20));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_8  (.A(
+        mult1_un68_sum_cry_7_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_7), .S(
+        mult1_un75_sum_cry_8_S), .Y(), .FCO(mult1_un75_sum_cry_8));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_3  (.A(
+        mult1_un124_sum_cry_2_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_2), .S(
+        mult1_un131_sum_cry_3_S), .Y(), .FCO(mult1_un131_sum_cry_3));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_5  (.A(
+        mult1_un145_sum_cry_4_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_4), .S(
+        mult1_un152_sum_cry_5_S), .Y(), .FCO(mult1_un152_sum_cry_5));
+    SLE \i[19]  (.D(\i_s[19] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[19]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_i_0[13]  (.A(
+        mult1_un103_sum_s_11_S), .Y(\mult1_un103_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un110_sum_cry_0));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_2  (.A(
+        mult1_un145_sum_cry_1_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_1), .S(
+        mult1_un152_sum_cry_2_S), .Y(), .FCO(mult1_un152_sum_cry_2));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_8  (.A(
+        mult1_un82_sum_cry_7_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_7), .S(
+        mult1_un89_sum_cry_8_S), .Y(), .FCO(mult1_un89_sum_cry_8));
+    ARI1 #( .INIT(20'h53CAA) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_1  (.A(VCC_net_1)
+        , .B(mult1_un103_sum_cry_0_Y), .C(\i[10]_net_1 ), .D(
+        mult1_un103_sum_s_11_S), .FCI(mult1_un110_sum_cry_0), .S(
+        mult1_un110_sum_cry_1_S), .Y(), .FCO(mult1_un110_sum_cry_1));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_1  (.A(\i_i[15] ), 
+        .B(mult1_un68_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un75_sum_cry_0), .S(mult1_un75_sum_cry_1_S), .Y(), .FCO(
+        mult1_un75_sum_cry_1));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un152_sum_cry_10_S), .C(mult1_un152_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un159_sum_cry_10), .S(
+        mult1_un159_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_6  (.A(
+        mult1_un138_sum_cry_5_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_5), .S(
+        mult1_un145_sum_cry_6_S), .Y(), .FCO(mult1_un145_sum_cry_6));
+    SLE \tim[8]  (.D(\mult1_un103_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[8]));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_5  (.A(
+        mult1_un75_sum_cry_4_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_4), .S(
+        mult1_un82_sum_cry_5_S), .Y(), .FCO(mult1_un82_sum_cry_5));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_4  (.A(
+        mult1_un131_sum_cry_3_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_3), .S(
+        mult1_un138_sum_cry_4_S), .Y(), .FCO(mult1_un138_sum_cry_4));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un68_sum_cry_10_S), .C(mult1_un68_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un75_sum_cry_10), .S(
+        mult1_un75_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_3  (.A(
+        mult1_un117_sum_cry_2_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_2), .S(
+        mult1_un124_sum_cry_3_S), .Y(), .FCO(mult1_un124_sum_cry_3));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un103_sum_cry_10_S), .C(mult1_un103_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un110_sum_cry_10), .S(
+        mult1_un110_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_1  (.A(\i_i[6] ), 
+        .B(mult1_un131_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un138_sum_cry_0), .S(mult1_un138_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un138_sum_cry_1));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_2  (.A(
+        mult1_un75_sum_cry_1_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_1), .S(
+        mult1_un82_sum_cry_2_S), .Y(), .FCO(mult1_un82_sum_cry_2));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un61_sum_cry_3  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un61_sum_cry_2), .S(mult1_un61_sum_cry_3_S), .Y(), .FCO(
+        mult1_un61_sum_cry_3));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_7  (.A(
+        mult1_un124_sum_cry_6_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_6), .S(
+        mult1_un131_sum_cry_7_S), .Y(), .FCO(mult1_un131_sum_cry_7));
+    CFG4 #( .INIT(16'hAE0C) )  \state_ns_0[1]  (.A(
+        locator_control_0_en_timer), .B(\state[3]_net_1 ), .C(ECHO_c), 
+        .D(\state[4]_net_1 ), .Y(\state_ns[1] ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_10  (.A(
+        mult1_un110_sum_cry_9_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_9), .S(
+        mult1_un117_sum_cry_10_S), .Y(), .FCO(mult1_un117_sum_cry_10));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un82_sum_cry_0));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_10  (.A(
+        mult1_un131_sum_cry_9_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_9), .S(
+        mult1_un138_sum_cry_10_S), .Y(), .FCO(mult1_un138_sum_cry_10));
+    ARI1 #( .INIT(20'h40000) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_s_8  (.A(VCC_net_1), 
+        .B(GND_net_1), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un54_sum_cry_7), .S(mult1_un54_sum_s_8_S), .Y(), .FCO());
+    CFG4 #( .INIT(16'h777F) )  \state_ns_o2_4[2]  (.A(\i[8]_net_1 ), 
+        .B(\i[7]_net_1 ), .C(\i[6]_net_1 ), .D(\i[5]_net_1 ), .Y(
+        un20_clklt9));
+    CFG4 #( .INIT(16'h0F4F) )  \state_ns_o2_2[2]  (.A(\i[11]_net_1 ), 
+        .B(un20_clklt12), .C(\i[13]_net_1 ), .D(\i[12]_net_1 ), .Y(
+        un20_clklt16));
+    SLE new_ready (.D(\state[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_201_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(pulse_meash_0_new_ready));
+    CFG3 #( .INIT(8'h01) )  un20_clklto16_1 (.A(\i[16]_net_1 ), .B(
+        \i[15]_net_1 ), .C(\i[14]_net_1 ), .Y(un20_clklto16_1_net_1));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_7  (.A(
+        mult1_un145_sum_cry_6_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_6), .S(
+        mult1_un152_sum_cry_7_S), .Y(), .FCO(mult1_un152_sum_cry_7));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_7  (.A(
+        mult1_un138_sum_cry_6_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_6), .S(
+        mult1_un145_sum_cry_7_S), .Y(), .FCO(mult1_un145_sum_cry_7));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un89_sum_cry_10_S), .C(mult1_un89_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un96_sum_cry_10), .S(
+        mult1_un96_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(mult1_un103_sum_cry_0_Y), .FCO(
+        mult1_un103_sum_cry_0));
+    SLE \i[14]  (.D(\i_s[14] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[14]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_4  (.A(
+        mult1_un103_sum_cry_3_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_3), .S(
+        mult1_un110_sum_cry_4_S), .Y(), .FCO(mult1_un110_sum_cry_4));
+    CFG4 #( .INIT(16'h555D) )  \state_ns_o2[2]  (.A(CO2), .B(
+        un20_clklt20), .C(\i[20]_net_1 ), .D(\i[19]_net_1 ), .Y(
+        \state_ns_o2[2]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[3]  (.A(VCC_net_1), .B(
+        \i[3]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[2]_net_1 ), .S(\i_s[3] ), .Y(), .FCO(\i_cry[3]_net_1 ));
+    ARI1 #( .INIT(20'h69900) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_6  (.A(VCC_net_1), 
+        .B(mult1_un47_sum_s_5_sf), .C(mult1_un47_sum_cry_4), .D(
+        GND_net_1), .FCI(mult1_un54_sum_cry_5), .S(
+        mult1_un54_sum_cry_6_S), .Y(), .FCO(mult1_un54_sum_cry_6));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_5  (.A(
+        mult1_un138_sum_cry_4_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_4), .S(
+        mult1_un145_sum_cry_5_S), .Y(), .FCO(mult1_un145_sum_cry_5));
+    SLE \state[2]  (.D(N_5_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[2]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_10  (.A(
+        mult1_un89_sum_cry_9_S), .B(mult1_un89_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un96_sum_cry_9), .S(
+        mult1_un96_sum_cry_10_S), .Y(), .FCO(mult1_un96_sum_cry_10));
+    SLE \state[1]  (.D(N_187_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_6  (.A(
+        mult1_un75_sum_cry_5_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_5), .S(
+        mult1_un82_sum_cry_6_S), .Y(), .FCO(mult1_un82_sum_cry_6));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un68_sum_cry_0));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[4]  (.A(VCC_net_1), .B(
+        \i[4]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[3]_net_1 ), .S(\i_s[4] ), .Y(), .FCO(\i_cry[4]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_2  (.A(
+        mult1_un138_sum_cry_1_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_1), .S(
+        mult1_un145_sum_cry_2_S), .Y(), .FCO(mult1_un145_sum_cry_2));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_cry_3  (.A(
+        mult1_un131_sum_cry_2_S), .B(mult1_un131_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un138_sum_cry_2), .S(
+        mult1_un138_sum_cry_3_S), .Y(), .FCO(mult1_un138_sum_cry_3));
+    SLE \i[5]  (.D(\i_s[5] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_6  (.A(
+        mult1_un103_sum_cry_5_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_5), .S(
+        mult1_un110_sum_cry_6_S), .Y(), .FCO(mult1_un110_sum_cry_6));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_7  (.A(
+        mult1_un110_sum_cry_6_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_6), .S(
+        mult1_un117_sum_cry_7_S), .Y(), .FCO(mult1_un117_sum_cry_7));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_2  (.A(
+        mult1_un103_sum_cry_1_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_1), .S(
+        mult1_un110_sum_cry_2_S), .Y(), .FCO(mult1_un110_sum_cry_2));
+    SLE \i[8]  (.D(\i_s[8] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_i_0[13]  (.A(
+        mult1_un96_sum_s_11_S), .Y(\mult1_un96_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_7  (.A(
+        mult1_un96_sum_cry_6_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_6), .S(
+        mult1_un103_sum_cry_7_S), .Y(), .FCO(mult1_un103_sum_cry_7));
+    SLE \tim[6]  (.D(\mult1_un117_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[6]));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[13]  (.A(VCC_net_1), .B(
+        \i[13]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[12]_net_1 ), .S(\i_s[13] ), .Y(), .FCO(
+        \i_cry[13]_net_1 ));
+    ARI1 #( .INIT(20'h41E00) )  
+        \un5_tim.if_generate_plus.mult1_un47_sum_cry_3  (.A(VCC_net_1), 
+        .B(\i_fast[19]_net_1 ), .C(\i_fast[20]_net_1 ), .D(
+        \i_fast[21]_net_1 ), .FCI(mult1_un47_sum_cry_2), .S(
+        mult1_un47_sum_cry_3_S), .Y(), .FCO(mult1_un47_sum_cry_3));
+    SLE \tim[9]  (.D(\mult1_un96_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[9]));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_9  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_cry_8_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_8), .S(mult1_un68_sum_cry_9_S), .Y(), .FCO(
+        mult1_un68_sum_cry_9));
+    ARI1 #( .INIT(20'h53CAA) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_1  (.A(VCC_net_1)
+        , .B(mult1_un152_sum_cry_0_Y), .C(\i[3]_net_1 ), .D(
+        mult1_un152_sum_s_11_S), .FCI(mult1_un159_sum_cry_0), .S(), .Y(
+        ), .FCO(mult1_un159_sum_cry_1));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[5]  (.A(VCC_net_1), .B(
+        \i[5]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[4]_net_1 ), .S(\i_s[5] ), .Y(), .FCO(\i_cry[5]_net_1 ));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_5  (.A(VCC_net_1), 
+        .B(mult1_un68_sum_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_4), .S(mult1_un68_sum_cry_5_S), .Y(), .FCO(
+        mult1_un68_sum_cry_5));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_3  (.A(VCC_net_1), 
+        .B(mult1_un54_sum_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un54_sum_cry_2), .S(mult1_un54_sum_cry_3_S), .Y(), .FCO(
+        mult1_un54_sum_cry_3));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_5  (.A(
+        mult1_un103_sum_cry_4_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_4), .S(
+        mult1_un110_sum_cry_5_S), .Y(), .FCO(mult1_un110_sum_cry_5));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_9  (.A(
+        mult1_un145_sum_cry_8_S), .B(mult1_un145_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un152_sum_cry_8), .S(
+        mult1_un152_sum_cry_9_S), .Y(), .FCO(mult1_un152_sum_cry_9));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_9  (.A(
+        mult1_un96_sum_cry_8_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_8), .S(
+        mult1_un103_sum_cry_9_S), .Y(), .FCO(mult1_un103_sum_cry_9));
+    SLE \tim[10]  (.D(\mult1_un89_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[10]));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_8  (.A(
+        mult1_un110_sum_cry_7_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_7), .S(
+        mult1_un117_sum_cry_8_S), .Y(), .FCO(mult1_un117_sum_cry_8));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_4  (.A(
+        mult1_un68_sum_cry_3_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_3), .S(
+        mult1_un75_sum_cry_4_S), .Y(), .FCO(mult1_un75_sum_cry_4));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un47_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(mult1_un47_sum_cry_0_Y), .FCO(
+        mult1_un47_sum_cry_0));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un145_sum_cry_0));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un117_sum_cry_0));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_i_0[13]  (.A(
+        mult1_un138_sum_s_11_S), .Y(\mult1_un138_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_5  (.A(
+        mult1_un152_sum_cry_4_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_4), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_5));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[9]  (.A(VCC_net_1), .B(
+        \i[9]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[8]_net_1 ), .S(\i_s[9] ), .Y(), .FCO(\i_cry[9]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un75_sum_cry_0));
+    SLE \i[3]  (.D(\i_s[3] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_4  (.A(
+        mult1_un117_sum_cry_3_S), .B(mult1_un117_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un124_sum_cry_3), .S(
+        mult1_un124_sum_cry_4_S), .Y(), .FCO(mult1_un124_sum_cry_4));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un138_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un131_sum_cry_10_S), .C(mult1_un131_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un138_sum_cry_10), .S(
+        mult1_un138_sum_s_11_S), .Y(), .FCO());
+    SLE \i_fast[20]  (.D(\i_s[20] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i_fast[20]_net_1 ));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un124_sum_cry_10_S), .C(mult1_un124_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un131_sum_cry_10), .S(
+        mult1_un131_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h42200) )  \i_cry[16]  (.A(VCC_net_1), .B(
+        \i[16]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[15]_net_1 ), .S(\i_s[16] ), .Y(), .FCO(
+        \i_cry[16]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_1  (.A(\i_i[13] ), 
+        .B(mult1_un82_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un89_sum_cry_0), .S(mult1_un89_sum_cry_1_S), .Y(), .FCO(
+        mult1_un89_sum_cry_1));
+    SLE \i_fast[21]  (.D(\i_s[21]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_5_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(\i_fast[21]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[8]  (.A(VCC_net_1), .B(
+        \i[8]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[7]_net_1 ), .S(\i_s[8] ), .Y(), .FCO(\i_cry[8]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_i_0[13]  (.A(
+        mult1_un75_sum_s_11_S), .Y(\mult1_un75_sum_i_0[13] ));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_2  (.A(VCC_net_1), 
+        .B(mult1_un47_sum_cry_1_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un54_sum_cry_1), .S(mult1_un61_sum_axb_3), .Y(), .FCO(
+        mult1_un54_sum_cry_2));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_4  (.A(
+        mult1_un75_sum_cry_3_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_3), .S(
+        mult1_un82_sum_cry_4_S), .Y(), .FCO(mult1_un82_sum_cry_4));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un152_sum_cry_1  (.A(\i_i[4] ), 
+        .B(mult1_un145_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un152_sum_cry_0), .S(mult1_un152_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un152_sum_cry_1));
+    ARI1 #( .INIT(20'h42200) )  \i_cry[0]  (.A(VCC_net_1), .B(
+        \i[0]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        i_cry_cy), .S(\i_s[0] ), .Y(), .FCO(\i_cry[0]_net_1 ));
+    SLE \i[1]  (.D(\i_s[1] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
+    ARI1 #( .INIT(20'h533AA) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_1  (.A(VCC_net_1), 
+        .B(mult1_un47_sum_cry_0_Y), .C(\i[18]_net_1 ), .D(GND_net_1), 
+        .FCI(mult1_un54_sum_cry_0), .S(mult1_un54_sum_cry_1_S), .Y(), 
+        .FCO(mult1_un54_sum_cry_1));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un117_sum_cry_4  (.A(
+        mult1_un110_sum_cry_3_S), .B(mult1_un110_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un117_sum_cry_3), .S(
+        mult1_un117_sum_cry_4_S), .Y(), .FCO(mult1_un117_sum_cry_4));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un110_sum_cry_7  (.A(
+        mult1_un103_sum_cry_6_S), .B(mult1_un103_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un110_sum_cry_6), .S(
+        mult1_un110_sum_cry_7_S), .Y(), .FCO(mult1_un110_sum_cry_7));
+    CFG1 #( .INIT(2'h1) )  \i_RNIIUQ6[11]  (.A(\i[11]_net_1 ), .Y(
+        \i_i[11] ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un145_sum_cry_9  (.A(
+        mult1_un138_sum_cry_8_S), .B(mult1_un138_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un145_sum_cry_8), .S(
+        mult1_un145_sum_cry_9_S), .Y(), .FCO(mult1_un145_sum_cry_9));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_2  (.A(
+        mult1_un96_sum_cry_1_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_1), .S(
+        mult1_un103_sum_cry_2_S), .Y(), .FCO(mult1_un103_sum_cry_2));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_6  (.A(
+        mult1_un82_sum_cry_5_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_5), .S(
+        mult1_un89_sum_cry_6_S), .Y(), .FCO(mult1_un89_sum_cry_6));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un159_sum_cry_7  (.A(
+        mult1_un152_sum_cry_6_S), .B(mult1_un152_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un159_sum_cry_6), .S(), 
+        .Y(), .FCO(mult1_un159_sum_cry_7));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_0  (.A(VCC_net_1), 
+        .B(\i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un96_sum_cry_0));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un75_sum_cry_2  (.A(
+        mult1_un68_sum_cry_1_S), .B(mult1_un68_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un75_sum_cry_1), .S(
+        mult1_un75_sum_cry_2_S), .Y(), .FCO(mult1_un75_sum_cry_2));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_9  (.A(
+        mult1_un124_sum_cry_8_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_8), .S(
+        mult1_un131_sum_cry_9_S), .Y(), .FCO(mult1_un131_sum_cry_9));
+    ARI1 #( .INIT(20'h49900) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_s_11  (.A(VCC_net_1), 
+        .B(mult1_un82_sum_cry_10_S), .C(mult1_un82_sum_s_11_S), .D(
+        GND_net_1), .FCI(mult1_un89_sum_cry_10), .S(
+        mult1_un89_sum_s_11_S), .Y(), .FCO());
+    ARI1 #( .INIT(20'h42200) )  \i_cry[19]  (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(\state[3]_net_1 ), .D(GND_net_1), .FCI(
+        \i_cry[18]_net_1 ), .S(\i_s[19] ), .Y(), .FCO(
+        \i_cry[19]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un82_sum_cry_8  (.A(
+        mult1_un75_sum_cry_7_S), .B(mult1_un75_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un82_sum_cry_7), .S(
+        mult1_un82_sum_cry_8_S), .Y(), .FCO(mult1_un82_sum_cry_8));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un103_sum_cry_5  (.A(
+        mult1_un96_sum_cry_4_S), .B(mult1_un96_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un103_sum_cry_4), .S(
+        mult1_un103_sum_cry_5_S), .Y(), .FCO(mult1_un103_sum_cry_5));
+    SLE \i[18]  (.D(\i_s[18] ), .CLK(FCCC_0_GL0), .EN(N_5_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[18]_net_1 ));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_cry_2  (.A(
+        mult1_un124_sum_cry_1_S), .B(mult1_un124_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un131_sum_cry_1), .S(
+        mult1_un131_sum_cry_2_S), .Y(), .FCO(mult1_un131_sum_cry_2));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un124_sum_cry_0  (.A(VCC_net_1)
+        , .B(\i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(mult1_un124_sum_cry_0));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un54_sum_cry_4  (.A(VCC_net_1), 
+        .B(mult1_un47_sum_cry_3_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un54_sum_cry_3), .S(mult1_un61_sum_axb_5), .Y(), .FCO(
+        mult1_un54_sum_cry_4));
+    ARI1 #( .INIT(20'h5AA55) )  
+        \un5_tim.if_generate_plus.mult1_un96_sum_cry_1  (.A(\i_i[12] ), 
+        .B(mult1_un89_sum_s_11_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un96_sum_cry_0), .S(mult1_un96_sum_cry_1_S), .Y(), .FCO(
+        mult1_un96_sum_cry_1));
+    ARI1 #( .INIT(20'h5AAAA) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_8  (.A(VCC_net_1), 
+        .B(mult1_un68_sum_axb_8), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_7), .S(mult1_un68_sum_cry_8_S), .Y(), .FCO(
+        mult1_un68_sum_cry_8));
+    ARI1 #( .INIT(20'h65500) )  
+        \un5_tim.if_generate_plus.mult1_un68_sum_cry_7  (.A(VCC_net_1), 
+        .B(mult1_un61_sum_cry_6_S), .C(GND_net_1), .D(GND_net_1), .FCI(
+        mult1_un68_sum_cry_6), .S(mult1_un68_sum_cry_7_S), .Y(), .FCO(
+        mult1_un68_sum_cry_7));
+    CFG1 #( .INIT(2'h1) )  
+        \un5_tim.if_generate_plus.mult1_un131_sum_i_0[13]  (.A(
+        mult1_un131_sum_s_11_S), .Y(\mult1_un131_sum_i_0[13] ));
+    CFG2 #( .INIT(4'hE) )  new_ready_RNO (.A(\state[1]_net_1 ), .B(
+        \state[0]_net_1 ), .Y(N_201_i_0));
+    ARI1 #( .INIT(20'h555AA) )  
+        \un5_tim.if_generate_plus.mult1_un89_sum_cry_4  (.A(
+        mult1_un82_sum_cry_3_S), .B(mult1_un82_sum_s_11_S), .C(
+        GND_net_1), .D(GND_net_1), .FCI(mult1_un89_sum_cry_3), .S(
+        mult1_un89_sum_cry_4_S), .Y(), .FCO(mult1_un89_sum_cry_4));
+    SLE \tim[7]  (.D(\mult1_un110_sum_i_0[13] ), .CLK(FCCC_0_GL0), .EN(
+        \state[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        pulse_meash_0_tim[7]));
+    
+endmodule
+
+
+module locator_control(
+       BT_module_0_data_buf,
+       locator_control_0_angle1,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       un46_clk_0,
+       un46_clk_1,
+       un46_clk_2,
+       un46_clk_3,
+       TRIG_c,
+       locator_control_0_en_timer,
+       pulse_meash_0_new_ready,
+       N_234_0
+    );
+input  [7:0] BT_module_0_data_buf;
+output [3:0] locator_control_0_angle1;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+output un46_clk_0;
+output un46_clk_1;
+output un46_clk_2;
+output un46_clk_3;
+output TRIG_c;
+output locator_control_0_en_timer;
+input  pulse_meash_0_new_ready;
+output N_234_0;
+
+    wire \i[26]_net_1 , VCC_net_1, \i_4_i_i_a3[26]_net_1 , N_243_i_0, 
+        GND_net_1, \i[27]_net_1 , \i_4_i_i_a3[27]_net_1 , 
+        \i[28]_net_1 , \i_4_i_i_a3[28]_net_1 , \i[29]_net_1 , 
+        \i_4_i_i_a3[29]_net_1 , \i[30]_net_1 , \i_4_i_i_a3[30]_net_1 , 
+        \st_angle[0]_net_1 , fn_angle_0_sqmuxa_net_1, 
+        \st_angle[1]_net_1 , \st_angle[2]_net_1 , \st_angle[3]_net_1 , 
+        un38_clk_0, un38_clk_1, un38_clk_2, un38_clk_3, \i[11]_net_1 , 
+        N_458, \i[12]_net_1 , N_459, \i[13]_net_1 , N_460, 
+        \i[14]_net_1 , N_461, \i[15]_net_1 , N_462, \i[16]_net_1 , 
+        N_463, \i[17]_net_1 , N_464, \i[18]_net_1 , N_465, 
+        \i[19]_net_1 , N_466, \i[20]_net_1 , N_467, \i[21]_net_1 , 
+        \i_4_i_i_a3[21]_net_1 , \i[22]_net_1 , \i_4_i_i_a3[22]_net_1 , 
+        \i[23]_net_1 , \i_4_i_i_a3[23]_net_1 , \i[24]_net_1 , 
+        \i_4_i_i_a3[24]_net_1 , \i[25]_net_1 , \i_4_i_i_a3[25]_net_1 , 
+        \i[0]_net_1 , N_230, \i[1]_net_1 , N_231, \i[2]_net_1 , N_232, 
+        \i[3]_net_1 , N_233, \i[4]_net_1 , N_234, \i[5]_net_1 , N_235, 
+        \i[6]_net_1 , N_455, \i[7]_net_1 , N_456, \i[8]_net_1 , N_457, 
+        \i[9]_net_1 , N_241, \i[10]_net_1 , N_242, \state[4]_net_1 , 
+        over_net_1, over_1_sqmuxa, un1_angle_0_sqmuxa_0_0_net_1, 
+        \state[8]_net_1 , un1_state_8_i_0, dir_net_1, 
+        cr_angle_1_sqmuxa, un1_cr_angle_1_sqmuxa_0_0_net_1, 
+        \state[6]_net_1 , N_244_i_0, \state[5]_net_1 , 
+        \state[3]_net_1 , \state_ns[8]_net_1 , \state[2]_net_1 , 
+        N_211_i_0, \state[1]_net_1 , \state[0]_net_1 , \state_ns[11] , 
+        \state[11]_net_1 , N_195_i_0, \state[10]_net_1 , 
+        \state[9]_net_1 , N_201_i_0, \state[7]_net_1 , \state_ns[4] , 
+        N_204_i_0, \cr_angle_s[0] , \cr_angle_s[1] , \cr_angle_s[2] , 
+        \cr_angle_s[3] , un46_clk_4, \cr_angle_s[4] , un46_clk_5, 
+        \cr_angle_s[5] , un46_clk_6, \cr_angle_s[6] , un46_clk_7, 
+        \cr_angle_s[7] , un46_clk_8, \cr_angle_s[8] , un46_clk_9, 
+        \cr_angle_s[9] , un46_clk_10, \cr_angle_s[10] , un46_clk_11, 
+        \cr_angle_s[11] , un46_clk_12, \cr_angle_s[12] , un46_clk_13, 
+        \cr_angle_s[13] , un46_clk_14, \cr_angle_s[14] , un46_clk_15, 
+        \cr_angle_s[15] , un46_clk_16, \cr_angle_s[16] , un46_clk_17, 
+        \cr_angle_s[17] , un46_clk_18, \cr_angle_s[18] , un46_clk_19, 
+        \cr_angle_s[19] , un46_clk_20, \cr_angle_s[20] , un46_clk_21, 
+        \cr_angle_s[21] , un46_clk_22, \cr_angle_s[22] , un46_clk_23, 
+        \cr_angle_s[23] , un46_clk_24, \cr_angle_s[24] , un46_clk_25, 
+        \cr_angle_s[25] , un46_clk_26, \cr_angle_s[26] , un46_clk_27, 
+        \cr_angle_s[27] , un46_clk_28, \cr_angle_s[28] , un46_clk_29, 
+        \cr_angle_s[29] , un46_clk_30, \cr_angle_s[30] , 
+        cr_angle_lcry_cy, un38_clk_cry_30_net_1, N_229, N_291, 
+        cr_angle, un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y, N_191_i_0_0, 
+        N_451_i_0, \cr_angle_cry[0] , \cr_angle_lxu;_0[0] , 
+        \cr_angle_qxu[0]_net_1 , \cr_angle_cry[1] , N_191_i_0, 
+        \cr_angle_cry[2] , \cr_angle_cry[3] , \cr_angle_cry[4] , 
+        \cr_angle_cry[5] , \cr_angle_cry[6] , \cr_angle_cry[7] , 
+        \cr_angle_cry[8] , \cr_angle_cry[9] , \cr_angle_cry[10] , 
+        \cr_angle_cry[11] , \cr_angle_cry[12] , \cr_angle_cry[13] , 
+        \cr_angle_cry[14] , \cr_angle_cry[15] , \cr_angle_cry[16] , 
+        \cr_angle_cry[17] , \cr_angle_cry[18] , \cr_angle_cry[19] , 
+        \cr_angle_cry[20] , \cr_angle_cry[21] , \cr_angle_cry[22] , 
+        \cr_angle_cry[23] , \cr_angle_cry[24] , \cr_angle_cry[25] , 
+        \cr_angle_cry[26] , \cr_angle_cry[27] , \cr_angle_cry[28] , 
+        \cr_angle_cry[29] , un46_clk_cry_0_net_1, un46_clk_cry_1_net_1, 
+        un46_clk_cry_2_net_1, un46_clk_cry_3_net_1, 
+        un46_clk_cry_4_net_1, un46_clk_cry_5_net_1, 
+        un46_clk_cry_6_net_1, un46_clk_cry_7_net_1, 
+        un46_clk_cry_8_net_1, un46_clk_cry_9_net_1, 
+        un46_clk_cry_10_net_1, un46_clk_cry_11_net_1, 
+        un46_clk_cry_12_net_1, un46_clk_cry_13_net_1, 
+        un46_clk_cry_14_net_1, un46_clk_cry_15_net_1, 
+        un46_clk_cry_16_net_1, un46_clk_cry_17_net_1, 
+        un46_clk_cry_18_net_1, un46_clk_cry_19_net_1, 
+        un46_clk_cry_20_net_1, un46_clk_cry_21_net_1, 
+        un46_clk_cry_22_net_1, un46_clk_cry_23_net_1, 
+        un46_clk_cry_24_net_1, un46_clk_cry_25_net_1, 
+        un46_clk_cry_26_net_1, un46_clk_cry_27_net_1, 
+        un46_clk_cry_28_net_1, un46_clk_cry_29_net_1, 
+        un46_clk_cry_30_net_1, un38_clk_cry_0_net_1, 
+        un38_clk_cry_1_net_1, un38_clk_cry_2_net_1, 
+        un38_clk_cry_3_net_1, un38_clk_cry_4_net_1, 
+        un38_clk_cry_5_net_1, un38_clk_cry_6_net_1, 
+        un38_clk_cry_7_net_1, un38_clk_cry_8_net_1, 
+        un38_clk_cry_9_net_1, un38_clk_cry_10_net_1, 
+        un38_clk_cry_11_net_1, un38_clk_cry_12_net_1, 
+        un38_clk_cry_13_net_1, un38_clk_cry_14_net_1, 
+        un38_clk_cry_15_net_1, un38_clk_cry_16_net_1, 
+        un38_clk_cry_17_net_1, un38_clk_cry_18_net_1, 
+        un38_clk_cry_19_net_1, un38_clk_cry_20_net_1, 
+        un38_clk_cry_21_net_1, un38_clk_cry_22_net_1, 
+        un38_clk_cry_23_net_1, un38_clk_cry_24_net_1, 
+        un38_clk_cry_25_net_1, un38_clk_cry_26_net_1, 
+        un38_clk_cry_27_net_1, un38_clk_cry_28_net_1, 
+        un38_clk_cry_29_net_1, un1_i_s_1_322_FCO, un1_i_cry_1_net_1, 
+        un1_i_cry_1_S, un1_i_cry_2_net_1, un1_i_cry_2_S, 
+        un1_i_cry_3_net_1, un1_i_cry_3_S, un1_i_cry_4_net_1, 
+        un1_i_cry_4_S, un1_i_cry_5_net_1, un1_i_cry_5_S, 
+        un1_i_cry_6_net_1, un1_i_cry_6_S, un1_i_cry_7_net_1, 
+        un1_i_cry_7_S, un1_i_cry_8_net_1, un31_clklto8, 
+        un1_i_cry_9_net_1, un1_i_cry_9_S, un1_i_cry_10_net_1, 
+        un1_i_cry_10_S, un1_i_cry_11_net_1, un1_i_cry_11_S, 
+        un1_i_cry_12_net_1, un1_i_cry_12_S, un1_i_cry_13_net_1, 
+        un1_i_cry_13_S, un1_i_cry_14_net_1, un1_i_cry_14_S, 
+        un1_i_cry_15_net_1, un1_i_cry_15_S, un1_i_cry_16_net_1, 
+        un1_i_cry_16_S, un1_i_cry_17_net_1, un31_clklto17, 
+        un1_i_cry_18_net_1, un1_i_cry_18_S, un1_i_cry_19_net_1, 
+        un1_i_cry_19_S, un1_i_cry_20_net_1, un31_clklto20, 
+        un1_i_cry_21_net_1, un31_clklto21, un1_i_cry_22_net_1, 
+        un1_i_cry_22_S, un1_i_cry_23_net_1, un1_i_cry_23_S, 
+        un1_i_cry_24_net_1, un1_i_cry_24_S, un1_i_cry_25_net_1, 
+        un1_i_cry_25_S, un1_i_cry_26_net_1, un1_i_cry_26_S, 
+        un1_i_cry_27_net_1, un1_i_cry_27_S, un1_i_cry_28_net_1, 
+        un1_i_cry_28_S, un1_i_s_30_S, un1_i_cry_29_net_1, 
+        un1_i_cry_29_S, \cr_angle_lxu;[0] , N_503, N_449_5, 
+        \state_ns_a2_0_0_a3_0_6[8]_net_1 , 
+        \state_ns_a2_0_0_a3_0_5[8]_net_1 , 
+        un1_state_8_0_0_a3_10_3_net_1, un1_state_8_0_0_a3_10_2_net_1, 
+        \state_ns_a2_0_0_a2_0_6[8]_net_1 , 
+        \state_ns_a2_0_0_a2_0_5[8]_net_1 , un1_state_8_0_0_o2_2_net_1, 
+        \state_ns_a2_0_a2_5[4]_net_1 , \state_ns_a2_0_a2_4[4]_net_1 , 
+        \state_ns_i_0_0_a2_4_1[3]_net_1 , N_316, N_59, N_482, 
+        \state_ns_a2_0_0_a3_0_7[8]_net_1 , un1_state_8_0_0_o2_net_1, 
+        N_311, N_258, N_484, N_109, N_192, N_112, N_449_9, N_446, 
+        N_116, N_114, N_117, N_452_1, N_118, N_120, N_491, N_481;
+    
+    CFG2 #( .INIT(4'h8) )  un1_angle_0_sqmuxa_0_0_a3 (.A(over_net_1), 
+        .B(\state[1]_net_1 ), .Y(N_195_i_0));
+    SLE \cr_angle[21]  (.D(\cr_angle_s[21] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_21));
+    SLE \state[0]  (.D(\state_ns[11] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
+    SLE \cr_angle[8]  (.D(\cr_angle_s[8] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_8));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_9 (.A(VCC_net_1), .B(
+        un46_clk_9), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_8_net_1), .S(), .Y(), .FCO(un46_clk_cry_9_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIDIPI21[15]  (.A(N_191_i_0)
+        , .B(un46_clk_15), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[14] ), .S(\cr_angle_s[15] ), .Y(), .FCO(
+        \cr_angle_cry[15] ));
+    ARI1 #( .INIT(20'h5CCAA) )  \cr_angle_qxu_RNIL3NT3[0]  (.A(
+        VCC_net_1), .B(\cr_angle_lxu;_0[0] ), .C(
+        \cr_angle_qxu[0]_net_1 ), .D(GND_net_1), .FCI(cr_angle), .S(
+        \cr_angle_s[0] ), .Y(), .FCO(\cr_angle_cry[0] ));
+    SLE \i[7]  (.D(N_456), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_29 (.A(VCC_net_1), .B(
+        un46_clk_29), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_28_net_1), .S(), .Y(), .FCO(un46_clk_cry_29_net_1)
+        );
+    SLE \angle1[2]  (.D(un46_clk_2), .CLK(FCCC_0_GL0), .EN(
+        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        locator_control_0_angle1[2]));
+    SLE \i[16]  (.D(N_463), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[16]_net_1 ));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIG836B1[21]  (.A(N_191_i_0)
+        , .B(un46_clk_21), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[20] ), .S(\cr_angle_s[21] ), .Y(), .FCO(
+        \cr_angle_cry[21] ));
+    CFG3 #( .INIT(8'hAE) )  \state_ns_o2_0_0_o3[11]  (.A(
+        \state[9]_net_1 ), .B(\state[1]_net_1 ), .C(over_net_1), .Y(
+        N_234_0));
+    SLE \fn_angle[1]  (.D(BT_module_0_data_buf[5]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        un38_clk_1));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_18 (.A(VCC_net_1), .B(
+        un46_clk_18), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_17_net_1), .S(), .Y(), .FCO(un38_clk_cry_18_net_1)
+        );
+    SLE \cr_angle[23]  (.D(\cr_angle_s[23] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_23));
+    SLE \i[21]  (.D(\i_4_i_i_a3[21]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[21]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[26]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_26_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[26]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[18]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_18_S), .C(N_446), .D(N_481), .Y(N_465));
+    CFG2 #( .INIT(4'h4) )  cr_angle_1_sqmuxa_0_a3_0_a3 (.A(
+        un38_clk_cry_30_net_1), .B(N_291), .Y(cr_angle_1_sqmuxa));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_26 (.A(VCC_net_1), .B(
+        un46_clk_26), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_25_net_1), .S(), .Y(), .FCO(un46_clk_cry_26_net_1)
+        );
+    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_0 (.A(un38_clk_0), .B(
+        un46_clk_0), .C(GND_net_1), .D(GND_net_1), .FCI(GND_net_1), .S(
+        ), .Y(), .FCO(un38_clk_cry_0_net_1));
+    SLE \state[10]  (.D(\state[11]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[10]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[2]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_2_S), .C(N_446), .D(N_481), .Y(N_232));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI79EDR[10]  (.A(N_191_i_0), 
+        .B(un46_clk_10), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[9] ), .S(\cr_angle_s[10] ), .Y(), .FCO(
+        \cr_angle_cry[10] ));
+    SLE \i[0]  (.D(N_230), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_0_a3_0_6[8]  (.A(
+        un1_i_cry_5_S), .B(un31_clklto8), .C(un1_i_cry_1_S), .D(
+        un1_i_cry_4_S), .Y(\state_ns_a2_0_0_a3_0_6[8]_net_1 ));
+    SLE \i[11]  (.D(N_458), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[11]_net_1 ));
+    ARI1 #( .INIT(20'h46A00) )  \cr_angle_RNO[30]  (.A(VCC_net_1), .B(
+        N_191_i_0), .C(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .D(
+        un46_clk_30), .FCI(\cr_angle_cry[29] ), .S(\cr_angle_s[30] ), 
+        .Y(), .FCO());
+    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_3 (.A(un46_clk_3), .B(
+        \st_angle[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_2_net_1), .S(), .Y(), .FCO(un46_clk_cry_3_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_s_30 (.A(VCC_net_1), .B(
+        \i[30]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_29_net_1), .S(un1_i_s_30_S), .Y(), .FCO());
+    SLE \state[6]  (.D(N_204_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[6]_net_1 ));
+    CFG4 #( .INIT(16'hDFFF) )  \state_ns_a2_0_0_o2_2[8]  (.A(
+        un1_i_cry_16_S), .B(N_484), .C(un1_i_cry_14_S), .D(
+        un1_i_cry_15_S), .Y(N_112));
+    SLE dir (.D(cr_angle_1_sqmuxa), .CLK(FCCC_0_GL0), .EN(
+        un1_cr_angle_1_sqmuxa_0_0_net_1), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(dir_net_1));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_11 (.A(VCC_net_1), .B(
+        un46_clk_11), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_10_net_1), .S(), .Y(), .FCO(un46_clk_cry_11_net_1)
+        );
+    SLE \st_angle[2]  (.D(BT_module_0_data_buf[2]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \st_angle[2]_net_1 ));
+    SLE \angle1[1]  (.D(un46_clk_1), .CLK(FCCC_0_GL0), .EN(
+        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        locator_control_0_angle1[1]));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIE0NTG1[25]  (.A(N_191_i_0)
+        , .B(un46_clk_25), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[24] ), .S(\cr_angle_s[25] ), .Y(), .FCO(
+        \cr_angle_cry[25] ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_21 (.A(VCC_net_1), .B(
+        un46_clk_21), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_20_net_1), .S(), .Y(), .FCO(un38_clk_cry_21_net_1)
+        );
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_19 (.A(VCC_net_1), .B(
+        un46_clk_19), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_18_net_1), .S(), .Y(), .FCO(un38_clk_cry_19_net_1)
+        );
+    CFG2 #( .INIT(4'h7) )  \state_RNILFEF[10]  (.A(\state[10]_net_1 ), 
+        .B(FCCC_0_LOCK), .Y(N_451_i_0));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[23]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_23_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[23]_net_1 ));
+    CFG4 #( .INIT(16'hB8F0) )  \cr_angle_lxu[0]  (.A(
+        \st_angle[0]_net_1 ), .B(FCCC_0_LOCK), .C(un46_clk_0), .D(
+        \state[10]_net_1 ), .Y(\cr_angle_lxu;[0] ));
+    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_0 (.A(un46_clk_0), .B(
+        \st_angle[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(), .FCO(un46_clk_cry_0_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_23 (.A(VCC_net_1), .B(
+        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_22_net_1), .S(un1_i_cry_23_S), .Y(), .FCO(
+        un1_i_cry_23_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIU40KC1[22]  (.A(N_191_i_0)
+        , .B(un46_clk_22), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[21] ), .S(\cr_angle_s[22] ), .Y(), .FCO(
+        \cr_angle_cry[22] ));
+    CFG4 #( .INIT(16'h0F4F) )  \state_ns_i_0_0_o2_5[3]  (.A(
+        \i[2]_net_1 ), .B(\state_ns_i_0_0_a2_4_1[3]_net_1 ), .C(
+        \i[5]_net_1 ), .D(\i[3]_net_1 ), .Y(N_109));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[5]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_5_S), .C(N_446), .D(N_481), .Y(N_235));
+    SLE \cr_angle[2]  (.D(\cr_angle_s[2] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_2));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI75E7L1[28]  (.A(N_191_i_0)
+        , .B(un46_clk_28), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[27] ), .S(\cr_angle_s[28] ), .Y(), .FCO(
+        \cr_angle_cry[28] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_21 (.A(VCC_net_1), .B(
+        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_20_net_1), .S(un31_clklto21), .Y(), .FCO(
+        un1_i_cry_21_net_1));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[15]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_15_S), .C(N_446), .D(N_481), .Y(N_462));
+    SLE \cr_angle[14]  (.D(\cr_angle_s[14] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_14));
+    CFG2 #( .INIT(4'h2) )  un1_cr_angle_1_sqmuxa_0_0_a2 (.A(
+        \state[2]_net_1 ), .B(dir_net_1), .Y(N_291));
+    CFG3 #( .INIT(8'h75) )  \state_ns_i_0_0_o2_3[3]  (.A(\i[10]_net_1 )
+        , .B(\i[9]_net_1 ), .C(N_116), .Y(N_117));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_20 (.A(VCC_net_1), .B(
+        un46_clk_20), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_19_net_1), .S(), .Y(), .FCO(un38_clk_cry_20_net_1)
+        );
+    SLE \cr_angle[6]  (.D(\cr_angle_s[6] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_6));
+    SLE \state[4]  (.D(\state[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[4]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[24]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_24_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[24]_net_1 ));
+    CFG2 #( .INIT(4'h1) )  en_sonar_RNO (.A(N_446), .B(N_503), .Y(
+        un1_state_8_i_0));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[8]  (.A(\state[3]_net_1 ), 
+        .B(un31_clklto8), .C(N_446), .D(N_481), .Y(N_457));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[29]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_29_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[29]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_30 (.A(VCC_net_1), .B(
+        un46_clk_30), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_29_net_1), .S(), .Y(), .FCO(un38_clk_cry_30_net_1)
+        );
+    CFG4 #( .INIT(16'hF777) )  \state_ns_i_0_0_o2_0[3]  (.A(
+        \i[17]_net_1 ), .B(\i[18]_net_1 ), .C(N_118), .D(N_59), .Y(
+        N_120));
+    GND GND (.Y(GND_net_1));
+    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_0_a3_0_5[8]  (.A(
+        un1_i_cry_3_S), .B(un31_clklto20), .C(un1_i_cry_2_S), .Y(
+        \state_ns_a2_0_0_a3_0_5[8]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_23 (.A(VCC_net_1), .B(
+        un46_clk_23), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_22_net_1), .S(), .Y(), .FCO(un46_clk_cry_23_net_1)
+        );
+    SLE \state[7]  (.D(\state_ns[4] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
+        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[7]_net_1 ));
+    SLE \i[23]  (.D(\i_4_i_i_a3[23]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[23]_net_1 ));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIEO1NV[13]  (.A(N_191_i_0), 
+        .B(un46_clk_13), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[12] ), .S(\cr_angle_s[13] ), .Y(), .FCO(
+        \cr_angle_cry[13] ));
+    SLE \cr_angle[18]  (.D(\cr_angle_s[18] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_18));
+    SLE \cr_angle[27]  (.D(\cr_angle_s[27] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_27));
+    SLE \state[5]  (.D(\state[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[5]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_0_a2_0_6[8]  (.A(
+        un1_i_cry_25_S), .B(un1_i_cry_26_S), .C(un1_i_cry_27_S), .D(
+        un1_i_cry_28_S), .Y(\state_ns_a2_0_0_a2_0_6[8]_net_1 ));
+    SLE \cr_angle[22]  (.D(\cr_angle_s[22] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_22));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_29 (.A(VCC_net_1), .B(
+        \i[29]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_28_net_1), .S(un1_i_cry_29_S), .Y(), .FCO(
+        un1_i_cry_29_net_1));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[30]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_s_30_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[30]_net_1 ));
+    SLE \cr_angle[29]  (.D(\cr_angle_s[29] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_29));
+    SLE \i[13]  (.D(N_460), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[13]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_4 (.A(VCC_net_1), .B(
+        un46_clk_4), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_3_net_1), .S(), .Y(), .FCO(un38_clk_cry_4_net_1));
+    SLE \i[27]  (.D(\i_4_i_i_a3[27]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[27]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_1 (.A(un46_clk_1), .B(
+        \st_angle[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_0_net_1), .S(), .Y(), .FCO(un46_clk_cry_1_net_1));
+    CFG4 #( .INIT(16'h8000) )  un1_state_8_0_0_a3 (.A(N_449_5), .B(
+        \state[7]_net_1 ), .C(N_449_9), .D(un1_state_8_0_0_o2_net_1), 
+        .Y(N_446));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_12 (.A(VCC_net_1), .B(
+        un46_clk_12), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_11_net_1), .S(), .Y(), .FCO(un46_clk_cry_12_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[28]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_28_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[28]_net_1 ));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNISGIVP[9]  (.A(N_191_i_0), 
+        .B(un46_clk_9), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[8] ), .S(\cr_angle_s[9] ), .Y(), .FCO(
+        \cr_angle_cry[9] ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_17 (.A(VCC_net_1), .B(
+        un46_clk_17), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_16_net_1), .S(), .Y(), .FCO(un38_clk_cry_17_net_1)
+        );
+    ARI1 #( .INIT(20'h51BE4) )  \st_angle_RNIPT91H[3]  (.A(N_191_i_0), 
+        .B(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .C(
+        \st_angle[3]_net_1 ), .D(un46_clk_3), .FCI(\cr_angle_cry[2] ), 
+        .S(\cr_angle_s[3] ), .Y(), .FCO(\cr_angle_cry[3] ));
+    SLE \i[17]  (.D(N_464), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[17]_net_1 ));
+    CFG3 #( .INIT(8'h01) )  \state_ns_i_0_0_a2_4_1[3]  (.A(
+        \i[4]_net_1 ), .B(\i[0]_net_1 ), .C(\i[1]_net_1 ), .Y(
+        \state_ns_i_0_0_a2_4_1[3]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_6 (.A(VCC_net_1), .B(
+        un46_clk_6), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_5_net_1), .S(), .Y(), .FCO(un46_clk_cry_6_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_7 (.A(VCC_net_1), .B(
+        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_6_net_1), .S(un1_i_cry_7_S), .Y(), .FCO(
+        un1_i_cry_7_net_1));
+    ARI1 #( .INIT(20'h51BE4) )  \st_angle_RNIVKI98[1]  (.A(N_191_i_0), 
+        .B(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .C(
+        \st_angle[1]_net_1 ), .D(un46_clk_1), .FCI(\cr_angle_cry[0] ), 
+        .S(\cr_angle_s[1] ), .Y(), .FCO(\cr_angle_cry[1] ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_8 (.A(VCC_net_1), .B(
+        un46_clk_8), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_7_net_1), .S(), .Y(), .FCO(un46_clk_cry_8_net_1));
+    CFG4 #( .INIT(16'hBFFF) )  un38_clk_cry_30_RNILS9U (.A(dir_net_1), 
+        .B(FCCC_0_LOCK), .C(un38_clk_cry_30_net_1), .D(
+        \state[2]_net_1 ), .Y(N_191_i_0));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_4 (.A(VCC_net_1), .B(
+        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_3_net_1), .S(un1_i_cry_4_S), .Y(), .FCO(
+        un1_i_cry_4_net_1));
+    CFG2 #( .INIT(4'h8) )  fn_angle_0_sqmuxa (.A(FCCC_0_LOCK), .B(
+        \state[11]_net_1 ), .Y(fn_angle_0_sqmuxa_net_1));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_12 (.A(VCC_net_1), .B(
+        un46_clk_12), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_11_net_1), .S(), .Y(), .FCO(un38_clk_cry_12_net_1)
+        );
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNITKT411[14]  (.A(N_191_i_0)
+        , .B(un46_clk_14), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[13] ), .S(\cr_angle_s[14] ), .Y(), .FCO(
+        \cr_angle_cry[14] ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_21 (.A(VCC_net_1), .B(
+        un46_clk_21), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_20_net_1), .S(), .Y(), .FCO(un46_clk_cry_21_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[1]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_1_S), .C(N_446), .D(N_481), .Y(N_231));
+    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_2 (.A(un38_clk_2), .B(
+        un46_clk_2), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_1_net_1), .S(), .Y(), .FCO(un38_clk_cry_2_net_1));
+    SLE \i[9]  (.D(N_241), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
+    CFG4 #( .INIT(16'h8000) )  un1_state_8_0_0_a3_10 (.A(
+        un1_state_8_0_0_a3_10_2_net_1), .B(N_258), .C(N_59), .D(
+        un1_state_8_0_0_a3_10_3_net_1), .Y(N_449_9));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_8 (.A(VCC_net_1), .B(
+        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_7_net_1), .S(un31_clklto8), .Y(), .FCO(
+        un1_i_cry_8_net_1));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_30 (.A(VCC_net_1), .B(
+        un46_clk_30), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_29_net_1), .S(), .Y(), .FCO(un46_clk_cry_30_net_1)
+        );
+    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_3 (.A(un38_clk_3), .B(
+        un46_clk_3), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_2_net_1), .S(), .Y(), .FCO(un38_clk_cry_3_net_1));
+    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_a2_4[4]  (.A(\i[30]_net_1 ), 
+        .B(\i[27]_net_1 ), .C(\i[23]_net_1 ), .Y(
+        \state_ns_a2_0_a2_4[4]_net_1 ));
+    VCC VCC (.Y(VCC_net_1));
+    CFG4 #( .INIT(16'h070F) )  un46_clk_cry_30_RNIDVNA1 (.A(dir_net_1), 
+        .B(\state[2]_net_1 ), .C(\state[10]_net_1 ), .D(
+        un46_clk_cry_30_net_1), .Y(N_229));
+    SLE \cr_angle[10]  (.D(\cr_angle_s[10] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_10));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_12 (.A(VCC_net_1), .B(
+        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_11_net_1), .S(un1_i_cry_12_S), .Y(), .FCO(
+        un1_i_cry_12_net_1));
+    CFG4 #( .INIT(16'hF070) )  \state_ns_a2_0_0_a2_10[8]  (.A(
+        un1_i_cry_10_S), .B(un1_i_cry_9_S), .C(N_316), .D(N_482), .Y(
+        N_484));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[25]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_25_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[25]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_a2_5[4]  (.A(
+        \i[29]_net_1 ), .B(\i[28]_net_1 ), .C(\i[25]_net_1 ), .D(
+        \i[22]_net_1 ), .Y(\state_ns_a2_0_a2_5[4]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_15 (.A(VCC_net_1), .B(
+        un46_clk_15), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_14_net_1), .S(), .Y(), .FCO(un38_clk_cry_15_net_1)
+        );
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_24 (.A(VCC_net_1), .B(
+        un46_clk_24), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_23_net_1), .S(), .Y(), .FCO(un38_clk_cry_24_net_1)
+        );
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_17 (.A(VCC_net_1), .B(
+        un46_clk_17), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_16_net_1), .S(), .Y(), .FCO(un46_clk_cry_17_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_5 (.A(VCC_net_1), .B(
+        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_4_net_1), .S(un1_i_cry_5_S), .Y(), .FCO(
+        un1_i_cry_5_net_1));
+    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_0_a2_1[8]  (.A(
+        un1_i_cry_11_S), .B(un1_i_cry_12_S), .C(un1_i_cry_13_S), .Y(
+        N_316));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_a2_0_0_a2_0_5[8]  (.A(
+        pulse_meash_0_new_ready), .B(un1_i_cry_22_S), .C(
+        un1_i_cry_23_S), .D(un1_i_cry_24_S), .Y(
+        \state_ns_a2_0_0_a2_0_5[8]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_10 (.A(VCC_net_1), .B(
+        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_9_net_1), .S(un1_i_cry_10_S), .Y(), .FCO(
+        un1_i_cry_10_net_1));
+    CFG4 #( .INIT(16'hBFFF) )  un38_clk_cry_30_RNILS9U_0 (.A(dir_net_1)
+        , .B(FCCC_0_LOCK), .C(un38_clk_cry_30_net_1), .D(
+        \state[2]_net_1 ), .Y(N_191_i_0_0));
+    SLE \state[9]  (.D(\state[10]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[9]_net_1 ));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIMAN0K[5]  (.A(N_191_i_0), 
+        .B(un46_clk_5), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[4] ), .S(\cr_angle_s[5] ), .Y(), .FCO(
+        \cr_angle_cry[5] ));
+    SLE en_timer (.D(\state[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_244_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        locator_control_0_en_timer));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_7 (.A(VCC_net_1), .B(
+        un46_clk_7), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_6_net_1), .S(), .Y(), .FCO(un38_clk_cry_7_net_1));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_23 (.A(VCC_net_1), .B(
+        un46_clk_23), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_22_net_1), .S(), .Y(), .FCO(un38_clk_cry_23_net_1)
+        );
+    CFG3 #( .INIT(8'h04) )  \state_RNO[2]  (.A(N_452_1), .B(
+        \state[3]_net_1 ), .C(N_192), .Y(N_211_i_0));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_6 (.A(VCC_net_1), .B(
+        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_5_net_1), .S(un1_i_cry_6_S), .Y(), .FCO(
+        un1_i_cry_6_net_1));
+    SLE \cr_angle[11]  (.D(\cr_angle_s[11] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_11));
+    SLE \i[25]  (.D(\i_4_i_i_a3[25]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[25]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_1 (.A(VCC_net_1), .B(
+        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_s_1_322_FCO), .S(un1_i_cry_1_S), .Y(), .FCO(
+        un1_i_cry_1_net_1));
+    CFG4 #( .INIT(16'hFFEC) )  \state_ns[8]  (.A(\state[3]_net_1 ), .B(
+        \state[4]_net_1 ), .C(N_452_1), .D(N_192), .Y(
+        \state_ns[8]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[10]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_10_S), .C(N_446), .D(N_481), .Y(N_242));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI3D6O91[20]  (.A(N_191_i_0)
+        , .B(un46_clk_20), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[19] ), .S(\cr_angle_s[20] ), .Y(), .FCO(
+        \cr_angle_cry[20] ));
+    CFG4 #( .INIT(16'hFEFF) )  un1_state_8_0_0_a2_RNIMPV61 (.A(
+        \state[9]_net_1 ), .B(\state[0]_net_1 ), .C(\state[3]_net_1 ), 
+        .D(N_503), .Y(N_243_i_0));
+    CFG4 #( .INIT(16'h4CCC) )  \state_RNO[6]  (.A(N_449_5), .B(
+        \state[7]_net_1 ), .C(N_449_9), .D(un1_state_8_0_0_o2_net_1), 
+        .Y(N_204_i_0));
+    SLE \i[15]  (.D(N_462), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[15]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_26 (.A(VCC_net_1), .B(
+        un46_clk_26), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_25_net_1), .S(), .Y(), .FCO(un38_clk_cry_26_net_1)
+        );
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIS8BLM1[29]  (.A(N_191_i_0)
+        , .B(un46_clk_29), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[28] ), .S(\cr_angle_s[29] ), .Y(), .FCO(
+        \cr_angle_cry[29] ));
+    ARI1 #( .INIT(20'h5AA55) )  un46_clk_cry_2 (.A(un46_clk_2), .B(
+        \st_angle[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_1_net_1), .S(), .Y(), .FCO(un46_clk_cry_2_net_1));
+    SLE \cr_angle[13]  (.D(\cr_angle_s[13] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_13));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_22 (.A(VCC_net_1), .B(
+        un46_clk_22), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_21_net_1), .S(), .Y(), .FCO(un46_clk_cry_22_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[7]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_7_S), .C(N_446), .D(N_481), .Y(N_456));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_7 (.A(VCC_net_1), .B(
+        un46_clk_7), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_6_net_1), .S(), .Y(), .FCO(un46_clk_cry_7_net_1));
+    CFG3 #( .INIT(8'hF8) )  un1_cr_angle_1_sqmuxa_0_0 (.A(over_net_1), 
+        .B(\state[1]_net_1 ), .C(N_291), .Y(
+        un1_cr_angle_1_sqmuxa_0_0_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNINJ0HI[4]  (.A(N_191_i_0), 
+        .B(un46_clk_4), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[3] ), .S(\cr_angle_s[4] ), .Y(), .FCO(
+        \cr_angle_cry[4] ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_5 (.A(VCC_net_1), .B(
+        un46_clk_5), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_4_net_1), .S(), .Y(), .FCO(un38_clk_cry_5_net_1));
+    ARI1 #( .INIT(20'h5CCAA) )  un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83 
+        (.A(VCC_net_1), .B(N_191_i_0_0), .C(N_451_i_0), .D(GND_net_1), 
+        .FCI(cr_angle_lcry_cy), .S(), .Y(
+        un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .FCO(cr_angle));
+    CFG4 #( .INIT(16'h5554) )  \i_4_i_i_a3[0]  (.A(\i[0]_net_1 ), .B(
+        \state[3]_net_1 ), .C(N_446), .D(N_481), .Y(N_230));
+    SLE \i[22]  (.D(\i_4_i_i_a3[22]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[22]_net_1 ));
+    SLE \cr_angle[26]  (.D(\cr_angle_s[26] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_26));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_10 (.A(VCC_net_1), .B(
+        un46_clk_10), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_9_net_1), .S(), .Y(), .FCO(un46_clk_cry_10_net_1));
+    CFG4 #( .INIT(16'hC400) )  \state_ns_0_a3[11]  (.A(\i[21]_net_1 ), 
+        .B(\state[0]_net_1 ), .C(N_491), .D(N_258), .Y(N_481));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI0T59U[12]  (.A(N_191_i_0), 
+        .B(un46_clk_12), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[11] ), .S(\cr_angle_s[12] ), .Y(), .FCO(
+        \cr_angle_cry[12] ));
+    SLE \cr_angle[30]  (.D(\cr_angle_s[30] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_30));
+    SLE \cr_angle[25]  (.D(\cr_angle_s[25] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_25));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_4 (.A(VCC_net_1), .B(
+        un46_clk_4), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_3_net_1), .S(), .Y(), .FCO(un46_clk_cry_4_net_1));
+    CFG4 #( .INIT(16'h7F77) )  \state_ns_i_0_0_o2_4[3]  (.A(
+        \i[8]_net_1 ), .B(\i[7]_net_1 ), .C(\i[6]_net_1 ), .D(N_109), 
+        .Y(N_116));
+    CFG3 #( .INIT(8'h10) )  \state_ns_i_0_0_a2[3]  (.A(\i[20]_net_1 ), 
+        .B(\i[19]_net_1 ), .C(N_120), .Y(N_491));
+    CFG4 #( .INIT(16'hDFFF) )  un1_state_8_0_0_o2 (.A(\i[4]_net_1 ), 
+        .B(un1_state_8_0_0_o2_2_net_1), .C(\i[6]_net_1 ), .D(
+        \i[5]_net_1 ), .Y(un1_state_8_0_0_o2_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI01KBI1[26]  (.A(N_191_i_0)
+        , .B(un46_clk_26), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[25] ), .S(\cr_angle_s[26] ), .Y(), .FCO(
+        \cr_angle_cry[26] ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_28 (.A(VCC_net_1), .B(
+        un46_clk_28), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_27_net_1), .S(), .Y(), .FCO(un38_clk_cry_28_net_1)
+        );
+    SLE \i[2]  (.D(N_232), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
+    SLE \i[12]  (.D(N_459), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[12]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_15 (.A(VCC_net_1), .B(
+        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_14_net_1), .S(un1_i_cry_15_S), .Y(), .FCO(
+        un1_i_cry_15_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNINI9A81[19]  (.A(N_191_i_0)
+        , .B(un46_clk_19), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[18] ), .S(\cr_angle_s[19] ), .Y(), .FCO(
+        \cr_angle_cry[19] ));
+    SLE \state[8]  (.D(N_201_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[8]_net_1 ));
+    CFG2 #( .INIT(4'h1) )  un1_state_8_0_0_a2 (.A(\state[8]_net_1 ), 
+        .B(\state[7]_net_1 ), .Y(N_503));
+    CFG2 #( .INIT(4'hE) )  en_timer_RNO (.A(\state[4]_net_1 ), .B(
+        \state[6]_net_1 ), .Y(N_244_i_0));
+    SLE \cr_angle[9]  (.D(\cr_angle_s[9] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_9));
+    SLE \i[20]  (.D(N_467), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[20]_net_1 ));
+    SLE \i[30]  (.D(\i_4_i_i_a3[30]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[30]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_14 (.A(VCC_net_1), .B(
+        un46_clk_14), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_13_net_1), .S(), .Y(), .FCO(un46_clk_cry_14_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_9 (.A(VCC_net_1), .B(
+        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_8_net_1), .S(un1_i_cry_9_S), .Y(), .FCO(
+        un1_i_cry_9_net_1));
+    SLE \state[3]  (.D(\state_ns[8]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[3]_net_1 ));
+    SLE \fn_angle[2]  (.D(BT_module_0_data_buf[6]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        un38_clk_2));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_18 (.A(VCC_net_1), .B(
+        un46_clk_18), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_17_net_1), .S(), .Y(), .FCO(un46_clk_cry_18_net_1)
+        );
+    SLE over (.D(over_1_sqmuxa), .CLK(FCCC_0_GL0), .EN(
+        un1_angle_0_sqmuxa_0_0_net_1), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(over_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_18 (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_17_net_1), .S(un1_i_cry_18_S), .Y(), .FCO(
+        un1_i_cry_18_net_1));
+    SLE \i[10]  (.D(N_242), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[10]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  un1_state_8_0_0_a3_10_3 (.A(
+        \i[20]_net_1 ), .B(\i[19]_net_1 ), .C(\i[12]_net_1 ), .D(
+        \i[11]_net_1 ), .Y(un1_state_8_0_0_a3_10_3_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_14 (.A(VCC_net_1), .B(
+        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_13_net_1), .S(un1_i_cry_14_S), .Y(), .FCO(
+        un1_i_cry_14_net_1));
+    SLE \i[6]  (.D(N_455), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_29 (.A(VCC_net_1), .B(
+        un46_clk_29), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_28_net_1), .S(), .Y(), .FCO(un38_clk_cry_29_net_1)
+        );
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_11 (.A(VCC_net_1), .B(
+        un46_clk_11), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_10_net_1), .S(), .Y(), .FCO(un38_clk_cry_11_net_1)
+        );
+    SLE \i[29]  (.D(\i_4_i_i_a3[29]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[29]_net_1 ));
+    CFG2 #( .INIT(4'hE) )  \state_ns_0[4]  (.A(N_446), .B(
+        \state[8]_net_1 ), .Y(\state_ns[4] ));
+    SLE \fn_angle[3]  (.D(BT_module_0_data_buf[7]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        un38_clk_3));
+    SLE \st_angle[1]  (.D(BT_module_0_data_buf[1]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \st_angle[1]_net_1 ));
+    SLE \i[4]  (.D(N_234), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_27 (.A(VCC_net_1), .B(
+        un46_clk_27), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_26_net_1), .S(), .Y(), .FCO(un46_clk_cry_27_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_17 (.A(VCC_net_1), .B(
+        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_16_net_1), .S(un31_clklto17), .Y(), .FCO(
+        un1_i_cry_17_net_1));
+    ARI1 #( .INIT(20'h4FDDD) )  un1_cr_angle_1_sqmuxa_0_0_a2_RNIN8VQ1 
+        (.A(un38_clk_cry_30_net_1), .B(FCCC_0_LOCK), .C(N_229), .D(
+        N_291), .FCI(VCC_net_1), .S(), .Y(), .FCO(cr_angle_lcry_cy));
+    SLE \cr_angle[3]  (.D(\cr_angle_s[3] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_3));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_16 (.A(VCC_net_1), .B(
+        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_15_net_1), .S(un1_i_cry_16_S), .Y(), .FCO(
+        un1_i_cry_16_net_1));
+    CFG4 #( .INIT(16'h5755) )  \state_ns_i_0_0_o2_2[3]  (.A(
+        \i[13]_net_1 ), .B(\i[12]_net_1 ), .C(\i[11]_net_1 ), .D(N_117)
+        , .Y(N_118));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIPLRFO[8]  (.A(N_191_i_0), 
+        .B(un46_clk_8), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[7] ), .S(\cr_angle_s[8] ), .Y(), .FCO(
+        \cr_angle_cry[8] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_22 (.A(VCC_net_1), .B(
+        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_21_net_1), .S(un1_i_cry_22_S), .Y(), .FCO(
+        un1_i_cry_22_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIUGL041[16]  (.A(N_191_i_0)
+        , .B(un46_clk_16), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[15] ), .S(\cr_angle_s[16] ), .Y(), .FCO(
+        \cr_angle_cry[16] ));
+    SLE \i[19]  (.D(N_466), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[19]_net_1 ));
+    SLE \cr_angle[17]  (.D(\cr_angle_s[17] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_17));
+    SLE \st_angle[0]  (.D(BT_module_0_data_buf[0]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \st_angle[0]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[20]  (.A(\state[3]_net_1 ), 
+        .B(un31_clklto20), .C(N_446), .D(N_481), .Y(N_467));
+    SLE \cr_angle[12]  (.D(\cr_angle_s[12] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_12));
+    SLE \cr_angle[19]  (.D(\cr_angle_s[19] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_19));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_10 (.A(VCC_net_1), .B(
+        un46_clk_10), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_9_net_1), .S(), .Y(), .FCO(un38_clk_cry_10_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_20 (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_19_net_1), .S(un31_clklto20), .Y(), .FCO(
+        un1_i_cry_20_net_1));
+    CFG4 #( .INIT(16'h0080) )  \state_ns_a2_0_0_a3_0_7[8]  (.A(
+        \state[3]_net_1 ), .B(\i[0]_net_1 ), .C(
+        \state_ns_a2_0_0_a3_0_5[8]_net_1 ), .D(un31_clklto17), .Y(
+        \state_ns_a2_0_0_a3_0_7[8]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_s_1_322 (.A(VCC_net_1), .B(
+        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(VCC_net_1), 
+        .S(), .Y(), .FCO(un1_i_s_1_322_FCO));
+    SLE \angle1[0]  (.D(un46_clk_0), .CLK(FCCC_0_GL0), .EN(
+        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        locator_control_0_angle1[0]));
+    CFG2 #( .INIT(4'hE) )  \state_ns_0[11]  (.A(N_481), .B(N_234_0), 
+        .Y(\state_ns[11] ));
+    SLE \i[24]  (.D(\i_4_i_i_a3[24]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[24]_net_1 ));
+    SLE \cr_angle[5]  (.D(\cr_angle_s[5] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_5));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_2 (.A(VCC_net_1), .B(
+        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_1_net_1), .S(un1_i_cry_2_S), .Y(), .FCO(
+        un1_i_cry_2_net_1));
+    CFG4 #( .INIT(16'h0001) )  un1_state_8_0_0_a3_10_2 (.A(
+        \i[18]_net_1 ), .B(\i[13]_net_1 ), .C(\i[10]_net_1 ), .D(
+        \i[9]_net_1 ), .Y(un1_state_8_0_0_a3_10_2_net_1));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_15 (.A(VCC_net_1), .B(
+        un46_clk_15), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_14_net_1), .S(), .Y(), .FCO(un46_clk_cry_15_net_1)
+        );
+    SLE \cr_angle[24]  (.D(\cr_angle_s[24] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_24));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIM2EGL[6]  (.A(N_191_i_0), 
+        .B(un46_clk_6), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[5] ), .S(\cr_angle_s[6] ), .Y(), .FCO(
+        \cr_angle_cry[6] ));
+    CFG3 #( .INIT(8'hF8) )  un1_angle_0_sqmuxa_0_0 (.A(over_net_1), .B(
+        \state[1]_net_1 ), .C(over_1_sqmuxa), .Y(
+        un1_angle_0_sqmuxa_0_0_net_1));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_20 (.A(VCC_net_1), .B(
+        un46_clk_20), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_19_net_1), .S(), .Y(), .FCO(un46_clk_cry_20_net_1)
+        );
+    CFG4 #( .INIT(16'h1000) )  \state_ns_a2_0_a2[4]  (.A(\i[24]_net_1 )
+        , .B(\i[26]_net_1 ), .C(\state_ns_a2_0_a2_5[4]_net_1 ), .D(
+        \state_ns_a2_0_a2_4[4]_net_1 ), .Y(N_258));
+    CFG3 #( .INIT(8'h01) )  \state_ns_a2_0_a2_2[4]  (.A(\i[16]_net_1 ), 
+        .B(\i[15]_net_1 ), .C(\i[14]_net_1 ), .Y(N_59));
+    SLE \i[14]  (.D(N_461), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[14]_net_1 ));
+    SLE \angle1[3]  (.D(un46_clk_3), .CLK(FCCC_0_GL0), .EN(
+        \state[4]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        locator_control_0_angle1[3]));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_9 (.A(VCC_net_1), .B(
+        un46_clk_9), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_8_net_1), .S(), .Y(), .FCO(un38_clk_cry_9_net_1));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[12]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_12_S), .C(N_446), .D(N_481), .Y(N_459));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[17]  (.A(\state[3]_net_1 ), 
+        .B(un31_clklto17), .C(N_446), .D(N_481), .Y(N_464));
+    SLE \fn_angle[0]  (.D(BT_module_0_data_buf[4]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        un38_clk_0));
+    SLE \state[2]  (.D(N_211_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[2]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[11]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_11_S), .C(N_446), .D(N_481), .Y(N_458));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_3 (.A(VCC_net_1), .B(
+        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_2_net_1), .S(un1_i_cry_3_S), .Y(), .FCO(
+        un1_i_cry_3_net_1));
+    SLE en_sonar (.D(\state[8]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_state_8_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(TRIG_c));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_27 (.A(VCC_net_1), .B(
+        un46_clk_27), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_26_net_1), .S(), .Y(), .FCO(un38_clk_cry_27_net_1)
+        );
+    SLE \state[1]  (.D(\state[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
+    SLE \cr_angle[28]  (.D(\cr_angle_s[28] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_28));
+    CFG2 #( .INIT(4'h1) )  un1_state_8_0_0_a3_5 (.A(\i[21]_net_1 ), .B(
+        \i[17]_net_1 ), .Y(N_449_5));
+    SLE \i[5]  (.D(N_235), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
+    SLE \i[8]  (.D(N_457), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_24 (.A(VCC_net_1), .B(
+        un46_clk_24), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_23_net_1), .S(), .Y(), .FCO(un46_clk_cry_24_net_1)
+        );
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_19 (.A(VCC_net_1), .B(
+        un46_clk_19), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_18_net_1), .S(), .Y(), .FCO(un46_clk_cry_19_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[6]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_6_S), .C(N_446), .D(N_481), .Y(N_455));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIGGHE51[17]  (.A(N_191_i_0)
+        , .B(un46_clk_17), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[16] ), .S(\cr_angle_s[17] ), .Y(), .FCO(
+        \cr_angle_cry[17] ));
+    CFG4 #( .INIT(16'h08CC) )  \state_RNO[8]  (.A(\i[21]_net_1 ), .B(
+        \state[0]_net_1 ), .C(N_491), .D(N_258), .Y(N_201_i_0));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_22 (.A(VCC_net_1), .B(
+        un46_clk_22), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_21_net_1), .S(), .Y(), .FCO(un38_clk_cry_22_net_1)
+        );
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_28 (.A(VCC_net_1), .B(
+        un46_clk_28), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_27_net_1), .S(), .Y(), .FCO(un46_clk_cry_28_net_1)
+        );
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_8 (.A(VCC_net_1), .B(
+        un46_clk_8), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_7_net_1), .S(), .Y(), .FCO(un38_clk_cry_8_net_1));
+    SLE \cr_angle[7]  (.D(\cr_angle_s[7] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_7));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_25 (.A(VCC_net_1), .B(
+        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_24_net_1), .S(un1_i_cry_25_S), .Y(), .FCO(
+        un1_i_cry_25_net_1));
+    ARI1 #( .INIT(20'h5AA55) )  un38_clk_cry_1 (.A(un38_clk_1), .B(
+        un46_clk_1), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_0_net_1), .S(), .Y(), .FCO(un38_clk_cry_1_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNID2T1E1[23]  (.A(N_191_i_0)
+        , .B(un46_clk_23), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[22] ), .S(\cr_angle_s[23] ), .Y(), .FCO(
+        \cr_angle_cry[23] ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_16 (.A(VCC_net_1), .B(
+        un46_clk_16), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_15_net_1), .S(), .Y(), .FCO(un46_clk_cry_16_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[16]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_16_S), .C(N_446), .D(N_481), .Y(N_463));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[9]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_9_S), .C(N_446), .D(N_481), .Y(N_241));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIJ2HPJ1[27]  (.A(N_191_i_0)
+        , .B(un46_clk_27), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[26] ), .S(\cr_angle_s[27] ), .Y(), .FCO(
+        \cr_angle_cry[27] ));
+    SLE \st_angle[3]  (.D(BT_module_0_data_buf[3]), .CLK(FCCC_0_GL0), 
+        .EN(fn_angle_0_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \st_angle[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_13 (.A(VCC_net_1), .B(
+        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_12_net_1), .S(un1_i_cry_13_S), .Y(), .FCO(
+        un1_i_cry_13_net_1));
+    SLE \state[11]  (.D(N_195_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[11]_net_1 ));
+    CFG4 #( .INIT(16'h777F) )  un1_state_8_0_0_o2_2 (.A(\i[8]_net_1 ), 
+        .B(\i[7]_net_1 ), .C(\i[3]_net_1 ), .D(\i[2]_net_1 ), .Y(
+        un1_state_8_0_0_o2_2_net_1));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_6 (.A(VCC_net_1), .B(
+        un46_clk_6), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_5_net_1), .S(), .Y(), .FCO(un38_clk_cry_6_net_1));
+    SLE \i[3]  (.D(N_233), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_28 (.A(VCC_net_1), .B(
+        \i[28]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_27_net_1), .S(un1_i_cry_28_S), .Y(), .FCO(
+        un1_i_cry_28_net_1));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIJ2ARS[11]  (.A(N_191_i_0), 
+        .B(un46_clk_11), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[10] ), .S(\cr_angle_s[11] ), .Y(), .FCO(
+        \cr_angle_cry[11] ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_5 (.A(VCC_net_1), .B(
+        un46_clk_5), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_4_net_1), .S(), .Y(), .FCO(un46_clk_cry_5_net_1));
+    CFG4 #( .INIT(16'h7500) )  \state_ns_i_0_0_a3[9]  (.A(
+        un31_clklto21), .B(un31_clklto20), .C(N_114), .D(N_311), .Y(
+        N_452_1));
+    CFG4 #( .INIT(16'h8000) )  \state_ns_a2_0_0_a3_0[8]  (.A(
+        \state_ns_a2_0_0_a3_0_7[8]_net_1 ), .B(N_311), .C(N_316), .D(
+        \state_ns_a2_0_0_a3_0_6[8]_net_1 ), .Y(N_192));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNINR40N[7]  (.A(N_191_i_0), 
+        .B(un46_clk_7), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), .FCI(
+        \cr_angle_cry[6] ), .S(\cr_angle_s[7] ), .Y(), .FCO(
+        \cr_angle_cry[7] ));
+    SLE \cr_angle[4]  (.D(\cr_angle_s[4] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_4));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_24 (.A(VCC_net_1), .B(
+        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_23_net_1), .S(un1_i_cry_24_S), .Y(), .FCO(
+        un1_i_cry_24_net_1));
+    ARI1 #( .INIT(20'h51BE4) )  \st_angle_RNIB8ELC[2]  (.A(N_191_i_0), 
+        .B(un1_cr_angle_1_sqmuxa_0_0_a2_RNI1LN83_Y), .C(
+        \st_angle[2]_net_1 ), .D(un46_clk_2), .FCI(\cr_angle_cry[1] ), 
+        .S(\cr_angle_s[2] ), .Y(), .FCO(\cr_angle_cry[2] ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_25 (.A(VCC_net_1), .B(
+        un46_clk_25), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_24_net_1), .S(), .Y(), .FCO(un38_clk_cry_25_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_11 (.A(VCC_net_1), .B(
+        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_10_net_1), .S(un1_i_cry_11_S), .Y(), .FCO(
+        un1_i_cry_11_net_1));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_14 (.A(VCC_net_1), .B(
+        un46_clk_14), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_13_net_1), .S(), .Y(), .FCO(un38_clk_cry_14_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_27 (.A(VCC_net_1), .B(
+        \i[27]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_26_net_1), .S(un1_i_cry_27_S), .Y(), .FCO(
+        un1_i_cry_27_net_1));
+    CFG4 #( .INIT(16'hB8F0) )  \st_angle_RNI7D8K[0]  (.A(
+        \st_angle[0]_net_1 ), .B(FCCC_0_LOCK), .C(un46_clk_0), .D(
+        \state[10]_net_1 ), .Y(\cr_angle_lxu;_0[0] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_26 (.A(VCC_net_1), .B(
+        \i[26]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_25_net_1), .S(un1_i_cry_26_S), .Y(), .FCO(
+        un1_i_cry_26_net_1));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[13]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_13_S), .C(N_446), .D(N_481), .Y(N_460));
+    SLE \i[1]  (.D(N_231), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[3]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_3_S), .C(N_446), .D(N_481), .Y(N_233));
+    SLE \cr_angle[0]  (.D(\cr_angle_s[0] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_0));
+    SLE \cr_angle[20]  (.D(\cr_angle_s[20] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_20));
+    SLE \i[28]  (.D(\i_4_i_i_a3[28]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[28]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_13 (.A(VCC_net_1), .B(
+        un46_clk_13), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_12_net_1), .S(), .Y(), .FCO(un38_clk_cry_13_net_1)
+        );
+    CFG4 #( .INIT(16'h5DFF) )  \state_ns_a2_0_0_o2_0[8]  (.A(
+        un1_i_cry_19_S), .B(N_112), .C(un31_clklto17), .D(
+        un1_i_cry_18_S), .Y(N_114));
+    CFG2 #( .INIT(4'h6) )  \cr_angle_qxu[0]  (.A(N_191_i_0), .B(
+        \cr_angle_lxu;[0] ), .Y(\cr_angle_qxu[0]_net_1 ));
+    CFG4 #( .INIT(16'h1000) )  \state_ns_a2_0_0_a2_0[8]  (.A(
+        un1_i_cry_29_S), .B(un1_i_s_30_S), .C(
+        \state_ns_a2_0_0_a2_0_5[8]_net_1 ), .D(
+        \state_ns_a2_0_0_a2_0_6[8]_net_1 ), .Y(N_311));
+    SLE \cr_angle[16]  (.D(\cr_angle_s[16] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_16));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_25 (.A(VCC_net_1), .B(
+        un46_clk_25), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_24_net_1), .S(), .Y(), .FCO(un46_clk_cry_25_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[4]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_4_S), .C(N_446), .D(N_481), .Y(N_234));
+    SLE \cr_angle[15]  (.D(\cr_angle_s[15] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_15));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_19 (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_18_net_1), .S(un1_i_cry_19_S), .Y(), .FCO(
+        un1_i_cry_19_net_1));
+    CFG3 #( .INIT(8'h13) )  \state_ns_a2_0_0_a2_13[8]  (.A(
+        un1_i_cry_7_S), .B(un31_clklto8), .C(un1_i_cry_6_S), .Y(N_482));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[22]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_22_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[22]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[27]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_27_S), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[27]_net_1 ));
+    SLE \i[18]  (.D(N_465), .CLK(FCCC_0_GL0), .EN(N_243_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[18]_net_1 ));
+    SLE \cr_angle[1]  (.D(\cr_angle_s[1] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(un46_clk_1));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[21]  (.A(\state[3]_net_1 ), 
+        .B(un31_clklto21), .C(N_446), .D(N_481), .Y(
+        \i_4_i_i_a3[21]_net_1 ));
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[14]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_14_S), .C(N_446), .D(N_481), .Y(N_461));
+    ARI1 #( .INIT(20'h45500) )  un38_clk_cry_16 (.A(VCC_net_1), .B(
+        un46_clk_16), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un38_clk_cry_15_net_1), .S(), .Y(), .FCO(un38_clk_cry_16_net_1)
+        );
+    CFG4 #( .INIT(16'hCCC8) )  \i_4_i_i_a3[19]  (.A(\state[3]_net_1 ), 
+        .B(un1_i_cry_19_S), .C(N_446), .D(N_481), .Y(N_466));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNI3HDS61[18]  (.A(N_191_i_0)
+        , .B(un46_clk_18), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[17] ), .S(\cr_angle_s[18] ), .Y(), .FCO(
+        \cr_angle_cry[18] ));
+    ARI1 #( .INIT(20'h65500) )  un46_clk_cry_13 (.A(VCC_net_1), .B(
+        un46_clk_13), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un46_clk_cry_12_net_1), .S(), .Y(), .FCO(un46_clk_cry_13_net_1)
+        );
+    CFG3 #( .INIT(8'h08) )  un1_angle_0_sqmuxa_0_0_a3_0 (.A(dir_net_1), 
+        .B(\state[2]_net_1 ), .C(un46_clk_cry_30_net_1), .Y(
+        over_1_sqmuxa));
+    ARI1 #( .INIT(20'h5D52A) )  \cr_angle_RNIT0QFF1[24]  (.A(N_191_i_0)
+        , .B(un46_clk_24), .C(FCCC_0_LOCK), .D(\state[10]_net_1 ), 
+        .FCI(\cr_angle_cry[23] ), .S(\cr_angle_s[24] ), .Y(), .FCO(
+        \cr_angle_cry[24] ));
+    SLE \i[26]  (.D(\i_4_i_i_a3[26]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_243_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\i[26]_net_1 ));
+    
+endmodule
+
+
+module time_sender(
+       locator_control_0_angle1,
+       pulse_meash_0_tim,
+       time_sender_0_data_out_0,
+       time_sender_0_data_out_1,
+       time_sender_0_data_out_2,
+       time_sender_0_data_out_3,
+       time_sender_0_data_out_5,
+       LED_3_c,
+       LED_3_c_i_0,
+       FCCC_0_GL0,
+       FCCC_0_LOCK,
+       pulse_meash_0_new_ready,
+       COREUART_0_TXRDY
+    );
+input  [3:0] locator_control_0_angle1;
+input  [13:0] pulse_meash_0_tim;
+output time_sender_0_data_out_0;
+output time_sender_0_data_out_1;
+output time_sender_0_data_out_2;
+output time_sender_0_data_out_3;
+output time_sender_0_data_out_5;
+output LED_3_c;
+output LED_3_c_i_0;
+input  FCCC_0_GL0;
+input  FCCC_0_LOCK;
+input  pulse_meash_0_new_ready;
+input  COREUART_0_TXRDY;
+
+    wire \valu[6]_net_1 , VCC_net_1, \un1_time1[6]_net_1 , 
+        un1_rst_n_inv_i_a3_net_1, GND_net_1, \valu[7]_net_1 , 
+        \un1_time1[7]_net_1 , \valu[8]_net_1 , \un1_time1[8]_net_1 , 
+        \valu[9]_net_1 , \un1_time1[9]_net_1 , \valu[10]_net_1 , 
+        \un1_time1[10]_net_1 , \valu[11]_net_1 , \valu_RNO[11]_net_1 , 
+        \valu[12]_net_1 , \valu_RNO[12]_net_1 , \valu[13]_net_1 , 
+        \un1_time1[13]_net_1 , \data_out_1[0] , data_out_0_sqmuxa, 
+        \data_out_1[1] , \data_out_1[2] , \data_out_1[3] , 
+        \data_out_1[5] , \valu[0]_net_1 , \un1_time1[0]_net_1 , 
+        \valu[1]_net_1 , \un1_time1[1]_net_1 , \valu[2]_net_1 , 
+        \un1_time1[2]_net_1 , \valu[3]_net_1 , \un1_time1[3]_net_1 , 
+        \valu[4]_net_1 , \un1_time1[4]_net_1 , \valu[5]_net_1 , 
+        \un1_time1[5]_net_1 , \k[0]_net_1 , N_87_i_0, \k[1]_net_1 , 
+        \un24_k_v[0]_net_1 , \k[2]_net_1 , \un24_k_v[1]_net_1 , 
+        \k[3]_net_1 , \SUM[3] , \k[5] , \buff_1[0]_net_1 , 
+        \un1_angle[0]_net_1 , un1_rst_n_inv_2_i_0_net_1, 
+        \buff_1[1]_net_1 , \un1_angle[1]_net_1 , \buff_1[2]_net_1 , 
+        \un1_angle[2]_net_1 , \buff_1[3]_net_1 , \un1_angle[3]_net_1 , 
+        \buff_1[5] , \un1_angle[4]_net_1 , \buff_3[1]_net_1 , 
+        buff_3_1_sqmuxa_net_1, \buff_3[2]_net_1 , \buff_3[3]_net_1 , 
+        \buff_3[5] , \buff_2[0]_net_1 , buff_2_1_sqmuxa_1_net_1, 
+        \buff_2[1]_net_1 , \buff_2[2]_net_1 , \buff_2[3]_net_1 , 
+        \buff_2[5] , \buff_5[2]_net_1 , buff_5_1_sqmuxa_net_1, 
+        \buff_5[3]_net_1 , \buff_5[5] , \buff_4[0]_net_1 , 
+        buff_4_1_sqmuxa_net_1, \buff_4[1]_net_1 , \buff_4[2]_net_1 , 
+        \buff_4[3]_net_1 , \buff_4[5] , \buff_3[0]_net_1 , 
+        \buff_5[0]_net_1 , \buff_5[1]_net_1 , \buff_0[5] , 
+        buff_0_1_sqmuxa, N_139_i_0, N_445_i_0, \buff_0[0]_net_1 , 
+        \buff_0[1]_net_1 , \buff_0[2]_net_1 , \buff_0[3]_net_1 , 
+        \state[6]_net_1 , \state_ns[0] , \state[5]_net_1 , N_85_i_0, 
+        \state[4]_net_1 , \state[3]_net_1 , N_10_i_0, \state[2]_net_1 , 
+        N_431_i_0, \state[1]_net_1 , N_84_tz_i, \state[0]_net_1 , 
+        \state_ns[6] , \i[0]_net_1 , \i_lm[0] , N_84_i_0, \i[1]_net_1 , 
+        \i_lm[1] , \i[2]_net_1 , \i_lm[2] , \i[3]_net_1 , \i_lm[3] , 
+        \i[4]_net_1 , \i_lm[4] , \i[5]_net_1 , \i_lm[5] , \i[6]_net_1 , 
+        \i_lm[6] , \i[7]_net_1 , \i_lm[7] , \i[8]_net_1 , \i_lm[8] , 
+        \i[9]_net_1 , \i_lm[9] , \i[10]_net_1 , \i_lm[10] , 
+        \i[11]_net_1 , \i_lm[11] , \i[12]_net_1 , \i_lm[12] , 
+        \i[13]_net_1 , \i_lm[13] , \i[14]_net_1 , \i_lm[14] , 
+        \i[15]_net_1 , \i_lm[15] , \i[16]_net_1 , \i_lm[16] , 
+        \i[17]_net_1 , \i_lm[17] , \i[18]_net_1 , \i_lm[18] , 
+        \i[19]_net_1 , \i_lm[19] , \i[20]_net_1 , \i_lm[20] , 
+        \i[21]_net_1 , \i_lm[21] , \i[22]_net_1 , \i_lm[22] , 
+        \i[23]_net_1 , \i_lm[23] , \i[24]_net_1 , \i_lm[24] , 
+        \i[25]_net_1 , \i_lm[25] , \i_cry[0]_net_1 , \i_cry_Y_0[0] , 
+        \i_cry[1]_net_1 , \i_s[1] , \i_cry[2]_net_1 , \i_s[2] , 
+        \i_cry[3]_net_1 , \i_s[3] , \i_cry[4]_net_1 , \i_s[4] , 
+        \i_cry[5]_net_1 , \i_s[5] , \i_cry[6]_net_1 , \i_s[6] , 
+        \i_cry[7]_net_1 , \i_s[7] , \i_cry[8]_net_1 , \i_s[8] , 
+        \i_cry[9]_net_1 , \i_s[9] , \i_cry[10]_net_1 , \i_s[10] , 
+        \i_cry[11]_net_1 , \i_s[11] , \i_cry[12]_net_1 , \i_s[12] , 
+        \i_cry[13]_net_1 , \i_s[13] , \i_cry[14]_net_1 , \i_s[14] , 
+        \i_cry[15]_net_1 , \i_s[15] , \i_cry[16]_net_1 , \i_s[16] , 
+        \i_cry[17]_net_1 , \i_s[17] , \i_cry[18]_net_1 , \i_s[18] , 
+        \i_cry[19]_net_1 , \i_s[19] , \i_cry[20]_net_1 , \i_s[20] , 
+        \i_cry[21]_net_1 , \i_s[21] , \i_cry[22]_net_1 , \i_s[22] , 
+        \i_cry[23]_net_1 , \i_s[23] , \i_s[25]_net_1 , 
+        \i_cry[24]_net_1 , \i_s[24] , un1_i_s_1_323_FCO, 
+        un1_i_cry_1_net_1, un15_clklto1, un1_i_cry_2_net_1, 
+        un15_clklto2, un1_i_cry_3_net_1, un1_i_cry_3_S_0, 
+        un1_i_cry_4_net_1, un1_i_cry_4_S_0, un1_i_cry_5_net_1, 
+        un1_i_cry_5_S_0, un1_i_cry_6_net_1, un1_i_cry_6_S_0, 
+        un1_i_cry_7_net_1, un1_i_cry_7_S_0, un1_i_cry_8_net_1, 
+        un1_i_cry_8_S, un1_i_cry_9_net_1, un1_i_cry_9_S_0, 
+        un1_i_cry_10_net_1, un1_i_cry_10_S_0, un1_i_cry_11_net_1, 
+        un1_i_cry_11_S_0, un1_i_cry_12_net_1, un1_i_cry_12_S_0, 
+        un1_i_cry_13_net_1, un1_i_cry_13_S_0, un1_i_cry_14_net_1, 
+        un1_i_cry_14_S_0, un1_i_cry_15_net_1, un1_i_cry_15_S_0, 
+        un1_i_cry_16_net_1, un1_i_cry_16_S_0, un1_i_cry_17_net_1, 
+        un1_i_cry_17_S, un1_i_cry_18_net_1, un1_i_cry_18_S_0, 
+        un1_i_cry_19_net_1, un1_i_cry_19_S_0, un1_i_cry_20_net_1, 
+        un1_i_cry_20_S, un1_i_cry_21_net_1, un1_i_cry_21_S, 
+        un1_i_cry_22_net_1, un1_i_cry_22_S_0, un1_i_cry_23_net_1, 
+        un1_i_cry_23_S_0, un1_i_cry_24_net_1, un1_i_cry_24_S_0, 
+        un1_i_cry_25_net_1, un1_i_cry_25_S_0, 
+        \mult1_un215_sum_1_SUM[4] , mult1_un222_sum_1_CO1, 
+        \mult1_un215_sum_1_SUM[1] , \mult1_un215_sum_1_SUM[2] , 
+        mult1_un222_sum_1_CO3, \un1_clk_inv_i_0_o3[0]_net_1 , 
+        un1_N_3_mux, \valu_RNICB5V[13]_net_1 , N_91, 
+        \state_ns_i_a2[3]_net_1 , N_96, \mult1_un166_sum_1_SUM[2] , 
+        mult1_un166_sum_1_CO3, un1_N_13_mux, un1_i4_mux, N_3560_i, 
+        \mult1_un194_sum_1_SUM[2] , un1_m7_i_0_1, un1_N_8, un1_m7_i_0, 
+        mult1_un201_sum_1_CO2_0_tz, mult1_un201_sum_1_ANC2, 
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42, un1_m9_1, 
+        mult1_un187_sum_1_CO3_1_RNIDREF, \mult1_un194_sum_1_SUM_1[4] , 
+        mult1_un194_sum_1_CO3_0_tz, \mult1_un187_sum_1_SUM[2] , 
+        d_m2_3_0, \mult1_un187_sum_1_SUM[1] , 
+        mult1_un194_sum_1_ANC3_0_1_1, \mult1_un187_sum_1_SUM[4] , 
+        mult1_un194_sum_1_ANC3_0_1, mult1_un194_sum_1_CO3_0_tz_0_1, 
+        mult1_un194_sum_1_CO3_0_tz_0_RNO, \mult1_un180_sum_1_SUM[1] , 
+        mult1_un194_sum_1_CO3_0_tz_0_1_RNO, \mult1_un180_sum_1_SUM[4] , 
+        \mult1_un180_sum_1_SUM[2] , un1_m8_1_1, 
+        \mult1_un159_sum_1_SUM[4] , \mult1_un159_sum_1_SUM[1] , 
+        \mult1_un159_sum_1_SUM[2] , un1_m8_1, 
+        \data_out_1_5_am_1_1[4]_net_1 , \data_out_1_5_am[4]_net_1 , 
+        \data_out_1_5_am_1_1[3]_net_1 , \data_out_1_5_am[3]_net_1 , 
+        \data_out_1_5_am_1_1[2]_net_1 , \data_out_1_5_am[2]_net_1 , 
+        \data_out_1_5_am_1_1[1]_net_1 , \data_out_1_5_am[1]_net_1 , 
+        \data_out_1_5_am_1_1[0]_net_1 , \data_out_1_5_am[0]_net_1 , 
+        \valu_RNINMIF[13]_net_1 , \valu_RNI32OE1[13]_net_1 , 
+        \mult1_un159_sum_1_SUM_2_1[4] , \data_out_1_5_bm[4]_net_1 , 
+        \data_out_1_5_bm[3]_net_1 , \data_out_1_5_bm[2]_net_1 , 
+        \data_out_1_5_bm[1]_net_1 , \data_out_1_5_bm[0]_net_1 , 
+        \valu_RNILKIF_0[11]_net_1 , \mult1_un201_sum_1_SUM_1[1] , 
+        un1_N_5_i_2, mult1_un194_sum_1_CO2, 
+        \mult1_un201_sum_1_SUM_2[4] , \mult1_un173_sum_1_SUM[2] , 
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] , mult1_un180_sum_1_CO3_1, 
+        d_m12_0_a3_0, d_N_4_1, N_89, N_90, buff_2_1_sqmuxa_net_1, 
+        \state_ns_i_a2_17[3]_net_1 , \state_ns_i_a2_16[3]_net_1 , 
+        \state_ns_i_a2_15[3]_net_1 , \state_ns_i_a2_14[3]_net_1 , 
+        \state_ns_i_a2_13[3]_net_1 , \state_ns_i_a2_12[3]_net_1 , 
+        \state_ns_i_0_a2_16[5]_net_1 , \state_ns_i_0_a2_15[5]_net_1 , 
+        \state_ns_i_0_a2_14[5]_net_1 , \state_ns_i_0_a2_13[5]_net_1 , 
+        \state_ns_i_0_a2_12[5]_net_1 , \state_ns_0_a3_3[0]_net_1 , 
+        \state_ns_i_0_a2_17[5]_net_1 , N_104, 
+        \state_ns_i_a2_21[3]_net_1 , \state_ns_i_0_a2_21[5]_net_1 , 
+        \state_ns_i_0_a2_20[5]_net_1 , N_93, N_144, N_95, un1_m5_i_0, 
+        mult1_un159_sum_1_CO3, mult1_un159_sum_1_CO3_1_RNI1HJB3, 
+        un1_N_5_i_1, \mult1_un166_sum_1_SUM[1] , un1_N_5_1, 
+        \mult1_un159_sum_1_SUM_RNIM44K4[4] , mult1_un173_sum_1_CO1_0, 
+        \mult1_un166_sum_1_SUM[4] , \mult1_un173_sum_1_SUM[1] , 
+        mult1_un180_sum_1_CO3_2_0, un1_m2_5_0, un1_i3_mux_0_0_i, 
+        mult1_un180_sum_1_CO3_a4, \mult1_un180_sum_1_SUM_0[3] , 
+        mult1_un180_sum_1_CO3_0_0, mult1_un173_sum_1_CO2, 
+        \mult1_un180_sum_1_SUM_2[4] , un1_i1_mux, 
+        mult1_un180_sum_1_CO2, mult1_un187_sum_1_CO3_1_RNO, 
+        \mult1_un187_sum_1_SUM_0[4] , mult1_un187_sum_1_CO2, 
+        un1_m4_1_1, mult1_un187_sum_1_CO3_0, d_N_12_0, d_m1_2_0, 
+        d_i5_mux, d_N_2_0, un1_N_7_0, un1_m8_i_0, 
+        \mult1_un194_sum_1_SUM[1] , d_N_10, d_N_19, d_N_11_mux_0, 
+        un1_N_7_mux_0, d_N_11_mux, d_N_13_mux, 
+        mult1_un201_sum_1_CO3_0_tz_s_0_RNO, 
+        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK, d_N_20, un1_i6_mux, 
+        mult1_un201_sum_1_CO2_0_d_0_RNO_0, 
+        mult1_un201_sum_1_ANC3_0_RNO_0, un1_N_10_mux, d_i6_mux_1, 
+        mult1_un215_sum_1_CO3_0_RNO_3, mult1_un201_sum_1_CO2_0_d, 
+        mult1_un201_sum_1_ANC3, mult1_un201_sum_1_CO3_0_tz_s_0, 
+        mult1_un201_sum_1_CO1, mult1_un201_sum_1_CO3_0_d, 
+        \mult1_un201_sum_1_SUM[2] , mult1_un201_sum_1_CO3_0_c, 
+        mult1_un201_sum_1_CO3_0_0_1, un1_i3_mux_0, 
+        mult1_un201_sum_1_CO3, \mult1_un201_sum_1_SUM[4] , 
+        mult1_un201_sum_1_CO3_0_c_RNI45FP3, un1_N_5_mux, 
+        \mult1_un215_sum_1_SUM_0_0[4] , un1_m6_1_0, un1_m7_3_0, 
+        \mult1_un208_sum_1_SUM[1] , un1_N_7_i, mult1_un208_sum_1_CO2, 
+        un1_i5_mux_0, un1_i2_mux, mult1_un215_sum_1_ANC3_0_RNO_0, 
+        mult1_un215_sum_1_CO3_0_RNO, \mult1_un215_sum_1_SUM_0[3] , 
+        \mult1_un194_sum_1_SUM_RNIMGHHA[2] , mult1_un215_sum_1_ANC3, 
+        \mult1_un215_sum_1_SUM_1[3] , \mult1_un215_sum_1_SUM_0[4] , 
+        mult1_un215_sum_1_CO3_0, mult1_un215_sum_1_CO3, 
+        mult1_un215_sum_1_CO1, \un24_k_v_1[1]_net_1 , \SUM_1[3] , 
+        mult1_un215_sum_1_CO2, \mult1_un215_sum_1_SUM[3] , 
+        \mult1_un222_sum_1_SUM_0[4] , ANC2_m3, CO2;
+    
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_13[5]  (.A(
+        \i[18]_net_1 ), .B(\i[9]_net_1 ), .C(\i[8]_net_1 ), .D(
+        \i[5]_net_1 ), .Y(\state_ns_i_0_a2_13[5]_net_1 ));
+    CFG2 #( .INIT(4'h9) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO  (
+        .A(mult1_un194_sum_1_CO3_0_tz), .B(
+        \mult1_un194_sum_1_SUM_1[4] ), .Y(
+        mult1_un201_sum_1_CO3_0_tz_s_0_RNO));
+    SLE \state[0]  (.D(\state_ns[6] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
+        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
+    CFG4 #( .INIT(16'h0026) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_3  
+        (.A(\valu[6]_net_1 ), .B(\mult1_un187_sum_1_SUM[1] ), .C(
+        \mult1_un187_sum_1_SUM[2] ), .D(\mult1_un187_sum_1_SUM[4] ), 
+        .Y(un1_i6_mux));
+    SLE \valu[10]  (.D(\un1_time1[10]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[10]_net_1 ));
+    CFG4 #( .INIT(16'hC6CC) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM[4]  (.A(
+        mult1_un180_sum_1_CO3_1), .B(\mult1_un180_sum_1_SUM_2[4] ), .C(
+        mult1_un180_sum_1_CO3_a4), .D(mult1_un180_sum_1_CO3_0_0), .Y(
+        \mult1_un180_sum_1_SUM[4] ));
+    CFG2 #( .INIT(4'h9) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM[1]  (.A(
+        \mult1_un187_sum_1_SUM[4] ), .B(d_N_4_1), .Y(
+        \mult1_un194_sum_1_SUM[1] ));
+    SLE \i[7]  (.D(\i_lm[7] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
+    CFG3 #( .INIT(8'h31) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_ANC3_0_1_1  (.A(
+        \valu[5]_net_1 ), .B(\mult1_un187_sum_1_SUM[1] ), .C(
+        \valu[6]_net_1 ), .Y(mult1_un194_sum_1_ANC3_0_1_1));
+    SLE \i[16]  (.D(\i_lm[16] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[16]_net_1 ));
+    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[0]  (.A(
+        \buff_5[0]_net_1 ), .B(\buff_4[0]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\data_out_1_5_am_1_1[0]_net_1 ), .Y(
+        \data_out_1_5_am[0]_net_1 ));
+    CFG2 #( .INIT(4'hE) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3  (.A(
+        mult1_un215_sum_1_CO3_0), .B(mult1_un215_sum_1_ANC3), .Y(
+        mult1_un215_sum_1_CO3));
+    CFG4 #( .INIT(16'h2000) )  buff_5_1_sqmuxa (.A(\i[2]_net_1 ), .B(
+        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
+        buff_5_1_sqmuxa_net_1));
+    CFG4 #( .INIT(16'h9669) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[1]  (.A(
+        \valu[3]_net_1 ), .B(\valu[2]_net_1 ), .C(un1_i2_mux), .D(
+        un1_m6_1_0), .Y(\mult1_un215_sum_1_SUM[1] ));
+    CFG4 #( .INIT(16'hF0E4) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0  (.A(
+        un1_N_7_i), .B(\valu[2]_net_1 ), .C(
+        mult1_un215_sum_1_ANC3_0_RNO_0), .D(un1_m7_i_0), .Y(
+        mult1_un215_sum_1_ANC3));
+    CFG4 #( .INIT(16'h0004) )  \state_ns_i_0_a2_20[5]  (.A(
+        \i[0]_net_1 ), .B(\state_ns_i_0_a2_17[5]_net_1 ), .C(
+        \i[1]_net_1 ), .D(\i[2]_net_1 ), .Y(
+        \state_ns_i_0_a2_20[5]_net_1 ));
+    CFG4 #( .INIT(16'h1000) )  un1_rst_n_inv_2_i_a3_0 (.A(\i[2]_net_1 )
+        , .B(\i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 )
+        , .Y(N_104));
+    SLE \buff_0[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_0[3]_net_1 ));
+    CFG3 #( .INIT(8'h2E) )  \un1_time1[5]  (.A(pulse_meash_0_tim[5]), 
+        .B(\state[4]_net_1 ), .C(\mult1_un187_sum_1_SUM[4] ), .Y(
+        \un1_time1[5]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[14]  (.A(VCC_net_1), .B(
+        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[13]_net_1 ), .S(\i_s[14] ), .Y(), .FCO(
+        \i_cry[14]_net_1 ));
+    CFG4 #( .INIT(16'h0004) )  \state_ns_i_0_a2_17[5]  (.A(
+        \i[21]_net_1 ), .B(\state_ns_i_0_a2_12[5]_net_1 ), .C(
+        \i[25]_net_1 ), .D(\i[24]_net_1 ), .Y(
+        \state_ns_i_0_a2_17[5]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[24]  (.A(\i_s[24] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[24] ));
+    SLE \i[21]  (.D(\i_lm[21] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[21]_net_1 ));
+    CFG4 #( .INIT(16'h6996) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM_1[1]  (.A(
+        \mult1_un194_sum_1_SUM_1[4] ), .B(\mult1_un187_sum_1_SUM[4] ), 
+        .C(\valu[4]_net_1 ), .D(\valu[5]_net_1 ), .Y(
+        \mult1_un201_sum_1_SUM_1[1] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[20]  (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[19]_net_1 ), .S(\i_s[20] ), .Y(), .FCO(
+        \i_cry[20]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_14[3]  (.A(
+        un1_i_cry_11_S_0), .B(un1_i_cry_12_S_0), .C(un1_i_cry_13_S_0), 
+        .D(un1_i_cry_14_S_0), .Y(\state_ns_i_a2_14[3]_net_1 ));
+    CFG3 #( .INIT(8'hCA) )  \un1_angle[2]  (.A(
+        locator_control_0_angle1[2]), .B(\k[2]_net_1 ), .C(
+        \state[4]_net_1 ), .Y(\un1_angle[2]_net_1 ));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM[2]  (.A(
+        mult1_un201_sum_1_CO1), .B(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .C(
+        \mult1_un194_sum_1_SUM[1] ), .Y(\mult1_un201_sum_1_SUM[2] ));
+    CFG4 #( .INIT(16'hF702) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_3  (.A(
+        \mult1_un187_sum_1_SUM[2] ), .B(d_N_2_0), .C(d_N_12_0), .D(
+        \mult1_un194_sum_1_SUM_1[4] ), .Y(d_N_13_mux));
+    SLE \buff_4[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_4[1]_net_1 ));
+    SLE \k[1]  (.D(\un24_k_v[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_87_i_0), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(\k[1]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[0]  (.A(
+        \data_out_1_5_am[0]_net_1 ), .B(\i[1]_net_1 ), .C(
+        \data_out_1_5_bm[0]_net_1 ), .Y(\data_out_1[0] ));
+    SLE \i[0]  (.D(\i_lm[0] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
+    CFG4 #( .INIT(16'h8000) )  \state_ns_i_0_a2_21[5]  (.A(
+        \state_ns_i_0_a2_16[5]_net_1 ), .B(
+        \state_ns_i_0_a2_15[5]_net_1 ), .C(
+        \state_ns_i_0_a2_14[5]_net_1 ), .D(
+        \state_ns_i_0_a2_13[5]_net_1 ), .Y(
+        \state_ns_i_0_a2_21[5]_net_1 ));
+    SLE \i[11]  (.D(\i_lm[11] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[11]_net_1 ));
+    CFG4 #( .INIT(16'h4644) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM_RNITTTU[2]  (.A(
+        \mult1_un166_sum_1_SUM[2] ), .B(mult1_un166_sum_1_CO3), .C(
+        \valu[9]_net_1 ), .D(\valu[8]_net_1 ), .Y(un1_i4_mux));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_0_a3_3[0]  (.A(
+        \state[1]_net_1 ), .B(\state[5]_net_1 ), .C(\state[3]_net_1 ), 
+        .D(\state[2]_net_1 ), .Y(\state_ns_0_a3_3[0]_net_1 ));
+    SLE \state[6]  (.D(\state_ns[0] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
+        , .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[6]_net_1 ));
+    CFG4 #( .INIT(16'hAE00) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1  (.A(
+        \mult1_un180_sum_1_SUM[2] ), .B(\mult1_un180_sum_1_SUM[1] ), 
+        .C(un1_i1_mux), .D(mult1_un187_sum_1_CO3_1_RNO), .Y(
+        mult1_un187_sum_1_CO3_0));
+    SLE \buff_0[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_0[0]_net_1 ));
+    CFG3 #( .INIT(8'h2E) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM[4]  (.A(
+        \mult1_un159_sum_1_SUM[4] ), .B(
+        \mult1_un159_sum_1_SUM_RNIM44K4[4] ), .C(
+        \mult1_un159_sum_1_SUM[2] ), .Y(\mult1_un166_sum_1_SUM[4] ));
+    CFG4 #( .INIT(16'h3A30) )  \i_lm_0[2]  (.A(\i_s[2] ), .B(N_144), 
+        .C(\state[4]_net_1 ), .D(N_91), .Y(\i_lm[2] ));
+    CFG2 #( .INIT(4'h9) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_0[1]  (.A(
+        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .Y(d_N_4_1));
+    CFG4 #( .INIT(16'h3933) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1_RNO  (.A(
+        mult1_un180_sum_1_CO3_1), .B(\mult1_un180_sum_1_SUM_2[4] ), .C(
+        mult1_un180_sum_1_CO3_a4), .D(mult1_un180_sum_1_CO3_0_0), .Y(
+        mult1_un187_sum_1_CO3_1_RNO));
+    CFG4 #( .INIT(16'h2AEA) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_2  (.A(
+        \mult1_un194_sum_1_SUM_1[4] ), .B(\mult1_un187_sum_1_SUM[1] ), 
+        .C(\mult1_un187_sum_1_SUM[2] ), .D(d_N_2_0), .Y(d_N_11_mux));
+    CFG2 #( .INIT(4'hD) )  \un1_angle[4]  (.A(\state[4]_net_1 ), .B(
+        \k[5] ), .Y(\un1_angle[4]_net_1 ));
+    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[4]  (.A(\buff_5[5] ), 
+        .B(\buff_4[5] ), .C(\i[2]_net_1 ), .D(
+        \data_out_1_5_am_1_1[4]_net_1 ), .Y(\data_out_1_5_am[4]_net_1 )
+        );
+    CFG3 #( .INIT(8'hD8) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_CO2_1  (.A(
+        un1_i1_mux), .B(\mult1_un180_sum_1_SUM[4] ), .C(
+        \mult1_un180_sum_1_SUM[1] ), .Y(mult1_un187_sum_1_CO2));
+    CFG4 #( .INIT(16'h24DB) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM[2]  (.A(
+        \valu[10]_net_1 ), .B(\valu[11]_net_1 ), .C(
+        \valu_RNI32OE1[13]_net_1 ), .D(\valu_RNILKIF_0[11]_net_1 ), .Y(
+        \mult1_un159_sum_1_SUM[2] ));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM[4]  (.A(
+        \valu_RNI32OE1[13]_net_1 ), .B(mult1_un159_sum_1_CO3), .C(
+        \mult1_un159_sum_1_SUM_2_1[4] ), .Y(\mult1_un159_sum_1_SUM[4] )
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_23 (.A(VCC_net_1), .B(
+        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_22_net_1), .S(un1_i_cry_23_S_0), .Y(), .FCO(
+        un1_i_cry_23_net_1));
+    CFG4 #( .INIT(16'hAE2A) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_CO2_1  (.A(
+        \mult1_un173_sum_1_SUM[1] ), .B(un1_i3_mux_0_0_i), .C(
+        \valu[8]_net_1 ), .D(\valu[7]_net_1 ), .Y(
+        mult1_un180_sum_1_CO2));
+    SLE \data_out[1]  (.D(\data_out_1[1] ), .CLK(FCCC_0_GL0), .EN(
+        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        time_sender_0_data_out_1));
+    SLE \buff_0[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_0[2]_net_1 ));
+    CFG4 #( .INIT(16'hFD10) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1  (.A(
+        \valu_RNI32OE1[13]_net_1 ), .B(un1_m5_i_0), .C(
+        \valu_RNILKIF_0[11]_net_1 ), .D(\valu_RNICB5V[13]_net_1 ), .Y(
+        mult1_un159_sum_1_CO3));
+    SLE \buff_4[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
+        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\buff_4[5] ));
+    SLE \valu[7]  (.D(\un1_time1[7]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[7]_net_1 ));
+    CFG4 #( .INIT(16'h0040) )  buff_2_1_sqmuxa_1 (.A(\i[2]_net_1 ), .B(
+        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
+        buff_2_1_sqmuxa_1_net_1));
+    CFG3 #( .INIT(8'h80) )  \state_ns_a2_0_a3[6]  (.A(
+        \state_ns_i_0_a2_20[5]_net_1 ), .B(\state[2]_net_1 ), .C(
+        \state_ns_i_0_a2_21[5]_net_1 ), .Y(\state_ns[6] ));
+    SLE \buff_2[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_2[0]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[3]  (.A(\buff_2[3]_net_1 )
+        , .B(\i[0]_net_1 ), .C(\buff_3[3]_net_1 ), .Y(
+        \data_out_1_5_bm[3]_net_1 ));
+    CFG4 #( .INIT(16'h5695) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM[2]  (.A(
+        \mult1_un173_sum_1_SUM[1] ), .B(
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .C(\valu[8]_net_1 ), .D(
+        \valu[7]_net_1 ), .Y(\mult1_un180_sum_1_SUM[2] ));
+    SLE \buff_0[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(buff_0_1_sqmuxa)
+        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\buff_0[5] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_21 (.A(VCC_net_1), .B(
+        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_20_net_1), .S(un1_i_cry_21_S), .Y(), .FCO(
+        un1_i_cry_21_net_1));
+    CFG2 #( .INIT(4'h7) )  \state_ns_i_o2_0[1]  (.A(
+        pulse_meash_0_new_ready), .B(\state[6]_net_1 ), .Y(N_91));
+    SLE \valu[13]  (.D(\un1_time1[13]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[13]_net_1 ));
+    CFG4 #( .INIT(16'hCEEE) )  \state_ns_i_0_a2_20_RNILRIH1[5]  (.A(
+        \state[2]_net_1 ), .B(\un1_clk_inv_i_0_o3[0]_net_1 ), .C(
+        \state_ns_i_0_a2_21[5]_net_1 ), .D(
+        \state_ns_i_0_a2_20[5]_net_1 ), .Y(N_84_i_0));
+    SLE \buff_5[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_5[1]_net_1 ));
+    SLE \state[4]  (.D(\state[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\state[4]_net_1 ));
+    CFG4 #( .INIT(16'hA2BA) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO2  (.A(
+        \mult1_un208_sum_1_SUM[1] ), .B(
+        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .C(\valu[2]_net_1 ), .D(
+        \valu[3]_net_1 ), .Y(mult1_un215_sum_1_CO2));
+    CFG4 #( .INIT(16'h2262) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM_RNITTTU_0[2]  (
+        .A(\mult1_un166_sum_1_SUM[2] ), .B(mult1_un166_sum_1_CO3), .C(
+        \valu[9]_net_1 ), .D(\valu[8]_net_1 ), .Y(un1_N_13_mux));
+    CFG2 #( .INIT(4'hD) )  \state_ns_i_o2_0[3]  (.A(\state[3]_net_1 ), 
+        .B(COREUART_0_TXRDY), .Y(N_90));
+    CFG4 #( .INIT(16'h0020) )  buff_4_1_sqmuxa (.A(\i[2]_net_1 ), .B(
+        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
+        buff_4_1_sqmuxa_net_1));
+    CFG4 #( .INIT(16'h3237) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1  (.A(
+        un1_m8_i_0), .B(d_i6_mux_1), .C(un1_N_7_0), .D(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK), .Y(
+        mult1_un201_sum_1_CO1));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[25]  (.A(\i_s[25]_net_1 ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[25] ));
+    SLE \valu[3]  (.D(\un1_time1[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[3]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_2  
+        (.A(un1_i6_mux), .B(d_m12_0_a3_0), .Y(un1_N_10_mux));
+    CFG3 #( .INIT(8'h96) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM[1]  (.A(
+        \valu[6]_net_1 ), .B(\mult1_un180_sum_1_SUM[4] ), .C(
+        \valu[7]_net_1 ), .Y(\mult1_un187_sum_1_SUM[1] ));
+    GND GND (.Y(GND_net_1));
+    CFG4 #( .INIT(16'hAACF) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0  (.A(
+        mult1_un201_sum_1_CO3_0_tz_s_0_RNO), .B(d_N_20), .C(d_N_19), 
+        .D(un1_N_10_mux), .Y(mult1_un201_sum_1_CO3_0_tz_s_0));
+    CFG2 #( .INIT(4'hB) )  \valu_RNILKIF[11]  (.A(\valu[12]_net_1 ), 
+        .B(\valu[11]_net_1 ), .Y(un1_N_3_mux));
+    SLE \buff_5[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_5[3]_net_1 ));
+    CFG4 #( .INIT(16'h4000) )  buff_3_1_sqmuxa (.A(\i[2]_net_1 ), .B(
+        \i[1]_net_1 ), .C(buff_2_1_sqmuxa_net_1), .D(\i[0]_net_1 ), .Y(
+        buff_3_1_sqmuxa_net_1));
+    SLE \buff_0[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_0_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_0[1]_net_1 ));
+    CFG3 #( .INIT(8'hCA) )  \un1_angle[1]  (.A(
+        locator_control_0_angle1[1]), .B(\k[1]_net_1 ), .C(
+        \state[4]_net_1 ), .Y(\un1_angle[1]_net_1 ));
+    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[4]  (.A(
+        \buff_1[5] ), .B(\buff_0[5] ), .C(\i[2]_net_1 ), .D(
+        \i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[4]_net_1 ));
+    CFG3 #( .INIT(8'h2E) )  \un1_time1[9]  (.A(pulse_meash_0_tim[9]), 
+        .B(\state[4]_net_1 ), .C(\mult1_un159_sum_1_SUM[4] ), .Y(
+        \un1_time1[9]_net_1 ));
+    SLE \i[23]  (.D(\i_lm[23] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[23]_net_1 ));
+    CFG4 #( .INIT(16'hD44D) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_RNI6RET  (.A(
+        \valu[2]_net_1 ), .B(\valu[1]_net_1 ), .C(
+        mult1_un215_sum_1_CO3), .D(\mult1_un215_sum_1_SUM_0[4] ), .Y(
+        mult1_un222_sum_1_CO1));
+    CFG4 #( .INIT(16'hC3BE) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_CO3_2_0  (.A(
+        \valu[7]_net_1 ), .B(\mult1_un166_sum_1_SUM[4] ), .C(
+        \valu[9]_net_1 ), .D(\valu[8]_net_1 ), .Y(
+        mult1_un180_sum_1_CO3_2_0));
+    SLE \state[5]  (.D(N_85_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[5]_net_1 ));
+    CFG4 #( .INIT(16'h5D75) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNIM44K4[4]  (.A(
+        un1_N_5_i_1), .B(\mult1_un159_sum_1_SUM[4] ), .C(
+        \valu[10]_net_1 ), .D(\valu[9]_net_1 ), .Y(
+        \mult1_un159_sum_1_SUM_RNIM44K4[4] ));
+    SLE \buff_3[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_3[0]_net_1 ));
+    CFG4 #( .INIT(16'h0004) )  buff_0_1_sqmuxa_0_a2_0_a3 (.A(
+        \i[0]_net_1 ), .B(\state[4]_net_1 ), .C(\i[1]_net_1 ), .D(
+        \i[2]_net_1 ), .Y(buff_0_1_sqmuxa));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[23]  (.A(VCC_net_1), .B(
+        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[22]_net_1 ), .S(\i_s[23] ), .Y(), .FCO(
+        \i_cry[23]_net_1 ));
+    SLE \i[13]  (.D(\i_lm[13] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[13]_net_1 ));
+    CFG4 #( .INIT(16'hBEEB) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_3  (.A(
+        \valu[4]_net_1 ), .B(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), 
+        .C(\mult1_un194_sum_1_SUM[1] ), .D(mult1_un201_sum_1_CO1), .Y(
+        un1_N_8));
+    CFG4 #( .INIT(16'hB000) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_1  (.A(
+        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
+        \mult1_un187_sum_1_SUM[2] ), .D(\mult1_un187_sum_1_SUM[1] ), 
+        .Y(un1_N_7_0));
+    SLE \buff_1[1]  (.D(\un1_angle[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_1[1]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[15]  (.A(VCC_net_1), .B(
+        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[14]_net_1 ), .S(\i_s[15] ), .Y(), .FCO(
+        \i_cry[15]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  buff_2_1_sqmuxa (.A(\state[4]_net_1 ), .B(
+        FCCC_0_LOCK), .Y(buff_2_1_sqmuxa_net_1));
+    CFG4 #( .INIT(16'hC693) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM_RNIQ5884[1]  (.A(
+        \mult1_un166_sum_1_SUM[1] ), .B(un1_m8_1), .C(un1_N_13_mux), 
+        .D(un1_i4_mux), .Y(\mult1_un166_sum_1_SUM_RNIQ5884[1] ));
+    CFG2 #( .INIT(4'h7) )  \state_ns_i_o2[3]  (.A(un15_clklto2), .B(
+        un15_clklto1), .Y(N_89));
+    CFG3 #( .INIT(8'h28) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_4  (.A(
+        \valu[6]_net_1 ), .B(\mult1_un180_sum_1_SUM[4] ), .C(
+        \valu[7]_net_1 ), .Y(d_N_12_0));
+    CFG2 #( .INIT(4'h6) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_RNIMGHHA[2]  (.A(
+        un1_i2_mux), .B(un1_m6_1_0), .Y(
+        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_16[5]  (.A(
+        \i[15]_net_1 ), .B(\i[14]_net_1 ), .C(\i[11]_net_1 ), .D(
+        \i[10]_net_1 ), .Y(\state_ns_i_0_a2_16[5]_net_1 ));
+    CFG4 #( .INIT(16'h0800) )  \i_8_iv_i_a2[2]  (.A(
+        \state_ns_i_a2_17[3]_net_1 ), .B(\state_ns_i_a2_21[3]_net_1 ), 
+        .C(un15_clklto2), .D(\state_ns_i_a2_16[3]_net_1 ), .Y(N_144));
+    CFG3 #( .INIT(8'hF2) )  un1_rst_n_inv_2_i_0 (.A(FCCC_0_LOCK), .B(
+        N_91), .C(N_104), .Y(un1_rst_n_inv_2_i_0_net_1));
+    CFG4 #( .INIT(16'h1F10) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO_0  (.A(
+        d_N_10), .B(\mult1_un187_sum_1_SUM[1] ), .C(
+        \mult1_un187_sum_1_SUM[4] ), .D(d_i5_mux), .Y(
+        mult1_un201_sum_1_ANC3_0_RNO_0));
+    SLE \k[4]  (.D(VCC_net_1), .CLK(FCCC_0_GL0), .EN(N_87_i_0), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\k[5] ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[10]  (.A(\i_s[10] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[10] ));
+    CFG4 #( .INIT(16'h9669) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO2_RNILDOT2  (.A(
+        \mult1_un187_sum_1_SUM[2] ), .B(\mult1_un187_sum_1_SUM[4] ), 
+        .C(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .D(
+        mult1_un194_sum_1_CO2), .Y(\mult1_un201_sum_1_SUM_2[4] ));
+    CFG3 #( .INIT(8'h57) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM_RNI6LH01[2]  (.A(
+        \mult1_un187_sum_1_SUM[2] ), .B(d_m2_3_0), .C(
+        \mult1_un187_sum_1_SUM[1] ), .Y(un1_m9_1));
+    SLE \data_out[2]  (.D(\data_out_1[2] ), .CLK(FCCC_0_GL0), .EN(
+        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        time_sender_0_data_out_2));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_s_1_323 (.A(VCC_net_1), .B(
+        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(VCC_net_1), 
+        .S(), .Y(), .FCO(un1_i_s_1_323_FCO));
+    SLE \i[17]  (.D(\i_lm[17] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[17]_net_1 ));
+    CFG4 #( .INIT(16'h1ED2) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42  
+        (.A(un1_m9_1), .B(mult1_un187_sum_1_CO3_1_RNIDREF), .C(
+        \mult1_un194_sum_1_SUM_1[4] ), .D(mult1_un194_sum_1_CO3_0_tz), 
+        .Y(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42));
+    CFG4 #( .INIT(16'h7340) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_ANC3_0_1  (.A(
+        mult1_un194_sum_1_ANC3_0_1_1), .B(\mult1_un187_sum_1_SUM[4] ), 
+        .C(\mult1_un187_sum_1_SUM[2] ), .D(mult1_un194_sum_1_CO3_0_tz), 
+        .Y(mult1_un194_sum_1_ANC3_0_1));
+    CFG4 #( .INIT(16'hECFE) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_tz  (.A(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
+        \mult1_un194_sum_1_SUM[1] ), .C(\valu[4]_net_1 ), .D(
+        \valu[5]_net_1 ), .Y(mult1_un201_sum_1_CO2_0_tz));
+    SLE \buff_5[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_5[0]_net_1 ));
+    CFG3 #( .INIT(8'hFE) )  wen_RNO_0 (.A(\state[1]_net_1 ), .B(
+        \state[0]_net_1 ), .C(\state[2]_net_1 ), .Y(N_445_i_0));
+    CFG4 #( .INIT(16'hBA32) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO_0  (.A(
+        \valu[5]_net_1 ), .B(\valu[4]_net_1 ), .C(d_N_11_mux), .D(
+        d_N_13_mux), .Y(d_i6_mux_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_7 (.A(VCC_net_1), .B(
+        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_6_net_1), .S(un1_i_cry_7_S_0), .Y(), .FCO(
+        un1_i_cry_7_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_4 (.A(VCC_net_1), .B(
+        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_3_net_1), .S(un1_i_cry_4_S_0), .Y(), .FCO(
+        un1_i_cry_4_net_1));
+    SLE \k[2]  (.D(\un24_k_v[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_87_i_0), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(\k[2]_net_1 ));
+    CFG3 #( .INIT(8'h42) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNIEMCS[1]  (.A(
+        \valu[9]_net_1 ), .B(\mult1_un159_sum_1_SUM[1] ), .C(
+        \valu[10]_net_1 ), .Y(un1_m8_1_1));
+    SLE \valu[9]  (.D(\un1_time1[9]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[9]_net_1 ));
+    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[3]  (.A(
+        \buff_5[3]_net_1 ), .B(\buff_4[3]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\data_out_1_5_am_1_1[3]_net_1 ), .Y(
+        \data_out_1_5_am[3]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \valu_RNIRVUG[5]  (.A(\valu[5]_net_1 ), .B(
+        \valu[6]_net_1 ), .Y(d_m2_3_0));
+    CFG4 #( .INIT(16'hFD40) )  
+        \un1_k_if_generate_plus.mult1_un222_sum_1_CO3_1  (.A(
+        \mult1_un215_sum_1_SUM[4] ), .B(mult1_un222_sum_1_CO1), .C(
+        \mult1_un215_sum_1_SUM[1] ), .D(\mult1_un215_sum_1_SUM[2] ), 
+        .Y(mult1_un222_sum_1_CO3));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_12[3]  (.A(
+        un1_i_cry_3_S_0), .B(un1_i_cry_4_S_0), .C(un1_i_cry_5_S_0), .D(
+        un1_i_cry_6_S_0), .Y(\state_ns_i_a2_12[3]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[17]  (.A(VCC_net_1), .B(
+        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[16]_net_1 ), .S(\i_s[17] ), .Y(), .FCO(
+        \i_cry[17]_net_1 ));
+    CFG3 #( .INIT(8'h4C) )  \state_RNO[1]  (.A(
+        \state_ns_i_0_a2_20[5]_net_1 ), .B(\state[2]_net_1 ), .C(
+        \state_ns_i_0_a2_21[5]_net_1 ), .Y(N_84_tz_i));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[18]  (.A(\i_s[18] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[18] ));
+    SLE \valu[4]  (.D(\un1_time1[4]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[4]_net_1 ));
+    SLE \i[9]  (.D(\i_lm[9] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
+    CFG4 #( .INIT(16'h6996) )  
+        \un1_k_if_generate_plus.mult1_un208_sum_1_SUM[1]  (.A(
+        \valu[4]_net_1 ), .B(\valu[3]_net_1 ), .C(
+        mult1_un201_sum_1_CO3), .D(\mult1_un201_sum_1_SUM_2[4] ), .Y(
+        \mult1_un208_sum_1_SUM[1] ));
+    CFG4 #( .INIT(16'h4666) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0_RNO  (.A(
+        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
+        \mult1_un187_sum_1_SUM[2] ), .D(\mult1_un187_sum_1_SUM[1] ), 
+        .Y(un1_N_7_mux_0));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_8 (.A(VCC_net_1), .B(
+        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_7_net_1), .S(un1_i_cry_8_S), .Y(), .FCO(
+        un1_i_cry_8_net_1));
+    SLE \valu[5]  (.D(\un1_time1[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[5]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_12[5]  (.A(
+        \i[23]_net_1 ), .B(\i[22]_net_1 ), .C(\i[20]_net_1 ), .D(
+        \i[19]_net_1 ), .Y(\state_ns_i_0_a2_12[5]_net_1 ));
+    CFG4 #( .INIT(16'h7800) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_0  (.A(
+        \mult1_un201_sum_1_SUM[2] ), .B(\mult1_un201_sum_1_SUM[4] ), 
+        .C(un1_N_5_mux), .D(un1_m7_3_0), .Y(un1_i5_mux_0));
+    CFG2 #( .INIT(4'hE) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_0  (.A(
+        mult1_un201_sum_1_CO3_0_0_1), .B(mult1_un201_sum_1_CO3_0_d), 
+        .Y(mult1_un201_sum_1_CO3));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_16[3]  (.A(
+        un1_i_cry_18_S_0), .B(un1_i_cry_19_S_0), .C(un1_i_cry_20_S), 
+        .D(un1_i_cry_21_S), .Y(\state_ns_i_a2_16[3]_net_1 ));
+    VCC VCC (.Y(VCC_net_1));
+    SLE \buff_2[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_2[2]_net_1 ));
+    CFG2 #( .INIT(4'h6) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM[1]  (.A(
+        mult1_un194_sum_1_ANC3_0_1), .B(\mult1_un201_sum_1_SUM_1[1] ), 
+        .Y(N_3560_i));
+    CFG3 #( .INIT(8'h40) )  \i_8_iv_i_a3[1]  (.A(un15_clklto2), .B(
+        \state_ns_i_a2[3]_net_1 ), .C(un15_clklto1), .Y(N_95));
+    SLE \valu[0]  (.D(\un1_time1[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[0]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_12 (.A(VCC_net_1), .B(
+        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_11_net_1), .S(un1_i_cry_12_S_0), .Y(), .FCO(
+        un1_i_cry_12_net_1));
+    CFG4 #( .INIT(16'h444B) )  \valu_RNI32OE1_0[13]  (.A(
+        \valu_RNINMIF[13]_net_1 ), .B(un1_N_3_mux), .C(
+        \valu[13]_net_1 ), .D(\valu[12]_net_1 ), .Y(
+        \mult1_un159_sum_1_SUM_2_1[4] ));
+    CFG4 #( .INIT(16'h0012) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO  (.A(
+        \valu[4]_net_1 ), .B(\valu[6]_net_1 ), .C(\valu[5]_net_1 ), .D(
+        \mult1_un187_sum_1_SUM[1] ), .Y(un1_m4_1_1));
+    CFG4 #( .INIT(16'h3CE1) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_2  (.A(
+        mult1_un201_sum_1_CO2_0_tz), .B(mult1_un201_sum_1_ANC2), .C(
+        \valu[3]_net_1 ), .D(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), 
+        .Y(un1_m7_i_0_1));
+    CFG4 #( .INIT(16'h5A33) )  
+        \un1_k_if_generate_plus.mult1_un208_sum_1_CO2_1  (.A(
+        \mult1_un201_sum_1_SUM_2[4] ), .B(N_3560_i), .C(
+        mult1_un201_sum_1_CO3), .D(un1_i3_mux_0), .Y(
+        mult1_un208_sum_1_CO2));
+    CFG4 #( .INIT(16'hFE01) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_c_RNI45FP3  (
+        .A(mult1_un201_sum_1_CO3_0_c), .B(mult1_un201_sum_1_CO3_0_d), 
+        .C(mult1_un201_sum_1_ANC3), .D(\mult1_un201_sum_1_SUM_2[4] ), 
+        .Y(mult1_un201_sum_1_CO3_0_c_RNI45FP3));
+    CFG4 #( .INIT(16'h6996) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM_0_RNIIHPG[4]  (
+        .A(\mult1_un180_sum_1_SUM[2] ), .B(\mult1_un180_sum_1_SUM[4] ), 
+        .C(mult1_un187_sum_1_CO2), .D(\mult1_un187_sum_1_SUM_0[4] ), 
+        .Y(d_m1_2_0));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_15[3]  (.A(
+        un1_i_cry_25_net_1), .B(un1_i_cry_15_S_0), .C(un1_i_cry_16_S_0)
+        , .D(un1_i_cry_17_S), .Y(\state_ns_i_a2_15[3]_net_1 ));
+    CFG4 #( .INIT(16'h6996) )  \un24_k_v_1[1]  (.A(\valu[2]_net_1 ), 
+        .B(\valu[1]_net_1 ), .C(mult1_un215_sum_1_CO3), .D(
+        \mult1_un215_sum_1_SUM_0[4] ), .Y(\un24_k_v_1[1]_net_1 ));
+    CFG4 #( .INIT(16'h7080) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_0  
+        (.A(\mult1_un187_sum_1_SUM[2] ), .B(\mult1_un187_sum_1_SUM[4] )
+        , .C(d_m12_0_a3_0), .D(\mult1_un194_sum_1_SUM_1[4] ), .Y(
+        d_N_20));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[1]  (.A(
+        \data_out_1_5_am[1]_net_1 ), .B(\i[1]_net_1 ), .C(
+        \data_out_1_5_bm[1]_net_1 ), .Y(\data_out_1[1] ));
+    CFG4 #( .INIT(16'h572A) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO_1  (.A(
+        \valu[6]_net_1 ), .B(\valu[4]_net_1 ), .C(
+        \mult1_un194_sum_1_SUM_1[4] ), .D(\valu[5]_net_1 ), .Y(d_N_10));
+    CFG4 #( .INIT(16'hD2B4) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_0_0[3]  (.A(
+        \valu[3]_net_1 ), .B(\valu[4]_net_1 ), .C(N_3560_i), .D(
+        \mult1_un201_sum_1_SUM[4] ), .Y(\mult1_un215_sum_1_SUM_0[3] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_5 (.A(VCC_net_1), .B(
+        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_4_net_1), .S(un1_i_cry_5_S_0), .Y(), .FCO(
+        un1_i_cry_5_net_1));
+    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[0]  (.A(
+        \buff_1[0]_net_1 ), .B(\buff_0[0]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[0]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_10 (.A(VCC_net_1), .B(
+        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_9_net_1), .S(un1_i_cry_10_S_0), .Y(), .FCO(
+        un1_i_cry_10_net_1));
+    CFG4 #( .INIT(16'h99BD) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM_RNISQFG7[2]  (.A(
+        \mult1_un201_sum_1_SUM[2] ), .B(
+        mult1_un201_sum_1_CO3_0_c_RNI45FP3), .C(N_3560_i), .D(
+        un1_i3_mux_0), .Y(un1_i2_mux));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un222_sum_1_SUM_0[4]  (.A(
+        mult1_un215_sum_1_CO2), .B(\mult1_un215_sum_1_SUM[4] ), .C(
+        \mult1_un215_sum_1_SUM_1[3] ), .Y(\mult1_un222_sum_1_SUM_0[4] )
+        );
+    CFG3 #( .INIT(8'hF8) )  \un1_clk_inv_i_0_o3[0]  (.A(
+        \state[6]_net_1 ), .B(pulse_meash_0_new_ready), .C(
+        \state[4]_net_1 ), .Y(\un1_clk_inv_i_0_o3[0]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  wen_RNIIK85 (.A(LED_3_c), .Y(LED_3_c_i_0));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM[1]  (.A(
+        \valu[8]_net_1 ), .B(\valu[7]_net_1 ), .C(
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .Y(
+        \mult1_un180_sum_1_SUM[1] ));
+    CFG4 #( .INIT(16'h4DD4) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO1  (.A(
+        \valu[3]_net_1 ), .B(\valu[2]_net_1 ), .C(un1_i2_mux), .D(
+        un1_m6_1_0), .Y(mult1_un215_sum_1_CO1));
+    CFG3 #( .INIT(8'h2E) )  \un1_time1[10]  (.A(pulse_meash_0_tim[10]), 
+        .B(\state[4]_net_1 ), .C(\valu_RNI32OE1[13]_net_1 ), .Y(
+        \un1_time1[10]_net_1 ));
+    CFG4 #( .INIT(16'hFE88) )  
+        \un1_k_if_generate_plus.mult1_un173_sum_1_CO2  (.A(
+        mult1_un173_sum_1_CO1_0), .B(\mult1_un166_sum_1_SUM[4] ), .C(
+        \valu[8]_net_1 ), .D(\mult1_un166_sum_1_SUM[1] ), .Y(
+        mult1_un173_sum_1_CO2));
+    CFG2 #( .INIT(4'h8) )  \state_RNO[2]  (.A(\state[3]_net_1 ), .B(
+        COREUART_0_TXRDY), .Y(N_431_i_0));
+    ARI1 #( .INIT(20'h45500) )  \i_s[25]  (.A(VCC_net_1), .B(
+        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[24]_net_1 ), .S(\i_s[25]_net_1 ), .Y(), .FCO());
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_6 (.A(VCC_net_1), .B(
+        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_5_net_1), .S(un1_i_cry_6_S_0), .Y(), .FCO(
+        un1_i_cry_6_net_1));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[11]  (.A(VCC_net_1), .B(
+        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[10]_net_1 ), .S(\i_s[11] ), .Y(), .FCO(
+        \i_cry[11]_net_1 ));
+    SLE \buff_4[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_4[2]_net_1 ));
+    CFG4 #( .INIT(16'hEEAE) )  
+        \un1_k_if_generate_plus.mult1_un173_sum_1_SUM_RNIQIB05[2]  (.A(
+        \mult1_un173_sum_1_SUM[2] ), .B(
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .C(\valu[8]_net_1 ), .D(
+        \valu[7]_net_1 ), .Y(mult1_un180_sum_1_CO3_1));
+    CFG2 #( .INIT(4'h1) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_CO3_a4  (.A(
+        \mult1_un173_sum_1_SUM[1] ), .B(\mult1_un173_sum_1_SUM[2] ), 
+        .Y(mult1_un180_sum_1_CO3_a4));
+    SLE \i[25]  (.D(\i_lm[25] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[25]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_1 (.A(VCC_net_1), .B(
+        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_s_1_323_FCO), .S(un15_clklto1), .Y(), .FCO(
+        un1_i_cry_1_net_1));
+    SLE \k[3]  (.D(\SUM[3] ), .CLK(FCCC_0_GL0), .EN(N_87_i_0), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\k[3]_net_1 ));
+    SLE \k[0]  (.D(\valu[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(N_87_i_0), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\k[0]_net_1 ));
+    SLE \buff_3[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_3[3]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[24]  (.A(VCC_net_1), .B(
+        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[23]_net_1 ), .S(\i_s[24] ), .Y(), .FCO(
+        \i_cry[24]_net_1 ));
+    CFG4 #( .INIT(16'h2409) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO  (.A(
+        \valu[3]_net_1 ), .B(\valu[4]_net_1 ), .C(N_3560_i), .D(
+        \mult1_un201_sum_1_SUM[4] ), .Y(mult1_un215_sum_1_CO3_0_RNO));
+    CFG2 #( .INIT(4'hE) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_CO3_2  (.A(
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .B(
+        mult1_un180_sum_1_CO3_2_0), .Y(mult1_un180_sum_1_CO3_0_0));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[19]  (.A(\i_s[19] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[19] ));
+    SLE \i[15]  (.D(\i_lm[15] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[15]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[3]  (.A(\i_s[3] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[3] ));
+    CFG4 #( .INIT(16'h1E5A) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM[4]  (.A(
+        mult1_un187_sum_1_CO3_0), .B(\mult1_un180_sum_1_SUM[2] ), .C(
+        \mult1_un187_sum_1_SUM_0[4] ), .D(mult1_un187_sum_1_CO2), .Y(
+        \mult1_un187_sum_1_SUM[4] ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[16]  (.A(\i_s[16] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[16] ));
+    SLE wen (.D(N_139_i_0), .CLK(FCCC_0_GL0), .EN(N_445_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(LED_3_c));
+    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[2]  (.A(
+        \buff_1[2]_net_1 ), .B(\buff_0[2]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[2]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[20]  (.A(\i_s[20] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[20] ));
+    CFG4 #( .INIT(16'h6996) )  
+        \un1_k_if_generate_plus.mult1_un1_sum_1.SUM_1[3]  (.A(
+        \mult1_un215_sum_1_SUM_0[4] ), .B(\mult1_un215_sum_1_SUM[1] ), 
+        .C(mult1_un222_sum_1_CO1), .D(mult1_un215_sum_1_CO3), .Y(
+        \SUM_1[3] ));
+    CFG2 #( .INIT(4'hE) )  wen_RNO (.A(\state[1]_net_1 ), .B(
+        \state[0]_net_1 ), .Y(N_139_i_0));
+    CFG2 #( .INIT(4'h6) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_CO2_1_RNO_0  (.A(
+        un1_m8_1), .B(\valu[7]_net_1 ), .Y(un1_m2_5_0));
+    CFG4 #( .INIT(16'h6996) )  
+        \un1_k_if_generate_plus.mult1_un1_sum_1.SUM[3]  (.A(\SUM_1[3] )
+        , .B(mult1_un222_sum_1_CO3), .C(CO2), .D(
+        \mult1_un222_sum_1_SUM_0[4] ), .Y(\SUM[3] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[7]  (.A(VCC_net_1), .B(
+        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[6]_net_1 ), .S(\i_s[7] ), .Y(), .FCO(\i_cry[7]_net_1 ));
+    CFG2 #( .INIT(4'h9) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_3  (.A(
+        \mult1_un194_sum_1_SUM[2] ), .B(\valu[3]_net_1 ), .Y(
+        mult1_un215_sum_1_CO3_0_RNO_3));
+    CFG4 #( .INIT(16'hB888) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0_RNO_0  (.A(
+        d_N_11_mux_0), .B(\mult1_un187_sum_1_SUM[4] ), .C(d_m2_3_0), 
+        .D(\mult1_un194_sum_1_SUM_1[4] ), .Y(
+        mult1_un201_sum_1_CO2_0_d_0_RNO_0));
+    SLE \i[22]  (.D(\i_lm[22] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[22]_net_1 ));
+    CFG4 #( .INIT(16'hC99C) )  \un24_k_v[1]  (.A(\valu[1]_net_1 ), .B(
+        \un24_k_v_1[1]_net_1 ), .C(\mult1_un222_sum_1_SUM_0[4] ), .D(
+        mult1_un222_sum_1_CO3), .Y(\un24_k_v[1]_net_1 ));
+    CFG3 #( .INIT(8'h18) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1_RNO  (.A(
+        \valu[10]_net_1 ), .B(\valu_RNICB5V[13]_net_1 ), .C(
+        \valu[11]_net_1 ), .Y(un1_m5_i_0));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[12]  (.A(VCC_net_1), .B(
+        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[11]_net_1 ), .S(\i_s[12] ), .Y(), .FCO(
+        \i_cry[12]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \un1_time1[4]  (.A(pulse_meash_0_tim[4]), 
+        .B(\state[4]_net_1 ), .C(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42)
+        , .Y(\un1_time1[4]_net_1 ));
+    CFG4 #( .INIT(16'h1E4B) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_1[4]  (.A(
+        un1_i1_mux), .B(\mult1_un180_sum_1_SUM[4] ), .C(
+        \mult1_un180_sum_1_SUM[2] ), .D(\mult1_un180_sum_1_SUM[1] ), 
+        .Y(\mult1_un194_sum_1_SUM_1[4] ));
+    CFG4 #( .INIT(16'h24DB) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM[2]  (.A(
+        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
+        \mult1_un187_sum_1_SUM[4] ), .D(\mult1_un187_sum_1_SUM[1] ), 
+        .Y(\mult1_un194_sum_1_SUM[2] ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[6]  (.A(\i_s[6] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[6] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[18]  (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[17]_net_1 ), .S(\i_s[18] ), .Y(), .FCO(
+        \i_cry[18]_net_1 ));
+    CFG3 #( .INIT(8'h96) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_1[3]  (.A(
+        \mult1_un215_sum_1_SUM_0[3] ), .B(un1_m6_1_0), .C(un1_i2_mux), 
+        .Y(\mult1_un215_sum_1_SUM_1[3] ));
+    CFG4 #( .INIT(16'h66C9) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_1  (.A(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
+        mult1_un215_sum_1_CO3_0_RNO_3), .C(mult1_un201_sum_1_CO2_0_tz), 
+        .D(mult1_un201_sum_1_ANC2), .Y(un1_N_5_mux));
+    SLE \i[2]  (.D(\i_lm[2] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
+    CFG2 #( .INIT(4'h9) )  \valu_RNINMIF[13]  (.A(\valu[12]_net_1 ), 
+        .B(\valu[13]_net_1 ), .Y(\valu_RNINMIF[13]_net_1 ));
+    CFG3 #( .INIT(8'h56) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM[4]  (.A(
+        \mult1_un201_sum_1_SUM_2[4] ), .B(mult1_un201_sum_1_CO3_0_d), 
+        .C(mult1_un201_sum_1_CO3_0_0_1), .Y(\mult1_un201_sum_1_SUM[4] )
+        );
+    CFG4 #( .INIT(16'h9669) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM_2[4]  (.A(
+        \mult1_un166_sum_1_SUM[4] ), .B(\mult1_un166_sum_1_SUM[2] ), 
+        .C(\mult1_un166_sum_1_SUM_RNIQ5884[1] ), .D(
+        mult1_un173_sum_1_CO2), .Y(\mult1_un180_sum_1_SUM_2[4] ));
+    SLE \i[12]  (.D(\i_lm[12] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[12]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_15 (.A(VCC_net_1), .B(
+        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_14_net_1), .S(un1_i_cry_15_S_0), .Y(), .FCO(
+        un1_i_cry_15_net_1));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[3]  (.A(
+        \data_out_1_5_am[3]_net_1 ), .B(\i[1]_net_1 ), .C(
+        \data_out_1_5_bm[3]_net_1 ), .Y(\data_out_1[3] ));
+    SLE \valu[8]  (.D(\un1_time1[8]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[8]_net_1 ));
+    CFG4 #( .INIT(16'hC963) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_CO2_1_RNO  (.A(
+        \mult1_un166_sum_1_SUM[1] ), .B(un1_m2_5_0), .C(un1_i4_mux), 
+        .D(un1_N_13_mux), .Y(un1_i3_mux_0_0_i));
+    CFG3 #( .INIT(8'h80) )  \state_ns_i_a2[3]  (.A(
+        \state_ns_i_a2_16[3]_net_1 ), .B(\state_ns_i_a2_17[3]_net_1 ), 
+        .C(\state_ns_i_a2_21[3]_net_1 ), .Y(\state_ns_i_a2[3]_net_1 ));
+    CFG4 #( .INIT(16'hE1A5) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1_RNIDREF  (.A(
+        mult1_un187_sum_1_CO3_0), .B(\mult1_un180_sum_1_SUM[2] ), .C(
+        \mult1_un187_sum_1_SUM_0[4] ), .D(mult1_un187_sum_1_CO2), .Y(
+        mult1_un187_sum_1_CO3_1_RNIDREF));
+    CFG4 #( .INIT(16'hFB20) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO2  (.A(
+        \valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
+        \mult1_un187_sum_1_SUM[4] ), .D(\mult1_un187_sum_1_SUM[1] ), 
+        .Y(mult1_un194_sum_1_CO2));
+    CFG4 #( .INIT(16'hCACF) )  \i_lm_0[1]  (.A(\i_s[1] ), .B(N_95), .C(
+        \state[4]_net_1 ), .D(N_91), .Y(\i_lm[1] ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[1]  (.A(\buff_2[1]_net_1 )
+        , .B(\i[0]_net_1 ), .C(\buff_3[1]_net_1 ), .Y(
+        \data_out_1_5_bm[1]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \un1_time1[13]  (.A(\state[4]_net_1 ), .B(
+        pulse_meash_0_tim[13]), .Y(\un1_time1[13]_net_1 ));
+    SLE \buff_4[0]  (.D(\k[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_4[0]_net_1 ));
+    CFG4 #( .INIT(16'hE44E) )  \un1_time1[0]  (.A(\state[4]_net_1 ), 
+        .B(pulse_meash_0_tim[0]), .C(mult1_un222_sum_1_CO3), .D(
+        \mult1_un222_sum_1_SUM_0[4] ), .Y(\un1_time1[0]_net_1 ));
+    CFG4 #( .INIT(16'h9996) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO  (.A(
+        \valu[4]_net_1 ), .B(\mult1_un201_sum_1_SUM_2[4] ), .C(
+        mult1_un201_sum_1_CO3_0_d), .D(mult1_un201_sum_1_CO3_0_0_1), 
+        .Y(un1_N_7_i));
+    CFG4 #( .INIT(16'h8976) )  
+        \un1_k_if_generate_plus.mult1_un173_sum_1_SUM[2]  (.A(
+        mult1_un173_sum_1_CO1_0), .B(\mult1_un166_sum_1_SUM[4] ), .C(
+        \valu[8]_net_1 ), .D(\mult1_un166_sum_1_SUM[1] ), .Y(
+        \mult1_un173_sum_1_SUM[2] ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[12]  (.A(\i_s[12] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[12] ));
+    SLE \buff_1[4]  (.D(\un1_angle[4]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_1[5] ));
+    CFG4 #( .INIT(16'h5177) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNI3FKB4[2]  (.A(
+        \mult1_un159_sum_1_SUM[2] ), .B(
+        mult1_un159_sum_1_CO3_1_RNI1HJB3), .C(\valu[10]_net_1 ), .D(
+        \mult1_un159_sum_1_SUM[1] ), .Y(un1_N_5_1));
+    SLE \i[20]  (.D(\i_lm[20] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[20]_net_1 ));
+    SLE \data_out[3]  (.D(\data_out_1[3] ), .CLK(FCCC_0_GL0), .EN(
+        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        time_sender_0_data_out_3));
+    CFG4 #( .INIT(16'h0C20) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0_RNO_2  (.A(
+        \valu[4]_net_1 ), .B(\valu[6]_net_1 ), .C(\valu[5]_net_1 ), .D(
+        \mult1_un187_sum_1_SUM[1] ), .Y(d_i5_mux));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_9 (.A(VCC_net_1), .B(
+        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_8_net_1), .S(un1_i_cry_9_S_0), .Y(), .FCO(
+        un1_i_cry_9_net_1));
+    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[3]  (.A(
+        \buff_1[3]_net_1 ), .B(\buff_0[3]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[3]_net_1 ));
+    CFG4 #( .INIT(16'hC13E) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_SUM_RNIQL113[2]  (.A(
+        mult1_un201_sum_1_CO2_0_tz), .B(mult1_un201_sum_1_ANC2), .C(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .D(
+        \mult1_un194_sum_1_SUM[2] ), .Y(un1_m6_1_0));
+    SLE \state[3]  (.D(N_10_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[3]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[11]  (.A(\i_s[11] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[11] ));
+    CFG4 #( .INIT(16'h781E) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[3]  (.A(
+        mult1_un215_sum_1_CO1), .B(\mult1_un208_sum_1_SUM[1] ), .C(
+        \mult1_un215_sum_1_SUM_1[3] ), .D(
+        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .Y(
+        \mult1_un215_sum_1_SUM[3] ));
+    CFG3 #( .INIT(8'h80) )  data_out_0_sqmuxa_0_a3 (.A(FCCC_0_LOCK), 
+        .B(COREUART_0_TXRDY), .C(\state[3]_net_1 ), .Y(
+        data_out_0_sqmuxa));
+    CFG2 #( .INIT(4'h4) )  \valu_RNO[11]  (.A(\state[4]_net_1 ), .B(
+        pulse_meash_0_tim[11]), .Y(\valu_RNO[11]_net_1 ));
+    SLE \valu[11]  (.D(\valu_RNO[11]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[11]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_18 (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_17_net_1), .S(un1_i_cry_18_S_0), .Y(), .FCO(
+        un1_i_cry_18_net_1));
+    SLE \i[10]  (.D(\i_lm[10] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[10]_net_1 ));
+    CFG2 #( .INIT(4'h6) )  
+        \un1_k_if_generate_plus.mult1_un180_sum_1_SUM_0[3]  (.A(
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .B(
+        \mult1_un173_sum_1_SUM[2] ), .Y(\mult1_un180_sum_1_SUM_0[3] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_14 (.A(VCC_net_1), .B(
+        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_13_net_1), .S(un1_i_cry_14_S_0), .Y(), .FCO(
+        un1_i_cry_14_net_1));
+    CFG4 #( .INIT(16'h0208) )  
+        \un1_k_if_generate_plus.mult1_un1_sum_1.ANC2_0  (.A(ANC2_m3), 
+        .B(\mult1_un215_sum_1_SUM[4] ), .C(\valu[1]_net_1 ), .D(
+        \valu[2]_net_1 ), .Y(CO2));
+    SLE \i[6]  (.D(\i_lm[6] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[2]  (.A(\buff_2[2]_net_1 )
+        , .B(\i[0]_net_1 ), .C(\buff_3[2]_net_1 ), .Y(
+        \data_out_1_5_bm[2]_net_1 ));
+    CFG4 #( .INIT(16'h7080) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0_RNO_1  (.A(
+        \mult1_un187_sum_1_SUM[1] ), .B(\mult1_un187_sum_1_SUM[2] ), 
+        .C(d_N_4_1), .D(\mult1_un194_sum_1_SUM_1[4] ), .Y(d_N_11_mux_0)
+        );
+    ARI1 #( .INIT(20'h65500) )  \i_cry[1]  (.A(VCC_net_1), .B(
+        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[0]_net_1 ), .S(\i_s[1] ), .Y(), .FCO(\i_cry[1]_net_1 ));
+    CFG3 #( .INIT(8'hCA) )  \un1_angle[0]  (.A(
+        locator_control_0_angle1[0]), .B(\k[0]_net_1 ), .C(
+        \state[4]_net_1 ), .Y(\un1_angle[0]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[2]  (.A(VCC_net_1), .B(
+        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[1]_net_1 ), .S(\i_s[2] ), .Y(), .FCO(\i_cry[2]_net_1 ));
+    SLE \i[4]  (.D(\i_lm[4] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[10]  (.A(VCC_net_1), .B(
+        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[9]_net_1 ), .S(\i_s[10] ), .Y(), .FCO(\i_cry[10]_net_1 )
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_17 (.A(VCC_net_1), .B(
+        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_16_net_1), .S(un1_i_cry_17_S), .Y(), .FCO(
+        un1_i_cry_17_net_1));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[6]  (.A(VCC_net_1), .B(
+        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[5]_net_1 ), .S(\i_s[6] ), .Y(), .FCO(\i_cry[6]_net_1 ));
+    SLE \buff_3[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
+        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\buff_3[5] ));
+    CFG3 #( .INIT(8'hE2) )  \un1_time1[8]  (.A(pulse_meash_0_tim[8]), 
+        .B(\state[4]_net_1 ), .C(mult1_un166_sum_1_CO3), .Y(
+        \un1_time1[8]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_16 (.A(VCC_net_1), .B(
+        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_15_net_1), .S(un1_i_cry_16_S_0), .Y(), .FCO(
+        un1_i_cry_16_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_22 (.A(VCC_net_1), .B(
+        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_21_net_1), .S(un1_i_cry_22_S_0), .Y(), .FCO(
+        un1_i_cry_22_net_1));
+    CFG4 #( .INIT(16'hF0F4) )  \state_ns_0[0]  (.A(
+        pulse_meash_0_new_ready), .B(\state_ns_0_a3_3[0]_net_1 ), .C(
+        \state[0]_net_1 ), .D(\state[4]_net_1 ), .Y(\state_ns[0] ));
+    CFG4 #( .INIT(16'h7233) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0  (.A(
+        mult1_un194_sum_1_CO3_0_tz_0_1), .B(
+        mult1_un194_sum_1_CO3_0_tz_0_RNO), .C(\valu[5]_net_1 ), .D(
+        \mult1_un180_sum_1_SUM[1] ), .Y(mult1_un194_sum_1_CO3_0_tz));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[8]  (.A(\i_s[8] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[8] ));
+    SLE \i[19]  (.D(\i_lm[19] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[19]_net_1 ));
+    CFG4 #( .INIT(16'h24DB) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM[2]  (.A(
+        \valu[6]_net_1 ), .B(\valu[7]_net_1 ), .C(
+        \mult1_un180_sum_1_SUM[4] ), .D(\mult1_un180_sum_1_SUM[1] ), 
+        .Y(\mult1_un187_sum_1_SUM[2] ));
+    CFG4 #( .INIT(16'h336C) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_CO3_1_RNI8N0S  (.A(
+        mult1_un187_sum_1_CO2), .B(d_m1_2_0), .C(
+        \mult1_un180_sum_1_SUM[2] ), .D(mult1_un187_sum_1_CO3_0), .Y(
+        d_N_2_0));
+    SLE \data_out[4]  (.D(\data_out_1[5] ), .CLK(FCCC_0_GL0), .EN(
+        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        time_sender_0_data_out_5));
+    SLE \buff_1[3]  (.D(\un1_angle[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_1[3]_net_1 ));
+    CFG4 #( .INIT(16'h4EE4) )  \un1_time1[2]  (.A(\state[4]_net_1 ), 
+        .B(pulse_meash_0_tim[2]), .C(un1_i2_mux), .D(un1_m6_1_0), .Y(
+        \un1_time1[2]_net_1 ));
+    CFG3 #( .INIT(8'h2E) )  \un1_time1[6]  (.A(pulse_meash_0_tim[6]), 
+        .B(\state[4]_net_1 ), .C(\mult1_un180_sum_1_SUM[4] ), .Y(
+        \un1_time1[6]_net_1 ));
+    SLE \buff_2[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_2[1]_net_1 ));
+    CFG3 #( .INIT(8'h96) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM[1]  (.A(
+        \valu[9]_net_1 ), .B(\mult1_un159_sum_1_SUM[4] ), .C(
+        \valu[10]_net_1 ), .Y(\mult1_un166_sum_1_SUM[1] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_20 (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_19_net_1), .S(un1_i_cry_20_S), .Y(), .FCO(
+        un1_i_cry_20_net_1));
+    CFG4 #( .INIT(16'h5965) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[2]  (.A(
+        \mult1_un208_sum_1_SUM[1] ), .B(
+        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .C(\valu[2]_net_1 ), .D(
+        \valu[3]_net_1 ), .Y(\mult1_un215_sum_1_SUM[2] ));
+    CFG4 #( .INIT(16'h6669) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_0_0[4]  (.A(
+        \mult1_un201_sum_1_SUM[2] ), .B(\mult1_un201_sum_1_SUM_2[4] ), 
+        .C(mult1_un201_sum_1_CO3_0_0_1), .D(mult1_un201_sum_1_CO3_0_d), 
+        .Y(\mult1_un215_sum_1_SUM_0_0[4] ));
+    SLE \buff_2[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_2[3]_net_1 ));
+    CFG4 #( .INIT(16'h1441) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0_RNO_2  (.A(
+        N_3560_i), .B(\valu[4]_net_1 ), .C(mult1_un201_sum_1_CO3), .D(
+        \mult1_un201_sum_1_SUM_2[4] ), .Y(un1_m7_3_0));
+    CFG4 #( .INIT(16'hF4B0) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC3_0  (.A(
+        \mult1_un187_sum_1_SUM[4] ), .B(un1_m4_1_1), .C(
+        mult1_un201_sum_1_ANC3_0_RNO_0), .D(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK), .Y(
+        mult1_un201_sum_1_ANC3));
+    CFG4 #( .INIT(16'hB54A) )  
+        \un1_k_if_generate_plus.mult1_un1_sum_1.ANC2_m3  (.A(
+        \valu[2]_net_1 ), .B(\mult1_un215_sum_1_SUM[1] ), .C(
+        \mult1_un215_sum_1_SUM[2] ), .D(\mult1_un215_sum_1_SUM[3] ), 
+        .Y(ANC2_m3));
+    CFG4 #( .INIT(16'hD555) )  \state_RNO[5]  (.A(N_91), .B(
+        \state[4]_net_1 ), .C(\state_ns_i_a2[3]_net_1 ), .D(N_89), .Y(
+        N_85_i_0));
+    SLE \buff_3[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_3[2]_net_1 ));
+    CFG2 #( .INIT(4'h9) )  \valu_RNILKIF_0[11]  (.A(\valu[12]_net_1 ), 
+        .B(\valu[11]_net_1 ), .Y(\valu_RNILKIF_0[11]_net_1 ));
+    CFG4 #( .INIT(16'h4920) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_RNO  (.A(
+        \valu[6]_net_1 ), .B(\valu[7]_net_1 ), .C(
+        \mult1_un180_sum_1_SUM[4] ), .D(\mult1_un180_sum_1_SUM[1] ), 
+        .Y(mult1_un194_sum_1_CO3_0_tz_0_RNO));
+    SLE \i[24]  (.D(\i_lm[24] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[24]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_2 (.A(VCC_net_1), .B(
+        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_1_net_1), .S(un15_clklto2), .Y(), .FCO(
+        un1_i_cry_2_net_1));
+    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[1]  (.A(
+        \buff_5[1]_net_1 ), .B(\buff_4[1]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\data_out_1_5_am_1_1[1]_net_1 ), .Y(
+        \data_out_1_5_am[1]_net_1 ));
+    CFG4 #( .INIT(16'hE44E) )  \un1_time1[1]  (.A(\state[4]_net_1 ), 
+        .B(pulse_meash_0_tim[1]), .C(mult1_un215_sum_1_CO3), .D(
+        \mult1_un215_sum_1_SUM_0[4] ), .Y(\un1_time1[1]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[7]  (.A(\i_s[7] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[7] ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[13]  (.A(\i_s[13] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[13] ));
+    CFG3 #( .INIT(8'hD1) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_CO3_1  (.A(
+        \mult1_un159_sum_1_SUM[4] ), .B(
+        \mult1_un159_sum_1_SUM_RNIM44K4[4] ), .C(
+        \mult1_un159_sum_1_SUM[2] ), .Y(mult1_un166_sum_1_CO3));
+    CFG4 #( .INIT(16'h40C0) )  \i_8_iv_i_a3[0]  (.A(un15_clklto2), .B(
+        \state_ns_i_a2[3]_net_1 ), .C(\i[0]_net_1 ), .D(un15_clklto1), 
+        .Y(N_96));
+    CFG4 #( .INIT(16'h9669) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1_RNI5BNN3  (.A(
+        \valu_RNI32OE1[13]_net_1 ), .B(\mult1_un159_sum_1_SUM_2_1[4] ), 
+        .C(mult1_un159_sum_1_CO3), .D(\mult1_un159_sum_1_SUM[1] ), .Y(
+        un1_N_5_i_1));
+    SLE \i[14]  (.D(\i_lm[14] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[14]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[3]  (.A(VCC_net_1), .B(
+        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[2]_net_1 ), .S(\i_s[3] ), .Y(), .FCO(\i_cry[3]_net_1 ));
+    SLE \state[2]  (.D(N_431_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[2]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  un1_rst_n_inv_i_a3 (.A(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .B(FCCC_0_LOCK), .Y(
+        un1_rst_n_inv_i_a3_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_3 (.A(VCC_net_1), .B(
+        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_2_net_1), .S(un1_i_cry_3_S_0), .Y(), .FCO(
+        un1_i_cry_3_net_1));
+    CFG4 #( .INIT(16'h444F) )  \valu_RNI32OE1[13]  (.A(
+        \valu_RNINMIF[13]_net_1 ), .B(un1_N_3_mux), .C(
+        \valu[13]_net_1 ), .D(\valu[12]_net_1 ), .Y(
+        \valu_RNI32OE1[13]_net_1 ));
+    CFG4 #( .INIT(16'hF4B0) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO2_0_d_0  (.A(
+        \mult1_un187_sum_1_SUM[4] ), .B(un1_N_7_mux_0), .C(
+        mult1_un201_sum_1_CO2_0_d_0_RNO_0), .D(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK), .Y(
+        mult1_un201_sum_1_CO2_0_d));
+    CFG4 #( .INIT(16'h8000) )  \state_ns_i_a2_21[3]  (.A(
+        \state_ns_i_a2_12[3]_net_1 ), .B(\state_ns_i_a2_13[3]_net_1 ), 
+        .C(\state_ns_i_a2_14[3]_net_1 ), .D(
+        \state_ns_i_a2_15[3]_net_1 ), .Y(\state_ns_i_a2_21[3]_net_1 ));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_1_RNO  (
+        .A(\mult1_un180_sum_1_SUM_0[3] ), .B(\valu[6]_net_1 ), .C(
+        mult1_un180_sum_1_CO2), .Y(mult1_un194_sum_1_CO3_0_tz_0_1_RNO));
+    CFG3 #( .INIT(8'h96) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_CO3_1_RNI1HJB3  (.A(
+        \valu_RNI32OE1[13]_net_1 ), .B(mult1_un159_sum_1_CO3), .C(
+        \mult1_un159_sum_1_SUM_2_1[4] ), .Y(
+        mult1_un159_sum_1_CO3_1_RNI1HJB3));
+    SLE \state[1]  (.D(N_84_tz_i), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
+    CFG4 #( .INIT(16'hC0AF) )  \data_out_1_5_am[2]  (.A(
+        \buff_5[2]_net_1 ), .B(\buff_4[2]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\data_out_1_5_am_1_1[2]_net_1 ), .Y(
+        \data_out_1_5_am[2]_net_1 ));
+    CFG2 #( .INIT(4'h9) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK  
+        (.A(mult1_un194_sum_1_CO3_0_tz), .B(
+        \mult1_un194_sum_1_SUM_1[4] ), .Y(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIBNRK));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[4]  (.A(VCC_net_1), .B(
+        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[3]_net_1 ), .S(\i_s[4] ), .Y(), .FCO(\i_cry[4]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[22]  (.A(\i_s[22] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[22] ));
+    SLE \i[5]  (.D(\i_lm[5] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
+    CFG3 #( .INIT(8'hA8) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_c  (.A(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
+        mult1_un201_sum_1_CO2_0_d), .C(mult1_un201_sum_1_CO3_0_tz_s_0), 
+        .Y(mult1_un201_sum_1_CO3_0_c));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[9]  (.A(\i_s[9] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[9] ));
+    SLE \i[8]  (.D(\i_lm[8] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
+    SLE \buff_1[2]  (.D(\un1_angle[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_1[2]_net_1 ));
+    SLE \buff_4[3]  (.D(\k[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_4_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_4[3]_net_1 ));
+    CFG3 #( .INIT(8'hCA) )  \un1_angle[3]  (.A(
+        locator_control_0_angle1[3]), .B(\k[3]_net_1 ), .C(
+        \state[4]_net_1 ), .Y(\un1_angle[3]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[21]  (.A(\i_s[21] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[21] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[13]  (.A(VCC_net_1), .B(
+        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[12]_net_1 ), .S(\i_s[13] ), .Y(), .FCO(
+        \i_cry[13]_net_1 ));
+    SLE \valu[6]  (.D(\un1_time1[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[6]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[5]  (.A(\i_s[5] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[5] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_25 (.A(VCC_net_1), .B(
+        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_24_net_1), .S(un1_i_cry_25_S_0), .Y(), .FCO(
+        un1_i_cry_25_net_1));
+    CFG4 #( .INIT(16'h00EF) )  \state_RNO[3]  (.A(\state[1]_net_1 ), 
+        .B(\state[4]_net_1 ), .C(N_90), .D(N_93), .Y(N_10_i_0));
+    CFG2 #( .INIT(4'h8) )  \state_RNI45AA[5]  (.A(FCCC_0_LOCK), .B(
+        \state[5]_net_1 ), .Y(N_87_i_0));
+    CFG4 #( .INIT(16'h14EB) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM_RNIU8O02[2]  (.A(
+        un1_m8_1_1), .B(\mult1_un159_sum_1_SUM[4] ), .C(
+        \mult1_un159_sum_1_SUM[1] ), .D(\mult1_un159_sum_1_SUM[2] ), 
+        .Y(un1_m8_1));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[14]  (.A(\i_s[14] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[14] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[5]  (.A(VCC_net_1), .B(
+        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[4]_net_1 ), .S(\i_s[5] ), .Y(), .FCO(\i_cry[5]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \un1_time1[7]  (.A(pulse_meash_0_tim[7]), 
+        .B(\state[4]_net_1 ), .C(\mult1_un166_sum_1_SUM_RNIQ5884[1] ), 
+        .Y(\un1_time1[7]_net_1 ));
+    CFG3 #( .INIT(8'h80) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_d  (.A(
+        mult1_un201_sum_1_CO1), .B(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .C(
+        \mult1_un194_sum_1_SUM[1] ), .Y(mult1_un201_sum_1_CO3_0_d));
+    CFG3 #( .INIT(8'h69) )  \un24_k_v[0]  (.A(\valu[1]_net_1 ), .B(
+        \mult1_un222_sum_1_SUM_0[4] ), .C(mult1_un222_sum_1_CO3), .Y(
+        \un24_k_v[0]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_17[3]  (.A(
+        un1_i_cry_22_S_0), .B(un1_i_cry_23_S_0), .C(un1_i_cry_24_S_0), 
+        .D(un1_i_cry_25_S_0), .Y(\state_ns_i_a2_17[3]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \valu_RNO[12]  (.A(\state[4]_net_1 ), .B(
+        pulse_meash_0_tim[12]), .Y(\valu_RNO[12]_net_1 ));
+    SLE \valu[12]  (.D(\valu_RNO[12]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[12]_net_1 ));
+    CFG3 #( .INIT(8'h06) )  \valu_RNI7VU53[5]  (.A(\valu[5]_net_1 ), 
+        .B(mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .C(un1_N_5_i_2), .Y(
+        un1_i3_mux_0));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_13 (.A(VCC_net_1), .B(
+        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_12_net_1), .S(un1_i_cry_13_S_0), .Y(), .FCO(
+        un1_i_cry_13_net_1));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[9]  (.A(VCC_net_1), .B(
+        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[8]_net_1 ), .S(\i_s[9] ), .Y(), .FCO(\i_cry[9]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[21]  (.A(VCC_net_1), .B(
+        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[20]_net_1 ), .S(\i_s[21] ), .Y(), .FCO(
+        \i_cry[21]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[0]  (.A(\buff_2[0]_net_1 )
+        , .B(\i[0]_net_1 ), .C(\buff_3[0]_net_1 ), .Y(
+        \data_out_1_5_bm[0]_net_1 ));
+    CFG4 #( .INIT(16'h3A30) )  \i_lm_0[0]  (.A(\i_cry_Y_0[0] ), .B(
+        N_96), .C(\state[4]_net_1 ), .D(N_91), .Y(\i_lm[0] ));
+    SLE \buff_3[1]  (.D(\k[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_3_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_3[1]_net_1 ));
+    SLE \i[3]  (.D(\i_lm[3] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
+    CFG3 #( .INIT(8'h69) )  \valu_RNICB5V[13]  (.A(\valu[12]_net_1 ), 
+        .B(un1_N_3_mux), .C(\valu[13]_net_1 ), .Y(
+        \valu_RNICB5V[13]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[4]  (.A(\i_s[4] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[4] ));
+    CFG3 #( .INIT(8'h45) )  \valu_RNI4LJS4[9]  (.A(\valu[9]_net_1 ), 
+        .B(\valu[8]_net_1 ), .C(un1_N_5_1), .Y(mult1_un173_sum_1_CO1_0)
+        );
+    SLE \valu[2]  (.D(\un1_time1[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[2]_net_1 ));
+    CFG4 #( .INIT(16'h7EBE) )  
+        \un1_k_if_generate_plus.mult1_un194_sum_1_CO3_0_tz_0_1  (.A(
+        mult1_un194_sum_1_CO3_0_tz_0_1_RNO), .B(
+        \mult1_un180_sum_1_SUM[4] ), .C(\valu[7]_net_1 ), .D(
+        \mult1_un180_sum_1_SUM[2] ), .Y(mult1_un194_sum_1_CO3_0_tz_0_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_24 (.A(VCC_net_1), .B(
+        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_23_net_1), .S(un1_i_cry_24_S_0), .Y(), .FCO(
+        un1_i_cry_24_net_1));
+    CFG2 #( .INIT(4'h8) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_ANC2  (.A(
+        mult1_un201_sum_1_CO1), .B(\mult1_un194_sum_1_SUM[1] ), .Y(
+        mult1_un201_sum_1_ANC2));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_11 (.A(VCC_net_1), .B(
+        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_10_net_1), .S(un1_i_cry_11_S_0), .Y(), .FCO(
+        un1_i_cry_11_net_1));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[16]  (.A(VCC_net_1), .B(
+        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[15]_net_1 ), .S(\i_s[16] ), .Y(), .FCO(
+        \i_cry[16]_net_1 ));
+    SLE \buff_5[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
+        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\buff_5[5] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[8]  (.A(VCC_net_1), .B(
+        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[7]_net_1 ), .S(\i_s[8] ), .Y(), .FCO(\i_cry[8]_net_1 ));
+    CFG4 #( .INIT(16'h9024) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_0  (.A(
+        \valu[3]_net_1 ), .B(\valu[4]_net_1 ), .C(N_3560_i), .D(
+        \mult1_un201_sum_1_SUM[4] ), .Y(mult1_un215_sum_1_ANC3_0_RNO_0)
+        );
+    ARI1 #( .INIT(20'h65500) )  \i_cry[0]  (.A(VCC_net_1), .B(
+        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(GND_net_1), 
+        .S(), .Y(\i_cry_Y_0[0] ), .FCO(\i_cry[0]_net_1 ));
+    SLE \valu[1]  (.D(\un1_time1[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_i_a3_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \valu[1]_net_1 ));
+    SLE \buff_2[4]  (.D(\k[5] ), .CLK(FCCC_0_GL0), .EN(
+        buff_2_1_sqmuxa_1_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_2[5] ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_14[5]  (.A(
+        \i[7]_net_1 ), .B(\i[6]_net_1 ), .C(\i[4]_net_1 ), .D(
+        \i[3]_net_1 ), .Y(\state_ns_i_0_a2_14[5]_net_1 ));
+    CFG4 #( .INIT(16'hE44E) )  \un1_time1[3]  (.A(\state[4]_net_1 ), 
+        .B(pulse_meash_0_tim[3]), .C(mult1_un201_sum_1_CO3), .D(
+        \mult1_un201_sum_1_SUM_2[4] ), .Y(\un1_time1[3]_net_1 ));
+    SLE \i[1]  (.D(\i_lm[1] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un173_sum_1_SUM[1]  (.A(
+        \valu[9]_net_1 ), .B(\valu[8]_net_1 ), .C(
+        mult1_un166_sum_1_CO3), .Y(\mult1_un173_sum_1_SUM[1] ));
+    CFG4 #( .INIT(16'hDB24) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_tz_s_0_RNO_1  
+        (.A(\valu[5]_net_1 ), .B(\valu[6]_net_1 ), .C(
+        \mult1_un187_sum_1_SUM[4] ), .D(\mult1_un187_sum_1_SUM[1] ), 
+        .Y(d_N_19));
+    CFG4 #( .INIT(16'h24DB) )  
+        \un1_k_if_generate_plus.mult1_un166_sum_1_SUM[2]  (.A(
+        \valu[9]_net_1 ), .B(\valu[10]_net_1 ), .C(
+        \mult1_un159_sum_1_SUM[4] ), .D(\mult1_un159_sum_1_SUM[1] ), 
+        .Y(\mult1_un166_sum_1_SUM[2] ));
+    CFG2 #( .INIT(4'h4) )  \valu_RNIPTUG[4]  (.A(\valu[5]_net_1 ), .B(
+        \valu[4]_net_1 ), .Y(d_m12_0_a3_0));
+    CFG4 #( .INIT(16'h2000) )  \state_ns_i_a3_0[3]  (.A(N_90), .B(
+        \state[1]_net_1 ), .C(\state_ns_i_a2[3]_net_1 ), .D(N_89), .Y(
+        N_93));
+    CFG4 #( .INIT(16'h05F3) )  \data_out_1_5_am_1_1[1]  (.A(
+        \buff_1[1]_net_1 ), .B(\buff_0[1]_net_1 ), .C(\i[2]_net_1 ), 
+        .D(\i[0]_net_1 ), .Y(\data_out_1_5_am_1_1[1]_net_1 ));
+    CFG4 #( .INIT(16'hFAF8) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO3_0_0_1  (.A(
+        mult1_un194_sum_1_CO3_0_tz_0_RNIU7S42), .B(
+        mult1_un201_sum_1_CO2_0_d), .C(mult1_un201_sum_1_ANC3), .D(
+        mult1_un201_sum_1_CO3_0_tz_s_0), .Y(
+        mult1_un201_sum_1_CO3_0_0_1));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_0_a2_15[5]  (.A(
+        \i[17]_net_1 ), .B(\i[16]_net_1 ), .C(\i[13]_net_1 ), .D(
+        \i[12]_net_1 ), .Y(\state_ns_i_0_a2_15[5]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  \state_ns_i_a2_13[3]  (.A(
+        un1_i_cry_7_S_0), .B(un1_i_cry_8_S), .C(un1_i_cry_9_S_0), .D(
+        un1_i_cry_10_S_0), .Y(\state_ns_i_a2_13[3]_net_1 ));
+    SLE \buff_1[0]  (.D(\un1_angle[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        un1_rst_n_inv_2_i_0_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_1[0]_net_1 ));
+    CFG4 #( .INIT(16'h6996) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM_0[4]  (.A(
+        \mult1_un215_sum_1_SUM_0_0[4] ), .B(un1_m6_1_0), .C(
+        mult1_un208_sum_1_CO2), .D(un1_i2_mux), .Y(
+        \mult1_un215_sum_1_SUM_0[4] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[22]  (.A(VCC_net_1), .B(
+        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[21]_net_1 ), .S(\i_s[22] ), .Y(), .FCO(
+        \i_cry[22]_net_1 ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[17]  (.A(\i_s[17] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[17] ));
+    CFG3 #( .INIT(8'h1E) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_SUM[4]  (.A(
+        mult1_un215_sum_1_CO3_0), .B(mult1_un215_sum_1_ANC3), .C(
+        \mult1_un215_sum_1_SUM_0[4] ), .Y(\mult1_un215_sum_1_SUM[4] ));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[23]  (.A(\i_s[23] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[23] ));
+    CFG3 #( .INIT(8'h69) )  
+        \un1_k_if_generate_plus.mult1_un187_sum_1_SUM_0[4]  (.A(
+        mult1_un180_sum_1_CO2), .B(\mult1_un180_sum_1_SUM_0[3] ), .C(
+        \mult1_un180_sum_1_SUM[4] ), .Y(\mult1_un187_sum_1_SUM_0[4] ));
+    ARI1 #( .INIT(20'h65500) )  \i_cry[19]  (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[18]_net_1 ), .S(\i_s[19] ), .Y(), .FCO(
+        \i_cry[19]_net_1 ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[2]  (.A(
+        \data_out_1_5_am[2]_net_1 ), .B(\i[1]_net_1 ), .C(
+        \data_out_1_5_bm[2]_net_1 ), .Y(\data_out_1[2] ));
+    ARI1 #( .INIT(20'h4AA00) )  un1_i_cry_19 (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un1_i_cry_18_net_1), .S(un1_i_cry_19_S_0), .Y(), .FCO(
+        un1_i_cry_19_net_1));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_bm[4]  (.A(\buff_2[5] ), .B(
+        \i[0]_net_1 ), .C(\buff_3[5] ), .Y(\data_out_1_5_bm[4]_net_1 ));
+    SLE \data_out[0]  (.D(\data_out_1[0] ), .CLK(FCCC_0_GL0), .EN(
+        data_out_0_sqmuxa), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        time_sender_0_data_out_0));
+    SLE \i[18]  (.D(\i_lm[18] ), .CLK(FCCC_0_GL0), .EN(N_84_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[18]_net_1 ));
+    CFG4 #( .INIT(16'h1428) )  \valu_RNI7QM15[7]  (.A(\valu[8]_net_1 ), 
+        .B(\valu[7]_net_1 ), .C(\valu[6]_net_1 ), .D(
+        \mult1_un166_sum_1_SUM_RNIQ5884[1] ), .Y(un1_i1_mux));
+    CFG4 #( .INIT(16'hA030) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_CO3_0  (.A(
+        \valu[2]_net_1 ), .B(mult1_un215_sum_1_CO3_0_RNO), .C(
+        \mult1_un194_sum_1_SUM_RNIMGHHA[2] ), .D(un1_i5_mux_0), .Y(
+        mult1_un215_sum_1_CO3_0));
+    CFG2 #( .INIT(4'h2) )  \i_lm_0[15]  (.A(\i_s[15] ), .B(
+        \un1_clk_inv_i_0_o3[0]_net_1 ), .Y(\i_lm[15] ));
+    CFG3 #( .INIT(8'h96) )  
+        \un1_k_if_generate_plus.mult1_un159_sum_1_SUM[1]  (.A(
+        \valu[10]_net_1 ), .B(\valu_RNI32OE1[13]_net_1 ), .C(
+        \valu[11]_net_1 ), .Y(\mult1_un159_sum_1_SUM[1] ));
+    CFG3 #( .INIT(8'hE2) )  \data_out_1_5_ns[4]  (.A(
+        \data_out_1_5_am[4]_net_1 ), .B(\i[1]_net_1 ), .C(
+        \data_out_1_5_bm[4]_net_1 ), .Y(\data_out_1[5] ));
+    CFG3 #( .INIT(8'hF6) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_CO1_1_RNO  (.A(
+        \valu[4]_net_1 ), .B(\valu[5]_net_1 ), .C(
+        \mult1_un187_sum_1_SUM[4] ), .Y(un1_m8_i_0));
+    SLE \buff_5[2]  (.D(\k[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        buff_5_1_sqmuxa_net_1), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \buff_5[2]_net_1 ));
+    CFG4 #( .INIT(16'h7DD7) )  
+        \un1_k_if_generate_plus.mult1_un215_sum_1_ANC3_0_RNO_1  (.A(
+        N_3560_i), .B(\mult1_un194_sum_1_SUM[2] ), .C(un1_m7_i_0_1), 
+        .D(un1_N_8), .Y(un1_m7_i_0));
+    CFG3 #( .INIT(8'h96) )  
+        \un1_k_if_generate_plus.mult1_un201_sum_1_SUM_1_RNIS7JO[1]  (
+        .A(\valu[3]_net_1 ), .B(\mult1_un201_sum_1_SUM_1[1] ), .C(
+        mult1_un194_sum_1_ANC3_0_1), .Y(un1_N_5_i_2));
+    
+endmodule
+
+
+module BT_module(
+       BT_module_0_data_buf,
+       rx_dout_reg,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       BT_module_0_oen,
+       COREUART_0_RXRDY
+    );
+output [7:0] BT_module_0_data_buf;
+input  [7:0] rx_dout_reg;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+output BT_module_0_oen;
+input  COREUART_0_RXRDY;
+
+    wire GND_net_1, \TX_RX_repiter[0]_net_1 , VCC_net_1, 
+        \TX_RX_repiter_ns[0] , \TX_RX_repiter[1]_net_1 , N_19_i_0;
+    
+    SLE \data_buf[4]  (.D(rx_dout_reg[4]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[4]));
+    SLE \TX_RX_repiter[1]  (.D(\TX_RX_repiter[0]_net_1 ), .CLK(
+        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
+        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \TX_RX_repiter[1]_net_1 ));
+    GND GND (.Y(GND_net_1));
+    SLE \data_buf[1]  (.D(rx_dout_reg[1]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[1]));
+    SLE \data_buf[3]  (.D(rx_dout_reg[3]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[3]));
+    CFG3 #( .INIT(8'h02) )  \TX_RX_repiter_ns_0_a2[0]  (.A(
+        COREUART_0_RXRDY), .B(\TX_RX_repiter[1]_net_1 ), .C(
+        \TX_RX_repiter[0]_net_1 ), .Y(\TX_RX_repiter_ns[0] ));
+    SLE \data_buf[0]  (.D(rx_dout_reg[0]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[0]));
+    VCC VCC (.Y(VCC_net_1));
+    SLE \TX_RX_repiter[0]  (.D(\TX_RX_repiter_ns[0] ), .CLK(FCCC_0_GL0)
+        , .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \TX_RX_repiter[0]_net_1 ));
+    SLE \data_buf[6]  (.D(rx_dout_reg[6]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[6]));
+    SLE \data_buf[5]  (.D(rx_dout_reg[5]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[5]));
+    SLE oen (.D(\TX_RX_repiter[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        N_19_i_0), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), 
+        .SD(GND_net_1), .LAT(GND_net_1), .Q(BT_module_0_oen));
+    CFG2 #( .INIT(4'hE) )  oen_RNO (.A(\TX_RX_repiter[0]_net_1 ), .B(
+        \TX_RX_repiter[1]_net_1 ), .Y(N_19_i_0));
+    SLE \data_buf[7]  (.D(rx_dout_reg[7]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[7]));
+    SLE \data_buf[2]  (.D(rx_dout_reg[2]), .CLK(FCCC_0_GL0), .EN(
+        \TX_RX_repiter[0]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        BT_module_0_data_buf[2]));
+    
+endmodule
+
+
+module servo_driver(
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       SERVO_PWM_c,
+       un46_clk_0,
+       un46_clk_1,
+       un46_clk_2,
+       un46_clk_3,
+       N_234_0
+    );
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+output SERVO_PWM_c;
+input  un46_clk_0;
+input  un46_clk_1;
+input  un46_clk_2;
+input  un46_clk_3;
+input  N_234_0;
+
+    wire un11_clk_13, VCC_net_1, un5_pulse_length_cry_12_S, 
+        \state_d[2] , GND_net_1, un11_clk_14, 
+        un5_pulse_length_cry_12_net_1, un11_clk_0, \P[0] , un11_clk_1, 
+        un5_pulse_length_cry_0_Y, un11_clk_2, un5_pulse_length_cry_1_S, 
+        un11_clk_3, un5_pulse_length_cry_2_S, un11_clk_4, 
+        un5_pulse_length_cry_3_S, un11_clk_5, un5_pulse_length_cry_4_S, 
+        un11_clk_6, un5_pulse_length_cry_5_S, un11_clk_7, 
+        un5_pulse_length_cry_6_S, un11_clk_8, un5_pulse_length_cry_7_S, 
+        un11_clk_9, un5_pulse_length_cry_8_S, un11_clk_10, 
+        un5_pulse_length_cry_9_S, un11_clk_11, 
+        un5_pulse_length_cry_10_S, un11_clk_12, 
+        un5_pulse_length_cry_11_S, \state[0]_net_1 , N_67_i_0, 
+        \state[1]_net_1 , \state_ns[1] , \state_d_i_0[2] , 
+        \i[0]_net_1 , \i_lm[0] , \i[1]_net_1 , \i_lm[1] , \i[2]_net_1 , 
+        \i_lm[2] , \i[3]_net_1 , \i_lm[3] , \i[4]_net_1 , \i_lm[4] , 
+        \i[5]_net_1 , \i_lm[5] , \i[6]_net_1 , \i_lm[6] , \i[7]_net_1 , 
+        \i_lm[7] , \i[8]_net_1 , \i_lm[8] , \i[9]_net_1 , \i_lm[9] , 
+        \i[10]_net_1 , \i_lm[10] , \i[11]_net_1 , \i_lm[11] , 
+        \i[12]_net_1 , \i_lm[12] , \i[13]_net_1 , \i_lm[13] , 
+        \i[14]_net_1 , \i_lm[14] , \i[15]_net_1 , \i_lm[15] , 
+        \i[16]_net_1 , \i_lm[16] , \i[17]_net_1 , \i_lm[17] , 
+        \i[18]_net_1 , \i_lm[18] , \i[19]_net_1 , \i_lm[19] , 
+        \i[20]_net_1 , \i_lm[20] , \i[21]_net_1 , \i_lm[21] , 
+        \i[22]_net_1 , \i_lm[22] , \i[23]_net_1 , \i_lm[23] , 
+        \i[24]_net_1 , \i_lm[24] , \i[25]_net_1 , \i_lm[25] , 
+        \i[26]_net_1 , \i_lm[26] , \i[27]_net_1 , \i_lm[27] , 
+        \i[28]_net_1 , \i_lm[28] , \i[29]_net_1 , \i_lm[29] , 
+        \i[30]_net_1 , \i_lm[30] , un5_pulse_length_cry_0_net_1, 
+        un5_pulse_length, un5_pulse_length_cry_1_net_1, \P[2] , 
+        un5_pulse_length_cry_2_net_1, un5_pulse_length_axb_2, 
+        un5_pulse_length_cry_3_net_1, un5_pulse_length_axb_3, 
+        un5_pulse_length_cry_4_net_1, \P[5] , 
+        un5_pulse_length_cry_5_net_1, un5_pulse_length_axb_5, 
+        un5_pulse_length_cry_6_net_1, \P[7] , 
+        un5_pulse_length_cry_7_net_1, un5_pulse_length_axb_7, 
+        un5_pulse_length_cry_8_net_1, \P[9] , 
+        un5_pulse_length_cry_9_net_1, \P[10] , 
+        un5_pulse_length_cry_10_net_1, \P[11] , 
+        un5_pulse_length_cry_11_net_1, un5_pulse_length_axb_11, 
+        un5_pulse_length_axb_12, un11_clk_cry_3_net_1, 
+        un11_clk_cry_4_net_1, un11_clk_cry_5_net_1, 
+        un11_clk_cry_6_net_1, un11_clk_cry_7_net_1, 
+        un11_clk_cry_8_net_1, un11_clk_cry_9_net_1, 
+        un11_clk_cry_10_net_1, un11_clk_cry_11_net_1, 
+        un11_clk_cry_12_net_1, un11_clk_cry_13_net_1, 
+        un11_clk_cry_14_net_1, un11_clk_cry_15_net_1, 
+        un11_clk_cry_16_net_1, un11_clk_cry_17_net_1, 
+        un11_clk_cry_18_net_1, un11_clk_cry_19_net_1, 
+        un11_clk_cry_20_net_1, un11_clk_cry_21_net_1, 
+        un11_clk_cry_22_net_1, un11_clk_cry_23_net_1, 
+        un11_clk_cry_24_net_1, un11_clk_cry_25_net_1, 
+        un11_clk_cry_26_net_1, un11_clk_cry_27_net_1, 
+        un11_clk_cry_28_net_1, un11_clk_cry_29_net_1, 
+        un11_clk_cry_30_net_1, i_s_321_FCO, \i_cry[1]_net_1 , \i_s[1] , 
+        \i_cry[2]_net_1 , \i_s[2] , \i_cry[3]_net_1 , \i_s[3] , 
+        \i_cry[4]_net_1 , \i_s[4] , \i_cry[5]_net_1 , \i_s[5] , 
+        \i_cry[6]_net_1 , \i_s[6] , \i_cry[7]_net_1 , \i_s[7] , 
+        \i_cry[8]_net_1 , \i_s[8] , \i_cry[9]_net_1 , \i_s[9] , 
+        \i_cry[10]_net_1 , \i_s[10] , \i_cry[11]_net_1 , \i_s[11] , 
+        \i_cry[12]_net_1 , \i_s[12] , \i_cry[13]_net_1 , \i_s[13] , 
+        \i_cry[14]_net_1 , \i_s[14] , \i_cry[15]_net_1 , \i_s[15] , 
+        \i_cry[16]_net_1 , \i_s[16] , \i_cry[17]_net_1 , \i_s[17] , 
+        \i_cry[18]_net_1 , \i_s[18] , \i_cry[19]_net_1 , \i_s[19] , 
+        \i_cry[20]_net_1 , \i_s[20] , \i_cry[21]_net_1 , \i_s[21] , 
+        \i_cry[22]_net_1 , \i_s[22] , \i_cry[23]_net_1 , \i_s[23] , 
+        \i_cry[24]_net_1 , \i_s[24] , \i_cry[25]_net_1 , \i_s[25] , 
+        \i_cry[26]_net_1 , \i_s[26] , \i_cry[27]_net_1 , \i_s[27] , 
+        \i_cry[28]_net_1 , \i_s[28] , \i_s[30]_net_1 , 
+        \i_cry[29]_net_1 , \i_s[29] , un1_state_0_sqmuxa_0_net_1, 
+        un17_clklto30_7_net_1, un17_clklto30_6_net_1, 
+        un17_clklto19_2_net_1, un17_clklto13_2_net_1, 
+        un17_clklto30_8_net_1, un17_clklt13, un17_clklt19, 
+        un17_clklto30_net_1;
+    
+    SLE \state[0]  (.D(N_67_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[0]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_4 (.A(VCC_net_1), 
+        .B(\P[5] ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_3_net_1), .S(un5_pulse_length_cry_4_S), 
+        .Y(), .FCO(un5_pulse_length_cry_4_net_1));
+    SLE \pulse_length[16]  (.D(un5_pulse_length_cry_12_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_13));
+    SLE \i[7]  (.D(\i_lm[7] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
+    SLE \i[16]  (.D(\i_lm[16] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[16]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[14]  (.A(VCC_net_1), .B(
+        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[13]_net_1 ), .S(\i_s[14] ), .Y(), .FCO(
+        \i_cry[14]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_27 (.A(VCC_net_1), .B(
+        \i[27]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_26_net_1), .S(), .Y(), .FCO(un11_clk_cry_27_net_1)
+        );
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[24]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[24] ), .Y(\i_lm[24] ));
+    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_11 (.A(VCC_net_1), 
+        .B(un5_pulse_length_axb_11), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(un5_pulse_length_cry_10_net_1), .S(
+        un5_pulse_length_cry_11_S), .Y(), .FCO(
+        un5_pulse_length_cry_11_net_1));
+    SLE \pulse_length[5]  (.D(un5_pulse_length_cry_1_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_2));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_20 (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_19_net_1), .S(), .Y(), .FCO(un11_clk_cry_20_net_1)
+        );
+    SLE \i[21]  (.D(\i_lm[21] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[21]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[20]  (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[19]_net_1 ), .S(\i_s[20] ), .Y(), .FCO(
+        \i_cry[20]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_16 (.A(un11_clk_13), .B(
+        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_15_net_1), .S(), .Y(), .FCO(un11_clk_cry_16_net_1)
+        );
+    SLE \i[0]  (.D(\i_lm[0] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
+    SLE \i[11]  (.D(\i_lm[11] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[11]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_13 (.A(un11_clk_10), .B(
+        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_12_net_1), .S(), .Y(), .FCO(un11_clk_cry_13_net_1)
+        );
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[2]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[2] ), .Y(\i_lm[2] ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_24 (.A(VCC_net_1), .B(
+        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_23_net_1), .S(), .Y(), .FCO(un11_clk_cry_24_net_1)
+        );
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_3 (.A(un11_clk_0), .B(
+        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(GND_net_1), 
+        .S(), .Y(), .FCO(un11_clk_cry_3_net_1));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_18 (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_17_net_1), .S(), .Y(), .FCO(un11_clk_cry_18_net_1)
+        );
+    CFG4 #( .INIT(16'h5557) )  un17_clklto9 (.A(\i[9]_net_1 ), .B(
+        \i[8]_net_1 ), .C(\i[7]_net_1 ), .D(\i[6]_net_1 ), .Y(
+        un17_clklt13));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[27]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[27] ), .Y(\i_lm[27] ));
+    CFG4 #( .INIT(16'h0001) )  un17_clklto30_7 (.A(\i[26]_net_1 ), .B(
+        \i[25]_net_1 ), .C(\i[24]_net_1 ), .D(\i[23]_net_1 ), .Y(
+        un17_clklto30_7_net_1));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[25]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[25] ), .Y(\i_lm[25] ));
+    GND GND (.Y(GND_net_1));
+    SLE \i[23]  (.D(\i_lm[23] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[23]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_12 (.A(VCC_net_1), 
+        .B(un5_pulse_length_axb_12), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(un5_pulse_length_cry_11_net_1), .S(
+        un5_pulse_length_cry_12_S), .Y(), .FCO(
+        un5_pulse_length_cry_12_net_1));
+    CFG2 #( .INIT(4'h2) )  \i_RNO[0]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i[0]_net_1 ), .Y(\i_lm[0] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[23]  (.A(VCC_net_1), .B(
+        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[22]_net_1 ), .S(\i_s[23] ), .Y(), .FCO(
+        \i_cry[23]_net_1 ));
+    SLE \i[13]  (.D(\i_lm[13] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[13]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_7 (.A(un11_clk_4), .B(
+        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_6_net_1), .S(), .Y(), .FCO(un11_clk_cry_7_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[15]  (.A(VCC_net_1), .B(
+        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[14]_net_1 ), .S(\i_s[15] ), .Y(), .FCO(
+        \i_cry[15]_net_1 ));
+    SLE \pulse_length[10]  (.D(un5_pulse_length_cry_6_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_7));
+    SLE \i[27]  (.D(\i_lm[27] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[27]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_22 (.A(VCC_net_1), .B(
+        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_21_net_1), .S(), .Y(), .FCO(un11_clk_cry_22_net_1)
+        );
+    SLE \pulse_length[14]  (.D(un5_pulse_length_cry_10_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_11));
+    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_2 (.A(VCC_net_1), 
+        .B(un5_pulse_length_axb_2), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_1_net_1), .S(un5_pulse_length_cry_2_S), 
+        .Y(), .FCO(un5_pulse_length_cry_2_net_1));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[10]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[10] ), .Y(\i_lm[10] ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_9 (.A(un11_clk_6), .B(
+        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_8_net_1), .S(), .Y(), .FCO(un11_clk_cry_9_net_1));
+    SLE \i[17]  (.D(\i_lm[17] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[17]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  un17_clklto13_2 (.A(\i[13]_net_1 ), .B(
+        \i[12]_net_1 ), .C(\i[11]_net_1 ), .D(\i[10]_net_1 ), .Y(
+        un17_clklto13_2_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[26]  (.A(VCC_net_1), .B(
+        \i[26]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[25]_net_1 ), .S(\i_s[26] ), .Y(), .FCO(
+        \i_cry[26]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[17]  (.A(VCC_net_1), .B(
+        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[16]_net_1 ), .S(\i_s[17] ), .Y(), .FCO(
+        \i_cry[17]_net_1 ));
+    CFG4 #( .INIT(16'hA080) )  un17_clklto30 (.A(un17_clklto30_8_net_1)
+        , .B(un17_clklt19), .C(un17_clklto30_7_net_1), .D(
+        un17_clklto19_2_net_1), .Y(un17_clklto30_net_1));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[18]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[18] ), .Y(\i_lm[18] ));
+    SLE \i[9]  (.D(\i_lm[9] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_0 (.A(VCC_net_1), 
+        .B(un5_pulse_length), .C(GND_net_1), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(un5_pulse_length_cry_0_Y), .FCO(
+        un5_pulse_length_cry_0_net_1));
+    VCC VCC (.Y(VCC_net_1));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_1 (.A(VCC_net_1), 
+        .B(\P[2] ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_0_net_1), .S(un5_pulse_length_cry_1_S), 
+        .Y(), .FCO(un5_pulse_length_cry_1_net_1));
+    SLE \pulse_length[8]  (.D(un5_pulse_length_cry_4_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_5));
+    SLE \pulse_length[7]  (.D(un5_pulse_length_cry_3_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_4));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[29]  (.A(VCC_net_1), .B(
+        \i[29]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[28]_net_1 ), .S(\i_s[29] ), .Y(), .FCO(
+        \i_cry[29]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_26 (.A(VCC_net_1), .B(
+        \i[26]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_25_net_1), .S(), .Y(), .FCO(un11_clk_cry_26_net_1)
+        );
+    SLE \pulse_length[13]  (.D(un5_pulse_length_cry_9_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_10));
+    SLE \pulse_length[15]  (.D(un5_pulse_length_cry_11_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_12));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_19 (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_18_net_1), .S(), .Y(), .FCO(un11_clk_cry_19_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_5 (.A(VCC_net_1), 
+        .B(un5_pulse_length_axb_5), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_4_net_1), .S(un5_pulse_length_cry_5_S), 
+        .Y(), .FCO(un5_pulse_length_cry_5_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[11]  (.A(VCC_net_1), .B(
+        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[10]_net_1 ), .S(\i_s[11] ), .Y(), .FCO(
+        \i_cry[11]_net_1 ));
+    SLE \i[25]  (.D(\i_lm[25] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[25]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_23 (.A(VCC_net_1), .B(
+        \i[23]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_22_net_1), .S(), .Y(), .FCO(un11_clk_cry_23_net_1)
+        );
+    CFG4 #( .INIT(16'h0001) )  un17_clklto30_6 (.A(\i[30]_net_1 ), .B(
+        \i[29]_net_1 ), .C(\i[28]_net_1 ), .D(\i[27]_net_1 ), .Y(
+        un17_clklto30_6_net_1));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_8 (.A(VCC_net_1), 
+        .B(\P[9] ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_7_net_1), .S(un5_pulse_length_cry_8_S), 
+        .Y(), .FCO(un5_pulse_length_cry_8_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[24]  (.A(VCC_net_1), .B(
+        \i[24]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[23]_net_1 ), .S(\i_s[24] ), .Y(), .FCO(
+        \i_cry[24]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[19]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[19] ), .Y(\i_lm[19] ));
+    SLE \i[15]  (.D(\i_lm[15] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[15]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[3]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[3] ), .Y(\i_lm[3] ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[16]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[16] ), .Y(\i_lm[16] ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[20]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[20] ), .Y(\i_lm[20] ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_28 (.A(VCC_net_1), .B(
+        \i[28]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_27_net_1), .S(), .Y(), .FCO(un11_clk_cry_28_net_1)
+        );
+    SLE \pulse_length[12]  (.D(un5_pulse_length_cry_8_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_9));
+    MACC \un4_mulonly_0[31:18]  (.CLK({FCCC_0_GL0, FCCC_0_GL0}), .A({
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, VCC_net_1, VCC_net_1, 
+        GND_net_1, VCC_net_1, VCC_net_1, GND_net_1, VCC_net_1, 
+        GND_net_1, VCC_net_1, VCC_net_1}), .A_EN({VCC_net_1, VCC_net_1})
+        , .A_ARST_N({VCC_net_1, VCC_net_1}), .A_SRST_N({VCC_net_1, 
+        VCC_net_1}), .B({GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        un46_clk_3, un46_clk_2, un46_clk_1, un46_clk_0}), .B_EN({
+        N_234_0, N_234_0}), .B_ARST_N({FCCC_0_LOCK, FCCC_0_LOCK}), 
+        .B_SRST_N({VCC_net_1, VCC_net_1}), .C({GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1}), .C_EN({VCC_net_1, VCC_net_1}), 
+        .C_ARST_N({VCC_net_1, VCC_net_1}), .C_SRST_N({VCC_net_1, 
+        VCC_net_1}), .P_EN({VCC_net_1, VCC_net_1}), .P_ARST_N({
+        VCC_net_1, VCC_net_1}), .P_SRST_N({VCC_net_1, VCC_net_1}), 
+        .FDBKSEL(GND_net_1), .FDBKSEL_EN(VCC_net_1), .FDBKSEL_AL_N(
+        VCC_net_1), .FDBKSEL_SL_N(VCC_net_1), .CDSEL(GND_net_1), 
+        .CDSEL_EN(VCC_net_1), .CDSEL_AL_N(VCC_net_1), .CDSEL_SL_N(
+        VCC_net_1), .ARSHFT17(GND_net_1), .ARSHFT17_EN(VCC_net_1), 
+        .ARSHFT17_AL_N(VCC_net_1), .ARSHFT17_SL_N(VCC_net_1), .SUB(
+        GND_net_1), .SUB_EN(VCC_net_1), .SUB_AL_N(VCC_net_1), 
+        .SUB_SL_N(VCC_net_1), .CARRYIN(GND_net_1), .SIMD(GND_net_1), 
+        .DOTP(GND_net_1), .OVFL_CARRYOUT_SEL(GND_net_1), .A_BYPASS({
+        VCC_net_1, VCC_net_1}), .B_BYPASS({GND_net_1, GND_net_1}), 
+        .C_BYPASS({VCC_net_1, VCC_net_1}), .P_BYPASS({VCC_net_1, 
+        VCC_net_1}), .FDBKSEL_BYPASS(VCC_net_1), .FDBKSEL_AD(GND_net_1)
+        , .FDBKSEL_SD_N(GND_net_1), .CDSEL_BYPASS(VCC_net_1), 
+        .CDSEL_AD(GND_net_1), .CDSEL_SD_N(GND_net_1), .ARSHFT17_BYPASS(
+        VCC_net_1), .ARSHFT17_AD(GND_net_1), .ARSHFT17_SD_N(GND_net_1), 
+        .SUB_BYPASS(VCC_net_1), .SUB_AD(GND_net_1), .SUB_SD_N(
+        GND_net_1), .CDIN({GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1}), 
+        .CDOUT({nc0, nc1, nc2, nc3, nc4, nc5, nc6, nc7, nc8, nc9, nc10, 
+        nc11, nc12, nc13, nc14, nc15, nc16, nc17, nc18, nc19, nc20, 
+        nc21, nc22, nc23, nc24, nc25, nc26, nc27, nc28, nc29, nc30, 
+        nc31, nc32, nc33, nc34, nc35, nc36, nc37, nc38, nc39, nc40, 
+        nc41, nc42, nc43}), .P({nc44, nc45, nc46, nc47, nc48, nc49, 
+        nc50, nc51, nc52, nc53, nc54, nc55, nc56, nc57, nc58, nc59, 
+        nc60, nc61, nc62, nc63, nc64, nc65, nc66, nc67, nc68, nc69, 
+        nc70, nc71, nc72, nc73, un5_pulse_length_axb_12, 
+        un5_pulse_length_axb_11, \P[11] , \P[10] , \P[9] , 
+        un5_pulse_length_axb_7, \P[7] , un5_pulse_length_axb_5, \P[5] , 
+        un5_pulse_length_axb_3, un5_pulse_length_axb_2, \P[2] , 
+        un5_pulse_length, \P[0] }), .OVFL_CARRYOUT());
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_15 (.A(un11_clk_12), .B(
+        \i[15]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_14_net_1), .S(), .Y(), .FCO(un11_clk_cry_15_net_1)
+        );
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[7]  (.A(VCC_net_1), .B(
+        \i[7]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[6]_net_1 ), .S(\i_s[7] ), .Y(), .FCO(\i_cry[7]_net_1 ));
+    SLE \i[22]  (.D(\i_lm[22] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[22]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_s[30]  (.A(VCC_net_1), .B(
+        \i[30]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[29]_net_1 ), .S(\i_s[30]_net_1 ), .Y(), .FCO());
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[12]  (.A(VCC_net_1), .B(
+        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[11]_net_1 ), .S(\i_s[12] ), .Y(), .FCO(
+        \i_cry[12]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[6]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[6] ), .Y(\i_lm[6] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[18]  (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[17]_net_1 ), .S(\i_s[18] ), .Y(), .FCO(
+        \i_cry[18]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  i_s_321 (.A(VCC_net_1), .B(
+        \i[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(VCC_net_1), 
+        .S(), .Y(), .FCO(i_s_321_FCO));
+    SLE \i[2]  (.D(\i_lm[2] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
+    SLE \i[12]  (.D(\i_lm[12] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[12]_net_1 ));
+    CFG4 #( .INIT(16'h0004) )  un17_clklto30_8 (.A(\i[20]_net_1 ), .B(
+        un17_clklto30_6_net_1), .C(\i[22]_net_1 ), .D(\i[21]_net_1 ), 
+        .Y(un17_clklto30_8_net_1));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[28]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[28] ), .Y(\i_lm[28] ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_11 (.A(un11_clk_8), .B(
+        \i[11]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_10_net_1), .S(), .Y(), .FCO(un11_clk_cry_11_net_1)
+        );
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[1]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[1] ), .Y(\i_lm[1] ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[12]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[12] ), .Y(\i_lm[12] ));
+    SLE \i[20]  (.D(\i_lm[20] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[20]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_9 (.A(VCC_net_1), 
+        .B(\P[10] ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_8_net_1), .S(un5_pulse_length_cry_9_S), 
+        .Y(), .FCO(un5_pulse_length_cry_9_net_1));
+    SLE \i[30]  (.D(\i_lm[30] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[30]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_6 (.A(VCC_net_1), 
+        .B(\P[7] ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_5_net_1), .S(un5_pulse_length_cry_6_S), 
+        .Y(), .FCO(un5_pulse_length_cry_6_net_1));
+    SLE \pulse_length[9]  (.D(un5_pulse_length_cry_5_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_6));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[11]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[11] ), .Y(\i_lm[11] ));
+    SLE \i[10]  (.D(\i_lm[10] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[10]_net_1 ));
+    ARI1 #( .INIT(20'h65500) )  un5_pulse_length_cry_10 (.A(VCC_net_1), 
+        .B(\P[11] ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_9_net_1), .S(un5_pulse_length_cry_10_S), 
+        .Y(), .FCO(un5_pulse_length_cry_10_net_1));
+    SLE \i[6]  (.D(\i_lm[6] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[1]  (.A(VCC_net_1), .B(
+        \i[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(i_s_321_FCO), 
+        .S(\i_s[1] ), .Y(), .FCO(\i_cry[1]_net_1 ));
+    SLE \i[29]  (.D(\i_lm[29] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[29]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[2]  (.A(VCC_net_1), .B(
+        \i[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[1]_net_1 ), .S(\i_s[2] ), .Y(), .FCO(\i_cry[2]_net_1 ));
+    SLE \i[4]  (.D(\i_lm[4] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[10]  (.A(VCC_net_1), .B(
+        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[9]_net_1 ), .S(\i_s[10] ), .Y(), .FCO(\i_cry[10]_net_1 )
+        );
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[6]  (.A(VCC_net_1), .B(
+        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[5]_net_1 ), .S(\i_s[6] ), .Y(), .FCO(\i_cry[6]_net_1 ));
+    SLE \pulse_length[6]  (.D(un5_pulse_length_cry_2_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_3));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[8]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[8] ), .Y(\i_lm[8] ));
+    SLE \i[19]  (.D(\i_lm[19] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[19]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_3 (.A(VCC_net_1), 
+        .B(un5_pulse_length_axb_3), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_2_net_1), .S(un5_pulse_length_cry_3_S), 
+        .Y(), .FCO(un5_pulse_length_cry_3_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[25]  (.A(VCC_net_1), .B(
+        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[24]_net_1 ), .S(\i_s[25] ), .Y(), .FCO(
+        \i_cry[25]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[29]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[29] ), .Y(\i_lm[29] ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_17 (.A(un11_clk_14), .B(
+        \i[17]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_16_net_1), .S(), .Y(), .FCO(un11_clk_cry_17_net_1)
+        );
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[26]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[26] ), .Y(\i_lm[26] ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_10 (.A(un11_clk_7), .B(
+        \i[10]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_9_net_1), .S(), .Y(), .FCO(un11_clk_cry_10_net_1));
+    SLE \i[24]  (.D(\i_lm[24] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[24]_net_1 ));
+    CFG4 #( .INIT(16'h40EA) )  \state_ns_0[1]  (.A(\state[0]_net_1 ), 
+        .B(\state[1]_net_1 ), .C(un17_clklto30_net_1), .D(
+        un11_clk_cry_30_net_1), .Y(\state_ns[1] ));
+    CFG4 #( .INIT(16'h5111) )  un17_clklto15 (.A(\i[15]_net_1 ), .B(
+        \i[14]_net_1 ), .C(un17_clklto13_2_net_1), .D(un17_clklt13), 
+        .Y(un17_clklt19));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[7]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[7] ), .Y(\i_lm[7] ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[13]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[13] ), .Y(\i_lm[13] ));
+    SLE \i[14]  (.D(\i_lm[14] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[14]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[3]  (.A(VCC_net_1), .B(
+        \i[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[2]_net_1 ), .S(\i_s[3] ), .Y(), .FCO(\i_cry[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[27]  (.A(VCC_net_1), .B(
+        \i[27]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[26]_net_1 ), .S(\i_s[27] ), .Y(), .FCO(
+        \i_cry[27]_net_1 ));
+    SLE \pulse_length[4]  (.D(un5_pulse_length_cry_0_Y), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_1));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_29 (.A(VCC_net_1), .B(
+        \i[29]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_28_net_1), .S(), .Y(), .FCO(un11_clk_cry_29_net_1)
+        );
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_14 (.A(un11_clk_11), .B(
+        \i[14]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_13_net_1), .S(), .Y(), .FCO(un11_clk_cry_14_net_1)
+        );
+    SLE \state[1]  (.D(\state_ns[1] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
+        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\state[1]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[30]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[30]_net_1 ), .Y(\i_lm[30] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[4]  (.A(VCC_net_1), .B(
+        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[3]_net_1 ), .S(\i_s[4] ), .Y(), .FCO(\i_cry[4]_net_1 ));
+    SLE \pulse_length[11]  (.D(un5_pulse_length_cry_7_S), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_8));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[22]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[22] ), .Y(\i_lm[22] ));
+    SLE \i[5]  (.D(\i_lm[5] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_8 (.A(un11_clk_5), .B(
+        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_7_net_1), .S(), .Y(), .FCO(un11_clk_cry_8_net_1));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[9]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[9] ), .Y(\i_lm[9] ));
+    SLE \i[8]  (.D(\i_lm[8] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
+    SLE \pulse_length[17]  (.D(un5_pulse_length_cry_12_net_1), .CLK(
+        FCCC_0_GL0), .EN(\state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(un11_clk_14));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[21]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[21] ), .Y(\i_lm[21] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[13]  (.A(VCC_net_1), .B(
+        \i[13]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[12]_net_1 ), .S(\i_s[13] ), .Y(), .FCO(
+        \i_cry[13]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[5]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[5] ), .Y(\i_lm[5] ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_5 (.A(un11_clk_2), .B(
+        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_4_net_1), .S(), .Y(), .FCO(un11_clk_cry_5_net_1));
+    CFG3 #( .INIT(8'h0D) )  \state_RNO[0]  (.A(\state[0]_net_1 ), .B(
+        un11_clk_cry_30_net_1), .C(\state[1]_net_1 ), .Y(N_67_i_0));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[14]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[14] ), .Y(\i_lm[14] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[5]  (.A(VCC_net_1), .B(
+        \i[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[4]_net_1 ), .S(\i_s[5] ), .Y(), .FCO(\i_cry[5]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_6 (.A(un11_clk_3), .B(
+        \i[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_5_net_1), .S(), .Y(), .FCO(un11_clk_cry_6_net_1));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_30 (.A(VCC_net_1), .B(
+        \i[30]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_29_net_1), .S(), .Y(), .FCO(un11_clk_cry_30_net_1)
+        );
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_25 (.A(VCC_net_1), .B(
+        \i[25]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_24_net_1), .S(), .Y(), .FCO(un11_clk_cry_25_net_1)
+        );
+    CFG4 #( .INIT(16'h7FFF) )  un17_clklto19_2 (.A(\i[19]_net_1 ), .B(
+        \i[18]_net_1 ), .C(\i[17]_net_1 ), .D(\i[16]_net_1 ), .Y(
+        un17_clklto19_2_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[9]  (.A(VCC_net_1), .B(
+        \i[9]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[8]_net_1 ), .S(\i_s[9] ), .Y(), .FCO(\i_cry[9]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[21]  (.A(VCC_net_1), .B(
+        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[20]_net_1 ), .S(\i_s[21] ), .Y(), .FCO(
+        \i_cry[21]_net_1 ));
+    CFG2 #( .INIT(4'hE) )  state_s0_0_a3_i (.A(\state[0]_net_1 ), .B(
+        \state[1]_net_1 ), .Y(\state_d_i_0[2] ));
+    SLE \i[3]  (.D(\i_lm[3] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[4]  (.A(un1_state_0_sqmuxa_0_net_1), 
+        .B(\i_s[4] ), .Y(\i_lm[4] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[16]  (.A(VCC_net_1), .B(
+        \i[16]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[15]_net_1 ), .S(\i_s[16] ), .Y(), .FCO(
+        \i_cry[16]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[8]  (.A(VCC_net_1), .B(
+        \i[8]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[7]_net_1 ), .S(\i_s[8] ), .Y(), .FCO(\i_cry[8]_net_1 ));
+    ARI1 #( .INIT(20'h45500) )  un11_clk_cry_21 (.A(VCC_net_1), .B(
+        \i[21]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_20_net_1), .S(), .Y(), .FCO(un11_clk_cry_21_net_1)
+        );
+    SLE \pulse_length[3]  (.D(\P[0] ), .CLK(FCCC_0_GL0), .EN(
+        \state_d[2] ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(un11_clk_0));
+    SLE servo_pwm (.D(\state[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        \state_d_i_0[2] ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(SERVO_PWM_c));
+    SLE \i[1]  (.D(\i_lm[1] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), .ALn(
+        FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
+    CFG4 #( .INIT(16'hEAC0) )  un1_state_0_sqmuxa_0 (.A(
+        \state[0]_net_1 ), .B(\state[1]_net_1 ), .C(
+        un17_clklto30_net_1), .D(un11_clk_cry_30_net_1), .Y(
+        un1_state_0_sqmuxa_0_net_1));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_12 (.A(un11_clk_9), .B(
+        \i[12]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_11_net_1), .S(), .Y(), .FCO(un11_clk_cry_12_net_1)
+        );
+    SLE \i[28]  (.D(\i_lm[28] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[28]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  un5_pulse_length_cry_7 (.A(VCC_net_1), 
+        .B(un5_pulse_length_axb_7), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un5_pulse_length_cry_6_net_1), .S(un5_pulse_length_cry_7_S), 
+        .Y(), .FCO(un5_pulse_length_cry_7_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[22]  (.A(VCC_net_1), .B(
+        \i[22]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[21]_net_1 ), .S(\i_s[22] ), .Y(), .FCO(
+        \i_cry[22]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[17]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[17] ), .Y(\i_lm[17] ));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[23]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[23] ), .Y(\i_lm[23] ));
+    CFG2 #( .INIT(4'h1) )  state_s0_0_a3 (.A(\state[0]_net_1 ), .B(
+        \state[1]_net_1 ), .Y(\state_d[2] ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[19]  (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[18]_net_1 ), .S(\i_s[19] ), .Y(), .FCO(
+        \i_cry[19]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \i_cry[28]  (.A(VCC_net_1), .B(
+        \i[28]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \i_cry[27]_net_1 ), .S(\i_s[28] ), .Y(), .FCO(
+        \i_cry[28]_net_1 ));
+    SLE \i[18]  (.D(\i_lm[18] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[18]_net_1 ));
+    ARI1 #( .INIT(20'h5AA55) )  un11_clk_cry_4 (.A(un11_clk_1), .B(
+        \i[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        un11_clk_cry_3_net_1), .S(), .Y(), .FCO(un11_clk_cry_4_net_1));
+    CFG2 #( .INIT(4'h8) )  \i_lm_0[15]  (.A(un1_state_0_sqmuxa_0_net_1)
+        , .B(\i_s[15] ), .Y(\i_lm[15] ));
+    SLE \i[26]  (.D(\i_lm[26] ), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[26]_net_1 ));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_Rx_async_0s_1s_0s_1s_2s_3s(
+       rx_byte,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       baud_clock,
+       mss_sb_0_TX,
+       stop_strobe,
+       fifo_write,
+       rx_idle
+    );
+output [7:0] rx_byte;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  baud_clock;
+input  mss_sb_0_TX;
+output stop_strobe;
+output fifo_write;
+output rx_idle;
+
+    wire VCC_net_1, \rx_shift[3]_net_1 , rx_byte_1_sqmuxa, GND_net_1, 
+        \rx_shift[4]_net_1 , \rx_shift[5]_net_1 , \rx_shift[6]_net_1 , 
+        \rx_shift[7]_net_1 , \rx_bit_cnt[0]_net_1 , \rx_bit_cnt_4[0] , 
+        \rx_bit_cnt[1]_net_1 , \rx_bit_cnt_4[1] , 
+        \rx_bit_cnt[2]_net_1 , \rx_bit_cnt_4[2] , 
+        \rx_bit_cnt[3]_net_1 , \rx_bit_cnt_4[3] , \rx_shift[1]_net_1 , 
+        \rx_shift_11[1] , un1_samples7_1_0_net_1, \rx_shift[2]_net_1 , 
+        \rx_shift_11[2] , \rx_shift_11[3] , \rx_shift_11[4] , 
+        \rx_shift_11[5] , \rx_shift_11[6] , \rx_shift_11[7] , 
+        \receive_count[0]_net_1 , N_182_i_0, \receive_count[1]_net_1 , 
+        N_184_i_0, \receive_count[2]_net_1 , N_186_i_0, 
+        \receive_count[3]_net_1 , N_188_i_0, \rx_shift[0]_net_1 , 
+        \samples[0]_net_1 , \samples[1]_net_1 , \samples[2]_net_1 , 
+        \rx_shift_11[0] , \rx_state[1]_net_1 , i9_mux_0, 
+        \rx_statece[1]_net_1 , \rx_state[0]_net_1 , \rx_state_ns[0] , 
+        framing_error_int_2_sqmuxa, \last_bit[0]_net_1 , 
+        rx_state_0_sqmuxa, clear_parity_en_9_i_0, N_191, N_221, 
+        rx_bit_cnt_0_sqmuxa, N_193, m16_am, m16_bm, rx_state19_NE_0, 
+        clear_parity_en_9_3, \receive_count_3_i_a2_0_1[0] , N_24_mux, 
+        N_22_mux, rx_state19_NE, rx_bit_cnt_1_sqmuxa, N_208, i5_mux, 
+        CO1;
+    
+    CFG3 #( .INIT(8'h40) )  rx_bit_cnt_1_sqmuxa_0_a2 (.A(N_193), .B(
+        \receive_count[3]_net_1 ), .C(baud_clock), .Y(
+        rx_bit_cnt_1_sqmuxa));
+    SLE \samples[0]  (.D(\samples[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \samples[0]_net_1 ));
+    SLE \rx_shift[2]  (.D(\rx_shift_11[2] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[2]_net_1 ));
+    CFG4 #( .INIT(16'hFF80) )  \rcv_cnt.receive_count_3_i_o2[0]  (.A(
+        \receive_count[2]_net_1 ), .B(\receive_count[1]_net_1 ), .C(
+        \receive_count_3_i_a2_0_1[0] ), .D(N_208), .Y(N_191));
+    CFG3 #( .INIT(8'h08) )  \rcv_cnt.receive_count_3_i_a2_0_1_0[0]  (
+        .A(\rx_state[1]_net_1 ), .B(\rx_state[0]_net_1 ), .C(
+        \receive_count[3]_net_1 ), .Y(\receive_count_3_i_a2_0_1[0] ));
+    CFG4 #( .INIT(16'h0200) )  rx_byte_1_sqmuxa_0_a2 (.A(
+        \rx_state[0]_net_1 ), .B(\rx_state[1]_net_1 ), .C(
+        rx_state19_NE), .D(baud_clock), .Y(rx_byte_1_sqmuxa));
+    CFG4 #( .INIT(16'hF0F8) )  un1_samples7_1_0 (.A(baud_clock), .B(
+        \receive_count[3]_net_1 ), .C(rx_bit_cnt_0_sqmuxa), .D(N_193), 
+        .Y(un1_samples7_1_0_net_1));
+    SLE \rx_byte[0]  (.D(\rx_shift[0]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[0]));
+    CFG4 #( .INIT(16'h0004) )  \rcv_cnt.receive_count_3_i_a2_0[3]  (.A(
+        \receive_count[0]_net_1 ), .B(rx_idle), .C(
+        \receive_count[2]_net_1 ), .D(\receive_count[1]_net_1 ), .Y(
+        N_221));
+    SLE \receive_count[1]  (.D(N_184_i_0), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \receive_count[1]_net_1 ));
+    CFG3 #( .INIT(8'hE4) )  \rx_state_ns_1_0_.m16_ns  (.A(
+        \rx_state[1]_net_1 ), .B(m16_am), .C(m16_bm), .Y(
+        \rx_state_ns[0] ));
+    SLE \rx_shift[7]  (.D(\rx_shift_11[7] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[7]_net_1 ));
+    CFG4 #( .INIT(16'hBFFF) )  fifo_write_RNO (.A(
+        \rx_bit_cnt[2]_net_1 ), .B(\rx_bit_cnt[3]_net_1 ), .C(
+        clear_parity_en_9_3), .D(baud_clock), .Y(clear_parity_en_9_i_0)
+        );
+    SLE \rx_shift[0]  (.D(\rx_shift_11[0] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[0]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[0]  (.A(rx_idle), 
+        .B(\rx_shift[1]_net_1 ), .Y(\rx_shift_11[0] ));
+    SLE \receive_count[3]  (.D(N_188_i_0), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \receive_count[3]_net_1 ));
+    VCC VCC (.Y(VCC_net_1));
+    SLE fifo_write_inst_1 (.D(clear_parity_en_9_i_0), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(fifo_write));
+    SLE \rx_byte[4]  (.D(\rx_shift[4]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[4]));
+    CFG3 #( .INIT(8'hCA) )  \rx_state_ns_1_0_.m16_am  (.A(N_22_mux), 
+        .B(rx_state19_NE), .C(\rx_state[0]_net_1 ), .Y(m16_am));
+    SLE \rx_bit_cnt[2]  (.D(\rx_bit_cnt_4[2] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[2]_net_1 ));
+    CFG4 #( .INIT(16'h006C) )  \receive_shift.rx_bit_cnt_4[3]  (.A(
+        \rx_bit_cnt[2]_net_1 ), .B(\rx_bit_cnt[3]_net_1 ), .C(CO1), .D(
+        rx_bit_cnt_0_sqmuxa), .Y(\rx_bit_cnt_4[3] ));
+    CFG2 #( .INIT(4'h8) )  rx_state_0_sqmuxa_0_a2 (.A(N_221), .B(
+        \receive_count[3]_net_1 ), .Y(rx_state_0_sqmuxa));
+    CFG3 #( .INIT(8'h04) )  rx_bit_cnt_0_sqmuxa_0_a2 (.A(
+        \rx_state[0]_net_1 ), .B(baud_clock), .C(\rx_state[1]_net_1 ), 
+        .Y(rx_bit_cnt_0_sqmuxa));
+    SLE \rx_bit_cnt[1]  (.D(\rx_bit_cnt_4[1] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[1]_net_1 ));
+    CFG2 #( .INIT(4'h1) )  rx_state_s0_0_a2 (.A(\rx_state[0]_net_1 ), 
+        .B(\rx_state[1]_net_1 ), .Y(rx_idle));
+    CFG4 #( .INIT(16'h0100) )  
+        \receive_full_indicator.clear_parity_en_9_3  (.A(
+        \rx_bit_cnt[1]_net_1 ), .B(\rx_bit_cnt[0]_net_1 ), .C(
+        \rx_state[1]_net_1 ), .D(\rx_state[0]_net_1 ), .Y(
+        clear_parity_en_9_3));
+    CFG3 #( .INIT(8'h7F) )  \rcv_cnt.receive_count_3_i_o2[2]  (.A(
+        \receive_count[2]_net_1 ), .B(\receive_count[1]_net_1 ), .C(
+        \receive_count[0]_net_1 ), .Y(N_193));
+    CFG4 #( .INIT(16'h00E8) )  \receive_shift.rx_shift_11[7]  (.A(
+        \samples[0]_net_1 ), .B(\samples[2]_net_1 ), .C(
+        \samples[1]_net_1 ), .D(rx_idle), .Y(\rx_shift_11[7] ));
+    CFG4 #( .INIT(16'h006A) )  \receive_count_RNO[2]  (.A(
+        \receive_count[2]_net_1 ), .B(\receive_count[1]_net_1 ), .C(
+        \receive_count[0]_net_1 ), .D(N_191), .Y(N_186_i_0));
+    SLE stop_strobe_inst_1 (.D(framing_error_int_2_sqmuxa), .CLK(
+        FCCC_0_GL0), .EN(baud_clock), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(stop_strobe));
+    SLE \samples[1]  (.D(\samples[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \samples[1]_net_1 ));
+    CFG3 #( .INIT(8'hC5) )  \rx_state_ns_1_0_.m18  (.A(rx_state19_NE), 
+        .B(i5_mux), .C(\rx_state[1]_net_1 ), .Y(i9_mux_0));
+    SLE \rx_byte[1]  (.D(\rx_shift[1]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[1]));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[2]  (.A(rx_idle), 
+        .B(\rx_shift[3]_net_1 ), .Y(\rx_shift_11[2] ));
+    SLE \receive_count[2]  (.D(N_186_i_0), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \receive_count[2]_net_1 ));
+    CFG3 #( .INIT(8'h80) )  \un1_rx_bit_cnt_1.CO1  (.A(
+        \rx_bit_cnt[0]_net_1 ), .B(rx_bit_cnt_1_sqmuxa), .C(
+        \rx_bit_cnt[1]_net_1 ), .Y(CO1));
+    SLE \rx_state[1]  (.D(i9_mux_0), .CLK(FCCC_0_GL0), .EN(
+        \rx_statece[1]_net_1 ), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_state[1]_net_1 ));
+    SLE \rx_byte[6]  (.D(\rx_shift[6]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[6]));
+    CFG3 #( .INIT(8'h06) )  \receive_count_RNO[1]  (.A(
+        \receive_count[1]_net_1 ), .B(\receive_count[0]_net_1 ), .C(
+        N_191), .Y(N_184_i_0));
+    GND GND (.Y(GND_net_1));
+    CFG2 #( .INIT(4'h8) )  \rx_statece[1]  (.A(baud_clock), .B(
+        \rx_state[0]_net_1 ), .Y(\rx_statece[1]_net_1 ));
+    SLE \rx_shift[4]  (.D(\rx_shift_11[4] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[4]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[3]  (.A(rx_idle), 
+        .B(\rx_shift[4]_net_1 ), .Y(\rx_shift_11[3] ));
+    SLE \rx_byte[7]  (.D(\rx_shift[7]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[7]));
+    CFG4 #( .INIT(16'hFFDE) )  \rcv_sm.rx_state19_NE  (.A(
+        \rx_bit_cnt[0]_net_1 ), .B(rx_state19_NE_0), .C(
+        \last_bit[0]_net_1 ), .D(\rx_bit_cnt[1]_net_1 ), .Y(
+        rx_state19_NE));
+    CFG3 #( .INIT(8'h12) )  \receive_shift.rx_bit_cnt_4[2]  (.A(
+        \rx_bit_cnt[2]_net_1 ), .B(rx_bit_cnt_0_sqmuxa), .C(CO1), .Y(
+        \rx_bit_cnt_4[2] ));
+    SLE \rx_byte[3]  (.D(\rx_shift[3]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[3]));
+    CFG4 #( .INIT(16'h1000) )  \rx_state_ns_1_0_.m10  (.A(
+        \receive_count[0]_net_1 ), .B(\receive_count[3]_net_1 ), .C(
+        \receive_count[2]_net_1 ), .D(\receive_count[1]_net_1 ), .Y(
+        N_24_mux));
+    CFG4 #( .INIT(16'h1001) )  \receive_count_RNO[3]  (.A(N_221), .B(
+        N_208), .C(\receive_count[3]_net_1 ), .D(N_193), .Y(N_188_i_0));
+    SLE \rx_byte[2]  (.D(\rx_shift[2]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[2]));
+    CFG4 #( .INIT(16'h0103) )  \receive_count_RNO[0]  (.A(
+        \receive_count[3]_net_1 ), .B(\receive_count[0]_net_1 ), .C(
+        N_191), .D(N_221), .Y(N_182_i_0));
+    SLE \rx_shift[6]  (.D(\rx_shift_11[6] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[6]_net_1 ));
+    SLE \rx_shift[1]  (.D(\rx_shift_11[1] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[1]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[4]  (.A(rx_idle), 
+        .B(\rx_shift[5]_net_1 ), .Y(\rx_shift_11[4] ));
+    SLE \rx_shift[3]  (.D(\rx_shift_11[3] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[3]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[6]  (.A(rx_idle), 
+        .B(\rx_shift[7]_net_1 ), .Y(\rx_shift_11[6] ));
+    SLE \rx_state[0]  (.D(\rx_state_ns[0] ), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_state[0]_net_1 ));
+    SLE \samples[2]  (.D(mss_sb_0_TX), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \samples[2]_net_1 ));
+    CFG4 #( .INIT(16'h0020) )  framing_error_int_2_sqmuxa_0_a2 (.A(
+        \rx_state[1]_net_1 ), .B(\rx_state[0]_net_1 ), .C(
+        \receive_count[3]_net_1 ), .D(N_193), .Y(
+        framing_error_int_2_sqmuxa));
+    SLE \receive_count[0]  (.D(N_182_i_0), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \receive_count[0]_net_1 ));
+    SLE \rx_byte[5]  (.D(\rx_shift[5]_net_1 ), .CLK(FCCC_0_GL0), .EN(
+        rx_byte_1_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_byte[5]));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[5]  (.A(rx_idle), 
+        .B(\rx_shift[6]_net_1 ), .Y(\rx_shift_11[5] ));
+    CFG4 #( .INIT(16'h0107) )  \rx_state_ns_1_0_.m14  (.A(
+        \samples[2]_net_1 ), .B(\samples[0]_net_1 ), .C(N_24_mux), .D(
+        \samples[1]_net_1 ), .Y(i5_mux));
+    CFG3 #( .INIT(8'h12) )  \receive_shift.rx_bit_cnt_4[0]  (.A(
+        \rx_bit_cnt[0]_net_1 ), .B(rx_bit_cnt_0_sqmuxa), .C(
+        rx_bit_cnt_1_sqmuxa), .Y(\rx_bit_cnt_4[0] ));
+    SLE \rx_shift[5]  (.D(\rx_shift_11[5] ), .CLK(FCCC_0_GL0), .EN(
+        un1_samples7_1_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rx_shift[5]_net_1 ));
+    CFG4 #( .INIT(16'hE800) )  \rcv_cnt.receive_count_3_i_a2[3]  (.A(
+        \samples[0]_net_1 ), .B(\samples[2]_net_1 ), .C(
+        \samples[1]_net_1 ), .D(rx_idle), .Y(N_208));
+    SLE \rx_bit_cnt[0]  (.D(\rx_bit_cnt_4[0] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[0]_net_1 ));
+    CFG2 #( .INIT(4'h4) )  \receive_shift.rx_shift_11[1]  (.A(rx_idle), 
+        .B(\rx_shift[2]_net_1 ), .Y(\rx_shift_11[1] ));
+    CFG4 #( .INIT(16'h0004) )  \rx_state_ns_1_0_.m3  (.A(
+        \receive_count[0]_net_1 ), .B(\receive_count[3]_net_1 ), .C(
+        \receive_count[2]_net_1 ), .D(\receive_count[1]_net_1 ), .Y(
+        N_22_mux));
+    CFG4 #( .INIT(16'hC5C0) )  \rx_state_ns_1_0_.m16_bm  (.A(N_193), 
+        .B(i5_mux), .C(\rx_state[0]_net_1 ), .D(
+        \receive_count[3]_net_1 ), .Y(m16_bm));
+    SLE \last_bit[0]  (.D(GND_net_1), .CLK(FCCC_0_GL0), .EN(
+        rx_state_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \last_bit[0]_net_1 ));
+    CFG2 #( .INIT(4'hB) )  \rcv_sm.rx_state19_NE_0  (.A(
+        \rx_bit_cnt[2]_net_1 ), .B(\rx_bit_cnt[3]_net_1 ), .Y(
+        rx_state19_NE_0));
+    SLE \rx_bit_cnt[3]  (.D(\rx_bit_cnt_4[3] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_bit_cnt[3]_net_1 ));
+    CFG4 #( .INIT(16'h006C) )  \receive_shift.rx_bit_cnt_4[1]  (.A(
+        \rx_bit_cnt[0]_net_1 ), .B(\rx_bit_cnt[1]_net_1 ), .C(
+        rx_bit_cnt_1_sqmuxa), .D(rx_bit_cnt_0_sqmuxa), .Y(
+        \rx_bit_cnt_4[1] ));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_ram128x8_pa4(
+       data_out_0,
+       rd_pointer,
+       wr_pointer,
+       tx_hold_reg_0,
+       tx_hold_reg_1,
+       tx_hold_reg_2,
+       tx_hold_reg_3,
+       tx_hold_reg_5,
+       FCCC_0_GL0,
+       fifo_write_tx
+    );
+output [7:0] data_out_0;
+input  [6:0] rd_pointer;
+input  [6:0] wr_pointer;
+input  tx_hold_reg_0;
+input  tx_hold_reg_1;
+input  tx_hold_reg_2;
+input  tx_hold_reg_3;
+input  tx_hold_reg_5;
+input  FCCC_0_GL0;
+input  fifo_write_tx;
+
+    wire VCC_net_1, GND_net_1, INV_0_Y;
+    
+    RAM64x18 RAM_128x8 (.A_DOUT({nc0, nc1, nc2, nc3, nc4, nc5, nc6, 
+        nc7, nc8, nc9, data_out_0[7], data_out_0[6], data_out_0[5], 
+        data_out_0[4], data_out_0[3], data_out_0[2], data_out_0[1], 
+        data_out_0[0]}), .B_DOUT({nc10, nc11, nc12, nc13, nc14, nc15, 
+        nc16, nc17, nc18, nc19, nc20, nc21, nc22, nc23, nc24, nc25, 
+        nc26, nc27}), .BUSY(), .A_ADDR_CLK(FCCC_0_GL0), .A_DOUT_CLK(
+        VCC_net_1), .A_ADDR_SRST_N(VCC_net_1), .A_DOUT_SRST_N(
+        VCC_net_1), .A_ADDR_ARST_N(VCC_net_1), .A_DOUT_ARST_N(
+        VCC_net_1), .A_ADDR_EN(VCC_net_1), .A_DOUT_EN(VCC_net_1), 
+        .A_BLK({VCC_net_1, VCC_net_1}), .A_ADDR({rd_pointer[6], 
+        rd_pointer[5], rd_pointer[4], rd_pointer[3], rd_pointer[2], 
+        rd_pointer[1], rd_pointer[0], GND_net_1, GND_net_1, GND_net_1})
+        , .B_ADDR_CLK(VCC_net_1), .B_DOUT_CLK(VCC_net_1), 
+        .B_ADDR_SRST_N(VCC_net_1), .B_DOUT_SRST_N(VCC_net_1), 
+        .B_ADDR_ARST_N(VCC_net_1), .B_DOUT_ARST_N(VCC_net_1), 
+        .B_ADDR_EN(VCC_net_1), .B_DOUT_EN(VCC_net_1), .B_BLK({
+        GND_net_1, GND_net_1}), .B_ADDR({GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1}), .C_CLK(FCCC_0_GL0), .C_ADDR({
+        wr_pointer[6], wr_pointer[5], wr_pointer[4], wr_pointer[3], 
+        wr_pointer[2], wr_pointer[1], wr_pointer[0], GND_net_1, 
+        GND_net_1, GND_net_1}), .C_DIN({GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        tx_hold_reg_5, tx_hold_reg_5, tx_hold_reg_3, tx_hold_reg_2, 
+        tx_hold_reg_1, tx_hold_reg_0}), .C_WEN(INV_0_Y), .C_BLK({
+        VCC_net_1, VCC_net_1}), .A_EN(VCC_net_1), .A_ADDR_LAT(
+        GND_net_1), .A_DOUT_LAT(VCC_net_1), .A_WIDTH({GND_net_1, 
+        VCC_net_1, VCC_net_1}), .B_EN(GND_net_1), .B_ADDR_LAT(
+        GND_net_1), .B_DOUT_LAT(VCC_net_1), .B_WIDTH({GND_net_1, 
+        VCC_net_1, VCC_net_1}), .C_EN(VCC_net_1), .C_WIDTH({GND_net_1, 
+        VCC_net_1, VCC_net_1}), .SII_LOCK(GND_net_1));
+    VCC VCC (.Y(VCC_net_1));
+    INV INV_0 (.A(fifo_write_tx), .Y(INV_0_Y));
+    GND GND (.Y(GND_net_1));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s(
+       counter,
+       tx_dout_reg,
+       tx_hold_reg_0,
+       tx_hold_reg_1,
+       tx_hold_reg_2,
+       tx_hold_reg_3,
+       tx_hold_reg_5,
+       fifo_write_tx,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       fifo_read_tx,
+       fifo_read_tx_i_0,
+       fifo_full_tx_i_0
+    );
+output [6:0] counter;
+output [7:0] tx_dout_reg;
+input  tx_hold_reg_0;
+input  tx_hold_reg_1;
+input  tx_hold_reg_2;
+input  tx_hold_reg_3;
+input  tx_hold_reg_5;
+input  fifo_write_tx;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  fifo_read_tx;
+input  fifo_read_tx_i_0;
+output fifo_full_tx_i_0;
+
+    wire \rd_pointer[0]_net_1 , \rd_pointer_s[0] , 
+        \wr_pointer[0]_net_1 , \wr_pointer_s[0] , N_3820_i_0_net_1, 
+        read_n_hold_net_1, read_n_hold_i_0, VCC_net_1, 
+        un1_counter_cry_0_Y, GND_net_1, un1_counter_cry_1_0_S, 
+        un1_counter_cry_2_0_S, un1_counter_cry_3_0_S, 
+        un1_counter_cry_4_0_S, un1_counter_cry_5_0_S, 
+        un1_counter_s_6_S, \data_out_0[4] , \data_out_0[5] , 
+        \data_out_0[6] , \data_out_0[7] , \data_out_0[0] , 
+        \data_out_0[1] , \data_out_0[2] , \data_out_0[3] , 
+        \wr_pointer[1]_net_1 , \wr_pointer_s[1] , 
+        \wr_pointer[2]_net_1 , \wr_pointer_s[2] , 
+        \wr_pointer[3]_net_1 , \wr_pointer_s[3] , 
+        \wr_pointer[4]_net_1 , \wr_pointer_s[4] , 
+        \wr_pointer[5]_net_1 , \wr_pointer_s[5] , 
+        \wr_pointer[6]_net_1 , \wr_pointer_s[6]_net_1 , 
+        \rd_pointer[1]_net_1 , \rd_pointer_s[1] , 
+        \rd_pointer[2]_net_1 , \rd_pointer_s[2] , 
+        \rd_pointer[3]_net_1 , \rd_pointer_s[3] , 
+        \rd_pointer[4]_net_1 , \rd_pointer_s[4] , 
+        \rd_pointer[5]_net_1 , \rd_pointer_s[5] , 
+        \rd_pointer[6]_net_1 , \rd_pointer_s[6]_net_1 , 
+        un1_counter_cry_0_net_1, un1_counter_cry_1, un1_counter_cry_2, 
+        un1_counter_cry_3, un1_counter_cry_4, un1_counter_cry_5, 
+        rd_pointer_s_317_FCO, \rd_pointer_cry[1]_net_1 , 
+        \rd_pointer_cry[2]_net_1 , \rd_pointer_cry[3]_net_1 , 
+        \rd_pointer_cry[4]_net_1 , \rd_pointer_cry[5]_net_1 , 
+        wr_pointer_s_318_FCO, \wr_pointer_cry[1]_net_1 , 
+        \wr_pointer_cry[2]_net_1 , \wr_pointer_cry[3]_net_1 , 
+        \wr_pointer_cry[4]_net_1 , \wr_pointer_cry[5]_net_1 , 
+        full_0_a2_4_net_1;
+    
+    SLE \wr_pointer[5]  (.D(\wr_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
+        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[5]_net_1 ));
+    CFG4 #( .INIT(16'h7FFF) )  full_0_a2_4_RNI02HF (.A(counter[0]), .B(
+        full_0_a2_4_net_1), .C(counter[3]), .D(counter[2]), .Y(
+        fifo_full_tx_i_0));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[1]  (.A(VCC_net_1), .B(
+        \wr_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        wr_pointer_s_318_FCO), .S(\wr_pointer_s[1] ), .Y(), .FCO(
+        \wr_pointer_cry[1]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[3]  (.A(VCC_net_1), .B(
+        \wr_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[2]_net_1 ), .S(\wr_pointer_s[3] ), .Y(), .FCO(
+        \wr_pointer_cry[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[2]  (.A(VCC_net_1), .B(
+        \wr_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[1]_net_1 ), .S(\wr_pointer_s[2] ), .Y(), .FCO(
+        \wr_pointer_cry[2]_net_1 ));
+    SLE \rd_pointer[2]  (.D(\rd_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[2]_net_1 ));
+    SLE \counter[2]  (.D(un1_counter_cry_2_0_S), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[2]));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[5]  (.A(VCC_net_1), .B(
+        \wr_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[4]_net_1 ), .S(\wr_pointer_s[5] ), .Y(), .FCO(
+        \wr_pointer_cry[5]_net_1 ));
+    SLE \rd_pointer[5]  (.D(\rd_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[5]_net_1 ));
+    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_2_0 (.A(counter[2]), 
+        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
+        un1_counter_cry_1), .S(un1_counter_cry_2_0_S), .Y(), .FCO(
+        un1_counter_cry_2));
+    SLE \data_out[3]  (.D(\data_out_0[3] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[3])
+        );
+    SLE \counter[6]  (.D(un1_counter_s_6_S), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[6]));
+    SLE read_n_hold (.D(fifo_read_tx), .CLK(FCCC_0_GL0), .EN(VCC_net_1)
+        , .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(read_n_hold_net_1));
+    SLE \wr_pointer[1]  (.D(\wr_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
+        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[1]_net_1 ));
+    VCC VCC (.Y(VCC_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_s[6]  (.A(VCC_net_1), .B(
+        \rd_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[5]_net_1 ), .S(\rd_pointer_s[6]_net_1 ), .Y(), 
+        .FCO());
+    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_4_0 (.A(counter[4]), 
+        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
+        un1_counter_cry_3), .S(un1_counter_cry_4_0_S), .Y(), .FCO(
+        un1_counter_cry_4));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[1]  (.A(VCC_net_1), .B(
+        \rd_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        rd_pointer_s_317_FCO), .S(\rd_pointer_s[1] ), .Y(), .FCO(
+        \rd_pointer_cry[1]_net_1 ));
+    SLE \data_out[7]  (.D(\data_out_0[7] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[7])
+        );
+    SLE \data_out[4]  (.D(\data_out_0[4] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[4])
+        );
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_s[6]  (.A(VCC_net_1), .B(
+        \wr_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[5]_net_1 ), .S(\wr_pointer_s[6]_net_1 ), .Y(), 
+        .FCO());
+    SLE \wr_pointer[3]  (.D(\wr_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
+        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[3]_net_1 ));
+    GND GND (.Y(GND_net_1));
+    SLE \counter[4]  (.D(un1_counter_cry_4_0_S), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[4]));
+    SLE \counter[5]  (.D(un1_counter_cry_5_0_S), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[5]));
+    SLE \rd_pointer[0]  (.D(\rd_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[0]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  wr_pointer_s_318 (.A(VCC_net_1), .B(
+        \wr_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        VCC_net_1), .S(), .Y(), .FCO(wr_pointer_s_318_FCO));
+    SLE \data_out[5]  (.D(\data_out_0[5] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[5])
+        );
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[3]  (.A(VCC_net_1), .B(
+        \rd_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[2]_net_1 ), .S(\rd_pointer_s[3] ), .Y(), .FCO(
+        \rd_pointer_cry[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[4]  (.A(VCC_net_1), .B(
+        \wr_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[3]_net_1 ), .S(\wr_pointer_s[4] ), .Y(), .FCO(
+        \wr_pointer_cry[4]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  \wr_pointer_RNO[0]  (.A(
+        \wr_pointer[0]_net_1 ), .Y(\wr_pointer_s[0] ));
+    SLE \wr_pointer[6]  (.D(\wr_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
+        .EN(N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[6]_net_1 ));
+    CFG4 #( .INIT(16'h8000) )  full_0_a2_4 (.A(counter[4]), .B(
+        counter[5]), .C(counter[1]), .D(counter[6]), .Y(
+        full_0_a2_4_net_1));
+    SLE \data_out[0]  (.D(\data_out_0[0] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[0])
+        );
+    SLE \counter[1]  (.D(un1_counter_cry_1_0_S), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[1]));
+    SLE \wr_pointer[4]  (.D(\wr_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
+        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[4]_net_1 ));
+    SLE \data_out[2]  (.D(\data_out_0[2] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[2])
+        );
+    SLE \counter[3]  (.D(un1_counter_cry_3_0_S), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[3]));
+    SLE \wr_pointer[0]  (.D(\wr_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
+        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[0]_net_1 ));
+    SLE \data_out[6]  (.D(\data_out_0[6] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[6])
+        );
+    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_3_0 (.A(counter[3]), 
+        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
+        un1_counter_cry_2), .S(un1_counter_cry_3_0_S), .Y(), .FCO(
+        un1_counter_cry_3));
+    ARI1 #( .INIT(20'h59966) )  un1_counter_cry_0 (.A(counter[0]), .B(
+        fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
+        GND_net_1), .S(), .Y(un1_counter_cry_0_Y), .FCO(
+        un1_counter_cry_0_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[5]  (.A(VCC_net_1), .B(
+        \rd_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[4]_net_1 ), .S(\rd_pointer_s[5] ), .Y(), .FCO(
+        \rd_pointer_cry[5]_net_1 ));
+    SLE \wr_pointer[2]  (.D(\wr_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
+        N_3820_i_0_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[2]_net_1 ));
+    SLE \rd_pointer[6]  (.D(\rd_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
+        .EN(fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[6]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  N_3820_i_0 (.A(fifo_write_tx), .Y(
+        N_3820_i_0_net_1));
+    SLE \rd_pointer[1]  (.D(\rd_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[1]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  read_n_hold_RNI6VUE (.A(read_n_hold_net_1), 
+        .Y(read_n_hold_i_0));
+    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_1_0 (.A(counter[1]), 
+        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
+        un1_counter_cry_0_net_1), .S(un1_counter_cry_1_0_S), .Y(), 
+        .FCO(un1_counter_cry_1));
+    CFG1 #( .INIT(2'h1) )  \rd_pointer_RNO[0]  (.A(
+        \rd_pointer[0]_net_1 ), .Y(\rd_pointer_s[0] ));
+    SLE \rd_pointer[3]  (.D(\rd_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[3]_net_1 ));
+    SLE \data_out[1]  (.D(\data_out_0[1] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(tx_dout_reg[1])
+        );
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[2]  (.A(VCC_net_1), .B(
+        \rd_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[1]_net_1 ), .S(\rd_pointer_s[2] ), .Y(), .FCO(
+        \rd_pointer_cry[2]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  rd_pointer_s_317 (.A(VCC_net_1), .B(
+        \rd_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        VCC_net_1), .S(), .Y(), .FCO(rd_pointer_s_317_FCO));
+    ARI1 #( .INIT(20'h5BB44) )  un1_counter_cry_5_0 (.A(counter[5]), 
+        .B(fifo_read_tx), .C(fifo_write_tx), .D(GND_net_1), .FCI(
+        un1_counter_cry_4), .S(un1_counter_cry_5_0_S), .Y(), .FCO(
+        un1_counter_cry_5));
+    SLE \rd_pointer[4]  (.D(\rd_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_tx_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[4]_net_1 ));
+    Echo_control_COREUART_0_ram128x8_pa4 ram128_8_pa4 (.data_out_0({
+        \data_out_0[7] , \data_out_0[6] , \data_out_0[5] , 
+        \data_out_0[4] , \data_out_0[3] , \data_out_0[2] , 
+        \data_out_0[1] , \data_out_0[0] }), .rd_pointer({
+        \rd_pointer[6]_net_1 , \rd_pointer[5]_net_1 , 
+        \rd_pointer[4]_net_1 , \rd_pointer[3]_net_1 , 
+        \rd_pointer[2]_net_1 , \rd_pointer[1]_net_1 , 
+        \rd_pointer[0]_net_1 }), .wr_pointer({\wr_pointer[6]_net_1 , 
+        \wr_pointer[5]_net_1 , \wr_pointer[4]_net_1 , 
+        \wr_pointer[3]_net_1 , \wr_pointer[2]_net_1 , 
+        \wr_pointer[1]_net_1 , \wr_pointer[0]_net_1 }), .tx_hold_reg_0(
+        tx_hold_reg_0), .tx_hold_reg_1(tx_hold_reg_1), .tx_hold_reg_2(
+        tx_hold_reg_2), .tx_hold_reg_3(tx_hold_reg_3), .tx_hold_reg_5(
+        tx_hold_reg_5), .FCCC_0_GL0(FCCC_0_GL0), .fifo_write_tx(
+        fifo_write_tx));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[4]  (.A(VCC_net_1), .B(
+        \rd_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[3]_net_1 ), .S(\rd_pointer_s[4] ), .Y(), .FCO(
+        \rd_pointer_cry[4]_net_1 ));
+    ARI1 #( .INIT(20'h47800) )  un1_counter_s_6 (.A(VCC_net_1), .B(
+        fifo_read_tx_i_0), .C(fifo_write_tx), .D(counter[6]), .FCI(
+        un1_counter_cry_5), .S(un1_counter_s_6_S), .Y(), .FCO());
+    SLE \counter[0]  (.D(un1_counter_cry_0_Y), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter[0]));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_fifo_256x8_0s_4294967232s(
+       counter,
+       tx_dout_reg,
+       tx_hold_reg_0,
+       tx_hold_reg_1,
+       tx_hold_reg_2,
+       tx_hold_reg_3,
+       tx_hold_reg_5,
+       fifo_write_tx,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       fifo_read_tx,
+       fifo_read_tx_i_0,
+       fifo_full_tx_i_0
+    );
+output [6:0] counter;
+output [7:0] tx_dout_reg;
+input  tx_hold_reg_0;
+input  tx_hold_reg_1;
+input  tx_hold_reg_2;
+input  tx_hold_reg_3;
+input  tx_hold_reg_5;
+input  fifo_write_tx;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  fifo_read_tx;
+input  fifo_read_tx_i_0;
+output fifo_full_tx_i_0;
+
+    wire GND_net_1, VCC_net_1;
+    
+    VCC VCC (.Y(VCC_net_1));
+    GND GND (.Y(GND_net_1));
+    Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s 
+        CoreUART_top_COREUART_0_fifo_128x8_pa4 (.counter({counter[6], 
+        counter[5], counter[4], counter[3], counter[2], counter[1], 
+        counter[0]}), .tx_dout_reg({tx_dout_reg[7], tx_dout_reg[6], 
+        tx_dout_reg[5], tx_dout_reg[4], tx_dout_reg[3], tx_dout_reg[2], 
+        tx_dout_reg[1], tx_dout_reg[0]}), .tx_hold_reg_0(tx_hold_reg_0)
+        , .tx_hold_reg_1(tx_hold_reg_1), .tx_hold_reg_2(tx_hold_reg_2), 
+        .tx_hold_reg_3(tx_hold_reg_3), .tx_hold_reg_5(tx_hold_reg_5), 
+        .fifo_write_tx(fifo_write_tx), .FCCC_0_LOCK(FCCC_0_LOCK), 
+        .FCCC_0_GL0(FCCC_0_GL0), .fifo_read_tx(fifo_read_tx), 
+        .fifo_read_tx_i_0(fifo_read_tx_i_0), .fifo_full_tx_i_0(
+        fifo_full_tx_i_0));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_Tx_async_0s_1s_0s_1s_2s_3s_4s_5s_6s(
+       tx_dout_reg,
+       counter,
+       fifo_read_tx,
+       fifo_read_tx_i_0,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       xmit_pulse,
+       Echo_control_0_TX,
+       COREUART_0_TXRDY,
+       fifo_full_tx_i_0,
+       baud_clock,
+       xmit_clock
+    );
+input  [7:0] tx_dout_reg;
+input  [6:0] counter;
+output fifo_read_tx;
+output fifo_read_tx_i_0;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  xmit_pulse;
+output Echo_control_0_TX;
+output COREUART_0_TXRDY;
+input  fifo_full_tx_i_0;
+input  baud_clock;
+input  xmit_clock;
+
+    wire \tx_byte[2]_net_1 , VCC_net_1, N_119_i_0, GND_net_1, 
+        \tx_byte[3]_net_1 , \tx_byte[4]_net_1 , \tx_byte[5]_net_1 , 
+        \tx_byte[6]_net_1 , \tx_byte[7]_net_1 , 
+        \xmit_bit_sel[0]_net_1 , \xmit_bit_sel_3[0] , 
+        \xmit_bit_sel[1]_net_1 , N_111_i_0, \xmit_bit_sel[2]_net_1 , 
+        N_113_i_0, \xmit_bit_sel[3]_net_1 , N_115_i_0, 
+        \tx_byte[0]_net_1 , \tx_byte[1]_net_1 , tx_4_iv_i_a2, 
+        N_129_i_0, fifo_read_en0_1_i_a3_i_net_1, \xmit_state[0]_net_1 , 
+        \xmit_state_ns[0] , \xmit_state[1]_net_1 , 
+        \xmit_state[6]_net_1 , \xmit_state[2]_net_1 , 
+        \xmit_state_ns[2] , \xmit_state[3]_net_1 , N_101_i_0, 
+        \xmit_state[5]_net_1 , \xmit_state_ns[5] , N_302_i_0, 
+        \xmit_state_ns_0_a2_0_1[0]_net_1 , tx_2_u_i_m2_am_1_1, 
+        tx_2_u_i_m2_am_1, tx_2_u_i_m2_bm_1_1, tx_2_u_i_m2_bm_1, 
+        tx_2_u_i_m2_ns, N_328_3, N_326_5, \xmit_bit_sel_3_i_0_o2[3] , 
+        \xmit_state_ns_0_a2[5]_net_1 ;
+    
+    CFG4 #( .INIT(16'hAC0F) )  \xmit_sel.tx_2_u_i_m2_bm  (.A(
+        \tx_byte[6]_net_1 ), .B(\tx_byte[7]_net_1 ), .C(
+        tx_2_u_i_m2_bm_1_1), .D(\xmit_bit_sel[1]_net_1 ), .Y(
+        tx_2_u_i_m2_bm_1));
+    SLE txrdy_int (.D(fifo_full_tx_i_0), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(COREUART_0_TXRDY));
+    CFG3 #( .INIT(8'h7F) )  \xmit_cnt.xmit_bit_sel_3_i_0_o2[3]  (.A(
+        \xmit_bit_sel[1]_net_1 ), .B(\xmit_bit_sel[2]_net_1 ), .C(
+        \xmit_bit_sel[0]_net_1 ), .Y(\xmit_bit_sel_3_i_0_o2[3] ));
+    CFG3 #( .INIT(8'hE2) )  \xmit_sel.tx_2_u_i_m2_ns  (.A(
+        tx_2_u_i_m2_am_1), .B(\xmit_bit_sel[2]_net_1 ), .C(
+        tx_2_u_i_m2_bm_1), .Y(tx_2_u_i_m2_ns));
+    SLE \xmit_state[3]  (.D(N_101_i_0), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[3]_net_1 ));
+    SLE \tx_byte[0]  (.D(tx_dout_reg[0]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[0]_net_1 ));
+    SLE \xmit_state[0]  (.D(\xmit_state_ns[0] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[0]_net_1 ));
+    SLE \tx_byte[4]  (.D(tx_dout_reg[4]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[4]_net_1 ));
+    CFG3 #( .INIT(8'hF2) )  \xmit_state_ns_0[5]  (.A(
+        \xmit_state[5]_net_1 ), .B(xmit_pulse), .C(
+        \xmit_state_ns_0_a2[5]_net_1 ), .Y(\xmit_state_ns[5] ));
+    CFG3 #( .INIT(8'hAE) )  \xmit_state_ns_0[2]  (.A(
+        \xmit_state[1]_net_1 ), .B(\xmit_state[2]_net_1 ), .C(
+        xmit_pulse), .Y(\xmit_state_ns[2] ));
+    CFG2 #( .INIT(4'h2) )  \xmit_cnt.xmit_bit_sel_3_a3_0_a2[0]  (.A(
+        \xmit_state[3]_net_1 ), .B(\xmit_bit_sel[0]_net_1 ), .Y(
+        \xmit_bit_sel_3[0] ));
+    CFG3 #( .INIT(8'h60) )  \xmit_bit_sel_RNO[1]  (.A(
+        \xmit_bit_sel[1]_net_1 ), .B(\xmit_bit_sel[0]_net_1 ), .C(
+        \xmit_state[3]_net_1 ), .Y(N_111_i_0));
+    VCC VCC (.Y(VCC_net_1));
+    SLE \tx_byte[5]  (.D(tx_dout_reg[5]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[5]_net_1 ));
+    CFG4 #( .INIT(16'h03F5) )  \xmit_sel.tx_2_u_i_m2_bm_1_1  (.A(
+        \tx_byte[4]_net_1 ), .B(\tx_byte[5]_net_1 ), .C(
+        \xmit_bit_sel[1]_net_1 ), .D(\xmit_bit_sel[0]_net_1 ), .Y(
+        tx_2_u_i_m2_bm_1_1));
+    SLE \xmit_state[5]  (.D(\xmit_state_ns[5] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[5]_net_1 ));
+    CFG3 #( .INIT(8'h51) )  \xmit_sel.tx_4_iv_i_a2  (.A(
+        \xmit_state[2]_net_1 ), .B(\xmit_state[3]_net_1 ), .C(
+        tx_2_u_i_m2_ns), .Y(tx_4_iv_i_a2));
+    CFG4 #( .INIT(16'h0020) )  \xmit_state_ns_0_a2[5]  (.A(
+        \xmit_state[3]_net_1 ), .B(\xmit_bit_sel[3]_net_1 ), .C(
+        xmit_pulse), .D(\xmit_bit_sel_3_i_0_o2[3] ), .Y(
+        \xmit_state_ns_0_a2[5]_net_1 ));
+    CFG4 #( .INIT(16'h8AAA) )  fifo_read_en0_1_i_a3_i_i (.A(
+        \xmit_state[0]_net_1 ), .B(counter[5]), .C(N_328_3), .D(
+        N_326_5), .Y(N_302_i_0));
+    SLE \xmit_state[2]  (.D(\xmit_state_ns[2] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[2]_net_1 ));
+    SLE \xmit_bit_sel[3]  (.D(N_115_i_0), .CLK(FCCC_0_GL0), .EN(
+        xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \xmit_bit_sel[3]_net_1 ));
+    CFG3 #( .INIT(8'h80) )  \xmit_state_RNIDBOR[2]  (.A(
+        \xmit_state[2]_net_1 ), .B(baud_clock), .C(xmit_clock), .Y(
+        N_119_i_0));
+    CFG4 #( .INIT(16'hEAC0) )  \xmit_state_ns_0[0]  (.A(
+        \xmit_state_ns_0_a2_0_1[0]_net_1 ), .B(\xmit_state[5]_net_1 ), 
+        .C(xmit_pulse), .D(N_326_5), .Y(\xmit_state_ns[0] ));
+    SLE \xmit_bit_sel[2]  (.D(N_113_i_0), .CLK(FCCC_0_GL0), .EN(
+        xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \xmit_bit_sel[2]_net_1 ));
+    GND GND (.Y(GND_net_1));
+    SLE tx (.D(tx_4_iv_i_a2), .CLK(FCCC_0_GL0), .EN(N_129_i_0), .ALn(
+        FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(Echo_control_0_TX));
+    SLE \tx_byte[3]  (.D(tx_dout_reg[3]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[3]_net_1 ));
+    CFG4 #( .INIT(16'h0100) )  \xmit_state_ns_0_a2_0_1[0]  (.A(
+        counter[6]), .B(counter[4]), .C(counter[5]), .D(
+        \xmit_state[0]_net_1 ), .Y(\xmit_state_ns_0_a2_0_1[0]_net_1 ));
+    SLE \tx_byte[7]  (.D(tx_dout_reg[7]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[7]_net_1 ));
+    CFG4 #( .INIT(16'h00EC) )  \xmit_state_RNO[3]  (.A(
+        \xmit_state[2]_net_1 ), .B(\xmit_state[3]_net_1 ), .C(
+        xmit_pulse), .D(\xmit_state_ns_0_a2[5]_net_1 ), .Y(N_101_i_0));
+    CFG2 #( .INIT(4'h1) )  \xmit_state_ns_0_a2_0_3[0]  (.A(counter[4]), 
+        .B(counter[6]), .Y(N_328_3));
+    CFG4 #( .INIT(16'h60A0) )  \xmit_bit_sel_RNO[2]  (.A(
+        \xmit_bit_sel[2]_net_1 ), .B(\xmit_bit_sel[0]_net_1 ), .C(
+        \xmit_state[3]_net_1 ), .D(\xmit_bit_sel[1]_net_1 ), .Y(
+        N_113_i_0));
+    CFG1 #( .INIT(2'h1) )  fifo_read_en0_RNIMOU (.A(fifo_read_tx), .Y(
+        fifo_read_tx_i_0));
+    SLE \tx_byte[6]  (.D(tx_dout_reg[6]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[6]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  fifo_read_en0_1_i_a3_i_a2_4 (.A(
+        counter[3]), .B(counter[2]), .C(counter[1]), .D(counter[0]), 
+        .Y(N_326_5));
+    SLE \xmit_bit_sel[1]  (.D(N_111_i_0), .CLK(FCCC_0_GL0), .EN(
+        xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \xmit_bit_sel[1]_net_1 ));
+    SLE \xmit_state[1]  (.D(\xmit_state[6]_net_1 ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \xmit_state[1]_net_1 ));
+    SLE \xmit_bit_sel[0]  (.D(\xmit_bit_sel_3[0] ), .CLK(FCCC_0_GL0), 
+        .EN(xmit_pulse), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \xmit_bit_sel[0]_net_1 ));
+    SLE \tx_byte[2]  (.D(tx_dout_reg[2]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[2]_net_1 ));
+    SLE fifo_read_en0 (.D(fifo_read_en0_1_i_a3_i_net_1), .CLK(
+        FCCC_0_GL0), .EN(N_129_i_0), .ALn(FCCC_0_LOCK), .ADn(GND_net_1)
+        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        fifo_read_tx));
+    SLE \tx_byte[1]  (.D(tx_dout_reg[1]), .CLK(FCCC_0_GL0), .EN(
+        N_119_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\tx_byte[1]_net_1 ));
+    CFG3 #( .INIT(8'h84) )  \xmit_bit_sel_RNO[3]  (.A(
+        \xmit_bit_sel[3]_net_1 ), .B(\xmit_state[3]_net_1 ), .C(
+        \xmit_bit_sel_3_i_0_o2[3] ), .Y(N_115_i_0));
+    CFG4 #( .INIT(16'h03F5) )  \xmit_sel.tx_2_u_i_m2_am_1_1  (.A(
+        \tx_byte[0]_net_1 ), .B(\tx_byte[1]_net_1 ), .C(
+        \xmit_bit_sel[1]_net_1 ), .D(\xmit_bit_sel[0]_net_1 ), .Y(
+        tx_2_u_i_m2_am_1_1));
+    SLE \xmit_state[6]  (.D(N_302_i_0), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_state[6]_net_1 ));
+    CFG4 #( .INIT(16'h7555) )  fifo_read_en0_1_i_a3_i (.A(
+        \xmit_state[0]_net_1 ), .B(counter[5]), .C(N_328_3), .D(
+        N_326_5), .Y(fifo_read_en0_1_i_a3_i_net_1));
+    CFG4 #( .INIT(16'hFFFE) )  \xmit_state_RNIS58N1[1]  (.A(
+        \xmit_state[0]_net_1 ), .B(\xmit_state[1]_net_1 ), .C(
+        xmit_pulse), .D(\xmit_state[6]_net_1 ), .Y(N_129_i_0));
+    CFG4 #( .INIT(16'hAC0F) )  \xmit_sel.tx_2_u_i_m2_am  (.A(
+        \tx_byte[2]_net_1 ), .B(\tx_byte[3]_net_1 ), .C(
+        tx_2_u_i_m2_am_1_1), .D(\xmit_bit_sel[1]_net_1 ), .Y(
+        tx_2_u_i_m2_am_1));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_Clock_gen_0s_0s(
+       xmit_clock,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       baud_clock,
+       xmit_pulse
+    );
+output xmit_clock;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+output baud_clock;
+output xmit_pulse;
+
+    wire VCC_net_1, xmit_clock5, GND_net_1, \xmit_cntr[0]_net_1 , 
+        \xmit_cntr_3[0] , \xmit_cntr[1]_net_1 , \xmit_cntr_3[1] , 
+        \xmit_cntr[2]_net_1 , \xmit_cntr_3[2] , \xmit_cntr[3]_net_1 , 
+        \xmit_cntr_3[3] , baud_cntr8_1_RNIEQ8C1_Y, \baud_cntr[0] , 
+        \baud_cntr_s[0] , \baud_cntr[1] , \baud_cntr_s[1] , 
+        \baud_cntr[2] , \baud_cntr_s[2] , \baud_cntr[3] , 
+        \baud_cntr_s[3] , \baud_cntr[4] , \baud_cntr_s[4] , 
+        \baud_cntr[5] , \baud_cntr_s[5] , \baud_cntr[6] , 
+        \baud_cntr_s[6] , \baud_cntr[7] , \baud_cntr_s[7] , 
+        \baud_cntr[8] , \baud_cntr_s[8] , \baud_cntr[9] , 
+        \baud_cntr_s[9] , \baud_cntr[10] , \baud_cntr_s[10] , 
+        \baud_cntr[11] , \baud_cntr_s[11] , \baud_cntr[12] , 
+        \baud_cntr_s[12] , baud_cntr_cry_cy, baud_cntr8_8, 
+        baud_cntr8_1, baud_cntr8_7, \baud_cntr_cry[0] , 
+        \baud_cntr_cry[1] , \baud_cntr_cry[2] , \baud_cntr_cry[3] , 
+        \baud_cntr_cry[4] , \baud_cntr_cry[5] , \baud_cntr_cry[6] , 
+        \baud_cntr_cry[7] , \baud_cntr_cry[8] , \baud_cntr_cry[9] , 
+        \baud_cntr_cry[10] , \baud_cntr_cry[11] , CO0;
+    
+    SLE \genblk1.baud_cntr[4]  (.D(\baud_cntr_s[4] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[4] )
+        );
+    SLE \genblk1.baud_cntr[1]  (.D(\baud_cntr_s[1] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[1] )
+        );
+    SLE \genblk1.baud_cntr[3]  (.D(\baud_cntr_s[3] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[3] )
+        );
+    SLE \xmit_cntr[3]  (.D(\xmit_cntr_3[3] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[3]_net_1 ));
+    SLE \genblk1.baud_cntr[9]  (.D(\baud_cntr_s[9] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[9] )
+        );
+    SLE \genblk1.baud_clock_int  (.D(baud_cntr8_1_RNIEQ8C1_Y), .CLK(
+        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
+        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        baud_clock));
+    CFG4 #( .INIT(16'h0001) )  \genblk1.make_baud_cntr.baud_cntr8_8  (
+        .A(\baud_cntr[12] ), .B(\baud_cntr[7] ), .C(\baud_cntr[6] ), 
+        .D(\baud_cntr[5] ), .Y(baud_cntr8_8));
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI45C68[7]  (.A(
+        VCC_net_1), .B(\baud_cntr[7] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[6] ), .S(\baud_cntr_s[7] ), .Y(), .FCO(
+        \baud_cntr_cry[7] ));
+    VCC VCC (.Y(VCC_net_1));
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI3O1H7[5]  (.A(
+        VCC_net_1), .B(\baud_cntr[5] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[4] ), .S(\baud_cntr_s[5] ), .Y(), .FCO(
+        \baud_cntr_cry[5] ));
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNIK6BB9[10]  (.A(
+        VCC_net_1), .B(\baud_cntr[10] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[9] ), .S(\baud_cntr_s[10] ), .Y(), .FCO(
+        \baud_cntr_cry[10] ));
+    ARI1 #( .INIT(20'h44000) )  
+        \genblk1.make_baud_cntr.baud_cntr8_1_RNIEQ8C1  (.A(
+        baud_cntr8_8), .B(\baud_cntr[2] ), .C(baud_cntr8_1), .D(
+        baud_cntr8_7), .FCI(VCC_net_1), .S(), .Y(
+        baud_cntr8_1_RNIEQ8C1_Y), .FCO(baud_cntr_cry_cy));
+    SLE \genblk1.baud_cntr[7]  (.D(\baud_cntr_s[7] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[7] )
+        );
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI8QTM1[0]  (.A(
+        VCC_net_1), .B(\baud_cntr[0] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(baud_cntr_cry_cy), .S(\baud_cntr_s[0] ), .Y(), .FCO(
+        \baud_cntr_cry[0] ));
+    SLE \genblk1.baud_cntr[5]  (.D(\baud_cntr_s[5] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[5] )
+        );
+    CFG4 #( .INIT(16'h8000) )  \make_xmit_clock.xmit_clock5  (.A(
+        \xmit_cntr[2]_net_1 ), .B(\xmit_cntr[3]_net_1 ), .C(
+        \xmit_cntr[1]_net_1 ), .D(\xmit_cntr[0]_net_1 ), .Y(
+        xmit_clock5));
+    GND GND (.Y(GND_net_1));
+    CFG4 #( .INIT(16'h6AAA) )  \make_xmit_clock.xmit_cntr_3_1.SUM[3]  
+        (.A(\xmit_cntr[3]_net_1 ), .B(\xmit_cntr[2]_net_1 ), .C(
+        \xmit_cntr[1]_net_1 ), .D(CO0), .Y(\xmit_cntr_3[3] ));
+    CFG4 #( .INIT(16'h0001) )  \genblk1.make_baud_cntr.baud_cntr8_1  (
+        .A(\baud_cntr[4] ), .B(\baud_cntr[3] ), .C(\baud_cntr[1] ), .D(
+        \baud_cntr[0] ), .Y(baud_cntr8_1));
+    ARI1 #( .INIT(20'h61100) )  \genblk1.baud_cntr_RNI4JC67[4]  (.A(
+        VCC_net_1), .B(baud_cntr8_1_RNIEQ8C1_Y), .C(\baud_cntr[4] ), 
+        .D(GND_net_1), .FCI(\baud_cntr_cry[3] ), .S(\baud_cntr_s[4] ), 
+        .Y(), .FCO(\baud_cntr_cry[4] ));
+    SLE \genblk1.baud_cntr[8]  (.D(\baud_cntr_s[8] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[8] )
+        );
+    ARI1 #( .INIT(20'h61100) )  \genblk1.baud_cntr_RNIOKEF5[3]  (.A(
+        VCC_net_1), .B(baud_cntr8_1_RNIEQ8C1_Y), .C(\baud_cntr[3] ), 
+        .D(GND_net_1), .FCI(\baud_cntr_cry[2] ), .S(\baud_cntr_s[3] ), 
+        .Y(), .FCO(\baud_cntr_cry[3] ));
+    SLE \genblk1.baud_cntr[0]  (.D(\baud_cntr_s[0] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[0] )
+        );
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI3UMR7[6]  (.A(
+        VCC_net_1), .B(\baud_cntr[6] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[5] ), .S(\baud_cntr_s[6] ), .Y(), .FCO(
+        \baud_cntr_cry[6] ));
+    CFG4 #( .INIT(16'h0001) )  \genblk1.make_baud_cntr.baud_cntr8_7  (
+        .A(\baud_cntr[11] ), .B(\baud_cntr[10] ), .C(\baud_cntr[9] ), 
+        .D(\baud_cntr[8] ), .Y(baud_cntr8_7));
+    ARI1 #( .INIT(20'h61100) )  \genblk1.baud_cntr_RNIHLRD3[1]  (.A(
+        VCC_net_1), .B(baud_cntr8_1_RNIEQ8C1_Y), .C(\baud_cntr[1] ), 
+        .D(GND_net_1), .FCI(\baud_cntr_cry[0] ), .S(\baud_cntr_s[1] ), 
+        .Y(), .FCO(\baud_cntr_cry[1] ));
+    SLE \xmit_cntr[2]  (.D(\xmit_cntr_3[2] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[2]_net_1 ));
+    CFG2 #( .INIT(4'h6) )  \make_xmit_clock.xmit_cntr_3_1.SUM[1]  (.A(
+        CO0), .B(\xmit_cntr[1]_net_1 ), .Y(\xmit_cntr_3[1] ));
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI0OVQ9[11]  (.A(
+        VCC_net_1), .B(\baud_cntr[11] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[10] ), .S(\baud_cntr_s[11] ), .Y(), .FCO(
+        \baud_cntr_cry[11] ));
+    SLE \genblk1.baud_cntr[10]  (.D(\baud_cntr_s[10] ), .CLK(
+        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
+        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \baud_cntr[10] ));
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNIDNGO3[2]  (.A(
+        VCC_net_1), .B(\baud_cntr[2] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[1] ), .S(\baud_cntr_s[2] ), .Y(), .FCO(
+        \baud_cntr_cry[2] ));
+    SLE \genblk1.baud_cntr[6]  (.D(\baud_cntr_s[6] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[6] )
+        );
+    SLE xmit_clock_inst_1 (.D(xmit_clock5), .CLK(FCCC_0_GL0), .EN(
+        baud_clock), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(xmit_clock));
+    CFG2 #( .INIT(4'h8) )  \make_xmit_clock.xmit_cntr_3_1.CO0  (.A(
+        baud_clock), .B(\xmit_cntr[0]_net_1 ), .Y(CO0));
+    ARI1 #( .INIT(20'h45500) )  \genblk1.baud_cntr_RNO[12]  (.A(
+        VCC_net_1), .B(\baud_cntr[12] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[11] ), .S(\baud_cntr_s[12] ), .Y(), .FCO());
+    SLE \genblk1.baud_cntr[12]  (.D(\baud_cntr_s[12] ), .CLK(
+        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
+        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \baud_cntr[12] ));
+    SLE \xmit_cntr[1]  (.D(\xmit_cntr_3[1] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[1]_net_1 ));
+    SLE \genblk1.baud_cntr[2]  (.D(\baud_cntr_s[2] ), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(\baud_cntr[2] )
+        );
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI9MMR8[9]  (.A(
+        VCC_net_1), .B(\baud_cntr[9] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[8] ), .S(\baud_cntr_s[9] ), .Y(), .FCO(
+        \baud_cntr_cry[9] ));
+    CFG2 #( .INIT(4'h8) )  xmit_pulse_inst_1 (.A(baud_clock), .B(
+        xmit_clock), .Y(xmit_pulse));
+    SLE \xmit_cntr[0]  (.D(\xmit_cntr_3[0] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\xmit_cntr[0]_net_1 ));
+    CFG2 #( .INIT(4'h6) )  \make_xmit_clock.xmit_cntr_3_1.SUM[0]  (.A(
+        baud_clock), .B(\xmit_cntr[0]_net_1 ), .Y(\xmit_cntr_3[0] ));
+    SLE \genblk1.baud_cntr[11]  (.D(\baud_cntr_s[11] ), .CLK(
+        FCCC_0_GL0), .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1)
+        , .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \baud_cntr[11] ));
+    CFG3 #( .INIT(8'h6A) )  \make_xmit_clock.xmit_cntr_3_1.SUM[2]  (.A(
+        \xmit_cntr[2]_net_1 ), .B(\xmit_cntr[1]_net_1 ), .C(CO0), .Y(
+        \xmit_cntr_3[2] ));
+    ARI1 #( .INIT(20'h65500) )  \genblk1.baud_cntr_RNI6D1H8[8]  (.A(
+        VCC_net_1), .B(\baud_cntr[8] ), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(\baud_cntr_cry[7] ), .S(\baud_cntr_s[8] ), .Y(), .FCO(
+        \baud_cntr_cry[8] ));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_ram128x8_pa4_0(
+       data_out_0,
+       rd_pointer,
+       wr_pointer,
+       rx_byte,
+       FCCC_0_GL0,
+       fifo_write_rx_1
+    );
+output [7:0] data_out_0;
+input  [6:0] rd_pointer;
+input  [6:0] wr_pointer;
+input  [7:0] rx_byte;
+input  FCCC_0_GL0;
+input  fifo_write_rx_1;
+
+    wire VCC_net_1, GND_net_1, INV_0_Y;
+    
+    RAM64x18 RAM_128x8 (.A_DOUT({nc0, nc1, nc2, nc3, nc4, nc5, nc6, 
+        nc7, nc8, nc9, data_out_0[7], data_out_0[6], data_out_0[5], 
+        data_out_0[4], data_out_0[3], data_out_0[2], data_out_0[1], 
+        data_out_0[0]}), .B_DOUT({nc10, nc11, nc12, nc13, nc14, nc15, 
+        nc16, nc17, nc18, nc19, nc20, nc21, nc22, nc23, nc24, nc25, 
+        nc26, nc27}), .BUSY(), .A_ADDR_CLK(FCCC_0_GL0), .A_DOUT_CLK(
+        VCC_net_1), .A_ADDR_SRST_N(VCC_net_1), .A_DOUT_SRST_N(
+        VCC_net_1), .A_ADDR_ARST_N(VCC_net_1), .A_DOUT_ARST_N(
+        VCC_net_1), .A_ADDR_EN(VCC_net_1), .A_DOUT_EN(VCC_net_1), 
+        .A_BLK({VCC_net_1, VCC_net_1}), .A_ADDR({rd_pointer[6], 
+        rd_pointer[5], rd_pointer[4], rd_pointer[3], rd_pointer[2], 
+        rd_pointer[1], rd_pointer[0], GND_net_1, GND_net_1, GND_net_1})
+        , .B_ADDR_CLK(VCC_net_1), .B_DOUT_CLK(VCC_net_1), 
+        .B_ADDR_SRST_N(VCC_net_1), .B_DOUT_SRST_N(VCC_net_1), 
+        .B_ADDR_ARST_N(VCC_net_1), .B_DOUT_ARST_N(VCC_net_1), 
+        .B_ADDR_EN(VCC_net_1), .B_DOUT_EN(VCC_net_1), .B_BLK({
+        GND_net_1, GND_net_1}), .B_ADDR({GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1}), .C_CLK(FCCC_0_GL0), .C_ADDR({
+        wr_pointer[6], wr_pointer[5], wr_pointer[4], wr_pointer[3], 
+        wr_pointer[2], wr_pointer[1], wr_pointer[0], GND_net_1, 
+        GND_net_1, GND_net_1}), .C_DIN({GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, GND_net_1, GND_net_1, 
+        GND_net_1, GND_net_1, GND_net_1, rx_byte[7], rx_byte[6], 
+        rx_byte[5], rx_byte[4], rx_byte[3], rx_byte[2], rx_byte[1], 
+        rx_byte[0]}), .C_WEN(INV_0_Y), .C_BLK({VCC_net_1, VCC_net_1}), 
+        .A_EN(VCC_net_1), .A_ADDR_LAT(GND_net_1), .A_DOUT_LAT(
+        VCC_net_1), .A_WIDTH({GND_net_1, VCC_net_1, VCC_net_1}), .B_EN(
+        GND_net_1), .B_ADDR_LAT(GND_net_1), .B_DOUT_LAT(VCC_net_1), 
+        .B_WIDTH({GND_net_1, VCC_net_1, VCC_net_1}), .C_EN(VCC_net_1), 
+        .C_WIDTH({GND_net_1, VCC_net_1, VCC_net_1}), .SII_LOCK(
+        GND_net_1));
+    VCC VCC (.Y(VCC_net_1));
+    INV INV_0 (.A(fifo_write_rx_1), .Y(INV_0_Y));
+    GND GND (.Y(GND_net_1));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s_0(
+       rx_dout,
+       rx_byte,
+       counter_0,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       N_3802_i_0,
+       N_3803_i_0,
+       fifo_read_rx_0_sqmuxa,
+       fifo_write_rx_1,
+       full_0,
+       full_4,
+       fifo_empty_rx
+    );
+output [7:0] rx_dout;
+input  [7:0] rx_byte;
+output counter_0;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  N_3802_i_0;
+input  N_3803_i_0;
+input  fifo_read_rx_0_sqmuxa;
+input  fifo_write_rx_1;
+output full_0;
+output full_4;
+output fifo_empty_rx;
+
+    wire \rd_pointer[0]_net_1 , \rd_pointer_s[0] , 
+        \wr_pointer[0]_net_1 , \wr_pointer_s[0] , read_n_hold_net_1, 
+        read_n_hold_i_0, \counter[3]_net_1 , VCC_net_1, 
+        un1_counter_cry_3_0_S_0, GND_net_1, \counter[4]_net_1 , 
+        un1_counter_cry_4_0_S_0, \counter[5]_net_1 , 
+        un1_counter_cry_5_0_S_0, \counter[6]_net_1 , 
+        un1_counter_s_6_S_0, un1_counter_cry_0_Y_0, \counter[1]_net_1 , 
+        un1_counter_cry_1_0_S_0, \counter[2]_net_1 , 
+        un1_counter_cry_2_0_S_0, \data_out_0[0] , \data_out_0[1] , 
+        \data_out_0[2] , \data_out_0[3] , \data_out_0[4] , 
+        \data_out_0[5] , \data_out_0[6] , \data_out_0[7] , 
+        \wr_pointer[1]_net_1 , \wr_pointer_s[1] , 
+        \wr_pointer[2]_net_1 , \wr_pointer_s[2] , 
+        \wr_pointer[3]_net_1 , \wr_pointer_s[3] , 
+        \wr_pointer[4]_net_1 , \wr_pointer_s[4] , 
+        \wr_pointer[5]_net_1 , \wr_pointer_s[5] , 
+        \wr_pointer[6]_net_1 , \wr_pointer_s[6]_net_1 , 
+        \rd_pointer[1]_net_1 , \rd_pointer_s[1] , 
+        \rd_pointer[2]_net_1 , \rd_pointer_s[2] , 
+        \rd_pointer[3]_net_1 , \rd_pointer_s[3] , 
+        \rd_pointer[4]_net_1 , \rd_pointer_s[4] , 
+        \rd_pointer[5]_net_1 , \rd_pointer_s[5] , 
+        \rd_pointer[6]_net_1 , \rd_pointer_s[6]_net_1 , 
+        un1_counter_cry_0_net_1, un1_counter_cry_1, un1_counter_cry_2, 
+        un1_counter_cry_3, un1_counter_cry_4, un1_counter_cry_5, 
+        rd_pointer_s_319_FCO, \rd_pointer_cry[1]_net_1 , 
+        \rd_pointer_cry[2]_net_1 , \rd_pointer_cry[3]_net_1 , 
+        \rd_pointer_cry[4]_net_1 , \rd_pointer_cry[5]_net_1 , 
+        wr_pointer_s_320_FCO, \wr_pointer_cry[1]_net_1 , 
+        \wr_pointer_cry[2]_net_1 , \wr_pointer_cry[3]_net_1 , 
+        \wr_pointer_cry[4]_net_1 , \wr_pointer_cry[5]_net_1 , 
+        empty_4_net_1;
+    
+    SLE \wr_pointer[5]  (.D(\wr_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
+        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[5]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  full_0_inst_1 (.A(\counter[1]_net_1 ), .B(
+        \counter[2]_net_1 ), .Y(full_0));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[1]  (.A(VCC_net_1), .B(
+        \wr_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        wr_pointer_s_320_FCO), .S(\wr_pointer_s[1] ), .Y(), .FCO(
+        \wr_pointer_cry[1]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[3]  (.A(VCC_net_1), .B(
+        \wr_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[2]_net_1 ), .S(\wr_pointer_s[3] ), .Y(), .FCO(
+        \wr_pointer_cry[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[2]  (.A(VCC_net_1), .B(
+        \wr_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[1]_net_1 ), .S(\wr_pointer_s[2] ), .Y(), .FCO(
+        \wr_pointer_cry[2]_net_1 ));
+    SLE \rd_pointer[2]  (.D(\rd_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[2]_net_1 ));
+    SLE \counter[2]  (.D(un1_counter_cry_2_0_S_0), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \counter[2]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[5]  (.A(VCC_net_1), .B(
+        \wr_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[4]_net_1 ), .S(\wr_pointer_s[5] ), .Y(), .FCO(
+        \wr_pointer_cry[5]_net_1 ));
+    SLE \rd_pointer[5]  (.D(\rd_pointer_s[5] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[5]_net_1 ));
+    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_2_0 (.A(
+        \counter[2]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
+        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_1), .S(
+        un1_counter_cry_2_0_S_0), .Y(), .FCO(un1_counter_cry_2));
+    SLE \data_out[3]  (.D(\data_out_0[3] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[3]));
+    SLE \counter[6]  (.D(un1_counter_s_6_S_0), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\counter[6]_net_1 ));
+    SLE read_n_hold (.D(N_3802_i_0), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(read_n_hold_net_1));
+    SLE \wr_pointer[1]  (.D(\wr_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
+        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[1]_net_1 ));
+    VCC VCC (.Y(VCC_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_s[6]  (.A(VCC_net_1), .B(
+        \rd_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[5]_net_1 ), .S(\rd_pointer_s[6]_net_1 ), .Y(), 
+        .FCO());
+    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_4_0 (.A(
+        \counter[4]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
+        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_3), .S(
+        un1_counter_cry_4_0_S_0), .Y(), .FCO(un1_counter_cry_4));
+    ARI1 #( .INIT(20'h4AA00) )  rd_pointer_s_319 (.A(VCC_net_1), .B(
+        \rd_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        VCC_net_1), .S(), .Y(), .FCO(rd_pointer_s_319_FCO));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[1]  (.A(VCC_net_1), .B(
+        \rd_pointer[1]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        rd_pointer_s_319_FCO), .S(\rd_pointer_s[1] ), .Y(), .FCO(
+        \rd_pointer_cry[1]_net_1 ));
+    SLE \data_out[7]  (.D(\data_out_0[7] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[7]));
+    SLE \data_out[4]  (.D(\data_out_0[4] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[4]));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_s[6]  (.A(VCC_net_1), .B(
+        \wr_pointer[6]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[5]_net_1 ), .S(\wr_pointer_s[6]_net_1 ), .Y(), 
+        .FCO());
+    SLE \wr_pointer[3]  (.D(\wr_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
+        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[3]_net_1 ));
+    GND GND (.Y(GND_net_1));
+    SLE \counter[4]  (.D(un1_counter_cry_4_0_S_0), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \counter[4]_net_1 ));
+    SLE \counter[5]  (.D(un1_counter_cry_5_0_S_0), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \counter[5]_net_1 ));
+    SLE \rd_pointer[0]  (.D(\rd_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[0]_net_1 ));
+    SLE \data_out[5]  (.D(\data_out_0[5] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[5]));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[3]  (.A(VCC_net_1), .B(
+        \rd_pointer[3]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[2]_net_1 ), .S(\rd_pointer_s[3] ), .Y(), .FCO(
+        \rd_pointer_cry[3]_net_1 ));
+    ARI1 #( .INIT(20'h4AA00) )  wr_pointer_s_320 (.A(VCC_net_1), .B(
+        \wr_pointer[0]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        VCC_net_1), .S(), .Y(), .FCO(wr_pointer_s_320_FCO));
+    ARI1 #( .INIT(20'h4AA00) )  \wr_pointer_cry[4]  (.A(VCC_net_1), .B(
+        \wr_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \wr_pointer_cry[3]_net_1 ), .S(\wr_pointer_s[4] ), .Y(), .FCO(
+        \wr_pointer_cry[4]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  \wr_pointer_RNO[0]  (.A(
+        \wr_pointer[0]_net_1 ), .Y(\wr_pointer_s[0] ));
+    SLE \wr_pointer[6]  (.D(\wr_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
+        .EN(N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[6]_net_1 ));
+    SLE \data_out[0]  (.D(\data_out_0[0] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[0]));
+    SLE \counter[1]  (.D(un1_counter_cry_1_0_S_0), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \counter[1]_net_1 ));
+    SLE \wr_pointer[4]  (.D(\wr_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
+        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[4]_net_1 ));
+    CFG1 #( .INIT(2'h1) )  read_n_hold_RNI58K5 (.A(read_n_hold_net_1), 
+        .Y(read_n_hold_i_0));
+    SLE \data_out[2]  (.D(\data_out_0[2] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[2]));
+    SLE \counter[3]  (.D(un1_counter_cry_3_0_S_0), .CLK(FCCC_0_GL0), 
+        .EN(VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \counter[3]_net_1 ));
+    SLE \wr_pointer[0]  (.D(\wr_pointer_s[0] ), .CLK(FCCC_0_GL0), .EN(
+        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[0]_net_1 ));
+    SLE \data_out[6]  (.D(\data_out_0[6] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[6]));
+    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_3_0 (.A(
+        \counter[3]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
+        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_2), .S(
+        un1_counter_cry_3_0_S_0), .Y(), .FCO(un1_counter_cry_3));
+    ARI1 #( .INIT(20'h56699) )  un1_counter_cry_0 (.A(counter_0), .B(
+        fifo_read_rx_0_sqmuxa), .C(fifo_write_rx_1), .D(GND_net_1), 
+        .FCI(GND_net_1), .S(), .Y(un1_counter_cry_0_Y_0), .FCO(
+        un1_counter_cry_0_net_1));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[5]  (.A(VCC_net_1), .B(
+        \rd_pointer[5]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[4]_net_1 ), .S(\rd_pointer_s[5] ), .Y(), .FCO(
+        \rd_pointer_cry[5]_net_1 ));
+    CFG4 #( .INIT(16'h0004) )  empty (.A(counter_0), .B(empty_4_net_1), 
+        .C(\counter[2]_net_1 ), .D(\counter[1]_net_1 ), .Y(
+        fifo_empty_rx));
+    SLE \wr_pointer[2]  (.D(\wr_pointer_s[2] ), .CLK(FCCC_0_GL0), .EN(
+        N_3803_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \wr_pointer[2]_net_1 ));
+    SLE \rd_pointer[6]  (.D(\rd_pointer_s[6]_net_1 ), .CLK(FCCC_0_GL0), 
+        .EN(fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[6]_net_1 ));
+    SLE \rd_pointer[1]  (.D(\rd_pointer_s[1] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[1]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  empty_4 (.A(\counter[6]_net_1 ), .B(
+        \counter[5]_net_1 ), .C(\counter[4]_net_1 ), .D(
+        \counter[3]_net_1 ), .Y(empty_4_net_1));
+    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_1_0 (.A(
+        \counter[1]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
+        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_0_net_1), 
+        .S(un1_counter_cry_1_0_S_0), .Y(), .FCO(un1_counter_cry_1));
+    CFG1 #( .INIT(2'h1) )  \rd_pointer_RNO[0]  (.A(
+        \rd_pointer[0]_net_1 ), .Y(\rd_pointer_s[0] ));
+    SLE \rd_pointer[3]  (.D(\rd_pointer_s[3] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[3]_net_1 ));
+    SLE \data_out[1]  (.D(\data_out_0[1] ), .CLK(FCCC_0_GL0), .EN(
+        read_n_hold_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout[1]));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[2]  (.A(VCC_net_1), .B(
+        \rd_pointer[2]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[1]_net_1 ), .S(\rd_pointer_s[2] ), .Y(), .FCO(
+        \rd_pointer_cry[2]_net_1 ));
+    ARI1 #( .INIT(20'h57788) )  un1_counter_cry_5_0 (.A(
+        \counter[5]_net_1 ), .B(fifo_read_rx_0_sqmuxa), .C(
+        fifo_write_rx_1), .D(GND_net_1), .FCI(un1_counter_cry_4), .S(
+        un1_counter_cry_5_0_S_0), .Y(), .FCO(un1_counter_cry_5));
+    SLE \rd_pointer[4]  (.D(\rd_pointer_s[4] ), .CLK(FCCC_0_GL0), .EN(
+        fifo_read_rx_0_sqmuxa), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), 
+        .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        \rd_pointer[4]_net_1 ));
+    Echo_control_COREUART_0_ram128x8_pa4_0 ram128_8_pa4 (.data_out_0({
+        \data_out_0[7] , \data_out_0[6] , \data_out_0[5] , 
+        \data_out_0[4] , \data_out_0[3] , \data_out_0[2] , 
+        \data_out_0[1] , \data_out_0[0] }), .rd_pointer({
+        \rd_pointer[6]_net_1 , \rd_pointer[5]_net_1 , 
+        \rd_pointer[4]_net_1 , \rd_pointer[3]_net_1 , 
+        \rd_pointer[2]_net_1 , \rd_pointer[1]_net_1 , 
+        \rd_pointer[0]_net_1 }), .wr_pointer({\wr_pointer[6]_net_1 , 
+        \wr_pointer[5]_net_1 , \wr_pointer[4]_net_1 , 
+        \wr_pointer[3]_net_1 , \wr_pointer[2]_net_1 , 
+        \wr_pointer[1]_net_1 , \wr_pointer[0]_net_1 }), .rx_byte({
+        rx_byte[7], rx_byte[6], rx_byte[5], rx_byte[4], rx_byte[3], 
+        rx_byte[2], rx_byte[1], rx_byte[0]}), .FCCC_0_GL0(FCCC_0_GL0), 
+        .fifo_write_rx_1(fifo_write_rx_1));
+    ARI1 #( .INIT(20'h4AA00) )  \rd_pointer_cry[4]  (.A(VCC_net_1), .B(
+        \rd_pointer[4]_net_1 ), .C(GND_net_1), .D(GND_net_1), .FCI(
+        \rd_pointer_cry[3]_net_1 ), .S(\rd_pointer_s[4] ), .Y(), .FCO(
+        \rd_pointer_cry[4]_net_1 ));
+    ARI1 #( .INIT(20'h47800) )  un1_counter_s_6 (.A(VCC_net_1), .B(
+        fifo_read_rx_0_sqmuxa), .C(fifo_write_rx_1), .D(
+        \counter[6]_net_1 ), .FCI(un1_counter_cry_5), .S(
+        un1_counter_s_6_S_0), .Y(), .FCO());
+    SLE \counter[0]  (.D(un1_counter_cry_0_Y_0), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(counter_0));
+    CFG4 #( .INIT(16'h8000) )  full_4_inst_1 (.A(\counter[6]_net_1 ), 
+        .B(\counter[5]_net_1 ), .C(\counter[4]_net_1 ), .D(
+        \counter[3]_net_1 ), .Y(full_4));
+    
+endmodule
+
+
+module Echo_control_COREUART_0_fifo_256x8_0s_4294967232s_0(
+       counter,
+       rx_dout,
+       rx_byte,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       N_3802_i_0,
+       N_3803_i_0,
+       fifo_read_rx_0_sqmuxa,
+       fifo_write_rx_1,
+       full_0,
+       full_4,
+       fifo_empty_rx
+    );
+output [0:0] counter;
+output [7:0] rx_dout;
+input  [7:0] rx_byte;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  N_3802_i_0;
+input  N_3803_i_0;
+input  fifo_read_rx_0_sqmuxa;
+input  fifo_write_rx_1;
+output full_0;
+output full_4;
+output fifo_empty_rx;
+
+    wire GND_net_1, VCC_net_1;
+    
+    VCC VCC (.Y(VCC_net_1));
+    GND GND (.Y(GND_net_1));
+    Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s_0 
+        CoreUART_top_COREUART_0_fifo_128x8_pa4 (.rx_dout({rx_dout[7], 
+        rx_dout[6], rx_dout[5], rx_dout[4], rx_dout[3], rx_dout[2], 
+        rx_dout[1], rx_dout[0]}), .rx_byte({rx_byte[7], rx_byte[6], 
+        rx_byte[5], rx_byte[4], rx_byte[3], rx_byte[2], rx_byte[1], 
+        rx_byte[0]}), .counter_0(counter[0]), .FCCC_0_LOCK(FCCC_0_LOCK)
+        , .FCCC_0_GL0(FCCC_0_GL0), .N_3802_i_0(N_3802_i_0), 
+        .N_3803_i_0(N_3803_i_0), .fifo_read_rx_0_sqmuxa(
+        fifo_read_rx_0_sqmuxa), .fifo_write_rx_1(fifo_write_rx_1), 
+        .full_0(full_0), .full_4(full_4), .fifo_empty_rx(fifo_empty_rx)
+        );
+    
+endmodule
+
+
+module Echo_control_COREUART_0_COREUART_1s_1s_0s_19s_0s_0s(
+       rx_dout_reg,
+       time_sender_0_data_out_0,
+       time_sender_0_data_out_1,
+       time_sender_0_data_out_2,
+       time_sender_0_data_out_3,
+       time_sender_0_data_out_5,
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       LED_3_c_i_0,
+       COREUART_0_RXRDY,
+       LED_3_c,
+       BT_module_0_oen,
+       Echo_control_0_TX,
+       COREUART_0_TXRDY,
+       mss_sb_0_TX
+    );
+output [7:0] rx_dout_reg;
+input  time_sender_0_data_out_0;
+input  time_sender_0_data_out_1;
+input  time_sender_0_data_out_2;
+input  time_sender_0_data_out_3;
+input  time_sender_0_data_out_5;
+input  FCCC_0_LOCK;
+input  FCCC_0_GL0;
+input  LED_3_c_i_0;
+output COREUART_0_RXRDY;
+input  LED_3_c;
+input  BT_module_0_oen;
+output Echo_control_0_TX;
+output COREUART_0_TXRDY;
+input  mss_sb_0_TX;
+
+    wire rx_dout_reg_empty_net_1, rx_dout_reg_empty_i_0, VCC_net_1, 
+        \rx_dout[5] , rx_dout_reg4_i_0, GND_net_1, \rx_dout[6] , 
+        \rx_dout[7] , \tx_hold_reg[0]_net_1 , \tx_hold_reg[1]_net_1 , 
+        \tx_hold_reg[2]_net_1 , \tx_hold_reg[3]_net_1 , 
+        \tx_hold_reg[5] , \rx_dout[0] , \rx_dout[1] , \rx_dout[2] , 
+        \rx_dout[3] , \rx_dout[4] , \rx_state[1]_net_1 , N_176_i, 
+        rx_dout_reg4, rx_dout_reg_empty_1_sqmuxa_i_0, RXRDY5, 
+        fifo_write_tx_net_1, \rx_state[0]_net_1 , \rx_state_ns[0] , 
+        fifo_empty_rx, N_3802_i_0, fifo_write, \counter[0] , full_0, 
+        full_4, N_3803_i_0, rx_idle, stop_strobe, 
+        fifo_write_rx_1_net_1, fifo_read_rx_0_sqmuxa, xmit_clock, 
+        baud_clock, xmit_pulse, \tx_dout_reg[0] , \tx_dout_reg[1] , 
+        \tx_dout_reg[2] , \tx_dout_reg[3] , \tx_dout_reg[4] , 
+        \tx_dout_reg[5] , \tx_dout_reg[6] , \tx_dout_reg[7] , 
+        \counter_0[0] , \counter[1] , \counter[2] , \counter[3] , 
+        \counter[4] , \counter[5] , \counter[6] , fifo_read_tx, 
+        fifo_read_tx_i_0, fifo_full_tx_i_0, \rx_byte[0] , \rx_byte[1] , 
+        \rx_byte[2] , \rx_byte[3] , \rx_byte[4] , \rx_byte[5] , 
+        \rx_byte[6] , \rx_byte[7] ;
+    
+    CFG4 #( .INIT(16'h1555) )  fifo_write_rx_1_i (.A(fifo_write), .B(
+        \counter[0] ), .C(full_0), .D(full_4), .Y(N_3803_i_0));
+    SLE \rx_dout_reg[0]  (.D(\rx_dout[0] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[0])
+        );
+    CFG4 #( .INIT(16'hFFFB) )  fifo_read_rx_0_sqmuxa_0_a2_i (.A(
+        \rx_state[1]_net_1 ), .B(rx_dout_reg_empty_net_1), .C(
+        fifo_empty_rx), .D(\rx_state[0]_net_1 ), .Y(N_3802_i_0));
+    CFG2 #( .INIT(4'h6) )  \rx_state_ns_0_x3[1]  (.A(
+        \rx_state[0]_net_1 ), .B(\rx_state[1]_net_1 ), .Y(N_176_i));
+    CFG4 #( .INIT(16'hEAAA) )  fifo_write_rx_1 (.A(fifo_write), .B(
+        \counter[0] ), .C(full_0), .D(full_4), .Y(
+        fifo_write_rx_1_net_1));
+    Echo_control_COREUART_0_Rx_async_0s_1s_0s_1s_2s_3s make_RX (
+        .rx_byte({\rx_byte[7] , \rx_byte[6] , \rx_byte[5] , 
+        \rx_byte[4] , \rx_byte[3] , \rx_byte[2] , \rx_byte[1] , 
+        \rx_byte[0] }), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
+        FCCC_0_GL0), .baud_clock(baud_clock), .mss_sb_0_TX(mss_sb_0_TX)
+        , .stop_strobe(stop_strobe), .fifo_write(fifo_write), .rx_idle(
+        rx_idle));
+    SLE \tx_hold_reg[0]  (.D(time_sender_0_data_out_0), .CLK(
+        FCCC_0_GL0), .EN(LED_3_c_i_0), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(\tx_hold_reg[0]_net_1 ));
+    CFG4 #( .INIT(16'h00AE) )  \rx_state_ns_0_a2[0]  (.A(
+        \rx_state[1]_net_1 ), .B(rx_dout_reg_empty_net_1), .C(
+        fifo_empty_rx), .D(\rx_state[0]_net_1 ), .Y(\rx_state_ns[0] ));
+    SLE \rx_dout_reg[3]  (.D(\rx_dout[3] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[3])
+        );
+    Echo_control_COREUART_0_fifo_256x8_0s_4294967232s 
+        \genblk2.tx_fifo  (.counter({\counter[6] , \counter[5] , 
+        \counter[4] , \counter[3] , \counter[2] , \counter[1] , 
+        \counter_0[0] }), .tx_dout_reg({\tx_dout_reg[7] , 
+        \tx_dout_reg[6] , \tx_dout_reg[5] , \tx_dout_reg[4] , 
+        \tx_dout_reg[3] , \tx_dout_reg[2] , \tx_dout_reg[1] , 
+        \tx_dout_reg[0] }), .tx_hold_reg_0(\tx_hold_reg[0]_net_1 ), 
+        .tx_hold_reg_1(\tx_hold_reg[1]_net_1 ), .tx_hold_reg_2(
+        \tx_hold_reg[2]_net_1 ), .tx_hold_reg_3(\tx_hold_reg[3]_net_1 )
+        , .tx_hold_reg_5(\tx_hold_reg[5] ), .fifo_write_tx(
+        fifo_write_tx_net_1), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
+        FCCC_0_GL0), .fifo_read_tx(fifo_read_tx), .fifo_read_tx_i_0(
+        fifo_read_tx_i_0), .fifo_full_tx_i_0(fifo_full_tx_i_0));
+    CFG2 #( .INIT(4'h7) )  rx_dout_reg4_0 (.A(\rx_state[0]_net_1 ), .B(
+        \rx_state[1]_net_1 ), .Y(rx_dout_reg4));
+    SLE \tx_hold_reg[2]  (.D(time_sender_0_data_out_2), .CLK(
+        FCCC_0_GL0), .EN(LED_3_c_i_0), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(\tx_hold_reg[2]_net_1 ));
+    CFG2 #( .INIT(4'h8) )  rx_dout_reg4_0_i (.A(\rx_state[0]_net_1 ), 
+        .B(\rx_state[1]_net_1 ), .Y(rx_dout_reg4_i_0));
+    SLE rx_dout_reg_empty (.D(rx_dout_reg4), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg_empty_1_sqmuxa_i_0), .ALn(FCCC_0_LOCK), .ADn(
+        GND_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(rx_dout_reg_empty_net_1));
+    VCC VCC (.Y(VCC_net_1));
+    CFG3 #( .INIT(8'hFE) )  \genblk1.RXRDY5  (.A(rx_idle), .B(
+        stop_strobe), .C(rx_dout_reg_empty_net_1), .Y(RXRDY5));
+    CFG4 #( .INIT(16'h0004) )  fifo_read_rx_0_sqmuxa_0_a2 (.A(
+        \rx_state[1]_net_1 ), .B(rx_dout_reg_empty_net_1), .C(
+        fifo_empty_rx), .D(\rx_state[0]_net_1 ), .Y(
+        fifo_read_rx_0_sqmuxa));
+    Echo_control_COREUART_0_Tx_async_0s_1s_0s_1s_2s_3s_4s_5s_6s 
+        make_TX (.tx_dout_reg({\tx_dout_reg[7] , \tx_dout_reg[6] , 
+        \tx_dout_reg[5] , \tx_dout_reg[4] , \tx_dout_reg[3] , 
+        \tx_dout_reg[2] , \tx_dout_reg[1] , \tx_dout_reg[0] }), 
+        .counter({\counter[6] , \counter[5] , \counter[4] , 
+        \counter[3] , \counter[2] , \counter[1] , \counter_0[0] }), 
+        .fifo_read_tx(fifo_read_tx), .fifo_read_tx_i_0(
+        fifo_read_tx_i_0), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
+        FCCC_0_GL0), .xmit_pulse(xmit_pulse), .Echo_control_0_TX(
+        Echo_control_0_TX), .COREUART_0_TXRDY(COREUART_0_TXRDY), 
+        .fifo_full_tx_i_0(fifo_full_tx_i_0), .baud_clock(baud_clock), 
+        .xmit_clock(xmit_clock));
+    SLE \rx_dout_reg[4]  (.D(\rx_dout[4] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[4])
+        );
+    Echo_control_COREUART_0_Clock_gen_0s_0s make_CLOCK_GEN (
+        .xmit_clock(xmit_clock), .FCCC_0_LOCK(FCCC_0_LOCK), 
+        .FCCC_0_GL0(FCCC_0_GL0), .baud_clock(baud_clock), .xmit_pulse(
+        xmit_pulse));
+    SLE \rx_state[1]  (.D(N_176_i), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\rx_state[1]_net_1 ));
+    SLE \rx_dout_reg[7]  (.D(\rx_dout[7] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[7])
+        );
+    GND GND (.Y(GND_net_1));
+    SLE \rx_dout_reg[1]  (.D(\rx_dout[1] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[1])
+        );
+    SLE \rx_dout_reg[5]  (.D(\rx_dout[5] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[5])
+        );
+    CFG1 #( .INIT(2'h1) )  \genblk1.RXRDY_RNO  (.A(
+        rx_dout_reg_empty_net_1), .Y(rx_dout_reg_empty_i_0));
+    SLE \rx_dout_reg[6]  (.D(\rx_dout[6] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[6])
+        );
+    SLE \rx_state[0]  (.D(\rx_state_ns[0] ), .CLK(FCCC_0_GL0), .EN(
+        VCC_net_1), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(\rx_state[0]_net_1 ));
+    SLE \genblk1.RXRDY  (.D(rx_dout_reg_empty_i_0), .CLK(FCCC_0_GL0), 
+        .EN(RXRDY5), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(
+        COREUART_0_RXRDY));
+    Echo_control_COREUART_0_fifo_256x8_0s_4294967232s_0 
+        \genblk3.rx_fifo  (.counter({\counter[0] }), .rx_dout({
+        \rx_dout[7] , \rx_dout[6] , \rx_dout[5] , \rx_dout[4] , 
+        \rx_dout[3] , \rx_dout[2] , \rx_dout[1] , \rx_dout[0] }), 
+        .rx_byte({\rx_byte[7] , \rx_byte[6] , \rx_byte[5] , 
+        \rx_byte[4] , \rx_byte[3] , \rx_byte[2] , \rx_byte[1] , 
+        \rx_byte[0] }), .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(
+        FCCC_0_GL0), .N_3802_i_0(N_3802_i_0), .N_3803_i_0(N_3803_i_0), 
+        .fifo_read_rx_0_sqmuxa(fifo_read_rx_0_sqmuxa), 
+        .fifo_write_rx_1(fifo_write_rx_1_net_1), .full_0(full_0), 
+        .full_4(full_4), .fifo_empty_rx(fifo_empty_rx));
+    SLE \tx_hold_reg[3]  (.D(time_sender_0_data_out_3), .CLK(
+        FCCC_0_GL0), .EN(LED_3_c_i_0), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(\tx_hold_reg[3]_net_1 ));
+    SLE fifo_write_tx (.D(LED_3_c), .CLK(FCCC_0_GL0), .EN(VCC_net_1), 
+        .ALn(FCCC_0_LOCK), .ADn(GND_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(fifo_write_tx_net_1));
+    SLE \tx_hold_reg[1]  (.D(time_sender_0_data_out_1), .CLK(
+        FCCC_0_GL0), .EN(LED_3_c_i_0), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(\tx_hold_reg[1]_net_1 ));
+    CFG2 #( .INIT(4'h7) )  rx_dout_reg_empty_1_sqmuxa_i (.A(
+        rx_dout_reg4), .B(BT_module_0_oen), .Y(
+        rx_dout_reg_empty_1_sqmuxa_i_0));
+    SLE \rx_dout_reg[2]  (.D(\rx_dout[2] ), .CLK(FCCC_0_GL0), .EN(
+        rx_dout_reg4_i_0), .ALn(FCCC_0_LOCK), .ADn(VCC_net_1), .SLn(
+        VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), .Q(rx_dout_reg[2])
+        );
+    SLE \tx_hold_reg[4]  (.D(time_sender_0_data_out_5), .CLK(
+        FCCC_0_GL0), .EN(LED_3_c_i_0), .ALn(FCCC_0_LOCK), .ADn(
+        VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), .LAT(GND_net_1), 
+        .Q(\tx_hold_reg[5] ));
+    
+endmodule
+
+
+module Echo_control_FCCC_0_FCCC(
+       FCCC_0_LOCK,
+       FCCC_0_GL0,
+       OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC
+    );
+output FCCC_0_LOCK;
+output FCCC_0_GL0;
+input  OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC;
+
+    wire LOCK, GL0_net, VCC_net_1, GND_net_1;
+    
+    VCC VCC (.Y(VCC_net_1));
+    GND GND (.Y(GND_net_1));
+    CLKINT GL0_INST (.A(GL0_net), .Y(FCCC_0_GL0));
+    CCC #( .INIT(210'h0000007F88000045164000318C6318C1F18C61E80404040403100)
+        , .VCOFREQUENCY(800.0) )  CCC_INST (.Y0(), .Y1(), .Y2(), .Y3(), 
+        .PRDATA({nc0, nc1, nc2, nc3, nc4, nc5, nc6, nc7}), .LOCK(LOCK), 
+        .BUSY(), .CLK0(VCC_net_1), .CLK1(VCC_net_1), .CLK2(VCC_net_1), 
+        .CLK3(VCC_net_1), .NGMUX0_SEL(GND_net_1), .NGMUX1_SEL(
+        GND_net_1), .NGMUX2_SEL(GND_net_1), .NGMUX3_SEL(GND_net_1), 
+        .NGMUX0_HOLD_N(VCC_net_1), .NGMUX1_HOLD_N(VCC_net_1), 
+        .NGMUX2_HOLD_N(VCC_net_1), .NGMUX3_HOLD_N(VCC_net_1), 
+        .NGMUX0_ARST_N(VCC_net_1), .NGMUX1_ARST_N(VCC_net_1), 
+        .NGMUX2_ARST_N(VCC_net_1), .NGMUX3_ARST_N(VCC_net_1), 
+        .PLL_BYPASS_N(VCC_net_1), .PLL_ARST_N(VCC_net_1), 
+        .PLL_POWERDOWN_N(VCC_net_1), .GPD0_ARST_N(VCC_net_1), 
+        .GPD1_ARST_N(VCC_net_1), .GPD2_ARST_N(VCC_net_1), .GPD3_ARST_N(
+        VCC_net_1), .PRESET_N(GND_net_1), .PCLK(VCC_net_1), .PSEL(
+        VCC_net_1), .PENABLE(VCC_net_1), .PWRITE(VCC_net_1), .PADDR({
+        VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1, 
+        VCC_net_1}), .PWDATA({VCC_net_1, VCC_net_1, VCC_net_1, 
+        VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1, VCC_net_1}), 
+        .CLK0_PAD(GND_net_1), .CLK1_PAD(GND_net_1), .CLK2_PAD(
+        GND_net_1), .CLK3_PAD(GND_net_1), .GL0(GL0_net), .GL1(), .GL2()
+        , .GL3(), .RCOSC_25_50MHZ(GND_net_1), .RCOSC_1MHZ(
+        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC), .XTLOSC(GND_net_1));
+    CLKINT CCC_INST_RNIE1Q1 (.A(LOCK), .Y(FCCC_0_LOCK));
+    
+endmodule
+
+
+module Echo_control_OSC_0_OSC(
+       OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC
+    );
+output OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC;
+
+    wire GND_net_1, VCC_net_1;
+    
+    VCC VCC (.Y(VCC_net_1));
+    GND GND (.Y(GND_net_1));
+    RCOSC_1MHZ I_RCOSC_1MHZ (.CLKOUT(
+        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC));
+    
+endmodule
+
+
+module delayer(
+       FCCC_0_GL0,
+       FCCC_0_LOCK,
+       LED_2_c,
+       pulse_meash_0_new_ready
+    );
+input  FCCC_0_GL0;
+input  FCCC_0_LOCK;
+output LED_2_c;
+input  pulse_meash_0_new_ready;
+
+    wire \i[16]_net_1 , VCC_net_1, \i_4[16] , GND_net_1, \i[17]_net_1 , 
+        \i_4[17] , \i[18]_net_1 , \i_4[18] , \i[19]_net_1 , \i_4[19] , 
+        \i[20]_net_1 , \i_4[20] , \i[21]_net_1 , \i_4[21] , 
+        \i[22]_net_1 , \i_4[22] , \i[1]_net_1 , \i_4[1] , \i[2]_net_1 , 
+        \i_4[2] , \i[3]_net_1 , \i_4[3] , \i[4]_net_1 , \i_4[4] , 
+        \i[5]_net_1 , \i_4[5] , \i[6]_net_1 , \i_4[6] , \i[7]_net_1 , 
+        \i_4[7] , \i[8]_net_1 , \i_4[8] , \i[9]_net_1 , \i_4[9] , 
+        \i[10]_net_1 , \i_4[10] , \i[11]_net_1 , \i_4[11] , 
+        \i[12]_net_1 , \i_4[12] , \i[13]_net_1 , \i_4[13] , 
+        \i[14]_net_1 , \i_4[14] , \i[15]_net_1 , \i_4[15] , 
+        \i[0]_net_1 , \i_4[0] , un9_clklto22_i_0_a3_RNI2GHT_Y, 
+        i_4_cry_0_cy, un9_clklto22_i_0_a3_net_1, 
+        un9_clklto22_i_0_a3_0_net_1, i_4_cry_0, i_4_cry_1, i_4_cry_2, 
+        i_4_cry_3, i_4_cry_4, i_4_cry_5, i_4_cry_6, i_4_cry_7, 
+        i_4_cry_8, i_4_cry_9, i_4_cry_10, i_4_cry_11, i_4_cry_12, 
+        i_4_cry_13, i_4_cry_14, i_4_cry_15, i_4_cry_16, i_4_cry_17, 
+        i_4_cry_18, i_4_cry_19, i_4_cry_20, i_4_cry_21, 
+        un9_clklto22_i_0_a3_1_net_1, un9_clklto22_i_0_a2_2_3_net_1, 
+        N_122, N_123, N_124, un9_clklto22_i_0_o2_net_1;
+    
+    ARI1 #( .INIT(20'h42200) )  \i_RNI64HF3[7]  (.A(VCC_net_1), .B(
+        \i[7]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_6), .S(\i_4[7] ), .Y(), .FCO(i_4_cry_7));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIVAP71[0]  (.A(VCC_net_1), .B(
+        \i[0]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_0_cy), .S(\i_4[0] ), .Y(), .FCO(i_4_cry_0));
+    SLE \i[17]  (.D(\i_4[17] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[17]_net_1 ));
+    CFG3 #( .INIT(8'h75) )  un9_clklto22_i_0_o2_0 (.A(\i[11]_net_1 ), 
+        .B(\i[10]_net_1 ), .C(N_123), .Y(N_124));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIEFJ64[11]  (.A(VCC_net_1), .B(
+        \i[11]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_10), .S(\i_4[11] ), .Y(), .FCO(i_4_cry_11));
+    ARI1 #( .INIT(20'h4FFEF) )  un9_clklto22_i_0_a3_RNI2GHT (.A(
+        pulse_meash_0_new_ready), .B(un9_clklto22_i_0_a3_net_1), .C(
+        un9_clklto22_i_0_a3_0_net_1), .D(\i[22]_net_1 ), .FCI(
+        VCC_net_1), .S(), .Y(un9_clklto22_i_0_a3_RNI2GHT_Y), .FCO(
+        i_4_cry_0_cy));
+    CFG3 #( .INIT(8'h01) )  un9_clklto22_i_0_a3_1 (.A(\i[17]_net_1 ), 
+        .B(\i[16]_net_1 ), .C(\i[15]_net_1 ), .Y(
+        un9_clklto22_i_0_a3_1_net_1));
+    ARI1 #( .INIT(20'h42200) )  \i_RNI22953[6]  (.A(VCC_net_1), .B(
+        \i[6]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_5), .S(\i_4[6] ), .Y(), .FCO(i_4_cry_6));
+    SLE \i[21]  (.D(\i_4[21] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[21]_net_1 ));
+    SLE \i[9]  (.D(\i_4[9] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[9]_net_1 ));
+    SLE \i[2]  (.D(\i_4[2] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[2]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNO[22]  (.A(VCC_net_1), .B(
+        \i[22]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_21), .S(\i_4[22] ), .Y(), .FCO());
+    SLE \i[10]  (.D(\i_4[10] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[10]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIFN594[13]  (.A(VCC_net_1), .B(
+        \i[13]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_12), .S(\i_4[13] ), .Y(), .FCO(i_4_cry_13));
+    SLE \i[3]  (.D(\i_4[3] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[3]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNITJAE4[17]  (.A(VCC_net_1), .B(
+        \i[17]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_16), .S(\i_4[17] ), .Y(), .FCO(i_4_cry_17));
+    SLE \i[8]  (.D(\i_4[8] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[8]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIT61I1[1]  (.A(VCC_net_1), .B(
+        \i[1]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_0), .S(\i_4[1] ), .Y(), .FCO(i_4_cry_1));
+    VCC VCC (.Y(VCC_net_1));
+    ARI1 #( .INIT(20'h42200) )  \i_RNI8B1D4[16]  (.A(VCC_net_1), .B(
+        \i[16]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_15), .S(\i_4[16] ), .Y(), .FCO(i_4_cry_16));
+    SLE \i[20]  (.D(\i_4[20] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[20]_net_1 ));
+    SLE led (.D(un9_clklto22_i_0_a3_RNI2GHT_Y), .CLK(FCCC_0_GL0), .EN(
+        FCCC_0_LOCK), .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1)
+        , .SD(GND_net_1), .LAT(GND_net_1), .Q(LED_2_c));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIS39S1[2]  (.A(VCC_net_1), .B(
+        \i[2]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_1), .S(\i_4[2] ), .Y(), .FCO(i_4_cry_2));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIUIS74[12]  (.A(VCC_net_1), .B(
+        \i[12]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_11), .S(\i_4[12] ), .Y(), .FCO(i_4_cry_12));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIHB144[9]  (.A(VCC_net_1), .B(
+        \i[9]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_8), .S(\i_4[9] ), .Y(), .FCO(i_4_cry_9));
+    SLE \i[18]  (.D(\i_4[18] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[18]_net_1 ));
+    GND GND (.Y(GND_net_1));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIPB7I4[20]  (.A(VCC_net_1), .B(
+        \i[20]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_19), .S(\i_4[20] ), .Y(), .FCO(i_4_cry_20));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIB7PP3[8]  (.A(VCC_net_1), .B(
+        \i[8]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_7), .S(\i_4[8] ), .Y(), .FCO(i_4_cry_8));
+    SLE \i[14]  (.D(\i_4[14] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[14]_net_1 ));
+    SLE \i[0]  (.D(\i_4[0] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[0]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIA8TG4[19]  (.A(VCC_net_1), .B(
+        \i[19]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_18), .S(\i_4[19] ), .Y(), .FCO(i_4_cry_19));
+    SLE \i[13]  (.D(\i_4[13] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[13]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIK3OB4[15]  (.A(VCC_net_1), .B(
+        \i[15]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_14), .S(\i_4[15] ), .Y(), .FCO(i_4_cry_15));
+    CFG4 #( .INIT(16'h0008) )  un9_clklto22_i_0_a3 (.A(
+        un9_clklto22_i_0_a3_1_net_1), .B(un9_clklto22_i_0_o2_net_1), 
+        .C(\i[21]_net_1 ), .D(\i[20]_net_1 ), .Y(
+        un9_clklto22_i_0_a3_net_1));
+    SLE \i[5]  (.D(\i_4[5] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[5]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIS1H62[3]  (.A(VCC_net_1), .B(
+        \i[3]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_2), .S(\i_4[3] ), .Y(), .FCO(i_4_cry_3));
+    ARI1 #( .INIT(20'h42200) )  \i_RNI9GHJ4[21]  (.A(VCC_net_1), .B(
+        \i[21]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_20), .S(\i_4[21] ), .Y(), .FCO(i_4_cry_21));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIT0PG2[4]  (.A(VCC_net_1), .B(
+        \i[4]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_3), .S(\i_4[4] ), .Y(), .FCO(i_4_cry_4));
+    SLE \i[16]  (.D(\i_4[16] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[16]_net_1 ));
+    CFG4 #( .INIT(16'h7F77) )  un9_clklto22_i_0_o2_1 (.A(\i[9]_net_1 ), 
+        .B(\i[8]_net_1 ), .C(\i[7]_net_1 ), .D(N_122), .Y(N_123));
+    CFG4 #( .INIT(16'h5755) )  un9_clklto22_i_0_o2 (.A(\i[14]_net_1 ), 
+        .B(\i[13]_net_1 ), .C(\i[12]_net_1 ), .D(N_124), .Y(
+        un9_clklto22_i_0_o2_net_1));
+    SLE \i[6]  (.D(\i_4[6] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[6]_net_1 ));
+    SLE \i[19]  (.D(\i_4[19] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[19]_net_1 ));
+    SLE \i[12]  (.D(\i_4[12] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[12]_net_1 ));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIJTJF4[18]  (.A(VCC_net_1), .B(
+        \i[18]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_17), .S(\i_4[18] ), .Y(), .FCO(i_4_cry_18));
+    CFG4 #( .INIT(16'h0007) )  un9_clklto22_i_0_a3_0 (.A(\i[19]_net_1 )
+        , .B(\i[18]_net_1 ), .C(\i[21]_net_1 ), .D(\i[20]_net_1 ), .Y(
+        un9_clklto22_i_0_a3_0_net_1));
+    SLE \i[15]  (.D(\i_4[15] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[15]_net_1 ));
+    ARI1 #( .INIT(20'h55500) )  \i_RNIVCA54[10]  (.A(\i[10]_net_1 ), 
+        .B(pulse_meash_0_new_ready), .C(GND_net_1), .D(GND_net_1), 
+        .FCI(i_4_cry_9), .S(\i_4[10] ), .Y(), .FCO(i_4_cry_10));
+    CFG4 #( .INIT(16'h0F4F) )  un9_clklto22_i_0_o2_2 (.A(\i[0]_net_1 ), 
+        .B(un9_clklto22_i_0_a2_2_3_net_1), .C(\i[6]_net_1 ), .D(
+        \i[1]_net_1 ), .Y(N_122));
+    ARI1 #( .INIT(20'h42200) )  \i_RNIV01R2[5]  (.A(VCC_net_1), .B(
+        \i[5]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_4), .S(\i_4[5] ), .Y(), .FCO(i_4_cry_5));
+    ARI1 #( .INIT(20'h42200) )  \i_RNI1TEA4[14]  (.A(VCC_net_1), .B(
+        \i[14]_net_1 ), .C(pulse_meash_0_new_ready), .D(GND_net_1), 
+        .FCI(i_4_cry_13), .S(\i_4[14] ), .Y(), .FCO(i_4_cry_14));
+    SLE \i[7]  (.D(\i_4[7] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[7]_net_1 ));
+    SLE \i[22]  (.D(\i_4[22] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[22]_net_1 ));
+    SLE \i[4]  (.D(\i_4[4] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[4]_net_1 ));
+    CFG4 #( .INIT(16'h0001) )  un9_clklto22_i_0_a2_2_3 (.A(
+        \i[5]_net_1 ), .B(\i[4]_net_1 ), .C(\i[3]_net_1 ), .D(
+        \i[2]_net_1 ), .Y(un9_clklto22_i_0_a2_2_3_net_1));
+    SLE \i[1]  (.D(\i_4[1] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), .ALn(
+        VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(GND_net_1), 
+        .LAT(GND_net_1), .Q(\i[1]_net_1 ));
+    SLE \i[11]  (.D(\i_4[11] ), .CLK(FCCC_0_GL0), .EN(FCCC_0_LOCK), 
+        .ALn(VCC_net_1), .ADn(VCC_net_1), .SLn(VCC_net_1), .SD(
+        GND_net_1), .LAT(GND_net_1), .Q(\i[11]_net_1 ));
+    
+endmodule
+
+
+module Echo_control(
+       LED_3_c,
+       Echo_control_0_TX,
+       mss_sb_0_TX,
+       SERVO_PWM_c,
+       ECHO_c,
+       TRIG_c,
+       LED_2_c
+    );
+output LED_3_c;
+output Echo_control_0_TX;
+input  mss_sb_0_TX;
+output SERVO_PWM_c;
+input  ECHO_c;
+output TRIG_c;
+output LED_2_c;
+
+    wire \BT_module_0_data_buf[0] , \BT_module_0_data_buf[1] , 
+        \BT_module_0_data_buf[2] , \BT_module_0_data_buf[3] , 
+        \BT_module_0_data_buf[4] , \BT_module_0_data_buf[5] , 
+        \BT_module_0_data_buf[6] , \BT_module_0_data_buf[7] , 
+        \rx_dout_reg[0] , \rx_dout_reg[1] , \rx_dout_reg[2] , 
+        \rx_dout_reg[3] , \rx_dout_reg[4] , \rx_dout_reg[5] , 
+        \rx_dout_reg[6] , \rx_dout_reg[7] , FCCC_0_LOCK, FCCC_0_GL0, 
+        BT_module_0_oen, COREUART_0_RXRDY, \time_sender_0_data_out[0] , 
+        \time_sender_0_data_out[1] , \time_sender_0_data_out[2] , 
+        \time_sender_0_data_out[3] , \time_sender_0_data_out[5] , 
+        LED_3_c_i_0, COREUART_0_TXRDY, 
+        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC, 
+        \locator_control_0_angle1[0] , \locator_control_0_angle1[1] , 
+        \locator_control_0_angle1[2] , \locator_control_0_angle1[3] , 
+        \pulse_meash_0_tim[0] , \pulse_meash_0_tim[1] , 
+        \pulse_meash_0_tim[2] , \pulse_meash_0_tim[3] , 
+        \pulse_meash_0_tim[4] , \pulse_meash_0_tim[5] , 
+        \pulse_meash_0_tim[6] , \pulse_meash_0_tim[7] , 
+        \pulse_meash_0_tim[8] , \pulse_meash_0_tim[9] , 
+        \pulse_meash_0_tim[10] , \pulse_meash_0_tim[11] , 
+        \pulse_meash_0_tim[12] , \pulse_meash_0_tim[13] , 
+        pulse_meash_0_new_ready, un46_clk_0, un46_clk_1, un46_clk_2, 
+        un46_clk_3, N_234_0, locator_control_0_en_timer, GND_net_1, 
+        VCC_net_1;
+    
+    pulse_meash pulse_meash_0 (.pulse_meash_0_tim({
+        \pulse_meash_0_tim[13] , \pulse_meash_0_tim[12] , 
+        \pulse_meash_0_tim[11] , \pulse_meash_0_tim[10] , 
+        \pulse_meash_0_tim[9] , \pulse_meash_0_tim[8] , 
+        \pulse_meash_0_tim[7] , \pulse_meash_0_tim[6] , 
+        \pulse_meash_0_tim[5] , \pulse_meash_0_tim[4] , 
+        \pulse_meash_0_tim[3] , \pulse_meash_0_tim[2] , 
+        \pulse_meash_0_tim[1] , \pulse_meash_0_tim[0] }), .FCCC_0_LOCK(
+        FCCC_0_LOCK), .FCCC_0_GL0(FCCC_0_GL0), 
+        .pulse_meash_0_new_ready(pulse_meash_0_new_ready), 
+        .locator_control_0_en_timer(locator_control_0_en_timer), 
+        .ECHO_c(ECHO_c));
+    locator_control locator_control_0 (.BT_module_0_data_buf({
+        \BT_module_0_data_buf[7] , \BT_module_0_data_buf[6] , 
+        \BT_module_0_data_buf[5] , \BT_module_0_data_buf[4] , 
+        \BT_module_0_data_buf[3] , \BT_module_0_data_buf[2] , 
+        \BT_module_0_data_buf[1] , \BT_module_0_data_buf[0] }), 
+        .locator_control_0_angle1({\locator_control_0_angle1[3] , 
+        \locator_control_0_angle1[2] , \locator_control_0_angle1[1] , 
+        \locator_control_0_angle1[0] }), .FCCC_0_LOCK(FCCC_0_LOCK), 
+        .FCCC_0_GL0(FCCC_0_GL0), .un46_clk_0(un46_clk_0), .un46_clk_1(
+        un46_clk_1), .un46_clk_2(un46_clk_2), .un46_clk_3(un46_clk_3), 
+        .TRIG_c(TRIG_c), .locator_control_0_en_timer(
+        locator_control_0_en_timer), .pulse_meash_0_new_ready(
+        pulse_meash_0_new_ready), .N_234_0(N_234_0));
+    time_sender time_sender_0 (.locator_control_0_angle1({
+        \locator_control_0_angle1[3] , \locator_control_0_angle1[2] , 
+        \locator_control_0_angle1[1] , \locator_control_0_angle1[0] }), 
+        .pulse_meash_0_tim({\pulse_meash_0_tim[13] , 
+        \pulse_meash_0_tim[12] , \pulse_meash_0_tim[11] , 
+        \pulse_meash_0_tim[10] , \pulse_meash_0_tim[9] , 
+        \pulse_meash_0_tim[8] , \pulse_meash_0_tim[7] , 
+        \pulse_meash_0_tim[6] , \pulse_meash_0_tim[5] , 
+        \pulse_meash_0_tim[4] , \pulse_meash_0_tim[3] , 
+        \pulse_meash_0_tim[2] , \pulse_meash_0_tim[1] , 
+        \pulse_meash_0_tim[0] }), .time_sender_0_data_out_0(
+        \time_sender_0_data_out[0] ), .time_sender_0_data_out_1(
+        \time_sender_0_data_out[1] ), .time_sender_0_data_out_2(
+        \time_sender_0_data_out[2] ), .time_sender_0_data_out_3(
+        \time_sender_0_data_out[3] ), .time_sender_0_data_out_5(
+        \time_sender_0_data_out[5] ), .LED_3_c(LED_3_c), .LED_3_c_i_0(
+        LED_3_c_i_0), .FCCC_0_GL0(FCCC_0_GL0), .FCCC_0_LOCK(
+        FCCC_0_LOCK), .pulse_meash_0_new_ready(pulse_meash_0_new_ready)
+        , .COREUART_0_TXRDY(COREUART_0_TXRDY));
+    GND GND (.Y(GND_net_1));
+    BT_module BT_module_0 (.BT_module_0_data_buf({
+        \BT_module_0_data_buf[7] , \BT_module_0_data_buf[6] , 
+        \BT_module_0_data_buf[5] , \BT_module_0_data_buf[4] , 
+        \BT_module_0_data_buf[3] , \BT_module_0_data_buf[2] , 
+        \BT_module_0_data_buf[1] , \BT_module_0_data_buf[0] }), 
+        .rx_dout_reg({\rx_dout_reg[7] , \rx_dout_reg[6] , 
+        \rx_dout_reg[5] , \rx_dout_reg[4] , \rx_dout_reg[3] , 
+        \rx_dout_reg[2] , \rx_dout_reg[1] , \rx_dout_reg[0] }), 
+        .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(FCCC_0_GL0), 
+        .BT_module_0_oen(BT_module_0_oen), .COREUART_0_RXRDY(
+        COREUART_0_RXRDY));
+    servo_driver servo_driver_0 (.FCCC_0_LOCK(FCCC_0_LOCK), 
+        .FCCC_0_GL0(FCCC_0_GL0), .SERVO_PWM_c(SERVO_PWM_c), 
+        .un46_clk_0(un46_clk_0), .un46_clk_1(un46_clk_1), .un46_clk_2(
+        un46_clk_2), .un46_clk_3(un46_clk_3), .N_234_0(N_234_0));
+    VCC VCC (.Y(VCC_net_1));
+    Echo_control_COREUART_0_COREUART_1s_1s_0s_19s_0s_0s COREUART_0 (
+        .rx_dout_reg({\rx_dout_reg[7] , \rx_dout_reg[6] , 
+        \rx_dout_reg[5] , \rx_dout_reg[4] , \rx_dout_reg[3] , 
+        \rx_dout_reg[2] , \rx_dout_reg[1] , \rx_dout_reg[0] }), 
+        .time_sender_0_data_out_0(\time_sender_0_data_out[0] ), 
+        .time_sender_0_data_out_1(\time_sender_0_data_out[1] ), 
+        .time_sender_0_data_out_2(\time_sender_0_data_out[2] ), 
+        .time_sender_0_data_out_3(\time_sender_0_data_out[3] ), 
+        .time_sender_0_data_out_5(\time_sender_0_data_out[5] ), 
+        .FCCC_0_LOCK(FCCC_0_LOCK), .FCCC_0_GL0(FCCC_0_GL0), 
+        .LED_3_c_i_0(LED_3_c_i_0), .COREUART_0_RXRDY(COREUART_0_RXRDY), 
+        .LED_3_c(LED_3_c), .BT_module_0_oen(BT_module_0_oen), 
+        .Echo_control_0_TX(Echo_control_0_TX), .COREUART_0_TXRDY(
+        COREUART_0_TXRDY), .mss_sb_0_TX(mss_sb_0_TX));
+    Echo_control_FCCC_0_FCCC FCCC_0 (.FCCC_0_LOCK(FCCC_0_LOCK), 
+        .FCCC_0_GL0(FCCC_0_GL0), 
+        .OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC(
+        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC));
+    Echo_control_OSC_0_OSC OSC_0 (
+        .OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC(
+        OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC));
+    delayer delayer_0 (.FCCC_0_GL0(FCCC_0_GL0), .FCCC_0_LOCK(
+        FCCC_0_LOCK), .LED_2_c(LED_2_c), .pulse_meash_0_new_ready(
+        pulse_meash_0_new_ready));
+    
+endmodule
+
+
 module mss(
        PWM,
        BT_TX,
        DEVRST_N,
        ECHO,
        GPS_TX,
+       TEST,
        BT_RX,
        GPS_RX,
        LED_1,
@@ -21267,6 +21273,7 @@ input  BT_TX;
 input  DEVRST_N;
 input  ECHO;
 input  GPS_TX;
+input  TEST;
 output BT_RX;
 output GPS_RX;
 output LED_1;
@@ -21277,21 +21284,41 @@ output TRIG;
 inout  COREI2C_0_0_SCL_IO;
 inout  COREI2C_0_0_SDA_IO;
 
-    wire ECHO_net_1, mss_sb_0_TX, Echo_control_0_TX, VCC_net_1, 
-        GND_net_1;
-    assign ECHO_net_1 = ECHO;
-    assign LED_1 = ECHO_net_1;
+    wire mss_sb_0_TX, Echo_control_0_TX, VCC_net_1, GND_net_1, BT_TX_c, 
+        ECHO_c, GPS_TX_c, BT_RX_c, GPS_RX_c, LED_2_c, LED_3_c, 
+        \PWM_c[1] , \PWM_c[2] , \PWM_c[3] , \PWM_c[4] , \PWM_c[5] , 
+        \PWM_c[6] , \PWM_c[7] , \PWM_c[8] , SERVO_PWM_c, TRIG_c;
     
-    Echo_control Echo_control_0 (.LED_3(LED_3), .Echo_control_0_TX(
-        Echo_control_0_TX), .mss_sb_0_TX(mss_sb_0_TX), .SERVO_PWM(
-        SERVO_PWM), .ECHO(ECHO_net_1), .TRIG(TRIG), .LED_2(LED_2));
-    VCC VCC (.Y(VCC_net_1));
+    OUTBUF BT_RX_obuf (.D(BT_RX_c), .PAD(BT_RX));
+    OUTBUF \PWM_obuf[3]  (.D(\PWM_c[3] ), .PAD(PWM[3]));
+    OUTBUF LED_1_obuf (.D(ECHO_c), .PAD(LED_1));
+    mss_sb mss_sb_0 (.PWM_c({\PWM_c[8] , \PWM_c[7] , \PWM_c[6] , 
+        \PWM_c[5] , \PWM_c[4] , \PWM_c[3] , \PWM_c[2] , \PWM_c[1] }), 
+        .COREI2C_0_0_SDA_IO(COREI2C_0_0_SDA_IO), .COREI2C_0_0_SCL_IO(
+        COREI2C_0_0_SCL_IO), .DEVRST_N(DEVRST_N), .mss_sb_0_TX(
+        mss_sb_0_TX), .Echo_control_0_TX(Echo_control_0_TX), .GPS_RX_c(
+        GPS_RX_c), .GPS_TX_c(GPS_TX_c), .BT_RX_c(BT_RX_c), .BT_TX_c(
+        BT_TX_c));
     GND GND (.Y(GND_net_1));
-    mss_sb mss_sb_0 (.PWM({PWM[8], PWM[7], PWM[6], PWM[5], PWM[4], 
-        PWM[3], PWM[2], PWM[1]}), .COREI2C_0_0_SDA_IO(
-        COREI2C_0_0_SDA_IO), .COREI2C_0_0_SCL_IO(COREI2C_0_0_SCL_IO), 
-        .DEVRST_N(DEVRST_N), .mss_sb_0_TX(mss_sb_0_TX), 
-        .Echo_control_0_TX(Echo_control_0_TX), .GPS_RX(GPS_RX), 
-        .GPS_TX(GPS_TX), .BT_RX(BT_RX), .BT_TX(BT_TX));
+    INBUF ECHO_ibuf (.PAD(ECHO), .Y(ECHO_c));
+    OUTBUF \PWM_obuf[7]  (.D(\PWM_c[7] ), .PAD(PWM[7]));
+    OUTBUF GPS_RX_obuf (.D(GPS_RX_c), .PAD(GPS_RX));
+    Echo_control Echo_control_0 (.LED_3_c(LED_3_c), .Echo_control_0_TX(
+        Echo_control_0_TX), .mss_sb_0_TX(mss_sb_0_TX), .SERVO_PWM_c(
+        SERVO_PWM_c), .ECHO_c(ECHO_c), .TRIG_c(TRIG_c), .LED_2_c(
+        LED_2_c));
+    OUTBUF \PWM_obuf[1]  (.D(\PWM_c[1] ), .PAD(PWM[1]));
+    OUTBUF \PWM_obuf[2]  (.D(\PWM_c[2] ), .PAD(PWM[2]));
+    INBUF BT_TX_ibuf (.PAD(BT_TX), .Y(BT_TX_c));
+    OUTBUF \PWM_obuf[6]  (.D(\PWM_c[6] ), .PAD(PWM[6]));
+    OUTBUF \PWM_obuf[8]  (.D(\PWM_c[8] ), .PAD(PWM[8]));
+    INBUF GPS_TX_ibuf (.PAD(GPS_TX), .Y(GPS_TX_c));
+    OUTBUF SERVO_PWM_obuf (.D(SERVO_PWM_c), .PAD(SERVO_PWM));
+    OUTBUF LED_3_obuf (.D(LED_3_c), .PAD(LED_3));
+    VCC VCC (.Y(VCC_net_1));
+    OUTBUF \PWM_obuf[4]  (.D(\PWM_c[4] ), .PAD(PWM[4]));
+    OUTBUF \PWM_obuf[5]  (.D(\PWM_c[5] ), .PAD(PWM[5]));
+    OUTBUF TRIG_obuf (.D(TRIG_c), .PAD(TRIG));
+    OUTBUF LED_2_obuf (.D(LED_2_c), .PAD(LED_2));
     
 endmodule

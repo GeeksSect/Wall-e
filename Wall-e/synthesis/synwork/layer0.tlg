@@ -917,6 +917,7 @@
 
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":9:7:9:9|Synthesizing module mss
 
+@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":37:13:37:16|Input TEST is unused
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.

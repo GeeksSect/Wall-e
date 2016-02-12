@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2016 2 11 0 41 42)
+      (timeStamp 2016 2 13 0 10 35)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "J-2015.03M-3, mapper map201503actrcp1, Build 002R"))
      )
@@ -157,6 +157,22 @@
            (port PAD (direction INOUT))
            (port D (direction INPUT))
            (port E (direction INPUT))
+         )
+       )
+    )
+    (cell OUTBUF (cellType GENERIC)
+       (view PRIM (viewType NETLIST)
+         (interface
+           (port PAD (direction OUTPUT))
+           (port D (direction INPUT))
+         )
+       )
+    )
+    (cell INBUF (cellType GENERIC)
+       (view PRIM (viewType NETLIST)
+         (interface
+           (port Y (direction OUTPUT))
+           (port PAD (direction INPUT))
          )
        )
     )
@@ -9194,7 +9210,7 @@
            (port MSS_HPMS_READY_int_RNI5CTC (direction INPUT))
            (port GL0_INST (direction INPUT))
            (port baud_clock (direction INPUT))
-           (port BT_TX (direction INPUT))
+           (port BT_TX_c (direction INPUT))
            (port CoreUARTapb_2_2_PARITY_ERR (direction OUTPUT))
            (port stop_strobe (direction OUTPUT))
            (port CoreUARTapb_2_2_FRAMING_ERR (direction OUTPUT))
@@ -9768,8 +9784,8 @@
            (portRef EN (instanceRef samples_2))
            (portRef EN (instanceRef samples_1))
           ))
-          (net (rename bt_tx "BT_TX") (joined
-           (portRef BT_TX)
+          (net (rename bt_tx_c "BT_TX_c") (joined
+           (portRef BT_TX_c)
            (portRef D (instanceRef samples_2))
           ))
           (net (rename rx_shiftZ0Z_0 "rx_shift[0]") (joined
@@ -10223,7 +10239,7 @@
            (port MSS_HPMS_READY_int_RNI5CTC (direction INPUT))
            (port GL0_INST (direction INPUT))
            (port xmit_pulse_i_0 (direction INPUT))
-           (port BT_RX (direction OUTPUT))
+           (port BT_RX_c (direction OUTPUT))
            (port CoreUARTapb_2_2_TXRDY (direction OUTPUT))
            (port fifo_full_tx_i_0 (direction INPUT))
            (port xmit_clock (direction INPUT))
@@ -10686,9 +10702,9 @@
            (portRef Y (instanceRef un1_tx_parity_1_sqmuxa_0))
            (portRef EN (instanceRef tx_parity))
           ))
-          (net (rename bt_rx "BT_RX") (joined
+          (net (rename bt_rx_c "BT_RX_c") (joined
            (portRef Q (instanceRef tx))
-           (portRef BT_RX)
+           (portRef BT_RX_c)
           ))
           (net tx_4_iv_i_0 (joined
            (portRef Y (instanceRef xmit_sel_tx_4_iv_i))
@@ -11740,7 +11756,7 @@
            (port MSS_HPMS_READY_int_RNI5CTC (direction INPUT))
            (port GL0_INST (direction INPUT))
            (port baud_clock (direction INPUT))
-           (port GPS_TX (direction INPUT))
+           (port GPS_TX_c (direction INPUT))
            (port CoreUARTapb_2_1_PARITY_ERR (direction OUTPUT))
            (port stop_strobe (direction OUTPUT))
            (port CoreUARTapb_2_1_FRAMING_ERR (direction OUTPUT))
@@ -12304,8 +12320,8 @@
            (portRef EN (instanceRef samples_2))
            (portRef EN (instanceRef samples_1))
           ))
-          (net (rename gps_tx "GPS_TX") (joined
-           (portRef GPS_TX)
+          (net (rename gps_tx_c "GPS_TX_c") (joined
+           (portRef GPS_TX_c)
            (portRef D (instanceRef samples_2))
           ))
           (net (rename rx_shiftZ0Z_0 "rx_shift[0]") (joined
@@ -12755,7 +12771,7 @@
            (port MSS_HPMS_READY_int_RNI5CTC (direction INPUT))
            (port GL0_INST (direction INPUT))
            (port xmit_pulse (direction INPUT))
-           (port GPS_RX (direction OUTPUT))
+           (port GPS_RX_c (direction OUTPUT))
            (port CoreUARTapb_2_1_TXRDY (direction OUTPUT))
            (port fifo_full_tx_i_0 (direction INPUT))
            (port xmit_clock (direction INPUT))
@@ -13212,9 +13228,9 @@
            (portRef Y (instanceRef un1_tx_parity_1_sqmuxa_0))
            (portRef EN (instanceRef tx_parity))
           ))
-          (net (rename gps_rx "GPS_RX") (joined
+          (net (rename gps_rx_c "GPS_RX_c") (joined
            (portRef Q (instanceRef tx))
-           (portRef GPS_RX)
+           (portRef GPS_RX_c)
           ))
           (net tx_4_iv_i_0 (joined
            (portRef Y (instanceRef xmit_sel_tx_4_iv_i))
@@ -18779,9 +18795,9 @@
            (port CoreUARTapb_2_2_PARITY_ERR (direction OUTPUT))
            (port N_367 (direction INPUT))
            (port clear_overflow_0_a2_0_0 (direction INPUT))
-           (port BT_RX (direction OUTPUT))
+           (port BT_RX_c (direction OUTPUT))
            (port CoreUARTapb_2_2_TXRDY (direction OUTPUT))
-           (port BT_TX (direction INPUT))
+           (port BT_TX_c (direction INPUT))
            (port CoreUARTapb_2_2_FRAMING_ERR (direction OUTPUT))
          )
          (contents
@@ -19636,9 +19652,9 @@
            (portRef fifo_read_tx_i_0 (instanceRef make_TX))
            (portRef fifo_read_tx_i_0 (instanceRef genblk2_tx_fifo))
           ))
-          (net (rename bt_rx "BT_RX") (joined
-           (portRef BT_RX (instanceRef make_TX))
-           (portRef BT_RX)
+          (net (rename bt_rx_c "BT_RX_c") (joined
+           (portRef BT_RX_c (instanceRef make_TX))
+           (portRef BT_RX_c)
           ))
           (net (rename coreuartapb_2_2_txrdy "CoreUARTapb_2_2_TXRDY") (joined
            (portRef CoreUARTapb_2_2_TXRDY (instanceRef make_TX))
@@ -19652,9 +19668,9 @@
            (portRef fifo_empty_tx (instanceRef genblk2_tx_fifo))
            (portRef fifo_empty_tx (instanceRef make_TX))
           ))
-          (net (rename bt_tx "BT_TX") (joined
-           (portRef BT_TX)
-           (portRef BT_TX (instanceRef make_RX))
+          (net (rename bt_tx_c "BT_TX_c") (joined
+           (portRef BT_TX_c)
+           (portRef BT_TX_c (instanceRef make_RX))
           ))
           (net (rename coreuartapb_2_2_framing_err "CoreUARTapb_2_2_FRAMING_ERR") (joined
            (portRef CoreUARTapb_2_2_FRAMING_ERR (instanceRef make_RX))
@@ -19692,9 +19708,9 @@
            (port CoreUARTapb_2_1_PARITY_ERR (direction OUTPUT))
            (port N_367 (direction INPUT))
            (port clear_overflow_0_a2_0_0 (direction INPUT))
-           (port GPS_RX (direction OUTPUT))
+           (port GPS_RX_c (direction OUTPUT))
            (port CoreUARTapb_2_1_TXRDY (direction OUTPUT))
-           (port GPS_TX (direction INPUT))
+           (port GPS_TX_c (direction INPUT))
            (port CoreUARTapb_2_1_FRAMING_ERR (direction OUTPUT))
          )
          (contents
@@ -20553,9 +20569,9 @@
            (portRef fifo_read_tx_i_0 (instanceRef make_TX))
            (portRef fifo_read_tx_i_0 (instanceRef genblk2_tx_fifo))
           ))
-          (net (rename gps_rx "GPS_RX") (joined
-           (portRef GPS_RX (instanceRef make_TX))
-           (portRef GPS_RX)
+          (net (rename gps_rx_c "GPS_RX_c") (joined
+           (portRef GPS_RX_c (instanceRef make_TX))
+           (portRef GPS_RX_c)
           ))
           (net (rename coreuartapb_2_1_txrdy "CoreUARTapb_2_1_TXRDY") (joined
            (portRef CoreUARTapb_2_1_TXRDY (instanceRef make_TX))
@@ -20569,9 +20585,9 @@
            (portRef fifo_empty_tx (instanceRef genblk2_tx_fifo))
            (portRef fifo_empty_tx (instanceRef make_TX))
           ))
-          (net (rename gps_tx "GPS_TX") (joined
-           (portRef GPS_TX)
-           (portRef GPS_TX (instanceRef make_RX))
+          (net (rename gps_tx_c "GPS_TX_c") (joined
+           (portRef GPS_TX_c)
+           (portRef GPS_TX_c (instanceRef make_RX))
           ))
           (net (rename coreuartapb_2_1_framing_err "CoreUARTapb_2_1_FRAMING_ERR") (joined
            (portRef CoreUARTapb_2_1_FRAMING_ERR (instanceRef make_RX))
@@ -21496,7 +21512,7 @@
     (cell pwm_gen_8s_16s_0 (cellType GENERIC)
        (view netlist (viewType NETLIST)
          (interface
-           (port (array (rename PWM "PWM[8:1]") 8) (direction OUTPUT))
+           (port (array (rename PWM_c "PWM_c[8:1]") 8) (direction OUTPUT))
            (port (array (rename period_cnt "period_cnt[15:0]") 16) (direction INPUT))
            (port (array (rename pwm_negedge_reg "pwm_negedge_reg[128:1]") 128) (direction INPUT))
            (port (array (rename pwm_enable_reg "pwm_enable_reg[8:1]") 8) (direction INPUT))
@@ -21921,10 +21937,10 @@
           )
           (instance GND (viewRef PRIM (cellRef GND (libraryRef ACG4)))          )
           (instance VCC (viewRef PRIM (cellRef VCC (libraryRef ACG4)))          )
-          (net (rename pwm_8 "PWM[8]") (joined
+          (net (rename pwm_c_8 "PWM_c[8]") (joined
            (portRef Q (instanceRef PWM_output_generation_8__genblk1_PWM_int_8))
            (portRef C (instanceRef PWM_output_generation_8__genblk1_PWM_int_108_f1_8_8))
-           (portRef (member PWM 0))
+           (portRef (member PWM_c 0))
           ))
           (net (rename VCCZ0 "VCC") (joined
            (portRef Y (instanceRef VCC))
@@ -22002,10 +22018,10 @@
            (portRef SD (instanceRef PWM_output_generation_8__genblk1_PWM_int_8))
            (portRef LAT (instanceRef PWM_output_generation_8__genblk1_PWM_int_8))
           ))
-          (net (rename pwm_7 "PWM[7]") (joined
+          (net (rename pwm_c_7 "PWM_c[7]") (joined
            (portRef Q (instanceRef PWM_output_generation_7__genblk1_PWM_int_7))
            (portRef C (instanceRef PWM_output_generation_7__genblk1_PWM_int_94_f0_i_a2_8_7))
-           (portRef (member PWM 1))
+           (portRef (member PWM_c 1))
           ))
           (net N_509_i_0 (joined
            (portRef Y (instanceRef PWM_output_generation_7__genblk1_PWM_int_RNO_7))
@@ -22015,10 +22031,10 @@
            (portRef Y (instanceRef un1_pwm_enable_reg_1_i_0_0))
            (portRef EN (instanceRef PWM_output_generation_7__genblk1_PWM_int_7))
           ))
-          (net (rename pwm_6 "PWM[6]") (joined
+          (net (rename pwm_c_6 "PWM_c[6]") (joined
            (portRef Q (instanceRef PWM_output_generation_6__genblk1_PWM_int_6))
            (portRef C (instanceRef PWM_output_generation_6__genblk1_PWM_int_80_f1_8_6))
-           (portRef (member PWM 2))
+           (portRef (member PWM_c 2))
           ))
           (net (rename PWM_int_80_6 "PWM_int_80[6]") (joined
            (portRef Y (instanceRef PWM_output_generation_6__genblk1_PWM_int_80_f0_6))
@@ -22028,10 +22044,10 @@
            (portRef Y (instanceRef PWM_output_generation_6__genblk1_PWM_int_RNO_6))
            (portRef EN (instanceRef PWM_output_generation_6__genblk1_PWM_int_6))
           ))
-          (net (rename pwm_5 "PWM[5]") (joined
+          (net (rename pwm_c_5 "PWM_c[5]") (joined
            (portRef Q (instanceRef PWM_output_generation_5__genblk1_PWM_int_5))
            (portRef C (instanceRef PWM_output_generation_5__genblk1_PWM_int_66_f0_i_0_a2_8_5))
-           (portRef (member PWM 3))
+           (portRef (member PWM_c 3))
           ))
           (net N_26_i_0 (joined
            (portRef Y (instanceRef PWM_output_generation_5__genblk1_PWM_int_RNO_5))
@@ -22041,10 +22057,10 @@
            (portRef Y (instanceRef un1_pwm_enable_reg_3_0_a4_i_0))
            (portRef EN (instanceRef PWM_output_generation_5__genblk1_PWM_int_5))
           ))
-          (net (rename pwm_4 "PWM[4]") (joined
+          (net (rename pwm_c_4 "PWM_c[4]") (joined
            (portRef Q (instanceRef PWM_output_generation_4__genblk1_PWM_int_4))
            (portRef C (instanceRef PWM_output_generation_4__genblk1_PWM_int_52_f1_8_4))
-           (portRef (member PWM 4))
+           (portRef (member PWM_c 4))
           ))
           (net (rename PWM_int_52_4 "PWM_int_52[4]") (joined
            (portRef Y (instanceRef PWM_output_generation_4__genblk1_PWM_int_52_f0_4))
@@ -22054,10 +22070,10 @@
            (portRef Y (instanceRef PWM_output_generation_4__genblk1_PWM_int_RNO_4))
            (portRef EN (instanceRef PWM_output_generation_4__genblk1_PWM_int_4))
           ))
-          (net (rename pwm_3 "PWM[3]") (joined
+          (net (rename pwm_c_3 "PWM_c[3]") (joined
            (portRef Q (instanceRef PWM_output_generation_3__genblk1_PWM_int_3))
            (portRef C (instanceRef PWM_output_generation_3__genblk1_PWM_int_38_f0_i_a2_8_3))
-           (portRef (member PWM 5))
+           (portRef (member PWM_c 5))
           ))
           (net N_508_i_0 (joined
            (portRef Y (instanceRef PWM_output_generation_3__genblk1_PWM_int_RNO_3))
@@ -22067,10 +22083,10 @@
            (portRef Y (instanceRef un1_pwm_enable_reg_5_i_0_0))
            (portRef EN (instanceRef PWM_output_generation_3__genblk1_PWM_int_3))
           ))
-          (net (rename pwm_2 "PWM[2]") (joined
+          (net (rename pwm_c_2 "PWM_c[2]") (joined
            (portRef Q (instanceRef PWM_output_generation_2__genblk1_PWM_int_2))
            (portRef C (instanceRef PWM_output_generation_2__genblk1_PWM_int_24_f0_i_0_a2_8_2))
-           (portRef (member PWM 6))
+           (portRef (member PWM_c 6))
           ))
           (net N_31_i_0 (joined
            (portRef Y (instanceRef PWM_output_generation_2__genblk1_PWM_int_RNO_2))
@@ -22080,10 +22096,10 @@
            (portRef Y (instanceRef un1_pwm_enable_reg_6_i_0_0_0))
            (portRef EN (instanceRef PWM_output_generation_2__genblk1_PWM_int_2))
           ))
-          (net (rename pwm_1 "PWM[1]") (joined
+          (net (rename pwm_c_1 "PWM_c[1]") (joined
            (portRef Q (instanceRef PWM_output_generation_1__genblk1_PWM_int_1))
            (portRef C (instanceRef PWM_output_generation_1__genblk1_PWM_int_10_f0_i_0_a2_8_1))
-           (portRef (member PWM 7))
+           (portRef (member PWM_c 7))
           ))
           (net N_28_i_0 (joined
            (portRef Y (instanceRef PWM_output_generation_1__genblk1_PWM_int_RNO_1))
@@ -36367,8 +36383,8 @@
            (port N_669 (direction INPUT))
            (port N_367 (direction INPUT))
            (port clear_overflow_0_a2_0_0 (direction INPUT))
-           (port BT_RX (direction OUTPUT))
-           (port BT_TX (direction INPUT))
+           (port BT_RX_c (direction OUTPUT))
+           (port BT_TX_c (direction INPUT))
          )
          (contents
           (instance (rename controlReg1_4 "controlReg1[4]") (viewRef PRIM (cellRef SLE (libraryRef ACG4)))
@@ -37114,13 +37130,13 @@
            (portRef clear_overflow_0_a2_0_0)
            (portRef clear_overflow_0_a2_0_0 (instanceRef uUART))
           ))
-          (net (rename bt_rx "BT_RX") (joined
-           (portRef BT_RX (instanceRef uUART))
-           (portRef BT_RX)
+          (net (rename bt_rx_c "BT_RX_c") (joined
+           (portRef BT_RX_c (instanceRef uUART))
+           (portRef BT_RX_c)
           ))
-          (net (rename bt_tx "BT_TX") (joined
-           (portRef BT_TX)
-           (portRef BT_TX (instanceRef uUART))
+          (net (rename bt_tx_c "BT_TX_c") (joined
+           (portRef BT_TX_c)
+           (portRef BT_TX_c (instanceRef uUART))
           ))
          )
         (property langParams (string "FAMILY TX_FIFO RX_FIFO BAUD_VALUE FIXEDMODE PRG_BIT8 PRG_PARITY RX_LEGACY_MODE BAUD_VAL_FRCTN BAUD_VAL_FRCTN_EN"))
@@ -37160,8 +37176,8 @@
            (port CoreUARTapb_2_1_TXRDY (direction OUTPUT))
            (port N_669 (direction INPUT))
            (port clear_overflow_0_a2_0_0 (direction INPUT))
-           (port GPS_RX (direction OUTPUT))
-           (port GPS_TX (direction INPUT))
+           (port GPS_RX_c (direction OUTPUT))
+           (port GPS_TX_c (direction INPUT))
          )
          (contents
           (instance (rename controlReg1_4 "controlReg1[4]") (viewRef PRIM (cellRef SLE (libraryRef ACG4)))
@@ -37909,13 +37925,13 @@
            (portRef clear_overflow_0_a2_0_0)
            (portRef clear_overflow_0_a2_0_0 (instanceRef uUART))
           ))
-          (net (rename gps_rx "GPS_RX") (joined
-           (portRef GPS_RX (instanceRef uUART))
-           (portRef GPS_RX)
+          (net (rename gps_rx_c "GPS_RX_c") (joined
+           (portRef GPS_RX_c (instanceRef uUART))
+           (portRef GPS_RX_c)
           ))
-          (net (rename gps_tx "GPS_TX") (joined
-           (portRef GPS_TX)
-           (portRef GPS_TX (instanceRef uUART))
+          (net (rename gps_tx_c "GPS_TX_c") (joined
+           (portRef GPS_TX_c)
+           (portRef GPS_TX_c (instanceRef uUART))
           ))
          )
         (property langParams (string "FAMILY TX_FIFO RX_FIFO BAUD_VALUE FIXEDMODE PRG_BIT8 PRG_PARITY RX_LEGACY_MODE BAUD_VAL_FRCTN BAUD_VAL_FRCTN_EN"))
@@ -38987,7 +39003,7 @@
            (port (array (rename PRDATA_regif_12_0 "PRDATA_regif_12_0[1:1:1:1]") 1) (direction OUTPUT))
            (port (array (rename PRDATA_regif_9_i_1 "PRDATA_regif_9_i_1[4:4:4:4]") 1) (direction OUTPUT))
            (port (array (rename PRDATA_regif_9_i_0 "PRDATA_regif_9_i_0[4:4:4:4]") 1) (direction OUTPUT))
-           (port (array (rename PWM "PWM[8:1]") 8) (direction OUTPUT))
+           (port (array (rename PWM_c "PWM_c[8:1]") 8) (direction OUTPUT))
            (port pwm_enable_reg_5 (direction OUTPUT))
            (port period_reg_5 (direction OUTPUT))
            (port MSS_HPMS_READY_int_RNI5CTC (direction INPUT))
@@ -40034,37 +40050,37 @@
            (portRef N_698 (instanceRef genblk2_reg_if))
            (portRef N_698)
           ))
-          (net (rename pwm_1 "PWM[1]") (joined
-           (portRef (member PWM 7) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 7))
+          (net (rename pwm_c_1 "PWM_c[1]") (joined
+           (portRef (member PWM_c 7) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 7))
           ))
-          (net (rename pwm_2 "PWM[2]") (joined
-           (portRef (member PWM 6) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 6))
+          (net (rename pwm_c_2 "PWM_c[2]") (joined
+           (portRef (member PWM_c 6) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 6))
           ))
-          (net (rename pwm_3 "PWM[3]") (joined
-           (portRef (member PWM 5) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 5))
+          (net (rename pwm_c_3 "PWM_c[3]") (joined
+           (portRef (member PWM_c 5) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 5))
           ))
-          (net (rename pwm_4 "PWM[4]") (joined
-           (portRef (member PWM 4) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 4))
+          (net (rename pwm_c_4 "PWM_c[4]") (joined
+           (portRef (member PWM_c 4) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 4))
           ))
-          (net (rename pwm_5 "PWM[5]") (joined
-           (portRef (member PWM 3) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 3))
+          (net (rename pwm_c_5 "PWM_c[5]") (joined
+           (portRef (member PWM_c 3) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 3))
           ))
-          (net (rename pwm_6 "PWM[6]") (joined
-           (portRef (member PWM 2) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 2))
+          (net (rename pwm_c_6 "PWM_c[6]") (joined
+           (portRef (member PWM_c 2) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 2))
           ))
-          (net (rename pwm_7 "PWM[7]") (joined
-           (portRef (member PWM 1) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 1))
+          (net (rename pwm_c_7 "PWM_c[7]") (joined
+           (portRef (member PWM_c 1) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 1))
           ))
-          (net (rename pwm_8 "PWM[8]") (joined
-           (portRef (member PWM 0) (instanceRef genblk5_pwm_gen))
-           (portRef (member PWM 0))
+          (net (rename pwm_c_8 "PWM_c[8]") (joined
+           (portRef (member PWM_c 0) (instanceRef genblk5_pwm_gen))
+           (portRef (member PWM_c 0))
           ))
           (net (rename GNDZ0 "GND") (joined
            (portRef Y (instanceRef GND))
@@ -40584,7 +40600,7 @@
          (interface
            (port FCCC_0_GL0 (direction INPUT))
            (port FCCC_0_LOCK (direction INPUT))
-           (port LED_2 (direction OUTPUT))
+           (port LED_2_c (direction OUTPUT))
            (port pulse_meash_0_new_ready (direction INPUT))
          )
          (contents
@@ -41170,9 +41186,9 @@
            (portRef S (instanceRef i_RNIVAP71_0))
            (portRef D (instanceRef i_0))
           ))
-          (net (rename led_2 "LED_2") (joined
+          (net (rename led_2_c "LED_2_c") (joined
            (portRef Q (instanceRef led))
-           (portRef LED_2)
+           (portRef LED_2_c)
           ))
           (net un9_clklto22_i_0_a3_RNI2GHT_Y (joined
            (portRef Y (instanceRef un9_clklto22_i_0_a3_RNI2GHT))
@@ -41346,7 +41362,7 @@
            (port un46_clk_1 (direction OUTPUT))
            (port un46_clk_2 (direction OUTPUT))
            (port un46_clk_3 (direction OUTPUT))
-           (port TRIG (direction OUTPUT))
+           (port TRIG_c (direction OUTPUT))
            (port locator_control_0_en_timer (direction OUTPUT))
            (port pulse_meash_0_new_ready (direction INPUT))
            (port N_234_0 (direction OUTPUT))
@@ -43571,9 +43587,9 @@
            (portRef Y (instanceRef un1_angle_0_sqmuxa_0_0))
            (portRef EN (instanceRef over))
           ))
-          (net (rename trig "TRIG") (joined
+          (net (rename trig_c "TRIG_c") (joined
            (portRef Q (instanceRef en_sonar))
-           (portRef TRIG)
+           (portRef TRIG_c)
           ))
           (net (rename stateZ0Z_8 "state[8]") (joined
            (portRef Q (instanceRef state_8))
@@ -44997,7 +45013,7 @@
            (port FCCC_0_GL0 (direction INPUT))
            (port pulse_meash_0_new_ready (direction OUTPUT))
            (port locator_control_0_en_timer (direction INPUT))
-           (port ECHO (direction INPUT))
+           (port ECHO_c (direction INPUT))
          )
          (contents
           (instance (rename i_RNI9GK2_9 "i_RNI9GK2[9]") (viewRef PRIM (cellRef CFG1 (libraryRef ACG4)))
@@ -45849,7 +45865,7 @@
           (instance (rename state_RNO_1 "state_RNO[1]") (viewRef PRIM (cellRef CFG3 (libraryRef ACG4)))
            (property INIT (string "70"))
           )
-          (instance (rename state_ns_o2_RNIES9F1_2 "state_ns_o2_RNIES9F1[2]") (viewRef PRIM (cellRef CFG4 (libraryRef ACG4)))
+          (instance (rename state_ns_o2_RNIJNK11_2 "state_ns_o2_RNIJNK11[2]") (viewRef PRIM (cellRef CFG4 (libraryRef ACG4)))
            (property INIT (string "CC80"))
           )
           (instance GND (viewRef PRIM (cellRef GND (libraryRef ACG4)))          )
@@ -47109,7 +47125,7 @@
           ))
           (net (rename stateZ0Z_3 "state[3]") (joined
            (portRef Q (instanceRef state_3))
-           (portRef D (instanceRef state_ns_o2_RNIES9F1_2))
+           (portRef D (instanceRef state_ns_o2_RNIJNK11_2))
            (portRef B (instanceRef state_ns_0_1))
            (portRef A (instanceRef state_ns_i_0_0_0))
            (portRef C (instanceRef i_cry_20))
@@ -47142,12 +47158,12 @@
           ))
           (net (rename stateZ0Z_2 "state[2]") (joined
            (portRef Q (instanceRef state_2))
-           (portRef A (instanceRef state_ns_o2_RNIES9F1_2))
+           (portRef A (instanceRef state_ns_o2_RNIJNK11_2))
            (portRef C (instanceRef state_RNO_1))
            (portRef B (instanceRef state_ns_i_0_0_0))
           ))
           (net N_5_i_0 (joined
-           (portRef Y (instanceRef state_ns_o2_RNIES9F1_2))
+           (portRef Y (instanceRef state_ns_o2_RNIJNK11_2))
            (portRef EN (instanceRef i_fast_21))
            (portRef EN (instanceRef i_fast_20))
            (portRef EN (instanceRef i_fast_19))
@@ -48792,9 +48808,9 @@
            (portRef A (instanceRef state_RNO_4))
            (portRef A (instanceRef state_ns_0_1))
           ))
-          (net (rename echo "ECHO") (joined
-           (portRef ECHO)
-           (portRef B (instanceRef state_ns_o2_RNIES9F1_2))
+          (net (rename echo_c "ECHO_c") (joined
+           (portRef ECHO_c)
+           (portRef B (instanceRef state_ns_o2_RNIJNK11_2))
            (portRef B (instanceRef state_RNO_1))
            (portRef C (instanceRef state_ns_0_1))
           ))
@@ -48812,7 +48828,7 @@
           ))
           (net (rename state_ns_o2Z0Z_2 "state_ns_o2[2]") (joined
            (portRef Y (instanceRef state_ns_o2_2))
-           (portRef C (instanceRef state_ns_o2_RNIES9F1_2))
+           (portRef C (instanceRef state_ns_o2_RNIJNK11_2))
            (portRef A (instanceRef state_RNO_1))
           ))
          )
@@ -48824,7 +48840,7 @@
          (interface
            (port FCCC_0_LOCK (direction INPUT))
            (port FCCC_0_GL0 (direction INPUT))
-           (port SERVO_PWM (direction OUTPUT))
+           (port SERVO_PWM_c (direction OUTPUT))
            (port un46_clk_0 (direction INPUT))
            (port un46_clk_1 (direction INPUT))
            (port un46_clk_2 (direction INPUT))
@@ -50172,9 +50188,9 @@
            (portRef Y (instanceRef state_ns_0_1))
            (portRef D (instanceRef state_1))
           ))
-          (net (rename SERVO_PWMZ0 "SERVO_PWM") (joined
+          (net (rename servo_pwm_c "SERVO_PWM_c") (joined
            (portRef Q (instanceRef servo_pwm))
-           (portRef SERVO_PWM)
+           (portRef SERVO_PWM_c)
           ))
           (net (rename state_d_i_0_2 "state_d_i_0[2]") (joined
            (portRef Y (instanceRef state_s0_0_a3_i))
@@ -51040,8 +51056,8 @@
            (port time_sender_0_data_out_2 (direction OUTPUT))
            (port time_sender_0_data_out_3 (direction OUTPUT))
            (port time_sender_0_data_out_5 (direction OUTPUT))
-           (port LED_3 (direction OUTPUT))
-           (port LED_3_i_0 (direction OUTPUT))
+           (port LED_3_c (direction OUTPUT))
+           (port LED_3_c_i_0 (direction OUTPUT))
            (port FCCC_0_GL0 (direction INPUT))
            (port FCCC_0_LOCK (direction INPUT))
            (port pulse_meash_0_new_ready (direction INPUT))
@@ -52138,14 +52154,14 @@
           )
           (instance GND (viewRef PRIM (cellRef GND (libraryRef ACG4)))          )
           (instance VCC (viewRef PRIM (cellRef VCC (libraryRef ACG4)))          )
-          (net (rename led_3 "LED_3") (joined
+          (net (rename led_3_c "LED_3_c") (joined
            (portRef Q (instanceRef wen))
            (portRef A (instanceRef wen_RNIIK85))
-           (portRef LED_3)
+           (portRef LED_3_c)
           ))
-          (net (rename led_3_i_0 "LED_3_i_0") (joined
+          (net (rename led_3_c_i_0 "LED_3_c_i_0") (joined
            (portRef Y (instanceRef wen_RNIIK85))
-           (portRef LED_3_i_0)
+           (portRef LED_3_c_i_0)
           ))
           (net (rename valuZ0Z_6 "valu[6]") (joined
            (portRef Q (instanceRef valu_6))
@@ -55479,9 +55495,9 @@
            (port time_sender_0_data_out_5 (direction INPUT))
            (port FCCC_0_LOCK (direction INPUT))
            (port FCCC_0_GL0 (direction INPUT))
-           (port LED_3_i_0 (direction INPUT))
+           (port LED_3_c_i_0 (direction INPUT))
            (port COREUART_0_RXRDY (direction OUTPUT))
-           (port LED_3 (direction INPUT))
+           (port LED_3_c (direction INPUT))
            (port BT_module_0_oen (direction INPUT))
            (port Echo_control_0_TX (direction OUTPUT))
            (port COREUART_0_TXRDY (direction OUTPUT))
@@ -55765,8 +55781,8 @@
            (portRef time_sender_0_data_out_0)
            (portRef D (instanceRef tx_hold_reg_0))
           ))
-          (net (rename led_3_i_0 "LED_3_i_0") (joined
-           (portRef LED_3_i_0)
+          (net (rename led_3_c_i_0 "LED_3_c_i_0") (joined
+           (portRef LED_3_c_i_0)
            (portRef EN (instanceRef tx_hold_reg_4))
            (portRef EN (instanceRef tx_hold_reg_3))
            (portRef EN (instanceRef tx_hold_reg_2))
@@ -55879,8 +55895,8 @@
            (portRef Q (instanceRef fifo_write_tx))
            (portRef fifo_write_tx (instanceRef genblk2_tx_fifo))
           ))
-          (net (rename led_3 "LED_3") (joined
-           (portRef LED_3)
+          (net (rename led_3_c "LED_3_c") (joined
+           (portRef LED_3_c)
            (portRef D (instanceRef fifo_write_tx))
           ))
           (net (rename rx_stateZ0Z_0 "rx_state[0]") (joined
@@ -56322,16 +56338,16 @@
     (cell mss_sb (cellType GENERIC)
        (view netlist (viewType NETLIST)
          (interface
-           (port (array (rename PWM "PWM[8:1]") 8) (direction OUTPUT))
+           (port (array (rename PWM_c "PWM_c[8:1]") 8) (direction OUTPUT))
            (port COREI2C_0_0_SDA_IO (direction INOUT))
            (port COREI2C_0_0_SCL_IO (direction INOUT))
            (port DEVRST_N (direction INPUT))
            (port mss_sb_0_TX (direction OUTPUT))
            (port Echo_control_0_TX (direction INPUT))
-           (port GPS_RX (direction OUTPUT))
-           (port GPS_TX (direction INPUT))
-           (port BT_RX (direction OUTPUT))
-           (port BT_TX (direction INPUT))
+           (port GPS_RX_c (direction OUTPUT))
+           (port GPS_TX_c (direction INPUT))
+           (port BT_RX_c (direction OUTPUT))
+           (port BT_TX_c (direction INPUT))
          )
          (contents
           (instance BIBUF_COREI2C_0_0_SDA_IO (viewRef PRIM (cellRef BIBUF (libraryRef ACG4)))
@@ -57391,37 +57407,37 @@
            (portRef (member CoreAPB3_0_APBmslave0_PWDATA 0) (instanceRef mss_sb_MSS_0))
            (portRef (member CoreAPB3_0_APBmslave0_PWDATA 0) (instanceRef corepwm_0_0))
           ))
-          (net (rename pwm_1 "PWM[1]") (joined
-           (portRef (member PWM 7) (instanceRef corepwm_0_0))
-           (portRef (member PWM 7))
+          (net (rename pwm_c_1 "PWM_c[1]") (joined
+           (portRef (member PWM_c 7) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 7))
           ))
-          (net (rename pwm_2 "PWM[2]") (joined
-           (portRef (member PWM 6) (instanceRef corepwm_0_0))
-           (portRef (member PWM 6))
+          (net (rename pwm_c_2 "PWM_c[2]") (joined
+           (portRef (member PWM_c 6) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 6))
           ))
-          (net (rename pwm_3 "PWM[3]") (joined
-           (portRef (member PWM 5) (instanceRef corepwm_0_0))
-           (portRef (member PWM 5))
+          (net (rename pwm_c_3 "PWM_c[3]") (joined
+           (portRef (member PWM_c 5) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 5))
           ))
-          (net (rename pwm_4 "PWM[4]") (joined
-           (portRef (member PWM 4) (instanceRef corepwm_0_0))
-           (portRef (member PWM 4))
+          (net (rename pwm_c_4 "PWM_c[4]") (joined
+           (portRef (member PWM_c 4) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 4))
           ))
-          (net (rename pwm_5 "PWM[5]") (joined
-           (portRef (member PWM 3) (instanceRef corepwm_0_0))
-           (portRef (member PWM 3))
+          (net (rename pwm_c_5 "PWM_c[5]") (joined
+           (portRef (member PWM_c 3) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 3))
           ))
-          (net (rename pwm_6 "PWM[6]") (joined
-           (portRef (member PWM 2) (instanceRef corepwm_0_0))
-           (portRef (member PWM 2))
+          (net (rename pwm_c_6 "PWM_c[6]") (joined
+           (portRef (member PWM_c 2) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 2))
           ))
-          (net (rename pwm_7 "PWM[7]") (joined
-           (portRef (member PWM 1) (instanceRef corepwm_0_0))
-           (portRef (member PWM 1))
+          (net (rename pwm_c_7 "PWM_c[7]") (joined
+           (portRef (member PWM_c 1) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 1))
           ))
-          (net (rename pwm_8 "PWM[8]") (joined
-           (portRef (member PWM 0) (instanceRef corepwm_0_0))
-           (portRef (member PWM 0))
+          (net (rename pwm_c_8 "PWM_c[8]") (joined
+           (portRef (member PWM_c 0) (instanceRef corepwm_0_0))
+           (portRef (member PWM_c 0))
           ))
           (net psh_negedge_reg_1_sqmuxa_6_2 (joined
            (portRef psh_negedge_reg_1_sqmuxa_6_2 (instanceRef corepwm_0_0))
@@ -57478,21 +57494,21 @@
            (portRef Echo_control_0_TX)
            (portRef Echo_control_0_TX (instanceRef CoreUARTapb_2_0))
           ))
-          (net (rename gps_rx "GPS_RX") (joined
-           (portRef GPS_RX (instanceRef CoreUARTapb_2_1))
-           (portRef GPS_RX)
+          (net (rename gps_rx_c "GPS_RX_c") (joined
+           (portRef GPS_RX_c (instanceRef CoreUARTapb_2_1))
+           (portRef GPS_RX_c)
           ))
-          (net (rename gps_tx "GPS_TX") (joined
-           (portRef GPS_TX)
-           (portRef GPS_TX (instanceRef CoreUARTapb_2_1))
+          (net (rename gps_tx_c "GPS_TX_c") (joined
+           (portRef GPS_TX_c)
+           (portRef GPS_TX_c (instanceRef CoreUARTapb_2_1))
           ))
-          (net (rename bt_rx "BT_RX") (joined
-           (portRef BT_RX (instanceRef CoreUARTapb_2_2))
-           (portRef BT_RX)
+          (net (rename bt_rx_c "BT_RX_c") (joined
+           (portRef BT_RX_c (instanceRef CoreUARTapb_2_2))
+           (portRef BT_RX_c)
           ))
-          (net (rename bt_tx "BT_TX") (joined
-           (portRef BT_TX)
-           (portRef BT_TX (instanceRef CoreUARTapb_2_2))
+          (net (rename bt_tx_c "BT_TX_c") (joined
+           (portRef BT_TX_c)
+           (portRef BT_TX_c (instanceRef CoreUARTapb_2_2))
           ))
           (net (rename VCCZ0 "VCC") (joined
            (portRef Y (instanceRef VCC))
@@ -57504,13 +57520,13 @@
     (cell Echo_control (cellType GENERIC)
        (view netlist (viewType NETLIST)
          (interface
-           (port LED_3 (direction OUTPUT))
+           (port LED_3_c (direction OUTPUT))
            (port Echo_control_0_TX (direction OUTPUT))
            (port mss_sb_0_TX (direction INPUT))
-           (port SERVO_PWM (direction OUTPUT))
-           (port ECHO (direction INPUT))
-           (port TRIG (direction OUTPUT))
-           (port LED_2 (direction OUTPUT))
+           (port SERVO_PWM_c (direction OUTPUT))
+           (port ECHO_c (direction INPUT))
+           (port TRIG_c (direction OUTPUT))
+           (port LED_2_c (direction OUTPUT))
          )
          (contents
           (instance BT_module_0 (viewRef netlist (cellRef BT_module))
@@ -57650,14 +57666,14 @@
            (portRef time_sender_0_data_out_5 (instanceRef time_sender_0))
            (portRef time_sender_0_data_out_5 (instanceRef COREUART_0))
           ))
-          (net LED_3_i_0 (joined
-           (portRef LED_3_i_0 (instanceRef time_sender_0))
-           (portRef LED_3_i_0 (instanceRef COREUART_0))
+          (net LED_3_c_i_0 (joined
+           (portRef LED_3_c_i_0 (instanceRef time_sender_0))
+           (portRef LED_3_c_i_0 (instanceRef COREUART_0))
           ))
-          (net (rename led_3 "LED_3") (joined
-           (portRef LED_3 (instanceRef time_sender_0))
-           (portRef LED_3 (instanceRef COREUART_0))
-           (portRef LED_3)
+          (net (rename led_3_c "LED_3_c") (joined
+           (portRef LED_3_c (instanceRef time_sender_0))
+           (portRef LED_3_c (instanceRef COREUART_0))
+           (portRef LED_3_c)
           ))
           (net (rename echo_control_0_tx "Echo_control_0_TX") (joined
            (portRef Echo_control_0_TX (instanceRef COREUART_0))
@@ -57753,9 +57769,9 @@
            (portRef pulse_meash_0_new_ready (instanceRef locator_control_0))
            (portRef pulse_meash_0_new_ready (instanceRef time_sender_0))
           ))
-          (net (rename servo_pwm "SERVO_PWM") (joined
-           (portRef SERVO_PWM (instanceRef servo_driver_0))
-           (portRef SERVO_PWM)
+          (net (rename servo_pwm_c "SERVO_PWM_c") (joined
+           (portRef SERVO_PWM_c (instanceRef servo_driver_0))
+           (portRef SERVO_PWM_c)
           ))
           (net un46_clk_0 (joined
            (portRef un46_clk_0 (instanceRef locator_control_0))
@@ -57781,17 +57797,17 @@
            (portRef locator_control_0_en_timer (instanceRef locator_control_0))
            (portRef locator_control_0_en_timer (instanceRef pulse_meash_0))
           ))
-          (net (rename echo "ECHO") (joined
-           (portRef ECHO)
-           (portRef ECHO (instanceRef pulse_meash_0))
+          (net (rename echo_c "ECHO_c") (joined
+           (portRef ECHO_c)
+           (portRef ECHO_c (instanceRef pulse_meash_0))
           ))
-          (net (rename trig "TRIG") (joined
-           (portRef TRIG (instanceRef locator_control_0))
-           (portRef TRIG)
+          (net (rename trig_c "TRIG_c") (joined
+           (portRef TRIG_c (instanceRef locator_control_0))
+           (portRef TRIG_c)
           ))
-          (net (rename led_2 "LED_2") (joined
-           (portRef LED_2 (instanceRef delayer_0))
-           (portRef LED_2)
+          (net (rename led_2_c "LED_2_c") (joined
+           (portRef LED_2_c (instanceRef delayer_0))
+           (portRef LED_2_c)
           ))
           (net (rename GNDZ0 "GND") (joined
            (portRef Y (instanceRef GND))
@@ -57811,6 +57827,7 @@
            (port DEVRST_N (direction INPUT))
            (port ECHO (direction INPUT))
            (port GPS_TX (direction INPUT))
+           (port TEST (direction INPUT))
            (port BT_RX (direction OUTPUT))
            (port GPS_RX (direction OUTPUT))
            (port LED_1 (direction OUTPUT))
@@ -57822,84 +57839,51 @@
            (port COREI2C_0_0_SDA_IO (direction INOUT))
          )
          (contents
+          (instance BT_TX_ibuf (viewRef PRIM (cellRef INBUF (libraryRef ACG4)))
+          )
+          (instance ECHO_ibuf (viewRef PRIM (cellRef INBUF (libraryRef ACG4)))
+          )
+          (instance GPS_TX_ibuf (viewRef PRIM (cellRef INBUF (libraryRef ACG4)))
+          )
+          (instance BT_RX_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance GPS_RX_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance LED_1_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance LED_2_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance LED_3_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_1 "PWM_obuf[1]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_2 "PWM_obuf[2]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_3 "PWM_obuf[3]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_4 "PWM_obuf[4]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_5 "PWM_obuf[5]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_6 "PWM_obuf[6]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_7 "PWM_obuf[7]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance (rename PWM_obuf_8 "PWM_obuf[8]") (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance SERVO_PWM_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
+          (instance TRIG_obuf (viewRef PRIM (cellRef OUTBUF (libraryRef ACG4)))
+          )
           (instance Echo_control_0 (viewRef netlist (cellRef Echo_control))
           )
           (instance mss_sb_0 (viewRef netlist (cellRef mss_sb))
           )
           (instance GND (viewRef PRIM (cellRef GND (libraryRef ACG4)))          )
           (instance VCC (viewRef PRIM (cellRef VCC (libraryRef ACG4)))          )
-          (net (rename bt_tx "BT_TX") (joined
-           (portRef BT_TX)
-           (portRef BT_TX (instanceRef mss_sb_0))
-          ))
           (net (rename devrst_n "DEVRST_N") (joined
            (portRef DEVRST_N)
            (portRef DEVRST_N (instanceRef mss_sb_0))
-          ))
-          (net (rename echo "ECHO") (joined
-           (portRef ECHO)
-           (portRef ECHO (instanceRef Echo_control_0))
-           (portRef LED_1)
-          ))
-          (net (rename gps_tx "GPS_TX") (joined
-           (portRef GPS_TX)
-           (portRef GPS_TX (instanceRef mss_sb_0))
-          ))
-          (net (rename bt_rx "BT_RX") (joined
-           (portRef BT_RX (instanceRef mss_sb_0))
-           (portRef BT_RX)
-          ))
-          (net (rename gps_rx "GPS_RX") (joined
-           (portRef GPS_RX (instanceRef mss_sb_0))
-           (portRef GPS_RX)
-          ))
-          (net (rename led_2 "LED_2") (joined
-           (portRef LED_2 (instanceRef Echo_control_0))
-           (portRef LED_2)
-          ))
-          (net (rename led_3 "LED_3") (joined
-           (portRef LED_3 (instanceRef Echo_control_0))
-           (portRef LED_3)
-          ))
-          (net (rename pwm_1 "PWM[1]") (joined
-           (portRef (member PWM 7) (instanceRef mss_sb_0))
-           (portRef (member PWM 7))
-          ))
-          (net (rename pwm_2 "PWM[2]") (joined
-           (portRef (member PWM 6) (instanceRef mss_sb_0))
-           (portRef (member PWM 6))
-          ))
-          (net (rename pwm_3 "PWM[3]") (joined
-           (portRef (member PWM 5) (instanceRef mss_sb_0))
-           (portRef (member PWM 5))
-          ))
-          (net (rename pwm_4 "PWM[4]") (joined
-           (portRef (member PWM 4) (instanceRef mss_sb_0))
-           (portRef (member PWM 4))
-          ))
-          (net (rename pwm_5 "PWM[5]") (joined
-           (portRef (member PWM 3) (instanceRef mss_sb_0))
-           (portRef (member PWM 3))
-          ))
-          (net (rename pwm_6 "PWM[6]") (joined
-           (portRef (member PWM 2) (instanceRef mss_sb_0))
-           (portRef (member PWM 2))
-          ))
-          (net (rename pwm_7 "PWM[7]") (joined
-           (portRef (member PWM 1) (instanceRef mss_sb_0))
-           (portRef (member PWM 1))
-          ))
-          (net (rename pwm_8 "PWM[8]") (joined
-           (portRef (member PWM 0) (instanceRef mss_sb_0))
-           (portRef (member PWM 0))
-          ))
-          (net (rename servo_pwm "SERVO_PWM") (joined
-           (portRef SERVO_PWM (instanceRef Echo_control_0))
-           (portRef SERVO_PWM)
-          ))
-          (net (rename trig "TRIG") (joined
-           (portRef TRIG (instanceRef Echo_control_0))
-           (portRef TRIG)
           ))
           (net (rename corei2c_0_0_scl_io "COREI2C_0_0_SCL_IO") (joined
            (portRef COREI2C_0_0_SCL_IO (instanceRef mss_sb_0))
@@ -57922,6 +57906,150 @@
           ))
           (net (rename GNDZ0 "GND") (joined
            (portRef Y (instanceRef GND))
+          ))
+          (net BT_TX_c (joined
+           (portRef Y (instanceRef BT_TX_ibuf))
+           (portRef BT_TX_c (instanceRef mss_sb_0))
+          ))
+          (net (rename bt_tx "BT_TX") (joined
+           (portRef BT_TX)
+           (portRef PAD (instanceRef BT_TX_ibuf))
+          ))
+          (net ECHO_c (joined
+           (portRef Y (instanceRef ECHO_ibuf))
+           (portRef ECHO_c (instanceRef Echo_control_0))
+           (portRef D (instanceRef LED_1_obuf))
+          ))
+          (net (rename echo "ECHO") (joined
+           (portRef ECHO)
+           (portRef PAD (instanceRef ECHO_ibuf))
+          ))
+          (net GPS_TX_c (joined
+           (portRef Y (instanceRef GPS_TX_ibuf))
+           (portRef GPS_TX_c (instanceRef mss_sb_0))
+          ))
+          (net (rename gps_tx "GPS_TX") (joined
+           (portRef GPS_TX)
+           (portRef PAD (instanceRef GPS_TX_ibuf))
+          ))
+          (net (rename test "TEST") (joined
+           (portRef TEST)
+          ))
+          (net BT_RX_c (joined
+           (portRef BT_RX_c (instanceRef mss_sb_0))
+           (portRef D (instanceRef BT_RX_obuf))
+          ))
+          (net (rename bt_rx "BT_RX") (joined
+           (portRef PAD (instanceRef BT_RX_obuf))
+           (portRef BT_RX)
+          ))
+          (net GPS_RX_c (joined
+           (portRef GPS_RX_c (instanceRef mss_sb_0))
+           (portRef D (instanceRef GPS_RX_obuf))
+          ))
+          (net (rename gps_rx "GPS_RX") (joined
+           (portRef PAD (instanceRef GPS_RX_obuf))
+           (portRef GPS_RX)
+          ))
+          (net (rename led_1 "LED_1") (joined
+           (portRef PAD (instanceRef LED_1_obuf))
+           (portRef LED_1)
+          ))
+          (net LED_2_c (joined
+           (portRef LED_2_c (instanceRef Echo_control_0))
+           (portRef D (instanceRef LED_2_obuf))
+          ))
+          (net (rename led_2 "LED_2") (joined
+           (portRef PAD (instanceRef LED_2_obuf))
+           (portRef LED_2)
+          ))
+          (net LED_3_c (joined
+           (portRef LED_3_c (instanceRef Echo_control_0))
+           (portRef D (instanceRef LED_3_obuf))
+          ))
+          (net (rename led_3 "LED_3") (joined
+           (portRef PAD (instanceRef LED_3_obuf))
+           (portRef LED_3)
+          ))
+          (net (rename PWM_c_1 "PWM_c[1]") (joined
+           (portRef (member PWM_c 7) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_1))
+          ))
+          (net (rename pwm_1 "PWM[1]") (joined
+           (portRef PAD (instanceRef PWM_obuf_1))
+           (portRef (member PWM 7))
+          ))
+          (net (rename PWM_c_2 "PWM_c[2]") (joined
+           (portRef (member PWM_c 6) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_2))
+          ))
+          (net (rename pwm_2 "PWM[2]") (joined
+           (portRef PAD (instanceRef PWM_obuf_2))
+           (portRef (member PWM 6))
+          ))
+          (net (rename PWM_c_3 "PWM_c[3]") (joined
+           (portRef (member PWM_c 5) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_3))
+          ))
+          (net (rename pwm_3 "PWM[3]") (joined
+           (portRef PAD (instanceRef PWM_obuf_3))
+           (portRef (member PWM 5))
+          ))
+          (net (rename PWM_c_4 "PWM_c[4]") (joined
+           (portRef (member PWM_c 4) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_4))
+          ))
+          (net (rename pwm_4 "PWM[4]") (joined
+           (portRef PAD (instanceRef PWM_obuf_4))
+           (portRef (member PWM 4))
+          ))
+          (net (rename PWM_c_5 "PWM_c[5]") (joined
+           (portRef (member PWM_c 3) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_5))
+          ))
+          (net (rename pwm_5 "PWM[5]") (joined
+           (portRef PAD (instanceRef PWM_obuf_5))
+           (portRef (member PWM 3))
+          ))
+          (net (rename PWM_c_6 "PWM_c[6]") (joined
+           (portRef (member PWM_c 2) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_6))
+          ))
+          (net (rename pwm_6 "PWM[6]") (joined
+           (portRef PAD (instanceRef PWM_obuf_6))
+           (portRef (member PWM 2))
+          ))
+          (net (rename PWM_c_7 "PWM_c[7]") (joined
+           (portRef (member PWM_c 1) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_7))
+          ))
+          (net (rename pwm_7 "PWM[7]") (joined
+           (portRef PAD (instanceRef PWM_obuf_7))
+           (portRef (member PWM 1))
+          ))
+          (net (rename PWM_c_8 "PWM_c[8]") (joined
+           (portRef (member PWM_c 0) (instanceRef mss_sb_0))
+           (portRef D (instanceRef PWM_obuf_8))
+          ))
+          (net (rename pwm_8 "PWM[8]") (joined
+           (portRef PAD (instanceRef PWM_obuf_8))
+           (portRef (member PWM 0))
+          ))
+          (net SERVO_PWM_c (joined
+           (portRef SERVO_PWM_c (instanceRef Echo_control_0))
+           (portRef D (instanceRef SERVO_PWM_obuf))
+          ))
+          (net (rename servo_pwm "SERVO_PWM") (joined
+           (portRef PAD (instanceRef SERVO_PWM_obuf))
+           (portRef SERVO_PWM)
+          ))
+          (net TRIG_c (joined
+           (portRef TRIG_c (instanceRef Echo_control_0))
+           (portRef D (instanceRef TRIG_obuf))
+          ))
+          (net (rename trig "TRIG") (joined
+           (portRef PAD (instanceRef TRIG_obuf))
+           (portRef TRIG)
           ))
          )
         (property orig_inst_of (string "mss"))

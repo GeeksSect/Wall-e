@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version J-2015.03M-3
 #--  Project file C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\run_options.txt
-#--  Written on Thu Feb 11 00:40:43 2016
+#--  Written on Sat Feb 13 00:09:29 2016
 
 
 #project files
@@ -94,7 +94,7 @@ set_option -clock_globalthreshold 2
 set_option -async_globalthreshold 12
 set_option -globalthreshold 5000
 set_option -low_power_ram_decomp 0
-set_option -disable_io_insertion 1
+set_option -disable_io_insertion 0
 set_option -opcond COMWC
 set_option -retiming 0
 set_option -report_path 4000

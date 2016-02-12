@@ -1,6 +1,6 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1K18, RAM64X18, GLOBAL, IO
-. mss, 1307, 1663, 827, 0, 1, 0, 0, 4, 2
+. mss, 1307, 1663, 827, 0, 1, 0, 0, 4, 20
 .	. Echo_control, 457, 531, 546, 0, 1, 0, 0, 2, 0
 .	.	. BT_module, 11, 2, 0, 0, 0, 0, 0, 0, 0
 .	.	. Echo_control_COREUART_0_COREUART_1s_1s_0s_19s_0s_0s, 150, 99, 56, 0, 0, 0, 0, 0, 0
