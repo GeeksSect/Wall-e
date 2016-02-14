@@ -502,6 +502,11 @@ TIME="1455052761"
 SIZE="256"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1455312543"
+SIZE="2369"
+ENDFILE
 VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
 STATE="utd"
 TIME="1455139448"
@@ -950,8 +955,8 @@ SIZE="216"
 ENDFILE
 VALUE "<project>\designer\impl1\mss.ide_des,ide_des"
 STATE="utd"
-TIME="1455138017"
-SIZE="210"
+TIME="1455312219"
+SIZE="493"
 ENDFILE
 VALUE "<project>\designer\impl1\time_sender.ide_des,ide_des"
 STATE="utd"
@@ -1053,27 +1058,27 @@ PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss.edn,syn_edn"
 STATE="utd"
-TIME="1455140502"
-SIZE="3141096"
+TIME="1455311435"
+SIZE="3146839"
 ENDFILE
 VALUE "<project>\synthesis\mss.so,so"
 STATE="utd"
-TIME="1455140504"
+TIME="1455311439"
 SIZE="231"
 ENDFILE
 VALUE "<project>\synthesis\mss.v,syn_hdl"
 STATE="utd"
-TIME="1455140518"
-SIZE="1143572"
+TIME="1455311449"
+SIZE="1145158"
 ENDFILE
 VALUE "<project>\synthesis\mss_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1455140502"
+TIME="1455311435"
 SIZE="1384"
 ENDFILE
 VALUE "<project>\synthesis\mss_syn.prj,prj"
 STATE="utd"
-TIME="1455140505"
+TIME="1455311440"
 SIZE="8492"
 ENDFILE
 ENDLIST
@@ -1375,8 +1380,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -1457,16 +1462,15 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Generate Memory Map:mss_DataSheet.xml
-SmartDesign;DESIGN_FIRMWARE;0
+ReportsCurrentItem;Run PROGRAM Action:mss_PROGRAM.log
+HDL;constraint\io\mss.pdc;0
+HDL;hdl\servo.vhdl;0
 HDL;hdl\pulse_w.vhdl;0
 HDL;hdl\delayer.vhd;0
 StartPage;StartPage;0
 SmartDesign;mss;0
 SmartDesign;Echo_control;0
-HDL;hdl\servo.vhdl;0
-HDL;constraint\io\mss.pdc;0
-ACTIVEVIEW;Reports
+ACTIVEVIEW;Echo_control
 ENDLIST
 LIST ModuleSubBlockList
 LIST "BT_module::work","hdl\BT_resiver.v","FALSE","FALSE"
@@ -1476,6 +1480,8 @@ ENDLIST
 LIST "COREI2C::work","component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v","FALSE","FALSE"
 SUBBLOCK "COREI2CREAL::work","component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v","FALSE","FALSE"
 ENDLIST
+LIST "CoreI2C_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "COREI2CREAL::work","component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v","FALSE","FALSE"
 ENDLIST
 LIST "corepwm::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v","FALSE","FALSE"
@@ -1484,12 +1490,26 @@ SUBBLOCK "reg_if::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\cor
 SUBBLOCK "tach_if::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\tach_if.v","FALSE","FALSE"
 SUBBLOCK "timebase::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\timebase.v","FALSE","FALSE"
 ENDLIST
+LIST "CorePWM_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
 SUBBLOCK "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
 ENDLIST
 LIST "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
 ENDLIST
+LIST "CoreUARTapb_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "delayer::work","hdl\delayer.vhd","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "CoreI2C_Driver::work","","FALSE","FALSE"
+SUBBLOCK "CorePWM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "CoreUARTapb_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_CMSIS::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "Echo_control::work","component\work\Echo_control\Echo_control.v","TRUE","FALSE"
 SUBBLOCK "BT_module::work","hdl\BT_resiver.v","FALSE","FALSE"
@@ -1640,6 +1660,16 @@ ENDLIST
 LIST "reg_if::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v","FALSE","FALSE"
 ENDLIST
 LIST "servo_driver::work","hdl\servo.vhdl","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_CMSIS::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "tach_if::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\tach_if.v","FALSE","FALSE"
 ENDLIST

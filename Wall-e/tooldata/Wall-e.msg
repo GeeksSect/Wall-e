@@ -28,3 +28,8 @@ Implementation;Synthesis|| CL169 ||@W:Pruning register set_int ||mss.srr(460);li
 Implementation;Synthesis||(null)||Please refer to the log file for details about 409 Warning(s)||mss.srr;liberoaction://open_report/file/mss.srr||(null);(null)
 Implementation;Compile;RootName:mss
 Implementation;Compile||(null)||Please refer to the log file for details about 1 Warning(s) , 7 Info(s)||mss_compile_log.log;liberoaction://open_report/file/mss_compile_log.log||(null);(null)
+Implementation;Place and Route;RootName:mss
+Implementation;Place and Route||(null)||Please refer to the log file for details about 2 Info(s)||mss_layout_log.log;liberoaction://open_report/file/mss_layout_log.log||(null);(null)
+Implementation;Generate Bitstream||(null)||Please refer to the log file for details||mss_generateBitstream.log;liberoaction://open_report/file/mss_generateBitstream.log||(null);(null)
+Implementation;Generate Bitstream;RootName:mss
+Implementation;Generate Bitstream||(null)||Please refer to the log file for details about 2 Warning(s)||mss_PROGRAM.log;liberoaction://open_report/file/mss_PROGRAM.log||(null);(null)
