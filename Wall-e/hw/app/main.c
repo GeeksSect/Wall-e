@@ -26,12 +26,12 @@
 #include <math.h>
 
 #define BAUD_VALUE_115200   26
-#define PWM_PRESCALE        1
-#define PWM_PERIOD          1000
+#define PWM_PRESCALE        249
+#define PWM_PERIOD          3999
 #define threshold           20
 #define magn_skip_val       10
 
-UART_instance_t g_uart;
+UART_instance_t g_bt;
 pwm_instance_t  g_pwm;
 
 void press_any_key_to_continue(void);
@@ -57,21 +57,24 @@ int main(void)
 
     setup();
 
+    PWM_enable(&g_pwm, PWM_9);
+    PWM_set_duty_cycle(&g_pwm, PWM_9, 300);
+
     press_any_key_to_continue();
-    UART_polled_tx_string(&g_uart, (const uint8_t *)"Hello, I am quadrocopter!\n");
+    UART_polled_tx_string(&g_bt, (const uint8_t *)"Hello, I am Rover! (Press to continue)\n");
     press_any_key_to_continue();
-    UART_polled_tx_string(&g_uart, (const uint8_t *)"Send anything for calibration!\n");
+    UART_polled_tx_string(&g_bt, (const uint8_t *)"Press to calibration!\n");
     press_any_key_to_continue();
 
     MPU6050_calibration();
 
-    UART_polled_tx_string(&g_uart, (const uint8_t *)"Okay, let's burn it!\n");
+    UART_polled_tx_string(&g_bt, (const uint8_t *)"Okay, let's burn it!\n");
     press_any_key_to_continue();
 
     t_prev = micros();
     while (1 == 1)
     {
-        rx_size = UART_get_rx(&g_uart, rx_buff + wr_pos, sizeof(rx_buff) - wr_pos);
+        rx_size = UART_get_rx(&g_bt, rx_buff + wr_pos, sizeof(rx_buff) - wr_pos);
         wr_pos += rx_size;
         while(wr_pos - rd_pos > 6) // if something ready to read
         {
@@ -151,7 +154,6 @@ int main(void)
         if(wr_pos > 90) // if read buffer come full
         {
             rd_pos=wr_pos = 0;
-
         }
 
         if(magn_skip > magn_skip_val)
@@ -181,7 +183,7 @@ int main(void)
         {
             telemetry_skip_counter = 0;
 
-            send_telemetry( &g_uart,
+            send_telemetry( &g_bt,
                             print_mask,
                             pitch, roll, yaw,
                             get_P_p(), get_I_p(), get_D_p(),
@@ -192,29 +194,6 @@ int main(void)
         else
             telemetry_skip_counter++;
 //------------------ send telemetry finished
-
-/*
-        PWM_set_duty_cycle(&g_pwm, PWM_1, (int16_t)threshold + sqrt(m_power[0])*30);
-        PWM_set_duty_cycle(&g_pwm, PWM_2, (int16_t)threshold + sqrt(m_power[1])*30);
-        PWM_set_duty_cycle(&g_pwm, PWM_4, (int16_t)threshold + sqrt(m_power[2])*30);
-        PWM_set_duty_cycle(&g_pwm, PWM_3, (int16_t)threshold + sqrt(m_power[3])*30);
-*/
-        if(motor_mask & (1<<0))
-            PWM_set_duty_cycle(&g_pwm, PWM_1, m_power[0]);
-        else
-            PWM_set_duty_cycle(&g_pwm, PWM_1, 0);
-        if(motor_mask & (1<<1))
-            PWM_set_duty_cycle(&g_pwm, PWM_2, m_power[1]);
-        else
-            PWM_set_duty_cycle(&g_pwm, PWM_2, 0);
-        if(motor_mask & (1<<2))
-            PWM_set_duty_cycle(&g_pwm, PWM_4, m_power[2]);
-        else
-            PWM_set_duty_cycle(&g_pwm, PWM_4, 0);
-        if(motor_mask & (1<<3))
-            PWM_set_duty_cycle(&g_pwm, PWM_3, m_power[3]);
-        else
-            PWM_set_duty_cycle(&g_pwm, PWM_3, 0);
     }
     return 0;
 }
@@ -226,9 +205,8 @@ void press_any_key_to_continue(void)
     size_t rx_size;
     uint8_t rx_char;
     do {
-        rx_size = UART_get_rx(&g_uart, &rx_char, sizeof(rx_char));
+        rx_size = UART_get_rx(&g_bt, &rx_char, sizeof(rx_char));
     } while(rx_size == 0);
-
 }
 /*------------------------------------------------------------------------------
  * Service the I2C timeout functionality.
@@ -244,7 +222,7 @@ void FabricIrq0_IRQHandler(void)
 void setup()
 {
     PWM_init(&g_pwm, COREPWM_0_0, PWM_PRESCALE, PWM_PERIOD);
-    UART_init( &g_uart, COREUARTAPB_2_2, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );
+    UART_init(&g_bt, COREUARTAPB_2_0, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY));
     i2c_init(1); // argument no matter
     BMP_calibrate();
     MPU6050_initialize();
@@ -252,25 +230,10 @@ void setup()
     MPU6050_setFullScaleGyroRange(1); // it's must set range of gyro's data     +-500(deg/sec)
     HMC_init();
 
-    PWM_enable(&g_pwm, PWM_1);
-    PWM_enable(&g_pwm, PWM_2);
-    PWM_enable(&g_pwm, PWM_3);
-    PWM_enable(&g_pwm, PWM_4);
-
-    PWM_set_duty_cycle(&g_pwm, PWM_1, 0);
-    PWM_set_duty_cycle(&g_pwm, PWM_2, 0);
-    PWM_set_duty_cycle(&g_pwm, PWM_3, 0);
-    PWM_set_duty_cycle(&g_pwm, PWM_4, 0);
-
     MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
-    /*-------------------------------------------------------------------------
-     * Initialize the system tick for 10mS operation or 1 tick every 100th of
-     * a second and also make sure it is lower priority than the I2C IRQs.
-     */
     NVIC_SetPriority(SysTick_IRQn, 0xFFu); /* Lowest possible priority */
     SysTick_Config(MSS_SYS_M3_CLK_FREQ / 100);
     init_timer();// run timer for micros();
-
 }
 
 

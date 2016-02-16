@@ -3170,6 +3170,573 @@
 </data>
 <separator/>
 <data>
+<name>CoreGPIO_0</name>
+<table>
+<header>
+ <cell>Name</cell>
+ <cell>Subsystem</cell>
+ <cell>Vendor</cell>
+ <cell>Version</cell>
+</header>
+<row>
+ <cell>CoreGPIO</cell>
+ <cell>MSS FIC_0 - MSS Master Subsystem</cell>
+ <cell>Actel</cell>
+ <cell>3.0.120</cell>
+</row>
+</table>
+<cdata>
+<name>Configuration</name>
+<table>
+<header>
+ <cell>Parameter</cell>
+ <cell>Value</cell>
+</header>
+<row>
+ <cell>APB_WIDTH</cell>
+ <cell>32</cell>
+</row>
+<row>
+ <cell>FAMILY</cell>
+ <cell>15</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_0</cell>
+ <cell>true</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_1</cell>
+ <cell>true</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_2</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_3</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_4</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_5</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_6</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_7</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_8</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_9</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_10</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_11</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_12</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_13</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_14</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_15</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_16</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_17</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_18</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_19</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_20</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_21</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_22</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_23</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_24</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_25</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_26</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_27</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_28</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_29</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_30</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>FIXED_CONFIG_31</cell>
+ <cell>false</cell>
+</row>
+<row>
+ <cell>HDL_license</cell>
+ <cell>U</cell>
+</row>
+<row>
+ <cell>INT_BUS</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_0</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_1</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_2</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_3</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_4</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_5</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_6</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_7</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_8</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_9</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_10</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_11</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_12</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_13</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_14</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_15</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_16</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_17</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_18</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_19</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_20</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_21</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_22</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_23</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_24</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_25</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_26</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_27</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_28</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_29</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_30</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_INT_TYPE_31</cell>
+ <cell>7</cell>
+</row>
+<row>
+ <cell>IO_NUM</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>IO_TYPE_0</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>IO_TYPE_1</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_2</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_3</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_4</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_5</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_6</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_7</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_8</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_9</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_10</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_11</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_12</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_13</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_14</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_15</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_16</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_17</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_18</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_19</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_20</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_21</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_22</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_23</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_24</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_25</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_26</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_27</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_28</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_29</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_30</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_TYPE_31</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_0</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_1</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_2</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_3</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_4</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_5</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_6</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_7</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_8</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_9</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_10</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_11</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_12</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_13</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_14</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_15</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_16</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_17</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_18</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_19</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_20</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_21</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_22</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_23</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_24</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_25</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_26</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_27</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_28</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_29</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_30</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>IO_VAL_31</cell>
+ <cell>0</cell>
+</row>
+<row>
+ <cell>OE_TYPE</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>testbench</cell>
+ <cell>User</cell>
+</row>
+</table>
+</cdata>
+</data>
+<separator/>
+<data>
 <name>CoreUARTapb_2</name>
 <table>
 <header>
@@ -3625,7 +4192,7 @@
 </row>
 <row>
  <cell>PWM_NUM</cell>
- <cell>8</cell>
+ <cell>10</cell>
 </row>
 <row>
  <cell>PWM_STRETCH_VALUE1</cell>
@@ -3860,11 +4427,6 @@
 </row>
 <row>
  <cell>mss_sb_MSS_0:MSS_INT_F2M[3]</cell>
- <cell>CoreUARTapb_2_2</cell>
- <cell>TXRDY, RXRDY, PARITY_ERR, OVERFLOW, FRAMING_ERR</cell>
-</row>
-<row>
- <cell>mss_sb_MSS_0:MSS_INT_F2M[4]</cell>
  <cell>corepwm_0_0</cell>
  <cell>TACHINT</cell>
 </row>
@@ -3927,12 +4489,27 @@
  <cell>-</cell>
 </row>
 <row>
+ <cell>INT[1:0]</cell>
+ <cell>OUT</cell>
+ <cell>-</cell>
+</row>
+<row>
+ <cell>GPIO_IN[1:0]</cell>
+ <cell>IN</cell>
+ <cell>-</cell>
+</row>
+<row>
+ <cell>GPIO_OUT[1:0]</cell>
+ <cell>OUT</cell>
+ <cell>-</cell>
+</row>
+<row>
  <cell>TACHIN[1]</cell>
  <cell>IN</cell>
  <cell>-</cell>
 </row>
 <row>
- <cell>PWM[8:1]</cell>
+ <cell>PWM[10:1]</cell>
  <cell>OUT</cell>
  <cell>-</cell>
 </row>
@@ -3953,16 +4530,6 @@
 </row>
 <row>
  <cell>TX_0</cell>
- <cell>OUT</cell>
- <cell>-</cell>
-</row>
-<row>
- <cell>RX_1</cell>
- <cell>IN</cell>
- <cell>-</cell>
-</row>
-<row>
- <cell>TX_1</cell>
  <cell>OUT</cell>
  <cell>-</cell>
 </row>

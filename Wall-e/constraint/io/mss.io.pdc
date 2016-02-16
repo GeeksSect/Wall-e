@@ -3,7 +3,7 @@
 
 # Version: v11.6 SP1 11.6.1.6
 # Family: SmartFusion2 , Die: M2S010S , Package: 144 TQ
-# Date generated: Sat Feb 13 00:23:36 2016 
+# Date generated: Tue Feb 16 23:56:16 2016 
 
 
 # 
@@ -48,7 +48,7 @@ set_io COREI2C_0_0_SDA_IO  \
     -DIRECTION INOUT
 
 
-set_io ECHO           \
+set_io {ECHO[1]}      \
     -pinname 8        \
     -fixed yes        \
     -DIRECTION INPUT
@@ -64,24 +64,6 @@ set_io GPS_TX         \
     -pinname 22       \
     -fixed yes        \
     -DIRECTION INPUT
-
-
-set_io LED_1           \
-    -pinname 13        \
-    -fixed yes         \
-    -DIRECTION OUTPUT
-
-
-set_io LED_2           \
-    -pinname 14        \
-    -fixed yes         \
-    -DIRECTION OUTPUT
-
-
-set_io LED_3           \
-    -pinname 15        \
-    -fixed yes         \
-    -DIRECTION OUTPUT
 
 
 set_io {PWM[1]}        \
@@ -132,14 +114,26 @@ set_io {PWM[8]}        \
     -DIRECTION OUTPUT
 
 
-set_io SERVO_PWM       \
+set_io {PWM[9]}        \
     -pinname 88        \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
-set_io TRIG            \
+set_io {PWM[10]}       \
+    -pinname 13        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {TRIG[0]}       \
     -pinname 7         \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {TRIG[1]}       \
+    -pinname 14        \
     -fixed yes         \
     -DIRECTION OUTPUT
 

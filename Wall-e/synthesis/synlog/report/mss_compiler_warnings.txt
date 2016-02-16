@@ -1,11 +1,18 @@
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":501:0:501:5|Optimizing register bit receive_full_int to a constant 0
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":501:0:501:5|Pruning register receive_full_int 
-@W: CG360 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":48:6:48:11|No assignment to wire AEMPTY
-@W: CG360 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":48:14:48:18|No assignment to wire AFULL
-@W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v":136:8:136:17|No assignment to data_ready
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v":341:0:341:5|Pruning register rx_dout_reg_empty_q 
 @W: CG775 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
 @W: CG360 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":244:12:244:20|No assignment to wire IA_PRDATA
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":456:0:456:5|Pruning register xhdl1.GEN_BITS[1].APB_32.edge_both[1] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":436:0:436:5|Pruning register xhdl1.GEN_BITS[1].APB_32.edge_neg[1] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":416:0:416:5|Pruning register xhdl1.GEN_BITS[1].APB_32.edge_pos[1] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":456:0:456:5|Pruning register xhdl1.GEN_BITS[0].APB_32.edge_both[0] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":436:0:436:5|Pruning register xhdl1.GEN_BITS[0].APB_32.edge_neg[0] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":416:0:416:5|Pruning register xhdl1.GEN_BITS[0].APB_32.edge_pos[0] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":310:12:310:17|Pruning register xhdl1.GEN_BITS[0].gpin3[0] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":297:12:297:17|Pruning register xhdl1.GEN_BITS[0].gpin1_7[0] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":297:12:297:17|Pruning register xhdl1.GEN_BITS[0].gpin2_7[0] 
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":476:0:476:5|Optimizing register bit xhdl1.GEN_BITS[0].APB_32.INTR_reg[0] to a constant 0
+@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":476:0:476:5|Optimizing register bit xhdl1.GEN_BITS[1].APB_32.INTR_reg[1] to a constant 0
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":476:0:476:5|Pruning register xhdl1.GEN_BITS[0].APB_32.INTR_reg[0] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":476:0:476:5|Pruning register xhdl1.GEN_BITS[1].APB_32.INTR_reg[1] 
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":319:14:319:20|No assignment to sersmb7
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":320:14:320:20|No assignment to sersmb6
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":322:14:322:20|No assignment to sersmb4
@@ -32,6 +39,10 @@
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v":120:0:120:5|Pruning register term_cnt_215us_reg[12:0] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":235:0:235:5|Pruning register prescale_reg[15:0] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":235:0:235:5|Pruning register pwm_enable_reg[16:1] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[10].pwm_posedge_reg[160:145] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[10].pwm_negedge_reg[160:145] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[9].pwm_posedge_reg[144:129] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[9].pwm_negedge_reg[144:129] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[8].pwm_posedge_reg[128:113] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[8].pwm_negedge_reg[128:113] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[7].pwm_posedge_reg[112:97] 
@@ -48,6 +59,8 @@
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[2].pwm_negedge_reg[32:17] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[1].pwm_posedge_reg[16:1] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":163:0:163:5|Pruning register gen_pos_neg_regs[1].pwm_negedge_reg[16:1] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[10].psh_posedge_reg[160:145] 
+@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[9].psh_posedge_reg[144:129] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[8].psh_posedge_reg[128:113] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[7].psh_posedge_reg[112:97] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[6].psh_posedge_reg[96:81] 
@@ -57,7 +70,7 @@
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[2].psh_posedge_reg[32:17] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":115:0:115:5|Pruning register gen_pos_neg_shregs[1].psh_posedge_reg[16:1] 
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":88:0:88:5|Pruning register psh_prescale_reg[15:0] 
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":88:0:88:5|Pruning register psh_enable_reg2[16:9] 
+@W: CL271 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\reg_if.v":88:0:88:5|Pruning bits 16 to 11 of psh_enable_reg2[16:9] -- not in use ...
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\pwm_gen.v":43:31:43:33|No assignment to acc
 @W: CG360 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v":181:7:181:13|No assignment to wire TACHINT
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v":193:11:193:21|No assignment to PRDATA_TACH
@@ -116,29 +129,11 @@
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUART.v":135:8:135:17|No assignment to data_ready
 @W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUART.v":335:0:335:5|Pruning register rx_dout_reg_empty_q 
 @W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v":157:20:157:30|No assignment to controlReg3
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":459:0:459:5|Optimizing register bit receive_full_int to a constant 0
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":459:0:459:5|Pruning register receive_full_int 
-@W: CG360 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":47:6:47:11|No assignment to wire AEMPTY
-@W: CG360 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":47:14:47:18|No assignment to wire AFULL
-@W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":135:8:135:17|No assignment to data_ready
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":335:0:335:5|Pruning register rx_dout_reg_empty_q 
-@W: CG133 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v":157:20:157:30|No assignment to controlReg3
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":37:13:37:16|Input TEST is unused
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits -- simulation mismatch possible.
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":14:7:14:9|Input XTL is unused
-@W: CL246 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v":103:20:103:24|Input port bits 1 to 0 of PADDR[4:0] are unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":35:6:35:11|Input RCLOCK is unused
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":255:0:255:5|Optimizing register bit overflow_int to a constant 0
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":255:0:255:5|Pruning register overflow_int 
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":198:0:198:5|Optimizing register bit overflow to a constant 0
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":198:0:198:5|Pruning register overflow 
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":61:8:61:19|Input read_rx_byte is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v":41:6:41:17|Input rst_tx_empty is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v":42:11:42:21|Input tx_hold_reg is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Clock_gen.v":50:15:50:31|Input BAUD_VAL_FRACTION is unused
 @W: CL246 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v":103:20:103:24|Input port bits 1 to 0 of PADDR[4:0] are unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\fifo_256x8_smartfusion2.v":35:6:35:11|Input RCLOCK is unused
 @W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Rx_async.v":255:0:255:5|Optimizing register bit overflow_int to a constant 0
@@ -203,6 +198,8 @@
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":124:7:124:17|Input SMBALERT_NI is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":127:7:127:15|Input SMBSUS_NI is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v":51:7:51:10|Input BCLK is unused
+@W: CL246 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":181:26:181:31|Input port bits 31 to 2 of PWDATA[31:0] are unused
+@W: CL247 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":185:26:185:32|Input port bit 0 of GPIO_IN[1:0] is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":72:36:72:40|Input IADDR is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":73:13:73:19|Input PRESETN is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":74:13:74:16|Input PCLK is unused
@@ -239,124 +236,4 @@
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":151:13:151:22|Input PSLVERRS13 is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":152:13:152:22|Input PSLVERRS14 is unused
 @W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":153:13:153:22|Input PSLVERRS15 is unused
-@W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":15:7:15:24|*Output RCOSC_25_50MHZ_CCC has undriven bits -- simulation mismatch possible.
-@W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":16:7:16:24|*Output RCOSC_25_50MHZ_O2F has undriven bits -- simulation mismatch possible.
-@W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
-@W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.
-@W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits -- simulation mismatch possible.
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":14:7:14:9|Input XTL is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":35:6:35:11|Input RCLOCK is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":229:26:229:32|Input reset_n is unused
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Optimizing register bit overflow_int to a constant 0
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Pruning register overflow_int 
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":206:0:206:5|Optimizing register bit overflow to a constant 0
-@W: CL169 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":206:0:206:5|Pruning register overflow 
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":68:8:68:19|Input read_rx_byte is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Tx_async.v":42:6:42:17|Input rst_tx_empty is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Tx_async.v":43:11:43:21|Input tx_hold_reg is unused
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Clock_gen.v":51:15:51:31|Input BAUD_VAL_FRACTION is unused
-@W: CD749 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":51:22:51:28|Index value of type natural (or large positive integer) could be out of prefix range 0 to 5 
-@W: CD749 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":63:38:63:44|Index value of type natural (or large positive integer) could be out of prefix range 0 to 5 
-@W: CL271 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning bits 30 to 8 of k(30 downto 0) -- not in use ... 
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(4) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(5) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(6) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(7) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(8) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(9) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(10) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(11) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(12) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(13) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(14) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(15) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(16) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(17) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(18) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(19) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(20) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(21) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(22) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(23) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(24) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(25) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(26) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(27) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(28) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(29) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to st_angle(30) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(4) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(5) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(6) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(7) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(8) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(9) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(10) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(11) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(12) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(13) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(14) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(15) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(16) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(17) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(18) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(19) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(20) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(21) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(22) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(23) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(24) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(25) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(26) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(27) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(28) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(29) assign '0'; register removed by optimization
-@W: CL111 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|All reachable assignments to fn_angle(30) assign '0'; register removed by optimization
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(23) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(24) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(25) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(26) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(27) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(28) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(29) is always 0, optimizing ...
-@W: CL189 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Register bit i(30) is always 0, optimizing ...
-@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":21:8:21:9|Pruning register bits 30 to 23 of i(30 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(22) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(23) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(24) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(25) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(26) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(27) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(28) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(29) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Optimizing register bit i(30) to a constant 0
-@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Pruning register bits 30 to 22 of i(30 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(0) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(1) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(2) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(18) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(19) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(20) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(21) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(22) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(23) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(24) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(25) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(26) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(27) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(28) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(29) to a constant 0
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Optimizing register bit pulse_length(30) to a constant 0
-@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Pruning register bits 30 to 18 of pulse_length(30 downto 0)  
-@W: CL279 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Pruning register bits 2 to 0 of pulse_length(30 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(30) to a constant 0
-@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 30 of i(30 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(29) to a constant 0
-@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 29 of i(29 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(28) to a constant 0
-@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 28 of i(28 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(27) to a constant 0
-@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 27 of i(27 downto 0)  
-@W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(26) to a constant 0
-@W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 26 of i(26 downto 0)  
 
