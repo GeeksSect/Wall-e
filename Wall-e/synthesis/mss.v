@@ -21257,7 +21257,6 @@ module mss(
        DEVRST_N,
        ECHO,
        GPS_TX,
-       TEST,
        BT_RX,
        GPS_RX,
        LED_1,
@@ -21273,7 +21272,6 @@ input  BT_TX;
 input  DEVRST_N;
 input  ECHO;
 input  GPS_TX;
-input  TEST;
 output BT_RX;
 output GPS_RX;
 output LED_1;

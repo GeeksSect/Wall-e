@@ -12,7 +12,7 @@ VHDL syntax check successful!
 
 At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
 
-# Sat Feb 13 00:09:30 2016
+# Fri Feb 26 22:11:06 2016
 
 ###########################################################]
 Synopsys Verilog Compiler, version comp201503p1, Build 094R, built May 14 2015
@@ -74,7 +74,7 @@ Verilog syntax check successful!
 
 At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 75MB peak: 76MB)
 
-# Sat Feb 13 00:09:30 2016
+# Fri Feb 26 22:11:07 2016
 
 ###########################################################]
 @I::"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v"
@@ -129,9 +129,30 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 @I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\mss_sb.v"
 @I::"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v"
 Verilog syntax check successful!
-
-Compiler output is up to date.  No re-compile necessary
-
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CCC_0\mss_sb_CCC_0_FCCC.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Clock_gen.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Rx_async.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Tx_async.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\fifo_256x8_smartfusion2.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUART.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUARTapb.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Clock_gen.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Rx_async.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Tx_async.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\fifo_256x8_smartfusion2.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUART.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Clock_gen.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb_MSS\mss_sb_MSS_syn.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb_MSS\mss_sb_MSS.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\mss_sb.v changed - recompiling
+File C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v changed - recompiling
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\BT_resiver.v":1:7:1:15|Synthesizing module BT_module
 
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Clock_gen.v":38:7:38:39|Synthesizing module Echo_control_COREUART_0_Clock_gen
@@ -1051,7 +1072,6 @@ Compiler output is up to date.  No re-compile necessary
 
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":9:7:9:9|Synthesizing module mss
 
-@W: CL159 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":37:13:37:16|Input TEST is unused
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits -- simulation mismatch possible.
 @W: CL157 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits -- simulation mismatch possible.
@@ -1373,9 +1393,9 @@ State machine has 3 reachable states with original encodings of:
    01
    11
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 75MB peak: 76MB)
+At c_ver Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 88MB peak: 102MB)
 
-# Sat Feb 13 00:09:30 2016
+# Fri Feb 26 22:11:11 2016
 
 ###########################################################]
 @N: CD720 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
@@ -1550,9 +1570,9 @@ State machine has 7 reachable states with original encodings of:
 @W: CL190 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Optimizing register bit i(26) to a constant 0
 @W: CL260 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Pruning register bit 26 of i(26 downto 0)  
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 79MB peak: 96MB)
 
-# Sat Feb 13 00:09:31 2016
+# Fri Feb 26 22:11:12 2016
 
 ###########################################################]
 Synopsys Netlist Linker, version comp201503p1, Build 094R, built May 14 2015
@@ -1567,14 +1587,14 @@ For a summary of linker messages for components that did not bind, please see lo
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 74MB peak: 75MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Feb 13 00:09:32 2016
+# Fri Feb 26 22:11:14 2016
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:06s; Memory used current: 3MB peak: 4MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Sat Feb 13 00:09:32 2016
+Process took 0h:00m:08s realtime, 0h:00m:06s cputime
+# Fri Feb 26 22:11:14 2016
 
 ###########################################################]

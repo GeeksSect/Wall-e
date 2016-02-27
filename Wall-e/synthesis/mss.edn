@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2016 2 13 0 10 35)
+      (timeStamp 2016 2 26 22 12 10)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "J-2015.03M-3, mapper map201503actrcp1, Build 002R"))
      )
@@ -57827,7 +57827,6 @@
            (port DEVRST_N (direction INPUT))
            (port ECHO (direction INPUT))
            (port GPS_TX (direction INPUT))
-           (port TEST (direction INPUT))
            (port BT_RX (direction OUTPUT))
            (port GPS_RX (direction OUTPUT))
            (port LED_1 (direction OUTPUT))
@@ -57931,9 +57930,6 @@
           (net (rename gps_tx "GPS_TX") (joined
            (portRef GPS_TX)
            (portRef PAD (instanceRef GPS_TX_ibuf))
-          ))
-          (net (rename test "TEST") (joined
-           (portRef TEST)
           ))
           (net BT_RX_c (joined
            (portRef BT_RX_c (instanceRef mss_sb_0))

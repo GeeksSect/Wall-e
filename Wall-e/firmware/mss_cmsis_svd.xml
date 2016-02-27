@@ -2,7 +2,7 @@
 <device>
   <name>mss</name>
   <version>1.0</version>
-  <description>CMSIS description for mss.  Created by Microsemi SmartDesign on Sat Feb 13 00:29:20 2016</description>
+  <description>CMSIS description for mss.  Created by Microsemi SmartDesign on Fri Feb 26 22:14:06 2016</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

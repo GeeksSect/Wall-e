@@ -25,33 +25,33 @@
 #CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\Actel\\DirectCore\\corepwm\\4.1.106\\rtl\\vlog\\core\\tach_if.v":1455052815
 #CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\Actel\\DirectCore\\corepwm\\4.1.106\\rtl\\vlog\\core\\timebase.v":1455052815
 #CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\Actel\\DirectCore\\corepwm\\4.1.106\\rtl\\vlog\\core\\corepwm.v":1455052815
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CCC_0\\mss_sb_CCC_0_FCCC.v":1455052777
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\Clock_gen.v":1455052816
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\Rx_async.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\Tx_async.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\fifo_256x8_smartfusion2.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\CoreUART.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\CoreUARTapb.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\Clock_gen.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\Rx_async.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\Tx_async.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\fifo_256x8_smartfusion2.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\CoreUART.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\CoreUARTapb.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\Clock_gen.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\Rx_async.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\Tx_async.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\fifo_256x8_smartfusion2.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\CoreUART.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\CoreUARTapb.v":1455052817
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\FABOSC_0\\mss_sb_FABOSC_0_OSC.v":1455052820
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb_MSS\\mss_sb_MSS_syn.v":1455052771
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb_MSS\\mss_sb_MSS.v":1455052772
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CCC_0\\mss_sb_CCC_0_FCCC.v":1455652625
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\Clock_gen.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\Rx_async.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\Tx_async.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\fifo_256x8_smartfusion2.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\CoreUART.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_0\\rtl\\vlog\\core\\CoreUARTapb.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\Clock_gen.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\Rx_async.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\Tx_async.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\fifo_256x8_smartfusion2.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\CoreUART.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_1\\rtl\\vlog\\core\\CoreUARTapb.v":1455652626
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\Clock_gen.v":1455652340
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\Rx_async.v":1455652340
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\Tx_async.v":1455652340
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\fifo_256x8_smartfusion2.v":1455652340
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\CoreUART.v":1455652340
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\CoreUARTapb_2_2\\rtl\\vlog\\core\\CoreUARTapb.v":1455652340
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\FABOSC_0\\mss_sb_FABOSC_0_OSC.v":1455652629
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb_MSS\\mss_sb_MSS_syn.v":1455652620
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb_MSS\\mss_sb_MSS.v":1456513605
 #CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_muxptob3.v":1438152779
 #CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_iaddr_reg.v":1438152779
 #CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3.v":1438152779
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\mss_sb.v":1455052820
-#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss\\mss.v":1455310874
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss_sb\\mss_sb.v":1456513605
+#CUR:"C:\\Users\\kruci_000\\Desktop\\SoC\\git\\Wall-e\\Wall-e\\Wall-e\\component\\work\\mss\\mss.v":1456513823
 #numinternalfiles:5
 #defaultlanguage:verilog
 0			"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\BT_resiver.v" verilog
@@ -255,6 +255,11 @@ module COREAPB3_LIB COREAPB3_MUXPTOB3 41
 module COREAPB3_LIB coreapb3_iaddr_reg 42
 module COREAPB3_LIB CoreAPB3 43
 #Unbound instances to file Association.
+inst work Echo_control time_sender 9
+inst work Echo_control servo_driver 9
+inst work Echo_control pulse_meash 9
+inst work Echo_control locator_control 9
+inst work Echo_control delayer 9
 inst work Echo_control time_sender 9
 inst work Echo_control servo_driver 9
 inst work Echo_control pulse_meash 9

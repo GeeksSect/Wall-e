@@ -25,7 +25,7 @@ SLE            1307 uses
 DSP Blocks:    1
  MACC:         1 Mult
 
-I/O ports: 22
+I/O ports: 21
 I/O primitives: 20
 BIBUF          2 uses
 INBUF          3 uses

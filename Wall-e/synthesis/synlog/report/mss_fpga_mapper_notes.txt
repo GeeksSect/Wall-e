@@ -104,7 +104,7 @@
 @N: FX271 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\hdl\pulse_w.vhdl":21:8:21:9|Instance "Echo_control_0.pulse_meash_0.i[19]" with 4 loads replicated 1 times to improve timing 
 @N: FX271 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\hdl\pulse_w.vhdl":21:8:21:9|Instance "Echo_control_0.pulse_meash_0.i[20]" with 4 loads replicated 1 times to improve timing 
 @N: FX271 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\hdl\pulse_w.vhdl":21:8:21:9|Instance "Echo_control_0.pulse_meash_0.i[21]" with 4 loads replicated 1 times to improve timing 
-@N: FP130 |Promoting Net un1_mss_sb_0_3 on CLKINT  I_368 
+@N: FP130 |Promoting Net un1_mss_sb_0_1 on CLKINT  I_368 
 @N: FP130 |Promoting Net Echo_control_0.FCCC_0_LOCK on CLKINT  I_369 
 @N: BW103 |Synopsys Constraint File time units using default value of 1ns 
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
