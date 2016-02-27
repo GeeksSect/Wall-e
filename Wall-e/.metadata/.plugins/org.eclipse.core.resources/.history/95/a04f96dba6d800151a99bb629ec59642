@@ -1,0 +1,29 @@
+/*
+ * servo.h
+ *
+ *  Created on: 21 февр. 2016 г.
+ *      Author: kruci_000
+ */
+
+#ifndef APP_MODULES_SERVO_SERVO_H_
+#define APP_MODULES_SERVO_SERVO_H_
+
+#include <drivers/CorePWM/core_pwm.h>
+
+#define SERVO_PWM PWM_9
+
+extern pwm_instance_t *g_pwm;
+
+uint32_t servo_prescale;
+uint32_t servo_period;
+
+void Servo_init(uint32_t prescale, uint32_t period);
+void Servo_enable();
+void Servo_disable();
+
+/* setup servo's angle
+ * angle: can be from -90 to 90
+ */
+uint8_t Servo_set_angle(int8_t angle);
+
+#endif /* APP_MODULES_SERVO_SERVO_H_ */

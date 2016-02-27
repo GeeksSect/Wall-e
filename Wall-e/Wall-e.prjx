@@ -59,7 +59,11 @@ PARENT="<project>\component\work\mss_sb\mss_sb.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513604"
+=======
+TIME="1455652626"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="1284"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
 IS_READONLY="TRUE"
@@ -146,6 +150,120 @@ MODULE_UNDER_TEST="testbench"
 SIMULATION_TIME="-all"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\bfmtovec_compile.do,do"
+STATE="utd"
+TIME="1438152780"
+SIZE="1218"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1455652626"
+SIZE="2729"
+PARENT="<project>\component\work\mss_sb\mss_sb.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1455652626"
+SIZE="4093"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="8058"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="11180"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="2461"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="48750"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="4635"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="9072"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="25127"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="36273"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="4698"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="122453"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v,hdl"
+STATE="utd"
+TIME="1438152780"
+SIZE="27986"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1438152779"
+SIZE="13548"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\wave_vlog.do,do"
+STATE="utd"
+TIME="1438152780"
+SIZE="1452"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\COREI2C.cxf,actgen_cxf"
 STATE="utd"
 TIME="1455652626"
@@ -191,8 +309,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\corepwm\4.1.106\coreparameters.v,tb_hdl"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513604"
 SIZE="4755"
+=======
+TIME="1455652626"
+SIZE="4756"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 PARENT="<project>\component\Actel\DirectCore\corepwm\4.1.106\corepwm.cxf"
 IS_READONLY="TRUE"
 IS_INCLUDED="TRUE"
@@ -287,7 +410,6 @@ SIZE="8058"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
@@ -297,7 +419,6 @@ SIZE="11180"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
@@ -307,7 +428,6 @@ SIZE="2461"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
@@ -317,7 +437,6 @@ SIZE="48750"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
@@ -327,7 +446,6 @@ SIZE="4635"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
@@ -337,7 +455,6 @@ SIZE="9072"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
@@ -347,7 +464,6 @@ SIZE="25127"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
@@ -357,7 +473,6 @@ SIZE="36273"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
@@ -367,7 +482,6 @@ SIZE="4698"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
@@ -377,7 +491,6 @@ SIZE="122453"
 PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\COREUART\5.5.101\COREUART.cxf,actgen_cxf"
@@ -504,8 +617,13 @@ PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513604"
 SIZE="2369"
+=======
+TIME="1455652941"
+SIZE="2363"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 ENDFILE
 VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
 STATE="utd"
@@ -612,6 +730,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss\mss.cxf,actgen_cxf"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513604"
 SIZE="4177"
 ENDFILE
@@ -619,6 +738,15 @@ VALUE "<project>\component\work\mss\mss.v,hdl"
 STATE="utd"
 TIME="1456513604"
 SIZE="4808"
+=======
+TIME="1455654081"
+SIZE="3301"
+ENDFILE
+VALUE "<project>\component\work\mss\mss.v,hdl"
+STATE="utd"
+TIME="1455652739"
+SIZE="3643"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 PARENT="<project>\component\work\mss\mss.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -637,7 +765,11 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_0\coreparameters.v,tb_hdl"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513604"
+=======
+TIME="1455652626"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="605"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -716,7 +848,11 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\coreparameters.v,tb_hdl"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513604"
+=======
+TIME="1455652626"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="605"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -793,6 +929,7 @@ MODULE_UNDER_TEST="testbench"
 SIMULATION_TIME="-all"
 IS_READONLY="TRUE"
 ENDFILE
+<<<<<<< HEAD
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\coreparameters.v,tb_hdl"
 STATE="utd"
 TIME="1456513604"
@@ -872,6 +1009,8 @@ MODULE_UNDER_TEST="testbench"
 SIMULATION_TIME="-all"
 IS_READONLY="TRUE"
 ENDFILE
+=======
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 VALUE "<project>\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.cxf,actgen_cxf"
 STATE="utd"
 TIME="1455652629"
@@ -887,6 +1026,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\mss_sb.cxf,actgen_cxf"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513605"
 SIZE="9880"
 ENDFILE
@@ -894,6 +1034,15 @@ VALUE "<project>\component\work\mss_sb\mss_sb.v,hdl"
 STATE="utd"
 TIME="1456513605"
 SIZE="44427"
+=======
+TIME="1455652635"
+SIZE="10216"
+ENDFILE
+VALUE "<project>\component\work\mss_sb\mss_sb.v,hdl"
+STATE="utd"
+TIME="1455652629"
+SIZE="46610"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 PARENT="<project>\component\work\mss_sb\mss_sb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -904,7 +1053,11 @@ SIZE="14737"
 ENDFILE
 VALUE "<project>\component\work\mss_sb_MSS\mss_sb_MSS.v,hdl"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513605"
+=======
+TIME="1455652620"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="44385"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 IS_READONLY="TRUE"
@@ -935,6 +1088,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\constraint\fp\mss.fp.pdc,fp_pdc"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513605"
 SIZE="367"
 ENDFILE
@@ -947,6 +1101,15 @@ VALUE "<project>\constraint\io\mss.pdc,io_pdc"
 STATE="utd"
 TIME="1456513605"
 SIZE="1486"
+=======
+TIME="1455656176"
+SIZE="340"
+ENDFILE
+VALUE "<project>\constraint\io\mss.io.pdc,io_pdc"
+STATE="utd"
+TIME="1455656176"
+SIZE="2749"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 ENDFILE
 VALUE "<project>\designer\impl1\BT_module.ide_des,ide_des"
 STATE="utd"
@@ -1006,7 +1169,11 @@ PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
 ENDFILE
 VALUE "<project>\simulation\CM3_compile_bfm.tcl,sim"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513606"
+=======
+TIME="1455652620"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="500"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
@@ -1016,13 +1183,24 @@ TIME="1438152779"
 SIZE="8016"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
 ENDFILE
+VALUE "<project>\simulation\coregpio_usertb_apb_master.bfm,sim"
+STATE="utd"
+TIME="1438152780"
+SIZE="2823"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+ENDFILE
+VALUE "<project>\simulation\coregpio_usertb_include.bfm,sim"
+STATE="utd"
+TIME="1438152780"
+SIZE="23755"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\CoreGPIO.cxf"
+ENDFILE
 VALUE "<project>\simulation\coreuart_usertb_apb_master.bfm,sim"
 STATE="utd"
 TIME="1455052816"
 SIZE="2905"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 ENDFILE
 VALUE "<project>\simulation\coreuart_usertb_include.bfm,sim"
 STATE="utd"
@@ -1030,7 +1208,6 @@ TIME="1455052816"
 SIZE="13006"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
-PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 ENDFILE
 VALUE "<project>\simulation\peripheral_init.bfm,sim"
 STATE="utd"
@@ -1040,13 +1217,22 @@ PARENT="<project>\component\Actel\SmartFusion2MSS\MSS\1.1.400\MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513606"
 SIZE="931"
+=======
+TIME="1455652739"
+SIZE="928"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 PARENT="<project>\component\work\mss\mss.cxf"
 ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513606"
+=======
+TIME="1455652620"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="734"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
@@ -1058,27 +1244,49 @@ PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss.edn,syn_edn"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513606"
 SIZE="3146839"
 ENDFILE
 VALUE "<project>\synthesis\mss.so,so"
 STATE="utd"
 TIME="1456090099"
+=======
+TIME="1455572088"
+SIZE="3011329"
+ENDFILE
+VALUE "<project>\synthesis\mss.so,so"
+STATE="utd"
+TIME="1455572089"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="231"
 ENDFILE
 VALUE "<project>\synthesis\mss.v,syn_hdl"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513607"
 SIZE="1145158"
 ENDFILE
 VALUE "<project>\synthesis\mss_sdc.sdc,syn_sdc"
 STATE="utd"
 TIME="1456513607"
+=======
+TIME="1455572097"
+SIZE="1108877"
+ENDFILE
+VALUE "<project>\synthesis\mss_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1455572088"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="1384"
 ENDFILE
 VALUE "<project>\synthesis\mss_syn.prj,prj"
 STATE="utd"
+<<<<<<< HEAD
 TIME="1456513607"
+=======
+TIME="1455572089"
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 SIZE="8492"
 ENDFILE
 ENDLIST
@@ -1145,6 +1353,22 @@ VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\b
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\mti\scripts\wave_user.do,do"
+VALUE "<project>\simulation\coregpio_usertb_apb_master.bfm,sim"
+VALUE "<project>\simulation\coregpio_usertb_include.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\bfmtovec_compile.do,do"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\wave_vlog.do,do"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\i2c_spk.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\tb_user_corei2c.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\mti\scripts\wave_usertb_vlog.do,do"
@@ -1171,10 +1395,6 @@ VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\mti\scripts\bfmtovec_compile.do,do"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\mti\scripts\wave_vlog_amba.do,do"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\test\user\testbench.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\mti\scripts\bfmtovec_compile.do,do"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\mti\scripts\wave_vlog_amba.do,do"
 ENDLIST
 LIST AssociatedStimulus
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
@@ -1184,26 +1404,74 @@ VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\b
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\i2c_spk.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\tb_user_corei2c.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\corepwm\4.1.106\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\test\user\tb_user_corepwm.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_0\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\test\user\testbench.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\test\user\testbench.v,tb_hdl"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
@@ -1228,10 +1496,6 @@ ENDLIST
 ENDLIST
 ENDLIST
 LIST AssociatedStimulus
-LIST Echo_control_COREUART_0_COREUART
-VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\Echo_control\COREUART_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
-ENDLIST
 LIST mss_sb
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
@@ -1240,36 +1504,83 @@ VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\b
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\i2c_spk.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\tb_user_corei2c.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\corepwm\4.1.106\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\test\user\tb_user_corepwm.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_0\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\test\user\testbench.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST Echo_control_COREUART_0_COREUART
+VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\Echo_control\COREUART_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
 LIST mss
 VALUE "<project>\simulation\subsystem.bfm,sim"
-ENDLIST
-LIST Echo_control_COREUART_0_COREUART
-VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\Echo_control\COREUART_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
-VALUE "<project>\component\work\Echo_control\COREUART_0\mti\scripts\wave_vlog.do,do"
 ENDLIST
 LIST mss_sb
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
@@ -1282,6 +1593,22 @@ VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\b
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\mti\scripts\wave_user.do,do"
+VALUE "<project>\simulation\coregpio_usertb_apb_master.bfm,sim"
+VALUE "<project>\simulation\coregpio_usertb_include.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahblapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\bfmtovec_compile.do,do"
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\3.0.120\wave_vlog.do,do"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\i2c_spk.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\test\user\tb_user_corei2c.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREI2C\7.0.102\mti\scripts\wave_usertb_vlog.do,do"
@@ -1308,16 +1635,17 @@ VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\mti\scripts\bfmtovec_compile.do,do"
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\mti\scripts\wave_vlog_amba.do,do"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\test\user\testbench.v,tb_hdl"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\mti\scripts\bfmtovec_compile.do,do"
-VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\mti\scripts\wave_vlog_amba.do,do"
 ENDLIST
 LIST mss_sb_MSS
 VALUE "<project>\simulation\CM3_compile_bfm.tcl,sim"
 VALUE "<project>\simulation\user.bfm,sim"
 VALUE "<project>\simulation\test.bfm,sim"
 VALUE "<project>\simulation\peripheral_init.bfm,sim"
+ENDLIST
+LIST Echo_control_COREUART_0_COREUART
+VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\Echo_control\COREUART_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+VALUE "<project>\component\work\Echo_control\COREUART_0\mti\scripts\wave_vlog.do,do"
 ENDLIST
 ENDLIST
 LIST SimulationOptions
@@ -1380,8 +1708,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -1461,13 +1789,30 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+<<<<<<< HEAD
 StartPage;StartPage;0
 ACTIVEVIEW;StartPage
+=======
+Reports;Reports;0
+ReportsCurrentItem;Run PROGRAM Action:mss_PROGRAM.log
+SmartDesign;mss;0
+HDL;constraint\io\mss.io.pdc;0
+HDL;hdl\servo.vhdl;0
+HDL;hdl\pulse_w.vhdl;0
+HDL;hdl\delayer.vhd;0
+StartPage;StartPage;0
+SmartDesign;Echo_control;0
+ACTIVEVIEW;mss
+>>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 ENDLIST
 LIST ModuleSubBlockList
 LIST "BT_module::work","hdl\BT_resiver.v","FALSE","FALSE"
 ENDLIST
 LIST "BT_resiver::work","hdl\BT_resiver.vhd","FALSE","FALSE"
+ENDLIST
+LIST "CoreGPIO::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v","FALSE","FALSE"
+ENDLIST
+LIST "CoreGPIO_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "COREI2C::work","component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v","FALSE","FALSE"
 SUBBLOCK "COREI2CREAL::work","component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v","FALSE","FALSE"
@@ -1494,6 +1839,7 @@ ENDLIST
 LIST "delayer::work","hdl\delayer.vhd","FALSE","FALSE"
 ENDLIST
 LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "CoreGPIO_Driver::work","","FALSE","FALSE"
 SUBBLOCK "CoreI2C_Driver::work","","FALSE","FALSE"
 SUBBLOCK "CorePWM_Driver::work","","FALSE","FALSE"
 SUBBLOCK "CoreUARTapb_Driver::work","","FALSE","FALSE"
@@ -1542,19 +1888,18 @@ ENDLIST
 LIST "locator_control::work","hdl\sonar_driver.vhd","FALSE","FALSE"
 ENDLIST
 LIST "mss::work","component\work\mss\mss.v","TRUE","FALSE"
-SUBBLOCK "Echo_control::work","component\work\Echo_control\Echo_control.v","TRUE","FALSE"
 SUBBLOCK "mss_sb::work","component\work\mss_sb\mss_sb.v","TRUE","FALSE"
 ENDLIST
 LIST "MSS_010::work","component\work\mss_sb_MSS\mss_sb_MSS_syn.v","FALSE","FALSE"
 ENDLIST
 LIST "mss_sb::work","component\work\mss_sb\mss_sb.v","TRUE","FALSE"
 SUBBLOCK "COREI2C::work","component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v","FALSE","FALSE"
+SUBBLOCK "CoreGPIO::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v","FALSE","FALSE"
 SUBBLOCK "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
 SUBBLOCK "corepwm::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v","FALSE","FALSE"
 SUBBLOCK "mss_sb_CCC_0_FCCC::work","component\work\mss_sb\CCC_0\mss_sb_CCC_0_FCCC.v","FALSE","FALSE"
 SUBBLOCK "mss_sb_CoreUARTapb_2_0_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
 SUBBLOCK "mss_sb_CoreUARTapb_2_1_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
 SUBBLOCK "mss_sb_FABOSC_0_OSC::work","component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v","FALSE","FALSE"
 SUBBLOCK "mss_sb_MSS::work","component\work\mss_sb_MSS\mss_sb_MSS.v","TRUE","FALSE"
 SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v","FALSE","FALSE"
@@ -1607,29 +1952,6 @@ LIST "mss_sb_CoreUARTapb_2_1_Rx_async::work","component\work\mss_sb\CoreUARTapb_
 ENDLIST
 LIST "mss_sb_CoreUARTapb_2_1_Tx_async::work","component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
 ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_Clock_gen::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Clock_gen.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_COREUART::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_Clock_gen::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Clock_gen.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_Rx_async::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_Tx_async::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_fifo_256x8::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_COREUART::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_fifo_256x8::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_fifo_ctrl_128::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_fifo_ctrl_128::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v","FALSE","FALSE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_ram128x8_pa4::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_ram128x8_pa4::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_Rx_async::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v","FALSE","FALSE"
-ENDLIST
-LIST "mss_sb_CoreUARTapb_2_2_Tx_async::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
-ENDLIST
 LIST "mss_sb_FABOSC_0_OSC::work","component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v","FALSE","FALSE"
 SUBBLOCK "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\1.0.105\osc_comps.v","FALSE","FALSE"
 SUBBLOCK "RCOSC_25_50MHZ_FAB::work","component\Actel\SgCore\OSC\1.0.105\osc_comps.v","FALSE","FALSE"
@@ -1673,30 +1995,57 @@ LIST "XTLOSC::work","component\Actel\SgCore\OSC\1.0.105\osc_comps.v","FALSE","FA
 ENDLIST
 LIST "XTLOSC_FAB::work","component\Actel\SgCore\OSC\1.0.105\osc_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "BFM_AHBL::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbl.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
 LIST "BFM_AHBL::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbl.v","FALSE","TRUE"
-SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_AHBLAPB::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahblapb.v","FALSE","TRUE"
+SUBBLOCK "BFMA1l1OII::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
 ENDLIST
 LIST "BFM_AHBLAPB::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahblapb.v","FALSE","TRUE"
-SUBBLOCK "BFMA1l1OII::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
-SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+SUBBLOCK "BFMA1l1OII::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_AHBSLAVE::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslave.v","FALSE","TRUE"
+SUBBLOCK "BFM_AHBSLAVEEXT::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v","FALSE","TRUE"
 ENDLIST
 LIST "BFM_AHBSLAVE::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslave.v","FALSE","TRUE"
-SUBBLOCK "BFM_AHBSLAVEEXT::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v","FALSE","TRUE"
+SUBBLOCK "BFM_AHBSLAVEEXT::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_AHBSLAVEEXT::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbslaveext.v","FALSE","TRUE"
 ENDLIST
 LIST "BFM_AHBSLAVEEXT::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbslaveext.v","FALSE","TRUE"
 ENDLIST
+LIST "BFM_APB::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
+SUBBLOCK "BFMA1l1OII::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
 LIST "BFM_APB::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
-SUBBLOCK "BFMA1l1OII::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
-SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+SUBBLOCK "BFMA1l1OII::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_APB2APB::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbtoapb.v","FALSE","TRUE"
 ENDLIST
 LIST "BFM_APB2APB::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbtoapb.v","FALSE","TRUE"
 ENDLIST
+LIST "BFM_APBSLAVE::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
+SUBBLOCK "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+ENDLIST
 LIST "BFM_APBSLAVE::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
-SUBBLOCK "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+SUBBLOCK "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
 ENDLIST
 LIST "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
 ENDLIST
+LIST "BFM_MAIN::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
 LIST "BFM_MAIN::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFMA1l1OII::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
 ENDLIST
 LIST "BFMA1l1OII::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
 ENDLIST
@@ -1709,17 +2058,17 @@ ENDLIST
 LIST "tb_user_corepwm::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\test\user\tb_user_corepwm.v","FALSE","TRUE"
 SUBBLOCK "corepwm::work","component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v","FALSE","FALSE"
 ENDLIST
+LIST "testbench::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
+SUBBLOCK "BFM_APB::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
+SUBBLOCK "CoreGPIO::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v","FALSE","FALSE"
+ENDLIST
 LIST "testbench::work","component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
-SUBBLOCK "BFM_APB::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
+SUBBLOCK "BFM_APB::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
 SUBBLOCK "mss_sb_CoreUARTapb_2_0_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
 ENDLIST
 LIST "testbench::work","component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
-SUBBLOCK "BFM_APB::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
+SUBBLOCK "BFM_APB::work","component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
 SUBBLOCK "mss_sb_CoreUARTapb_2_1_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
-ENDLIST
-LIST "testbench::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
-SUBBLOCK "BFM_APB::work","component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
-SUBBLOCK "mss_sb_CoreUARTapb_2_2_CoreUARTapb::work","component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v","FALSE","FALSE"
 ENDLIST
 LIST "testbnch::work","component\work\Echo_control\COREUART_0\rtl\vlog\test\user\testbnch.v","FALSE","TRUE"
 SUBBLOCK "Echo_control_COREUART_0_COREUART::work","component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v","FALSE","FALSE"

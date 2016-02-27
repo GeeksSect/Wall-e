@@ -1,6 +1,6 @@
 Microsemi Corporation - Microsemi Libero Software Release v11.6 SP1 (Version 11.6.1.6)
 
-Date      :  Wed Feb 10 00:19:32 2016
+Date      :  Tue Feb 16 22:57:01 2016
 Project   :  C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e
 Component :  mss_sb_MSS
 Family    :  SmartFusion2

@@ -1,41 +1,14 @@
 @N|Running in 64-bit mode
 @N|Running in 64-bit mode
-@N: CD720 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
-@N:"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":6:7:6:17|Top entity is set to time_sender.
-@N|Running in 64-bit mode
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\BT_resiver.v":1:7:1:15|Synthesizing module BT_module
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Clock_gen.v":38:7:38:39|Synthesizing module Echo_control_COREUART_0_Clock_gen
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Tx_async.v":31:7:31:38|Synthesizing module Echo_control_COREUART_0_Tx_async
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Tx_async.v":356:21:356:29|Removing redundant assignment
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":30:7:30:38|Synthesizing module Echo_control_COREUART_0_Rx_async
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":254:23:254:35|Removing redundant assignment
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":280:18:280:25|Removing redundant assignment
-@N: CL177 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":501:0:501:5|Sharing sequential element clear_framing_error_en.
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v":31:7:31:38|Synthesizing module Echo_control_COREUART_0_COREUART
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v":390:22:390:33|Removing redundant assignment
+@N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":286:7:286:11|Synthesizing module BIBUF
 @N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":376:7:376:9|Synthesizing module VCC
 @N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":372:7:372:9|Synthesizing module GND
-@N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":228:7:228:9|Synthesizing module INV
-@N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":455:7:455:14|Synthesizing module RAM64x18
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":226:7:226:42|Synthesizing module Echo_control_COREUART_0_ram128x8_pa4
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":73:7:73:43|Synthesizing module Echo_control_COREUART_0_fifo_ctrl_128
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":215:22:215:29|Removing redundant assignment
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\fifo_256x8_g4.v":33:7:33:40|Synthesizing module Echo_control_COREUART_0_fifo_256x8
 @N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT
 @N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":727:7:727:9|Synthesizing module CCC
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\FCCC_0\Echo_control_FCCC_0_FCCC.v":5:7:5:30|Synthesizing module Echo_control_FCCC_0_FCCC
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\SgCore\OSC\1.0.105\osc_comps.v":1:7:1:16|Synthesizing module RCOSC_1MHZ
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\OSC_0\Echo_control_OSC_0_OSC.v":5:7:5:28|Synthesizing module Echo_control_OSC_0_OSC
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":9:7:9:18|Synthesizing module Echo_control
-@N: CG794 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":146:8:146:16|Using module delayer from library work
-@N: CG794 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":165:16:165:32|Using module locator_control from library work
-@N: CG794 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":192:12:192:24|Using module pulse_meash from library work
-@N: CG794 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":204:13:204:26|Using module servo_driver from library work
-@N: CG794 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\Echo_control.v":214:12:214:24|Using module time_sender from library work
-@N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":286:7:286:11|Synthesizing module BIBUF
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CCC_0\mss_sb_CCC_0_FCCC.v":5:7:5:23|Synthesizing module mss_sb_CCC_0_FCCC
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3
+@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vlog\core\coregpio.v":23:7:23:14|Synthesizing module CoreGPIO
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2c.v":31:7:31:13|Synthesizing module COREI2C
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":85:7:85:17|Synthesizing module COREI2CREAL
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\corepwm\4.1.106\rtl\vlog\core\corepwm.v":26:7:26:13|Synthesizing module corepwm
@@ -56,6 +29,8 @@
 @N: CL177 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\Rx_async.v":459:0:459:5|Sharing sequential element clear_framing_error_en.
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUART.v":31:7:31:37|Synthesizing module mss_sb_CoreUARTapb_2_0_COREUART
 @N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\CoreUART.v":374:22:374:33|Removing redundant assignment
+@N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":228:7:228:9|Synthesizing module INV
+@N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":455:7:455:14|Synthesizing module RAM64x18
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\fifo_256x8_smartfusion2.v":221:7:221:41|Synthesizing module mss_sb_CoreUARTapb_2_0_ram128x8_pa4
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\fifo_256x8_smartfusion2.v":72:7:72:42|Synthesizing module mss_sb_CoreUARTapb_2_0_fifo_ctrl_128
 @N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_0\rtl\vlog\core\fifo_256x8_smartfusion2.v":210:22:210:29|Removing redundant assignment
@@ -79,21 +54,6 @@
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v":59:7:59:40|Synthesizing module mss_sb_CoreUARTapb_2_1_CoreUARTapb
 @N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v":249:31:249:41|Removing redundant assignment
 @N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUARTapb.v":270:31:270:41|Removing redundant assignment
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Clock_gen.v":38:7:38:38|Synthesizing module mss_sb_CoreUARTapb_2_2_Clock_gen
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v":31:7:31:37|Synthesizing module mss_sb_CoreUARTapb_2_2_Tx_async
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v":349:21:349:29|Removing redundant assignment
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":30:7:30:37|Synthesizing module mss_sb_CoreUARTapb_2_2_Rx_async
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":243:23:243:35|Removing redundant assignment
-@N: CL177 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":459:0:459:5|Sharing sequential element clear_framing_error_en.
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":31:7:31:37|Synthesizing module mss_sb_CoreUARTapb_2_2_COREUART
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":374:22:374:33|Removing redundant assignment
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":221:7:221:41|Synthesizing module mss_sb_CoreUARTapb_2_2_ram128x8_pa4
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":72:7:72:42|Synthesizing module mss_sb_CoreUARTapb_2_2_fifo_ctrl_128
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":210:22:210:29|Removing redundant assignment
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\fifo_256x8_smartfusion2.v":33:7:33:39|Synthesizing module mss_sb_CoreUARTapb_2_2_fifo_256x8
-@N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v":59:7:59:40|Synthesizing module mss_sb_CoreUARTapb_2_2_CoreUARTapb
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v":249:31:249:41|Removing redundant assignment
-@N: CG179 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUARTapb.v":270:31:270:41|Removing redundant assignment
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\SgCore\OSC\1.0.105\osc_comps.v":51:7:51:24|Synthesizing module RCOSC_25_50MHZ_FAB
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\SgCore\OSC\1.0.105\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\FABOSC_0\mss_sb_FABOSC_0_OSC.v":5:7:5:25|Synthesizing module mss_sb_FABOSC_0_OSC
@@ -102,9 +62,6 @@
 @N: CG364 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\generic\smartfusion2.v":718:7:718:14|Synthesizing module SYSRESET
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\mss_sb.v":9:7:9:12|Synthesizing module mss_sb
 @N: CG364 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss\mss.v":9:7:9:9|Synthesizing module mss
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\CoreUART.v":287:0:287:5|Trying to extract state machine for register rx_state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Rx_async.v":255:0:255:5|Trying to extract state machine for register rx_state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_2\rtl\vlog\core\Tx_async.v":112:0:112:5|Trying to extract state machine for register xmit_state
 @N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\CoreUART.v":287:0:287:5|Trying to extract state machine for register rx_state
 @N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Rx_async.v":255:0:255:5|Trying to extract state machine for register rx_state
 @N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\mss_sb\CoreUARTapb_2_1\rtl\vlog\core\Tx_async.v":112:0:112:5|Trying to extract state machine for register xmit_state
@@ -123,20 +80,5 @@
 @N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":3173:3:3173:8|Trying to extract state machine for register fsmmod
 @N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":2902:3:2902:8|Trying to extract state machine for register fsmdet
 @N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vlog\core\corei2creal.v":1946:3:1946:8|Trying to extract state machine for register fsmsync
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\CoreUART.v":293:0:293:5|Trying to extract state machine for register rx_state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\component\work\Echo_control\COREUART_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Trying to extract state machine for register xmit_state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\BT_resiver.v":14:0:14:5|Trying to extract state machine for register TX_RX_repiter
-@N: CD720 :"C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
-@N:"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":6:7:6:13|Top entity is set to delayer.
-@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":6:7:6:17|Synthesizing work.time_sender.bh 
-@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":6:7:6:18|Synthesizing work.servo_driver.bh 
-@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":6:7:6:17|Synthesizing work.pulse_meash.bh 
-@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":6:7:6:21|Synthesizing work.locator_control.bh 
-@N: CD630 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\delayer.vhd":6:7:6:13|Synthesizing work.delayer.bh 
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\sonar_driver.vhd":30:8:30:9|Trying to extract state machine for register state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\pulse_w.vhdl":21:8:21:9|Trying to extract state machine for register state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\servo.vhdl":22:8:22:9|Trying to extract state machine for register state
-@N: CL201 :"C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\hdl\time_send.vhd":32:8:32:9|Trying to extract state machine for register state
 @N|Running in 64-bit mode
 
