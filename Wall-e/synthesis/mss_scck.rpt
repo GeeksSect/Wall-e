@@ -1,11 +1,7 @@
 # Synopsys Constraint Checker(syntax only), version map201503actrcp1, Build 002R, built Jul  1 2015
 # Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
 
-<<<<<<< HEAD
 # Written on Fri Feb 26 22:11:18 2016
-=======
-# Written on Tue Feb 16 23:04:08 2016
->>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 
 
 ##### DESIGN INFO #######################################################
@@ -28,6 +24,7 @@ Clock Summary
 Start                                                     Requested     Requested     Clock        Clock              
 Clock                                                     Frequency     Period        Type         Group              
 ----------------------------------------------------------------------------------------------------------------------
+Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock           100.0 MHz     10.000        inferred     Inferred_clkgroup_2
 System                                                    100.0 MHz     10.000        system       system_clkgroup    
 mss_sb_CCC_0_FCCC|GL0_net_inferred_clock                  100.0 MHz     10.000        inferred     Inferred_clkgroup_0
 mss_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_1

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 16 22:57:09 2016
+// Created by SmartDesign Wed Feb 10 00:20:20 2016
 // Version: v11.6 SP1 11.6.1.6
 //////////////////////////////////////////////////////////////////////
 
@@ -10,21 +10,20 @@ module mss_sb(
     // Inputs
     DEVRST_N,
     FAB_RESET_N,
-    GPIO_IN,
     RX,
     RX_0,
+    RX_1,
     TACHIN,
     // Outputs
     FAB_CCC_GL0,
     FAB_CCC_LOCK,
-    GPIO_OUT,
     INIT_DONE,
-    INT,
     MSS_READY,
     POWER_ON_RESET_N,
     PWM,
     TX,
     TX_0,
+    TX_1,
     // Inouts
     COREI2C_0_0_SCL_IO,
     COREI2C_0_0_SDA_IO
@@ -33,42 +32,40 @@ module mss_sb(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
-input         DEVRST_N;
-input         FAB_RESET_N;
-input  [1:0]  GPIO_IN;
-input         RX;
-input         RX_0;
-input  [1:1]  TACHIN;
+input        DEVRST_N;
+input        FAB_RESET_N;
+input        RX;
+input        RX_0;
+input        RX_1;
+input  [1:1] TACHIN;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output        FAB_CCC_GL0;
-output        FAB_CCC_LOCK;
-output [1:0]  GPIO_OUT;
-output        INIT_DONE;
-output [1:0]  INT;
-output        MSS_READY;
-output        POWER_ON_RESET_N;
-output [10:1] PWM;
-output        TX;
-output        TX_0;
+output       FAB_CCC_GL0;
+output       FAB_CCC_LOCK;
+output       INIT_DONE;
+output       MSS_READY;
+output       POWER_ON_RESET_N;
+output [8:1] PWM;
+output       TX;
+output       TX_0;
+output       TX_1;
 //--------------------------------------------------------------------
 // Inout
 //--------------------------------------------------------------------
-inout         COREI2C_0_0_SCL_IO;
-inout         COREI2C_0_0_SDA_IO;
+inout        COREI2C_0_0_SCL_IO;
+inout        COREI2C_0_0_SDA_IO;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
 wire          BIBUF_COREI2C_0_0_SCL_IO_Y;
 wire          BIBUF_COREI2C_0_0_SDA_IO_Y;
 wire          CoreAPB3_0_APBmslave0_PENABLE;
+wire          CoreAPB3_0_APBmslave0_PREADY;
 wire          CoreAPB3_0_APBmslave0_PSELx;
+wire          CoreAPB3_0_APBmslave0_PSLVERR;
 wire          CoreAPB3_0_APBmslave0_PWRITE;
-wire   [31:0] CoreAPB3_0_APBmslave1_PRDATA;
-wire          CoreAPB3_0_APBmslave1_PREADY;
 wire          CoreAPB3_0_APBmslave1_PSELx;
-wire          CoreAPB3_0_APBmslave1_PSLVERR;
 wire          CoreAPB3_0_APBmslave2_PREADY;
 wire          CoreAPB3_0_APBmslave2_PSELx;
 wire          CoreAPB3_0_APBmslave2_PSLVERR;
@@ -101,16 +98,21 @@ wire          CoreUARTapb_2_1_OVERFLOW;
 wire          CoreUARTapb_2_1_PARITY_ERR;
 wire          CoreUARTapb_2_1_RXRDY;
 wire          CoreUARTapb_2_1_TXRDY;
+wire          CoreUARTapb_2_2_FRAMING_ERR;
+wire          CoreUARTapb_2_2_intr_or_0_Y;
+wire          CoreUARTapb_2_2_intr_or_1_Y;
+wire          CoreUARTapb_2_2_intr_or_2_Y;
+wire          CoreUARTapb_2_2_OVERFLOW;
+wire          CoreUARTapb_2_2_PARITY_ERR;
+wire          CoreUARTapb_2_2_RXRDY;
+wire          CoreUARTapb_2_2_TXRDY;
 wire          DEVRST_N;
 wire          FAB_CCC_GL0_net_0;
 wire          FAB_CCC_LOCK_net_0;
 wire          FAB_RESET_N;
 wire          FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC;
 wire          FABOSC_0_RCOSC_25_50MHZ_O2F;
-wire   [1:0]  GPIO_IN;
-wire   [1:0]  GPIO_OUT_net_0;
 wire          INIT_DONE_net_0;
-wire   [1:0]  INT_net_0;
 wire          MSS_READY_net_0;
 wire   [31:0] mss_sb_MSS_TMP_0_FIC_0_APB_MASTER_PADDR;
 wire          mss_sb_MSS_TMP_0_FIC_0_APB_MASTER_PENABLE;
@@ -123,22 +125,23 @@ wire          mss_sb_MSS_TMP_0_FIC_0_APB_MASTER_PWRITE;
 wire          mss_sb_MSS_TMP_0_FIC_2_APB_M_PRESET_N;
 wire          mss_sb_MSS_TMP_0_MSS_RESET_N_M2F;
 wire          POWER_ON_RESET_N_net_0;
-wire   [10:1] PWM_net_0;
+wire   [8:1]  PWM_net_0;
 wire          RX;
 wire          RX_0;
+wire          RX_1;
 wire   [1:1]  TACHIN;
 wire          TX_net_0;
 wire          TX_0_net_0;
+wire          TX_1_net_0;
 wire          POWER_ON_RESET_N_net_1;
 wire          INIT_DONE_net_1;
 wire          FAB_CCC_GL0_net_1;
 wire          FAB_CCC_LOCK_net_1;
 wire          MSS_READY_net_1;
-wire   [1:0]  INT_net_1;
-wire   [1:0]  GPIO_OUT_net_1;
-wire   [10:1] PWM_net_1;
+wire   [8:1]  PWM_net_1;
 wire          TX_net_1;
 wire          TX_0_net_1;
+wire          TX_1_net_1;
 wire   [15:0] MSS_INT_F2M_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -173,30 +176,36 @@ wire          E_IN_POST_INV1_0;
 //--------------------------------------------------------------------
 // Bus Interface Nets Declarations - Unequal Pin Widths
 //--------------------------------------------------------------------
-wire   [7:0]  CoreAPB3_0_APBmslave0_PADDR_4_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PADDR_4;
-wire   [8:0]  CoreAPB3_0_APBmslave0_PADDR_0_8to0;
-wire   [8:0]  CoreAPB3_0_APBmslave0_PADDR_0;
-wire   [31:0] CoreAPB3_0_APBmslave0_PADDR;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PADDR_1_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PADDR_1;
+wire   [8:0]  CoreAPB3_0_APBmslave0_PADDR_1_8to0;
+wire   [8:0]  CoreAPB3_0_APBmslave0_PADDR_1;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_3_4to0;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_3;
+wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_4_4to0;
+wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_4;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PADDR_0_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PADDR_0;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_2_4to0;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_2;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PRDATA;
-wire   [31:8] CoreAPB3_0_APBmslave0_PRDATA_0_31to8;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PRDATA_0_7to0;
+wire   [31:0] CoreAPB3_0_APBmslave0_PADDR;
+wire   [31:16]CoreAPB3_0_APBmslave0_PRDATA_0_31to16;
+wire   [15:0] CoreAPB3_0_APBmslave0_PRDATA_0_15to0;
 wire   [31:0] CoreAPB3_0_APBmslave0_PRDATA_0;
-wire   [15:0] CoreAPB3_0_APBmslave0_PWDATA_3_15to0;
-wire   [15:0] CoreAPB3_0_APBmslave0_PWDATA_3;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_0_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_0;
+wire   [15:0] CoreAPB3_0_APBmslave0_PRDATA;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_4_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_4;
 wire   [31:0] CoreAPB3_0_APBmslave0_PWDATA;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_2_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_2;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_1_7to0;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_1;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_3_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_3;
+wire   [15:0] CoreAPB3_0_APBmslave0_PWDATA_0_15to0;
+wire   [15:0] CoreAPB3_0_APBmslave0_PWDATA_0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_2_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_2;
+wire   [31:8] CoreAPB3_0_APBmslave1_PRDATA_0_31to8;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PRDATA_0_7to0;
+wire   [31:0] CoreAPB3_0_APBmslave1_PRDATA_0;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PRDATA;
 wire   [31:8] CoreAPB3_0_APBmslave2_PRDATA_0_31to8;
 wire   [7:0]  CoreAPB3_0_APBmslave2_PRDATA_0_7to0;
 wire   [31:0] CoreAPB3_0_APBmslave2_PRDATA_0;
@@ -205,9 +214,9 @@ wire   [31:8] CoreAPB3_0_APBmslave3_PRDATA_0_31to8;
 wire   [7:0]  CoreAPB3_0_APBmslave3_PRDATA_0_7to0;
 wire   [31:0] CoreAPB3_0_APBmslave3_PRDATA_0;
 wire   [7:0]  CoreAPB3_0_APBmslave3_PRDATA;
-wire   [15:0] CoreAPB3_0_APBmslave4_PRDATA;
-wire   [31:16]CoreAPB3_0_APBmslave4_PRDATA_0_31to16;
-wire   [15:0] CoreAPB3_0_APBmslave4_PRDATA_0_15to0;
+wire   [7:0]  CoreAPB3_0_APBmslave4_PRDATA;
+wire   [31:8] CoreAPB3_0_APBmslave4_PRDATA_0_31to8;
+wire   [7:0]  CoreAPB3_0_APBmslave4_PRDATA_0_7to0;
 wire   [31:0] CoreAPB3_0_APBmslave4_PRDATA_0;
 //--------------------------------------------------------------------
 // Constant assignments
@@ -252,46 +261,50 @@ assign FAB_CCC_LOCK_net_1     = FAB_CCC_LOCK_net_0;
 assign FAB_CCC_LOCK           = FAB_CCC_LOCK_net_1;
 assign MSS_READY_net_1        = MSS_READY_net_0;
 assign MSS_READY              = MSS_READY_net_1;
-assign INT_net_1              = INT_net_0;
-assign INT[1:0]               = INT_net_1;
-assign GPIO_OUT_net_1         = GPIO_OUT_net_0;
-assign GPIO_OUT[1:0]          = GPIO_OUT_net_1;
 assign PWM_net_1              = PWM_net_0;
-assign PWM[10:1]              = PWM_net_1;
+assign PWM[8:1]               = PWM_net_1;
 assign TX_net_1               = TX_net_0;
 assign TX                     = TX_net_1;
 assign TX_0_net_1             = TX_0_net_0;
 assign TX_0                   = TX_0_net_1;
+assign TX_1_net_1             = TX_1_net_0;
+assign TX_1                   = TX_1_net_1;
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
-assign MSS_INT_F2M_net_0 = { 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , corepwm_0_0_TACHINT , CoreUARTapb_2_1_intr_or_2_Y , CoreUARTapb_2_0_intr_or_2_Y , COREI2C_0_0_INT[0] };
+assign MSS_INT_F2M_net_0 = { 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , corepwm_0_0_TACHINT , CoreUARTapb_2_2_intr_or_2_Y , CoreUARTapb_2_1_intr_or_2_Y , CoreUARTapb_2_0_intr_or_2_Y , COREI2C_0_0_INT[0] };
 //--------------------------------------------------------------------
 // Bus Interface Nets Assignments - Unequal Pin Widths
 //--------------------------------------------------------------------
-assign CoreAPB3_0_APBmslave0_PADDR_4_7to0 = CoreAPB3_0_APBmslave0_PADDR[7:0];
-assign CoreAPB3_0_APBmslave0_PADDR_4 = { CoreAPB3_0_APBmslave0_PADDR_4_7to0 };
-assign CoreAPB3_0_APBmslave0_PADDR_0_8to0 = CoreAPB3_0_APBmslave0_PADDR[8:0];
-assign CoreAPB3_0_APBmslave0_PADDR_0 = { CoreAPB3_0_APBmslave0_PADDR_0_8to0 };
-assign CoreAPB3_0_APBmslave0_PADDR_1_7to0 = CoreAPB3_0_APBmslave0_PADDR[7:0];
-assign CoreAPB3_0_APBmslave0_PADDR_1 = { CoreAPB3_0_APBmslave0_PADDR_1_7to0 };
+assign CoreAPB3_0_APBmslave0_PADDR_1_8to0 = CoreAPB3_0_APBmslave0_PADDR[8:0];
+assign CoreAPB3_0_APBmslave0_PADDR_1 = { CoreAPB3_0_APBmslave0_PADDR_1_8to0 };
 assign CoreAPB3_0_APBmslave0_PADDR_3_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
 assign CoreAPB3_0_APBmslave0_PADDR_3 = { CoreAPB3_0_APBmslave0_PADDR_3_4to0 };
+assign CoreAPB3_0_APBmslave0_PADDR_4_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
+assign CoreAPB3_0_APBmslave0_PADDR_4 = { CoreAPB3_0_APBmslave0_PADDR_4_4to0 };
+assign CoreAPB3_0_APBmslave0_PADDR_0_7to0 = CoreAPB3_0_APBmslave0_PADDR[7:0];
+assign CoreAPB3_0_APBmslave0_PADDR_0 = { CoreAPB3_0_APBmslave0_PADDR_0_7to0 };
 assign CoreAPB3_0_APBmslave0_PADDR_2_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
 assign CoreAPB3_0_APBmslave0_PADDR_2 = { CoreAPB3_0_APBmslave0_PADDR_2_4to0 };
 
-assign CoreAPB3_0_APBmslave0_PRDATA_0_31to8 = 24'h0;
-assign CoreAPB3_0_APBmslave0_PRDATA_0_7to0 = CoreAPB3_0_APBmslave0_PRDATA[7:0];
-assign CoreAPB3_0_APBmslave0_PRDATA_0 = { CoreAPB3_0_APBmslave0_PRDATA_0_31to8, CoreAPB3_0_APBmslave0_PRDATA_0_7to0 };
+assign CoreAPB3_0_APBmslave0_PRDATA_0_31to16 = 16'h0;
+assign CoreAPB3_0_APBmslave0_PRDATA_0_15to0 = CoreAPB3_0_APBmslave0_PRDATA[15:0];
+assign CoreAPB3_0_APBmslave0_PRDATA_0 = { CoreAPB3_0_APBmslave0_PRDATA_0_31to16, CoreAPB3_0_APBmslave0_PRDATA_0_15to0 };
 
-assign CoreAPB3_0_APBmslave0_PWDATA_3_15to0 = CoreAPB3_0_APBmslave0_PWDATA[15:0];
-assign CoreAPB3_0_APBmslave0_PWDATA_3 = { CoreAPB3_0_APBmslave0_PWDATA_3_15to0 };
-assign CoreAPB3_0_APBmslave0_PWDATA_0_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
-assign CoreAPB3_0_APBmslave0_PWDATA_0 = { CoreAPB3_0_APBmslave0_PWDATA_0_7to0 };
-assign CoreAPB3_0_APBmslave0_PWDATA_2_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
-assign CoreAPB3_0_APBmslave0_PWDATA_2 = { CoreAPB3_0_APBmslave0_PWDATA_2_7to0 };
+assign CoreAPB3_0_APBmslave0_PWDATA_4_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
+assign CoreAPB3_0_APBmslave0_PWDATA_4 = { CoreAPB3_0_APBmslave0_PWDATA_4_7to0 };
 assign CoreAPB3_0_APBmslave0_PWDATA_1_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
 assign CoreAPB3_0_APBmslave0_PWDATA_1 = { CoreAPB3_0_APBmslave0_PWDATA_1_7to0 };
+assign CoreAPB3_0_APBmslave0_PWDATA_3_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
+assign CoreAPB3_0_APBmslave0_PWDATA_3 = { CoreAPB3_0_APBmslave0_PWDATA_3_7to0 };
+assign CoreAPB3_0_APBmslave0_PWDATA_0_15to0 = CoreAPB3_0_APBmslave0_PWDATA[15:0];
+assign CoreAPB3_0_APBmslave0_PWDATA_0 = { CoreAPB3_0_APBmslave0_PWDATA_0_15to0 };
+assign CoreAPB3_0_APBmslave0_PWDATA_2_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
+assign CoreAPB3_0_APBmslave0_PWDATA_2 = { CoreAPB3_0_APBmslave0_PWDATA_2_7to0 };
+
+assign CoreAPB3_0_APBmslave1_PRDATA_0_31to8 = 24'h0;
+assign CoreAPB3_0_APBmslave1_PRDATA_0_7to0 = CoreAPB3_0_APBmslave1_PRDATA[7:0];
+assign CoreAPB3_0_APBmslave1_PRDATA_0 = { CoreAPB3_0_APBmslave1_PRDATA_0_31to8, CoreAPB3_0_APBmslave1_PRDATA_0_7to0 };
 
 assign CoreAPB3_0_APBmslave2_PRDATA_0_31to8 = 24'h0;
 assign CoreAPB3_0_APBmslave2_PRDATA_0_7to0 = CoreAPB3_0_APBmslave2_PRDATA[7:0];
@@ -301,9 +314,9 @@ assign CoreAPB3_0_APBmslave3_PRDATA_0_31to8 = 24'h0;
 assign CoreAPB3_0_APBmslave3_PRDATA_0_7to0 = CoreAPB3_0_APBmslave3_PRDATA[7:0];
 assign CoreAPB3_0_APBmslave3_PRDATA_0 = { CoreAPB3_0_APBmslave3_PRDATA_0_31to8, CoreAPB3_0_APBmslave3_PRDATA_0_7to0 };
 
-assign CoreAPB3_0_APBmslave4_PRDATA_0_31to16 = 16'h0;
-assign CoreAPB3_0_APBmslave4_PRDATA_0_15to0 = CoreAPB3_0_APBmslave4_PRDATA[15:0];
-assign CoreAPB3_0_APBmslave4_PRDATA_0 = { CoreAPB3_0_APBmslave4_PRDATA_0_31to16, CoreAPB3_0_APBmslave4_PRDATA_0_15to0 };
+assign CoreAPB3_0_APBmslave4_PRDATA_0_31to8 = 24'h0;
+assign CoreAPB3_0_APBmslave4_PRDATA_0_7to0 = CoreAPB3_0_APBmslave4_PRDATA[7:0];
+assign CoreAPB3_0_APBmslave4_PRDATA_0 = { CoreAPB3_0_APBmslave4_PRDATA_0_31to8, CoreAPB3_0_APBmslave4_PRDATA_0_7to0 };
 
 //--------------------------------------------------------------------
 // Component instances
@@ -388,11 +401,11 @@ CoreAPB3_0(
         .PWDATA     ( mss_sb_MSS_TMP_0_FIC_0_APB_MASTER_PWDATA ),
         .PSEL       ( mss_sb_MSS_TMP_0_FIC_0_APB_MASTER_PSELx ),
         .PRDATAS0   ( CoreAPB3_0_APBmslave0_PRDATA_0 ),
-        .PREADYS0   ( VCC_net ), // tied to 1'b1 from definition
-        .PSLVERRS0  ( GND_net ), // tied to 1'b0 from definition
-        .PRDATAS1   ( CoreAPB3_0_APBmslave1_PRDATA ),
-        .PREADYS1   ( CoreAPB3_0_APBmslave1_PREADY ),
-        .PSLVERRS1  ( CoreAPB3_0_APBmslave1_PSLVERR ),
+        .PREADYS0   ( CoreAPB3_0_APBmslave0_PREADY ),
+        .PSLVERRS0  ( CoreAPB3_0_APBmslave0_PSLVERR ),
+        .PRDATAS1   ( CoreAPB3_0_APBmslave1_PRDATA_0 ),
+        .PREADYS1   ( VCC_net ), // tied to 1'b1 from definition
+        .PSLVERRS1  ( GND_net ), // tied to 1'b0 from definition
         .PRDATAS2   ( CoreAPB3_0_APBmslave2_PRDATA_0 ),
         .PREADYS2   ( CoreAPB3_0_APBmslave2_PREADY ),
         .PSLVERRS2  ( CoreAPB3_0_APBmslave2_PSLVERR ),
@@ -466,161 +479,6 @@ CoreAPB3_0(
         .PSELS16    (  ) 
         );
 
-//--------CoreGPIO   -   Actel:DirectCore:CoreGPIO:3.0.120
-CoreGPIO #( 
-        .APB_WIDTH       ( 32 ),
-        .FAMILY          ( 15 ),
-        .FIXED_CONFIG_0  ( 1 ),
-        .FIXED_CONFIG_1  ( 1 ),
-        .FIXED_CONFIG_2  ( 0 ),
-        .FIXED_CONFIG_3  ( 0 ),
-        .FIXED_CONFIG_4  ( 0 ),
-        .FIXED_CONFIG_5  ( 0 ),
-        .FIXED_CONFIG_6  ( 0 ),
-        .FIXED_CONFIG_7  ( 0 ),
-        .FIXED_CONFIG_8  ( 0 ),
-        .FIXED_CONFIG_9  ( 0 ),
-        .FIXED_CONFIG_10 ( 0 ),
-        .FIXED_CONFIG_11 ( 0 ),
-        .FIXED_CONFIG_12 ( 0 ),
-        .FIXED_CONFIG_13 ( 0 ),
-        .FIXED_CONFIG_14 ( 0 ),
-        .FIXED_CONFIG_15 ( 0 ),
-        .FIXED_CONFIG_16 ( 0 ),
-        .FIXED_CONFIG_17 ( 0 ),
-        .FIXED_CONFIG_18 ( 0 ),
-        .FIXED_CONFIG_19 ( 0 ),
-        .FIXED_CONFIG_20 ( 0 ),
-        .FIXED_CONFIG_21 ( 0 ),
-        .FIXED_CONFIG_22 ( 0 ),
-        .FIXED_CONFIG_23 ( 0 ),
-        .FIXED_CONFIG_24 ( 0 ),
-        .FIXED_CONFIG_25 ( 0 ),
-        .FIXED_CONFIG_26 ( 0 ),
-        .FIXED_CONFIG_27 ( 0 ),
-        .FIXED_CONFIG_28 ( 0 ),
-        .FIXED_CONFIG_29 ( 0 ),
-        .FIXED_CONFIG_30 ( 0 ),
-        .FIXED_CONFIG_31 ( 0 ),
-        .INT_BUS         ( 0 ),
-        .IO_INT_TYPE_0   ( 7 ),
-        .IO_INT_TYPE_1   ( 7 ),
-        .IO_INT_TYPE_2   ( 7 ),
-        .IO_INT_TYPE_3   ( 7 ),
-        .IO_INT_TYPE_4   ( 7 ),
-        .IO_INT_TYPE_5   ( 7 ),
-        .IO_INT_TYPE_6   ( 7 ),
-        .IO_INT_TYPE_7   ( 7 ),
-        .IO_INT_TYPE_8   ( 7 ),
-        .IO_INT_TYPE_9   ( 7 ),
-        .IO_INT_TYPE_10  ( 7 ),
-        .IO_INT_TYPE_11  ( 7 ),
-        .IO_INT_TYPE_12  ( 7 ),
-        .IO_INT_TYPE_13  ( 7 ),
-        .IO_INT_TYPE_14  ( 7 ),
-        .IO_INT_TYPE_15  ( 7 ),
-        .IO_INT_TYPE_16  ( 7 ),
-        .IO_INT_TYPE_17  ( 7 ),
-        .IO_INT_TYPE_18  ( 7 ),
-        .IO_INT_TYPE_19  ( 7 ),
-        .IO_INT_TYPE_20  ( 7 ),
-        .IO_INT_TYPE_21  ( 7 ),
-        .IO_INT_TYPE_22  ( 7 ),
-        .IO_INT_TYPE_23  ( 7 ),
-        .IO_INT_TYPE_24  ( 7 ),
-        .IO_INT_TYPE_25  ( 7 ),
-        .IO_INT_TYPE_26  ( 7 ),
-        .IO_INT_TYPE_27  ( 7 ),
-        .IO_INT_TYPE_28  ( 7 ),
-        .IO_INT_TYPE_29  ( 7 ),
-        .IO_INT_TYPE_30  ( 7 ),
-        .IO_INT_TYPE_31  ( 7 ),
-        .IO_NUM          ( 2 ),
-        .IO_TYPE_0       ( 1 ),
-        .IO_TYPE_1       ( 0 ),
-        .IO_TYPE_2       ( 0 ),
-        .IO_TYPE_3       ( 0 ),
-        .IO_TYPE_4       ( 0 ),
-        .IO_TYPE_5       ( 0 ),
-        .IO_TYPE_6       ( 0 ),
-        .IO_TYPE_7       ( 0 ),
-        .IO_TYPE_8       ( 0 ),
-        .IO_TYPE_9       ( 0 ),
-        .IO_TYPE_10      ( 0 ),
-        .IO_TYPE_11      ( 0 ),
-        .IO_TYPE_12      ( 0 ),
-        .IO_TYPE_13      ( 0 ),
-        .IO_TYPE_14      ( 0 ),
-        .IO_TYPE_15      ( 0 ),
-        .IO_TYPE_16      ( 0 ),
-        .IO_TYPE_17      ( 0 ),
-        .IO_TYPE_18      ( 0 ),
-        .IO_TYPE_19      ( 0 ),
-        .IO_TYPE_20      ( 0 ),
-        .IO_TYPE_21      ( 0 ),
-        .IO_TYPE_22      ( 0 ),
-        .IO_TYPE_23      ( 0 ),
-        .IO_TYPE_24      ( 0 ),
-        .IO_TYPE_25      ( 0 ),
-        .IO_TYPE_26      ( 0 ),
-        .IO_TYPE_27      ( 0 ),
-        .IO_TYPE_28      ( 0 ),
-        .IO_TYPE_29      ( 0 ),
-        .IO_TYPE_30      ( 0 ),
-        .IO_TYPE_31      ( 0 ),
-        .IO_VAL_0        ( 0 ),
-        .IO_VAL_1        ( 0 ),
-        .IO_VAL_2        ( 0 ),
-        .IO_VAL_3        ( 0 ),
-        .IO_VAL_4        ( 0 ),
-        .IO_VAL_5        ( 0 ),
-        .IO_VAL_6        ( 0 ),
-        .IO_VAL_7        ( 0 ),
-        .IO_VAL_8        ( 0 ),
-        .IO_VAL_9        ( 0 ),
-        .IO_VAL_10       ( 0 ),
-        .IO_VAL_11       ( 0 ),
-        .IO_VAL_12       ( 0 ),
-        .IO_VAL_13       ( 0 ),
-        .IO_VAL_14       ( 0 ),
-        .IO_VAL_15       ( 0 ),
-        .IO_VAL_16       ( 0 ),
-        .IO_VAL_17       ( 0 ),
-        .IO_VAL_18       ( 0 ),
-        .IO_VAL_19       ( 0 ),
-        .IO_VAL_20       ( 0 ),
-        .IO_VAL_21       ( 0 ),
-        .IO_VAL_22       ( 0 ),
-        .IO_VAL_23       ( 0 ),
-        .IO_VAL_24       ( 0 ),
-        .IO_VAL_25       ( 0 ),
-        .IO_VAL_26       ( 0 ),
-        .IO_VAL_27       ( 0 ),
-        .IO_VAL_28       ( 0 ),
-        .IO_VAL_29       ( 0 ),
-        .IO_VAL_30       ( 0 ),
-        .IO_VAL_31       ( 0 ),
-        .OE_TYPE         ( 1 ) )
-CoreGPIO_0_0(
-        // Inputs
-        .PRESETN  ( MSS_READY_net_0 ),
-        .PCLK     ( FAB_CCC_GL0_net_0 ),
-        .PSEL     ( CoreAPB3_0_APBmslave1_PSELx ),
-        .PENABLE  ( CoreAPB3_0_APBmslave0_PENABLE ),
-        .PWRITE   ( CoreAPB3_0_APBmslave0_PWRITE ),
-        .PADDR    ( CoreAPB3_0_APBmslave0_PADDR_1 ),
-        .PWDATA   ( CoreAPB3_0_APBmslave0_PWDATA ),
-        .GPIO_IN  ( GPIO_IN ),
-        // Outputs
-        .PSLVERR  ( CoreAPB3_0_APBmslave1_PSLVERR ),
-        .PREADY   ( CoreAPB3_0_APBmslave1_PREADY ),
-        .PRDATA   ( CoreAPB3_0_APBmslave1_PRDATA ),
-        .INT      ( INT_net_0 ),
-        .INT_OR   (  ),
-        .GPIO_OUT ( GPIO_OUT_net_0 ),
-        .GPIO_OE  (  ) 
-        );
-
 //--------COREI2C   -   Actel:DirectCore:COREI2C:7.0.102
 COREI2C #( 
         .ADD_SLAVE1_ADDRESS_EN   ( 0 ),
@@ -640,12 +498,12 @@ COREI2C #(
 COREI2C_0_0(
         // Inputs
         .BCLK        ( GND_net ), // tied to 1'b0 from definition
-        .PADDR       ( CoreAPB3_0_APBmslave0_PADDR_0 ),
+        .PADDR       ( CoreAPB3_0_APBmslave0_PADDR_1 ),
         .PCLK        ( FAB_CCC_GL0_net_0 ),
         .PENABLE     ( CoreAPB3_0_APBmslave0_PENABLE ),
         .PRESETN     ( MSS_READY_net_0 ),
-        .PSEL        ( CoreAPB3_0_APBmslave0_PSELx ),
-        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_0 ),
+        .PSEL        ( CoreAPB3_0_APBmslave1_PSELx ),
+        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_1 ),
         .PWRITE      ( CoreAPB3_0_APBmslave0_PWRITE ),
         .SCLI        ( BIBUF_COREI2C_0_0_SCL_IO_Y ),
         .SDAI        ( BIBUF_COREI2C_0_0_SDA_IO_Y ),
@@ -653,7 +511,7 @@ COREI2C_0_0(
         .SMBSUS_NI   ( GND_net ), // tied to 1'b0 from definition
         // Outputs
         .INT         ( COREI2C_0_0_INT ),
-        .PRDATA      ( CoreAPB3_0_APBmslave0_PRDATA ),
+        .PRDATA      ( CoreAPB3_0_APBmslave1_PRDATA ),
         .SCLO        ( COREI2C_0_0_SCLO ),
         .SDAO        ( COREI2C_0_0_SDAO ),
         .SMBALERT_NO (  ),
@@ -751,7 +609,7 @@ corepwm #(
         .FIXED_PWM_POSEDGE14 ( 0 ),
         .FIXED_PWM_POSEDGE15 ( 0 ),
         .FIXED_PWM_POSEDGE16 ( 0 ),
-        .PWM_NUM             ( 10 ),
+        .PWM_NUM             ( 8 ),
         .PWM_STRETCH_VALUE1  ( 0 ),
         .PWM_STRETCH_VALUE2  ( 0 ),
         .PWM_STRETCH_VALUE3  ( 0 ),
@@ -804,18 +662,18 @@ corepwm #(
         .TACHINT_ACT_LEVEL   ( 0 ) )
 corepwm_0_0(
         // Inputs
-        .PADDR   ( CoreAPB3_0_APBmslave0_PADDR_4 ),
+        .PADDR   ( CoreAPB3_0_APBmslave0_PADDR_0 ),
         .PCLK    ( FAB_CCC_GL0_net_0 ),
         .PENABLE ( CoreAPB3_0_APBmslave0_PENABLE ),
         .PRESETN ( MSS_READY_net_0 ),
-        .PSEL    ( CoreAPB3_0_APBmslave4_PSELx ),
-        .PWDATA  ( CoreAPB3_0_APBmslave0_PWDATA_3 ),
+        .PSEL    ( CoreAPB3_0_APBmslave0_PSELx ),
+        .PWDATA  ( CoreAPB3_0_APBmslave0_PWDATA_0 ),
         .TACHIN  ( TACHIN ),
         .PWRITE  ( CoreAPB3_0_APBmslave0_PWRITE ),
         // Outputs
-        .PRDATA  ( CoreAPB3_0_APBmslave4_PRDATA ),
-        .PREADY  ( CoreAPB3_0_APBmslave4_PREADY ),
-        .PSLVERR ( CoreAPB3_0_APBmslave4_PSLVERR ),
+        .PRDATA  ( CoreAPB3_0_APBmslave0_PRDATA ),
+        .PREADY  ( CoreAPB3_0_APBmslave0_PREADY ),
+        .PSLVERR ( CoreAPB3_0_APBmslave0_PSLVERR ),
         .TACHINT ( corepwm_0_0_TACHINT ),
         .PWM     ( PWM_net_0 ) 
         );
@@ -935,7 +793,7 @@ CoreUARTapb_2_0(
         .PSEL        ( CoreAPB3_0_APBmslave2_PSELx ),
         .PENABLE     ( CoreAPB3_0_APBmslave0_PENABLE ),
         .PWRITE      ( CoreAPB3_0_APBmslave0_PWRITE ),
-        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_1 ),
+        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_2 ),
         .RX          ( RX ),
         // Outputs
         .PRDATA      ( CoreAPB3_0_APBmslave2_PRDATA ),
@@ -999,7 +857,7 @@ CoreUARTapb_2_1(
         .PSEL        ( CoreAPB3_0_APBmslave3_PSELx ),
         .PENABLE     ( CoreAPB3_0_APBmslave0_PENABLE ),
         .PWRITE      ( CoreAPB3_0_APBmslave0_PWRITE ),
-        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_2 ),
+        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_3 ),
         .RX          ( RX_0 ),
         // Outputs
         .PRDATA      ( CoreAPB3_0_APBmslave3_PRDATA ),
@@ -1041,6 +899,70 @@ OR3 CoreUARTapb_2_1_intr_or_2(
         .C ( GND_net ),
         // Outputs
         .Y ( CoreUARTapb_2_1_intr_or_2_Y ) 
+        );
+
+//--------mss_sb_CoreUARTapb_2_2_CoreUARTapb   -   Actel:DirectCore:CoreUARTapb:5.2.2
+mss_sb_CoreUARTapb_2_2_CoreUARTapb #( 
+        .BAUD_VAL_FRCTN    ( 0 ),
+        .BAUD_VAL_FRCTN_EN ( 0 ),
+        .BAUD_VALUE        ( 1 ),
+        .FAMILY            ( 19 ),
+        .FIXEDMODE         ( 0 ),
+        .PRG_BIT8          ( 0 ),
+        .PRG_PARITY        ( 0 ),
+        .RX_FIFO           ( 1 ),
+        .RX_LEGACY_MODE    ( 0 ),
+        .TX_FIFO           ( 1 ) )
+CoreUARTapb_2_2(
+        // Inputs
+        .PCLK        ( FAB_CCC_GL0_net_0 ),
+        .PRESETN     ( MSS_READY_net_0 ),
+        .PADDR       ( CoreAPB3_0_APBmslave0_PADDR_4 ),
+        .PSEL        ( CoreAPB3_0_APBmslave4_PSELx ),
+        .PENABLE     ( CoreAPB3_0_APBmslave0_PENABLE ),
+        .PWRITE      ( CoreAPB3_0_APBmslave0_PWRITE ),
+        .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_4 ),
+        .RX          ( RX_1 ),
+        // Outputs
+        .PRDATA      ( CoreAPB3_0_APBmslave4_PRDATA ),
+        .TXRDY       ( CoreUARTapb_2_2_TXRDY ),
+        .RXRDY       ( CoreUARTapb_2_2_RXRDY ),
+        .PARITY_ERR  ( CoreUARTapb_2_2_PARITY_ERR ),
+        .OVERFLOW    ( CoreUARTapb_2_2_OVERFLOW ),
+        .TX          ( TX_1_net_0 ),
+        .PREADY      ( CoreAPB3_0_APBmslave4_PREADY ),
+        .PSLVERR     ( CoreAPB3_0_APBmslave4_PSLVERR ),
+        .FRAMING_ERR ( CoreUARTapb_2_2_FRAMING_ERR ) 
+        );
+
+//--------OR3
+OR3 CoreUARTapb_2_2_intr_or_0(
+        // Inputs
+        .A ( CoreUARTapb_2_2_FRAMING_ERR ),
+        .B ( CoreUARTapb_2_2_OVERFLOW ),
+        .C ( CoreUARTapb_2_2_PARITY_ERR ),
+        // Outputs
+        .Y ( CoreUARTapb_2_2_intr_or_0_Y ) 
+        );
+
+//--------OR3
+OR3 CoreUARTapb_2_2_intr_or_1(
+        // Inputs
+        .A ( CoreUARTapb_2_2_RXRDY ),
+        .B ( CoreUARTapb_2_2_TXRDY ),
+        .C ( GND_net ),
+        // Outputs
+        .Y ( CoreUARTapb_2_2_intr_or_1_Y ) 
+        );
+
+//--------OR3
+OR3 CoreUARTapb_2_2_intr_or_2(
+        // Inputs
+        .A ( CoreUARTapb_2_2_intr_or_1_Y ),
+        .B ( CoreUARTapb_2_2_intr_or_0_Y ),
+        .C ( GND_net ),
+        // Outputs
+        .Y ( CoreUARTapb_2_2_intr_or_2_Y ) 
         );
 
 //--------mss_sb_FABOSC_0_OSC   -   Actel:SgCore:OSC:1.0.105

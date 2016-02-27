@@ -6,11 +6,6 @@ SmartFusion2 = C:/Microsemi_11.06/Libero_v11.6/Designer/lib/modelsim/precompiled
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 syncad_vhdl_lib = C:\Microsemi_11.06\Libero_v11.6\Designer/lib/actel/syncad_vhdl_lib
 
 [vcom]

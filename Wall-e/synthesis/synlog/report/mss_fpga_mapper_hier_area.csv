@@ -1,39 +1,68 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1K18, RAM64X18, GLOBAL, IO
-. mss, 704, 1033, 241, 0, 0, 0, 0, 2, 19
-.	. mss_sb, 704, 1033, 241, 0, 0, 0, 0, 2, 2
-.	.	. COREI2C_Z3, 87, 387, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. COREI2CREAL_Z4, 87, 386, 0, 0, 0, 0, 0, 0, 0
-.	.	. CoreAPB3_Z1, 0, 41, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. COREAPB3_MUXPTOB3, 0, 34, 0, 0, 0, 0, 0, 0, 0
-.	.	. CoreGPIO_Z2, 5, 6, 0, 0, 0, 0, 0, 0, 0
-.	.	. CoreResetP_Z7, 9, 2, 0, 0, 0, 0, 0, 1, 0
-.	.	. corepwm_Z5, 229, 277, 129, 0, 0, 0, 0, 0, 0
-.	.	.	. pwm_gen_10s_16s_0, 10, 86, 80, 0, 0, 0, 0, 0, 0
-.	.	.	. reg_if_Z6, 203, 191, 16, 0, 0, 0, 0, 0, 0
+. mss, 1307, 1663, 827, 0, 1, 0, 0, 4, 20
+.	. Echo_control, 457, 531, 546, 0, 1, 0, 0, 2, 0
+.	.	. BT_module, 11, 2, 0, 0, 0, 0, 0, 0, 0
+.	.	. Echo_control_COREUART_0_COREUART_1s_1s_0s_19s_0s_0s, 150, 99, 56, 0, 0, 0, 0, 0, 0
+.	.	.	. Echo_control_COREUART_0_Clock_gen_0s_0s, 19, 10, 14, 0, 0, 0, 0, 0, 0
+.	.	.	. Echo_control_COREUART_0_Rx_async_0s_1s_0s_1s_2s_3s, 32, 41, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Echo_control_COREUART_0_Tx_async_0s_1s_0s_1s_2s_3s_4s_5s_6s, 21, 24, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Echo_control_COREUART_0_fifo_256x8_0s_4294967232s, 30, 6, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	. Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s, 30, 6, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. Echo_control_COREUART_0_ram128x8_pa4, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Echo_control_COREUART_0_fifo_256x8_0s_4294967232s_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	. Echo_control_COREUART_0_fifo_ctrl_128_0s_128s_7s_8s_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. Echo_control_COREUART_0_ram128x8_pa4_0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. Echo_control_FCCC_0_FCCC, 0, 0, 0, 0, 0, 0, 0, 2, 0
+.	.	. Echo_control_OSC_0_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. delayer, 24, 8, 24, 0, 0, 0, 0, 0, 0
+.	.	. locator_control, 90, 88, 126, 0, 0, 0, 0, 0, 0
+.	.	. pulse_meash, 45, 38, 216, 0, 0, 0, 0, 0, 0
+.	.	. servo_driver, 49, 44, 72, 0, 1, 0, 0, 0, 0
+.	.	. time_sender, 88, 252, 52, 0, 0, 0, 0, 0, 0
+.	. mss_sb, 850, 1132, 281, 0, 0, 0, 0, 2, 2
+.	.	. COREI2C_Z2_layer0, 87, 372, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. COREI2CREAL_Z3_layer0, 87, 371, 0, 0, 0, 0, 0, 0, 0
+.	.	. CoreAPB3_Z1_layer0, 0, 64, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. COREAPB3_MUXPTOB3, 0, 59, 0, 0, 0, 0, 0, 0, 0
+.	.	. CoreResetP_Z6_layer0, 9, 2, 0, 0, 0, 0, 0, 1, 0
+.	.	. corepwm_Z4_layer0, 193, 211, 113, 0, 0, 0, 0, 0, 0
+.	.	.	. pwm_gen_8s_16s_0, 8, 69, 64, 0, 0, 0, 0, 0, 0
+.	.	.	. reg_if_Z5_layer0, 169, 142, 16, 0, 0, 0, 0, 0, 0
 .	.	.	. timebase_16s, 16, 0, 33, 0, 0, 0, 0, 0, 0
 .	.	. mss_sb_CCC_0_FCCC, 0, 0, 0, 0, 0, 0, 0, 1, 0
-.	.	. mss_sb_CoreUARTapb_2_0_CoreUARTapb_19s_1s_1s_1s_0s_0s_0s_0s_0s_0s, 187, 163, 56, 0, 0, 0, 0, 0, 0
+.	.	. mss_sb_CoreUARTapb_2_0_CoreUARTapb_19s_1s_1s_1s_0s_0s_0s_0s_0s_0s, 187, 162, 56, 0, 0, 0, 0, 0, 0
 .	.	.	. mss_sb_CoreUARTapb_2_0_COREUART_1s_1s_0s_15s_0s, 163, 131, 56, 0, 0, 0, 0, 0, 0
 .	.	.	.	. mss_sb_CoreUARTapb_2_0_Clock_gen_0s, 19, 10, 14, 0, 0, 0, 0, 0, 0
-.	.	.	.	. mss_sb_CoreUARTapb_2_0_Rx_async_1s_0s_1s_2s, 37, 50, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_0_Rx_async_1s_0s_1s_2s, 37, 51, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. mss_sb_CoreUARTapb_2_0_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s, 23, 28, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. mss_sb_CoreUARTapb_2_0_fifo_256x8, 30, 8, 21, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. mss_sb_CoreUARTapb_2_0_fifo_ctrl_128, 30, 8, 21, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	.	. mss_sb_CoreUARTapb_2_0_ram128x8_pa4, 0, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. mss_sb_CoreUARTapb_2_0_fifo_256x8_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. mss_sb_CoreUARTapb_2_0_fifo_ctrl_128_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_0_fifo_256x8_0, 30, 9, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. mss_sb_CoreUARTapb_2_0_fifo_ctrl_128_0, 30, 9, 21, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	.	. mss_sb_CoreUARTapb_2_0_ram128x8_pa4_0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	. mss_sb_CoreUARTapb_2_1_CoreUARTapb_19s_1s_1s_1s_0s_0s_0s_0s_0s_0s, 187, 157, 56, 0, 0, 0, 0, 0, 0
-.	.	.	. mss_sb_CoreUARTapb_2_1_COREUART_1s_1s_0s_15s_0s, 163, 128, 56, 0, 0, 0, 0, 0, 0
+.	.	. mss_sb_CoreUARTapb_2_1_CoreUARTapb_19s_1s_1s_1s_0s_0s_0s_0s_0s_0s, 187, 159, 56, 0, 0, 0, 0, 0, 0
+.	.	.	. mss_sb_CoreUARTapb_2_1_COREUART_1s_1s_0s_15s_0s, 163, 131, 56, 0, 0, 0, 0, 0, 0
 .	.	.	.	. mss_sb_CoreUARTapb_2_1_Clock_gen_0s, 19, 10, 14, 0, 0, 0, 0, 0, 0
 .	.	.	.	. mss_sb_CoreUARTapb_2_1_Rx_async_1s_0s_1s_2s, 37, 50, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. mss_sb_CoreUARTapb_2_1_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s, 23, 30, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. mss_sb_CoreUARTapb_2_1_fifo_256x8, 30, 6, 21, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. mss_sb_CoreUARTapb_2_1_fifo_ctrl_128, 30, 6, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_1_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s, 23, 28, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_1_fifo_256x8, 30, 8, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. mss_sb_CoreUARTapb_2_1_fifo_ctrl_128, 30, 8, 21, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	.	. mss_sb_CoreUARTapb_2_1_ram128x8_pa4, 0, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. mss_sb_CoreUARTapb_2_1_fifo_256x8_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. mss_sb_CoreUARTapb_2_1_fifo_ctrl_128_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	.	. mss_sb_CoreUARTapb_2_1_ram128x8_pa4_0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. mss_sb_CoreUARTapb_2_2_CoreUARTapb_19s_1s_1s_1s_0s_0s_0s_0s_0s_0s, 187, 162, 56, 0, 0, 0, 0, 0, 0
+.	.	.	. mss_sb_CoreUARTapb_2_2_COREUART_1s_1s_0s_15s_0s, 163, 134, 56, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_2_Clock_gen_0s, 19, 10, 14, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_2_Rx_async_1s_0s_1s_2s, 37, 52, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_2_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s, 23, 29, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_2_fifo_256x8, 30, 8, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. mss_sb_CoreUARTapb_2_2_fifo_ctrl_128, 30, 8, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. mss_sb_CoreUARTapb_2_2_ram128x8_pa4, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. mss_sb_CoreUARTapb_2_2_fifo_256x8_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. mss_sb_CoreUARTapb_2_2_fifo_ctrl_128_0, 30, 7, 21, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. mss_sb_CoreUARTapb_2_2_ram128x8_pa4_0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. mss_sb_FABOSC_0_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. mss_sb_MSS, 0, 0, 0, 0, 0, 0, 0, 0, 0

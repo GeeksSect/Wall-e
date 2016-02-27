@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Tue Feb 16 22:57:06 2016
+// Created by Microsemi SmartDesign Wed Feb 10 00:20:15 2016
 // Parameters for corepwm
 //--------------------------------------------------------------------
 
@@ -92,7 +92,7 @@ parameter FIXED_PWM_POSEDGE14 = 0;
 parameter FIXED_PWM_POSEDGE15 = 0;
 parameter FIXED_PWM_POSEDGE16 = 0;
 parameter HDL_license = "U";
-parameter PWM_NUM = 10;
+parameter PWM_NUM = 8;
 parameter PWM_STRETCH_VALUE1 = 0;
 parameter PWM_STRETCH_VALUE2 = 0;
 parameter PWM_STRETCH_VALUE3 = 0;

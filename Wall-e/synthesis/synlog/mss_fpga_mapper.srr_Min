@@ -1,11 +1,7 @@
 
 
 @S |##### START OF TIMING REPORT #####[
-<<<<<<< HEAD
 # Timing Report written on Fri Feb 26 22:12:12 2016
-=======
-# Timing Report written on Tue Feb 16 23:04:26 2016
->>>>>>> bf846f70c8c7d64ec2a087407add25a0b98e4c40
 #
 
 
@@ -26,12 +22,14 @@ Performance Summary
 
 Worst slack in design: 0.362
 
-                                                          Requested     Estimated     Requested     Estimated                Clock        Clock              
-Starting Clock                                            Frequency     Frequency     Period        Period        Slack      Type         Group              
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-mss_sb_CCC_0_FCCC|GL0_net_inferred_clock                  100.0 MHz     93.4 MHz      10.000        10.708        -0.708     inferred     Inferred_clkgroup_0
-mss_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_1
-=============================================================================================================================================================
+                                                          Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                                            Frequency     Frequency     Period        Period        Slack       Type         Group              
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock           100.0 MHz     35.7 MHz      10.000        28.042        -18.042     inferred     Inferred_clkgroup_2
+mss_sb_CCC_0_FCCC|GL0_net_inferred_clock                  100.0 MHz     88.6 MHz      10.000        11.281        -1.281      inferred     Inferred_clkgroup_0
+mss_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock     100.0 MHz     NA            10.000        NA            NA          inferred     Inferred_clkgroup_1
+System                                                    100.0 MHz     895.2 MHz     10.000        1.117         8.883       system       system_clkgroup    
+==============================================================================================================================================================
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
 
 
@@ -39,12 +37,17 @@ mss_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock     100.0 MHz     NA      
 Clock Relationships
 *******************
 
-Clocks                                                                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                                  Ending                                    |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-mss_sb_CCC_0_FCCC|GL0_net_inferred_clock  mss_sb_CCC_0_FCCC|GL0_net_inferred_clock  |  0.000       0.362  |  No paths    -      |  No paths    -      |  No paths    -    
-==========================================================================================================================================================================
+Clocks                                                                                            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                         Ending                                           |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                           System                                           |  0.000       0.782  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock  |  0.000       1.901  |  No paths    -      |  No paths    -      |  No paths    -    
+mss_sb_CCC_0_FCCC|GL0_net_inferred_clock         mss_sb_CCC_0_FCCC|GL0_net_inferred_clock         |  0.000       0.362  |  No paths    -      |  No paths    -      |  No paths    -    
+mss_sb_CCC_0_FCCC|GL0_net_inferred_clock         Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock  mss_sb_CCC_0_FCCC|GL0_net_inferred_clock         |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock  Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock  |  0.000       0.362  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -54,6 +57,82 @@ Interface Information
 *********************
 
 No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                  Starting                                                                                           Arrival          
+Instance                                                                                          Reference                                           Type     Pin     Net                           Time        Slack
+                                                                                                  Clock                                                                                                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Echo_control_0.BT_module_0.data_buf[0]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[0]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[1]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[1]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[2]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[2]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[3]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[3]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[4]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[4]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[5]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[5]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[6]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[6]       0.061       0.362
+Echo_control_0.BT_module_0.data_buf[7]                                                            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       BT_module_0_data_buf[7]       0.061       0.362
+Echo_control_0.time_sender_0.data_out[0]                                                          Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       time_sender_0_data_out[0]     0.061       0.362
+Echo_control_0.COREUART_0.genblk2\.tx_fifo.CoreUART_top_COREUART_0_fifo_128x8_pa4.data_out[0]     Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       tx_dout_reg[0]                0.061       0.362
+======================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                 Starting                                                                                         Required          
+Instance                                         Reference                                           Type     Pin     Net                         Time         Slack
+                                                 Clock                                                                                                              
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Echo_control_0.BT_module_0.data_buf[0]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[0]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[1]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[1]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[2]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[2]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[3]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[3]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[4]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[4]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[5]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[5]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[6]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[6]              0.179        0.362
+Echo_control_0.BT_module_0.data_buf[7]           Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       rx_dout_reg[7]              0.179        0.362
+Echo_control_0.locator_control_0.fn_angle[0]     Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       BT_module_0_data_buf[4]     0.179        0.362
+Echo_control_0.locator_control_0.fn_angle[1]     Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock     SLE      D       BT_module_0_data_buf[5]     0.179        0.362
+====================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.541
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.179
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     0.362
+
+    Number of logic level(s):                0
+    Starting point:                          Echo_control_0.BT_module_0.data_buf[0] / Q
+    Ending point:                            Echo_control_0.locator_control_0.st_angle[0] / D
+    The start point is clocked by            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            Echo_control_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                            Pin      Pin               Arrival     No. of    
+Name                                             Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------
+Echo_control_0.BT_module_0.data_buf[0]           SLE      Q        Out     0.061     0.061       -         
+BT_module_0_data_buf[0]                          Net      -        -       0.480     -           1         
+Echo_control_0.locator_control_0.st_angle[0]     SLE      D        In      -         0.541       -         
+===========================================================================================================
+
 
 
 
@@ -74,12 +153,12 @@ mss_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_q1                                   
 mss_sb_0.CORERESETP_0.POWER_ON_RESET_N_q1                                                              mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       POWER_ON_RESET_N_q1         0.061       0.362
 mss_sb_0.CORERESETP_0.RESET_N_M2F_q1                                                                   mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       RESET_N_M2F_q1              0.061       0.362
 mss_sb_0.CoreUARTapb_2_0.uUART.clear_framing_error_reg0                                                mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       clear_parity_reg0           0.061       0.362
+mss_sb_0.CoreUARTapb_2_2.uUART.clear_framing_error_reg0                                                mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       clear_parity_reg0           0.061       0.362
 mss_sb_0.CoreUARTapb_2_1.uUART.clear_framing_error_reg0                                                mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       clear_parity_reg0           0.061       0.362
+mss_sb_0.CoreUARTapb_2_2.uUART.make_RX.clear_parity_en_1                                               mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       clear_parity_en             0.061       0.362
 mss_sb_0.CoreUARTapb_2_0.uUART.make_RX.clear_parity_en_1                                               mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       clear_parity_en             0.061       0.362
 mss_sb_0.CoreUARTapb_2_1.uUART.make_RX.clear_parity_en_1                                               mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       clear_parity_en             0.061       0.362
-mss_sb_0.CoreUARTapb_2_1.uUART.genblk2\.tx_fifo.CoreUART_top_COREUART_0_fifo_128x8_pa4.data_out[0]     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       tx_dout_reg[0]              0.061       0.362
-mss_sb_0.CoreUARTapb_2_1.uUART.genblk3\.rx_fifo.CoreUART_top_COREUART_0_fifo_128x8_pa4.data_out[0]     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       rx_dout[0]                  0.061       0.362
-mss_sb_0.CoreUARTapb_2_0.uUART.genblk3\.rx_fifo.CoreUART_top_COREUART_0_fifo_128x8_pa4.data_out[0]     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       rx_dout[0]                  0.061       0.362
+mss_sb_0.CoreUARTapb_2_0.uUART.genblk2\.tx_fifo.CoreUART_top_COREUART_0_fifo_128x8_pa4.data_out[0]     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       tx_dout_reg[0]              0.061       0.362
 ==================================================================================================================================================================================================================
 
 
@@ -95,11 +174,11 @@ mss_sb_0.CORERESETP_0.POWER_ON_RESET_N_clk_base             mss_sb_CCC_0_FCCC|GL
 mss_sb_0.CORERESETP_0.RESET_N_M2F_clk_base                  mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       RESET_N_M2F_q1              0.179        0.362
 mss_sb_0.CoreUARTapb_2_1.uUART.clear_framing_error_reg0     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       clear_parity_en             0.179        0.362
 mss_sb_0.CoreUARTapb_2_0.uUART.clear_framing_error_reg0     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       clear_parity_en             0.179        0.362
+mss_sb_0.CoreUARTapb_2_2.uUART.clear_framing_error_reg0     mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       clear_parity_en             0.179        0.362
+mss_sb_0.CoreUARTapb_2_2.uUART.clear_parity_reg             mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       clear_parity_reg0           0.179        0.362
 mss_sb_0.CoreUARTapb_2_0.uUART.clear_parity_reg             mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       clear_parity_reg0           0.179        0.362
 mss_sb_0.CoreUARTapb_2_1.uUART.clear_parity_reg             mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       clear_parity_reg0           0.179        0.362
 mss_sb_0.corepwm_0_0.genblk2\.reg_if.period_reg[0]          mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       psh_period_reg[0]           0.179        0.362
-mss_sb_0.corepwm_0_0.genblk2\.reg_if.period_reg[1]          mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       psh_period_reg[1]           0.179        0.362
-mss_sb_0.corepwm_0_0.genblk2\.reg_if.period_reg[2]          mss_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       psh_period_reg[2]           0.179        0.362
 ========================================================================================================================================================================
 
 
@@ -128,6 +207,76 @@ Name                                                    Type     Name     Dir   
 mss_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_q1           SLE      Q        Out     0.061     0.061       -         
 FIC_2_APB_M_PRESET_N_q1                                 Net      -        -       0.480     -           1         
 mss_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_clk_base     SLE      D        In      -         0.541       -         
+==================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                      Starting                                                                            Arrival          
+Instance                              Reference     Type           Pin        Net                                         Time        Slack
+                                      Clock                                                                                                
+-------------------------------------------------------------------------------------------------------------------------------------------
+Echo_control_0.OSC_0.I_RCOSC_1MHZ     System        RCOSC_1MHZ     CLKOUT     OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     0.000       0.782
+Echo_control_0.FCCC_0.CCC_INST        System        CCC            LOCK       LOCK                                        0.000       1.901
+===========================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                                          Required          
+Instance                           Reference     Type     Pin            Net                                         Time         Slack
+                                   Clock                                                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+Echo_control_0.FCCC_0.CCC_INST     System        CCC      RCOSC_1MHZ     OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     0.000        0.782
+Echo_control_0.delayer_0.i[0]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[1]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[2]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[3]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[4]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[5]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[6]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[7]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+Echo_control_0.delayer_0.i[8]      System        SLE      EN             FCCC_0_LOCK                                 0.236        1.901
+=======================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.782
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (non-critical) :                 0.782
+
+    Number of logic level(s):                0
+    Starting point:                          Echo_control_0.OSC_0.I_RCOSC_1MHZ / CLKOUT
+    Ending point:                            Echo_control_0.FCCC_0.CCC_INST / RCOSC_1MHZ
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                             Pin            Pin               Arrival     No. of    
+Name                                        Type           Name           Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------
+Echo_control_0.OSC_0.I_RCOSC_1MHZ           RCOSC_1MHZ     CLKOUT         Out     0.000     0.000       -         
+OSC_0_RCOSC_1MHZ_CCC_OUT_RCOSC_1MHZ_CCC     Net            -              -       0.782     -           1         
+Echo_control_0.FCCC_0.CCC_INST              CCC            RCOSC_1MHZ     In      -         0.782       -         
 ==================================================================================================================
 
 

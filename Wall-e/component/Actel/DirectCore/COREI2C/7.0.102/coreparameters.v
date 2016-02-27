@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Tue Feb 16 22:57:06 2016
+// Created by Microsemi SmartDesign Wed Feb 10 00:20:14 2016
 // Parameters for COREI2C
 //--------------------------------------------------------------------
 
