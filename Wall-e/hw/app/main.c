@@ -34,6 +34,7 @@
 UART_instance_t g_bt;
 UART_instance_t g_servo;
 pwm_instance_t  g_pwm;
+pwm_id_t pwms[8] = {PWM_1, PWM_2, PWM_3, PWM_4, PWM_5, PWM_6, PWM_7, PWM_8};
 
 void press_any_key_to_continue(void);
 void setup();
@@ -47,6 +48,8 @@ int main(void)
     uint32_t motor[8] = {0, 0, 0, 0, 0, 0, 0, 0};
     uint8_t dist_buf[128];
     uint8_t dist_buf_size;
+    uint32_t duty_c;
+    uint8_t servo_angle;
 
     setup();
 
@@ -57,6 +60,16 @@ int main(void)
     press_any_key_to_continue();
     UART_polled_tx_string(&g_bt, (const uint8_t *)"Okay, let's burn it!\n");
     press_any_key_to_continue();
+
+    servo_angle = 0xA4;
+    UART_send(&g_servo, &servo_angle, 1);
+    press_any_key_to_continue();
+    servo_angle = 0xFA;
+	UART_send(&g_servo, &servo_angle, 1);
+	press_any_key_to_continue();
+	servo_angle = 0x30;
+	UART_send(&g_servo, &servo_angle, 1);
+	press_any_key_to_continue();
 
     while (1 == 1)
     {
@@ -87,42 +100,50 @@ int main(void)
 				}
 				case '1':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_1, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_1);
+					PWM_set_duty_cycle(&g_pwm, PWM_1, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '2':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_2, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_2);
+					PWM_set_duty_cycle(&g_pwm, PWM_2, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '3':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_3, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_3);
+					PWM_set_duty_cycle(&g_pwm, PWM_3, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '4':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_4, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_4);
+					PWM_set_duty_cycle(&g_pwm, PWM_4, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '5':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_5, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_5);
+					PWM_set_duty_cycle(&g_pwm, PWM_5, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '6':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_6, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_6);
+					PWM_set_duty_cycle(&g_pwm, PWM_6, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '7':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_7, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_7);
+					PWM_set_duty_cycle(&g_pwm, PWM_7, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 				case '8':
 				{
-					PWM_set_duty_cycle(&g_pwm, PWM_8, PWM_PERIOD);
+					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_8);
+					PWM_set_duty_cycle(&g_pwm, PWM_8, duty_c ? 0 : PWM_PERIOD);
 					break;
 				}
 			}
@@ -155,6 +176,8 @@ void FabricIrq0_IRQHandler(void)
 }
 void setup()
 {
+	uint32_t i;
+
     PWM_init(&g_pwm, COREPWM_0_0, PWM_PRESCALE, PWM_PERIOD);
     UART_init( &g_servo, COREUARTAPB_2_0, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );
     UART_init( &g_bt, COREUARTAPB_2_2, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );
@@ -165,16 +188,11 @@ void setup()
     MPU6050_setFullScaleGyroRange(1); // it's must set range of gyro's data     +-500(deg/sec)
     HMC_init();
 
-    PWM_enable(&g_pwm, PWM_1);
-    PWM_enable(&g_pwm, PWM_2);
-    PWM_enable(&g_pwm, PWM_3);
-    PWM_enable(&g_pwm, PWM_4);
-    PWM_enable(&g_pwm, PWM_5);
-    PWM_enable(&g_pwm, PWM_6);
-    PWM_enable(&g_pwm, PWM_7);
-    PWM_enable(&g_pwm, PWM_8);
+    for (i = 0; i < 8; i++)
+    	PWM_enable(&g_pwm, pwms[i]);
 
-    PWM_set_duty_cycle(&g_pwm, PWM_1, 0);
+    for (i = 0; i < 8; i++)
+    	PWM_set_duty_cycle(&g_pwm, pwms[i], 0);
 
     MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
     /*-------------------------------------------------------------------------
