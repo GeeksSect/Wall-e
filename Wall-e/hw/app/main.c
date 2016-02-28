@@ -12,6 +12,7 @@
 #include "Modules/MPU6050/mpu6050.h"
 #include "Modules/PID/PID.h"
 #include "Modules/micros/micros.h"
+#include "Modules/Echo/echo.h"
 
 #include "../hal/hal.h"
 #include "../mss_hw_platform.h"
@@ -23,6 +24,7 @@
 #include "../drivers_config/sys_config/sys_config.h"
 
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 
 #define BAUD_VALUE_115200   26
@@ -32,7 +34,6 @@
 #define magn_skip_val       10
 
 UART_instance_t g_bt;
-UART_instance_t g_servo;
 pwm_instance_t  g_pwm;
 pwm_id_t pwms[8] = {PWM_1, PWM_2, PWM_3, PWM_4, PWM_5, PWM_6, PWM_7, PWM_8};
 
@@ -43,11 +44,12 @@ int main(void)
 {
     uint8_t rx_buff[128];
     uint8_t rx_size = 0;
+
+    uint32_t dist_data[ANGLE_GRANULARITY];
+
     uint8_t i = 0;
 
     uint32_t motor[8] = {0, 0, 0, 0, 0, 0, 0, 0};
-    uint8_t dist_buf[128];
-    uint8_t dist_buf_size;
     uint32_t duty_c;
     uint8_t servo_angle;
 
@@ -61,16 +63,6 @@ int main(void)
     UART_polled_tx_string(&g_bt, (const uint8_t *)"Okay, let's burn it!\n");
     press_any_key_to_continue();
 
-    servo_angle = 0xA4;
-    UART_send(&g_servo, &servo_angle, 1);
-    press_any_key_to_continue();
-    servo_angle = 0xFA;
-	UART_send(&g_servo, &servo_angle, 1);
-	press_any_key_to_continue();
-	servo_angle = 0x30;
-	UART_send(&g_servo, &servo_angle, 1);
-	press_any_key_to_continue();
-
     while (1 == 1)
     {
         rx_size = UART_get_rx(&g_bt, rx_buff, sizeof(rx_buff));
@@ -80,22 +72,57 @@ int main(void)
 			{
 				case 'w':
 				{
+					for (i = 0; i < 8; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? 0 : PWM_PERIOD);
 					break;
 				}
 				case 's':
 				{
-					break;
-				}
-				case 'a':
-				{
+					for (i = 0; i < 8; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? PWM_PERIOD : 0);
 					break;
 				}
 				case 'd':
 				{
+					for (i = 0; i < 4; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? 0 : PWM_PERIOD);
+					for (i = 4; i < 8; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? PWM_PERIOD : 0);
+					break;
+				}
+				case 'a':
+				{
+					for (i = 0; i < 4; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? PWM_PERIOD : 0);
+					for (i = 4; i < 8; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? 0 : PWM_PERIOD);
+					break;
+				}
+				case 'e':
+				{
+					for (i = 0; i < 8; i++)
+						PWM_set_duty_cycle(&g_pwm, pwms[i], 0);
 					break;
 				}
 				case 'q':
 				{
+					/*
+					uint8_t str[80];
+					uint8_t value[4];
+
+					strcat(str, "|");
+
+					Echo_update_data();
+					Echo_get_data(&dist_data);
+					for (i = 0; i < ANGLE_GRANULARITY; i++)
+					{
+						itoa(dist_data[i], value, 10);
+						strcat(str, value);
+						strcat(str, "|");
+					}
+					strcat(str, "\r\n");
+					UART_send(&g_bt, str, strlen(str));
+					*/
 					break;
 				}
 				case '1':
@@ -152,8 +179,6 @@ int main(void)
     return 0;
 }
 
-
-
 void press_any_key_to_continue(void)
 {
     size_t rx_size;
@@ -179,7 +204,7 @@ void setup()
 	uint32_t i;
 
     PWM_init(&g_pwm, COREPWM_0_0, PWM_PRESCALE, PWM_PERIOD);
-    UART_init( &g_servo, COREUARTAPB_2_0, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );
+    Echo_init();
     UART_init( &g_bt, COREUARTAPB_2_2, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );
     i2c_init(1); // argument no matter
     BMP_calibrate();
