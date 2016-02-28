@@ -59,7 +59,7 @@ PARENT="<project>\component\work\mss_sb\mss_sb.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1456513604"
+TIME="1456566680"
 SIZE="1284"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
 IS_READONLY="TRUE"
@@ -191,7 +191,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\corepwm\4.1.106\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1456513604"
+TIME="1456566680"
 SIZE="4755"
 PARENT="<project>\component\Actel\DirectCore\corepwm\4.1.106\corepwm.cxf"
 IS_READONLY="TRUE"
@@ -504,7 +504,7 @@ PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
 STATE="utd"
-TIME="1456513604"
+TIME="1456566680"
 SIZE="2369"
 ENDFILE
 VALUE "<project>\component\work\Echo_control\COREUART_0\coreparameters.v,tb_hdl"
@@ -612,13 +612,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss\mss.cxf,actgen_cxf"
 STATE="utd"
-TIME="1456513604"
-SIZE="4177"
+TIME="1456566680"
+SIZE="3944"
 ENDFILE
 VALUE "<project>\component\work\mss\mss.v,hdl"
 STATE="utd"
-TIME="1456513604"
-SIZE="4808"
+TIME="1456566680"
+SIZE="4777"
 PARENT="<project>\component\work\mss\mss.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -637,7 +637,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_0\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1456513604"
+TIME="1456566680"
 SIZE="605"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_0\mss_sb_CoreUARTapb_2_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -716,7 +716,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_1\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1456513604"
+TIME="1456566680"
 SIZE="605"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_1\mss_sb_CoreUARTapb_2_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -795,7 +795,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\CoreUARTapb_2_2\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1456513604"
+TIME="1456566680"
 SIZE="605"
 PARENT="<project>\component\work\mss_sb\CoreUARTapb_2_2\mss_sb_CoreUARTapb_2_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -887,12 +887,12 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\mss_sb.cxf,actgen_cxf"
 STATE="utd"
-TIME="1456513605"
+TIME="1456566680"
 SIZE="9880"
 ENDFILE
 VALUE "<project>\component\work\mss_sb\mss_sb.v,hdl"
 STATE="utd"
-TIME="1456513605"
+TIME="1456566680"
 SIZE="44427"
 PARENT="<project>\component\work\mss_sb\mss_sb.cxf"
 IS_READONLY="TRUE"
@@ -904,7 +904,7 @@ SIZE="14737"
 ENDFILE
 VALUE "<project>\component\work\mss_sb_MSS\mss_sb_MSS.v,hdl"
 STATE="utd"
-TIME="1456513605"
+TIME="1456566680"
 SIZE="44385"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 IS_READONLY="TRUE"
@@ -935,17 +935,17 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\constraint\fp\mss.fp.pdc,fp_pdc"
 STATE="utd"
-TIME="1456513605"
-SIZE="367"
+TIME="1456673442"
+SIZE="340"
 ENDFILE
 VALUE "<project>\constraint\io\mss.io.pdc,io_pdc"
 STATE="utd"
-TIME="1456513605"
+TIME="1456673442"
 SIZE="2854"
 ENDFILE
 VALUE "<project>\constraint\io\mss.pdc,io_pdc"
 STATE="utd"
-TIME="1456513605"
+TIME="1456566680"
 SIZE="1486"
 ENDFILE
 VALUE "<project>\designer\impl1\BT_module.ide_des,ide_des"
@@ -1006,7 +1006,7 @@ PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
 ENDFILE
 VALUE "<project>\simulation\CM3_compile_bfm.tcl,sim"
 STATE="utd"
-TIME="1456513606"
+TIME="1456566680"
 SIZE="500"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
@@ -1040,13 +1040,13 @@ PARENT="<project>\component\Actel\SmartFusion2MSS\MSS\1.1.400\MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1456513606"
+TIME="1456566680"
 SIZE="931"
 PARENT="<project>\component\work\mss\mss.cxf"
 ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
 STATE="utd"
-TIME="1456513606"
+TIME="1456566680"
 SIZE="734"
 PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
@@ -1058,27 +1058,27 @@ PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss.edn,syn_edn"
 STATE="utd"
-TIME="1456513606"
-SIZE="3146839"
+TIME="1456566680"
+SIZE="3146712"
 ENDFILE
 VALUE "<project>\synthesis\mss.so,so"
 STATE="utd"
-TIME="1456090099"
+TIME="1456513932"
 SIZE="231"
 ENDFILE
 VALUE "<project>\synthesis\mss.v,syn_hdl"
 STATE="utd"
-TIME="1456513607"
-SIZE="1145158"
+TIME="1456566680"
+SIZE="1145130"
 ENDFILE
 VALUE "<project>\synthesis\mss_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1456513607"
+TIME="1456566680"
 SIZE="1384"
 ENDFILE
 VALUE "<project>\synthesis\mss_syn.prj,prj"
 STATE="utd"
-TIME="1456513607"
+TIME="1456566680"
 SIZE="8492"
 ENDFILE
 ENDLIST
@@ -1380,8 +1380,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -1461,8 +1461,10 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Run PROGRAM Action:mss_PROGRAM.log
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "BT_module::work","hdl\BT_resiver.v","FALSE","FALSE"

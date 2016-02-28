@@ -3,7 +3,7 @@
 
 # Version: v11.6 SP1 11.6.1.6
 # Family: SmartFusion2 , Die: M2S010S , Package: 144 TQ
-# Date generated: Sat Feb 13 00:23:36 2016 
+# Date generated: Sun Feb 28 18:30:42 2016 
 
 
 # 
@@ -55,13 +55,13 @@ set_io ECHO           \
 
 
 set_io GPS_RX          \
-    -pinname 21        \
+    -pinname 22        \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
 set_io GPS_TX         \
-    -pinname 22       \
+    -pinname 21       \
     -fixed yes        \
     -DIRECTION INPUT
 

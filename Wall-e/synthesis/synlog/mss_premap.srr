@@ -2,23 +2,23 @@ Synopsys Generic Technology Pre-mapping, Version map201503actrcp1, Build 002R, B
 Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
 Product Version J-2015.03M-3
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
 @L: C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\mss_scck.rpt 
 Printing clock  summary report in "C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\mss_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled 
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 115MB)
+Design Input Complete (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 115MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 115MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 115MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
+Start loading timing files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
+Finished loading timing files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
 
 @W: BN132 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance mss_sb_0.CORERESETP_0.MDDR_DDR_AXI_S_CORE_RESET_N_int,  because it is equivalent to instance mss_sb_0.CORERESETP_0.FDDR_CORE_RESET_N_int
 @N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":1089:4:1089:9|Removing sequential instance DDR_READY_int of view:PrimLib.dffre(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
@@ -47,7 +47,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @N: BN362 :"c:\users\kruci_000\desktop\soc\git\wall-e\wall-e\wall-e\component\actel\directcore\coreresetp\7.0.104\rtl\vlog\core\coreresetp.v":839:4:839:9|Removing sequential instance sdif3_areset_n_q1 of view:PrimLib.dffr(prim) in hierarchy view:work.CoreResetP_Z6_layer0(verilog) because there are no references to its outputs 
 syn_allowed_resources : blockrams=21,dsps=22  set on top level netlist mss
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
 
 
 
@@ -71,9 +71,9 @@ Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\kruci_000\Desktop\SoC\git\Wall-e\Wall-e\Wall-e\synthesis\mss.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 77MB peak: 143MB)
+At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:01s; Memory used current: 77MB peak: 143MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Fri Feb 26 22:11:20 2016
+Process took 0h:00m:07s realtime, 0h:00m:01s cputime
+# Sun Feb 28 18:27:12 2016
 
 ###########################################################]
