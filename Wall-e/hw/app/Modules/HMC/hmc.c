@@ -11,7 +11,7 @@ void HMC_init()
     i2c_writeBytes(HMC_SERIAL_ADDR, tx_buf, tx_len, 0);
 
     tx_buf[0] = HMC_CFG_B_REG;
-    tx_buf[1] = 0xA0;
+    tx_buf[1] = 0x40;
 
     i2c_writeBytes(HMC_SERIAL_ADDR, tx_buf, tx_len, 0);
 
@@ -37,8 +37,8 @@ void HMC_get_raw_Data(int16_t* mx, int16_t* my, int16_t* mz)
     i2c_readBytes(HMC_SERIAL_ADDR, rx_buf, rx_len, 0); // read all data regs
 
     *mx = (rx_buf[0] << 8) | rx_buf[1];
-    *my = (rx_buf[4] << 8) | rx_buf[5];
-    *mz = (rx_buf[2] << 8) | rx_buf[3];
+    *my = (rx_buf[2] << 8) | rx_buf[3];
+    *mz = (rx_buf[4] << 8) | rx_buf[5];
 
     // for next measurement
     // delay(500, 50); // delay for 70 ms on 50 MHz freq
@@ -55,7 +55,7 @@ void HMC_get_true_Data(int16_t* mx, int16_t* my, int16_t* mz)
 
     *mx = (int16_t)(((int32_t)t_x* a11_u) / a11_d) + (((int32_t)t_y* a12_u) / a12_d) + (((int32_t)t_z* a13_u) / a13_d);
     *my = (int16_t)(((int32_t)t_x* a21_u) / a21_d) + (((int32_t)t_y* a22_u) / a22_d) + (((int32_t)t_z* a23_u) / a23_d);
-    *mz = (int16_t)(((int32_t)t_x* a31_u) / a31_d) + (((int32_t)t_y* a32_u) / a12_d) + (((int32_t)t_z* a33_u) / a33_d);
+    *mz = (int16_t)(((int32_t)t_x* a31_u) / a31_d) + (((int32_t)t_y* a32_u) / a32_d) + (((int32_t)t_z* a33_u) / a33_d);
 }
 
 /* Useless

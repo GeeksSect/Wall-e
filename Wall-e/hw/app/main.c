@@ -13,13 +13,14 @@
 #include "Modules/PID/PID.h"
 #include "Modules/micros/micros.h"
 #include "Modules/Echo/echo.h"
+#include "Modules/RoverControl/rover_control.h"
+#include "Modules/GPS_Parser/gps_parser.h"
 
 #include "../hal/hal.h"
 #include "../mss_hw_platform.h"
 #include "../CMSIS/m2sxxx.h"
 
 #include "../drivers/CoreI2C/core_i2c.h"
-#include "../drivers/CorePWM/core_pwm.h"
 #include "../drivers/CoreUARTapb/core_uart_apb.h"
 #include "../drivers_config/sys_config/sys_config.h"
 
@@ -28,40 +29,47 @@
 #include <math.h>
 
 #define BAUD_VALUE_115200   26
-#define PWM_PRESCALE        1
-#define PWM_PERIOD          1000
 #define threshold           20
 #define magn_skip_val       10
 
 UART_instance_t g_bt;
-pwm_instance_t  g_pwm;
-pwm_id_t pwms[8] = {PWM_1, PWM_2, PWM_3, PWM_4, PWM_5, PWM_6, PWM_7, PWM_8};
+
 
 void press_any_key_to_continue(void);
 void setup();
 
+void automotion();
+RoverDirections make_decision(uint32_t* data);
+
 int main(void)
 {
     uint8_t rx_buff[128];
+    char print_buf[16];
     uint8_t rx_size = 0;
+    uint16_t gps_skip_counter;
 
     uint32_t dist_data[ANGLE_GRANULARITY];
 
-    uint8_t i = 0;
+    uint8_t i = 0, j = 0;
 
-    uint32_t motor[8] = {0, 0, 0, 0, 0, 0, 0, 0};
     uint32_t duty_c;
     uint8_t servo_angle;
 
+    int16_t m_vec[3];
+    float heading;
+
     setup();
 
-    press_any_key_to_continue();
+    // Infinity Loop
+    // automotion();
+
+    // press_any_key_to_continue();
     UART_polled_tx_string(&g_bt, (const uint8_t *)"Hello, I am Rover!\n");
-    press_any_key_to_continue();
+    // press_any_key_to_continue();
     UART_polled_tx_string(&g_bt, (const uint8_t *)"Send anything for calibration!\n");
-    press_any_key_to_continue();
+    // press_any_key_to_continue();
     UART_polled_tx_string(&g_bt, (const uint8_t *)"Okay, let's burn it!\n");
-    press_any_key_to_continue();
+    // press_any_key_to_continue();
 
     while (1 == 1)
     {
@@ -70,113 +78,215 @@ int main(void)
         {
 			switch (rx_buff[i])
 			{
+				case '!':
+				{
+					Echo_set_angle_range(0x7, 0x7);
+					break;
+				}
+				case '@':
+				{
+					Echo_set_angle_range(0x0, 0x7);
+					break;
+				}
+				case '#':
+				{
+					Echo_set_angle_range(0x7, 0xF);
+					break;
+				}
+				case '$':
+				{
+					Echo_set_angle_range(0x0, 0xF);
+					break;
+				}
 				case 'w':
 				{
-					for (i = 0; i < 8; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? 0 : PWM_PERIOD);
+					Rover_go(FORWARD);
 					break;
 				}
 				case 's':
 				{
-					for (i = 0; i < 8; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? PWM_PERIOD : 0);
+					Rover_go(BACKWARD);
 					break;
 				}
 				case 'd':
 				{
-					for (i = 0; i < 4; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? 0 : PWM_PERIOD);
-					for (i = 4; i < 8; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? PWM_PERIOD : 0);
+					Rover_go(ROUND_RIGHT);
 					break;
 				}
 				case 'a':
 				{
-					for (i = 0; i < 4; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? PWM_PERIOD : 0);
-					for (i = 4; i < 8; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], (i % 2) ? 0 : PWM_PERIOD);
+					Rover_go(ROUND_LEFT);
 					break;
 				}
 				case 'e':
 				{
-					for (i = 0; i < 8; i++)
-						PWM_set_duty_cycle(&g_pwm, pwms[i], 0);
+					Rover_go(STOP);
 					break;
 				}
 				case 'q':
 				{
-					/*
-					uint8_t str[80];
+					uint8_t j;
 					uint8_t value[4];
-
-					strcat(str, "|");
 
 					Echo_update_data();
 					Echo_get_data(&dist_data);
 					for (i = 0; i < ANGLE_GRANULARITY; i++)
 					{
+						for (j = 0; j < 4; j++) {
+							value[j] = 0;
+						}
 						itoa(dist_data[i], value, 10);
-						strcat(str, value);
-						strcat(str, "|");
+						UART_send(&g_bt, value, 4);
+						UART_polled_tx_string(&g_bt, (const uint8_t*)"\t");
 					}
-					strcat(str, "\r\n");
-					UART_send(&g_bt, str, strlen(str));
-					*/
+					UART_polled_tx_string(&g_bt, (const uint8_t*)"\r\n");
 					break;
 				}
-				case '1':
+				case 'A':
 				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_1);
-					PWM_set_duty_cycle(&g_pwm, PWM_1, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '2':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_2);
-					PWM_set_duty_cycle(&g_pwm, PWM_2, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '3':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_3);
-					PWM_set_duty_cycle(&g_pwm, PWM_3, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '4':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_4);
-					PWM_set_duty_cycle(&g_pwm, PWM_4, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '5':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_5);
-					PWM_set_duty_cycle(&g_pwm, PWM_5, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '6':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_6);
-					PWM_set_duty_cycle(&g_pwm, PWM_6, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '7':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_7);
-					PWM_set_duty_cycle(&g_pwm, PWM_7, duty_c ? 0 : PWM_PERIOD);
-					break;
-				}
-				case '8':
-				{
-					duty_c = PWM_get_duty_cycle(&g_pwm, PWM_8);
-					PWM_set_duty_cycle(&g_pwm, PWM_8, duty_c ? 0 : PWM_PERIOD);
+					automotion();
 					break;
 				}
 			}
         }
+        HMC_get_true_Data(&(m_vec[0]), &(m_vec[1]), &(m_vec[2]));
+        /* MAGNETOMER RAW DATA TEST
+        for (j = 0; j < 3; j++)
+        {
+			for (i = 0; i < 6; i++)
+				print_buf[i] = 0;
+			itoa(m_vec[j], print_buf, 10);
+			UART_send(&g_bt, (const uint8_t *)print_buf, 6);
+			UART_polled_tx_string(&g_bt, (const uint8_t *)";");
+        }
+        UART_polled_tx_string(&g_bt, (const uint8_t *)"\r\n");
+        */
+
+        /* HMC TEST
+        send_telemetry(&g_bt, 0x7, m_vec[0], m_vec[1], m_vec[2]
+								 , 0, 0, 0
+								 , 0, 0, 0
+								 , 0, 0, 0
+								 , 0);
+		*/
+        /* HEADING TEST
+        heading = atan2(m_vec[2], m_vec[0]);
+        if(heading < 0)
+        	heading += 2 * M_PI;
+        if(heading > 2 * M_PI)
+        	heading -= 2 * M_PI;
+        heading *= (180 / M_PI);
+		for (i = 0; i < 6; i++)
+			print_buf[i] = 0;
+		itoa(heading, print_buf, 10);
+		UART_send(&g_bt, (const uint8_t *)print_buf, 6);
+		UART_polled_tx_string(&g_bt, (const uint8_t *)"\r\n");
+		*/
+
+        /* GPS TEST */
+		gps_update();
+
+		if (gps_skip_counter == 1000)
+		{
+			// Send altitude
+			for (i = 0; i < 16; i++)
+				print_buf[i] = 0;
+			itoa(latitude, print_buf, 10);
+			UART_send(&g_bt, (const uint8_t *)print_buf, 16);
+			UART_polled_tx_string(&g_bt, (const uint8_t *)" : ");
+			// Send longitude
+			for (i = 0; i < 16; i++)
+				print_buf[i] = 0;
+			itoa(longitude, print_buf, 10);
+			UART_send(&g_bt, (const uint8_t *)print_buf, 16);
+			UART_polled_tx_string(&g_bt, (const uint8_t *)"\r\n");
+
+			gps_skip_counter = 0;
+		}
+			gps_skip_counter++;
     }
     return 0;
+}
+
+void automotion() {
+	uint32_t dist_data[ANGLE_GRANULARITY];
+	uint8_t angle = 0x7;
+	uint32_t left_sum = 0, right_sum = 0;
+	uint8_t i;
+
+	Echo_set_angle_range(angle, angle);
+
+	while (1)
+	{
+		delay(10000, 50);
+		Echo_update_data();
+		Echo_get_data(&dist_data);
+		if (dist_data[angle] < 30)
+		{
+			Rover_go(STOP);
+			Echo_set_angle_range(0x0, 0xF);
+			Echo_clear_FIFO();
+
+			delay(100000, 50);
+
+			Echo_update_data();
+			Echo_get_data(&dist_data);
+
+			for (i = 0; i < ANGLE_GRANULARITY; i++)
+				if (i < ANGLE_GRANULARITY / 2)
+					right_sum += dist_data[i];
+				else
+					left_sum += dist_data[i];
+
+			if (left_sum < right_sum)
+			{
+				Rover_go(ROUND_RIGHT);
+				angle = 0xF;
+			}
+			else
+			{
+				Rover_go(ROUND_LEFT);
+				angle = 0x0;
+			}
+			Echo_set_angle_range(angle, angle);
+
+			do
+			{
+				delay(20000, 50);
+				Echo_update_data();
+				Echo_get_data(&dist_data);
+			} while (dist_data[angle] < 30);
+
+			Rover_go(STOP);
+
+			angle = 0x7;
+			Echo_set_angle_range(angle, angle);
+		}
+		else
+			Rover_go(FORWARD);
+
+		// Rover_go(make_decision(&dist_data));
+	}
+}
+
+RoverDirections make_decision(uint32_t* data)
+{
+	uint32_t forward_let = 0;
+	uint32_t right_sum = 0;
+	uint32_t left_sum = 0;
+	uint8_t i;
+
+	for (i = 0; i < ANGLE_GRANULARITY; i++)
+	{
+		if (i < ANGLE_GRANULARITY / 2)
+			left_sum += data[i];
+		else
+			right_sum += data[i];
+
+		if (5 <= i && i < 9)
+			forward_let += data[i];
+	}
+	return STOP;
 }
 
 void press_any_key_to_continue(void)
@@ -203,8 +313,9 @@ void setup()
 {
 	uint32_t i;
 
-    PWM_init(&g_pwm, COREPWM_0_0, PWM_PRESCALE, PWM_PERIOD);
+	Rover_init();
     Echo_init();
+    init_GPS();
     UART_init( &g_bt, COREUARTAPB_2_2, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );
     i2c_init(1); // argument no matter
     BMP_calibrate();
@@ -212,12 +323,6 @@ void setup()
     MPU6050_setDLPFMode(0);
     MPU6050_setFullScaleGyroRange(1); // it's must set range of gyro's data     +-500(deg/sec)
     HMC_init();
-
-    for (i = 0; i < 8; i++)
-    	PWM_enable(&g_pwm, pwms[i]);
-
-    for (i = 0; i < 8; i++)
-    	PWM_set_duty_cycle(&g_pwm, pwms[i], 0);
 
     MSS_TIM1_init(MSS_TIMER_PERIODIC_MODE);
     /*-------------------------------------------------------------------------
@@ -227,7 +332,6 @@ void setup()
     NVIC_SetPriority(SysTick_IRQn, 0xFFu); /* Lowest possible priority */
     SysTick_Config(MSS_SYS_M3_CLK_FREQ / 100);
     init_timer();// run timer for micros();
-
 }
 
 

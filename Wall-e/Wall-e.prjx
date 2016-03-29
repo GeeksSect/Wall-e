@@ -955,7 +955,7 @@ SIZE="216"
 ENDFILE
 VALUE "<project>\designer\impl1\mss.ide_des,ide_des"
 STATE="utd"
-TIME="1455656180"
+TIME="1456673443"
 SIZE="493"
 ENDFILE
 VALUE "<project>\designer\impl1\time_sender.ide_des,ide_des"
@@ -1058,27 +1058,27 @@ PARENT="<project>\component\work\mss_sb_MSS\mss_sb_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss.edn,syn_edn"
 STATE="utd"
-TIME="1456566680"
+TIME="1456673276"
 SIZE="3146712"
 ENDFILE
 VALUE "<project>\synthesis\mss.so,so"
 STATE="utd"
-TIME="1456513932"
+TIME="1456673277"
 SIZE="231"
 ENDFILE
 VALUE "<project>\synthesis\mss.v,syn_hdl"
 STATE="utd"
-TIME="1456566680"
+TIME="1456673287"
 SIZE="1145130"
 ENDFILE
 VALUE "<project>\synthesis\mss_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1456566680"
+TIME="1456673276"
 SIZE="1384"
 ENDFILE
 VALUE "<project>\synthesis\mss_syn.prj,prj"
 STATE="utd"
-TIME="1456566680"
+TIME="1456673278"
 SIZE="8492"
 ENDFILE
 ENDLIST
@@ -1380,8 +1380,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi_11.06\Libero_v11.6\Synopsys\fpga_J-2015.03M-3\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -1464,7 +1464,12 @@ ORIENTATION;HORIZONTAL
 Reports;Reports;0
 ReportsCurrentItem;Run PROGRAM Action:mss_PROGRAM.log
 StartPage;StartPage;0
-ACTIVEVIEW;Reports
+SmartDesign;mss;0
+SmartDesign;Echo_control;0
+HDL;hdl\pulse_w.vhdl;0
+HDL;hdl\time_send.vhd;0
+HDL;hdl\sonar_driver.vhd;0
+ACTIVEVIEW;mss
 ENDLIST
 LIST ModuleSubBlockList
 LIST "BT_module::work","hdl\BT_resiver.v","FALSE","FALSE"

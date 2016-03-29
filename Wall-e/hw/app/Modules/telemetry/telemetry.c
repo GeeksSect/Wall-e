@@ -14,7 +14,8 @@ void send_telemetry(UART_instance_t * g_uart, uint16_t mask, int16_t a, int16_t 
     {
         for(i=0; i<6; i++)
             print_buf[i] = 0;
-        itoa(print_buf, 'd', a*5);
+        itoa(a*2, print_buf, 10);
+        // itoa(print_buf, 'd', a*2);
         UART_polled_tx_string(g_uart, (const uint8_t *)"A");
         UART_send(g_uart, (const uint8_t *)print_buf, 6);
         UART_polled_tx_string(g_uart, (const uint8_t *)"\n");
@@ -24,7 +25,8 @@ void send_telemetry(UART_instance_t * g_uart, uint16_t mask, int16_t a, int16_t 
     {
         for(i=0; i<6; i++)
             print_buf[i] = 0;
-        itoa(print_buf, 'd', b*5);
+        itoa(b*2, print_buf, 10);
+        // itoa(print_buf, 'd', b*2);
         UART_polled_tx_string(g_uart, (const uint8_t *)"B");
         UART_send(g_uart, (const uint8_t *)print_buf, 6);
         UART_polled_tx_string(g_uart, (const uint8_t *)"\n");
@@ -33,7 +35,8 @@ void send_telemetry(UART_instance_t * g_uart, uint16_t mask, int16_t a, int16_t 
     {
         for(i=0; i<6; i++)
             print_buf[i] = 0;
-        itoa((char *)&print_buf, 'd', c*3);
+        itoa(c*2, print_buf, 10);
+        // itoa((char *)&print_buf, 'd', c*2);
         UART_polled_tx_string(g_uart, (const uint8_t *)"C");
         UART_send(g_uart, (const uint8_t *)print_buf, 6);
         UART_polled_tx_string(g_uart, (const uint8_t *)"\n");

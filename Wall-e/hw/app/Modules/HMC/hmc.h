@@ -38,29 +38,29 @@
     { 0.171385; -0.014672; 32.284786}}
  */
 
-#define bias_x -109
-#define bias_y 28
-#define bias_z 43
+#define bias_x -227
+#define bias_y 298
+#define bias_z 1598
 
-#define a11_u 505
-#define a12_u -9
-#define a13_u 11
-#define a21_u -9
-#define a22_u 1332
-#define a23_u -15
-#define a31_u 11
-#define a32_u -15
-#define a33_u 226
+#define a11_u (3.127596)
+#define a12_u (0.000675)
+#define a13_u (-0.054277)
+#define a21_u (0.000675)
+#define a22_u (3.128962)
+#define a23_u (-0.058483)
+#define a31_u (-0.054277)
+#define a32_u (-0.058483)
+#define a33_u (2.984691)
 
-#define a11_d 16
-#define a12_d 128
-#define a13_d 64
-#define a21_d 128
-#define a22_d 43
-#define a23_d 1024
-#define a31_d 64
-#define a32_d 1024
-#define a33_d 7
+#define a11_d 1
+#define a12_d 1
+#define a13_d 1
+#define a21_d 1
+#define a22_d 1
+#define a23_d 1
+#define a31_d 1
+#define a32_d 1
+#define a33_d 1
 
 void HMC_init();
 
